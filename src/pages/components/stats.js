@@ -31,7 +31,7 @@ const StatContainer = () =>
     <div>
         <div className="d-flex justify-content-center mb-5">
             <StatItem idx={0} number="18,376" caption="CPU Cores" />
-            <StatItem idx={1} number="????" caption="GPU Cores" />
+            <StatItem idx={1} number="35,840" caption="GPU Cores" />
             <StatItem idx={2} number="3000 TB" caption="Terabytes of Memory" />
         </div>
 
