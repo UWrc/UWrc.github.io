@@ -1,0 +1,209 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4b2e83;
+  --ifm-color-primary-dark: #442976;
+  --ifm-color-primary-darker: #40276f;
+  --ifm-color-primary-darkest: #35205c;
+  --ifm-color-primary-light: #533390;
+  --ifm-color-primary-lighter: #563597;
+  --ifm-color-primary-lightest: #623caa;
+  --ifm-code-font-size: 95%;
+}
+
+a {
+  color: #9259ff;
+}
+
+.vis-hidden {
+  visibility: hidden;
+}
+
+/* bootstrap override */
+.navbar__title {
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+.navbar .navbar__item {
+  display: inline-block;
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+}
+
+.navbar .navbar__link {
+  color: var(--ifm-navbar-link-color);
+  cursor: pointer;
+  padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.hyak-splash {
+  max-height: 320px;
+  padding-bottom: 40px;
+}
+
+.tagline {
+  color: black;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.button {
+  border-color: black;
+}
+
+.button.button--secondary {
+  --ifm-button-border-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.hero.hero--primary {
+  background-color: white;
+  height: 100vh;
+}
+
+.splash-wrapper {
+  display: flex;
+}
+
+.splash-side {
+  max-width: 20%;
+  padding: 5px;
+  padding-top: 28px;
+}
+
+.splash-side-img.left {
+  padding-right: 20px;
+}
+
+.splash-side-img.right {
+  padding-left: 20px;
+}
+
+.splash-side-img {
+  padding-top: 4px;
+}
+
+.splash-middle {
+  padding: 10px;
+}
+
+.stat-caption {
+  font-size: 1.5rem;
+}
+
+.logo-container {
+  padding: 0 20px 0;
+  text-align: center;
+}
+
+.logo-container.padding-top {
+  padding-top: 20px;
+}
+
+.logo-container.padding-bottom {
+  padding-bottom: 20px;
+}
+
+.logo-container.padding-top.padding-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo-container h2 {
+  font-size: 30px;
+  line-height: 1em;
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logo-container p {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0.8em 0;
+  text-align: left;
+}
+
+.logo-container .logos {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.logo-container .logos img {
+  max-height: 90px;
+  padding: 20px;
+  width: auto;
+}
+
+.logo-container .mini-logos img {
+  max-height: 70px;
+  padding: 20px;
+  width: auto;
+}
+
+.map-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blank-map {
+  width: 25%;
+}
+
+.map-container .map {
+  width: 25%;
+  display: inline-block;
+}
+
+.map-container .map div p {
+  text-align: center;
+  padding: 0px;
+}
+
+.map-container .map div p.title {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+
+@media only screen and (max-width: 1260px) {
+  .blank-map {
+    width: 15%;
+  }
+
+  .map-container .map {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .blank-map {
+    width: 0%;
+  }
+
+  .map-container .map {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+}
