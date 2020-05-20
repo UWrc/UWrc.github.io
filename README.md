@@ -2,7 +2,7 @@
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
-[![Build Status](https://travis-ci.com/UWrc/UWrc.github.io.svg?branch=master)](https://travis-ci.com/UWrc/UWrc.github.io)
+[![Build Status](https://travis-ci.com/UWrc/UWrc.github.io.svg?branch=src)](https://travis-ci.com/UWrc/UWrc.github.io)
 
 ### Installation
 
