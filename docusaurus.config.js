@@ -9,7 +9,7 @@ module.exports = {
   themeConfig: {
     disableDarkMode: true,
     navbar: {
-      title: 'HYAK Next Generation Supercomputer',
+      title: 'Research Computing',
       logo: {
         alt: 'Hyak Logo',
         src: 'img/logos/uw_icon.png',
