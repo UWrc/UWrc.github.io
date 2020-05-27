@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import 'react-bootstrap';
 
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';

@@ -25,10 +25,6 @@ a {
   visibility: hidden;
 }
 
-.navbar {
-  padding-bottom: 0;
-}
-
 /* bootstrap override */
 .navbar__title {
   font-weight: var(--ifm-font-weight-bold);
