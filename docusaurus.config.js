@@ -30,7 +30,7 @@ module.exports = {
           position: 'right',
         },
       ],
-      hideOnScroll: true
+      hideOnScroll: false
     },
     footer: {
       style: 'dark',

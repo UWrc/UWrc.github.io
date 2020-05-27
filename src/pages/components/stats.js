@@ -1,5 +1,5 @@
-import React from 'react'
-import InViewMonitor from 'react-inview-monitor'
+import React from 'react';
+import InViewMonitor from 'react-inview-monitor';
 
 const COLORS = [
     '#6883BA',
@@ -9,7 +9,7 @@ const COLORS = [
     '#B7A57A',
 ]
 
-const StatItem = ({ idx, caption='caption', number='number', slideInClass = 'animate__slideInUp' }) =>
+const StatItem = ({ idx, caption='caption', number='number', slideInClass='animate__slideInUp' }) =>
     <InViewMonitor
         key={idx}
         classNameNotInView="col-4 vis-hidden"

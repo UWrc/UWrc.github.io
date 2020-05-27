@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import 'react-bootstrap';
 
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -10,6 +10,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import { render } from 'react-dom';
+
 import StatContainer from './components/stats';
 
 
@@ -268,7 +269,8 @@ function Home() {
   return (
     <Layout
       title="Home"
-      description="HYAK Next Gen Supercomputer Homepage">
+      description="HYAK Next Gen Supercomputer Homepage"
+    >
       <Header />
       <StatContainer />
       <UserInterface />
