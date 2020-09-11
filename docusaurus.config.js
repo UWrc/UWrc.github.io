@@ -1,36 +1,56 @@
 module.exports = {
-  title: 'HYAK',
+  title: 'Hyak',
   tagline: 'Powering discoveries in every field',
   url: 'https://hyak.uw.edu',
   baseUrl: '/',
   favicon: 'img/logos/uw_icon.png',
-  organizationName: 'UWrc', // Usually your GitHub org/user name.
-  projectName: 'UWrc.github.io', // Usually your repo name.
+  organizationName: 'UWrc', // Github org/user name
+  projectName: 'UWrc.github.io', // repo name
+  plugins: [require.resolve('docusaurus-lunr-search')],
+  onBrokenLinks: 'ignore',
   themeConfig: {
-    disableDarkMode: true,
+    colorMode: {
+      defaultMode: 'light', // "light" | "dark"
+      disableSwitch: true, // Hides the switch in the navbar
+    },
     navbar: {
       title: 'Research Computing',
       logo: {
         alt: 'Hyak Logo',
         src: 'img/logos/uw_icon.png',
       },
-      links: [
+      items: [
         {
-          to: 'docs/markdown-guide',
+          to: 'hyak/',
+          label: 'Hyak',
+          position: 'right',
+        },
+        {
+          to: 'docs/',
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'right',
         },
-        {to: 'blog', label: 'Blog', position: 'right'},
-        {to: 'about', label: 'About', position: 'right'},
+        {
+          to: 'blog/', 
+          label: 'Stories', 
+          position: 'right'
+        },
+        {
+          to: 'about/', 
+          label: 'About', 
+          position: 'right'
+        },
+        /*
         {
           href: 'https://github.com/UWrc',
           target: '_blank',
-          label: 'GitHub',
+          label: 'Github',
           position: 'right',
         },
+        */
       ],
-      hideOnScroll: true
+      hideOnScroll: true,
     },
     footer: {
       style: 'dark',
@@ -100,7 +120,7 @@ module.exports = {
     ],
   ],
   customFields: {
-    splashLogo: 'img/logos/hyak.png',
+    splashLogo: 'img/logos/rcc.png',
     splashArt: {
       left: [
         {
@@ -143,75 +163,64 @@ module.exports = {
         image: 'img/interfaces/terminal.png',
       },
       {
-        caption: 'Microsoft VSCode',
+        caption: 'VSCode',
         image: 'img/interfaces/vscode.svg',
       },
       {
-        caption: 'Project Jupyter',
-        image: 'img/interfaces/jupyter.png',
+        caption: 'Jupyter',
+        image: 'img/interfaces/jupyter.svg',
       },
       {
         caption: 'RStudio',
-        image: 'img/interfaces/rstudioball.png',
-      },
-      {
-        caption: 'XFCE',
-        image: 'img/interfaces/xfce.svg',
-      },
-      {
-        caption: 'Emacs',
-        image: 'img/interfaces/emacs.png',
-      },
-      {
-        caption: 'Vim',
-        image: 'img/interfaces/vim.png',
+        image: 'img/interfaces/rstudio.svg',
       },
     ],
     progLangs: [
       {
         caption: 'C++',
-        image: 'img/proglangs/cpp.png',
+        image: 'img/languages/cpp.svg',
       },
       {
         caption: 'Python',
-        image: 'img/proglangs/python.svg',
+        image: 'img/languages/python.svg',
       },
       {
         caption: 'R',
-        image: 'img/proglangs/r.png',
-      },
-      {
-        caption: 'Julia',
-        image: 'img/proglangs/julia.png',
+        image: 'img/languages/r.svg',
       },
     ],
     appStore: [
       {
         caption: 'MATLAB',
-        image: 'img/appstore/matlab.png',
+        image: 'img/appstore/matlab.svg',
       },
       {
         caption: 'Anaconda',
-        image: 'img/appstore/anaconda.png',
+        image: 'img/appstore/conda.svg',
       },
       {
         caption: 'Singularity',
-        image: 'img/appstore/singularity.png',
+        image: 'img/appstore/singularity.svg',
       },
       {
-        caption: 'Python ML Libraries',
-        image: 'img/appstore/pymlsuite.png',
+        caption: 'ML',
+        image: 'img/appstore/mlsuite.png',
       },
     ],
     contact: [
       {
         caption: 'Email',
-        image: 'img/contact/email.png',
+        image: 'img/contact/email.svg',
         link: 'mailto:help@uw.edu?subject=Hyak question',
       },
       {
+        caption: 'Zoom',
+        image: 'img/contact/zoom.svg',
+        link: '',
+      },
+      {
         caption: 'Slack',
-        image: 'img/contact/slack.png',
+        image: 'img/contact/slack.svg',
         link: 'https://uw-rcc.slack.com/',
       },
       {
@@ -223,41 +232,37 @@ module.exports = {
     builtWith: [
       {
         caption: 'Ansible',
-        image: 'img/builtwith/ansible.svg',
+        image: 'img/software/ansible.svg',
       },
       {
         caption: 'Linux',
-        image: 'img/builtwith/linux.png',
-      },
-      {
-        caption: 'Docker',
-        image: 'img/builtwith/docker.png',
+        image: 'img/software/linux.svg',
       },
       {
         caption: 'Kubernetes',
-        image: 'img/builtwith/kubernetes.svg',
+        image: 'img/software/kubernetes.svg',
       },
       {
         caption: 'Slurm',
-        image: 'img/builtwith/slurm.png',
+        image: 'img/software/slurm.svg',
       },
     ],
     poweredBy: [
       {
         caption: 'Lenovo',
-        image: 'img/poweredby/lenovo.png',
+        image: 'img/hardware/lenovo.svg',
       },
       {
         caption: 'Intel',
-        image: 'img/poweredby/intel.svg',
+        image: 'img/hardware/intel.svg',
       },
       {
-        caption: 'Nvidia',
-        image: 'img/poweredby/nvidia.svg',
+        caption: 'NVIDIA',
+        image: 'img/hardware/nvidia.svg',
       },
       {
-        caption: 'Dell EMC',
-        image: 'img/poweredby/dell_emc.png',
+        caption: 'Dell Technologies',
+        image: 'img/hardware/dell.svg',
       },
     ]
   }

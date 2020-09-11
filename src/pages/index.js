@@ -29,7 +29,7 @@ function Home() {
 
     return (
       <div className="logo-container pt-3">
-        <h2>A User Interface for Everyone</h2>
+        <h2>A user interface for everyone</h2>
         <div className="logos">{pics}</div>
         <p>
             We support a wide range of user interfaces, whether you're a seasoned command-line 
@@ -61,7 +61,7 @@ function Home() {
 
     return (
       <div className="logo-container pt-3">
-        <h2>We Speak Your Language</h2>
+        <h2>We speak your language</h2>
         <div className="logos">{pics}</div>
         <p>
           Any programming language that runs on an <code>x86-64</code> processor can be supported on HYAK.
@@ -104,7 +104,7 @@ function Home() {
         <p>
           Interested in computational best practices?  Don't want to be locked into a platform?
           The best option is to use containers for your code.  We specifically support
-          <b> Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
+          <b>Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
           By developing your code locally in a Singularity container, it becomes easily portable
           to HYAK or beyond to national supercomputing centers and the cloud. Your research goes
           wherever you go.
@@ -113,7 +113,7 @@ function Home() {
     )
   }
 
-  const NeedHelp = () => {
+  const Help = () => {
 
     if ((siteConfig.customFields.contact || []).length === 0) {
       return null
@@ -140,7 +140,7 @@ function Home() {
 
     return (
       <div className="logo-container pt-3">
-        <h2>Need Help?</h2>
+        <h2>Need help?</h2>
         <div className="logos">{pics}</div>
         <p>
           Shoot us an <a href="mailto:help@uw.edu?subject=Hyak question">e-mail</a>, join
@@ -171,7 +171,7 @@ function Home() {
 
     return (
       <div className="logo-container pt-3">
-        <h2>Built With</h2>
+        <h2>Our tech stack</h2>
         <div className="logos">{pics}</div>
       </div>
     )
@@ -189,7 +189,7 @@ function Home() {
 
     return (
       <div className="logo-container pt-3 pb-3">
-        <h2>Powered By</h2>
+        <h2>Powered by</h2>
         <div className="mini-logos">{pics}</div>
       </div>
     )
@@ -274,7 +274,7 @@ function Home() {
       <UserInterface />
       <ProgLangs />
       <AppStore />
-      <NeedHelp />
+      <Help />
       <BuiltWith />
       <PoweredBy />
     </Layout>
