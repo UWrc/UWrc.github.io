@@ -1,8 +1,8 @@
-# UWrc Website
-
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+# UW Research Computing Website
 
 [![Build Status](https://travis-ci.com/UWrc/UWrc.github.io.svg?branch=src)](https://travis-ci.com/UWrc/UWrc.github.io)
+
+This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator. SVG logos provided using [VectorLogoZone](https://www.vectorlogo.zone) or [logosear.ch](https://logosear.ch). Using the offline search plugin from [@lelouch77](https://github.com/lelouch77/docusaurus-lunr-search).
 
 ### JS Frameworks Installation
 
