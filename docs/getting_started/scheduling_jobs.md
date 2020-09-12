@@ -77,7 +77,7 @@ The value given to `--mem` should be smaller than the memory of the node as the 
 - For 384GB nodes, use `--mem=374G`
 - For 512GB nodes, use `--mem=500G`
 - For 768GB nodes, use `--mem=752G`
-- For the [`knl`]() nodes, use `--mem=200G`
+- For the `knl` nodes, use `--mem=200G`
 
 ### Slurm Environment Variables
 
