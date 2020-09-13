@@ -120,150 +120,151 @@ module.exports = {
     ],
   ],
   customFields: {
-    splashLogo: 'img/logos/rcc.png',
-    splashArt: {
-      left: [
+    Graphics: {
+      SPLASH_LOGO: 'img/logos/rcc.png',
+      SplashArt: {
+        LEFT: [
+          {
+            caption: 'Medicine',
+            image: 'img/splashart/medicine.svg',
+            darkImage: 'img/splashart/medicine_white.svg'
+          },
+          {
+            caption: 'Data',
+            image: 'img/splashart/data_uw_gold.svg',
+            darkImage: 'img/splashart/data_white.svg'
+          },
+          {
+            caption: 'Engineer',
+            image: 'img/splashart/engineer.svg',
+            darkImage: 'img/splashart/engineer_white.svg'
+          }
+        ],
+        RIGHT: [
+          {
+            caption: 'Rocket',
+            image: 'img/splashart/rocket.svg',
+            darkImage: 'img/splashart/rocket_white.svg'
+          },
+          {
+            caption: 'Programming',
+            image: 'img/splashart/programmer_uw_gold.svg',
+            darkImage: 'img/splashart/programmer_white.svg'
+          },
+          {
+            caption: 'Chemistry',
+            image: 'img/splashart/test_tubes.svg',
+            darkImage: 'img/splashart/test_tubes_white.svg'
+          },
+        ]
+      },
+      INTERFACES: [
         {
-          caption: 'Medicine',
-          image: 'img/splashart/medicine.svg',
-          darkImage: 'img/splashart/medicine_white.svg'
+          caption: 'Terminal',
+          image: 'img/interfaces/terminal.png',
         },
         {
-          caption: 'Data',
-          image: 'img/splashart/data_uw_gold.svg',
-          darkImage: 'img/splashart/data_white.svg'
+          caption: 'VSCode',
+          image: 'img/interfaces/vscode.svg',
         },
         {
-          caption: 'Engineer',
-          image: 'img/splashart/engineer.svg',
-          darkImage: 'img/splashart/engineer_white.svg'
-        }
+          caption: 'Jupyter',
+          image: 'img/interfaces/jupyter.svg',
+        },
+        {
+          caption: 'RStudio',
+          image: 'img/interfaces/rstudio.svg',
+        },
       ],
-      right: [
+      PROGRAMMING_LANGS: [
         {
-          caption: 'Rocket',
-          image: 'img/splashart/rocket.svg',
-          darkImage: 'img/splashart/rocket_white.svg'
+          caption: 'C++',
+          image: 'img/languages/cpp.svg',
         },
         {
-          caption: 'Programming',
-          image: 'img/splashart/programmer_uw_gold.svg',
-          darkImage: 'img/splashart/programmer_white.svg'
+          caption: 'Python',
+          image: 'img/languages/python.svg',
         },
         {
-          caption: 'Chemistry',
-          image: 'img/splashart/test_tubes.svg',
-          darkImage: 'img/splashart/test_tubes_white.svg'
+          caption: 'R',
+          image: 'img/languages/r.svg',
+        },
+      ],
+      APP_STORE: [
+        {
+          caption: 'MATLAB',
+          image: 'img/appstore/matlab.svg',
+        },
+        {
+          caption: 'Anaconda',
+          image: 'img/appstore/conda.svg',
+        },
+        {
+          caption: 'Singularity',
+          image: 'img/appstore/singularity.svg',
+        },
+        {
+          caption: 'ML',
+          image: 'img/appstore/mlsuite.png',
+        },
+      ],
+      CONTACT: [
+        {
+          caption: 'Email',
+          image: 'img/contact/email.svg',
+          link: 'mailto:help@uw.edu?subject=Hyak question',
+        },
+        {
+          caption: 'Zoom',
+          image: 'img/contact/zoom.svg',
+        },
+        {
+          caption: 'Slack',
+          image: 'img/contact/slack.svg',
+          link: 'https://uw-rcc.slack.com/',
+        },
+        {
+          caption: 'UW eScience Institute',
+          image: 'img/contact/escience.png',
+          link: 'https://escience.washington.edu',
+        },
+      ],
+      BUILT_WITH: [
+        {
+          caption: 'Ansible',
+          image: 'img/software/ansible.svg',
+        },
+        {
+          caption: 'Linux',
+          image: 'img/software/linux.svg',
+        },
+        {
+          caption: 'Kubernetes',
+          image: 'img/software/kubernetes.svg',
+        },
+        {
+          caption: 'Slurm',
+          image: 'img/software/slurm.svg',
+        },
+      ],
+      POWERED_BY: [
+        {
+          caption: 'Lenovo',
+          image: 'img/hardware/lenovo.svg',
+        },
+        {
+          caption: 'Intel',
+          image: 'img/hardware/intel.svg',
+        },
+        {
+          caption: 'NVIDIA',
+          image: 'img/hardware/nvidia.svg',
+        },
+        {
+          caption: 'Dell Technologies',
+          image: 'img/hardware/dell.svg',
         },
       ]
-    },
-    interfaces: [
-      {
-        caption: 'Terminal',
-        image: 'img/interfaces/terminal.png',
-      },
-      {
-        caption: 'VSCode',
-        image: 'img/interfaces/vscode.svg',
-      },
-      {
-        caption: 'Jupyter',
-        image: 'img/interfaces/jupyter.svg',
-      },
-      {
-        caption: 'RStudio',
-        image: 'img/interfaces/rstudio.svg',
-      },
-    ],
-    progLangs: [
-      {
-        caption: 'C++',
-        image: 'img/languages/cpp.svg',
-      },
-      {
-        caption: 'Python',
-        image: 'img/languages/python.svg',
-      },
-      {
-        caption: 'R',
-        image: 'img/languages/r.svg',
-      },
-    ],
-    appStore: [
-      {
-        caption: 'MATLAB',
-        image: 'img/appstore/matlab.svg',
-      },
-      {
-        caption: 'Anaconda',
-        image: 'img/appstore/conda.svg',
-      },
-      {
-        caption: 'Singularity',
-        image: 'img/appstore/singularity.svg',
-      },
-      {
-        caption: 'ML',
-        image: 'img/appstore/mlsuite.png',
-      },
-    ],
-    contact: [
-      {
-        caption: 'Email',
-        image: 'img/contact/email.svg',
-        link: 'mailto:help@uw.edu?subject=Hyak question',
-      },
-      {
-        caption: 'Zoom',
-        image: 'img/contact/zoom.svg',
-        link: '',
-      },
-      {
-        caption: 'Slack',
-        image: 'img/contact/slack.svg',
-        link: 'https://uw-rcc.slack.com/',
-      },
-      {
-        caption: 'UW eScience Institute',
-        image: 'img/contact/escience.png',
-        link: 'https://escience.washington.edu',
-      },
-    ],
-    builtWith: [
-      {
-        caption: 'Ansible',
-        image: 'img/software/ansible.svg',
-      },
-      {
-        caption: 'Linux',
-        image: 'img/software/linux.svg',
-      },
-      {
-        caption: 'Kubernetes',
-        image: 'img/software/kubernetes.svg',
-      },
-      {
-        caption: 'Slurm',
-        image: 'img/software/slurm.svg',
-      },
-    ],
-    poweredBy: [
-      {
-        caption: 'Lenovo',
-        image: 'img/hardware/lenovo.svg',
-      },
-      {
-        caption: 'Intel',
-        image: 'img/hardware/intel.svg',
-      },
-      {
-        caption: 'NVIDIA',
-        image: 'img/hardware/nvidia.svg',
-      },
-      {
-        caption: 'Dell Technologies',
-        image: 'img/hardware/dell.svg',
-      },
-    ]
+    }
   }
 };
