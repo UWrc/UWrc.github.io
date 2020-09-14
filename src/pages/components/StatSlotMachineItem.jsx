@@ -1,6 +1,6 @@
 import React from "react";
 import Reel from "react-reel";
-import InViewMonitor from "react-inview-monitor";
+import useInView from "react-cool-inview";
 
 const REEL_THEME = {
   reel: {
@@ -24,12 +24,14 @@ const REEL_THEME = {
   }
 };
 
-export default function StatSlotMachineItem({ idx, number, caption, boxColor, slideInClass='animate__slideInUp' }) {
-  return <InViewMonitor
-    key={idx}
-    classNameNotInView="col-4 vis-hidden"
-    classNameInView={`col-4 fadeineffects__item animate__animated ${slideInClass}`}
-  >
+export default function StatSlotMachineItem({ number, caption, boxColor }) {
+  const { ref, inView } = useInView({
+    unobserveOnEnter: true
+  })
+
+  let reel = inView ? <Reel text={number} theme={REEL_THEME} /> : <></>
+
+  return <div className="col-4" ref={ref}>
     <div
       className="rounded d-flex justify-content-center align-items-center flex-column"
       style={{
@@ -37,8 +39,9 @@ export default function StatSlotMachineItem({ idx, number, caption, boxColor, sl
         backgroundColor: boxColor
       }}
     >
-      <Reel text={number} theme={REEL_THEME} />
+      {reel}
       <p className="stat-caption text-white">{caption}</p>
     </div>
-  </InViewMonitor>
+  </div>
+
 }
