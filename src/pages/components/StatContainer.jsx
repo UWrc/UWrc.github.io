@@ -10,7 +10,7 @@ const Colors = {
   LIGHT_FRENCH_BEIGE: '#B7A57A',
 }
 
-function StatItem(idx, color, caption='caption', number='number', slideInClass = 'animate__slideInUp') {
+function StatItem({ idx, color, caption='caption', number='number', slideInClass = 'animate__slideInUp' }) {
   return <InViewMonitor
     key={idx}
     classNameNotInView="col-4 vis-hidden"
@@ -29,32 +29,38 @@ function StatItem(idx, color, caption='caption', number='number', slideInClass =
   </InViewMonitor>
 }
 
-function StatRow(statItems) {
-  return <div className="d-flex justify-content-center mb-5">
+function StatRow(idx, statItems) {
+  return <div key={idx} className="d-flex justify-content-center mb-5">
     {statItems}
   </div>
 }
 
 function buildStatRows(statItems) {
+  let statItemMapping = Object.entries(statItems)
+  let colors = Object.values(Colors)
   let statRows = []
-  let currentRow = [statItems[0]]
-  for (let i = 1; i < statItems.length; i++) {
+  let currentRow = [
+    <StatItem key={0} idx={0} caption={statItemMapping[0][0]} number={statItemMapping[0][1]} color={colors[0]} />
+  ]
+  for (let i = 1; i < statItemMapping.length; i++) {
     if (i % 3 == 0) {  // rows have <= 3 items
       statRows.push(currentRow)
       currentRow = []
     }
     let currentItem = <StatItem
       key={i}
-      caption={Object.keys(statItems)[i]}
-      number={Object.values(statItems)[i]}
-      color={Object.values(Colors)[i % Object.values(Colors).length]}
+      idx={i}
+      caption={statItemMapping[i][0]}
+      number={statItemMapping[i][1]}
+      color={colors[i % colors.length]}
     />
     currentRow.push(currentItem)
   }
-  return statRows.map(row => StatRow(row))
+  statRows.push(currentRow)
+  return statRows.map((row, i) => StatRow(i, row))
 }
 
-export default function StatContainer(statItems) {
+export default function StatContainer({ statItems }) {
   return <div>
     {buildStatRows(statItems)}
   </div>
