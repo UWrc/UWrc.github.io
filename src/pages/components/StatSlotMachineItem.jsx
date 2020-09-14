@@ -1,5 +1,5 @@
 import React from "react";
-import Reel from 'react-reel'
+import Reel from "react-reel";
 import InViewMonitor from "react-inview-monitor";
 
 const REEL_THEME = {

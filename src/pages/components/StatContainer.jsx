@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 import StatSlotMachineItem from "./StatSlotMachineItem";
 import StatRow from "./StatRow";
 
 
 const Colors = {
-  GLAUCOUS: '#6883BA',
-  YALE_BLUE: '#033860',
-  CHINA_ROSE: '#AB4E68',
-  SPANISH_VIOLET: '#4B2E83',
-  LIGHT_FRENCH_BEIGE: '#B7A57A',
+  GLAUCOUS: "#6883BA",
+  YALE_BLUE: "#033860",
+  CHINA_ROSE: "#AB4E68",
+  SPANISH_VIOLET: "#4B2E83",
+  LIGHT_FRENCH_BEIGE: "#B7A57A",
 }
 
 function buildStatContainer(statItems) {

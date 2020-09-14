@@ -1,5 +1,5 @@
 import React from "react";
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 
 function mapImgItemsToHTMLImgs(imgItems) {
