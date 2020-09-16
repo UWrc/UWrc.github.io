@@ -50,7 +50,6 @@ module.exports = {
         },
         */
       ],
-      hideOnScroll: true,
     },
     footer: {
       style: 'dark',

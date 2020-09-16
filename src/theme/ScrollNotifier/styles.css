@@ -1,0 +1,6 @@
+.scroll-notifier {
+  position: sticky;
+  top: 60px;  /* Navbar is 60px thick */
+  height: 1px;
+  background-color: #4b2e83;
+}
