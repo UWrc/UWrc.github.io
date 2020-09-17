@@ -16,7 +16,13 @@ function buildStatContainer(statItems) {
   let colors = Object.values(Colors)
   let statRows = []
   let currentRow = [
-    <StatSlotMachineItem key={0} idx={0} caption={statItemMapping[0][0]} number={statItemMapping[0][1]} boxColor={colors[0]} />
+    <StatSlotMachineItem
+      key={0}
+      idx={0}
+      caption={statItemMapping[0][0]}
+      number={statItemMapping[0][1]}
+      backgroundColor={colors[0]}
+    />
   ]
   for (let i = 1; i < statItemMapping.length; i++) {
     if (i % 3 == 0) {  // rows have <= 3 items
@@ -28,16 +34,16 @@ function buildStatContainer(statItems) {
       idx={i}
       caption={statItemMapping[i][0]}
       number={statItemMapping[i][1]}
-      boxColor={colors[i % colors.length]}
+      backgroundColor={colors[i % colors.length]}
     />
     currentRow.push(currentItem)
   }
   statRows.push(currentRow)
-  return statRows.map((row, i) => StatRow(i, row))
+  return statRows.map((row, i) => <StatRow idx={i} statItems={row} />)
 }
 
-export default function StatContainer({ statItems }) {
+export default function StatContainer(props) {
   return <div>
-    {buildStatContainer(statItems)}
+    {buildStatContainer(props.statItems)}
   </div>
 }

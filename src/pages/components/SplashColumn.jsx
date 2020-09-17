@@ -17,8 +17,8 @@ function mapSplashImgItemsToImgColumn(imgs, side) {
   ))
 }
 
-export default function SplashColumn({ imgs, side }) {
+export default function SplashColumn(props) {
   return <div className="splash-side">
-    {mapSplashImgItemsToImgColumn(imgs, side)}
+    {mapSplashImgItemsToImgColumn(props.imgs, props.side)}
   </div>
 }

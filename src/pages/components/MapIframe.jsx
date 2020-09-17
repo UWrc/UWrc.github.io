@@ -1,13 +1,13 @@
 import React from "react"
 
 
-export default function MapIframe({ title, name, source, cssAlignment }) {
+export default function MapIframe(props) {
   return (
-    <div className={"map " + cssAlignment}>
+    <div className={"map " + props.align}>
       <div>
-        <p className="title">{title}</p>
-        <iframe src={source} />
-        <p>{name}</p>
+        <p className="title">{props.title}</p>
+        <iframe src={props.src} />
+        <p>{props.name}</p>
       </div>
     </div>
   )

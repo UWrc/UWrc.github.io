@@ -8,15 +8,15 @@ import SplashColumn from "./SplashColumn";
 import styles from "../styles.module.css";
 
 
-export default function Splash({ logo, tagline, leftImgs, rightImgs }) {
+export default function Splash(props) {
   return (
     <header className={classnames("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <div className="splash-wrapper">
-          <SplashColumn imgs={leftImgs} side="left" key="left" />
+          <SplashColumn imgs={props.leftImgs} side="left" key="left" />
           <div className="splash-middle" key="middle">
-            <img className="hyak-splash" src={useBaseUrl(logo)} alt="Hyak Logo" />
-            <p className="tagline">{tagline}</p>
+            <img className="hyak-splash" src={useBaseUrl(props.logo)} alt="Hyak Logo" />
+            <p className="tagline">{props.tagline}</p>
             <div className={styles.buttons}>
               <Link
                 className={classnames(
@@ -28,7 +28,7 @@ export default function Splash({ logo, tagline, leftImgs, rightImgs }) {
               </Link>
             </div>
           </div>
-          <SplashColumn imgs={rightImgs} side="right" key="right" />
+          <SplashColumn imgs={props.rightImgs} side="right" key="right" />
         </div>
       </div>
     </header>

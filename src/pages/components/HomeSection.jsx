@@ -6,12 +6,12 @@ function mapImgItemsToHTMLImgs(imgItems) {
   return imgItems.map(item => <img key={item.caption} src={useBaseUrl(item.image)} alt={item.caption} />)
 }
 
-export default function HomeSection({ header, imgs, content = [] }) {
+export default function HomeSection(props) {
   return (
     <div className="logo-container pt-3">
-      {header}
-      <div className="logos">{mapImgItemsToHTMLImgs(imgs)}</div>
-      {content}
+      {props.header}
+      <div className="logos">{mapImgItemsToHTMLImgs(props.imgs)}</div>
+      {props.content ? props.content : []}
     </div>
   )
 }

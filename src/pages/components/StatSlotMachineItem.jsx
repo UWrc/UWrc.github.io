@@ -24,23 +24,23 @@ const REEL_THEME = {
   }
 };
 
-export default function StatSlotMachineItem({ number, caption, boxColor }) {
+export default function StatSlotMachineItem(props) {
   const { ref, inView } = useInView({
     unobserveOnEnter: true
   })
 
-  let reel = inView ? <Reel text={number} theme={REEL_THEME} /> : <></>
+  let reel = inView ? <Reel text={props.number} theme={REEL_THEME} /> : <></>
 
   return <div className="col-4" ref={ref}>
     <div
       className="rounded d-flex justify-content-center align-items-center flex-column"
       style={{
         height: '200px',
-        backgroundColor: boxColor
+        backgroundColor: props.backgroundColor
       }}
     >
       {reel}
-      <p className="stat-caption text-white">{caption}</p>
+      <p className="stat-caption text-white">{props.caption}</p>
     </div>
   </div>
 
