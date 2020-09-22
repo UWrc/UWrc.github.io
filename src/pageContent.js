@@ -71,7 +71,7 @@ export const HomePage = {
       <p key={1}>
         Interested in computational best practices?  Don't want to be locked into a platform?
         The best option is to use containers for your code.  We specifically support
-        <b>Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
+        <b> Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
         By developing your code locally in a Singularity container, it becomes easily portable
         to HYAK or beyond to national supercomputing centers and the cloud. Your research goes
         wherever you go.
