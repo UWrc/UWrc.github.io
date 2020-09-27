@@ -3,45 +3,27 @@ import classnames from "classnames";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-import {capitalizeStr} from "../../utils";
+import SplashColumn from "./SplashColumn";
+
 import styles from "../styles.module.css";
 
 
-function mapSplashImgItemsToImgColumn(imgs, side) {
-  return imgs.map((item, i) => (
-    <div
-      className={
-        `splash-side-img animate__animated animate__fadeIn${capitalizeStr(side)} animate__delay-${i+1}s ` + side
-      }
-      key={i}
-    >
-      <img src={useBaseUrl(item.image)} key={item.caption} alt={item.caption} />
-    </div>
-  ))
-}
-
-function SplashColumn({ imgs, side }) {
-  return <div className="splash-side">
-    {mapSplashImgItemsToImgColumn(imgs, side)}
-  </div>
-}
-
 export default function Splash({ logo, tagline, leftImgs, rightImgs }) {
   return (
-    <header className={classnames('hero hero--primary', styles.heroBanner)}>
+    <header className={classnames("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <div className="splash-wrapper">
           <SplashColumn imgs={leftImgs} side="left" key="left" />
           <div className="splash-middle" key="middle">
-            <img className="hyak-splash" src={useBaseUrl(logo)} alt='Hyak Logo' />
+            <img className="hyak-splash" src={useBaseUrl(logo)} alt="Hyak Logo" />
             <p className="tagline">{tagline}</p>
             <div className={styles.buttons}>
               <Link
                 className={classnames(
-                  'button button--outline button--secondary button--lg',
+                  "button button--outline button--secondary button--lg",
                   styles.getStarted,
                 )}
-                to={useBaseUrl('docs/setup')}>
+                to={useBaseUrl("docs/setup")}>
                 Get Started
               </Link>
             </div>

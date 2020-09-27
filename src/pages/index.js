@@ -4,7 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css";
 import "./styles.module.css";
 
 import * as PageContent from "../pageContent";

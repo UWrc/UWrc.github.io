@@ -8,7 +8,7 @@ export const HEAD_DESC = 'HYAK Next Gen Supercomputer Homepage'
 
 export const STAT_ITEMS = {
   'CPU Cores': '18,376',
-  'GPU CORES': '35,840',
+  'GPU Cores': '35,840',
   'Terabytes of Memory': '3000 TB',
   'Users': '100',
   'Terabytes of Data': '4000 TB'
