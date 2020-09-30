@@ -21,12 +21,7 @@ export default function Home() {
       title={PageContent.HEAD_TITLE}
       description={PageContent.HEAD_DESC}
     >
-      <Splash
-        logo={siteConfig.customFields.Graphics.SPLASH_LOGO}
-        tagline={siteConfig.tagline}
-        leftImgs={siteConfig.customFields.Graphics.SplashArt.LEFT}
-        rightImgs={siteConfig.customFields.Graphics.SplashArt.RIGHT}
-      />
+      <Splash />
       <StatContainer statItems={PageContent.STAT_ITEMS} />
       <HomeSection
         header={PageContent.HomePage.UserInterface.HEADER}

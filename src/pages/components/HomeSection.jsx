@@ -1,10 +1,6 @@
 import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 
-
-function mapImgItemsToHTMLImgs(imgItems) {
-  return imgItems.map(item => <img key={item.caption} src={useBaseUrl(item.image)} alt={item.caption} />)
-}
+import { mapImgItemsToHTMLImgs } from "../../utils";
 
 export default function HomeSection(props) {
   return (

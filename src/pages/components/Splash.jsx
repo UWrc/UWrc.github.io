@@ -1,36 +1,47 @@
 import React from "react";
-import classnames from "classnames";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import SplashImage from "./SplashImage";
+import TypingTagline from "./TypingTagline";
 
-import SplashColumn from "./SplashColumn";
+import styles from "../styles.module.css"
+import classnames from "classnames";
 
-import styles from "../styles.module.css";
+import { mapImgItemsToHTMLImgs } from "../../utils";
 
 
-export default function Splash(props) {
+export default function Splash() {
+  const context = useDocusaurusContext();
+  const {siteConfig = {}} = context;
+
   return (
-    <header className={classnames("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <div className="splash-wrapper">
-          <SplashColumn imgs={props.leftImgs} side="left" key="left" />
-          <div className="splash-middle" key="middle">
-            <img className="hyak-splash" src={useBaseUrl(props.logo)} alt="Hyak Logo" />
-            <p className="tagline">{props.tagline}</p>
-            <div className={styles.buttons}>
-              <Link
-                className={classnames(
-                  "button button--outline button--secondary button--lg",
-                  styles.getStarted,
-                )}
-                to={useBaseUrl("docs/setup")}>
-                Get Started
-              </Link>
-            </div>
-          </div>
-          <SplashColumn imgs={props.rightImgs} side="right" key="right" />
-        </div>
+    <div className="splash" style={{
+      textAlign: "center",
+    }}>
+      <SplashImage />
+      <TypingTagline />
+      <div className="splash-logos">
+        {mapImgItemsToHTMLImgs(siteConfig.customFields.Graphics.SPLASH_LOGOS)}
       </div>
-    </header>
+      <div className={styles.buttons}>
+        <Link
+          className={classnames(
+            "button button--outline button--secondary button--lg",
+            styles.getStarted,
+          )}
+          to={useBaseUrl("docs/setup")}>
+          Button1
+        </Link>
+        <Link
+          className={classnames(
+            "button button--outline button--secondary button--lg",
+            styles.getStarted,
+          )}
+          to={useBaseUrl("docs/setup")}>
+          Button2
+        </Link>
+      </div>
+    </div>
   )
 }

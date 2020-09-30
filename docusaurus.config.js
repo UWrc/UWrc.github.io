@@ -120,43 +120,18 @@ module.exports = {
   ],
   customFields: {
     Graphics: {
-      SPLASH_LOGO: 'img/logos/rcc.png',
-      SplashArt: {
-        LEFT: [
-          {
-            caption: 'Medicine',
-            image: 'img/splashart/medicine.svg',
-            darkImage: 'img/splashart/medicine_white.svg'
-          },
-          {
-            caption: 'Data',
-            image: 'img/splashart/data_uw_gold.svg',
-            darkImage: 'img/splashart/data_white.svg'
-          },
-          {
-            caption: 'Engineer',
-            image: 'img/splashart/engineer.svg',
-            darkImage: 'img/splashart/engineer_white.svg'
-          }
-        ],
-        RIGHT: [
-          {
-            caption: 'Rocket',
-            image: 'img/splashart/rocket.svg',
-            darkImage: 'img/splashart/rocket_white.svg'
-          },
-          {
-            caption: 'Programming',
-            image: 'img/splashart/programmer_uw_gold.svg',
-            darkImage: 'img/splashart/programmer_white.svg'
-          },
-          {
-            caption: 'Chemistry',
-            image: 'img/splashart/test_tubes.svg',
-            darkImage: 'img/splashart/test_tubes_white.svg'
-          },
-        ]
-      },
+      SPLASH_LOGOS: [
+        {
+          caption: 'UW RCC Github',
+          image: 'img/splashlogos/github.svg',
+          link: 'https://github.com/UWrc'
+        },
+        {
+          caption: 'UW RCC Website',
+          image: 'img/logos/uw_icon.png',
+          link: 'https://depts.washington.edu/uwrcc/'
+        }
+      ],
       INTERFACES: [
         {
           caption: 'Terminal',
