@@ -1,5 +1,13 @@
 import React from "react"
+import PropTypes from "prop-types";
 
+
+MapIframe.propTypes = {
+  align: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  name: PropTypes.string
+}
 
 export default function MapIframe(props) {
   return (

@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import StatSlotMachineItem from "./StatSlotMachineItem";
 import StatRow from "./StatRow";
 
@@ -20,7 +22,7 @@ function buildStatContainer(statItems) {
       key={0}
       idx={0}
       caption={statItemMapping[0][0]}
-      number={statItemMapping[0][1]}
+      value={statItemMapping[0][1]}
       backgroundColor={colors[0]}
     />
   ]
@@ -31,15 +33,18 @@ function buildStatContainer(statItems) {
     }
     let currentItem = <StatSlotMachineItem
       key={i}
-      idx={i}
       caption={statItemMapping[i][0]}
-      number={statItemMapping[i][1]}
+      value={statItemMapping[i][1]}
       backgroundColor={colors[i % colors.length]}
     />
     currentRow.push(currentItem)
   }
   statRows.push(currentRow)
-  return statRows.map((row, i) => <StatRow idx={i} statItems={row} />)
+  return statRows.map((row, i) => <StatRow key={i} idx={i} statItems={row} />)
+}
+
+StatContainer.propTypes = {
+  statItems: PropTypes.object.isRequired
 }
 
 export default function StatContainer(props) {

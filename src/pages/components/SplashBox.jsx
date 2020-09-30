@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 
 function topPath({ x, y, width, height }) {
@@ -28,6 +29,18 @@ function sidePath({ x, y, width, height }) {
 
 function textRotationAngle({ width, height }) {
   return -1 * Math.atan((height / 4) / (width / 2)) * (180 / Math.PI)
+}
+
+SplashBox.propTypes = {
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  yTransition: PropTypes.number,
+  topColor: PropTypes.string.isRequired,
+  sideColor: PropTypes.string.isRequired,
+  linkTo: PropTypes.string,
+  text: PropTypes.string
 }
 
 export default function SplashBox(props) {

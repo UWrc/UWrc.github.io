@@ -5,7 +5,7 @@ import "react-typist/dist/Typist.css"
 const TAGLINE_ITEMS = ["medicine", "physics", "biology", "chemistry", "computer science"]
 const TAGLINE_START = "Powering discoveries in"
 
-export default function TypingTagline(props) {
+export default function TypingTagline() {
   const [count, setCount] = useState(0);
 
   let taglinesToType = TAGLINE_ITEMS.map(item => {

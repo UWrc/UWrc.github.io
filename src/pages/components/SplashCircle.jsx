@@ -1,5 +1,17 @@
 import React from "react";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+
+import PropTypes from "prop-types";
+
+SplashCircle.propTypes = {
+  cx: PropTypes.number.isRequired,
+  cy: PropTypes.number.isRequired,
+  r: PropTypes.number.isRequired,
+  text: PropTypes.string,
+  linkTo: PropTypes.string,
+  xTransform: PropTypes.number,
+  yTransform: PropTypes.number
+}
 
 export default function SplashCircle(props) {
   return (

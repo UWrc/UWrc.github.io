@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "docusaurus-lunr-search": "^2.1.6",
     "framer-motion": "^2.6.15",
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-bootstrap": "^1.0.1",
     "react-cool-inview": "^1.1.3",

@@ -10,8 +10,8 @@ export function mapImgItemsToHTMLImgs(imgItems) {
   return imgItems.map(item => {
     return (
       item.link ?
-        <a href={item.link}>
-          <motion.img key={item.caption} src={useBaseUrl(item.image)} alt={item.caption}
+        <a key={item.caption} href={item.link}>
+          <motion.img src={useBaseUrl(item.image)} alt={item.caption}
                       whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} />
         </a> :
         <img key={item.caption} src={useBaseUrl(item.image)} alt={item.caption} />

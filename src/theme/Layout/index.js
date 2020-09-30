@@ -53,7 +53,6 @@ function Layout(props) {
   let scrollPercent = Math.min(1, window.scrollY / effectiveDocumentHeight) || 0
   const [scrollRef,] = useScrollPercentage()  // purpose of this hook is to refresh data on scroll
 
-  console.log(scrollPercent)
   return (
     <Providers>
       <Head>

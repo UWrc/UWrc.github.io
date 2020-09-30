@@ -1,6 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { mapImgItemsToHTMLImgs } from "../../utils";
+
+
+HomeSection.propTypes = {
+  header: PropTypes.element.isRequired,
+  imgs: PropTypes.arrayOf(PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    caption: PropTypes.string.isRequired,
+    link: PropTypes.string
+  })).isRequired,
+  content: PropTypes.arrayOf(PropTypes.element)
+}
 
 export default function HomeSection(props) {
   return (
