@@ -1,7 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function StatRow(idx, statItems) {
-  return <div key={idx} className="d-flex justify-content-center mb-5">
-    {statItems}
+StatRow.propTypes = {
+  idx: PropTypes.number.isRequired,
+  statItems: PropTypes.arrayOf(PropTypes.element).isRequired
+}
+
+export default function StatRow(props) {
+  return <div key={props.idx} className="d-flex justify-content-center mb-5">
+    {props.statItems}
   </div>
 }

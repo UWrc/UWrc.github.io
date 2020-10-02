@@ -71,7 +71,7 @@ export const HomePage = {
       <p key={1}>
         Interested in computational best practices?  Don't want to be locked into a platform?
         The best option is to use containers for your code.  We specifically support
-        <b>Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
+        <b> Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
         By developing your code locally in a Singularity container, it becomes easily portable
         to HYAK or beyond to national supercomputing centers and the cloud. Your research goes
         wherever you go.
@@ -95,14 +95,14 @@ export const HomePage = {
           title="Intergalactic HQ"
           name="4545 Building"
           align="right"
-          source="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.179163071817!2d-122.31451588483776!3d47.66151577918835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148afd210277%3A0x378526e9274172e1!2sForty-Five%20Forty-Five%20Building%2C%204545%2015th%20Ave%20NE%2C%20Seattle%2C%20WA%2098105!5e0!3m2!1sen!2sus!4v1572905266626!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.179163071817!2d-122.31451588483776!3d47.66151577918835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148afd210277%3A0x378526e9274172e1!2sForty-Five%20Forty-Five%20Building%2C%204545%2015th%20Ave%20NE%2C%20Seattle%2C%20WA%2098105!5e0!3m2!1sen!2sus!4v1572905266626!5m2!1sen!2sus"
         />
         <MapIframe
           key="2"
           title="Global HQ"
           name="UW eScience Institute"
           align="left"
-          source="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.5986053468737!2d-122.31397348483813!3d47.653366479187774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f277b0f15d%3A0x7c2434f079426d8c!2seScience%20Institute!5e0!3m2!1sen!2sus!4v1572905032160!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.5986053468737!2d-122.31397348483813!3d47.653366479187774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f277b0f15d%3A0x7c2434f079426d8c!2seScience%20Institute!5e0!3m2!1sen!2sus!4v1572905032160!5m2!1sen!2sus"
         />
         <div className="blank-map" />
       </div>

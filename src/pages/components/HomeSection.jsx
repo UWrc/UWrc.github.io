@@ -1,17 +1,25 @@
 import React from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import PropTypes from "prop-types";
+
+import { mapImgItemsToHTMLImgs } from "../../utils";
 
 
-function mapImgItemsToHTMLImgs(imgItems) {
-  return imgItems.map(item => <img key={item.caption} src={useBaseUrl(item.image)} alt={item.caption} />)
+HomeSection.propTypes = {
+  header: PropTypes.element.isRequired,
+  imgs: PropTypes.arrayOf(PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    caption: PropTypes.string.isRequired,
+    link: PropTypes.string
+  })).isRequired,
+  content: PropTypes.arrayOf(PropTypes.element)
 }
 
-export default function HomeSection({ header, imgs, content = [] }) {
+export default function HomeSection(props) {
   return (
     <div className="logo-container pt-3">
-      {header}
-      <div className="logos">{mapImgItemsToHTMLImgs(imgs)}</div>
-      {content}
+      {props.header}
+      <div className="logos">{mapImgItemsToHTMLImgs(props.imgs)}</div>
+      {props.content ? props.content : []}
     </div>
   )
 }

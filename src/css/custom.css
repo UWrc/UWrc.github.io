@@ -21,6 +21,10 @@ a {
   color: #9259ff;
 }
 
+svg a:hover {
+  text-decoration: none;
+}
+
 .vis-hidden {
   visibility: hidden;
 }
@@ -50,20 +54,20 @@ a {
   padding: 0 var(--ifm-pre-padding);
 }
 
-.hyak-splash {
-  max-height: 320px;
-  padding-bottom: 40px;
+.splash {
+  height: 100vh;
 }
 
 .tagline {
   color: black;
   font-weight: bold;
   font-size: 32px;
-  margin-bottom: 60px;
+  margin: 32px 0;
 }
 
 .button {
   border-color: black;
+  margin: 0 5px;
 }
 
 .button.button--secondary {
@@ -76,32 +80,6 @@ a {
   height: 100vh;
 }
 
-.splash-wrapper {
-  display: flex;
-}
-
-.splash-side {
-  max-width: 20%;
-  padding: 5px;
-  padding-top: 28px;
-}
-
-.splash-side-img.left {
-  padding-right: 20px;
-}
-
-.splash-side-img.right {
-  padding-left: 20px;
-}
-
-.splash-side-img {
-  padding-top: 4px;
-}
-
-.splash-middle {
-  padding: 10px;
-}
-
 .stat-caption {
   font-size: 1.5rem;
 }
@@ -109,19 +87,6 @@ a {
 .logo-container {
   padding: 0 20px 0;
   text-align: center;
-}
-
-.logo-container.padding-top {
-  padding-top: 20px;
-}
-
-.logo-container.padding-bottom {
-  padding-bottom: 20px;
-}
-
-.logo-container.padding-top.padding-bottom {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .logo-container h2 {
@@ -144,19 +109,31 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 20px;
-  padding-top: 0;
+  padding: 0 20px 20px;
 }
 
 .logo-container .logos img {
-  max-height: 90px;
-  padding: 20px;
+  height: 90px;
+  margin: 20px 20px 0;
   width: auto;
 }
 
-.logo-container .mini-logos img {
-  max-height: 70px;
-  padding: 20px;
+.splash-logos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0 20px 20px;
+  margin: 40px 0 20px;
+}
+
+.splash-logos a {
+  height: 50px;
+  width: auto;
+}
+
+.splash-logos img {
+  height: 50px;
+  margin: 0 10px;
   width: auto;
 }
 
@@ -176,7 +153,7 @@ a {
 
 .map-container .map div p {
   text-align: center;
-  padding: 0px;
+  padding: 0;
 }
 
 .map-container .map div p.title {
@@ -197,7 +174,7 @@ a {
 
 @media only screen and (max-width: 992px) {
   .blank-map {
-    width: 0%;
+    width: 0;
   }
 
   .map-container .map {
