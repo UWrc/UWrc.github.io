@@ -82,10 +82,10 @@ export const HomePage = {
     HEADER: <h2>Need help?</h2>,
     SECTIONS: [
       <p key={0}>
-        Shoot us an <a href="mailto:help@uw.edu?subject=Hyak question">e-mail</a>, join
-        our <a href="https://uw-rcc.slack.com/">Slack</a>, or show up to our in-person
+        Shoot us an <a className="purple-link" href="mailto:help@uw.edu?subject=Hyak question">e-mail</a>, join
+        our <a className="purple-link" href="https://uw-rcc.slack.com/">Slack</a>, or show up to our in-person
         research hangouts every Tuesday from 1:30 PM to 3:00 PM at our global headquarters in
-        the <a href="https://escience.washington.edu">eScience Institute</a> at the
+        the <a className="purple-link" href="https://escience.washington.edu">eScience Institute</a> at the
         University of Washington.  We're also able to meet individually upon request.
       </p>,
       <div key={1} className="map-container">

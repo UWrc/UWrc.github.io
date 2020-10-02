@@ -23,7 +23,7 @@ export default function SplashCircle(props) {
         y: props.yTransform || 0
       }} transition={{ duration: 0.2 }}
     >
-      <a href={props.linkTo} target="_blank">
+      <a className="circle-link" href={props.linkTo} target="_blank">
           <circle cx={props.cx} cy={props.cy} r={props.r} fill="#001b3d"  />
           <text x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle" style={{
             fill: "white",

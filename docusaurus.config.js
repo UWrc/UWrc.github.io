@@ -9,6 +9,9 @@ module.exports = {
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'ignore',
   themeConfig: {
+    prism: {
+      additionalLanguages: ['shell-session']
+    },
     colorMode: {
       defaultMode: 'light', // "light" | "dark"
       disableSwitch: true, // Hides the switch in the navbar

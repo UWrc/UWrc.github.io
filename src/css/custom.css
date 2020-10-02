@@ -17,9 +17,6 @@
   --ifm-code-font-size: 95%;
 }
 
-a {
-  color: #9259ff;
-}
 
 svg a:hover {
   text-decoration: none;
@@ -161,6 +158,9 @@ svg a:hover {
   padding-bottom: 5px;
 }
 
+.purple-link, .purple-link:hover, .navbar__link:hover {
+  color: #9259ff;
+}
 
 @media only screen and (max-width: 1260px) {
   .blank-map {
