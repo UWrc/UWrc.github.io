@@ -13,13 +13,13 @@ There are two types of interactive nodes.  Compute nodes run computations but ca
 ### Obtaining Interactive Nodes
 
 To get an interactive compute node with `<size>` GB of memory in your group partition called `<group_name>` for `<time>` hours, use:
-```
+```shell
 srun -p <group_name> --time=<time> --mem=<size>G --pty /bin/bash
 ```
 Common acceptable time formats include `hours:minutes:seconds`, `days-hours`, and `minutes`.
 
 Example:
-```
+```shell-session terminal=true
 [linj66@mox2 ~]$ srun -p stf --time=1:00:00 --mem=20G --pty /bin/bash
 [linj66@n2148 ~]$ 
 ```
@@ -27,7 +27,7 @@ Example:
 ---
 
 To get an interactive compute node with `<num_cores>` cores, use:
-```
+```shell
 srun -p <group_name> -A <group_name> --nodes=1 \
 --ntasks-per-node=<num_cores> --time=<time> \
 --mem=<size>G --pty /bin/bash
@@ -36,7 +36,7 @@ srun -p <group_name> -A <group_name> --nodes=1 \
 ---
 
 To get multiple interactive compute nodes with `<num_nodes>` as the number of nodes and `<cores_per_node>` as the number of cores, use:
-```
+```shell
 srun -p <group_name> -A <group_name> --nodes=<num_nodes> \
 --ntasks-per-node=<cores_per_node> --time=<time> \
 --mem=<size>G --pty /bin/bash
@@ -50,7 +50,7 @@ If you are using an interactive node to run a parallel application such as Pytho
 ---
 
 If your group has an interactive node, use the option `-p <group_name>-int` like so: 
-```
+```shell
 srun -p <group_name>-int -A <group_name> --time=<time> --mem=<size>G --pty /bin/bash
 ```
 
@@ -89,7 +89,7 @@ A comprehensive list of the environment variables Slurm sets for each job can be
 ### Single Node Batch Jobs
 
 Below is a slurm script template.  Submit a batch job from the `mox` login node by calling `sbatch <script_name>.slurm`.
-```shell title="<script_name>.slurm"
+```shell title="<script_name>.slurm" terminal=true
 !/bin/bash
 
 # JOB NAME
@@ -194,7 +194,7 @@ Use `srun <command>` to run commands on all allocated nodes.
 Use `scontrol show hostnames` to get the hostnames of your allocated nodes.  Once you have the hostnames, you can `ssh` to them using `ssh <hostname>` and then use them for your work (e.g. Apache Spark, Hadoop, etc.)
 
 Example:
-```
+```shell-session terminal=true
 [linj66@mox2 ~]$ salloc -N 2 -p stf -A stf --time=5 --mem=5G
 salloc: Pending job allocation 2620960
 salloc: job 2620960 queued and waiting for resources
