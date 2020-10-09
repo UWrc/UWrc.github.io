@@ -1,11 +1,12 @@
+sudo: false
 language: node_js
 node_js:
-  - '10'
+  - "12.18.2"
+  - "14.5.0"
 branches:
   only:
     - src
-cache:
-  yarn: false
+cache: yarn
 script:
   - git config --global user.name "${GH_NAME}"
   - git config --global user.email "${GH_EMAIL}"
