@@ -7,7 +7,7 @@ export function capitalizeStr(str) {
 }
 
 export function mapImgItemsToHTMLImgs(imgItems) {
-  return imgItems.map(item => {
+  return imgItems ? imgItems.map(item => {
     return (
       item.link ?
         <a key={item.caption} href={item.link}>
@@ -16,5 +16,5 @@ export function mapImgItemsToHTMLImgs(imgItems) {
         </a> :
         <img key={item.caption} src={useBaseUrl(item.image)} alt={item.caption} />
     )
-  })
+  }) : []
 }
