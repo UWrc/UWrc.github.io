@@ -39,7 +39,12 @@ function Navbar(props) {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
 
-  let useScrollNotifier = window.location.pathname != siteConfig.baseUrl
+  let useScrollNotifier = false
+  try {
+    useScrollNotifier = window.location.pathname != siteConfig.baseUrl
+  } catch (e) {
+
+  }
 
   const {
     siteConfig: {

@@ -49,6 +49,6 @@ StatContainer.propTypes = {
 
 export default function StatContainer(props) {
   return <div>
-    {buildStatContainer(props.statItems)}
+    {props.statItems && buildStatContainer(props.statItems)}
   </div>
 }

@@ -49,8 +49,17 @@ function Layout(props) {
   });
   const faviconUrl = useBaseUrl(favicon);
 
-  let effectiveDocumentHeight = document.body.scrollHeight - window.innerHeight
-  let scrollPercent = Math.min(1, window.scrollY / effectiveDocumentHeight) || 0
+  // default initializations
+  let effectiveDocumentHeight = 1
+  let scrollPercent = 1
+
+  try {
+    effectiveDocumentHeight = document.body.scrollHeight - window.innerHeight
+    scrollPercent = Math.min(1, window.scrollY / effectiveDocumentHeight)
+  } catch (e) {
+
+  }
+
   const [scrollRef,] = useScrollPercentage()  // purpose of this hook is to refresh data on scroll
 
   return (

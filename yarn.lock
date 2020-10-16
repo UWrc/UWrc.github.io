@@ -3907,7 +3907,7 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
-docusaurus-lunr-search@^2.1.6:
+docusaurus-lunr-search@^2.1.7:
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/docusaurus-lunr-search/-/docusaurus-lunr-search-2.1.7.tgz#46bbfd518e4e3601534996614572c6f4409230c0"
   integrity sha512-RHrt8li7VIu1ohR+EDM86gSmitTokNFVtc9036wQ9FYZRiHUNoDN+OUPZ65P0nhUiQIAiYkPPxTymDzXTXrmTg==

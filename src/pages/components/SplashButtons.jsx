@@ -17,7 +17,7 @@ export default function SplashButtons(props) {
   return (
     <div className={styles.buttons}>
       {
-        props.buttons.map(button => {
+        props.buttons && props.buttons.map(button => {
           return (
             <Link
               key={button.label}
