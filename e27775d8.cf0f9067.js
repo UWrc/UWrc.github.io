@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[45],{55:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return u}));var a=n(0),r=n.n(a),s=n(7),i=n.n(s);function u(e){return r.a.createElement("div",{key:e.idx,className:"d-flex justify-content-center mb-5"},e.statItems)}u.propTypes={idx:i.a.number.isRequired,statItems:i.a.arrayOf(i.a.element).isRequired}}}]);
