@@ -12,7 +12,7 @@ export default function SplashImage() {
   }
 
   return (
-    <svg width={1075} height={340} xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="48%" viewBox="20 0 1020 340" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <radialGradient id="blue-radial">
           <stop offset="0%"  stopColor="#fff" />
