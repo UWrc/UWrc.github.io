@@ -53,6 +53,7 @@ svg a:hover {
 
 .splash {
   height: 100vh;
+  text-align: center;
 }
 
 .tagline {
@@ -60,6 +61,12 @@ svg a:hover {
   font-weight: bold;
   font-size: 32px;
   margin: 24px 0;
+}
+
+.scroll-down {
+  width: 3%;
+  height: 3%;
+  margin: 3% 0;
 }
 
 .button {
@@ -74,11 +81,11 @@ svg a:hover {
 
 .hero.hero--primary {
   background-color: white;
-  height: 100vh;
+  height: 100%;
 }
 
 .stat-caption {
-  font-size: 1.5rem;
+  font-size: 200%;
 }
 
 .logo-container {
@@ -87,7 +94,7 @@ svg a:hover {
 }
 
 .logo-container h2 {
-  font-size: 30px;
+  font-size: 300%;
   line-height: 1em;
   margin-top: 20px;
   padding: 10px 0;
@@ -115,22 +122,15 @@ svg a:hover {
   width: auto;
 }
 
-.splash-logos {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0 20px 20px;
-  margin: 40px 0 20px;
-}
 
 .splash-logos a {
-  height: 50px;
+  height: 24px;
   width: auto;
 }
 
 .splash-logos img {
-  height: 50px;
-  margin: 0 10px;
+  height: 24px;
+  margin: 0 20px 0 10px;
   width: auto;
 }
 
@@ -182,5 +182,17 @@ svg a:hover {
     text-align: center;
     width: 100%;
     padding: 10px;
+  }
+}
+
+@media only screen and (max-height: 760px) {
+  .splash {
+    height: 760px
+  }
+
+  .scroll-down {
+    height: 32px;
+    width: 32px;
+    margin: 32px 0;
   }
 }
