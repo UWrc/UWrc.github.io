@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./styles.module.css"
 
-import { mapImgItemsToHTMLImgs } from "../../utils";
+import { mapImgItemsToHTMLImgs } from "~/src/utils"
 
 
 HomeSection.propTypes = {
@@ -16,9 +17,9 @@ HomeSection.propTypes = {
 
 export default function HomeSection(props) {
   return (
-    <div className="logo-container pt-3">
+    <div className={`${styles.logoContainer} pt-3`}>
       {props.header}
-      <div className="logos">{mapImgItemsToHTMLImgs(props.imgs)}</div>
+      <div className={styles.logos}>{mapImgItemsToHTMLImgs(props.imgs)}</div>
       {props.content ? props.content : []}
     </div>
   )

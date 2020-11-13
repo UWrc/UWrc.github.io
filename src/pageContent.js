@@ -1,6 +1,6 @@
 import React from "react";
 
-import MapIframe from "./pages/components/MapIframe";
+import MapIFrame from "~/src/pages/components/MapIFrame/MapIFrame";
 
 
 export const HEAD_TITLE = 'Home'
@@ -90,14 +90,14 @@ export const HomePage = {
       </p>,
       <div key={1} className="map-container">
         <div className="blank-map" />
-        <MapIframe
+        <MapIFrame
           key="1"
           title="Intergalactic HQ"
           name="4545 Building"
           align="right"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.179163071817!2d-122.31451588483776!3d47.66151577918835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148afd210277%3A0x378526e9274172e1!2sForty-Five%20Forty-Five%20Building%2C%204545%2015th%20Ave%20NE%2C%20Seattle%2C%20WA%2098105!5e0!3m2!1sen!2sus!4v1572905266626!5m2!1sen!2sus"
         />
-        <MapIframe
+        <MapIFrame
           key="2"
           title="Global HQ"
           name="UW eScience Institute"

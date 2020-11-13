@@ -88,40 +88,6 @@ svg a:hover {
   font-size: 200%;
 }
 
-.logo-container {
-  padding: 0 20px 0;
-  text-align: center;
-}
-
-.logo-container h2 {
-  font-size: 300%;
-  line-height: 1em;
-  margin-top: 20px;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.logo-container p {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0.8em 0;
-  text-align: left;
-}
-
-.logo-container .logos {
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0 20px 20px;
-}
-
-.logo-container .logos img {
-  height: 90px;
-  margin: 20px 20px 0;
-  width: auto;
-}
-
 
 .splash-logos a {
   height: 24px;

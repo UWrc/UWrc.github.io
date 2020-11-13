@@ -23,7 +23,8 @@
     "react-highlight": "^0.12.0",
     "react-reel": "^1.2.3",
     "react-scroll-percentage": "^4.2.0",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "style-loader": "^2.0.0"
   },
   "browserslist": {
     "production": [
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-root-import": "^6.6.0",
     "css-loader": "^3.5.3"
   }
 }

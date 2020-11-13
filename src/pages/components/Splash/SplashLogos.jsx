@@ -1,7 +1,7 @@
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import { mapImgItemsToHTMLImgs } from "../../utils";
+import { mapImgItemsToHTMLImgs } from "~/src/utils";
 
 
 export default function SplashLogos() {

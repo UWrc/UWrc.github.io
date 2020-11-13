@@ -1,10 +1,10 @@
 import classnames from "classnames";
 import React from "react";
 import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import useBaseUrl from "@docusaurus/useBaseUrl"
 import PropTypes from 'prop-types';
 
-import styles from "../styles.module.css";
+import styles from "../../styles.module.css";
 
 SplashButtons.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.exact({

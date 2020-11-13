@@ -1,7 +1,6 @@
 import React from "react";
 
 import SplashImage from "./SplashImage";
-import SplashLogos from "./SplashLogos";
 import ScrollDown from "./ScrollDown";
 import SplashButtons from "./SplashButtons";
 import TypingTagline from "./TypingTagline";
