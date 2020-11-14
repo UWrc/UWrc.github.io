@@ -25,12 +25,9 @@ export default function SplashCircle(props) {
     >
       <a className="circle-link" href={props.linkTo} target="_blank">
           <circle cx={props.cx} cy={props.cy} r={props.r} fill="#001b3d"  />
-          <text x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle" style={{
-            fill: "white",
-            fontWeight: "bold",
-            fontSize: "24px",
-            textDecoration: "none"
-          }}>{props.text}</text>
+          <text className={styles.splashCircleText} x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle">
+            {props.text}
+          </text>
       </a>
     </motion.g>
   )

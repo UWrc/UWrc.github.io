@@ -15,16 +15,31 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button {
+  border-color: black;
+  margin: 0 5px;
+}
+
+.button.button--secondary {
+  --ifm-button-border-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.hero.hero--primary {
+  background-color: white;
+  height: 100%;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
 }
 
 .features {

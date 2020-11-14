@@ -1,0 +1,68 @@
+.splashCircleText {
+  text-decoration: none;
+  fill: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.splash {
+  height: 100vh;
+  text-align: center;
+}
+
+.tagline {
+  color: black;
+  font-weight: bold;
+  font-size: 32px;
+  margin: 24px 0;
+}
+
+.scrollDown {
+  width: 3%;
+  height: 3%;
+  margin: 3% 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border-color: black;
+  margin: 0 5px;
+}
+
+.button.button--secondary {
+  --ifm-button-border-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.hero.hero--primary {
+  background-color: white;
+  height: 100%;
+}
+
+
+.splashLogo img {
+  height: 24px;
+  margin: 0 20px 0 10px;
+  width: auto;
+}
+
+@media only screen and (max-height: 760px) {
+  .splash {
+    height: 760px
+  }
+
+  .scrollDown {
+    height: 32px;
+    width: 32px;
+    margin: 32px 0;
+  }
+}

@@ -18,14 +18,6 @@
 }
 
 
-svg a:hover {
-  text-decoration: none;
-}
-
-.vis-hidden {
-  visibility: hidden;
-}
-
 /* bootstrap override */
 .navbar__title {
   font-weight: var(--ifm-font-weight-bold);
@@ -49,65 +41,4 @@ svg a:hover {
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
-}
-
-.splash {
-  height: 100vh;
-  text-align: center;
-}
-
-.tagline {
-  color: black;
-  font-weight: bold;
-  font-size: 32px;
-  margin: 24px 0;
-}
-
-.scroll-down {
-  width: 3%;
-  height: 3%;
-  margin: 3% 0;
-}
-
-.button {
-  border-color: black;
-  margin: 0 5px;
-}
-
-.button.button--secondary {
-  --ifm-button-border-color: var(--ifm-color-primary);
-  color: white;
-}
-
-.hero.hero--primary {
-  background-color: white;
-  height: 100%;
-}
-
-
-.splash-logos a {
-  height: 24px;
-  width: auto;
-}
-
-.splash-logos img {
-  height: 24px;
-  margin: 0 20px 0 10px;
-  width: auto;
-}
-
-.purple-link, .purple-link:hover, .navbar__link:hover {
-  color: #9259ff;
-}
-
-@media only screen and (max-height: 760px) {
-  .splash {
-    height: 760px
-  }
-
-  .scroll-down {
-    height: 32px;
-    width: 32px;
-    margin: 32px 0;
-  }
 }

@@ -9,7 +9,7 @@ export default function SplashLogos() {
   const {siteConfig = {}} = context;
 
   return (
-    <div className="splash-logos">
+    <div className={styles.splashLogo}>
       {mapImgItemsToHTMLImgs(siteConfig.customFields.Graphics.SPLASH_LOGOS)}
     </div>
   )
