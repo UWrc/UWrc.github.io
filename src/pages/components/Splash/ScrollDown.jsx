@@ -9,6 +9,11 @@ export default function ScrollDown() {
     animate={{ y: [0, 20, 0], opacity: [1, 0.2, 1] }}
     transition={{ duration: 2, loop: Infinity }}
   >
-    <FontAwesomeIcon className={styles.scrollDown} icon={faAngleDown} />
+    <FontAwesomeIcon className={styles.scrollDown} icon={faAngleDown} onClick={() => {
+      window.scroll({
+        top: document.body.clientHeight,
+        behavior: 'smooth'
+      })
+    }} />
   </motion.div>
 }
