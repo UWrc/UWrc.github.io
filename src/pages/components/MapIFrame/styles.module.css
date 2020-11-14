@@ -1,0 +1,46 @@
+.mapContainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blankMap {
+  width: 25%;
+}
+
+.map {
+  width: 25%;
+  display: inline-block;
+}
+
+.map div p {
+  text-align: center;
+  padding: 0;
+}
+
+.mapTitle {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 1260px) {
+  .blankMap {
+    width: 15%;
+  }
+
+  .map {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .blankMap {
+    width: 0;
+  }
+
+  .map {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
+}

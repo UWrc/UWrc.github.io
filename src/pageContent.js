@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "~src/pages/components/MapIFrame/styles.module.css"
 
 import MapIFrame from "~/src/pages/components/MapIFrame/MapIFrame";
 
@@ -88,8 +89,8 @@ export const HomePage = {
         the <a className="purple-link" href="https://escience.washington.edu">eScience Institute</a> at the
         University of Washington.  We're also able to meet individually upon request.
       </p>,
-      <div key={1} className="map-container">
-        <div className="blank-map" />
+      <div key={1} className={styles.mapContainer}>
+        <div className={styles.blankMap} />
         <MapIFrame
           key="1"
           title="Intergalactic HQ"
@@ -104,7 +105,7 @@ export const HomePage = {
           align="left"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.5986053468737!2d-122.31397348483813!3d47.653366479187774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f277b0f15d%3A0x7c2434f079426d8c!2seScience%20Institute!5e0!3m2!1sen!2sus!4v1572905032160!5m2!1sen!2sus"
         />
-        <div className="blank-map" />
+        <div className={styles.blankMap} />
       </div>
     ]
   },
