@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Typist from "react-typist";
+import styles from "./styles.module.css"
 import "react-typist/dist/Typist.css"
 
 const TAGLINE_ITEMS = ["medicine", "physics", "biology", "chemistry", "computer science"]
@@ -18,7 +19,7 @@ export default function TypingTagline() {
     })
 
   return (
-    <div className="tagline">
+    <div className={styles.tagline}>
       <span>{TAGLINE_START}</span>
       <Typist key={count} onTypingDone={() => setCount(count + 1)}>
         <Typist.Delay ms={1000} />

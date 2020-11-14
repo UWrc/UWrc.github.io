@@ -1,8 +1,11 @@
-.splashCircleText {
-  text-decoration: none;
+.splashText {
   fill: white;
   font-weight: bold;
   font-size: 24px;
+}
+
+.splashText:hover {
+  text-decoration: none;
 }
 
 .hidden {

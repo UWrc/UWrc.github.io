@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./styles.module.css"
 
 import SplashImage from "./SplashImage";
 import ScrollDown from "./ScrollDown";
@@ -8,7 +9,7 @@ import TypingTagline from "./TypingTagline";
 
 export default function Splash() {
   return (
-    <div className="splash">
+    <div className={styles.splash}>
       <SplashImage />
       <TypingTagline />
       <SplashButtons buttons={[

@@ -17,8 +17,8 @@ import useWindowSize, {windowSizes} from '@theme/hooks/useWindowSize';
 import useLogo from '@theme/hooks/useLogo';
 import styles from './styles.module.css';
 import NavbarItem from '@theme/NavbarItem';
-import ScrollNotifier from "~/src/theme/ScrollNotifier";
-import SplashLogos from "~/src/pages/components/Splash/SplashLogos";
+import ScrollNotifier from "theme/ScrollNotifier";
+import SplashLogos from "pages/components/Splash/SplashLogos";
 
 const DefaultNavItemPosition = 'right'; // If split links by left/right
 // if position is unspecified, fallback to right (as v1)

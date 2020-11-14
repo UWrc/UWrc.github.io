@@ -4,9 +4,8 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles.module.css";
 
-import * as PageContent from "~/src/pageContent";
+import * as PageContent from "../pageContent";
 import Splash from "./components/Splash/Splash";
 import HomeSection from "./components/HomeSection/HomeSection";
 import StatContainer from "./components/Stats/StatContainer";

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import styles from "./styles.module.css"
 
 
 function topPath({ x, y, width, height }) {
@@ -51,7 +52,7 @@ export default function SplashBox(props) {
       animate={{ y: props.yTransition || 0 }}
       transition={{ duration: 0.2 }}
     >
-      <a href={props.linkTo} target="_blank">
+      <a className={styles.splashText} href={props.linkTo} target="_blank">
         <path fill={props.sideColor} d={sidePath(props)} />
         <path fill={props.topColor} d={topPath(props)} />
         <text
@@ -60,11 +61,6 @@ export default function SplashBox(props) {
           dominantBaseline="middle"
           textAnchor="middle"
           transform={`rotate(${textRotationAngle(props)})`}
-          style={{
-            fill: "white",
-            fontWeight: "bold",
-            fontStyle: "italic"
-          }}
         >
           {props.text}
         </text>

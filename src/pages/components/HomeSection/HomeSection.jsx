@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.css"
 
-import { mapImgItemsToHTMLImgs } from "~/src/utils"
+import { mapImgItemsToHTMLImgs } from "utils"
 
 
 HomeSection.propTypes = {

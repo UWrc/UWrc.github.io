@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "~src/pages/components/MapIFrame/styles.module.css"
+import styles from "pages/components/MapIFrame/styles.module.css"
 
-import MapIFrame from "~/src/pages/components/MapIFrame/MapIFrame";
+import MapIFrame from "pages/components/MapIFrame/MapIFrame";
 
 
 export const HEAD_TITLE = 'Home'
