@@ -84,10 +84,6 @@ svg a:hover {
   height: 100%;
 }
 
-.stat-caption {
-  font-size: 200%;
-}
-
 
 .splash-logos a {
   height: 24px;
@@ -100,55 +96,8 @@ svg a:hover {
   width: auto;
 }
 
-.map-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.blank-map {
-  width: 25%;
-}
-
-.map-container .map {
-  width: 25%;
-  display: inline-block;
-}
-
-.map-container .map div p {
-  text-align: center;
-  padding: 0;
-}
-
-.map-container .map div p.title {
-  font-weight: bold;
-  padding-bottom: 5px;
-}
-
 .purple-link, .purple-link:hover, .navbar__link:hover {
   color: #9259ff;
-}
-
-@media only screen and (max-width: 1260px) {
-  .blank-map {
-    width: 15%;
-  }
-
-  .map-container .map {
-    width: 35%;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .blank-map {
-    width: 0;
-  }
-
-  .map-container .map {
-    display: block;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-  }
 }
 
 @media only screen and (max-height: 760px) {

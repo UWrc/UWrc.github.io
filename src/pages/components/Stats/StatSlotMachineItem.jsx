@@ -2,6 +2,7 @@ import React from "react";
 import Reel from "react-reel";
 import useInView from "react-cool-inview";
 import PropTypes from "prop-types";
+import styles from "./styles.module.css"
 
 const REEL_THEME = {
   reel: {
@@ -40,14 +41,14 @@ export default function StatSlotMachineItem(props) {
 
   return <div className="col-4" ref={ref}>
     <div
-      className="rounded d-flex justify-content-center align-items-center flex-column"
+      className={styles.statItem}
       style={{
         height: '200px',
         backgroundColor: props.backgroundColor
       }}
     >
       {reel}
-      <p className="stat-caption text-white">{props.caption}</p>
+      <p className={styles.statCaption}>{props.caption}</p>
     </div>
   </div>
 

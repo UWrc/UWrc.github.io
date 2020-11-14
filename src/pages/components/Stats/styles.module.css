@@ -1,0 +1,20 @@
+.statContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.statItem {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0.5em;
+}
+
+.statCaption {
+  font-size: 200%;
+  color: white
+}
