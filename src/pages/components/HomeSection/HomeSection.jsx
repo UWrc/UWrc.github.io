@@ -17,7 +17,7 @@ HomeSection.propTypes = {
 
 export default function HomeSection(props) {
   return (
-    <div className={`${styles.logoContainer} pt-3`}>
+    <div className={styles.logoContainer}>
       {props.header}
       <div className={styles.logos}>{mapImgItemsToHTMLImgs(props.imgs)}</div>
       {props.content ? props.content : []}

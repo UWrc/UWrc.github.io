@@ -21,7 +21,7 @@ export default function SplashCircle(props) {
       animate={{
         x: props.xTransform || 0,
         y: props.yTransform || 0
-      }} transition={{ duration: 0.2 }}
+      }} transition={{ duration: 0.1 }}
     >
       <a className={styles.splashText} href={props.linkTo} target="_blank">
           <circle cx={props.cx} cy={props.cy} r={props.r} fill="#001b3d"  />

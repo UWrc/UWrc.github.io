@@ -18,7 +18,7 @@ export default function StatSlotMachineItem(props) {
 
   let reel = inView ? <Reel text={props.value} theme={styles} /> : <></>
 
-  return <div className="col-4" ref={ref}>
+  return <div ref={ref}>
     <div
       className={styles.statItem}
       style={{
@@ -30,5 +30,4 @@ export default function StatSlotMachineItem(props) {
       <p className={styles.statCaption}>{props.caption}</p>
     </div>
   </div>
-
 }
