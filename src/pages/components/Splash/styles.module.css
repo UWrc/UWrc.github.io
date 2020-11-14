@@ -18,15 +18,13 @@
 }
 
 .tagline {
-  color: black;
   font-weight: bold;
   font-size: 32px;
   margin: 24px 0;
 }
 
 .scrollDown {
-  width: 3%;
-  height: 3%;
+  font-size: 28px;
   margin: 3% 0;
 }
 
