@@ -1,7 +1,18 @@
 .splashText {
-  fill: white;
   font-weight: bold;
   font-size: 24px;
+}
+
+.splashBoxText {
+  fill: white;
+}
+
+.splashCircleLight {
+  fill: white;
+}
+
+.splashCircleDark {
+  fill: #18191a;
 }
 
 .splashText:hover {

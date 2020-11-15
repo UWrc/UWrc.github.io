@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import classnames from "classnames"
 import PropTypes from "prop-types";
 import styles from "./styles.module.css"
 
@@ -52,10 +53,11 @@ export default function SplashBox(props) {
       animate={{ y: props.yTransition || 0 }}
       transition={{ duration: 0.2 }}
     >
-      <a className={styles.splashText} href={props.linkTo} target="_blank">
+      <a className={styles.splashTextContainer} href={props.linkTo} target="_blank">
         <path fill={props.sideColor} d={sidePath(props)} />
         <path fill={props.topColor} d={topPath(props)} />
         <text
+          className={classnames(styles.splashText, styles.splashBoxText)}
           x={props.x + 7 / 10 * props.width - props.y / 5}
           y={props.y + props.height}
           dominantBaseline="middle"
