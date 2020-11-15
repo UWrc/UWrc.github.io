@@ -34,9 +34,29 @@
   justify-content: center;
 }
 
-.button {
+.splashButton {
+  margin: 5px;
+}
+
+.buttonLight {
   border-color: black;
-  margin: 0 5px;
+  color: black
+}
+
+.buttonLight:hover {
+  border-color: transparent;
+  background-color: #4b2e83;
+  color: white
+}
+
+.buttonDark {
+  border-color: white;
+  color: white;
+}
+
+.buttonDark:hover {
+  background-color: white;
+  color: black;
 }
 
 .button.button--secondary {
