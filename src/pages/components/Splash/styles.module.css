@@ -54,6 +54,7 @@
   height: 24px;
   margin: 0 20px 0 10px;
   width: auto;
+  vertical-align: top;
 }
 
 @media only screen and (max-height: 760px) {
