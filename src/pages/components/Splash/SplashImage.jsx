@@ -36,7 +36,7 @@ export default function SplashImage() {
       <g id="boxes" transform="translate(370, 50)">
         <SplashBox x={0} y={130} width={300} height={100} yTransition={30} topColor="#6f46be" sideColor="#4B2E83" text="Text3" linkTo="" />
         <SplashBox x={0} y={80} width={300} height={100} topColor="#d098db" sideColor="#a541b8" text="Text2" linkTo=""/>
-        <SplashBox x={0} y={30} width={300} height={100} yTransition={-30} topColor="#81d38e" sideColor="#3aa74c" text="Text1" linkTo=""/>
+        <SplashBox x={0} y={30} width={300} height={100} yTransition={-30} topColor="#dbc63b" sideColor="#c2a800" text="Text1" linkTo=""/>
       </g>
       <g id="left-circles" transform="translate(50, 80)">
         <SplashCircle cx={0} cy={100} xTransform={100} yTransform={-100} r={48} c text="Circle1" linkTo="http://www.washington.edu"/>

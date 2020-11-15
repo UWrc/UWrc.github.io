@@ -27,7 +27,7 @@ export default function SplashCircle(props) {
         y: props.yTransform || 0
       }} transition={{ duration: 0.1 }}
     >
-      <a href={props.linkTo} target="_blank">
+      <a className={styles.splashTextContainer} href={props.linkTo} target="_blank">
         <circle cx={props.cx} cy={props.cy} r={props.r} fill={isDarkTheme ? "white" : "#001b3d"} />
         <text x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle"
           className={classnames(styles.splashText, isDarkTheme ? styles.splashCircleDark : styles.splashCircleLight)}
