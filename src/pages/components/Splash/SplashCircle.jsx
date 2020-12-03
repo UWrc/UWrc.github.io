@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import classnames from "classnames";
-import useThemeContext from '@theme/hooks/useThemeContext'
 import PropTypes from "prop-types";
 import styles from "./styles.module.css"
 
@@ -16,7 +15,6 @@ SplashCircle.propTypes = {
 }
 
 export default function SplashCircle(props) {
-  const {isDarkTheme} = useThemeContext()
 
   return (
     <motion.g
@@ -28,9 +26,9 @@ export default function SplashCircle(props) {
       }} transition={{ duration: 0.1 }}
     >
       <a className={styles.splashTextContainer} href={props.linkTo} target="_blank">
-        <circle cx={props.cx} cy={props.cy} r={props.r} fill={isDarkTheme ? "white" : "#001b3d"} />
+        <circle cx={props.cx} cy={props.cy} r={props.r} fill={props.isDarkTheme ? "white" : "#001b3d"} />
         <text x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle"
-          className={classnames(styles.splashText, isDarkTheme ? styles.splashCircleDark : styles.splashCircleLight)}
+          className={classnames(styles.splashText, props.isDarkTheme ? styles.splashCircleDark : styles.splashCircleLight)}
         >
           {props.text}
         </text>

@@ -2,7 +2,6 @@ import classnames from "classnames";
 import React from "react";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl"
-import useThemeContext from '@theme/hooks/useThemeContext'
 import PropTypes from 'prop-types';
 
 import styles from "./styles.module.css";
@@ -15,8 +14,6 @@ SplashButtons.propTypes = {
 }
 
 export default function SplashButtons(props) {
-  const {isDarkTheme} = useThemeContext()
-
   return (
     <div className={styles.buttons}>
       {
@@ -29,7 +26,7 @@ export default function SplashButtons(props) {
                 styles.getStarted,
                 styles.buttons,
                 styles.splashButton,
-                isDarkTheme ? styles.buttonDark : styles.buttonLight
+                props.isDarkTheme ? styles.buttonDark : styles.buttonLight
               )}
               to={useBaseUrl(button.path)}>
               {button.label}
