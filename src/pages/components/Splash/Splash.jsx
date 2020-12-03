@@ -8,7 +8,7 @@ import SplashButtons from "./SplashButtons";
 import TypingTagline from "./TypingTagline";
 
 
-export default function Splash(props) {
+export default function Splash() {
   const {isDarkTheme} = useThemeContext()
 
   return (
