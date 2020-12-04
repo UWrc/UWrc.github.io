@@ -14,7 +14,7 @@ module.exports = {
     },
     colorMode: {
       defaultMode: 'light', // "light" | "dark"
-      disableSwitch: false, // Hides the switch in the navbar
+      disableSwitch: true, // Hides the switch in the navbar
     },
     navbar: {
       title: 'Research Computing',

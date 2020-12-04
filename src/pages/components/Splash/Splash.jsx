@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css"
-import useThemeContext from "@theme/hooks/useThemeContext"
+// import useThemeContext from "@theme/hooks/useThemeContext"
 
 import SplashImage from "./SplashImage";
 import ScrollDown from "./ScrollDown";
@@ -9,13 +9,13 @@ import TypingTagline from "./TypingTagline";
 
 
 export default function Splash() {
-  const {isDarkTheme} = useThemeContext()
+  //const {isDarkTheme} = useThemeContext()
 
   return (
     <div className={styles.splash}>
-      <SplashImage isDarkTheme={isDarkTheme} />
-      <TypingTagline isDarkTheme={isDarkTheme} />
-      <SplashButtons isDarkTheme={isDarkTheme} buttons={[
+      <SplashImage />
+      <TypingTagline />
+      <SplashButtons buttons={[
         {
           label: "Button 1",
           path: "path/to/page"

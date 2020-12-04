@@ -26,11 +26,11 @@ export default function SplashImage(props) {
           <stop offset="65%"  stopColor="#18191a" />
         </radialGradient>
         <marker id="arrowhead" markerWidth="6" markerHeight="6"
-                refX="0" refY="3" orient="auto" fill={props.isDarkTheme ? "white" : "#001b3d"}>
+                refX="0" refY="3" orient="auto" fill={"#001b3d"/*props.isDarkTheme ? "white" : "#001b3d"*/}>
           <polygon points="0 0, 6 3, 0 6" />
         </marker>
       </defs>
-      <rect transform="translate(0, 10)" width={1020} height={330} fill={props.isDarkTheme ? "url(#dark-mode-white)" : "url(#pink-radial)"} />
+      <rect transform="translate(0, 10)" width={1020} height={330} fill={"url(#pink-radial)" /*props.isDarkTheme ? "url(#dark-mode-white)" : "url(#pink-radial)"*/} />
       <g id="boxes" transform="translate(370, 50)">
         <SplashBox x={0} y={130} width={300} height={100} yTransition={30} topColor="#6f46be" sideColor="#4B2E83" text="Text3" linkTo="" />
         <SplashBox x={0} y={80} width={300} height={100} topColor="#d098db" sideColor="#a541b8" text="Text2" linkTo=""/>
