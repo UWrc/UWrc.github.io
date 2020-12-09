@@ -17,7 +17,8 @@ import useWindowSize, {windowSizes} from '@theme/hooks/useWindowSize';
 import useLogo from '@theme/hooks/useLogo';
 import styles from './styles.module.css';
 import NavbarItem from '@theme/NavbarItem';
-import ScrollNotifier from "../ScrollNotifier";
+import ScrollNotifier from "theme/ScrollNotifier";
+import SplashLogos from "pages/components/Splash/SplashLogos";
 
 const DefaultNavItemPosition = 'right'; // If split links by left/right
 // if position is unspecified, fallback to right (as v1)
@@ -150,6 +151,7 @@ function Navbar(props) {
             {rightItems.map((item, i) => (
               <NavbarItem {...item} key={i} />
             ))}
+            <SplashLogos />
             {!disableColorModeSwitch && (
               <Toggle
                 className={styles.displayOnlyInLargeViewport}

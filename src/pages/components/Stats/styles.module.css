@@ -1,0 +1,42 @@
+.statContainer {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0.5em;
+  width: 400px;
+}
+
+.statCaption {
+  font-size: 2vw;
+  color: white
+}
+
+/* animated slot machine reel */
+.reel {
+  height: 1em;
+  display: flex;
+  align-items: flex-end;
+  overflow-y: hidden;
+  font-size: 5vw;
+  font-weight: 300;
+  color: white;
+  line-height: 0.95em;
+}
+
+.group {
+  transition-delay: 0ms;
+  transition-timing-function: ease-in-out;
+  transform: translate(0, 0);
+}
+
+.group .number {
+  height: 1em;
+}

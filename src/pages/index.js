@@ -2,14 +2,10 @@ import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-import "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles.module.css";
-
 import * as PageContent from "../pageContent";
-import Splash from "./components/Splash";
-import HomeSection from "./components/HomeSection";
-import StatContainer from "./components/StatContainer";
+import Splash from "./components/Splash/Splash";
+import HomeSection from "./components/HomeSection/HomeSection";
+import StatContainer from "./components/Stats/StatContainer";
 
 
 export default function Home() {

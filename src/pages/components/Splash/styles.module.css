@@ -1,0 +1,101 @@
+.splashText {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.splashBoxText {
+  fill: white;
+}
+
+.splashCircleLight {
+  fill: white;
+}
+
+.splashCircleDark {
+  fill: #18191a;
+}
+
+.splashTextContainer:hover {
+  text-decoration: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.splash {
+  height: 100vh;
+  text-align: center;
+}
+
+.tagline {
+  font-weight: bold;
+  font-size: 32px;
+  margin: 24px 0;
+}
+
+.scrollDown {
+  font-size: 28px;
+  margin: 3% 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splashButton {
+  margin: 5px;
+}
+
+.buttonLight {
+  border-color: black;
+  color: black
+}
+
+.buttonLight:hover {
+  border-color: transparent;
+  background-color: #4b2e83;
+  color: white
+}
+
+.buttonDark {
+  border-color: white;
+  color: white;
+}
+
+.buttonDark:hover {
+  background-color: white;
+  color: black;
+}
+
+.button.button--secondary {
+  --ifm-button-border-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.hero.hero--primary {
+  background-color: white;
+  height: 100%;
+}
+
+
+.splashLogo img {
+  height: 24px;
+  margin: 0 20px 0 10px;
+  width: auto;
+  vertical-align: top;
+}
+
+@media only screen and (max-height: 760px) {
+  .splash {
+    height: 760px
+  }
+
+  .scrollDown {
+    height: 32px;
+    width: 32px;
+    margin: 32px 0;
+  }
+}

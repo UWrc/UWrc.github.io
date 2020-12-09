@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types";
+import styles from "./styles.module.css"
 
 
 MapIframe.propTypes = {
@@ -11,9 +12,9 @@ MapIframe.propTypes = {
 
 export default function MapIframe(props) {
   return (
-    <div className={"map " + props.align}>
+    <div className={`${styles.map} ${props.align}`}>
       <div>
-        <p className="title">{props.title}</p>
+        <p className={styles.mapTitle}>{props.title}</p>
         <iframe src={props.src} />
         <p>{props.name}</p>
       </div>

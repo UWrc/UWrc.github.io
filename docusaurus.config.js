@@ -44,14 +44,6 @@ module.exports = {
           label: 'About', 
           position: 'right'
         },
-        /*
-        {
-          href: 'https://github.com/UWrc',
-          target: '_blank',
-          label: 'Github',
-          position: 'right',
-        },
-        */
       ],
     },
     footer: {
@@ -129,11 +121,6 @@ module.exports = {
           image: 'img/splashlogos/github.svg',
           link: 'https://github.com/UWrc'
         },
-        {
-          caption: 'UW RCC Website',
-          image: 'img/logos/uw_icon.png',
-          link: 'https://depts.washington.edu/uwrcc/'
-        }
       ],
       INTERFACES: [
         {

@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import classnames from "classnames";
 import PropTypes from "prop-types";
+import styles from "./styles.module.css"
 
 SplashCircle.propTypes = {
   cx: PropTypes.number.isRequired,
@@ -14,6 +15,7 @@ SplashCircle.propTypes = {
 }
 
 export default function SplashCircle(props) {
+
   return (
     <motion.g
       whileHover={{ scale: 1.05 }}
@@ -21,16 +23,15 @@ export default function SplashCircle(props) {
       animate={{
         x: props.xTransform || 0,
         y: props.yTransform || 0
-      }} transition={{ duration: 0.2 }}
+      }} transition={{ duration: 0.1 }}
     >
-      <a className="circle-link" href={props.linkTo} target="_blank">
-          <circle cx={props.cx} cy={props.cy} r={props.r} fill="#001b3d"  />
-          <text x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle" style={{
-            fill: "white",
-            fontWeight: "bold",
-            fontSize: "24px",
-            textDecoration: "none"
-          }}>{props.text}</text>
+      <a className={styles.splashTextContainer} href={props.linkTo} target="_blank">
+        <circle cx={props.cx} cy={props.cy} r={props.r} fill={props.isDarkTheme ? "white" : "#001b3d"} />
+        <text x={props.cx} y={props.cy} dominantBaseline="middle" textAnchor="middle"
+          className={classnames(styles.splashText, props.isDarkTheme ? styles.splashCircleDark : styles.splashCircleLight)}
+        >
+          {props.text}
+        </text>
       </a>
     </motion.g>
   )
