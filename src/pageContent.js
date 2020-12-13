@@ -5,23 +5,13 @@ import MapIFrame from "pages/components/MapIFrame/MapIFrame";
 
 
 export const HEAD_TITLE = 'Home'
-export const HEAD_DESC = 'HYAK Next Gen Supercomputer Homepage'
+export const HEAD_DESC = 'HYAK Supercomputer'
 
 export const STAT_ITEMS = {
-  'CPU Cores': '18,376',
-  'GPU Cores': '35,840',
-  'Terabytes of Memory': '3000 TB',
-  'Users': '100',
-  'Terabytes of Data': '4000 TB'
+  'Researchers': '2,061',
+  'Compute Cores': '18,376',
+  'GPUs': '112',
 }
-
-export const ABOUT_PARAGRAPH = <p>
-Hyak — ‘fast’ in Chinook jargon — is one of many tools that are part of the University’s 
-cyberinfrastructure plan to support world-class research in fields as varied as astronomy, 
-biology, climate science, computer science, engineering, medicine, physics, and others. 
-The plan is helping drive the University’s research mission on multiple levels, from 
-recruiting to leadership in many fields.
-</p>
 
 export const HomePage = {
   UserInterface: {

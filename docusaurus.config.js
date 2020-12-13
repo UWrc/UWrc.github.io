@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Hyak',
+  title: 'HYAK',
   tagline: 'Powering discoveries in every field',
   url: 'https://hyak.uw.edu',
   baseUrl: '/',
@@ -9,95 +9,142 @@ module.exports = {
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'ignore',
   themeConfig: {
+    sidebarCollapsible: true,
+    hideableSidebar: true,
     prism: {
       additionalLanguages: ['shell-session']
     },
     colorMode: {
       defaultMode: 'light', // "light" | "dark"
-      disableSwitch: true, // Hides the switch in the navbar
+      disableSwitch: false, // Hides the switch in the navbar
     },
     navbar: {
       title: 'Research Computing',
       logo: {
-        alt: 'Hyak Logo',
+        alt: 'HYAK Logo',
         src: 'img/logos/uw_icon.png',
       },
       items: [
         {
-          to: 'hyak/',
-          label: 'Hyak',
+          to: '/',
+          label: 'Home',
           position: 'right',
         },
         {
-          to: 'docs/',
+          to: '/systems',
+          label: 'Systems',
+          position: 'right',
+        },
+        {
+          to: 'sign-up',
+          label: 'Sign Up',
+          position: 'right',
+        },
+        {
+          to: 'docs',
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'right',
         },
         {
-          to: 'blog/', 
+          to: 'blog', 
           label: 'Stories', 
           position: 'right'
         },
         {
-          to: 'about/', 
+          to: 'about', 
           label: 'About', 
-          position: 'right'
+          position: 'right',
+          items: [
+            {
+              label: 'Our Team',
+              to: '/team',
+            },
+            {
+              label: 'Governance Board',
+              to: '/board',
+            },
+            {
+              label: 'Publications',
+              to: '/publications',
+            },
+            {
+              label: 'Support',
+              to: '/support',
+            },
+          ]
         },
+
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'HYAK',
           items: [
             {
-              label: 'Markdown Guide',
-              to: 'docs/markdown-guide',
+              label: 'Home',
+              to: '/',
             },
             {
-              label: 'Link Markdown to Site',
-              to: 'docs/link-markdown',
+              label: 'Sign Up',
+              to: '/sign-up',
+            },
+            {
+              label: 'Documentation',
+              to: '/docs',
+            },
+            {
+              label: 'About',
+              to: '/about',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Sponsors',
           items: [
             {
-              label: 'UW RCC',
-              href: 'https://depts.washington.edu/uwrcc/',
+              label: 'College of Arts & Sciences',
+              href: 'https://artsci.washington.edu',
             },
             {
-              label: 'Slack',
-              href: 'https://uw-rcc.slack.com/',
+              label: 'College of Engineering',
+              href: 'https://www.engr.washington.edu',
+            },
+            {
+              label: 'College of the Environment',
+              href: 'https://environment.uw.edu',
+            },
+            {
+              label: 'Institute for Protein Design',
+              href: 'https://www.ipd.uw.edu',
             },
           ],
         },
         {
-          title: 'Social',
+          title: 'Contact',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'UW RCC GitHub',
-              href: 'https://github.com/uwrc',
-            },
-            {
-              label: 'UW HPCC GitHub',
-              href: 'https://github.com/UW-HPC'
+              label: 'E-mail',
+              href: 'mailto:help@uw.edu?subject=hyak help footer',
             },
             {
               label: 'Mailing List',
-              href: 'http://mailman12.u.washington.edu/mailman/listinfo/hpc-list'
-            }
+              href: 'https://mailman1.u.washington.edu/mailman/listinfo/hyak-users',
+            },
+            {
+              label: 'Slack',
+              href: 'https://uw-hpcc.slack.com'
+            },
+            {
+              label: 'Github',
+              href: 'https://github.com/uwrc',
+            },
           ],
         },
       ],
-      //copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Created with ❤️ in Seattle, WA`,
     },
   },
   presets: [

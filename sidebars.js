@@ -1,17 +1,32 @@
 module.exports = {
   someSidebar: {
-    'Hyak': [
+    'Get Started': [
       'index',
+      'join-group',
+      'account-creation',
+      'account-activation',
     ],
-    'Getting Started': [
-      'getting_started/setup',
-      'tutorial',
-      'getting_started/scheduling-jobs',
+    'Storage': [
+      'storage/data',
+      'storage/klone',
+      'storage/mox',
+      'storage/transfer',
+      'storage/archive',
     ],
-    'Docusaurus Guides': [
-      'markdown-guide',
-      'link-markdown',
-      'mdx',
+    'Compute': [
+      'compute/scheduling-jobs',
+    ],
+    'Tools': [
+      'tools/modules',
+      'tools/containers',
+      'tools/jupyter',
+      'tools/python',
+      'tools/r',
+    ],
+    'Contribution Guides': [
+      'contribute/markdown-guide',
+      'contribute/link-markdown',
+      'contribute/mdx',
     ],
   }
 };
