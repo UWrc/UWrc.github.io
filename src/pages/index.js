@@ -7,7 +7,6 @@ import Splash from "./components/Splash/Splash";
 import HomeSection from "./components/HomeSection/HomeSection";
 import StatContainer from "./components/Stats/StatContainer";
 
-
 export default function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
