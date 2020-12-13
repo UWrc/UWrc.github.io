@@ -3,8 +3,22 @@ import Typist from "react-typist";
 import styles from "./styles.module.css"
 import "react-typist/dist/Typist.css"
 
-const TAGLINE_ITEMS = ["medicine", "physics", "biology", "chemistry", "computer science"]
-const TAGLINE_START = "Powering discoveries in"
+const TAGLINE_ITEMS = [
+  "chemical engineering", 
+  "computer science",
+  "medicine", 
+  "physics", 
+  "civil engineering",
+  "ecology",
+  "aeronautical engineering",
+  "genomics",
+  "environmental engineering",
+  "biology", 
+  "mechanical engineering",
+  "chemistry",
+  "proteomics",
+]
+const TAGLINE_START = "HYAK powers discoveries in"
 
 export default function TypingTagline(props) {
   const [count, setCount] = useState(0);
@@ -12,8 +26,8 @@ export default function TypingTagline(props) {
   let taglinesToType = TAGLINE_ITEMS.map(item => {
       return (
         [
-          <span>{item}</span>,
-          <Typist.Backspace count={item.length} delay={800} />
+          <span>{item}.</span>,
+          <Typist.Backspace count={item.length+1} delay={2000} />
         ]
       )
     })
@@ -22,9 +36,9 @@ export default function TypingTagline(props) {
     <div className={styles.tagline} style={{
       color: props.isDarkTheme ? 'white' : 'black'
     }}>
-      <span>{TAGLINE_START}</span>
       <Typist key={count} onTypingDone={() => setCount(count + 1)}>
-        <Typist.Delay ms={1000} />
+      <span>{TAGLINE_START} </span>
+        <Typist.Delay ms={2000} />
         {taglinesToType}
       </Typist>
     </div>

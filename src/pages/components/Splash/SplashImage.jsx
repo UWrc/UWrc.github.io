@@ -32,15 +32,15 @@ export default function SplashImage(props) {
       </defs>
       <rect transform="translate(0, 10)" width={1020} height={330} fill={"url(#pink-radial)" /*props.isDarkTheme ? "url(#dark-mode-white)" : "url(#pink-radial)"*/} />
       <g id="boxes" transform="translate(370, 50)">
-        <SplashBox x={0} y={130} width={300} height={100} yTransition={30} topColor="#6f46be" sideColor="#4B2E83" text="Text3" linkTo="" />
-        <SplashBox x={0} y={80} width={300} height={100} topColor="#d098db" sideColor="#a541b8" text="Text2" linkTo=""/>
-        <SplashBox x={0} y={30} width={300} height={100} yTransition={-30} topColor="#dbc63b" sideColor="#c2a800" text="Text1" linkTo=""/>
+        <SplashBox x={0} y={130} width={300} height={100} yTransition={30} topColor="#6f46be" sideColor="#4B2E83" text="Consulting" linkTo="/docs/support/consulting" />
+        <SplashBox x={0} y={80} width={300} height={100} topColor="#d098db" sideColor="#a541b8" text="Storage" linkTo="/docs/storage/data"/>
+        <SplashBox x={0} y={30} width={300} height={100} yTransition={-30} topColor="#dbc63b" sideColor="#c2a800" text="Compute" linkTo="/docs/compute/compute"/>
       </g>
       <g id="left-circles" transform="translate(50, 80)">
-        <SplashCircle cx={0} cy={100} xTransform={100} yTransform={-100} r={48} text="Circle1" 
+        <SplashCircle cx={0} cy={100} xTransform={100} yTransform={-100} r={48} text="ML/AI" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
         />
-        <SplashCircle cx={0} cy={100} r={48} text="Circle2" 
+        <SplashCircle cx={0} cy={100} r={58} text="Genomics" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
         />
         <SplashCircle cx={0} cy={100} xTransform={100} yTransform={100} r={48} text="Circle3" 
@@ -53,13 +53,13 @@ export default function SplashImage(props) {
         <path fill="none" stroke={props.isDarkTheme ? "white" : "#001b3d"} strokeWidth="3" d="M90 120 Q130 60 210 60" />
       </motion.g>
       <g id="right-circles" transform="translate(890, 80)">
-        <SplashCircle cx={80} cy={100} xTransform={-80} yTransform={-100} r={48} text="Circle4" 
+        <SplashCircle cx={80} cy={100} xTransform={-80} yTransform={-100} r={48} text="Results" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
         />
-        <SplashCircle cx={80} cy={100} r={48} text="Circle5" 
-          linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
+        <SplashCircle cx={80} cy={100} r={48} text="Pubs" 
+          linkTo="/publications" isDarkTheme={props.isDarkTheme}
         />
-        <SplashCircle cx={80} cy={100} xTransform={-80} yTransform={100} r={48} text="Circle6" 
+        <SplashCircle cx={80} cy={100} xTransform={-80} yTransform={100} r={48} text="Grants" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
         />
       </g>
