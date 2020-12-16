@@ -22,7 +22,7 @@ export default function StatSlotMachineItem(props) {
     <div
       className={styles.statItem}
       style={{
-        height: '200px',
+        height: '100%',
         backgroundColor: props.backgroundColor
       }}
     >

@@ -4,7 +4,6 @@ import styles from "./styles.module.css"
 
 import StatSlotMachineItem from "./StatSlotMachineItem";
 
-
 const Colors = {
   GLAUCOUS: "#6883BA",
   YALE_BLUE: "#033860",

@@ -3,11 +3,13 @@ import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import * as PageContent from "../pageContent";
-import Splash from "./components/Splash/Splash";
 import HomeSection from "./components/HomeSection/HomeSection";
-import StatContainer from "./components/Stats/StatContainer";
 
-export default function Home() {
+import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+export default function Home() {  
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
 
@@ -16,8 +18,59 @@ export default function Home() {
       title={PageContent.HEAD_TITLE}
       description={PageContent.HEAD_DESC}
     >
-      <Splash />
-      <StatContainer statItems={PageContent.STAT_ITEMS} />
+
+      <Carousel pause="false" interval={3000}>
+
+        <Carousel.Item>
+          <Image
+            className=""
+            src="/img/carousel/protein.jpg"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Molecular Dynamics</h3>
+            <p>MD is one of the biggest use cases for HPC.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/img/carousel/network.jpg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>Computational Social Sciences</h3>
+            <p>HPC is increasingly used in the social sciences.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/img/carousel/containers.jpg"
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>Containers</h3>
+            <p>We provide support for computational reproducibility and portability.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/img/carousel/neuron.jpg"
+            alt="Fourth slide"
+          />
+          <Carousel.Caption>
+            <h3>Machine Learning</h3>
+            <p>We have tools and training to get you started with deep learning.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+      </Carousel>
+
       <HomeSection
         header={PageContent.HomePage.UserInterface.HEADER}
         imgs={siteConfig.customFields.Graphics.INTERFACES}

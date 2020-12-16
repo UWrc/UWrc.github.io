@@ -1,17 +1,20 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 
+import Splash from "./components/Splash/Splash";
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 export default function SignUp() {
   return (
+    
 <Layout title="SignUp">
   <div class="container">
     <div class="row">
       <br />
     </div>
-
+    <Splash />
     <Tabs
       className="unique-tabs"
       defaultValue="apple"
