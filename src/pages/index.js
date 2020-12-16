@@ -18,7 +18,7 @@ export default function Home() {
       description={PageContent.HEAD_DESC}
     >
 
-      <Carousel pause="false" interval={3000}>
+      <Carousel pause="false" interval={4000} >
 
         <Carousel.Item>
           <img

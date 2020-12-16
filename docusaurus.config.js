@@ -16,7 +16,7 @@ module.exports = {
     },
     colorMode: {
       defaultMode: 'light', // "light" | "dark"
-      disableSwitch: false, // Hides the switch in the navbar
+      disableSwitch: true, // Hides the switch in the navbar
     },
     navbar: {
       title: 'Research Computing',
@@ -36,8 +36,8 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'sign-up',
-          label: 'Sign Up',
+          to: 'pricing',
+          label: 'Pricing',
           position: 'right',
         },
         {
@@ -57,6 +57,10 @@ module.exports = {
           position: 'right',
           items: [
             {
+              label: 'Supporting You',
+              to: '/about',
+            },
+            {
               label: 'Our Team',
               to: '/team',
             },
@@ -67,10 +71,6 @@ module.exports = {
             {
               label: 'Publications',
               to: '/publications',
-            },
-            {
-              label: 'Support',
-              to: '/support',
             },
           ]
         },
@@ -144,7 +144,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Created with ❤️ in Seattle, WA`,
+      copyright: `Made with ❤️ in Seattle`,
     },
   },
   presets: [
@@ -162,13 +162,6 @@ module.exports = {
   ],
   customFields: {
     Graphics: {
-      SPLASH_LOGOS: [
-        {
-          caption: 'UW RCC Github',
-          image: 'img/splashlogos/github.svg',
-          link: 'https://github.com/UWrc'
-        },
-      ],
       INTERFACES: [
         {
           caption: 'Terminal',

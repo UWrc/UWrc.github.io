@@ -6,10 +6,9 @@ import Splash from "./components/Splash/Splash";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-export default function SignUp() {
+export default function Pricing() {
   return (
-    
-<Layout title="SignUp">
+<Layout title="Pricing">
   <div class="container">
     <div class="row">
       <br />
