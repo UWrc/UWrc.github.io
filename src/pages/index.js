@@ -6,7 +6,6 @@ import * as PageContent from "../pageContent";
 import HomeSection from "./components/HomeSection/HomeSection";
 
 import Carousel from 'react-bootstrap/Carousel';
-import Image from 'react-bootstrap/Image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {  
@@ -22,10 +21,11 @@ export default function Home() {
       <Carousel pause="false" interval={3000}>
 
         <Carousel.Item>
-          <Image
-            className=""
+          <img
+            className="d-block w-100"
             src="/img/carousel/protein.jpg"
-            alt="First slide"
+            alt="Molecular Dynamics"
+            style={{height: "91vh", width: "100%"}}
           />
           <Carousel.Caption>
             <h3>Molecular Dynamics</h3>
@@ -37,7 +37,8 @@ export default function Home() {
           <img
             className="d-block w-100"
             src="/img/carousel/network.jpg"
-            alt="Third slide"
+            alt="Social Sciences"
+            style={{height: "91vh", width: "100%"}}
           />
           <Carousel.Caption>
             <h3>Computational Social Sciences</h3>
@@ -49,10 +50,11 @@ export default function Home() {
           <img
             className="d-block w-100"
             src="/img/carousel/containers.jpg"
-            alt="Third slide"
+            alt="Research Containers"
+            style={{height: "91vh", width: "100%"}}
           />
           <Carousel.Caption>
-            <h3>Containers</h3>
+            <h3>Research Containers</h3>
             <p>We provide support for computational reproducibility and portability.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -61,7 +63,8 @@ export default function Home() {
           <img
             className="d-block w-100"
             src="/img/carousel/neuron.jpg"
-            alt="Fourth slide"
+            alt="Machine Learning"
+            style={{height: "91vh", width: "100%"}}
           />
           <Carousel.Caption>
             <h3>Machine Learning</h3>
