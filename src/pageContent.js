@@ -3,7 +3,6 @@ import styles from "pages/components/MapIFrame/styles.module.css"
 
 import MapIFrame from "pages/components/MapIFrame/MapIFrame";
 
-
 export const HEAD_TITLE = 'Home'
 export const HEAD_DESC = 'HYAK Supercomputer'
 

@@ -40,7 +40,7 @@ export default function SplashImage(props) {
         <SplashCircle cx={0} cy={100} xTransform={100} yTransform={-100} r={48} text="ML/AI" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
         />
-        <SplashCircle cx={0} cy={100} r={58} text="Genomics" 
+        <SplashCircle cx={0} cy={100} r={48} text="Data" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
         />
         <SplashCircle cx={0} cy={100} xTransform={100} yTransform={100} r={48} text="Circle3" 
