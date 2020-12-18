@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[65],{121:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"scRNA-seq","permalink":"/blog/2020/12/14/scrna-seq"},{"title":"Hello world!","permalink":"/blog/2020/12/12/hello-world"}]}')}}]);
