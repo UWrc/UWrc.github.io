@@ -35,6 +35,9 @@ export default function systems() {
         <TabItem value="ikt">
         <table>
             <tr>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="img/systems/ikt.jpg" /></td>
+            </tr>
+            <tr>
               <td align="right">Cluster</td><td><code>ikt</code></td>
             </tr>
             <tr>
@@ -50,6 +53,9 @@ export default function systems() {
               <td align="right">Interconnect</td><td>10 Gbps [Myri-10G Myrinet]</td>
             </tr>
             <tr>
+              <td align="right">Topology</td><td>Non-blocking 1-layer fat tree</td>
+            </tr>
+            <tr>
               <td align="right">Storage</td><td>1.0 PB GPFS</td>
             </tr>
             <tr>
@@ -59,6 +65,9 @@ export default function systems() {
         </TabItem>
         <TabItem value="mox">
           <table>
+            <tr>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="img/systems/ikt.jpg" /></td>
+            </tr>
             <tr>
               <td align="right">Cluster</td><td><code>mox</code></td>
             </tr>
@@ -75,6 +84,9 @@ export default function systems() {
               <td align="right">Interconnect</td><td>100 Gbps [OPA100 Omnipath]</td>
             </tr>
             <tr>
+              <td align="right">Topology</td><td>Non-blocking 1-layer fat tree</td>
+            </tr>
+            <tr>
               <td align="right">Storage</td><td>1.0 PB GPFS</td>
             </tr>
             <tr>
@@ -84,6 +96,9 @@ export default function systems() {
         </TabItem>
         <TabItem value="klone">
           <table>
+            <tr>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="img/systems/klone.jpg" /></td>
+            </tr>
             <tr>
               <td align="right">Cluster</td><td><code>klone</code></td>
             </tr>
@@ -98,6 +113,9 @@ export default function systems() {
             </tr>
             <tr>
               <td align="right">Interconnect</td><td>100 Gbps [HDR100 Infiniband]</td>
+            </tr>
+            <tr>
+              <td align="right">Topology</td><td>3:1 blocking 2-layer fat tree</td>
             </tr>
             <tr>
               <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>1.4 PB GPFS<br />500 GB NVMe Flash</td>
