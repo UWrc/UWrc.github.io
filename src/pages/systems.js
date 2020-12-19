@@ -35,7 +35,7 @@ export default function systems() {
         <TabItem value="ikt">
         <table>
             <tr>
-              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="img/systems/ikt.jpg" /></td>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="/img/systems/ikt.jpg" /></td>
             </tr>
             <tr>
               <td align="right">Cluster</td><td><code>ikt</code></td>
@@ -66,7 +66,7 @@ export default function systems() {
         <TabItem value="mox">
           <table>
             <tr>
-              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="img/systems/ikt.jpg" /></td>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="/img/systems/ikt.jpg" /></td>
             </tr>
             <tr>
               <td align="right">Cluster</td><td><code>mox</code></td>
@@ -97,7 +97,7 @@ export default function systems() {
         <TabItem value="klone">
           <table>
             <tr>
-              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="img/systems/klone.jpg" /></td>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="/img/systems/klone.jpg" /></td>
             </tr>
             <tr>
               <td align="right">Cluster</td><td><code>klone</code></td>
