@@ -15,7 +15,7 @@ export default function Splash() {
     <div className={styles.splash}>
       <SplashImage />
       <TypingTagline />
-      <SplashButtons buttons={[
+      {/*<SplashButtons buttons={[
         {
           label: "Button 1",
           path: "path/to/page"
@@ -24,8 +24,8 @@ export default function Splash() {
           label: "Button 2",
           path: "path/to/page"
         }
-      ]} />
-      <ScrollDown />
+      ]} />*/}
+      {/*<ScrollDown />*/}
     </div>
   )
 }
