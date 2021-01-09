@@ -13,7 +13,7 @@ export default function SplashImage(props) {
   }
 
   return (
-    <svg width="80%" height="48%" viewBox="0 0 1020 340" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="48%" viewBox="0 0 1020 340" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <radialGradient id="pink-radial">
           <stop offset="0%"  stopColor="#fff" />
@@ -31,11 +31,12 @@ export default function SplashImage(props) {
         </marker>
       </defs>
       <rect transform="translate(0, 10)" width={1020} height={330} fill={"url(#pink-radial)" /*props.isDarkTheme ? "url(#dark-mode-white)" : "url(#pink-radial)"*/} />
-      <g id="boxes" transform="translate(370, 50)">
-        <SplashBox x={0} y={130} width={300} height={100} yTransition={30} topColor="#6f46be" sideColor="#4B2E83" text="Consulting" linkTo="/docs/support/consulting" />
-        <SplashBox x={0} y={80} width={300} height={100} topColor="#d098db" sideColor="#a541b8" text="Storage" linkTo="/docs/storage/data"/>
-        <SplashBox x={0} y={30} width={300} height={100} yTransition={-30} topColor="#dbc63b" sideColor="#c2a800" text="Compute" linkTo="/docs/compute/compute"/>
+      <g id="boxes" transform="translate(320, 50)">
+        <SplashBox x={0} y={130} width={400} height={100} yTransition={30} topColor="#6f46be" sideColor="#4B2E83" text="Consulting" linkTo="/docs/support/consulting" />
+        <SplashBox x={0} y={80} width={400} height={100} topColor="#d098db" sideColor="#a541b8" text="Storage" linkTo="/docs/storage/data"/>
+        <SplashBox x={0} y={30} width={400} height={100} yTransition={-30} topColor="#dbc63b" sideColor="#c2a800" text="Compute" linkTo="/docs/compute/compute"/>
       </g>
+      {/*
       <g id="left-circles" transform="translate(50, 80)">
         <SplashCircle cx={0} cy={100} xTransform={100} yTransform={-100} r={48} text="ML/AI" 
           linkTo="http://www.washington.edu" isDarkTheme={props.isDarkTheme}
@@ -68,6 +69,7 @@ export default function SplashImage(props) {
         <path d="M0 100 L180 100" fill="none" stroke={props.isDarkTheme ? "white" : "#001b3d"} strokeWidth="3" markerEnd="url(#arrowhead)" strokeDasharray="4" />
         <path d="M0 200 L100 200" fill="none" stroke={props.isDarkTheme ? "white" : "#001b3d"} strokeWidth="3" markerEnd="url(#arrowhead)" strokeDasharray="4" />
       </motion.g>
+      */}
     </svg>
   )
 }
