@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 
 export default function board() {
   return (
-<Layout title="board">  
+<Layout title="HGB">  
   <div class="container">
     <br />
 

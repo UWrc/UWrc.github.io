@@ -1,7 +1,6 @@
 ---
 id: containers
-title: Containers
-sidebar-label: Containers
+title: Containers, Docker, Singularity
 ---
 
 `mox` uses the [Slurm](https://slurm.schedmd.com/overview.html) job scheduler.  With `<net_id>` as your UW NetID, login with `ssh <net_id>@mox.hyak.edu` to gain access to the `mox` login node.  The login node is used only for login and job submission.  The computational work itself is done on a compute or build node.

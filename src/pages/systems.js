@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 export default function systems() {
   return (
-<Layout title="systems">
+<Layout title="Hyak">
   <br />
   <h3 style={{textAlign: "center"}}>HYAK</h3>
   
