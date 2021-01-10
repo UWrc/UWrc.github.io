@@ -78,7 +78,7 @@ export default function systems() {
               <td align="right">Compute</td><td>18,376 CPU cores [Cascade Lake]</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Accelerators</td><td>112 GPU cards [Quadro 6000]<br />XX Xeon PHI</td>
+              <td align="right" style={{verticalAlign: "top"}}>Accelerators</td><td>112 GPU cards [Quadro 6000]<br />20 Xeon PHI</td>
             </tr>
             <tr>
               <td align="right">Interconnect</td><td>100 Gbps [OPA100 Omnipath]</td>
