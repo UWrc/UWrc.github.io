@@ -21,12 +21,14 @@ export default function Home() {
       <Carousel pause="false" interval={4000} >
 
         <Carousel.Item>
+          <a href="/blog/2021/01/09/gromacs-gpu">
           <img
             className="d-block w-100"
             src="/img/carousel/protein.jpg"
             alt="Molecular Dynamics"
             style={{height: "91vh", width: "100%"}}
           />
+          </a>
           <Carousel.Caption>
             <h3>Molecular Dynamics</h3>
             <p>MD is one of the biggest use cases for HPC.</p>
@@ -47,12 +49,14 @@ export default function Home() {
         </Carousel.Item>
 
         <Carousel.Item>
+          <a href="/docs/tools/containers">
           <img
             className="d-block w-100"
             src="/img/carousel/containers.jpg"
             alt="Research Containers"
             style={{height: "91vh", width: "100%"}}
           />
+          </a>
           <Carousel.Caption>
             <h3>Research Containers</h3>
             <p>We provide support for computational reproducibility and portability.</p>
@@ -60,12 +64,14 @@ export default function Home() {
         </Carousel.Item>
 
         <Carousel.Item>
+          <a href="/blog/2021/01/10/pytorch-cuda11">
           <img
             className="d-block w-100"
             src="/img/carousel/neuron.jpg"
             alt="Machine Learning"
             style={{height: "91vh", width: "100%"}}
           />
+          </a>
           <Carousel.Caption>
             <h3>Machine Learning</h3>
             <p>We have tools and training to get you started with deep learning.</p>
