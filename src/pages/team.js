@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 
 export default function team() {
   return (
-<Layout title="team">  
+<Layout title="Team">  
   <div class="container">
     <br />
     <div class="row">

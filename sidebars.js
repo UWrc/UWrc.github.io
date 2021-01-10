@@ -17,12 +17,14 @@ module.exports = {
     'Compute': [
       'compute/scheduling-jobs',
     ],
-    'Tools': [
+    'Tools & Software': [
+      'tools/index',
       'tools/modules',
+      'tools/compilers',
       'tools/containers',
-      'tools/jupyter',
       'tools/python',
       'tools/r',
+      'tools/jupyter',
     ],
     'Contribution Guides': [
       'contribute/markdown-guide',
