@@ -3,13 +3,13 @@ id: compilers
 title: Compilers
 ---
 
-The compilers are provided using environment modules, you can review modules [here](/docs/tools/modules). 
+The compilers are provided using environment modules, you can review modules [here](modules.md).
 
 A lot of software you may want to use and compile yourself could be written in C, C++, or Fortran. We support two compiler flavors for you to try: the [GNU compiler](#gnu-compiler) or the [Intel compiler](#intel-compiler). 
 
 ## GNU Compiler
 
-The latest GNU compiler provided as a module is version 10.1 [[source](https://gcc.gnu.org/gcc-10/)]. This was built with the `--enable-languages=c,c++,fortran` flag.
+The latest GNU compiler provided as a module is version 10.1 [[www](https://gcc.gnu.org/gcc-10/)]. This was built with the `--enable-languages=c,c++,fortran` flag.
 
 ```bash
 module load gcc/10.1.1

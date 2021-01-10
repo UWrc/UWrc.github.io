@@ -18,7 +18,7 @@ module.exports = {
       'compute/scheduling-jobs',
     ],
     'Tools & Software': [
-      'tools/index',
+      'tools/software',
       'tools/modules',
       'tools/compilers',
       'tools/containers',
