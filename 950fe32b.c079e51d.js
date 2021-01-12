@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[50],{111:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"rna-seq","name":"rna-seq","count":1,"permalink":"/blog/tags/rna-seq"}')}}]);
