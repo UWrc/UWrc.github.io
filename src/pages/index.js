@@ -21,7 +21,7 @@ export default function Home() {
       <Carousel pause="false" interval={4000} >
 
         <Carousel.Item>
-          <a href="/blog/2021/01/09/gromacs-gpu">
+          <a href="/blog/2021/01/09/gromacs-gpu" target="_blank">
           <img
             className="d-block w-100"
             src="/img/carousel/protein.jpg"
@@ -36,12 +36,14 @@ export default function Home() {
         </Carousel.Item>
 
         <Carousel.Item>
+          <a href="https://www.washington.edu/uwit/partnerships-2019/building-better-online-communities/" target="_blank">
           <img
             className="d-block w-100"
             src="/img/carousel/network.jpg"
             alt="Social Sciences"
             style={{height: "91vh", width: "100%"}}
           />
+          </a>
           <Carousel.Caption>
             <h3>Computational Social Sciences</h3>
             <p>HPC is increasingly used in the social sciences.</p>
@@ -49,7 +51,7 @@ export default function Home() {
         </Carousel.Item>
 
         <Carousel.Item>
-          <a href="/docs/tools/containers">
+          <a href="/docs/tools/containers" target="_blank">
           <img
             className="d-block w-100"
             src="/img/carousel/containers.jpg"
@@ -64,7 +66,7 @@ export default function Home() {
         </Carousel.Item>
 
         <Carousel.Item>
-          <a href="/blog/2021/01/10/pytorch-cuda11">
+          <a href="/blog/2021/01/10/pytorch-cuda11" target="_blank">
           <img
             className="d-block w-100"
             src="/img/carousel/neuron.jpg"
