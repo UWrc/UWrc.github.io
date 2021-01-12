@@ -14,6 +14,10 @@ During the January 12, 2021 mox maintenance period long overdue package updates 
 
 The second most widely used GPU-enabled workflow on HYAK (besides machine learning) is molecular dynamics (MD) so we wanted to test one of the most popular MD codes, gromacs [[source](http://www.gromacs.org/About_Gromacs)], and ensure this driver upgrade wouldn't negatively impact our researchers. I couldn't find gromacs compiled with GPU support currently in our module collection so I used it as an opportunity to create one for you all, read on!
 
+:::warning
+This is an excercise to demonstrate the support for molecular dynamics on GPUs as a proof-of-concept. Scientific verification of the software compile options (e.g., single-precision) and its results is the responsibility of the researcher.
+:::
+
 ## Using gromacs
 
 I'll start with the end result for those of you who just want to use it but following that I'll dive into the nuts and bolts of how we created the module so you can perform additional optimizations.
