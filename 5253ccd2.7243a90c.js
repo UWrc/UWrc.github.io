@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[31],{94:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"scrna-seq","name":"scrna-seq","count":1,"permalink":"/blog/tags/scrna-seq"}')}}]);

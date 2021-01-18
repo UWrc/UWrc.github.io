@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>HYAK Blog</title>
+        <link>https://hyak.uw.edu/blog</link>
+        <description>HYAK Blog</description>
+        <lastBuildDate>Sun, 10 Jan 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Pytorch and CUDA11]]></title>
+            <link>https://hyak.uw.edu/blog/2021/01/10/pytorch-cuda11</link>
+            <guid>Pytorch and CUDA11</guid>
+            <pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[[pytorch-cuda10]: /img/blog/pytorch-cuda10.png 'Pytorch install instructions for pip with CUDA10']]></description>
+        </item>
+        <item>
+            <title><![CDATA[gromacs on GPUs]]></title>
+            <link>https://hyak.uw.edu/blog/2021/01/09/gromacs-gpu</link>
+            <guid>gromacs on GPUs</guid>
+            <pubDate>Sat, 09 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[During the January 12, 2021 mox maintenance period long overdue package updates will be applied. The most user impactful upgrade is the GPU driver from to 418.40.04 to 460.27.04 that will allow for CUDA 11 support (up from CUDA 10).]]></description>
+        </item>
+        <item>
+            <title><![CDATA[scRNA-seq]]></title>
+            <link>https://hyak.uw.edu/blog/2020/12/14/scrna-seq</link>
+            <guid>scRNA-seq</guid>
+            <pubDate>Mon, 14 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Over the past year we've done a bunch of outreach to labs within the genomics community here at the UW. Given my research background it's where I feel most comfortable and this type of research is underrepresented on the cluster. Given where the field is going it's inconceivable they aren't using Hyak or HPC in general! Those lab closet clusters and under bench servers gotta go, there is a better way and we'll show you how to do some scRNA-seq today 🙂]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Hello world!]]></title>
+            <link>https://hyak.uw.edu/blog/2020/12/12/hello-world</link>
+            <guid>Hello world!</guid>
+            <pubDate>Sat, 12 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[tl;dr (1) decomissioned a cluster, (2) got a bunch of GPUs for maching learning, (3) launched a cluster, and (4) new and improved documentation.]]></description>
+        </item>
+    </channel>
+</rss>
