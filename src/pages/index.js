@@ -1,85 +1,56 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import * as PageContent from "../pageContent";
 import HomeSection from "./components/HomeSection/HomeSection";
+import HyakCarouselItem from "./components/HyakCarouselItem/HyakCarouselItem";
 
-import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+//import Carousel from 'react-bootstrap/Carousel';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {  
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
+
+  const CAROUSEL_ITEMS = [
+    {
+      image: '/img/carousel/protein.jpg',
+      title: 'Molecular Dynamics',
+      caption: 'MD is one of the biggest use cases for HPC.',
+      linkUrl: '/blog/2021/01/09/gromacs-gpu',
+    },
+    {
+      image: '/img/carousel/network.jpg',
+      title: 'Computational Social Sciences',
+      caption: 'HPC is increasingly used in the social sciences.',
+      linkUrl: 'https://www.washington.edu/uwit/partnerships-2019/building-better-online-communities/',
+    },
+    {
+      image: '/img/carousel/containers.jpg',
+      title: 'Research Containers',
+      caption: 'We provide support for computational reproducibility and portability.',
+      linkUrl: '/docs/tools/containers'
+    },
+    {
+      image: '/img/carousel/neuron.jpg',
+      title: 'Machine Learning',
+      caption: 'We have tools and training to get you started with deep learning.',
+      linkUrl: '/blog/2021/01/10/pytorch-cuda11',
+    }
+  ]
 
   return (
     <Layout
       title={PageContent.HEAD_TITLE}
       description={PageContent.HEAD_DESC}
     >
-
-      <Carousel pause="false" interval={4000} >
-
-        <Carousel.Item>
-          <a href="/blog/2021/01/09/gromacs-gpu" target="_blank">
-          <img
-            className="d-block w-100"
-            src="/img/carousel/protein.jpg"
-            alt="Molecular Dynamics"
-            style={{height: "91vh", width: "100%"}}
-          />
-          </a>
-          <Carousel.Caption>
-            <h3>Molecular Dynamics</h3>
-            <p>MD is one of the biggest use cases for HPC.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <a href="https://www.washington.edu/uwit/partnerships-2019/building-better-online-communities/" target="_blank">
-          <img
-            className="d-block w-100"
-            src="/img/carousel/network.jpg"
-            alt="Social Sciences"
-            style={{height: "91vh", width: "100%"}}
-          />
-          </a>
-          <Carousel.Caption>
-            <h3>Computational Social Sciences</h3>
-            <p>HPC is increasingly used in the social sciences.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <a href="/docs/tools/containers" target="_blank">
-          <img
-            className="d-block w-100"
-            src="/img/carousel/containers.jpg"
-            alt="Research Containers"
-            style={{height: "91vh", width: "100%"}}
-          />
-          </a>
-          <Carousel.Caption>
-            <h3>Research Containers</h3>
-            <p>We provide support for computational reproducibility and portability.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <a href="/blog/2021/01/10/pytorch-cuda11" target="_blank">
-          <img
-            className="d-block w-100"
-            src="/img/carousel/neuron.jpg"
-            alt="Machine Learning"
-            style={{height: "91vh", width: "100%"}}
-          />
-          </a>
-          <Carousel.Caption>
-            <h3>Machine Learning</h3>
-            <p>We have tools and training to get you started with deep learning.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
+      <Carousel>
+        {CAROUSEL_ITEMS.map((carouselItem, i) => <HyakCarouselItem key={i} {...carouselItem} />)}
       </Carousel>
 
       <HomeSection
