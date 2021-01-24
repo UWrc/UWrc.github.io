@@ -20,6 +20,7 @@ import styles from './styles.module.css'; // retrocompatible with v1
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ScrollNotifier from "theme/ScrollNotifier";
+import SplashLogos from "../../pages/components/Splash/SplashLogos";
 
 const DefaultNavItemPosition = 'right'; // If split links by left/right
 // if position is unspecified, fallback to right (as v1)
@@ -105,6 +106,7 @@ function Navbar(props) {
         <div className="navbar__items navbar__items--right">
           {rightItems.map((item, i) => <NavbarItem {...item} key={i} />)}
           {!disableColorModeSwitch && <Toggle className={styles.displayOnlyInLargeViewport} aria-label="Dark mode toggle" checked={isDarkTheme} onChange={onToggleChange} />}
+          <SplashLogos />
           <SearchBar handleSearchBarToggle={setIsSearchBarExpanded} isSearchBarExpanded={isSearchBarExpanded} />
         </div>
       </div>
