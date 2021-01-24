@@ -12,6 +12,7 @@ import rangeParser from 'parse-numeric-range';
 import usePrismTheme from '@theme/hooks/usePrismTheme';
 import styles from './styles.module.css';
 import { useThemeConfig } from '@docusaurus/theme-common';
+import MacOSCircle from "./MacOSCircle";
 const highlightLinesRangeRegex = /{([\d,-]+)}/;
 
 const getHighlightDirectiveRegex = (languages = ['js', 'jsBlock', 'jsx', 'python', 'html']) => {
@@ -96,6 +97,7 @@ export default (({
   const button = useRef(null);
   let highlightLines = [];
   let codeBlockTitle = '';
+  let useMacOsCircles = false;
   const prismTheme = usePrismTheme(); // In case interleaved Markdown (e.g. when using CodeBlock as standalone component).
 
   const content = Array.isArray(children) ? children.join('') : children;
@@ -111,6 +113,10 @@ export default (({
     // Tested above
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     codeBlockTitle = metastring.match(codeBlockTitleRegex)[1];
+  }
+
+  if (metastring && metastring.includes('terminal=true')) {
+    useMacOsCircles = true
   }
 
   let language = languageClassName && // Force Prism's language union type to `any` because it does not contain all available languages
@@ -192,6 +198,15 @@ export default (({
           [styles.codeBlockWithTitle]: codeBlockTitle
         })}>
               <div className={styles.codeBlockLines} style={style}>
+                {useMacOsCircles && (
+                  <div style={{
+                    display: 'flex'
+                  }}>
+                    <MacOSCircle color='#ff5f56' margin={false} />
+                    <MacOSCircle color='#ffbd2e' margin={true}/>
+                    <MacOSCircle color='#27c93f' margin={true}/>
+                  </div>
+                )}
                 {tokens.map((line, i) => {
               if (line.length === 1 && line[0].content === '') {
                 line[0].content = '\n'; // eslint-disable-line no-param-reassign
