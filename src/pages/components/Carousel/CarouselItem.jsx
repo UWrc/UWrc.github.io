@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.css";
 
-HyakCarouselItem.propTypes = {
+CarouselItem.propTypes = {
   image: PropTypes.string.isRequired,  // path to image
   title: PropTypes.string,
   caption: PropTypes.string,
   linkUrl: PropTypes.string  // href url
 }
 
-export default function HyakCarouselItem(props) {
+export default function CarouselItem(props) {
 
   let itemContent = <div className={styles.carouselContainer}>
     <img className={styles.carouselImage} src={props.image} alt={props.title} />
