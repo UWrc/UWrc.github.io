@@ -1,0 +1,79 @@
+.carouselContainer {
+  display: block;
+  width: 100%;
+  height: 91vh;
+}
+  
+.carouselImage {
+  position: relative;
+  height: 100%;
+}
+  
+.carouselTitle {
+  position: absolute; 
+  bottom: 72px;
+  width: 100%; 
+}
+
+.carouselTitle span, .carouselCaption span {
+  color: white; 
+  margin-bottom: .5rem;
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.2;  
+  padding: 10px; 
+}
+
+.carouselTitle span {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.carouselCaption {
+  position: absolute;
+  bottom: 36px;
+  width: 100%;
+}
+
+.carouselArrow {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: xxx-large;
+  z-index: 1;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.3s
+}
+
+.carouselArrow:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+.carouselArrow.left {
+  text-align: right;
+}
+
+.carouselArrow.right {
+  right: 0;
+  text-align: left;
+}
+
+.carouselIndicator {
+  background-color: white;
+  background-clip: content-box;
+  padding: 3px 0;
+  opacity: 0.5;
+  display: inline-block;
+  margin: 0 4px;
+  height: 9px;
+  width: 30px;
+}
+
+.active {
+  opacity: 1;
+}

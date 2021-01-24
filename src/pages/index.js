@@ -6,12 +6,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import * as PageContent from "../pageContent";
 import HomeSection from "./components/HomeSection/HomeSection";
-import HyakCarouselItem from "./components/HyakCarouselItem/HyakCarouselItem";
+import HyakCarouselItem from "./components/Carousel/CarouselItem";
+import CarouselArrow from "./components/Carousel/CarouselArrow";
+import CarouselIndicator from "./components/Carousel/CarouselIndicator";
 
-
-
-//import Carousel from 'react-bootstrap/Carousel';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {  
   const context = useDocusaurusContext();
@@ -49,7 +47,37 @@ export default function Home() {
       title={PageContent.HEAD_TITLE}
       description={PageContent.HEAD_DESC}
     >
-      <Carousel>
+      <Carousel 
+        autoPlay={true} 
+        infiniteLoop={true} 
+        interval={5000} 
+        showThumbs={false} 
+        showStatus={false}
+        renderArrowPrev={(onClickHandler, hasNext, label) => {
+          return <CarouselArrow
+            onClickHandler={onClickHandler} 
+            hasNext={hasNext} 
+            label={label} 
+            arrowDirection="left"
+          />
+        }}
+        renderArrowNext={(onClickHandler, hasNext, label) => {
+          return <CarouselArrow
+            onClickHandler={onClickHandler} 
+            hasNext={hasNext} 
+            label={label} 
+            arrowDirection="right"
+          />
+        }}
+        renderIndicator={(onClickHandler, isSelected, index, label) => {
+          return <CarouselIndicator
+            onClickHandler={onClickHandler}
+            isSelected={isSelected}
+            index={index}
+            label={label}
+          />
+        }}
+      >
         {CAROUSEL_ITEMS.map((carouselItem, i) => <HyakCarouselItem key={i} {...carouselItem} />)}
       </Carousel>
 

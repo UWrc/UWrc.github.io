@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './styles.module.css'
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./styles.module.css";
 
 HyakCarouselItem.propTypes = {
   image: PropTypes.string.isRequired,  // path to image
