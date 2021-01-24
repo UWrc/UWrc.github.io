@@ -18,6 +18,9 @@ import Logo from '@theme/Logo';
 import IconMenu from '@theme/IconMenu';
 import styles from './styles.module.css'; // retrocompatible with v1
 
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import ScrollNotifier from "theme/ScrollNotifier";
+
 const DefaultNavItemPosition = 'right'; // If split links by left/right
 // if position is unspecified, fallback to right (as v1)
 
@@ -30,7 +33,18 @@ function splitNavItemsByPosition(items) {
   };
 }
 
-function Navbar() {
+function Navbar(props) {
+  const context = useDocusaurusContext();
+  const {siteConfig = {}} = context;
+
+  let useScrollNotifier = false
+  try {
+    useScrollNotifier = window.location.pathname != siteConfig.baseUrl
+  } catch (e) {
+
+  }
+
+
   const {
     navbar: {
       items,
@@ -70,13 +84,14 @@ function Navbar() {
     leftItems,
     rightItems
   } = splitNavItemsByPosition(items);
-  return <nav ref={navbarRef} className={clsx('navbar', 'navbar--fixed-top', {
-    'navbar--dark': style === 'dark',
-    'navbar--primary': style === 'primary',
-    'navbar-sidebar--show': sidebarShown,
-    [styles.navbarHideable]: hideOnScroll,
-    [styles.navbarHidden]: !isNavbarVisible
-  })}>
+  return <>
+    <nav ref={navbarRef} className={clsx('navbar', 'navbar--fixed-top', {
+      'navbar--dark': style === 'dark',
+      'navbar--primary': style === 'primary',
+      'navbar-sidebar--show': sidebarShown,
+      [styles.navbarHideable]: hideOnScroll,
+      [styles.navbarHidden]: !isNavbarVisible
+    })}>
       <div className="navbar__inner">
         <div className="navbar__items">
           {items != null && items.length !== 0 && <div aria-label="Navigation bar toggle" className="navbar__toggle" role="button" tabIndex={0} onClick={showSidebar} onKeyDown={showSidebar}>
@@ -107,7 +122,9 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </nav>;
+    </nav>
+    <ScrollNotifier useScrollNotifier={useScrollNotifier} scrollPercent={props.scrollPercent} />
+  </>
 }
 
 export default Navbar;
