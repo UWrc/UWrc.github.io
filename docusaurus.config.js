@@ -162,6 +162,13 @@ module.exports = {
   ],
   customFields: {
     Graphics: {
+      SPLASH_LOGOS: [
+        {
+          link: 'https://github.com/UWrc',
+          caption: 'UWrc Github',
+          image: 'img/splashlogos/github.svg'
+        }
+      ],
       INTERFACES: [
         {
           caption: 'Terminal',
