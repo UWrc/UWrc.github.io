@@ -9,8 +9,7 @@ import HomeSection from "./components/HomeSection/HomeSection";
 import CarouselItem from "./components/Carousel/CarouselItem";
 import CarouselArrow from "./components/Carousel/CarouselArrow";
 import CarouselIndicator from "./components/Carousel/CarouselIndicator";
-import { CAROUSEL_ITEMS } from "./components/Carousel/carouselItems";
-
+import { CAROUSEL_ITEMS } from "../carouselItems";
 
 export default function Home() {  
   const context = useDocusaurusContext();
@@ -52,7 +51,10 @@ export default function Home() {
           />
         }}
       >
-        {CAROUSEL_ITEMS.map((carouselItem, i) => <CarouselItem key={i} {...carouselItem} />)}
+        {CAROUSEL_ITEMS.map((carouselItem, i) => {
+          console.log(i, carouselItem)
+          return <CarouselItem key={i} {...carouselItem} />
+        })}
       </Carousel>
 
       <HomeSection

@@ -20,12 +20,12 @@ export default function CarouselArrow(props) {
     icon = <FontAwesomeIcon icon={faAngleRight} />
   }
   
-  return props.hasNext && <button 
+  return props.hasNext ? <button 
     className={classNames(styles.carouselArrow, styles[props.arrowDirection])} 
     type="button" 
     onClick={props.onClickHandler} 
     title={props.label}
   >
     {icon}
-  </button>
+  </button> : null
 }
