@@ -16,7 +16,7 @@ module.exports = {
     },
     colorMode: {
       defaultMode: 'light', // "light" | "dark"
-      disableSwitch: true, // Hides the switch in the navbar
+      disableSwitch: false, // Hides the switch in the navbar
     },
     navbar: {
       title: 'Research Computing',
@@ -162,6 +162,13 @@ module.exports = {
   ],
   customFields: {
     Graphics: {
+      SPLASH_LOGOS: [
+        {
+          link: 'https://github.com/UWrc',
+          caption: 'UWrc Github',
+          image: 'img/splashlogos/github.svg'
+        }
+      ],
       INTERFACES: [
         {
           caption: 'Terminal',
