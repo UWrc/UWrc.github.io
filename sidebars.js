@@ -5,12 +5,10 @@ module.exports = {
       'join-group',
       'account-creation',
       'account-activation',
-      'first-job'
     ],
     'Storage': [
       'storage/data',
-      'storage/klone',
-      'storage/mox',
+      'storage/gscratch',
       'storage/transfer',
       'storage/archive',
     ],

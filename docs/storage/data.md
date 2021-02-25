@@ -19,10 +19,14 @@ While our storage systems have a track record of stability, it is important to n
 
 ## 3-2-1 Policy
 
-Your data is precious, in some cases completely irreplacable. However, we have a lot of 
+Your data is precious, in some cases completely irreplacable. The research computing team encourages the use of the widely accepted 3-2-1 backup strategy.
 
 :::tip
+3-2-1 is not a HYAK thing, it's a general IT best practice [[Backblaze](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/)] [[Acronis](https://www.acronis.com/en-us/articles/backup-rule/)] [[Networkworld](https://www.networkworld.com/article/3527303/for-secure-data-backup-here-s-how-to-do-the-3-2-1-rule-right.html)].
+:::
 
-3-2-1 is not a HYAK thing, it's a general IT best practice.
+The 3-2-1 backup policy suggests **3 copies** of your data on **2 different types of storage media** of which **1 copy is off-site**. If you use both `gscratch` and `LOLO` then you are already adhering to this best practice, which is why it was designed this way. One copy resides in `gscratch` on our parallel file system and if you archive your data to LOLO, two additional copies are created (it does automatic duplication with one copy on UW-Seattle campus and another copy in eastern Washington). `gscratch` consists of spinning disk hard drives as a storage medium while LOLO is a tape-based storage medium. `LOLO` does one of its automatic duplication copies to a  geographically remote data center in eastern Washington.
 
+:::caution
+You have to copy your data to LOLO to be 3-2-1 compliant or to use your own archive solution, it does not happen automatically.
 :::
