@@ -25,7 +25,7 @@ Ideally you only keep personal code bases or smaller data sets here. This quota 
 
 ## Group or Lab Directories
 
-If you run the `groups` command on `mox` you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder.
+If you run the `groups` command you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder.
 
 :::caution
 On MOX the group names have a hyak prefix. For example, `stf` will appear as `hyak-stf`.
