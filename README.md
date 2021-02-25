@@ -39,3 +39,10 @@ This last stage is for manual deployment to the master branch. It is not require
 ```bash
 $ GIT_USER=UWrc yarn deploy
 ```
+
+### Code Contribution
+
+1. Create a local branch using `git checkout -b feature/feature_name`. Try to be specific with naming and use either `bugfix` or `feature` to help guide the team in what they are looking at. 
+2. Make your commits then push the branch to the central repository on Github (e.g., `git push origin mybranch`).
+3. Use the Github website to manually create a pull request (PR) and document in more detail your changes. Tag a specific team member to review, if appropriate.
+4. Once all necessary reviewing parties (minimum 1) review your code, perform a final review and either merge your code interactively through Github or using the Git CLI if you feel an interactive rebase is necessary for cleanup.
