@@ -53,7 +53,7 @@ export default function team() {
           <div class="avatar__intro">
             <h4 class="avatar__name">Matt</h4>
             <small class="avatar__subtitle">
-              Sr. Engineer
+              Sr. HPC Systems Engineer
             </small>
           </div>
         </div>
@@ -67,6 +67,21 @@ export default function team() {
 
     <div class="row">
 
+    <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
+            src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">Ryan</h4>
+            <small class="avatar__subtitle">
+              HPC Systems Engineer
+            </small>
+          </div>
+        </div>
+      </div>
+
       <div class="col">
         <div class="avatar avatar--vertical">
           <img
@@ -77,21 +92,6 @@ export default function team() {
             <h4 class="avatar__name">Jerry</h4>
             <small class="avatar__subtitle">
               Intern
-            </small>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="avatar avatar--vertical">
-          <img
-            class="avatar__photo avatar__photo--xl"
-            src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
-          />
-          <div class="avatar__intro">
-            <h4 class="avatar__name">You?</h4>
-            <small class="avatar__subtitle">
-              We're hiring!
             </small>
           </div>
         </div>
