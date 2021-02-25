@@ -8,8 +8,7 @@ module.exports = {
     ],
     'Storage': [
       'storage/data',
-      'storage/klone',
-      'storage/mox',
+      'storage/gscratch',
       'storage/transfer',
       'storage/archive',
     ],
