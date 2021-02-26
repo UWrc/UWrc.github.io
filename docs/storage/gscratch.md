@@ -1,6 +1,6 @@
 ---
 id: gscratch
-title: Storage on gscratch
+title: Storage on HYAK
 ---
 
 Storage mounted on either the 3rd generation HYAK cluster `klone` or the 2nd generation HYAK cluster `mox` is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [storage introduction page](data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy.
