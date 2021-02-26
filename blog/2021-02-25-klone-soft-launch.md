@@ -22,7 +22,7 @@ The UW research computing team celebrates the soft launch of project KLONE, the 
 There will be weekly maintenance days on Tuesday during the soft launch period after which we will move back to our regular cadence of monthly maintenance windows.
 :::
 
-The user documentation [[link](../docs/)] has been updated to reflect the changes and new features of KLONE but this will be an continuous process.
+The user documentation [[link](../docs/)] has been updated to reflect the changes and new features of KLONE but this will be an ongoing process.
 
 #### Compute
 - Soft launch with 1,920 compute cores over 48 nodes:
