@@ -22,7 +22,7 @@ The UW research computing team celebrates the soft launch of project KLONE, the 
 There will be weekly maintenance days on Tuesday during the soft launch period after which we will move back to our regular cadence of monthly maintenance windows.
 :::
 
-The user documentation [[link](../docs/)] has been updated to reflect the changes and new features of KLONE but this will be an ongoing process.
+The user documentation [[link](/docs/)] has been updated to reflect the changes and new features of KLONE but this will be an ongoing process.
 
 #### Compute
 - Soft launch with 1,920 compute cores over 48 nodes:
@@ -44,6 +44,6 @@ The user documentation [[link](../docs/)] has been updated to reflect the change
 - We provide the basic compilers (e.g., GNU, Intel) as modules.
 - The HYAK team is encouraging a container first world (i.e., use Singularity).
 
-### February 28, 2021
+### March 1, 2021
 
-Update expected in the evening.
+Next update expected in the evening on this date.
