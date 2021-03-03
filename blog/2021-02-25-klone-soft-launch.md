@@ -44,6 +44,19 @@ The user documentation [[link](/docs/)] has been updated to reflect the changes 
 - We provide the basic compilers (e.g., GNU, Intel) as modules.
 - The HYAK team is encouraging a container first world (i.e., use Singularity).
 
-### March 1, 2021
+### March 3, 2021
+
+The updated total is **3,840 cores** and **96 nodes** on klone.
+
+#### Compute
+- Compute has doubled by adding another rack to klone, an additional 1,920 compute cores over 48 nodes: 
+  - 44 x `mem1` nodes (192GB of memory each) in the `compute` partition,
+  - 2 x `mem2` nodes (384GB of memory each) in the `compute-bigmem` partition,
+  - 2 x `mem3` nodes (768GB of memory each) in the `compute-hugemem` partition.
+
+#### Software
+- We created a module for `cmake`.
+
+### March 6, 2021
 
 Next update expected in the evening on this date.
