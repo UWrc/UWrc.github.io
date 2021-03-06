@@ -62,6 +62,9 @@ The updated total is **3,840 cores** and **96 nodes** on klone.
 #### Storage
 - Implemented `usage_report.txt` files in the base folder of `/gscratch/yourlab/` that is updated once an hour to reflect both your block quota and inode capacity usage. This is similar to the `gscratch` experience on the MOX cluster.
 
+#### Website
+- We migrated our site from `https://UWrc.github.io` to its new home at `https://hyak.uw.edu`! Update your bookmarks and tell your friends.
+
 ### March 9, 2021
 
 Next update expected in the evening on this date.
