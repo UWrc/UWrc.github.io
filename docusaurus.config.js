@@ -1,7 +1,7 @@
 module.exports = {
   title: 'HYAK',
   tagline: 'Powering discoveries in every field',
-  url: 'https://uwrc.github.io',
+  url: 'https://hyak.uw.edu',
   baseUrl: '/',
   favicon: 'img/logos/uw_icon.png',
   organizationName: 'UWrc', // Github org/user name
