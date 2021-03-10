@@ -26,7 +26,7 @@ The user documentation [[link](/docs/)] has been updated to reflect the changes 
 
 #### Compute
 - Soft launch with 1,920 compute cores over 48 nodes:
-  - 27 x `mem1` nodes (192GB of memory each) in the `compute` partition,
+  - 28 x `mem1` nodes (192GB of memory each) in the `compute` partition,
   - 4 x `mem2` nodes (384GB of memory each) in the `compute-bigmem` partition,
   - 16 x `mem3` nodes (768GB of memory each) in the `compute-hugemem` partition.
 - `build` nodes no longer exist on klone as they did on mox. All instances have the potential to be interactive and all have internet routing by default (even non-interactive jobs).
@@ -63,8 +63,18 @@ The updated total is **3,840 cores** and **96 nodes** on klone.
 - Implemented `usage_report.txt` files in the base folder of `/gscratch/yourlab/` that is updated once an hour to reflect both your block quota and inode capacity usage. This is similar to the `gscratch` experience on the MOX cluster.
 
 #### Website
-- We migrated our site from `https://UWrc.github.io` to its new home at `https://hyak.uw.edu`! Update your bookmarks and tell your friends.
+- We migrated our site from <a href="https://UWrc.github.io">`https://UWrc.github.io`</a> to its new home at <a href="https://hyak.uw.edu">`https://hyak.uw.edu`</a>.
 
 ### March 9, 2021
+
+#### Storage
+- Snapshots are here! We are piloting once an hour for 24 hours for every lab storage folder under `/gscratch/`. Check out the updated documentation [here](/docs/storage/gscratch#group-or-lab-directories) on how to access past snapshots.
+
+#### Software
+- We created more LMOD software modules: 
+  - Matlab R2020b [[docs](/docs/tools/matlab)]
+  - OpenMPI-4.1.0
+
+### March 12, 2021
 
 Next update expected in the evening on this date.

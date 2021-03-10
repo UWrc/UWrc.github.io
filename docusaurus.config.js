@@ -25,11 +25,13 @@ module.exports = {
         src: 'img/logos/uw_icon.png',
       },
       items: [
+        /*
         {
           to: '/',
           label: 'Home',
           position: 'right',
         },
+        */
         {
           to: '/systems',
           label: 'Systems',
@@ -56,10 +58,12 @@ module.exports = {
           label: 'About', 
           position: 'right',
           items: [
+            /*
             {
               label: 'Supporting You',
               to: '/about',
             },
+            */
             {
               label: 'Our Team',
               to: '/team',

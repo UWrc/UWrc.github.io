@@ -20,9 +20,10 @@ module.exports = {
       'tools/modules',
       'tools/compilers',
       'tools/containers',
-      'tools/python',
       'tools/r',
+      'tools/python',
       'tools/jupyter',
+      'tools/matlab',
     ],
     'Contribution Guides': [
       'contribute/markdown-guide',
