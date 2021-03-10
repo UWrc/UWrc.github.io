@@ -106,7 +106,7 @@ export default function systems() {
               <td align="right">Service</td><td>January 2021 — Present</td>
             </tr>
             <tr>
-              <td align="right">Compute</td><td>18,376 CPU cores [Ice Lake]</td>
+              <td align="right">Compute</td><td>18,376 CPU cores [Cascade Lake, Ice Lake]</td>
             </tr>
             <tr>
               <td align="right">Accelerators</td><td>112 GPU cards [Turing, Ampere]</td>

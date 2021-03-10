@@ -13,7 +13,6 @@ export default function Pricing() {
     <div class="row">
       <br />
     </div>
-    <Splash />
     <Tabs
       className="unique-tabs"
       defaultValue="apple"
