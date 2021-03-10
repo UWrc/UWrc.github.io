@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[78],{145:function(p){p.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"gpu","name":"gpu","count":2,"permalink":"/blog/tags/gpu"}')}}]);
