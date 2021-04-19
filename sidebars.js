@@ -6,6 +6,11 @@ module.exports = {
       'account-creation',
       'account-activation',
     ],
+    'Setup': [
+      'setup/index',
+      'setup/ssh',
+      'setup/vscode',
+    ],
     'Storage': [
       'storage/data',
       'storage/gscratch',
