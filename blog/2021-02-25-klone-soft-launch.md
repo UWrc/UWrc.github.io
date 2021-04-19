@@ -10,10 +10,6 @@ tags: [klone, hyak, hpc, supercomputer, launch, features]
 
 [pytorch-cuda10]: /img/blog/pytorch-cuda10.png 'Pytorch install instructions for pip with CUDA10'
 
-:::info
-This page will be updated in the evening once every few days starting from soft launch on February 25, 2021 through the full launch to the UW community. Please check back regularly and scroll to the bottom (or click the latest date on the right) for the latest updates.
-:::
-
 ### February 25, 2021
 
 The UW research computing team celebrates the soft launch of project KLONE, the 3rd generation HYAK supercomputer. Welcome to those researchers invited to participate in the early access program 🥳 🎉
@@ -77,4 +73,12 @@ The updated total is **3,840 cores** and **96 nodes** on klone.
 
 ### March 12, 2021
 
-Next update expected in the evening on this date.
+- LMOD software modules:
+  - Intel has bundled their software suite (e.g., compiler, MPI) as oneCLI and we created this module (i.e., `module load intel/oneCLI`).
+  - There is now a "contrib" framework for groups to store their shared codes separately from their `/gscratch/labname/` data. You can get 100GB of storage to compile codes at `/sw/contrib/labname-src/` and then put your LMOD module file in `/sw/contrib/modulefiles/labname/`. Your module would appear when anyone runs `module avail`. This is created upon request so if you'd like to opt-in your group please let us know.
+
+### April 13, 2021
+
+Things have been going steady the past week and changes are coming less frequently. We are now increasing time between maintenance periods on klone from weekly on Tuesdays to monthly and aligning it with the mox maintenance as the 2nd Tuesday of every month.
+
+That wraps up our klone soft launch blog updates here, other updates will appear on our HYAK users mailing list. Don't forget to subscribe, instructions on [this page](/docs/account-activation) at the bottom.

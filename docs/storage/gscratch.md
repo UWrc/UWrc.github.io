@@ -33,7 +33,7 @@ Ideally you only keep personal code bases or smaller data sets here. This quota 
 
 If you run the `groups` command you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder. Please note, on MOX the group names have a hyak prefix. For example, `stf` will appear as `hyak-stf`.
 
-Your lab gets 1 TB per node that your group has contributed to `mox` (or 4 TB per node in the case of a GPU node).
+Your lab gets 1 TB per node that your group has contributed to KLONE (or 4 TB per node in the case of a GPU node).
 
 :::tip
 Your lab quota can be increased for $10 / TB / month.
@@ -70,8 +70,8 @@ $
 
 ## Scrubbed
 
-- Free to use but files auto-deleted past 21 days.
-- Slower than `gscratch`.
+- Free to use but files auto-deleted beyond 21 days.
+- Slower than `gscratch` lab directories.
 - No snapshots.
 
 If you need space but only temporarily (i.e., less than 3 weeks) then you can make use of the scrubbed folder. The scrubbed folder lives at `/gscratch/scrubbed/` and anything underneath this folder is a free-for-all space. You can create a folder for yourself and do whatever you need subject to system constraints but note there is a purge policy where any file not accessed for 21 days (i.e., 3 weeks) is automatically deleted. This is to provide a useful (and free) flex capacity for any research group that needs it and can work within these policy restraints. However, we encourage users who need a more persistent storage location to purchase `gscratch`.
