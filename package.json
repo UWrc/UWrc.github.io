@@ -18,6 +18,7 @@
     "classnames": "^2.2.6",
     "docusaurus-lunr-search": "^2.1.7",
     "framer-motion": "^2.6.15",
+    "is-svg": "^4.2.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-bootstrap": "^1.4.0",
@@ -27,7 +28,8 @@
     "react-reel": "^1.2.3",
     "react-responsive-carousel": "^3.2.11",
     "react-scroll-percentage": "^4.2.0",
-    "react-typist": "^2.0.5"
+    "react-typist": "^2.0.5",
+    "ssri": "^8.0.1"
   },
   "browserslist": {
     "production": [
