@@ -1,5 +1,5 @@
 ---
-id: pytorch-cuda11
+slug: pytorch-cuda11
 title: Pytorch and CUDA11
 author: Nam Pho
 author_title: Director for Research Computing

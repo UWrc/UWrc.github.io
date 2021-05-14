@@ -1,5 +1,5 @@
 ---
-id: gromacs-gpu
+slug: gromacs-gpu
 title: gromacs on GPUs
 author: Nam Pho
 author_title: Director for Research Computing
