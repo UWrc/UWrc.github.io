@@ -3,9 +3,13 @@ id: containers
 title: Singularity and Docker
 ---
 
-[singularity-hub]: /img/docs/singularity-hub.png 'Singularity Hub'
+[sylabs]: /img/docs/sylabs-cloud.png 'Sylabs Cloud'
 
 [docker-hub]: /img/docs/docker-hub.png 'Docker Hub'
+
+[ngc]: /img/docs/ngc-catalog.png 'NGC'
+
+[ngc-pytorch]: /img/docs/ngc-pytorch.png 'NGC Pytorch'
 
 Have you ever found yourself saying:
 
@@ -35,10 +39,10 @@ $
 
 Let's say you want a newer version AND you also want it running on Ubuntu for some reason. Here we'll walk you through installing the latest `git` binary using `apt` repositories for Ubuntu 16.04 [[www](https://releases.ubuntu.com/16.04/)] or "Xenial Xerus".
 
-1. Get a build node using some variant of the below command.
+1. Get an interactive session using some variant of the below command.
 
 ```bash
-srun -p build --time=1:00:00 -n 2 --mem=15G --pty $0
+srun -A mygroup -p compute --time=1:00:00 -n 2 --mem=10G --pty $0
 ```
 
 2. Load the Singularity module.
@@ -58,7 +62,7 @@ From: ubuntu:16.04
 
 ```
 
-4. Built a Singularity container from its definition file. The generated SIF file is your portable container.
+4. Built a Singularity container from its definition file. The generated SIF file is your portable container. Note the definition file should be executable or you can switch the reference to file to `./tools.def` if you're in the same working directory or provide the absolute path.
 
 ```bash
 singularity build --fakeroot tools.sif tools.def
@@ -76,18 +80,50 @@ $
 
 Notice the `git` version here is newer than the original we started with. Success!
 
-### Singularity Hub
+## App Stores
 
-![singularity-hub]
+If you followed the tutorial above you should be able to install anything you want but why re-create the wheel? There is a large developer community out there that maintains a majority of the most common scientific applications.
 
-The biggest collection of native Singularity images is at Singularity Hub [[www](https://singularity-hub.org)].
+### Sylabs.io Cloud Library
 
-## Docker
+![sylabs]
 
-asdf
+The largest collection of native Singularity containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Singularity and provides the native container format.
 
 ### Docker Hub
 
 ![docker-hub]
 
 The biggest collection of Docker images is from Docker Hub [[www](https://hub.docker.com)].
+
+Let's say Docker Hub tells you the pull command for the container you want is `docker pull gcc:11.1.0-bullseye`. To have Singularity grab this Docker container and convert it to a Singularity container you'd modify the command to be `singularity pull docker://gcc:11.1.0-bullseye`.
+
+### NVIDIA GPU Cloud (NGC)
+
+![ngc]
+
+A container registry that specializes in common GPU accelerated applications or GPU software development tools is provided by NVIDIA called the NVIDIA GPU Cloud (NGC) [[www](https://ngc.nvidia.com/catalog/containers)]. For example, you might want to use a PyTorch container optimized for NVIDIA GPUs as seen below.
+
+![ngc-pytorch]
+
+Depending on the NGC container, it might have directions on the exact pull command for Singularity. If it does not work be sure to prepend their pull location with `docker://` since these are native Docker containers that need to be converted to Singularity.
+
+The example above provides a Docker pull command for PyTorch but in this case you'd modify it similarly as if you got it from Docker Hub from `docker pull nvcr.io/nvidia/pytorch:21.05-py3` to `singularity pull docker://nvcr.io/nvidia/pytorch:21.05-py3`.
+
+### NGC API Keys
+
+In rare occasions a container in the NGC app store is going to require that you have an API. This is the only reason you'd need to register for a user account with NGC. Once you have an NGC account and are logged in, at the top right the pull down menu select "Setup" and there's an option to "Get API Key". Save that string of text.
+
+You only have to register your API key once but load the ngc module (i.e., `module load ngc`) and run `ngc config set` which will prompt you for your API key. It's fine to select "ascii" as an option. Your API key will be stored under a `.ngc/config` file in your home directory.
+
+```shell-session terminal=true
+$ ngc config current
++-------------+----------------------------------------------------------+--------------------+
+| key         | value                                                    | source             |
++-------------+----------------------------------------------------------+--------------------+
+| apikey      | ******************************************************** | user settings file |
+|             | ************************YTc3                             |                    |
+| format_type | ascii                                                    | user settings file |
++-------------+----------------------------------------------------------+--------------------+
+$
+```

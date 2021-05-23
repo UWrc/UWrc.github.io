@@ -1,5 +1,5 @@
 ---
-id: klone
+slug: klone
 title: Klone Soft Launch
 author: Nam Pho
 author_title: Director for Research Computing
