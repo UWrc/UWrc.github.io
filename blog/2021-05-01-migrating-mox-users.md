@@ -26,6 +26,7 @@ If you were previously a proficient MOX user and now find yourself on KLONE, wha
 * Scrubbed exists on KLONE just as it did on MOX at `/gscratch/scrubbed` this is a free-for-all space on both clusters where files are automatically deleted after 21 days. 
 * Some new benefits of the KLONE storage compared to MOX:
   * **There are snapshots for gscratch!** Look inside the `/gscratch/mylab/.snapshots` folder for a copy of your lab folder once an hour, every hour, for 24 hours. This is not a backup copy nor a replacement for version management (e.g., `git`) but useful for retrieving recent versions or something accidentally deleted.
+  * **More storage!** Previously you received 500GB or 0.5TB of gscratch quota per node contributed to MOX. Now on KLONE we've doubled your associated storage quota! For example, 2 nodes on MOX would mean 1TB of gscratch but 2 nodes on KLONE now means 2TB of gscratch.
   * **It's faster!** We've had reports of performance that's averaging a 30% speed up all else being equal, nothing you need to do aside from use KLONE instead of MOX.
   * **It's faster than fast!** While KLONE storage is faster than MOX storage overall, gscratch on KLONE is further turbo charged with a NVMe flash based tier. NVMe flash is among the fastest storage mediums you can get and further differentiating benefit if you use gscratch vs scrubbed on KLONE.
 
