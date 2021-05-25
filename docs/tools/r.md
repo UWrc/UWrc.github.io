@@ -194,4 +194,52 @@ Rstudio is an integrated development environment (IDE) for R. It's a front-end i
 
 Rstudio will run in a Singularity container on a compute node then be directed through the login node back to your local computer via port forwarding.
 
-TODO
+First you need to get the Rocker Rstudio container. 
+1. Get an interactive session (e.g., `srun`). 
+2. Load Singularity (i.e., `module load singularity`).
+3. Pull a version of Rocker Rstudio (e.g., `singularity pull docker://rocker/rstudio:4.1.0`).
+
+You will need to get our Github gist [[www](https://gist.github.com/npho/7284cf9f3f9fb2ea816072724d80909b)] which was adopted for KLONE from the tutorial by Rocker [[www](https://www.rocker-project.org/use/singularity/)]. View this as "Raw" then download the text to your home directory. I set this as a `rstudio-server.job` file. You will need to modify a few things:
+1. The `GSCRATCH` path, I set it to my scrubbed directory on KLONE but if you have a persitent lab folder you should use that instead.
+2. Set your `R_LIBS_USER` path, I set it to my scrubbed directory on KLONE as well. Note that if you have a `R` folder in your home directory then it will supercede this other path to install R packages. Your home directory is limited and can't be expanded so you will almost certainly fill it up.
+3. Set the path to the Rstudio container in the script.
+
+```shell-session terminal=true
+npho@klone-login01:~ $ sbatch rstudio-server.job
+Submitted batch job 177885
+npho@klone-login01:~ $ 
+```
+
+If you're successful a file named `rstudio-server.job.177885` will pop up in your home directory. The suffix matches the job number you see. Check out its contents like below for instructions on how to connect to your Rstudio session.
+
+```
+npho@klone-login01:~ $ cat rstudio-server.job.177885
+1. SSH tunnel from your workstation using the following command:
+
+   ssh -N -L 8787:n3164:47101 npho@klone.hyak.uw.edu
+
+   and point your web browser to http://localhost:8787
+
+2. log in to RStudio Server using the following credentials:
+
+   user: npho
+   password: 410lzxMwV9EObv7aDEjm
+
+When done using RStudio Server, terminate the job by:
+
+1. Exit the RStudio Session ("power" button in the top right corner of the RStudio window)
+2. Issue the following command on the login node:
+
+      scancel -f 177885
+npho@klone-login01:~ $ 
+```
+
+In a new terminal prompt on your laptop copy and paste the other SSH command from the SLURM output. You will get your 2FA prompt and after logging in the system will appear to hang. It's fine, leave this window open and it is your connection to the Rstudio session running on KLONE. If you are disconnected and reconnect you can resume your Rstudio session. 
+
+To close out the Rstudio session it will either hit the job runtime limit and self-terminate or you can (preferably) manually close it out using the `scancel` command provided with the specific jobID. If this file is accidentally deleted you can always see all your running jobs with a `sacct -X` command on your active KLONE login prompt to get the jobID.
+
+The credentials are randomly generated for each `sbatch` job but once you log in you should see an environment similar to that as below. Both your KLONE home directory and gscratch folders will be mounted.
+
+[rstudio]: /img/docs/rstudio-singularity.png 'rstudio'
+
+![rstudio]
