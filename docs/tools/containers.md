@@ -9,6 +9,8 @@ title: Singularity and Docker
 
 [ngc]: /img/docs/ngc-catalog.png 'NGC'
 
+[biocontainer]: /img/docs/biocontainer.png 'biocontainer'
+
 [ngc-pytorch]: /img/docs/ngc-pytorch.png 'NGC Pytorch'
 
 Have you ever found yourself saying:
@@ -97,6 +99,12 @@ The largest collection of native Singularity containers can be found at the Syla
 The biggest collection of Docker images is from Docker Hub [[www](https://hub.docker.com)].
 
 Let's say Docker Hub tells you the pull command for the container you want is `docker pull gcc:11.1.0-bullseye`. To have Singularity grab this Docker container and convert it to a Singularity container you'd modify the command to be `singularity pull docker://gcc:11.1.0-bullseye`.
+
+### Biocontainers.pro
+
+![biocontainer]
+
+A bioinformatics focused set of Singularity containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Singularity) Docker containers as well as native Singularity containers.
 
 ### NVIDIA GPU Cloud (NGC)
 
