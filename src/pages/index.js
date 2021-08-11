@@ -81,10 +81,6 @@ export default function Home() {
         header={PageContent.HomePage.BuiltWith.HEADER}
         imgs={siteConfig.customFields.Graphics.BUILT_WITH}
       />
-      <HomeSection
-        header={PageContent.HomePage.PoweredBy.HEADER}
-        imgs={siteConfig.customFields.Graphics.POWERED_BY}
-      />
     </Layout>
   );
 }

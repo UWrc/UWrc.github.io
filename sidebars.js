@@ -18,6 +18,7 @@ module.exports = {
       'storage/archive',
     ],
     'Compute': [
+      'compute/slurm',
       'compute/scheduling-jobs',
     ],
     'Tools & Software': [
