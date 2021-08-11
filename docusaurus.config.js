@@ -254,32 +254,18 @@ module.exports = {
           image: 'img/software/linux.svg',
         },
         {
-          caption: 'Kubernetes',
-          image: 'img/software/kubernetes.svg',
-        },
-        {
           caption: 'Slurm',
           image: 'img/software/slurm.svg',
         },
+        {
+          caption: 'OpenHPC',
+          image: 'img/software/openhpc.png',
+        },
+        {
+          caption: 'Kubernetes',
+          image: 'img/software/kubernetes.svg',
+        },
       ],
-      POWERED_BY: [
-        {
-          caption: 'Lenovo',
-          image: 'img/hardware/lenovo.svg',
-        },
-        {
-          caption: 'Intel',
-          image: 'img/hardware/intel.svg',
-        },
-        {
-          caption: 'NVIDIA',
-          image: 'img/hardware/nvidia.svg',
-        },
-        {
-          caption: 'Dell Technologies',
-          image: 'img/hardware/dell.svg',
-        },
-      ]
     }
   }
 };

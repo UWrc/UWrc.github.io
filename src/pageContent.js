@@ -99,9 +99,6 @@ export const HomePage = {
     ]
   },
   BuiltWith: {
-    HEADER: <h2>Our tech stack</h2>
-  },
-  PoweredBy: {
     HEADER: <h2>Powered by</h2>
-  }
+  },
 }

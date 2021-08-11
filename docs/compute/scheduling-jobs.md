@@ -4,44 +4,52 @@ title: Scheduling Jobs
 sidebar-label: Scheduling Jobs
 ---
 
-`mox` uses the [Slurm](https://slurm.schedmd.com/overview.html) job scheduler.  With `<net_id>` as your UW NetID, login with `ssh <net_id>@mox.hyak.edu` to gain access to the `mox` login node.  The login node is used only for login and job submission.  The computational work itself is done on a compute or build node.
+`KLONE` uses the [SLURM](https://slurm.schedmd.com/overview.html) job scheduler. When you first ssh into KLONE (e.g., `klone.hyak.uw.edu`) you land on one of the two login nodes (i.e., `klone1`, `klone2`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should not use login nodes for heavy compute and automated mechanisms exist to monitor and enforce violations. The tool used is "arbiter2" and you will receive an email for each offending process [(Gardner, Migacz, and Haymore 2019)](#ref_arbiter).
 
-## Interactive Nodes
+## Compute Resources
 
-There are two types of interactive nodes.  Compute nodes run computations but cannot connect to the internet.  Build nodes are compute nodes that can connect to the Internet to get files and install packages from outside the `mox` ecosystem.
+The SLURM scheduler has two high-level concepts you need to know, [accounts](#accounts) and [partitions](#partitions).
+### Accounts
 
-### Obtaining Interactive Nodes
+With the `hyakalloc` you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
 
-To get an interactive compute node with `<size>` GB of memory in your group partition called `<group_name>` for `<time>` hours, use:
+### Partitions
+
+If you run `sinfo` you can see all the partitions available. Each partition represents a class of node from the standard `compute` partition to those with high-memory or for different types of GPUs.
+
+## Job Types
+
+There are a few popular types of jobs you could submit:
+* [interactive](#interactive-jobs) where you and test out your workflows live,
+* [batch](#batch-jobs) which are unattended (you get an email when completed), and
+* [recurring](#null) or "CRON-like" processes that happen on a regular basis.
+
+### SLURM Arguments
+
+These are the common and recommended arguments suggested at a minimum to get a job in any form.
+
+| Arguments | Command Flags | Notes |
+| - | - | - |
+| Account | `-A` or `--account` | What lab are you part of? If you run the `groups` command you can see what groups (usually labs) you're a member of, these are associated with resource limits on the cluster. See the [accounts](#accounts) section for additional information. |
+| Partition | `-p` or `--partition` | What resource partition are you interested in using? This could be anything you see when you run `sinfo` as each partition corresponds to a class of nodes (e.g., high memory, GPU). See the [partitions](#partitions) section for additional information. |
+| Nodes | `-N` or `--nodes` | How many nodes are these resources spread across? In the overwhelming number of cases this is 1 (for a single node) but more sophisticated multi-node jobs could be run if your code supports it. |
+| Cores | `-c` or `--cpus-per-task` | How many compute cores do you need? Not all codes can make use of multiple cores and if they do, the performance of the code is not always linear with the resources requested. If in doubt consider contacting the research computing team to assist in this optimization. |
+| Memory | `--mem` | How much memory do you need for this job? This is in the format `size[units]` were size is a number and units are either `M`, `G`, or `T` for megabyte, gigabyte, and terabyte respectively. Megabyte is the default unit if none is provided. |
+| Time | `-t` or `--time` | What's the maximum runtime for this job? Common acceptable time formats include `hours:minutes:seconds`, `days-hours`, and `minutes`. |
+
+### Interactive Jobs
+
+Resources for interactive jobs are attained either using `srun` or `salloc`. To get resources on a compute node interactively consider the example below.
+
 ```shell
-srun -p <group_name> --time=<time> --mem=<size>G --pty /bin/bash
-```
-Common acceptable time formats include `hours:minutes:seconds`, `days-hours`, and `minutes`.
-
-Example:
-```shell-session terminal=true
-[linj66@mox2 ~]$ srun -p stf --time=1:00:00 --mem=20G --pty /bin/bash
-[linj66@n2148 ~]$ 
+srun -A mylab -p compute -N 1 -c 4 --mem=10G --time=2:30:00 --pty bash
 ```
 
----
+In this case you are requesting a slice of the standard compute node class that your group `mylab` contributed to the cluster. You are asking for 4 compute cores with 10GB of memory for 2 hours and 30 minutes spread across 1 node (single machine). Your method of interaction is the bash shell.
 
-To get an interactive compute node with `<num_cores>` cores, use:
-```shell
-srun -p <group_name> -A <group_name> --nodes=1 \
---ntasks-per-node=<num_cores> --time=<time> \
---mem=<size>G --pty /bin/bash
-```
-
----
-
-To get multiple interactive compute nodes with `<num_nodes>` as the number of nodes and `<cores_per_node>` as the number of cores, use:
-```shell
-srun -p <group_name> -A <group_name> --nodes=<num_nodes> \
---ntasks-per-node=<cores_per_node> --time=<time> \
---mem=<size>G --pty /bin/bash
-```
-When this command runs, you will automatically enter into a session in one of the allocated nodes.  To view the names of all your allocated nodes, use `scontrol show hostnames`.
+:::note
+If `-N` or `--nodes` is >1 you are automatically placed into a session of one of the allocated nodes.  To view the names of the remainder of your allocated nodes use `scontrol show hostnames`.
+:::
 
 :::important
 If you are using an interactive node to run a parallel application such as Python multiprocessing, MPI, OpenMP etc. then the number given for the `--ntasks-per-node` option must match the number of processes used by your application.
@@ -61,24 +69,6 @@ srun -p <group_name>-int -A <group_name> --time=<time> --mem=<size>G --pty /bin/
 
 For more details, read the [`srun` man page](https://slurm.schedmd.com/srun.html).
 
-### Build Nodes
-
-Build nodes are allocated from the `build` group partition.  To obtain a build node, execute `srun` with the option `-p build`.
-
-### Specifying Memory Size
-
-It is important to use the `--mem` option to specify the memory allocation; otherwise the Slurm scheduler limits the memory allocation to a default value which is usually quite low.
-
-The value given to `--mem` should be smaller than the memory of the node as the operating system needs some.
-- For 64GB nodes, use `--mem=58G`
-- For 128GB nodes, use `--mem=120G`
-- For 192GB nodes, use `--mem=185G`
-- For 256GB nodes, use `--mem=248G`
-- For 384GB nodes, use `--mem=374G`
-- For 512GB nodes, use `--mem=500G`
-- For 768GB nodes, use `--mem=752G`
-- For the `knl` nodes, use `--mem=200G`
-
 ### Slurm Environment Variables
 
 When a job scheduled by Slurm begins, it needs to about how it was scheduled, what its working directory is, who submitted the job, the number of nodes and cores allocated to it, etc.  This information is passed to Slurm via environment variables.  Additionally, these environment variables are also used as default values by programs like `mpirun`.  To view a node's Slurm environment variables, use `export | grep SLURM`.
@@ -90,48 +80,30 @@ A comprehensive list of the environment variables Slurm sets for each job can be
 
 Below is a slurm script template.  Submit a batch job from the `mox` login node by calling `sbatch <script_name>.slurm`.
 ```shell title="<script_name>.slurm" terminal=true
-!/bin/bash
+#!/bin/bash
 
-# JOB NAME
-SBATCH --job-name=<your_job_name>
+#SBATCH --job-name=<name>
+#SBATCH --mail-type=<status>
+#SBATCH --mail-user=<email>
 
-# ALLOCATION DEFINITION
-# The account and partition options should be the same
-# except in a few cases (e.g. ckpt queue, genpool queue)
-SBATCH --account=<group_name>
-SBATCH --partition=<group_name>
+#SBATCH --account=<lab>
+#SBATCH --partition=<node_type>
+#SBATCH --nodes=<num_nodes>
+#SBATCH --ntasks-per-node=<cores_per_node>
+#SBATCH --mem=<size[unit]>
+#SBATCH --gpus=<type:quantity> 
+#SBATCH --time=<time> # Max runtime in DD-HH:MM:SS format.
 
-# RESOURCES
-SBATCH --nodes=<num_nodes>  # total number of nodes allocated
-SBATCH --ntasks-per-node=<cores_per_node>  # cores per node
+#SBATCH --chdir=<working directory>
+#SBATCH --export=all
+#SBATCH --output=<file> # where STDOUT goes
+#SBATCH --error=<file> # where STDERR goes
 
-# WALL TIME
-# Do not specify a wall time significantly more than your job needs
-# Common acceptable time formats:
-#    hours:minutes:seconds e.g. 3:00:00 for 3 hours
-#    minutes
-#    days-hours
-SBATCH --time=<time>
+# Modules to use (optional).
+<e.g., module load singularity>
 
-# MEMORY PER NODE
-# See above "Specifying Memory Size" for options
-SBATCH --mem=<size>G  # e.g. --mem=100G for 100 GB of memory
-
-# WORKING DIRECTORY ENTRYPOINT
-# Specify the working directory for this job
-SBATCH --chdir=/gscratch/<group_name>/<net_id>/path/to/dir
-
-# Turn on email notifications
-SBATCH --mail-type=ALL
-SBATCH --mail-user=<your_email>
-
-# Export all environment variables to the batch job session
-SBATCH --export=all
-
-# Run the commands to run your program here
-# e.g. load modules, copy input.output files, run program, etc.
-<commands_to_run_your_program>
-
+# Your programs to run.
+<my_programs>
 ```
 
 ### Multiple Node Batch Jobs
@@ -227,3 +199,8 @@ All of these man pages can also be viewed on `mox` by running `man <command>`.
 - [`sreport`](https://slurm.schedmd.com/sreport.html)
 - [`srun`](https://slurm.schedmd.com/srun.html)
 - [`sstat`](https://slurm.schedmd.com/sstat.html)
+
+## References
+
+1. Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [DOI: [10.1145/3332186.3333043](https://doi.org/10.1145/3332186.3333043)] [Code: [Gitlab](https://gitlab.chpc.utah.edu/arbiter2/arbiter2)] <a name="ref_arbiter" />
+2. 

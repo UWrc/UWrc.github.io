@@ -35,7 +35,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1309314114292867074/6KmA4Mm0_400x400.jpg"
+                src="static/img/avatar/avatar_uws_cheme.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Jim</h4>
@@ -50,12 +50,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
+                src="static/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Aaron P.</h4>
+                <h4 class="avatar__name">Nam</h4>
                 <small class="avatar__subtitle">
-                  Chief Information Officer
+                  Director
                 </small>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
+                src="static/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Erik</h4>
@@ -92,7 +92,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1168924412487393282/ZfvazryA_400x400.jpg"
+                src="static/img/avatar/avatar_uws_aas.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Dan</h4>
@@ -107,7 +107,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/879469261474848772/NPqyGGkb_400x400.jpg"
+                src="static/img/avatar/avatar_uws_coe.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Pedro</h4>
@@ -122,7 +122,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1252677277009104896/Bf74Yg9u_400x400.jpg"
+                src="static/img/avatar/avatar_uws_env.png"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Bruce</h4>
@@ -146,7 +146,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/543503459480129537/Bh9gkA7z_400x400.jpeg"
+                src="static/img/avatar/avatar_uws_ipd.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Luki</h4>
@@ -161,12 +161,27 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1115302853273313280/hWZpEBHB_400x400.png"
+                src="static/img/avatar/avatar_uwb.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Andrew</h4>
+                <h4 class="avatar__name">Eric</h4>
                 <small class="avatar__subtitle">
-                  Research Computing Club
+                  UW Bothell Campus
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="avatar avatar--vertical">
+              <img
+                class="avatar__photo avatar__photo--xl"
+                src="static/img/avatar/avatar_uwt_ias.jpg"
+              />
+              <div class="avatar__intro">
+                <h4 class="avatar__name">Tarang</h4>
+                <small class="avatar__subtitle">
+                  UW Tacoma Campus
                 </small>
               </div>
             </div>
@@ -196,7 +211,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/875431189493948416/zB_pLWHH_400x400.jpg"
+                src="static/img/avatar/avatar_uws_cse.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Aaron T.</h4>
@@ -211,12 +226,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://avatars3.githubusercontent.com/u/1252858?s=400&v=4"
+                src="static/img/avatar/avatar_uws_stf.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Nam</h4>
+                <h4 class="avatar__name">Dave</h4>
                 <small class="avatar__subtitle">
-                  Director
+                  eScience Institute
                 </small>
               </div>
             </div>
@@ -226,12 +241,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/543102448781373440/-J0bwkR3_400x400.png"
+                src="static/img/avatar/avatar_uws_stf.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Dave</h4>
+                <h4 class="avatar__name">Andrew</h4>
                 <small class="avatar__subtitle">
-                  eScience Institute
+                  Research Computing Club
                 </small>
               </div>
             </div>
@@ -255,7 +270,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1168924412487393282/ZfvazryA_400x400.jpg"
+                src="static/img/avatar/avatar_uws_aas.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Mako</h4>
@@ -270,7 +285,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1168924412487393282/ZfvazryA_400x400.jpg"
+                src="static/img/avatar/avatar_uws_aas.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Xiaosong</h4>
@@ -285,7 +300,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/879469261474848772/NPqyGGkb_400x400.jpg"
+                src="static/img/avatar/avatar_uws_coe.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Antonino</h4>
@@ -309,7 +324,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1252677277009104896/Bf74Yg9u_400x400.jpg"
+                src="static/img/avatar/avatar_uws_env.png"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Ivonne</h4>
@@ -324,7 +339,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/543503459480129537/Bh9gkA7z_400x400.jpeg"
+                src="static/img/avatar/avatar_uws_ipd.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Patrick</h4>
@@ -335,20 +350,7 @@ export default function board() {
             </div>
           </div>
 
-          <div class="col">
-            <div class="avatar avatar--vertical">
-              <img
-                class="avatar__photo avatar__photo--xl"
-                src="https://pbs.twimg.com/profile_images/1115302853273313280/hWZpEBHB_400x400.png"
-              />
-              <div class="avatar__intro">
-                <h4 class="avatar__name">Andrew</h4>
-                <small class="avatar__subtitle">
-                  Research Computing Club
-                </small>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
 
