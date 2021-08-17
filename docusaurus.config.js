@@ -254,16 +254,16 @@ module.exports = {
           image: 'img/software/linux.svg',
         },
         {
+          caption: 'Kubernetes',
+          image: 'img/software/kubernetes.svg',
+        },        
+        {
           caption: 'Slurm',
           image: 'img/software/slurm.svg',
         },
         {
           caption: 'OpenHPC',
-          image: 'img/software/openhpc.png',
-        },
-        {
-          caption: 'Kubernetes',
-          image: 'img/software/kubernetes.svg',
+          image: 'img/software/openhpc.svg',
         },
       ],
     }
