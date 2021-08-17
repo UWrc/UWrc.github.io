@@ -33,7 +33,7 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
+            src="static/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
             <h4 class="avatar__name">David</h4>
@@ -48,7 +48,7 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
+            src="static/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
             <h4 class="avatar__name">Matt</h4>
@@ -71,7 +71,7 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://pbs.twimg.com/profile_images/550415672430194690/g--kJg1N_400x400.png"
+            src="static/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
             <h4 class="avatar__name">Ryan</h4>
@@ -86,12 +86,12 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://avatars0.githubusercontent.com/u/37822701?s=460&u=ed7f3e658edacfcd85a4db38fe9e318aa73068e9&v=4"
+            src="static/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Jerry</h4>
+            <h4 class="avatar__name">Hiring</h4>
             <small class="avatar__subtitle">
-              Intern
+              HPC Systems Engineer
             </small>
           </div>
         </div>

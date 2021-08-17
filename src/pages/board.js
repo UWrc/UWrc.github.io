@@ -164,24 +164,9 @@ export default function board() {
                 src="static/img/avatar/avatar_uwb.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Eric</h4>
+                <h4 class="avatar__name">Eric & Tarang</h4>
                 <small class="avatar__subtitle">
-                  UW Bothell Campus
-                </small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="avatar avatar--vertical">
-              <img
-                class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uwt_ias.jpg"
-              />
-              <div class="avatar__intro">
-                <h4 class="avatar__name">Tarang</h4>
-                <small class="avatar__subtitle">
-                  UW Tacoma Campus
+                  Bothell-Tacoma Campuses
                 </small>
               </div>
             </div>
@@ -214,7 +199,7 @@ export default function board() {
                 src="static/img/avatar/avatar_uws_cse.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Aaron T.</h4>
+                <h4 class="avatar__name">Aaron</h4>
                 <small class="avatar__subtitle">
                   Allen School
                 </small>
