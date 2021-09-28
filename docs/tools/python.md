@@ -184,6 +184,122 @@ There are multiple places to search for Python libraries. Whatever libraries you
 2. Python Package Index (PyPI) [[www](https://pypi.org)]
 3. Conda Forge [[www](https://conda-forge.org)]
 
-## Containers
+## Containers (miniconda3)
 
-TODO
+This section expands upon a Stackexchange reply [[www](https://stackoverflow.com/questions/54678805/containerize-a-conda-environment-in-a-singularity-container)] with a walk through specific for the KLONE cluster.
+
+While miniconda3 is an improvement over anaconda for lean deployment, a more advanced approach is to package your entire conda environment within a (Singularity) container. As with the beauty of containers, we can use a miniconda3 container provided by continuum.io [[www](https://hub.docker.com/r/continuumio/miniconda3)] to bootstrap our environment then feed it our `environment.yml` file that specifies which Python libraries and versions to install.
+
+First we'll need to have a Singularity definition file that defines how to build our container and a corresponding YAML file that describes our environment. There is a sample `compute.def` and `compute.yml` file at the following Github gist [[www](https://gist.github.com/npho/6de7dbcb59dcee47036e510659733089)]. Note the definition file can be generalized for any `YAML` environment you have. The `compute.yml` environment is a proof-of-concept with random packages that you may or may not care for, you should customize this with libraries tailored to your needs. With these files staged in a folder, we'll do a walk through on how to build your container below.
+
+Get an interactive session.
+
+```bash
+srun -A uwit -p compute --time=1:00:00 -n 4 --mem=10G --pty $0
+```
+
+Load singularity.
+
+```bash
+module load singularity
+```
+
+Build your container, I set the output container to land on the compute node's local SSD drive (presented as `/tmp`) and copy it over to my current directory afterwards. 
+
+```bash
+singularity build --fakeroot /tmp/compute.sif ./compute.def
+```
+
+Please note in the `%files` section of the definition file I set `compute.yml environment.yml` which means on the cluster in the current directory we save our conda environment definition YAML file as `compute.yml` but Singularity will copy that into the container we're building and have future reference (internally) as `environment.yml`.
+
+Consider reviewing the Singularity definitions reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for additional options.
+
+:::caution
+The build may take a few minutes depending on how big your environment is. Don't forget to copy the container from `/tmp` to your location of choice on `/gscratch`. 
+:::
+
+Ideally you could now run `singularity shell compute.sif` and get interactive mode with your container. If you do this the `conda init` isn't sourced so you will have to run `source /opt/conda/etc/profile.d/conda.sh` manually if you want the environment to appear in parentheses. Functionally there is no difference if you don't do this, it's mostly for appearances sake at the terminal prompt. If you run `singularity exec compute.sif bash` then it will do that for you automatically and save you a `source` command.
+
+```shell-session terminal=true
+[22:22:58] npho@g3020:singularity $ singularity shell --bind /gscratch compute.sif                             
+Singularity> source /opt/conda/etc/profile.d/conda.sh
+Singularity> conda activate compute
+(compute) Singularity> 
+```
+
+In this case (to further confuse the reader) we called our environment as defined by the `compute.yml` file "compute" as well. That is what is being passed as a command line argument to `conda activate`.
+
+:::tip
+When running Singularity whether as `shell` or `exec` if you need access to your lab data you will want to additionally pass along the `--bind /gscratch` flag to ensure that this is accessible from within the container.
+:::
+
+## Containers (cuda-pytorch)
+
+This section builds upon the previous section with a walk through on building a container with a miniconda environment [[www](#containers-miniconda3)]. The major changes are using a CUDA base image from NVIDIA's ngc portal [[www](https://ngc.nvidia.com/catalog/containers/nvidia:cuda/tags)] and specifying a PyTorch install.
+
+For this walk through please refer to the accompanying Github gist [[www](https://gist.github.com/npho/57dda32c28f5e0ab6df4948188484c95)]. Same as before, the Singularity definition file describes how to build the container and the YAML file describes how to build a miniconda3 environment.
+
+By default we suggest you use `cuda:11.4.2-base-ubuntu20.04` since it's currently the latest CUDA toolkit version, uses the bare minimal image (i.e., `base`), and is build upon Ubuntu that is more common among desktop setups (and more likely to be familiar for researchers). When building your container there are more comprehensive (and larger) images (e.g., `cuda:11.4.2-devel-ubuntu20.04`) with additional developer packages built in.
+
+Get an interactive session with a GPU.
+
+```bash
+srun -A uwit -p gpu-rtx6k --time=1:00:00 -n 4 --mem=10G --gpus 1 --pty $0
+```
+
+Load singularity.
+
+```bash
+module load singularity
+```
+
+Build the container and save it to the local node SSD. As a reminder be sure to copy it over to `/gscratch` upon completion.
+
+```bash
+singularity build --fakeroot /tmp/cuda-pytorch.sif ./cuda-pytorch.def
+```
+
+Now you can run the container. Be sure to add the `--nv` flag to specify to Singularity to pass through GPUs, refer to the documentation for more information [[www](https://sylabs.io/guides/latest/user-guide/gpu.html)].
+
+```shell-session terminal=true
+[0:26:08] npho@g3024:singularity $ singularity shell --nv --bind /gscratch cuda-pytorch.sif
+Singularity> source /opt/conda/etc/profile.d/conda.sh
+Singularity> nvidia-smi
+Tue Sep 28 00:27:00 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.57.02    Driver Version: 470.57.02    CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Quadro RTX 6000     Off  | 00000000:24:00.0 Off |                  Off |
+| 28%   37C    P0    56W / 260W |      0MiB / 24220MiB |      4%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Singularity> conda activate cuda-pytorch
+(cuda-pytorch) Singularity>
+```
+
+Alternatively you can call the Python interpreter directly.
+
+```shell-session terminal=true
+[0:27:46] npho@g3024:singularity $ singularity exec --nv --bind /gscratch cuda-pytorch.sif python
+Python 3.9.5 (default, Jun  4 2021, 12:28:51)
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> torch.cuda.is_available()
+True
+>>> torch.cuda.device_count()
+1
+>>> 
+```
