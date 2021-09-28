@@ -25,7 +25,7 @@ What are the costs, trade offs, or downsides? You might imagine performance or t
 
 ## Singularity
 
-The official Singularity documentation [[www](https://sylabs.io/guides/3.7/user-guide/)] is the best source.
+The official Singularity documentation [[www](https://sylabs.io/guides/latest/user-guide/)] is the best source.
 
 ### Ubuntu `apt-get` Example
 
@@ -53,7 +53,7 @@ srun -A mygroup -p compute --time=1:00:00 -n 2 --mem=10G --pty $0
 module load singularity
 ```
 
-3. Create a Singularity definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories.
+1. Create a Singularity definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Singularity definition files reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for more advanced options.
 
 ```dockerfile
 Bootstrap: docker
