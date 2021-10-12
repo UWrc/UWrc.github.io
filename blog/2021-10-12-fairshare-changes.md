@@ -9,7 +9,7 @@ tags: [klone, hyak, hpc, supercomputer, features, fairshare, GPU, GPUs]
 ---
 
 :::note
-We have adjust legacy fairshare-related settings to account for GPUs and large memory contributions and usage in order to help more fairly allocate checkpoint resources.
+We have adjusted legacy fairshare-related settings to account for GPUs and large memory contributions and usage in order to help more fairly allocate checkpoint resources.
 :::
 
 ### History
@@ -29,7 +29,7 @@ Fairshare was simpler to calculate in the pre-GPU days because our infrastructur
 Taking into consideration all of this information, as well as the fact that you can request as little as 1 GPU or 1 CPU from the scheduler, we have adjusted the fairshare calculations as follows:
 * **Financially**: 1 GPU card is roughly equivalent to 40 CPU cores (on a dollar basis), therefore the cost normalization is 40:1 in favor of GPUs. 
 * **Scarcity**: 1 server typically holds 8 GPU cards or 40 CPU cores, therefore the scarcity normalization is 5:1 in favor of GPUs.
-* Combining the financial and scarcity considerations in the points above, the final weighting is 200:1 in favor of GPUs. In other words, 1 GPU card is worth 200 times more than a single CPU core in the eyes of the scheduler and factored into your checkpoint fairshare.
+* Combining the financial and scarcity considerations in the points above, the final weighting is 200:1 in favor of GPUs. In other words, 1 GPU card is worth 200 times more than a single CPU core in the eyes of the scheduler and factored into your checkpoint fairshare. Please note that this example only applies to the higher GPU memory cards (i.e., `gpu-rtx6k`) while less expensive GPUs have commensurately less weight.
 
 ### Summary
 
