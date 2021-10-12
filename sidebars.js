@@ -20,6 +20,7 @@ module.exports = {
     'Compute': [
       'compute/slurm',
       'compute/scheduling-jobs',
+      'compute/resource-monitoring',
     ],
     'Tools & Software': [
       'tools/software',
