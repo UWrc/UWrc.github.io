@@ -190,6 +190,8 @@ This section expands upon a Stackexchange reply [[www](https://stackoverflow.com
 
 While miniconda3 is an improvement over anaconda for lean deployment, a more advanced approach is to package your entire conda environment within a (Singularity) container. As with the beauty of containers, we can use a miniconda3 container provided by continuum.io [[www](https://hub.docker.com/r/continuumio/miniconda3)] to bootstrap our environment then feed it our `environment.yml` file that specifies which Python libraries and versions to install.
 
+### Example
+
 First we'll need to have a Singularity definition file that defines how to build our container and a corresponding YAML file that describes our environment. There is a sample `compute.def` and `compute.yml` file at the following Github gist [[www](https://gist.github.com/npho/6de7dbcb59dcee47036e510659733089)]. Note the definition file can be generalized for any `YAML` environment you have. The `compute.yml` environment is a proof-of-concept with random packages that you may or may not care for, you should customize this with libraries tailored to your needs. With these files staged in a folder, we'll do a walk through on how to build your container below.
 
 Get an interactive session.
@@ -204,6 +206,8 @@ Load singularity.
 module load singularity
 ```
 
+### Build
+
 Build your container, I set the output container to land on the compute node's local SSD drive (presented as `/tmp`) and copy it over to my current directory afterwards. 
 
 ```bash
@@ -217,6 +221,8 @@ Consider reviewing the Singularity definitions reference page [[www](https://syl
 :::caution
 The build may take a few minutes depending on how big your environment is. Don't forget to copy the container from `/tmp` to your location of choice on `/gscratch`. 
 :::
+
+### Run
 
 Ideally you could now run `singularity shell compute.sif` and get interactive mode with your container. If you do this the `conda init` isn't sourced so you will have to run `source /opt/conda/etc/profile.d/conda.sh` manually if you want the environment to appear in parentheses. Functionally there is no difference if you don't do this, it's mostly for appearances sake at the terminal prompt. If you run `singularity exec compute.sif bash` then it will do that for you automatically and save you a `source` command.
 
@@ -237,6 +243,8 @@ When running Singularity whether as `shell` or `exec` if you need access to your
 
 This section builds upon the previous section with a walk through on building a container with a miniconda environment [[www](#containers-miniconda3)]. The major changes are using a CUDA base image from NVIDIA's ngc portal [[www](https://ngc.nvidia.com/catalog/containers/nvidia:cuda/tags)] and specifying a PyTorch install.
 
+### Example
+
 For this walk through please refer to the accompanying Github gist [[www](https://gist.github.com/npho/57dda32c28f5e0ab6df4948188484c95)]. Same as before, the Singularity definition file describes how to build the container and the YAML file describes how to build a miniconda3 environment.
 
 By default we suggest you use `cuda:11.4.2-base-ubuntu20.04` since it's currently the latest CUDA toolkit version, uses the bare minimal image (i.e., `base`), and is build upon Ubuntu that is more common among desktop setups (and more likely to be familiar for researchers). When building your container there are more comprehensive (and larger) images (e.g., `cuda:11.4.2-devel-ubuntu20.04`) with additional developer packages built in.
@@ -253,11 +261,15 @@ Load singularity.
 module load singularity
 ```
 
+### Build
+
 Build the container and save it to the local node SSD. As a reminder be sure to copy it over to `/gscratch` upon completion.
 
 ```bash
 singularity build --fakeroot /tmp/cuda-pytorch.sif ./cuda-pytorch.def
 ```
+
+### Run
 
 Now you can run the container. Be sure to add the `--nv` flag to specify to Singularity to pass through GPUs, refer to the documentation for more information [[www](https://sylabs.io/guides/latest/user-guide/gpu.html)].
 
