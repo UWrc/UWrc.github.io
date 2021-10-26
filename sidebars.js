@@ -9,7 +9,7 @@ module.exports = {
     'Setup': [
       'setup/index',
       'setup/ssh',
-      'setup/vscode',
+      //'setup/vscode',
     ],
     'Storage': [
       'storage/data',

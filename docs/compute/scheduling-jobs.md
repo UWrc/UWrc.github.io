@@ -11,7 +11,7 @@ sidebar-label: Scheduling Jobs
 The SLURM scheduler has two high-level concepts you need to know, [accounts](#accounts) and [partitions](#partitions).
 ### Accounts
 
-With the `hyakalloc` you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
+With the `hyakalloc` command [[src](/docs/compute/resource-monitoring#hyakalloc)] you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
 
 ### Partitions
 
@@ -28,6 +28,10 @@ There are a few popular types of jobs you could submit:
 
 These are the common and recommended arguments suggested at a minimum to get a job in any form.
 
+:::important
+If you are using an interactive node to run a parallel application such as Python multiprocessing, MPI, OpenMP, etc. then the number given for the `--ntasks-per-node` option must match the number of processes used by your application.
+:::
+
 | Arguments | Command Flags | Notes |
 | - | - | - |
 | Account | `-A` or `--account` | What lab are you part of? If you run the `groups` command you can see what groups (usually labs) you're a member of, these are associated with resource limits on the cluster. See the [accounts](#accounts) section for additional information. |
@@ -37,7 +41,7 @@ These are the common and recommended arguments suggested at a minimum to get a j
 | Memory | `--mem` | How much memory do you need for this job? This is in the format `size[units]` were size is a number and units are either `M`, `G`, or `T` for megabyte, gigabyte, and terabyte respectively. Megabyte is the default unit if none is provided. |
 | Time | `-t` or `--time` | What's the maximum runtime for this job? Common acceptable time formats include `hours:minutes:seconds`, `days-hours`, and `minutes`. |
 
-### Interactive Jobs
+### Interactive Jobs (Single Node)
 
 Resources for interactive jobs are attained either using `salloc`. To get resources on a compute node interactively consider the example below.
 
@@ -45,36 +49,32 @@ Resources for interactive jobs are attained either using `salloc`. To get resour
 salloc -A mylab -p compute -N 1 -c 4 --mem=10G --time=2:30:00
 ```
 
-In this case you are requesting a slice of the standard compute node class that your group `mylab` contributed to the cluster. You are asking for 4 compute cores with 10GB of memory for 2 hours and 30 minutes spread across 1 node (single machine). The salloc command will automatically create an interactive shell session on an allocated node.
+In this case you are requesting a slice of the standard compute node class that your group `mylab` contributed to the cluster. You are asking for 4 compute cores with 10GB of memory for 2 hours and 30 minutes spread across 1 node (single machine). The `salloc` command will automatically create an interactive shell session on an allocated node.
 
-:::note
-If `-N` or `--nodes` is >1 you are automatically placed into a shell of one of the allocated nodes. This shell is NOT part of a Slurm task. To view the names of the remainder of your allocated nodes use `scontrol show hostnames`.  The `srun` command can be used to execute a command on all of the allocated nodes.
+### Interactive Jobs (Multi Node)
 
-Example:
+Building upon the previous section, if `-N` or `--nodes` is >1 when running `salloc` you are automatically placed into a shell of one of the allocated nodes. This shell is NOT part of a SLURM task. To view the names of the remainder of your allocated nodes use `scontrol show hostnames`. The `srun` command can be used to execute a command on all of the allocated nodes as shown in the example session below.
+
 ```shell-session terminal=true
-[linj66@klone1 ~]$ salloc -N 2 -p compute -A stf --time=5 --mem=5G
+[netID@klone1 ~]$ salloc -N 2 -p compute -A stf --time=5 --mem=5G
 salloc: Pending job allocation 2620960
 salloc: job 2620960 queued and waiting for resources
 salloc: job 2620960 has been allocated resources
 salloc: Granted job allocation 2620960
 salloc: Waiting for resource configuration
 salloc: Nodes n[3148-3149] are ready for job
-[linj66@n3148 ~]$ srun echo "test"
+[netID@n3148 ~]$ srun echo "test"
 test
 test
-[linj66@mox2 ~]$ scontrol show hostnames
+[netID@n3148 ~]$ scontrol show hostnames
 n3148
 n3149
 ```
-:::
 
-:::important
-If you are using an interactive node to run a parallel application such as Python multiprocessing, MPI, OpenMP etc. then the number given for the `--ntasks-per-node` option must match the number of processes used by your application.
-:::
+### Interactive Node Partitions
 
----
+If your group has an interactive node, use the option `-p <group_name>-int` like below. If you are unsure if your group has an interactive node you can run `hyakalloc` and it will appear if you have one.
 
-If your group has an interactive node, use the option `-p <group_name>-int` like so: 
 ```shell
 salloc -p <group_name>-int -A <group_name> --time=<time> --mem=<size>G
 ```
@@ -126,9 +126,9 @@ Below is a slurm script template.  Submit a batch job from the `mox` login node 
 
 If your batch job is using multiple nodes, your program should also know how to use all the nodes (e.g. your program is an MPI program).
 
-The value given for `--nodes` must be less than or equal to the total number of nodes owned by your group.
+The value given for `--nodes` should be less than or equal to the total number of nodes owned by your group unless you are running in the `ckpt` partition.
 
-The value given for `--ntasks-per-node` should be either `28` for older `mox` nodes or `40` for newer nodes.  Do not increase these values.  You can decrease these values if your program is running out of memory on a node.
+The value given for `--ntasks-per-node` should be either `28` for older `mox` nodes or `40` for newer `klone` nodes if you wish to maximize use of an entire node.
 
 ```shell
 SBATCH --nodes=4
