@@ -9,6 +9,7 @@ module.exports = {
     'Setup': [
       'setup/index',
       'setup/ssh',
+      'setup/x11'
       //'setup/vscode',
     ],
     'Storage': [
