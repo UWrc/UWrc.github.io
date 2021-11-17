@@ -66,6 +66,6 @@ Before beginnning this work, please select a random number between 4096 and 1638
         [I 18:00:06.106 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
         [W 18:00:06.135 NotebookApp] No web browser found: could not locate runnable browser.
     ```
-6. Using the address provided in the response, open another SSH session, this time including the address and port as a local single-port forward. More can be found here: [Configuring SSH Single-Port Forwarding](http://this.link.is.missing)
+6. Using the address provided in the response, open another SSH session, this time including the address and port as a local single-port forward. More can be found here: [Configuring SSH Single-Port Forwarding](/docs/setup/portforwarding)
 7. If properly configured, the server should be accessible by opening your browser and navigating to http://localhost:9195.
 
