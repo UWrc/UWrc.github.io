@@ -63,9 +63,9 @@ salloc: job 2620960 has been allocated resources
 salloc: Granted job allocation 2620960
 salloc: Waiting for resource configuration
 salloc: Nodes n[3148-3149] are ready for job
-[netID@n3148 ~]$ srun echo "test"
-test
-test
+[netID@n3148 ~]$ srun hostname
+n3148
+n3149
 [netID@n3148 ~]$ scontrol show hostnames
 n3148
 n3149
