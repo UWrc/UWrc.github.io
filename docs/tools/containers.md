@@ -32,11 +32,11 @@ The official Singularity documentation [[www](https://sylabs.io/guides/latest/us
 Let's say that you want to use `git` and the current version of `git` on HYAK is 1.8.3.1 as shown below.
 
 ```shell-session terminal=true
-$ which git 
+$ which git
 /usr/bin/git
 $ git --version
 git version 1.8.3.1
-$ 
+$
 ```
 
 Let's say you want a newer version AND you also want it running on Ubuntu for some reason. Here we'll walk you through installing the latest `git` binary using `apt` repositories for Ubuntu 16.04 [[www](https://releases.ubuntu.com/16.04/)] or "Xenial Xerus".
@@ -53,7 +53,7 @@ srun -A mygroup -p compute --time=1:00:00 -n 2 --mem=10G --pty $0
 module load singularity
 ```
 
-1. Create a Singularity definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Singularity definition files reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for more advanced options.
+3. Create a Singularity definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Singularity definition files reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for more advanced options.
 
 ```dockerfile
 Bootstrap: docker
@@ -64,20 +64,25 @@ From: ubuntu:16.04
 
 ```
 
-4. Built a Singularity container from its definition file. The generated SIF file is your portable container. Note the definition file should be executable or you can switch the reference to file to `./tools.def` if you're in the same working directory or provide the absolute path.
+4. Build a Singularity container from its definition file. The generated SIF file is your portable container.
+
+    The `.def` definition file should either be A) executable or B) a relative path (e.g. `./tools.def` while in the same directory as the file) or an absolute path (e.g. `/full/path/to/tools.def`).
+
+    When using the `--fakeroot` option, build the container image in `/tmp`. This avoids [[a potential permission issue](https://sylabs.io/guides/3.6/admin-guide/installation.html#fakeroot-sub-uid-gid-mapping)] with our shared storage filesystem, GPFS.
 
 ```bash
-singularity build --fakeroot tools.sif tools.def
+singularity build --fakeroot /tmp/tools.sif ./tools.def
 ```
 
-5. Run the binary.
+5. Move the container image to the desired location and run the binary.
 
 You'll do this through the `singularity` executable to distinguish it from the `git` binary in the main operation system.
 
 ```shell-session terminal=true
-$ singularity exec tools.sif git --version            
+$ mv /tmp/tools.sif .
+$ singularity exec tools.sif git --version
 git version 2.7.4
-$ 
+$
 ```
 
 Notice the `git` version here is newer than the original we started with. Success!
