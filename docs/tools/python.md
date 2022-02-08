@@ -197,7 +197,7 @@ First we'll need to have a Singularity definition file that defines how to build
 Get an interactive session.
 
 ```bash
-srun -A uwit -p compute --time=1:00:00 -n 4 --mem=10G --pty $0
+salloc -A uwit -p compute --time=1:00:00 -n 4 --mem=10G
 ```
 
 Load singularity.
@@ -252,7 +252,7 @@ By default we suggest you use `cuda:11.4.2-base-ubuntu20.04` since it's currentl
 Get an interactive session with a GPU.
 
 ```bash
-srun -A uwit -p gpu-rtx6k --time=1:00:00 -n 4 --mem=10G --gpus 1 --pty $0
+salloc -A uwit -p gpu-rtx6k --time=1:00:00 -n 4 --mem=20G --gpus=1
 ```
 
 Load singularity.

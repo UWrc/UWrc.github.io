@@ -25,7 +25,7 @@ I'll start with the end result for those of you who just want to use it but foll
 This is a GPU-enabled version of gromacs so we need a GPU first (can verify with `nvidia-smi`).
 
 ```bash
-srun -p build-gpu --time=4:00:00 -n 4 --mem=20G --gpus=1 --pty $0
+salloc -A uwit -p ckpt --time=4:00:00 -n 4 --mem=20G --gpus=1
 ```
 
 ### gromacs-2020.4 module
@@ -139,7 +139,7 @@ wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-2020.4.tar.gz
 I used the shared `build-gpu` node for an interactive session but if you are affiliated with a group that has their own you can use that instead.
 
 ```bash
-srun -p build-gpu --time=4:00:00 -n 4 --mem=20G --gpus=1 --pty $0
+salloc -A uwit -p ckpt --time=4:00:00 -n 4 --mem=20G --gpus=1
 ```
 
 Once you get a session with GPU (you can run `nvidia-smi` to confirm you see one). Extract regression tests.

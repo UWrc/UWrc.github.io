@@ -36,11 +36,11 @@ Updated **August 10, 2021** to include additional information specific for GPU u
 
 ### Compute
 
-1. When submitting a SLURM job, whether interactive (i.e., `srun`) or batch (i.e., `sbatch`) you'll want to first decide which account to use. This is the group you're part of. You can run the command `groups` to see your affiliated accounts and run `hyakalloc` to see all the resources (e.g., compute cores, memory, GPUs) used and available associated with each affiliated account.
+1. When submitting a SLURM job, whether interactive (i.e., `salloc`) or batch (i.e., `sbatch`) you'll want to first decide which account to use. This is the group you're part of. You can run the command `groups` to see your affiliated accounts and run `hyakalloc` to see all the resources (e.g., compute cores, memory, GPUs) used and available associated with each affiliated account.
 2. Then decide if you want to run this job to count under your resource allocation by submitting to the compute partition (i.e., `-p compute`) or if you want this job to use idle resources from other groups across the cluster using the checkpoint partition (i.e., `-p ckpt`).
 
 * **Non-standard partitions.** Run `sinfo` to see the list of all possible partitions, this is only if your group contributed non-standard nodes (e.g., high memory, GPUs) and need to idenitify the appropriate partition names to get immediate use. Otherwise, you'd only be able to get them in a checkpoint capacity. For GPU users this is currently either the `gpu-2080ti` or the `gpu-rtx6k` partitions for 11GB and 24GB of GPU memory cards, respectively.
-* **There is no build node on KLONE.** Get an interactive session (e.g., `srun`) under an existing account and partition combination you have access to. 
+* **There is no build node on KLONE.** Get an interactive session (e.g., `salloc`) under an existing account and partition combination you have access to. 
 * **All nodes have internet now on KLONE.** Do all data transfers to and from KLONE on the KLONE login nodes, the login nodes on KLONE have dual 40 Gbps uplinks to the internet. While the compute nodes on KLONE have internet routing now, they are bottlenecked at 1 Gbps so not suitable for big data transfers. 
 
 ### Software
