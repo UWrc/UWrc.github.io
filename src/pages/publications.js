@@ -46,6 +46,8 @@ export default function Publications() {
         <TabItem value="2022">
           <h4>Computer Science</h4>
           <ol>
+            <li>Liu, Alisa, et al. "WANLI: Worker and AI Collaboration for Natural Language Inference Dataset Creation." arXiv preprint arXiv:<a href="https://arxiv.org/abs/2201.05955">2201.05955</a> (2022).</li>
+
             <li>Shridhar, Mohit, Lucas Manuelli, and Dieter Fox. "Cliport: What and where pathways for robotic manipulation." <i>Conference on Robot Learning</i>. PMLR, 2022. URL: <a href="https://proceedings.mlr.press/v164/shridhar22a.html">PDF</a></li>
           </ol>
           
