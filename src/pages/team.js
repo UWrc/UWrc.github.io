@@ -33,7 +33,7 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="static/img/avatar/avatar_uws_uwit.png"
+            src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
             <h4 class="avatar__name">David</h4>
@@ -48,7 +48,7 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="static/img/avatar/avatar_uws_uwit.png"
+            src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
             <h4 class="avatar__name">Matt</h4>
@@ -71,7 +71,7 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="static/img/avatar/avatar_uws_uwit.png"
+            src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
             <h4 class="avatar__name">Ryan</h4>
