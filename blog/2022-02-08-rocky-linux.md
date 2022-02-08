@@ -1,10 +1,10 @@
 ---
 slug: rocky-linux
 title: OS upgrade for KLONE
-author: Michael Wanek
-author_title: HPC Systems Engineer
-author_url: https://github.com/mwanek
-author_image_url: https://avatars.githubusercontent.com/u/89407740?v=4
+author: Nam Pho
+author_title: Director for Research Computing
+author_url: https://github.com/npho
+author_image_url: https://avatars3.githubusercontent.com/u/1252858?s=400&v=4
 tags: [klone, hyak, hpc, supercomputer, features, linux, centos, rocky]
 ---
 
