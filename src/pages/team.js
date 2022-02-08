@@ -86,10 +86,10 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="static/img/avatar/avatar_uws_uwit.png"
+            src="https://avatars.githubusercontent.com/u/89407740?v=4"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Hiring</h4>
+            <h4 class="avatar__name">Michael</h4>
             <small class="avatar__subtitle">
               HPC Systems Engineer
             </small>

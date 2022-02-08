@@ -109,7 +109,7 @@ export default function systems() {
               <td align="right">Compute</td><td>18,376 CPU cores [Cascade Lake, Ice Lake]</td>
             </tr>
             <tr>
-              <td align="right">Accelerators</td><td>112 GPU cards [Turing, Ampere]</td>
+              <td align="right">Accelerators</td><td>368 GPU cards [Turing, Ampere]</td>
             </tr>
             <tr>
               <td align="right">Interconnect</td><td>100 Gbps [HDR100 Infiniband]</td>
