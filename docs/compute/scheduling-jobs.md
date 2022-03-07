@@ -73,10 +73,10 @@ n3149
 
 ### Interactive Node Partitions
 
-If your group has an interactive node, use the option `-p <group_name>-int` like below. If you are unsure if your group has an interactive node you can run `hyakalloc` and it will appear if you have one.
+If your group has an interactive node, use the option `-p <partition_name>-int` like below. If you are unsure if your group has an interactive node you can run `hyakalloc` and it will appear if you have one.
 
 ```shell
-salloc -p <group_name>-int -A <group_name> --time=<time> --mem=<size>G
+salloc -p <partition_name>-int -A <group_name> --time=<time> --mem=<size>G
 ```
 
 :::note
