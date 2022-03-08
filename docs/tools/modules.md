@@ -20,7 +20,7 @@ The research computing team will maintain most of the core modules for building 
 There is a larger list of modules maintained by the broader HYAK community that appears when you run this command. **Community created or "contrib" modules are provided as is.** Community modules on KLONE are separated into a lower section and within the lower section each module is further prefixed by the respective group that created the module. All modules appear together when you run this command on MOX but the community provided modules appear with a "contrib" prefix.
 
 :::tip
-The HYAK team encourages the use of Singularity to better promote computational portability and reproducibility. You can read more about Singularity [[link](containers.md)] after loading its module.
+The HYAK team encourages the use of Apptainer to better promote computational portability and reproducibility. You can read more about Apptainer [[link](containers.md)] after loading its module.
 :::
 
 ### What modules do I currently have loaded?
