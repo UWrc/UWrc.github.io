@@ -3,7 +3,7 @@ id: r
 title: R and Rstudio
 ---
 
-R is a popular statistical programming language for data science and analytics. We rely on Singularity containers to deploy R and you can get a refresher on [modules](modules.md) and [containers](containers.md).
+R is a popular statistical programming language for data science and analytics. We rely on Apptainer (formerly Singularity) and Docker containers to deploy R and you can get a refresher on [modules](modules.md) and [containers](containers.md).
 
 ## R
 
@@ -35,10 +35,10 @@ Let's say we wanted to use R-4.0.3 from Docker hub
 [[www](https://hub.docker.com/_/r-base?tab=tags&page=1&ordering=last_updated)].
 
 ```bash
-singularity pull docker://r-base:4.0.3
+apptainer pull docker://r-base:4.0.3
 ```
 
-Be sure to do this from a build node, you need to be routed to the internet to resolve Dockerhub so you can download and have compute resources to do the image conversion from a Docker to Singularity container.
+Be sure to do this from a build node, you need to be routed to the internet to resolve Dockerhub so you can download and have compute resources to do the image conversion from a Docker to Apptainer container.
 
 ```shell-session terminal=true
 $ module load singularity
@@ -78,7 +78,7 @@ $
 You can run the R binary within the container like below.
 
 ```shell-session terminal=true
-$ singularity run r-base_4.0.3.sif R
+$ apptainer run r-base_4.0.3.sif R
 
 R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
 Copyright (C) 2020 The R Foundation for Statistical Computing
@@ -104,13 +104,13 @@ Option 1, while ok, uses a lot (and I mean a lot) of inodes as well as taking a 
 The Rocker Project [[www](https://www.rocker-project.org)] manages popular Docker containers for R, including a pre-built one with Tidyverse so you can grab the latest tagged container from Docker hub [[www](https://hub.docker.com/r/rocker/tidyverse/tags?page=1&ordering=last_updated)].
 
 ```bash
-singularity pull docker://rocker/tidyverse:4.0.1
+apptainer pull docker://rocker/tidyverse:4.0.1
 ```
 
 Prior instructions on R [user environment](#user-environment) apply but once downloaded (the Docker to Singularity conversion will take a few minutes), it will create a separate SIF file as shown below.
 
 ```shell-session terminal=true
-$ singularity pull docker://rocker/tidyverse:4.0.1
+$ apptainer pull docker://rocker/tidyverse:4.0.1
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Getting image source signatures
@@ -151,7 +151,7 @@ $
 Now when you run this container's R binary you can successfully load the Tidyverse.
 
 ```shell-session terminal=true
-$ singularity run tidyverse_4.0.1.sif R
+$ apptainer run tidyverse_4.0.1.sif R
 
 R version 4.0.1 (2020-06-06) -- "See Things Now"
 Copyright (C) 2020 The R Foundation for Statistical Computing
@@ -192,12 +192,12 @@ As a reminder all "contrib" prefixed modules are user community created and main
 
 Rstudio is an integrated development environment (IDE) for R. It's a front-end interface, historically a desktop application but it will be delivered through your browser in this instance.
 
-Rstudio will run in a Singularity container on a compute node then be directed through the login node back to your local computer via port forwarding.
+Rstudio will run in a Apptainer container on a compute node then be directed through the login node back to your local computer via port forwarding.
 
 First you need to get the Rocker Rstudio container. 
 1. Get an interactive session (e.g., `srun`). 
-2. Load Singularity (i.e., `module load singularity`).
-3. Pull a version of Rocker Rstudio (e.g., `singularity pull docker://rocker/rstudio:4.1.0`).
+2. Load Apptainer (i.e., `module load singularity`).
+3. Pull a version of Rocker Rstudio (e.g., `apptainer pull docker://rocker/rstudio:4.1.0`).
 
 You will need to get our Github gist [[www](https://gist.github.com/npho/7284cf9f3f9fb2ea816072724d80909b)] which was adopted for KLONE from the tutorial by Rocker [[www](https://www.rocker-project.org/use/singularity/)]. View this as "Raw" then download the text to your home directory. I set this as a `rstudio-server.job` file. You will need to modify a few things:
 1. The `GSCRATCH` path, I set it to my scrubbed directory on KLONE but if you have a persitent lab folder you should use that instead.
