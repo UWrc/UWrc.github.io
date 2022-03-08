@@ -116,7 +116,7 @@ Below is a slurm script template.  Submit a batch job from the `mox` login node 
 #SBATCH --error=<file> # where STDERR goes
 
 # Modules to use (optional).
-<e.g., module load singularity>
+<e.g., module load apptainer>
 
 # Your programs to run.
 <my_programs>
