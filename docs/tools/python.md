@@ -7,7 +7,7 @@ title: Python
 
 Python is a scripting and general purpose programming language with a rich ecosystem of computational libraries. On HYAK it's mostly associated with Pytorch, Tensorflow, and other machine learning libraries but there are wider uses. 
 
-Since HYAK is a shared platform and you do not have root or administrative access, you will need to control your environment and install packages in a deliberate way. We offer either virtual environments through [miniconda3](#miniconda3) or using [containers](#containers) (e.g., Singularity, Docker).
+Since HYAK is a shared platform and you do not have root or administrative access, you will need to control your environment and install packages in a deliberate way. We offer either virtual environments through [miniconda3](#miniconda3) or using [containers](#containers) (e.g., Apptainer, Docker).
 
 ## Miniconda3
 
