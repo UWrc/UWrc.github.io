@@ -1,6 +1,6 @@
 ---
 id: containers
-title: Singularity and Docker
+title: Apptainer (formerly Singularity) and Docker
 ---
 
 [sylabs]: /img/docs/sylabs-cloud.png 'Sylabs Cloud'
@@ -19,13 +19,16 @@ Have you ever found yourself saying:
 
 2. I'm trying to work on my local computer then move it to HYAK and resume without friction? How about you set up something and now want to share that *exact* compute environment with a collaborator (or vice-versa)?
 
-The answer to either (or both) of those things are containers! Software containers are a way to package everything you need into a file to send around and have it work exactly the same across environments. The most popular containerization format is [Docker](#docker) but that does require administrative access to run natively, so for shared platforms (e.g., HPC clusters like HYAK) an alternative called [Singularity](#singularity) was developed. Almost every Docker container can be seamlessly converted to Singularity so they're effectively interchangable.
+The answer to either (or both) of those things are containers! Software containers are a way to package everything you need into a file to send around and have it work exactly the same across environments. The most popular containerization format is [Docker](#docker) but that does require administrative access to run natively, so for shared platforms (e.g., HPC clusters like HYAK) an alternative called [Apptainer](#apptainer) was developed. Almost every Docker container can be seamlessly converted to Apptainer so they're effectively interchangable.
 
 What are the costs, trade offs, or downsides? You might imagine performance or that containerized applications run slower than native ones. This is not always true, in most instances they are near equivalent.
 
-## Singularity
+## Apptainer (formerly Singularity)
 
-The official Singularity documentation [[www](https://sylabs.io/guides/latest/user-guide/)] is the best source.
+In March, 2022, 'Singularity' became a Linux Foundation supported project and was renamed **'Apptainer'**.
+
+The official Apptainer documentation [[www](https://apptainer.org/docs/user/main/)] is the best source.
+
 
 ### Ubuntu `apt-get` Example
 
@@ -47,13 +50,13 @@ Let's say you want a newer version AND you also want it running on Ubuntu for so
 srun -A mygroup -p compute --time=1:00:00 -n 2 --mem=10G --pty $0
 ```
 
-2. Load the Singularity module.
+2. Load the Apptainer module.
 
 ```bash
-module load singularity
+module load apptainer
 ```
 
-3. Create a Singularity definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Singularity definition files reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for more advanced options.
+3. Create a Apptainer definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Apptainer definition files reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for more advanced options.
 
 ```dockerfile
 Bootstrap: docker
@@ -64,23 +67,23 @@ From: ubuntu:16.04
 
 ```
 
-4. Build a Singularity container from its definition file. The generated SIF file is your portable container.
+4. Build a Apptainer container from its definition file. The generated SIF file is your portable container.
 
     The `.def` definition file should either be A) executable or B) a relative path (e.g. `./tools.def` while in the same directory as the file) or an absolute path (e.g. `/full/path/to/tools.def`).
 
     When using the `--fakeroot` option, build the container image in `/tmp`. This avoids [[a potential permission issue](https://sylabs.io/guides/3.6/admin-guide/installation.html#fakeroot-sub-uid-gid-mapping)] with our shared storage filesystem, GPFS.
 
 ```bash
-singularity build --fakeroot /tmp/tools.sif ./tools.def
+apptainer build --fakeroot /tmp/tools.sif ./tools.def
 ```
 
 5. Move the container image to the desired location and run the binary.
 
-You'll do this through the `singularity` executable to distinguish it from the `git` binary in the main operation system.
+You'll do this through the `apptainer` executable to distinguish it from the `git` binary in the main operation system.
 
 ```shell-session terminal=true
 $ mv /tmp/tools.sif .
-$ singularity exec tools.sif git --version
+$ apptainer exec tools.sif git --version
 git version 2.7.4
 $
 ```
@@ -95,7 +98,7 @@ If you followed the tutorial above you should be able to install anything you wa
 
 ![sylabs]
 
-The largest collection of native Singularity containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Singularity and provides the native container format.
+The largest collection of native Apptainer containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Apptainer and provides the native container format.
 
 ### Docker Hub
 
@@ -103,13 +106,13 @@ The largest collection of native Singularity containers can be found at the Syla
 
 The biggest collection of Docker images is from Docker Hub [[www](https://hub.docker.com)].
 
-Let's say Docker Hub tells you the pull command for the container you want is `docker pull gcc:11.1.0-bullseye`. To have Singularity grab this Docker container and convert it to a Singularity container you'd modify the command to be `singularity pull docker://gcc:11.1.0-bullseye`.
+Let's say Docker Hub tells you the pull command for the container you want is `docker pull gcc:11.1.0-bullseye`. To have Apptainer grab this Docker container and convert it to a Apptainer container you'd modify the command to be `apptainer pull docker://gcc:11.1.0-bullseye`.
 
 ### Biocontainers.pro
 
 ![biocontainer]
 
-A bioinformatics focused set of Singularity containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Singularity) Docker containers as well as native Singularity containers.
+A bioinformatics focused set of Apptainer containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Apptainer) Docker containers as well as native Apptainer containers.
 
 ### NVIDIA GPU Cloud (NGC)
 
@@ -119,9 +122,9 @@ A container registry that specializes in common GPU accelerated applications or 
 
 ![ngc-pytorch]
 
-Depending on the NGC container, it might have directions on the exact pull command for Singularity. If it does not work be sure to prepend their pull location with `docker://` since these are native Docker containers that need to be converted to Singularity.
+Depending on the NGC container, it might have directions on the exact pull command for Apptainer. If it does not work be sure to prepend their pull location with `docker://` since these are native Docker containers that need to be converted to Apptainer.
 
-The example above provides a Docker pull command for PyTorch but in this case you'd modify it similarly as if you got it from Docker Hub from `docker pull nvcr.io/nvidia/pytorch:21.05-py3` to `singularity pull docker://nvcr.io/nvidia/pytorch:21.05-py3`.
+The example above provides a Docker pull command for PyTorch but in this case you'd modify it similarly as if you got it from Docker Hub from `docker pull nvcr.io/nvidia/pytorch:21.05-py3` to `apptainer pull docker://nvcr.io/nvidia/pytorch:21.05-py3`.
 
 ### NGC API Keys
 
