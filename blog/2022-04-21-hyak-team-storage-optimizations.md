@@ -19,7 +19,7 @@ As mentioned in an [earlier blog post today](TODO), our incoming hardware expans
 ### 1. Improved internal storage metrics gathering and visibility.
 
 <center>
-	<img src="/img/blog/2022-klone-slurm-metrics.png" alt="KLONE slurm metrics" width="90%" />
+	<img src="/img/blog/2022-klone-storage-metrics-1.png" alt="KLONE slurm metrics" width="90%" />
 </center>
 
 The HYAK team improved storage-cluster metric gathering and visibility, allowing us to correlate those metrics to reports of poor user experience, and to make data-driven tuning and storage policy decisions.
@@ -48,12 +48,12 @@ The KLONE filesystem has a coarse Quality-of-Service (QoS) tuning facility that 
 ### 4. Manually identifying jobs causing a disproportionate impact on storage performance.
 
 <center>
-	<img src="/img/blog/2022-klone-storage-metrics.png" alt="KLONE storage metrics" width="90%" />
+	<img src="/img/blog/2022-klone-storage-metrics-2.png" alt="KLONE storage metrics" width="90%" />
 </center>
 
 Utilizing metrics and old-fashioned sleuthing, we have been manually tracking down individual jobs that appear to be having a disproportionate and/or unnecessary impact on storage performance, and working with users to address the storage performance impact of these jobs.
 
-In the above figure we can see job IO follows a power law dynamic, a small handful of jobs are responsible for the majority of load. While the write IOPS panel at the bottom shows this disparity most clearly, thanks to the way the storage was architected, all that load is absorbed by the flash tier with no impact to the user experience. When users report storage "slowness" this disrepancy can be even more pronounced but we are able to quickly narrow down which specific nodes are responsible and address these corner cases.
+In the above figure we can see job IO follows a power law dynamic, a small handful of jobs are often responsible for the majority of load. In this case a single job on a single node is responsible. When users report storage "slowness" this disrepancy can be even more pronounced but we are able to quickly narrow down which specific nodes are responsible and address these corner cases.
 
 ### 5. Dynamically reducing the number of running checkpoint partition jobs.
 
