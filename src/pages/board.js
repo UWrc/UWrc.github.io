@@ -35,12 +35,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_cheme.jpg"
+                src="/img/avatar/avatar_uws_cheme.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Jim</h4>
                 <small class="avatar__subtitle">
-                  Associate Vice Provost
+                  Associate Vice Provost <br /> Office of Research
                 </small>
               </div>
             </div>
@@ -50,12 +50,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_uwit.png"
+                src="/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Nam</h4>
+                <h4 class="avatar__name">Andreas</h4>
                 <small class="avatar__subtitle">
-                  Director
+                  Chief Information Officer <br /> UW-IT
                 </small>
               </div>
             </div>
@@ -65,12 +65,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_uwit.png"
+                src="/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Erik</h4>
                 <small class="avatar__subtitle">
-                  Assistant Vice President
+                  Associate Vice President <br /> UW-IT
                 </small>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_aas.jpg"
+                src="/img/avatar/avatar_uws_aas.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Dan</h4>
@@ -107,10 +107,10 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_coe.jpg"
+                src="/img/avatar/avatar_uws_coe.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Pedro</h4>
+                <h4 class="avatar__name">Jihui</h4>
                 <small class="avatar__subtitle">
                   College of Engineering
                 </small>
@@ -122,10 +122,10 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_env.png"
+                src="/img/avatar/avatar_uws_env.png"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Bruce</h4>
+                <h4 class="avatar__name">Shuyi</h4>
                 <small class="avatar__subtitle">
                   College of the Environment
                 </small>
@@ -146,7 +146,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_ipd.jpg"
+                src="/img/avatar/avatar_uws_ipd.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Luki</h4>
@@ -161,7 +161,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uwb.jpg"
+                src="/img/avatar/avatar_uwb.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Eric & Tarang</h4>
@@ -196,7 +196,62 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_cse.jpg"
+                src="/img/avatar/avatar_uws_uwit.png"
+              />
+              <div class="avatar__intro">
+                <h4 class="avatar__name">Nam</h4>
+                <small class="avatar__subtitle">
+                  Research Computing
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="avatar avatar--vertical">
+              <img
+                class="avatar__photo avatar__photo--xl"
+                src="/img/avatar/avatar_uws_stf.jpg"
+              />
+              <div class="avatar__intro">
+                <h4 class="avatar__name">David</h4>
+                <small class="avatar__subtitle">
+                  eScience Institute
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="avatar avatar--vertical">
+              <img
+                class="avatar__photo avatar__photo--xl"
+                src="/img/avatar/avatar_uws_stf.jpg"
+              />
+              <div class="avatar__intro">
+                <h4 class="avatar__name">Jenna</h4>
+                <small class="avatar__subtitle">
+                  Research Computing Club
+                </small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <br /> <br /> <br />
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            <div class="avatar avatar--vertical">
+              <img
+                class="avatar__photo avatar__photo--xl"
+                src="/img/avatar/avatar_uws_cse.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Aaron</h4>
@@ -211,27 +266,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_stf.jpg"
+                src="/img/avatar/avatar_uws_med.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Dave</h4>
+                <h4 class="avatar__name">Edgar</h4>
                 <small class="avatar__subtitle">
-                  eScience Institute
-                </small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="avatar avatar--vertical">
-              <img
-                class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_stf.jpg"
-              />
-              <div class="avatar__intro">
-                <h4 class="avatar__name">Andrew</h4>
-                <small class="avatar__subtitle">
-                  Research Computing Club
+                  School of Medicine
                 </small>
               </div>
             </div>
@@ -255,7 +295,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_aas.jpg"
+                src="/img/avatar/avatar_uws_aas.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Mako</h4>
@@ -270,7 +310,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_aas.jpg"
+                src="/img/avatar/avatar_uws_aas.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Xiaosong</h4>
@@ -285,7 +325,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_coe.jpg"
+                src="/img/avatar/avatar_uws_coe.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Antonino</h4>
@@ -309,7 +349,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_env.png"
+                src="/img/avatar/avatar_uws_env.png"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Ivonne</h4>
@@ -324,7 +364,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="static/img/avatar/avatar_uws_ipd.jpg"
+                src="/img/avatar/avatar_uws_ipd.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Patrick</h4>
