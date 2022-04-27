@@ -53,9 +53,9 @@ export default function board() {
                 src="/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Andreas</h4>
+                <h4 class="avatar__name">Nam</h4>
                 <small class="avatar__subtitle">
-                  Chief Information Officer <br /> UW-IT
+                  Director
                 </small>
               </div>
             </div>
@@ -199,9 +199,9 @@ export default function board() {
                 src="/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Nam</h4>
+                <h4 class="avatar__name">Andreas</h4>
                 <small class="avatar__subtitle">
-                  Research Computing
+                  UW-IT
                 </small>
               </div>
             </div>
@@ -282,7 +282,7 @@ export default function board() {
         <div class="row">
           <div class="col">
             <br />
-            <p>HGB observers are members of the UW community who support the HYAK service.</p>
+            <p>HGB observers are non-voting members of the UW community who support the HYAK service.</p>
           </div>
         </div>
 
@@ -382,7 +382,7 @@ export default function board() {
         <div class="row">
           <div class="col">
             <br />
-            <p>Community representatives serving on the HGB represent the voice of the research community for their respective sponsors. They weigh in on matters of consequence at monthly HGB meetings.</p>
+            <p>Community (non-voting) representatives serving on the HGB represent the voice of the research community for their respective sponsors. They weigh in on matters of consequence at monthly HGB meetings.</p>
           </div>
         </div>
 
