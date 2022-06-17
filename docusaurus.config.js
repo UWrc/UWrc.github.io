@@ -33,13 +33,13 @@ module.exports = {
         },
         */
         {
-          to: '/systems',
-          label: 'Systems',
+          to: '/clusters',
+          label: 'Clusters',
           position: 'right',
         },
         {
-          to: 'pricing',
-          label: 'Pricing',
+          to: '/nodes',
+          label: 'Nodes',
           position: 'right',
         },
         {
@@ -49,13 +49,13 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'blog', 
-          label: 'Blog', 
+          to: 'blog',
+          label: 'Blog',
           position: 'right'
         },
         {
-          to: 'about', 
-          label: 'About', 
+          to: 'about',
+          label: 'About',
           position: 'right',
           items: [
             /*
@@ -256,7 +256,7 @@ module.exports = {
         {
           caption: 'Kubernetes',
           image: 'img/software/kubernetes.svg',
-        },        
+        },
         {
           caption: 'Slurm',
           image: 'img/software/slurm.svg',
