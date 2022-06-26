@@ -35,10 +35,10 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="/img/avatar/avatar_uws_cheme.jpg"
+                src="https://www.washington.edu/research/wp-content/uploads/Xiaosong-Li-headshot.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Jim</h4>
+                <h4 class="avatar__name">Xiaosong</h4>
                 <small class="avatar__subtitle">
                   Associate Vice Provost <br /> Office of Research
                 </small>
@@ -167,6 +167,21 @@ export default function board() {
                 <h4 class="avatar__name">Eric & Tarang</h4>
                 <small class="avatar__subtitle">
                   Bothell-Tacoma Campuses
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="avatar avatar--vertical">
+              <img
+                class="avatar__photo avatar__photo--xl"
+                src="https://cneuro-web01.s.uw.edu/wordpress/wp-content/uploads/2022/01/thumbnail_EdgarPhoto.jpg"
+              />
+              <div class="avatar__intro">
+                <h4 class="avatar__name">Edgar</h4>
+                <small class="avatar__subtitle">
+                  School of Medicine
                 </small>
               </div>
             </div>
@@ -310,12 +325,12 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="/img/avatar/avatar_uws_aas.jpg"
+                src="/img/avatar/avatar_uws_med.jpg"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Xiaosong</h4>
+                <h4 class="avatar__name">Daniel</h4>
                 <small class="avatar__subtitle">
-                  College of Arts & Sciences
+                  School of Medicine
                 </small>
               </div>
             </div>

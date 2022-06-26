@@ -46,3 +46,12 @@
 code {
   color: rgb(199, 146, 234)
 }
+
+ul.check li {
+  display: block;
+  background-image: url(/img/pricing/check.svg);
+  background-repeat: no-repeat; 
+  background-position: left 4px;
+  padding: 0px 0px 0px 25px;
+  margin: 0px 0px 0px 0px;
+}
