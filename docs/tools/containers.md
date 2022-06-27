@@ -25,7 +25,7 @@ What are the costs, trade offs, or downsides? You might imagine performance or t
 
 ## Apptainer (formerly Singularity)
 
-In March, 2022, 'Singularity' became a Linux Foundation supported project and was renamed **'Apptainer'**.
+March 2022: 'Singularity' became a Linux Foundation supported project and was renamed **'Apptainer'** [[www](https://www.linuxfoundation.org/press-release/new-linux-foundation-project-accelerates-collaboration-on-container-systems-between-enterprise-and-high-performance-computing-environments/)].
 
 The official Apptainer documentation [[www](https://apptainer.org/docs/user/main/)] is the best source.
 
@@ -47,7 +47,7 @@ Let's say you want a newer version AND you also want it running on Ubuntu for so
 1. Get an interactive session using some variant of the below command.
 
 ```bash
-srun -A mygroup -p compute --time=1:00:00 -n 2 --mem=10G --pty $0
+salloc -A mygroup -p compute -N 1 -n 2 --mem=10G --time=1:00:00
 ```
 
 2. Load the Apptainer module.

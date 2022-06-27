@@ -194,15 +194,39 @@ Rstudio is an integrated development environment (IDE) for R. It's a front-end i
 
 Rstudio will run in a Apptainer container on a compute node then be directed through the login node back to your local computer via port forwarding.
 
+#### Step 1: Download Rstudio Container
+
 First you need to get the Rocker Rstudio container. 
-1. Get an interactive session (e.g., `srun`). 
-2. Load Apptainer (i.e., `module load singularity`).
+1. Get an interactive session (e.g., `salloc -A uwit -p ckpt`). 
+2. Load Apptainer (i.e., `module load apptainer`).
 3. Pull a version of Rocker Rstudio (e.g., `apptainer pull docker://rocker/rstudio:4.1.0`).
 
-You will need to get our Github gist [[www](https://gist.github.com/npho/7284cf9f3f9fb2ea816072724d80909b)] which was adopted for KLONE from the tutorial by Rocker [[www](https://www.rocker-project.org/use/singularity/)]. View this as "Raw" then download the text to your home directory. I set this as a `rstudio-server.job` file. You will need to modify a few things:
-1. The `GSCRATCH` path, I set it to my scrubbed directory on KLONE but if you have a persitent lab folder you should use that instead.
-2. Set your `R_LIBS_USER` path, I set it to my scrubbed directory on KLONE as well. Note that if you have a `R` folder in your home directory then it will supercede this other path to install R packages. Your home directory is limited and can't be expanded so you will almost certainly fill it up.
-3. Set the path to the Rstudio container in the script.
+#### Step 2: Prepare SLURM Job File
+
+You will need to get our SLURM job file [[www](https://hyak.uw.edu/files/rstudio-server.job)] which was adopted for KLONE from the tutorial by Rocker [[www](https://www.rocker-project.org/use/singularity/)]. The command below will download the file to your current directory.
+
+```
+wget https://hyak.uw.edu/files/rstudio-server.job
+```
+
+You will need to modify a few environment variables in `rstudio-server.job` related to `R`:
+1. The `RSTUDIO_CWD` path, I set it to my scrubbed directory on KLONE but if you have a persitent lab folder you should use that instead. This is the folder where the container is located and downloaded to using the `apptainer pull` command above.
+2. Set your `RSTUDIO_SIF` variable, this is name of the container file.
+3. (Optional) Set your `R_LIBS_USER` path, I set it to my scrubbed directory on KLONE as well. Note that if you have a `R` folder in your home directory then it will supercede this other path to install R packages. Your home directory is limited and can't be expanded so you will almost certainly fill it up. The SLURM job file sets `RSTUDIO_CWD` as the default folder where all `R` packages will be installed associated with this container.
+
+You will need to modify a few things in `rstudio-server.job` related to SLURM directives. For example, fill in your specific account and partition (check your options with `hyakalloc`). Also set your job run limits, cores (i.e., `ntasks`), memory, etc.
+
+```
+#SBATCH --account=uwit
+#SBATCH --partition=compute
+#SBATCH --time=02:00:00
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --mem=20G
+```
+
+#### Step 3: Start the Rstudio Server
 
 ```shell-session terminal=true
 npho@klone-login01:~ $ sbatch rstudio-server.job

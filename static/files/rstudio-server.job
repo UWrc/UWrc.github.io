@@ -1,0 +1,93 @@
+#!/bin/sh
+
+#SBATCH --account=uwit
+#SBATCH --partition=compute
+#SBATCH --time=02:00:00
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --mem=20G
+
+#SBATCH --signal=USR2
+#SBATCH --output=/mmfs1/home/%u/rstudio-server.job.%j
+
+RSTUDIO_CWD="/gscratch/scrubbed/" # update this line
+RSTUDIO_SIF="rstudio_4.1.3.sif" # update this line
+
+# Create temp directory for ephemeral content to bind-mount in the container
+RSTUDIO_TMP=$(python -c 'import tempfile; print(tempfile.mkdtemp())')
+
+mkdir -p -m 700 \
+        ${RSTUDIO_TMP}/run \
+        ${RSTUDIO_TMP}/tmp \
+        ${RSTUDIO_TMP}/var/lib/rstudio-server
+
+cat > ${RSTUDIO_TMP}/database.conf <<END
+provider=sqlite
+directory=/var/lib/rstudio-server
+END
+
+# Set OMP_NUM_THREADS to prevent OpenBLAS (and any other OpenMP-enhanced
+# libraries used by R) from spawning more threads than the number of processors
+# allocated to the job.
+#
+# Set R_LIBS_USER to a path specific to rocker/rstudio to avoid conflicts with
+# personal libraries from any R installation in the host environment
+
+cat > ${RSTUDIO_TMP}/rsession.sh <<END
+#!/bin/sh
+
+export OMP_NUM_THREADS=${SLURM_JOB_CPUS_PER_NODE}
+export R_LIBS_USER=${RSTUDIO_CWD}
+exec rsession "\${@}"
+END
+
+chmod +x ${RSTUDIO_TMP}/rsession.sh
+
+export APPTAINER_BIND="${RSTUDIO_CWD}:${RSTUDIO_CWD},/gscratch:/gscratch,${RSTUDIO_TMP}/run:/run,${RSTUDIO_TMP}/tmp:/tmp,${RSTUDIO_TMP}/database.conf:/etc/rstudio/database.conf,${RSTUDIO_TMP}/rsession.sh:/etc/rstudio/rsession.sh,${RSTUDIO_TMP}/var/lib/rstudio-server:/var/lib/rstudio-server"
+
+# Do not suspend idle sessions.
+# Alternative to setting session-timeout-minutes=0 in /etc/rstudio/rsession.conf
+export APPTAINERENV_RSTUDIO_SESSION_TIMEOUT=0
+
+export APPTAINERENV_USER=$(id -un)
+export APPTAINERENV_PASSWORD=$(openssl rand -base64 15)
+
+# get unused socket per https://unix.stackexchange.com/a/132524
+# tiny race condition between the python & apptainer commands
+readonly PORT=$(/mmfs1/sw/pyenv/versions/3.9.5/bin/python -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
+cat 1>&2 <<END
+1. SSH tunnel from your workstation using the following command:
+
+   ssh -N -L 8787:${HOSTNAME}:${PORT} ${APPTAINERENV_USER}@klone.hyak.uw.edu
+
+   and point your web browser to http://localhost:8787
+
+2. log in to RStudio Server using the following credentials:
+
+   user: ${APPTAINERENV_USER}
+   password: ${APPTAINERENV_PASSWORD}
+
+When done using RStudio Server, terminate the job by:
+
+1. Exit the RStudio Session ("power" button in the top right corner of the RStudio window)
+2. Issue the following command on the login node:
+
+      scancel -f ${SLURM_JOB_ID}
+END
+
+source /etc/bashrc
+module load apptainer
+
+apptainer exec --cleanenv --home ${RSTUDIO_CWD} ${RSTUDIO_CWD}/${RSTUDIO_SIF} \
+    rserver --www-port ${PORT} \
+            --auth-none=0 \
+            --auth-pam-helper-path=pam-helper \
+            --auth-stay-signed-in-days=30 \
+            --auth-timeout-minutes=0 \
+            --rsession-path=/etc/rstudio/rsession.sh \
+            --server-user=${APPTAINERENV_USER}
+
+APPTAINER_EXIT_CODE=$?
+echo "rserver exited $APPTAINER_EXIT_CODE" 1>&2
+exit $APPTAINER_EXIT_CODE
