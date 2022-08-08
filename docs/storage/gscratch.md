@@ -9,9 +9,9 @@ Every user has a [home directory](#user-home-directory) by default, most users h
 
 ## Understanding Block and Inode Quotas
 
-Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. 
+Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time.
 
-:::info 
+:::info
 Learn more about inodes [here](https://www.admin-magazine.com/HPC/Articles/What-Is-an-Inode).
 :::
 
@@ -22,16 +22,28 @@ The `hyakstorage` command is unique to KLONE and a tool to monitor your storage 
 
 ```shell-session terminal=true
 $ hyakstorage --help
-usage: hyakstorage_query.py [-h] [-u] [-g [GROUP]]
+usage: hyakstorage [-h] [-m] [-g] [-c] [-p] [-u] [-f | -d] [path or groupname]
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -u, --home
-  -g [GROUP], --group [GROUP]
+  -h, --help         show this help message and exit
+  -f, --by-files     sort by file usage
+  -d, --by-disk      sort by disk usage
+
+selection options:
+  -m, --home         print storage report for my home directory
+  -g, --gscratch     print storage report for my gscratch directories
+  -c, --contrib      print storage report for my contrib directories
+
+view options:
+  -p, --show-group   show usage by groups
+  -u, --show-user    show usage by users
+
+search option:
+  path or groupname  show usage for this path or group
 $
 ```
 
-If you run `hyakstorage` without any arguments you'll receive the status of your home and all group (or lab) directories you have access to.
+If you run `hyakstorage` without any arguments you'll receive the status of your home and all group (or lab) directories you have access to. The viewing options, `--show-group` and `--show-user`, will show a more detailed breakdown of storage use by group & users. By default, those detailed views will be sorted by disk usage (i.e. `--by-disk`), but you can also sort by files owned with `--by-files`.
 
 :::note
 The quotas reported by `hyakstorage` are updated once every hour.
@@ -61,18 +73,17 @@ To check your home directory quota on MOX.
 mmlsquota --block-size G gscratch:home
 ```
 
-You can check your home directory usage using the `hyakstorage` command without the `--home` flag but it will also display all the lab or group quotas you have access to. As you can see below from the `hyakstorage` output on KLONE, I am currently using 9GB out of a 10GB block quota and 26,652 inodes (i.e., files) out of a 256,000 inode quota.
+You can check your home directory usage using the `hyakstorage` command without the `--home` flag but it will also display all the lab or group quotas you have access to. As you can see below from the `hyakstorage` output on KLONE, I am currently using 4GB out of a 10GB block quota and 4,764 inodes (i.e., files) out of a 256,000 inode quota.
 
 ```shell-session terminal=true
-$ hyakstorage --home 
-                 Usage report for home directory: '/mmfs1/home/npho/.usage_report.txt'                 
-╭──────┬──────┬──────────┬──────────┬───────────┬──────────┬───────┬───────────┬──────────┬───────────╮
-│ Name │ Type │ Use (GB) │    Quota │     Limit │    Grace │ Files │     Files │    Files │     Files │
-│      │      │          │     (GB) │      (GB) │   Period │       │     Quota │    Limit │     Grace │
-├──────┼──────┼──────────┼──────────┼───────────┼──────────┼───────┼───────────┼──────────┼───────────┤
-│ npho │  USR │        9 │       10 │        11 │     none │ 26652 │    256000 │   281600 │      none │
-╰──────┴──────┴──────────┴──────────┴───────────┴──────────┴───────┴───────────┴──────────┴───────────╯
-                           Updated hourly. Last update: 06/22/22 at 01:04PM.     
+$ hyakstorage --home
+                           Usage report for /mmfs1/home/mwanek
+╭──────────────────────┬────────────────────────────────┬────────────────────────────────╮
+│                      │ Disk Usage                     │ Files Usage                    │
+├──────────────────────┼────────────────────────────────┼────────────────────────────────┤
+│ Total:               │ 4GB / 10GB                     │ 4764 / 256000 files            │
+│                      │ 40%                            │ 2%                             │
+╰──────────────────────┴────────────────────────────────┴────────────────────────────────╯
 ````
 
 Ideally you only keep personal code bases or smaller data sets here. This quota can not be changed, if you need more data one of the other storage spots on `gscratch` (e.g., lab folder, scrubbed) are better suited.
@@ -99,7 +110,7 @@ Check group quotas and current use with the `hyakstorage` command.
 Snapshots are done once an hour for 24 hours on every `/gscratch/mylab/` folder on KLONE. SNAPSHOTS ARE NOT BACKUP! If you need to recover something navigate to the base directory of your lab folder in gscratch and look in the `.snapshots` folder like below. You can navigate to any point in time there is a snapshot and copy back out any file that existed in the recent past.
 
 ```shell-session terminal=true
-$ ls -alh /gscratch/stf/.snapshots 
+$ ls -alh /gscratch/stf/.snapshots
 total 15K
 dr-xr-xr-x 2 root root 8.0K Feb 13 14:02 .
 drwxrws--- 5 root stf   512 Mar  9 14:57 ..
@@ -116,7 +127,7 @@ drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-01.00.01
 drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-02.00.01
 drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-03.00.01
 drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-04.00.01
-$ 
+$
 ```
 
 ## Scrubbed
