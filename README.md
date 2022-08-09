@@ -1,6 +1,6 @@
 # UW Research Computing Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/44ad94a8-c61e-48c0-92c2-5ee9d604e4df/deploy-status)](https://app.netlify.com/sites/hyak/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/44ad94a8-c61e-48c0-92c2-5ee9d604e4df/deploy-status)](https://app.netlify.com/sites/hyak/overview)
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator. SVG logos provided using [VectorLogoZone](https://www.vectorlogo.zone) or [logosear.ch](https://logosear.ch). Using the offline search plugin from [@lelouch77](https://github.com/lelouch77/docusaurus-lunr-search).
 
