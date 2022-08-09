@@ -97,6 +97,21 @@ export default function team() {
         </div>
       </div>
 
+      <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
+            src="/img/avatar/avatar_uws_uwit.png"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">We are hiring!</h4>
+            <small class="avatar__subtitle">
+              HPC Staff Scientist, apply <a href="https://uwhires.admin.washington.edu/eng/candidates/default.cfm?szCategory=jobprofile&szOrderID=206944&szCandidateID=0&szSearchWords=hpc&szReturnToSearch=1">here</a>.
+            </small>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <br />
