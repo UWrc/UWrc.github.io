@@ -26,16 +26,16 @@ export default function Pricing() {
           <div class="col">
             <a name="condo-model" />
             <h3>Condo Model</h3>
-            <p>The HYAK clusters operate on a condo model. This means that the cluster is itself a contribution of nodes from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their nodes beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any nodes they wish to contribute.</p>
-            <p>Whatever nodes your group contributes to the cluster you get access to on-demand. A cluster account also provides you access to all the other contributed nodes from other labs, subject to their availability (i.e., if the contributing labs aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but historically this has been 5 hours of continuous segments on average. Longer checkpoint jobs will continue to run and be re-queued until it completes, which is why it is important that your job be able to checkpoint or save state to resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware and setting up your own dedicated mini server.</p>
+            <p>The HYAK clusters operate on a condo model. This means that the cluster is itself a contribution of resource slices from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their nodes beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
+            <p>Whatever slices your group contributes to the cluster you get access to on-demand. A cluster account also provides you access to all the other contributed nodes from other labs, subject to their availability (i.e., if the contributing labs aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but historically this has been 5 hours of continuous segments on average. Longer checkpoint jobs will continue to run and be re-queued until it completes, which is why it is important that your job be able to checkpoint or save state to resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware and setting up your own dedicated mini server.</p>
             Therefore, the total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components.
             <ol>
-              <li><a href="#node-cost-annual">Node Annual Costs</a></li>
-              <li><a href="#node-cost-hardware">Node Hardware Costs</a></li>
+              <li><a href="#slice-cost-annual">Slice Annual Costs</a></li>
+              <li><a href="#slice-cost-hardware">Slice Hardware Costs</a></li>
             </ol>
 
-            <a name="node-cost-annual" />
-            <h3>Node Annual Costs</h3>
+            <a name="slice-cost-annual" />
+            <h3>Slice Annual Costs</h3>
 
             <div class="row">
   
@@ -43,12 +43,12 @@ export default function Pricing() {
                 <div class="card-demo">
                   <div class="card">
                     <div class="card__header">
-                      <h5>Self-Sponsored Nodes (Annual)</h5>
+                      <h5>Self-Sponsored Slices (Annual)</h5>
                       <h3>$1,750 / 1 node / 1 year</h3>                      
                     </div>
                     <div class="card__footer">
-                      <a href="mailto:help@uw.edu?subject=buy hyak (self-sponsored) nodes&body=I would like to get some hyak self-sponsored nodes.">
-                      <button class="button button--secondary button--block">Get Self-Sponsored Nodes</button></a>
+                      <a href="mailto:help@uw.edu?subject=buy hyak (self-sponsored) slices&body=I would like to get some hyak self-sponsored slices.">
+                      <button class="button button--secondary button--block">Get Self-Sponsored Slices</button></a>
                     </div>
                     <div class="card__body">
                       What's included?
@@ -61,9 +61,9 @@ export default function Pricing() {
                         <li>Next business day support for questions.</li>
                         <li>24 / 7 / 365 monitoring of the cluster as a whole.</li>
                         <li>Regular (cyber)security patching and updates.</li>
-                        <li>Historical uptimes better than 1.5 x 9's for the cluster.</li>
+                        <li>Historical uptimes better than 99% for the cluster not including previously scheduled maintenance days.</li>
                       </ul>
-                      <p>NOTE: Nodes purchased separately (below).</p>
+                      <p>NOTE: Slices purchased separately (below).</p>
                     </div>                    
                   </div>
                 </div>
@@ -73,21 +73,21 @@ export default function Pricing() {
                 <div class="card-demo">
                   <div class="card">
                     <div class="card__header">
-                      <h5>Sponsored Nodes (Annual)</h5>
+                      <h5>Sponsored Slices (Annual)</h5>
                       <h3>$0 / year</h3>
                     </div>
                     <div class="card__footer">
-                    <a href="mailto:help@uw.edu?subject=buy hyak (sponsored) nodes&body=I would like to get some hyak sponsored nodes.">
-                      <button class="button button--secondary button--block">Get Sponsored Nodes</button></a>
+                    <a href="mailto:help@uw.edu?subject=buy hyak (sponsored) slices&body=I would like to get some hyak sponsored slices.">
+                      <button class="button button--secondary button--block">Get Sponsored Slices</button></a>
                     </div>
                     <div class="card__body">
                     What's included?
                       <ul class="check">
-                        <li>Everything that comes with self-sponsored nodes.</li>
-                        <li>Node lifetime guaranteed for a minimum of 4 years.</li>
-                        <li>No annual costs beyond the up front cost of the nodes.</li>
+                        <li>Everything that comes with self-sponsored slices.</li>
+                        <li>Slice lifetime guaranteed for a minimum of 4 years.</li>
+                        <li>No annual costs beyond the up front cost of the slices.</li>
                       </ul>
-                      <p>NOTE: Nodes purchased separately (below).</p>
+                      <p>NOTE: Slices purchased separately (below).</p>
                     </div>
                   </div>
                 </div>
@@ -98,11 +98,11 @@ export default function Pricing() {
             <br />
 
             <p>
-              If your lab has a faculty affiliation with a sponsoring entity (listed below), then you are only responsible for a one time, up front cost of the node quantities you would like. You get 4 years of guaranteed and fully supported utilization per node and beyond that subject to capacity and other conditions. You can skip down to the section below for specific node configurations.
+              If your lab has a faculty affiliation with a sponsoring entity (listed below), then you are only responsible for a one time, up front cost of the slice quantities you would like. You get 4 years of guaranteed and fully supported utilization per slice and beyond that subject to capacity and other conditions. You can skip down to the section below for specific slice configurations.
             </p>
 
             <p>
-              If your lab does <u>not</u> have a faculty affiliation with a sponsoring entity (listed below), then there is an annual cost of $1,750 per 1 node per 1 year.
+              If your lab does <u>not</u> have a faculty affiliation with a sponsoring entity (listed below), then there is an annual cost of $1,750 per 1 slice per 1 year.
             </p>
 
             <b>Sponsors</b>:
@@ -119,18 +119,18 @@ export default function Pricing() {
               <li>UW Tacoma</li>
             </ul>
 
-            <a name="node-cost-hardware" />
-            <h3>Node Hardware Configurations</h3>
+            <a name="slice-cost-hardware" />
+            <h3>Slice Hardware Configurations</h3>
             <table style={{"margin-left": "auto", "margin-right": "auto", "text-align": "center"}}>
               <tr>
                 <td>Type</td>
-                <td colspan="4">HPC Nodes</td>
-                <td colspan="2">GPU Nodes</td>
+                <td colspan="4">HPC Slices</td>
+                <td colspan="2">GPU Slices</td>
               </tr>
               <tr>
-                <td>Node Count</td>
-                <td colspan="4">1 x HPC node</td>
-                <td colspan="2">1 x GPU node</td>
+                <td>Slice Count</td>
+                <td colspan="4">1 x HPC slice</td>
+                <td colspan="2">1 x GPU slice</td>
               </tr>
               <tr>
                 <td>Name</td>
@@ -168,8 +168,8 @@ export default function Pricing() {
               </tr>
               <tr>
                 <td>Pricing ($)</td>
-                <td colspan="4"><a href="mailto:help@uw.edu?subject=hyak hpc node pricing&body=I am curious about the latest HPC node pricing.">Email Us</a></td>
-                <td colspan="2"><a href="mailto:help@uw.edu?subject=hyak gpu node pricing&body=I am curious about the latest GPU node pricing.">Email Us</a></td>
+                <td colspan="4"><a href="mailto:help@uw.edu?subject=hyak hpc slice pricing&body=I am curious about the latest HPC slice pricing.">Email Us</a></td>
+                <td colspan="2"><a href="mailto:help@uw.edu?subject=hyak gpu slice pricing&body=I am curious about the latest GPU slice pricing.">Email Us</a></td>
               </tr>
             </table>
 
@@ -178,34 +178,34 @@ export default function Pricing() {
               <ul>
                 <li>All hardware is procured at cost (market value with substantial university negotiated bulk discounts) and no sales tax or university overhead applied.</li>
                 <li>We reserve the 2nd Tuesday of every month for cluster maintenance.</li>
-                <li><b>Node Service Life</b>:</li>
+                <li><b>Slice Service Life</b>:</li>
                 <ul>                  
-                  <li>Sponsored Nodes: All sponsored nodes are supported for a minimum guaranteed lifetime of 4 years. Beyond 4 years all nodes are continued to be made available subject to hardware viability (i.e., it didn't break) and the sponsoring entity still having capacity. Historically, this has been 6 years on average. However, past performance is not a <i>guarantee</i> of future experiences.</li>
-                <li>Self-Sponsored Nodes: Since self-sponsored nodes have an on-going annual cost, this means node life is reviewed on a yearly basis subject to the lab's willingness to continue, hardware viability, and overall cluster capacity.</li>
+                  <li>Sponsored Slices: All sponsored slices are supported for a minimum guaranteed lifetime of 4 years. Beyond 4 years all slices are continued to be made available subject to hardware viability (i.e., it didn't break) and the sponsoring entity still having capacity. Historically, this has been 6 years on average. However, past performance is not a <i>guarantee</i> of future experiences.</li>
+                <li>Self-Sponsored Slices: Since self-sponsored slices have an on-going annual cost, this means slice life is reviewed on a yearly basis subject to the lab's willingness to continue, hardware viability, and overall cluster capacity.</li>
                 </ul>
                 <li><b>Storage</b>:</li>
                 <ul>
-                  <li>Local: Each node comes with 480GB of local SSD. This is non-persistent storage and is cleared after a job ends. Data must be copied to and from local SSD before and after each job to utilize this.</li>
+                  <li>Local: Each slice comes with 480GB of local SSD. This is non-persistent storage and is cleared after a job ends. Data must be copied to and from local SSD before and after each job to utilize this.</li>
                   <li>Group: Each node purchase comes with 1TB per node of scalable, shared, group storage (i.e., gscratch). Additional storage can be purchased for $10 / 1 TB / 1 month or free options exist such as scrubbed.</li>
                 </ul>
               </ul>
-              HPC Nodes:
+              HPC Slices:
               <ul>
-                <li>All nodes are standardized on Intel 6230 CPUs ("Cascade Lake").</li>
-                <li>Each node is a physical server.</li>
+                <li>All slices are standardized on Intel 6230 CPUs ("Cascade Lake").</li>
+                <li>Each slice is a physical server (or node).</li>
                 <li>They are identically configured with your choice of memory (or RAM).</li>
                 <li>Any jobs requiring multiple nodes should be prepared to be independent computations (i.e., "embarassingly parallel") or make use of message passing libraries (e.g., OpenMPI) to scale across multiple nodes simultaneously.</li>
               </ul>
-              GPU Nodes:
+              GPU Slices:
               <ul>
-              <li>All nodes are standardized on Intel 6230R CPUs ("Cascade Lake"). We are on the NVIDIA "Ampere" generation of GPUs.</li>
-                <li>4 x GPU nodes constitutes a single physical server. It is a single box with 52-cores, 1TB of memory, and 8 x GPUs of the sampe type. They are sold in node slices to make this a more tractible cost for labs with more modest GPU needs.</li>
+              <li>All slices are standardized on Intel 6230R CPUs ("Cascade Lake"). We are on the NVIDIA "Ampere" generation of GPUs.</li>
+                <li>4 x GPU slices constitutes a single physical server (or node). It is a single box with 52-cores, 1TB of memory, and 8 x GPUs of the sampe type. They are sold in resource slices to make this a more tractible cost for labs with more modest GPU needs.</li>
                 <li>Any jobs requiring more than 8 x GPUs of the same type should be prepared to make use of message passing libraries (e.g., PyTorch Lightning) to scale across multiple servers. Any job up to the equivalent of 4 x GPU nodes (i.e., 8 x GPU cards) can be run on the same physical machine and therefore scale easily without much further modification to the codebase.</li>
               </ul>
             </p>
 
-            <a href="mailto:help@uw.edu?subject=buying hyak nodes&body=I would like to get some hyak nodes.">
-            <button class="button button--secondary button--block">Buy Nodes</button></a>
+            <a href="mailto:help@uw.edu?subject=buying hyak slices&body=I would like to get some hyak slices.">
+            <button class="button button--secondary button--block">Buy Slices</button></a>
 
           </div>
         </div>
