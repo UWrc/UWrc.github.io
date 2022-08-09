@@ -1,5 +1,5 @@
 ---
-slug: terms-reset
+slug: terminology-reset
 title: Terminology Reset
 author: Nam Pho
 author_title: Director for Research Computing
