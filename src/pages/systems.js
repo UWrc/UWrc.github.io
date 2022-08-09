@@ -44,6 +44,9 @@ export default function systems() {
               <td align="right">Service</td><td>October 2010 — June 2020</td>
             </tr>
             <tr>
+              <td align="right">Operating System</td><td>CentOS 6</td>
+            </tr>            
+            <tr>
               <td align="right">Compute</td><td>8,008 CPU cores [Broadwell]</td>
             </tr>
             <tr>
@@ -66,13 +69,16 @@ export default function systems() {
         <TabItem value="mox">
           <table>
             <tr>
-              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="/img/systems/ikt.jpg" /></td>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="/img/systems/mox.jpg" /></td>
             </tr>
             <tr>
               <td align="right">Cluster</td><td><code>mox</code></td>
             </tr>
             <tr>
               <td align="right">Service</td><td>June 2018 — June 2024 (Estimated)</td>
+            </tr>
+            <tr>
+              <td align="right">Operating System</td><td>CentOS 7</td>
             </tr>
             <tr>
               <td align="right">Compute</td><td>18,376 CPU cores [Cascade Lake]</td>
@@ -104,6 +110,9 @@ export default function systems() {
             </tr>
             <tr>
               <td align="right">Service</td><td>January 2021 — Present</td>
+            </tr>
+            <tr>
+              <td align="right">Operating System</td><td>Rocky 8</td>
             </tr>
             <tr>
               <td align="right">Compute</td><td>18,376 CPU cores [Cascade Lake, Ice Lake]</td>

@@ -34,6 +34,9 @@ module.exports = {
       'tools/jupyter',
       'tools/matlab',
     ],
+    'Miscellaneous': [
+      'glossary',
+    ],
     'Contribution Guides': [
       'contribute/markdown-guide',
       'contribute/link-markdown',
