@@ -41,8 +41,8 @@ apptainer pull docker://r-base:4.0.3
 Be sure to do this from a build node, you need to be routed to the internet to resolve Dockerhub so you can download and have compute resources to do the image conversion from a Docker to Apptainer container.
 
 ```shell-session terminal=true
-$ module load singularity
-$ singularity pull docker://r-base:4.0.3
+$ module load apptainer
+$ apptainer pull docker://r-base:4.0.3
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Getting image source signatures
@@ -107,7 +107,7 @@ The Rocker Project [[www](https://www.rocker-project.org)] manages popular Docke
 apptainer pull docker://rocker/tidyverse:4.0.1
 ```
 
-Prior instructions on R [user environment](#user-environment) apply but once downloaded (the Docker to Singularity conversion will take a few minutes), it will create a separate SIF file as shown below.
+Prior instructions on R [user environment](#user-environment) apply but once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
 
 ```shell-session terminal=true
 $ apptainer pull docker://rocker/tidyverse:4.0.1
