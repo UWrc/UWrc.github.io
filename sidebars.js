@@ -29,6 +29,7 @@ module.exports = {
       'tools/modules',
       'tools/compilers',
       'tools/containers',
+      'tools/modules-containers',
       'tools/r',
       'tools/python',
       'tools/jupyter',
