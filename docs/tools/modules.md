@@ -59,6 +59,23 @@ The KLONE cluster uses the more feature-rich LMOD implementation of modules. You
 
 LMOD [[documentation](https://lmod.readthedocs.io/en/latest/)] [[project page](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)] is an upgraded implementation of environment modules created by the Texas Advanced Computing Center (TACC) at the University of Texas.
 
+### Login vs Compute Node
+
+Modules are meant to be set up for programs used in intensive computing; they should only be loaded on compute nodes. To reinforce this point the `modules` command does not exist on the login nodes. If you try to run the `module` command you will receive a warning message. This warning is benign and you can even disable it if you have `modules` loading in your start up shell file (e.g., `.bashrc`, `.zshrc`).
+
+If you wanted to be more discerning, the logic is useful to include in your start up shell file for identifying if the host is a login node then running certain commands only if this is the case (or not).
+
+```
+export LOGIN_NODE=$(hostname | grep -q '^klone1' ; echo $?)
+
+if [[ $LOGIN_NODE ]]
+then
+	echo "This is a login node"
+else
+	echo "This is a compute node"
+fi
+```
+
 ### How do I create personal LMOD modules on KLONE?
 
 This advanced user documentation page from the LMOD developers walks you through this [[link](https://lmod.readthedocs.io/en/latest/020_advanced.html)]. You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
