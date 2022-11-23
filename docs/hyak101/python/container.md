@@ -129,6 +129,7 @@ Before we continue, here's a quick overview of what kind of activities are allow
 :::important Important: Klone-Login Acceptable Uses
 
 1. Downloading to or uploading from the cluster.
+1. File management like moving, copying, or renaming files and directories.
 1. Light text editing with `vim` or a worse text editor.
 1. Interacting with the Slurm scheduler, i.e. to submit jobs.
 
@@ -146,14 +147,14 @@ Here's an SBATCH script we can use to build our container (like with the definit
 ```bash title="~/container-build.job"
 #!/bin/bash
 #SBATCH --job-name=container-build
-#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=16GB
 #SBATCH --partition=ckpt
 #SBATCH --time=60
 
 //highlight-start
 mkdir /tmp/$USER
-apptainer build --fakeroot /tmp/$USER/hyak-container.sif ~/hyak-container.def
+apptainer build /tmp/$USER/hyak-container.sif ~/hyak-container.def
 cp /tmp/$USER/hyak-container.sif ~
 //highlight-end
 ```
@@ -169,7 +170,6 @@ This job is only a few commands, so let's go through them real quick. First:
 Then, the build:
 
 - `apptainer build`: the Apptainer executable and subcommand.
-- `--fakeroot`: this option allows unpriviledged users (us) to run the container while appearing to be root. Documentation [here](https://apptainer.org/docs/user/main/fakeroot.html).
 - `/tmp/$USER/hyak-container.sif`: a temporary place to build the container image. **Important**: building the image in `/tmp/$USER` avoids permissions issues with GPFS, so don't skip this.
 - `~/hyak-container.def`: the path to the container definition we made in our home directory.
 

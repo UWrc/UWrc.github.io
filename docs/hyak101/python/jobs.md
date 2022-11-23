@@ -16,7 +16,7 @@ it to your home directory, and we'll go through it.
 ```bash title="~/jupyter-server.job"
 #!/bin/bash
 #SBATCH --job-name=klone-container
-#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
 #SBATCH --mem=16GB
 #SBATCH --partition=ckpt
 #SBATCH --time=4:00:00
@@ -153,7 +153,7 @@ just use all the shortcuts we created.
 ```shell terminal=true
 $ ssh klone-login
 [UWNetID@klone-login01 ~]$ salloc --account=uwit --partition=ckpt \
---ntasks=1 --mem=16G \
+--cpus-per-task=1 --mem=16G \
 //highlight-next-line
 --job-name=klone-container
 salloc: Pending job allocation 1234567
@@ -222,7 +222,7 @@ Now we'll make an SBATCH script, where we pass this script to our container:
 ```bash title="~/research.job"
 #!/bin/bash
 #SBATCH --job-name=research
-#SBATCH --ntasks=8
+#SBATCH --cpus-per-task=8
 #SBATCH --mem=64GB
 //highlight-start
 #SBATCH --account=uwit
@@ -255,7 +255,7 @@ All we need to do here is add a single step to our interactive job setup.
 #### 1. Start an interactive job named 'klone-container'
 ```shell terminal=true
 [UWNetID@klone-login01 ~]$ salloc --account=uwit --partition=ckpt \
---ntasks=1 --mem=16G \
+--cpus-per-task=1 --mem=16G \
 //highlight-next-line
 --job-name=klone-container
 # Truncated Slurm output

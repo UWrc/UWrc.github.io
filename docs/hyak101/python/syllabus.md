@@ -19,8 +19,7 @@ We are working on the Windows instructions, and will update the hyak-users maili
 
 :::note
 
-We have tried to write this with the least amount of jargon, to keep this guide generally accessible, but parts
-will be challenging for novices.
+Parts of this guide will be challenging for novices.
 There is a small amount of Bash programming involved, and while most can be copy & pasted, you may run into difficulties
 if you need to make modifications.
 

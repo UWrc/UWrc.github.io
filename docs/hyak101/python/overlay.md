@@ -9,11 +9,11 @@ Let's get started!
 
 ## Creating a mutable overlay
 First, we'll use our new `ssh` shortcut to get onto the login node.
-Then, we'll request an interactive job in the `ckpt` partition with a single task (which allocates 1 CPU by default) and 16GB of memory:
+Then, we'll request an interactive job in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory:
 
 ```shell terminal=true
 $ ssh klone-login
-$ salloc --partition=ckpt --ntasks=1 --mem=16G --job-name=klone-container
+$ salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=klone-container
 ```
 
 Now that we're on a node, in a job named "klone-container", we can create our overlay.
