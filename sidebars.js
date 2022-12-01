@@ -35,6 +35,13 @@ module.exports = {
       'tools/jupyter',
       'tools/matlab',
     ],
+    'Hyak 101: Python': [
+      'hyak101/python/syllabus',
+      'hyak101/python/container',
+      'hyak101/python/ssh',
+      'hyak101/python/overlay',
+      'hyak101/python/jobs'
+    ],
     'Miscellaneous': [
       'glossary',
     ],
