@@ -107,29 +107,6 @@ Your lab storage quota can be increased (or decreased) in 1 TB granularity and a
 Check group quotas and current use with the `hyakstorage` command.
 :::
 
-Snapshots are done once an hour for 24 hours on every `/gscratch/mylab/` folder on KLONE. SNAPSHOTS ARE NOT BACKUP! If you need to recover something navigate to the base directory of your lab folder in gscratch and look in the `.snapshots` folder like below. You can navigate to any point in time there is a snapshot and copy back out any file that existed in the recent past.
-
-```shell-session terminal=true
-$ ls -alh /gscratch/stf/.snapshots
-total 15K
-dr-xr-xr-x 2 root root 8.0K Feb 13 14:02 .
-drwxrws--- 5 root stf   512 Mar  9 14:57 ..
-drwxrws--- 3 root stf   512 Mar  8 20:22 @GMT-2021.03.09-17.03.01
-drwxrws--- 3 root stf   512 Mar  8 20:22 @GMT-2021.03.09-17.16.01
-drwxrws--- 3 root stf   512 Mar  8 20:22 @GMT-2021.03.09-18.00.01
-drwxrws--- 4 root stf   512 Mar  9 10:05 @GMT-2021.03.09-19.00.01
-drwxrws--- 4 root stf   512 Mar  9 10:05 @GMT-2021.03.09-20.00.01
-drwxrws--- 4 root stf   512 Mar  9 10:05 @GMT-2021.03.09-21.00.01
-drwxrws--- 4 root stf   512 Mar  9 10:05 @GMT-2021.03.09-22.00.01
-drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.09-23.00.01
-drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-00.00.01
-drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-01.00.01
-drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-02.00.01
-drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-03.00.01
-drwxrws--- 5 root stf   512 Mar  9 14:57 @GMT-2021.03.10-04.00.01
-$
-```
-
 ## Scrubbed
 
 - Free to use but files auto-deleted beyond 21 days.
