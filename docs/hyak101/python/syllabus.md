@@ -72,8 +72,8 @@ help cement some of the best practices for *Hyak*, and make building a workflow 
 
 1. [Building a Container](https://hyak.uw.edu/docs/hyak101/python/container):
    - [The briefest introduction to containers](https://hyak.uw.edu/docs/hyak101/python/container#the-briefest-introduction-to-containers),
-   - [Our general-purpose container definition](https://hyak.uw.edu/docs/hyak101/python/container/#our-general-purpose-container-definition),
-   - [Building containers on Hyak](https://hyak.uw.edu/docs/hyak101/python/container/#building-containers-on-hyak).
+   - [Our general-purpose container definition](https://hyak.uw.edu/docs/hyak101/python/container#our-general-purpose-container-definition),
+   - [Building containers on Hyak](https://hyak.uw.edu/docs/hyak101/python/container#building-containers-on-hyak).
 
 1. [Flexible Connections](https://hyak.uw.edu/docs/hyak101/python/ssh):
    - [Spending some time on SSH](https://hyak.uw.edu/docs/hyak101/python/ssh#spending-some-time-on-ssh),
