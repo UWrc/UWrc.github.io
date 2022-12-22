@@ -70,26 +70,26 @@ help cement some of the best practices for *Hyak*, and make building a workflow 
 ## Course Content
 
 
-1. [Building a Container](container):
-   - [The briefest introduction to containers](container#the-briefest-introduction-to-containers),
-   - [Our general-purpose container definition](container#the-briefest-introduction-to-containers),
-   - [Building containers on Hyak](container#the-briefest-introduction-to-containers).
+1. [Building a Container](https://hyak.uw.edu/docs/hyak101/python/container):
+   - [The briefest introduction to containers](https://hyak.uw.edu/docs/hyak101/python/container#the-briefest-introduction-to-containers),
+   - [Our general-purpose container definition](https://hyak.uw.edu/docs/hyak101/python/container/#our-general-purpose-container-definition),
+   - [Building containers on Hyak](https://hyak.uw.edu/docs/hyak101/python/container/#building-containers-on-hyak).
 
-1. [Flexible Connections](ssh):
-   - [Spending some time on SSH](ssh#spending-some-time-on-ssh),
-   - [Your configuration on the cluster](ssh#your-configuration-on-the-cluster),
-   - [A set of customized, local configurations](ssh#a-set-of-customized-local-configurations).
+1. [Flexible Connections](https://hyak.uw.edu/docs/hyak101/python/ssh):
+   - [Spending some time on SSH](https://hyak.uw.edu/docs/hyak101/python/ssh#spending-some-time-on-ssh),
+   - [Your configuration on the cluster](https://hyak.uw.edu/docs/hyak101/python/ssh#your-configuration-on-the-cluster),
+   - [A set of customized, local configurations](https://hyak.uw.edu/docs/hyak101/python/ssh#a-set-of-customized-local-configurations).
 
-1. [Working in the Overlay](overlay):
-   - [Creating a mutable overlay](overlay#creating-a-mutable-overlay),
-   - [A direct line to the node](overlay#a-direct-line-to-the-node),
-   - [Installing Miniconda](overlay#installing-miniconda),
-   - [Configuring Jupyter](overlay#configuring-jupyter).
+1. [Working in the Overlay](https://hyak.uw.edu/docs/hyak101/python/overlay):
+   - [Creating a mutable overlay](https://hyak.uw.edu/docs/hyak101/python/overlay#creating-a-mutable-overlay),
+   - [A direct line to the node](https://hyak.uw.edu/docs/hyak101/python/overlay#a-direct-line-to-the-node),
+   - [Installing Miniconda](https://hyak.uw.edu/docs/hyak101/python/overlay#installing-miniconda),
+   - [Configuring Jupyter](https://hyak.uw.edu/docs/hyak101/python/overlay#configuring-jupyter).
 
-1. [Interactivity & Jobs](jobs):
-   - [Open up Jupyter](jobs#open-up-jupyter),
-   - [Using Conda and Slurm](jobs#using-conda-and-slurm),
-   - [Connect with VSCode](jobs#connect-with-vscode).
+1. [Interactivity & Jobs](https://hyak.uw.edu/docs/hyak101/python/jobs):
+   - [Open up Jupyter](https://hyak.uw.edu/docs/hyak101/python/jobs#open-up-jupyter),
+   - [Using Conda and Slurm](https://hyak.uw.edu/docs/hyak101/python/jobs#using-conda-and-slurm),
+   - [Connect with VSCode](https://hyak.uw.edu/docs/hyak101/python/jobs#connect-with-vscode).
 
 :::info Acknowledgements
 Special thanks goes out to the researchers who volunteered their time to provide feedback and testing for these instructions.

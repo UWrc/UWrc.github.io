@@ -26,7 +26,7 @@ Apptainer containers are represented by a single file (normally suffixed `.sif`)
 We've already created the definition file we're going to use for this at `/mmfs1/sw/hyak101/python/hyak-container.def`.
 Start by making a copy of it in your home directory:
 ```shell terminal=true
-$ cp /mmfs1/sw/hyak101/hyak-container.def ~
+$ cp /mmfs1/sw/hyak101/python/hyak-container.def ~
 ```
 
 Now, let's take a look at the different sections of the definition, starting from the top.
@@ -188,18 +188,18 @@ Regardless of where you put the final container image, make sure the destination
 
 :::tip
 You can use the `hyakstorage` command to see your file & space quotas, in your home directory and the gscratch directories you can access.
-[Here's](../storage/gscratch#checking-utilization-hyakstorage) our documentation for that command.
+[Here's](https://hyak.uw.edu/docs/storage/gscratch#checking-utilization-hyakstorage) our documentation for that command.
 :::
 
 ### Submitting the job
 We've arrived at the part where, if it were necessary, you would submit the job to create this container.
 The job itself takes a bit longer than half an hour, since we're installing an operating system and the whole set of basic utilities.
 However, if you didn't modify the container definition, you don't actually need to build this one (or, rebuild, I should say):
-it's already created, and you can find it `/mmfs1/sw/hyak101/hyak-container.sif`.
+it's already created, and you can find it `/mmfs1/sw/hyak101/python/hyak-container.sif`.
 
 For the remainder of this guide, it'll be easiest if you create a link to it from your home directory, like this:
 ```shell terminal=true
-$ ln --symbolic /mmfs1/sw/hyak101/hyak-container.sif ~/hyak-container.sif
+$ ln --symbolic /mmfs1/sw/hyak101/python/hyak-container.sif ~/hyak-container.sif
 ```
 However, if you made some changes, or just want to observe the build process, all you would need to do (on the login node)
 is submit the job with `sbatch`:
