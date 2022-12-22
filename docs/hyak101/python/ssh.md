@@ -20,7 +20,7 @@ This will be fairly quick, but please note we will be doing some additional work
 
 ## Your configuration on the cluster
 There's really only one thing that needs to be set up on the cluster: your intracluster keys.
-Like many other parts of this guide, we [already have instructions](../setup/ssh#intracluster-ssh-keys) on this, but since we're keeping this guide self-contained, we'll go through it again here:
+Like many other parts of this guide, we [already have instructions](https://hyak.uw.edu/docs/setup/ssh#intracluster-ssh-keys) on this, but since we're keeping this guide self-contained, we'll go through it again here:
 
 If you haven't already done so, log in to the cluster & generate an intracluster SSH key:
 ```shell {1} terminal=true
