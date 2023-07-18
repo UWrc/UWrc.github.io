@@ -26,7 +26,7 @@ The Klone login node (i.e. `klone-login01` or `klone.hyak.uw.edu`) is a resource
 1. File management like moving, copying, or renaming files and directories.
 1. Light text editing with `vim` or a worse text editor.
 1. Interacting with the Slurm scheduler, i.e. to submit jobs.
-2. Running Hyak-built commands like `hyakalloc` or `hyakstorage`.
+1. Running Hyak-built commands like `hyakalloc` or `hyakstorage`.
 
 
 
