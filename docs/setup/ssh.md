@@ -15,7 +15,7 @@ You log into the `klone.hyak.uw.edu` cluster above at the terminal using your ne
 
 :::warning Monitoring & Warnings
 
-Login-node CPU and memory usage are closely monitored by automation. Any egregious use will result in immediate performance throttling, the severity of which escalates exponentially while the offending activity persists. You will receive warnings in your UW email from the monitoring system, *Arbiter2*, describing the crossed thresholds & the extent of the throttling.
+Login-node CPU and memory usage are closely monitored by automation. Any egregious use will result in immediate performance throttling, the severity of which escalates exponentially while the offending activity persists. Warnings describing the crossed thresholds & the extent of the throttling will be sent by our monitoring system, *Arbiter2*, to the email associated with your UW NetID.
 :::
 
 ### Acceptable Uses of the Login Node
