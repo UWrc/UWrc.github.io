@@ -35,5 +35,7 @@ Jobs submitted to checkpoint are limited in the following important ways:
 1. All checkpoint jobs are stopped & requeued every 4 hours.
 1. All checkpoint jobs can be stopped & requeued at any time—*without notice*—if a resource contributor requests their resource (this is the mechanism which provides on-demand access to contributed resources).
 
-Hence the name "checkpoint": all jobs submitted to this partition should be designed to save their progress at regular intervals, or "checkpoints."
+Jobs submitted to this partition should be designed to:
 
+1. Save their progress at regular intervals, or "checkpoints."
+2. Once resumed, start their work from the last saved "checkpoint."
