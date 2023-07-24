@@ -1,17 +1,7 @@
 ---
 id: account-activation
-title: Account Activation
+title: Two-Factor Authentication
 ---
-
-Your UW Net ID has been enabled for access to the Hyak system. You must
-now subscribe to the service. After you subscribe, it may take up to an
-hour for your account to be fully provisioned.
-
-1. Go to [uwnetid.washington.edu](https://uwnetid.washington.edu/manage/)
-2. Click the "Computing Services" link on the left
-3. Click the "Hyak Server" check box in the "Inactive Services" section
-4. Click the "Subscribe >" button at the bottom of the page
-5. Read the notice and click the "Finish" button
 
 UW policy is that all services (of which HYAK is one) require 2 factor authentication (2FA) by default as a security posture.
 

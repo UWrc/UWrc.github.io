@@ -9,6 +9,7 @@ module.exports = {
     'Setup': [
       'setup/index',
       'setup/ssh',
+      'setup/intracluster-keys',
       'setup/portforwarding',
       'setup/x11'
       //'setup/vscode',
@@ -22,6 +23,7 @@ module.exports = {
     'Compute': [
       'compute/slurm',
       'compute/scheduling-jobs',
+      'compute/checkpoint',
       'compute/resource-monitoring',
     ],
     'Tools & Software': [
