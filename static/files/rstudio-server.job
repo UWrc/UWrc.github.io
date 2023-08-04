@@ -15,7 +15,7 @@ RSTUDIO_CWD="/gscratch/scrubbed/" # update this line
 RSTUDIO_SIF="rstudio_4.1.3.sif" # update this line
 
 # Create temp directory for ephemeral content to bind-mount in the container
-RSTUDIO_TMP=$(python -c 'import tempfile; print(tempfile.mkdtemp())')
+RSTUDIO_TMP=$(/usr/bin/python3 -c 'import tempfile; print(tempfile.mkdtemp())')
 
 mkdir -p -m 700 \
         ${RSTUDIO_TMP}/run \
@@ -39,7 +39,7 @@ cat > ${RSTUDIO_TMP}/rsession.sh <<END
 
 export OMP_NUM_THREADS=${SLURM_JOB_CPUS_PER_NODE}
 export R_LIBS_USER=${RSTUDIO_CWD}
-exec rsession "\${@}"
+exec /usr/lib/rstudio-server/bin/rsession "\${@}"
 END
 
 chmod +x ${RSTUDIO_TMP}/rsession.sh
