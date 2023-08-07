@@ -1,56 +1,63 @@
 module.exports = {
-  someSidebar: {
-    'Get Started': [
-      'index',
-      'join-group',
-      'account-creation',
-      'account-activation',
+  docsSidebar: {
+    'Getting Started': [
+      'setup/klone-cluster',
+      'setup/first-steps',
     ],
-    'Setup': [
-      'setup/index',
-      'setup/ssh',
-      'setup/intracluster-keys',
-      'setup/portforwarding',
-      'setup/x11'
-      //'setup/vscode',
+    'Groups & Accounts': [
+      'accounts/account-creation',
+      'accounts/group-management',
     ],
-    'Storage': [
-      'storage/data',
-      'storage/gscratch',
-      'storage/transfer',
-      'storage/archive',
+    'Accessing Klone': [
+      'access/logging-in',
+      'access/ssh-keys',
     ],
     'Compute': [
-      'compute/slurm',
-      'compute/scheduling-jobs',
-      'compute/checkpoint',
-      'compute/resource-monitoring',
+      'compute/terminology',
+      'compute/tools',
+    ],
+    'Job Types': [
+      'jobs/interactive',
+      'jobs/batch',
+      'jobs/recurring',
+      'jobs/checkpoint',
+      'jobs/array',
+      'jobs/mpi',
+    ],
+    'Storage': [
+      'storage/terminology',
+      'storage/directory-structure',
+      'storage/datasets',
+      'storage/transferring-data',
+      'storage/other-services',
     ],
     'Tools & Software': [
-      'tools/software',
+      'tools/installation',
+      'tools/documentation',
       'tools/modules',
-      'tools/compilers',
+      'tools/uw-software',
       'tools/containers',
-      'tools/modules-containers',
       'tools/r',
       'tools/python',
-      'tools/jupyter',
-      'tools/matlab',
     ],
-    'Hyak 101: Python': [
-      'hyak101/python/syllabus',
-      'hyak101/python/container',
-      'hyak101/python/ssh',
-      'hyak101/python/overlay',
-      'hyak101/python/jobs'
+    'Hyak via SSH': [
+      'ssh/port-forwarding',
+      'ssh/x11-forwarding',
+      'ssh/advanced-topics',
     ],
-    'Miscellaneous': [
-      'glossary',
+    'Hyak OnDemand': [
+      'ondemand/overview',
+      'ondemand/files',
+      'ondemand/job-composer',
+      'ondemand/interactive-apps',
     ],
     'Contribution Guides': [
       'contribute/markdown-guide',
       'contribute/link-markdown',
       'contribute/mdx',
+    ],
+    'Miscellaneous': [
+      'miscellaneous/glossary',
     ],
   }
 };
