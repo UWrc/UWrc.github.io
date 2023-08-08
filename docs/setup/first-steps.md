@@ -16,7 +16,10 @@ Outside of these two recurring messages, we only send urgent operational updates
 
 ## Enable two-factor authentication
 
-Use the UW Portal.
+UW security policy requires two-factor authentication (2FA) for many of its services, including Hyak.
+
+You can learn more about 2FA at UW, including how to enroll and manage your settings, in the UW Information Technology [Access & Authentication](https://itconnect.uw.edu/tools-services-support/access-authentication/2fa/) guide.
 
 ## Get an account
-Go to the next section to learn how.
+
+Before you'll be able to access Hyak with your UW NetID & password, your UW NetID needs to be added to an active Hyak group. We've identified the most common situations in the next section, [Getting an Account](https://hyak.uw.edu/docs/accounts/account-creation).
