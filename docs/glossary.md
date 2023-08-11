@@ -3,9 +3,21 @@ id: glossary
 title: Glossary
 ---
 
+<a name="account" /> <br /><br /><br />
+
+[**Account**](#account): In the context of using SLURM, "account" refers to the groups you belong to, not your netID. You can run `hyakalloc` when logged into the cluster to see which accounts you can submit jobs to. 
+
+<a name="apptainer" /> <br /><br /><br />
+
+[**Apptainer**](#apptainer): Apptainer is a container program that facilitates the ability to create and run portable and reproducible containers.
+
 <a name="checkpoint" /> <br /><br /><br />
 
 [**Checkpoint partition**](#checkpoint): This represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, every hour all jobs running for >4 hours are re-queued (i.e., SIGTERM and re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled.
+
+<a name="Containers" /> <br /><br /><br />
+
+[**Containers**](#port_forwarding): Containers are lightweight, isolated software environments that encapsulate an application, along with its dependencies and runtime settings. Containers are useful because they provide a consistent and reproducible way to package, distribute, and run software across different computing environments. 
 
 <a name="gpu" /> <br /><br /><br />
 
@@ -15,11 +27,40 @@ title: Glossary
 
 [**HPC**](#hpc): High-Performance Computing or HPC is the integration of multiple servers (or nodes) together through a high-bandwidth and low-latency interconnect (sometimes called fabric). Traditional HPC scientific codes are typically programmed to take advantage of simultaneously running on several nodes and passing data between them over this fabric. However, in recent years most codes rely on the increasing number of CPU cores on a single node to scale instead (so called “embarrassingly parallel” jobs) as the programming overhead to make a code multi-node can be substantial.
 
+<a name="idle" /> <br /><br /><br />
+
+[**Idle Resource**](#idle): A cluster resource is "idle" when it currently has no running jobs. Requested idle resources are not guaranteed. See more in depth information under **Compute > Using Idle Resources**.
+
+<a name="interactive" /> <br /><br /><br />
+
+[**Interactive Session**](#interactive): An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging.
+
+<a name="module" /> <br /><br /><br />
+
+[**Module**](#module): Pieces of code that can be loaded or unloaded into the kernel that extend its functinality. See **Tools & Software > Modules** for specifics on how they work.
+
 <a name="node" /> <br /><br /><br />
 
 [**Node**](#node): In the HPC world, a server is synonymous with a node. 1 server = 1 node so it is OK to use those two terms interchangeably.
 - **HPC Node**: A standard compute node with no additional components and variable amounts of memory at time of procurement.
 - **GPU Node**: A standard node with GPU cards added in at time of procurement. GPUs are typically used for ML workflows and in rarer cases for applications that have been specifically ported over to GPUs to speed up the runtime.
+
+<a name="Partition" /> <br /><br /><br />
+
+[**Partition**](#partition): A partition is a logical subdivision of the HYAK cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are compute, interactive, and GPU nodes.
+
+<a name="Port_Forwarding" /> <br /><br /><br />
+
+[**Port Forwarding**](#port_forwarding): Port forwarding, also known as port mapping, is a networking technique that redirects network traffic from one port on a local machine to another port on a remote machine. It serves as a way to facilitate communication between devices across networks, enabling services hosted on specific ports to be accessed securely and efficiently.
+
+**Remember**: For our cluster, the only node that is accessible via the internet is the login node. Thus, when you have a web-based app running, such as a Jupyter Notebook, you will need to still SSH into the login node, but have it forward you to the node you're working on. Instructions to do this are under: **Setup > SSH Port forwarding**.
+
+<a name="queue" /> <br /><br /><br />
+
+[**Queue**](#queue): A queue is a waiting area for jobs that have been submitted to the cluster but are not yet executing. The scheduler manages the order in which jobs are taken from the queue for execution.
+<a name="scheduler" /> <br /><br /><br />
+
+[**Scheduler**](#scheduler): The scheduler is a component or software system responsible for managing and optimizing the allocation of computing resources and tasks within a distributed computing environment. It orchestrates the execution of jobs, tasks, or processes across available resources such as CPUs, memory, and storage.
 
 <a name="server" /> <br /><br /><br />
 
@@ -32,3 +73,19 @@ title: Glossary
 <a name="slot" /> <br /><br /><br />
 
 [**Slot**](#slot): 1 resource slice can fill 1 slot. This is a UW administration specific (at the level of HYAK sponsor) term for a unit of accounting. Sponsors will support a certain capacity for their investigators as maximum number of slots. Tier-1, tier-2, and self-sponsors support more than 200, 50, and 1 slot(s) for their investigators in aggregate, respectively. Self-sponsored slots are for individual faculty who don’t hold appointments in sponsoring entities (e.g., College of Engineering) yet are interested in being part of the cluster. For those slots that are not self-sponsored, the annual support expenses associated with slices that occupy those slots are borne by the sponsors and not the investigators. For self-sponsored slots, the slices that go into them are the obligation of the faculty whose slices those are each year.
+
+<a name="slurm" /> <br /><br /><br />
+
+[**SLURM**](#slurm): The job scheduler used on the cluster. It stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See "Scheduler" on this page to learn what a scheduler is.
+
+<a name="SSH" /> <br /><br /><br />
+
+[**SSH**](#ssh): Secure Shell, commonly known as SSH, employs cryptographic techniques to establish a secure and encrypted connection between a client and a remote server via the use of SSH Keys. This technology safeguards data transmission and allows secure remote system management.
+
+<a name="SSH_Keys" /> <br /><br /><br />
+
+[**SSH Keys**](#ssh_keys): SSH keys are cryptographic pairs that enhance the security of Secure Shell (SSH) protocol. Each pair consists of a public key, which is shared with remote servers, and a private key, which is securely stored on your local machine. When connecting to a server, your local private key encrypts data that only the corresponding public key on the server can decrypt, enabling secure and authenticated communication without transmitting sensitive credentials over the network. 
+
+
+
+
