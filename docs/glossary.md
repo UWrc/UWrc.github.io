@@ -9,7 +9,7 @@ title: Glossary
 
 <a name="apptainer" /> <br /><br /><br />
 
-[**Apptainer**](#apptainer): Apptainer is a container program that facilitates the ability to create and run portable and reproducible containers.
+[**Apptainer**](#apptainer): Apptainer is a container program that facilitates the ability to create and run portable and reproducible containers. It works similarly to Docker. See the FAQ for the difference between the two.
 
 <a name="checkpoint" /> <br /><br /><br />
 
@@ -18,6 +18,10 @@ title: Glossary
 <a name="Containers" /> <br /><br /><br />
 
 [**Containers**](#port_forwarding): Containers are lightweight, isolated software environments that encapsulate an application, along with its dependencies and runtime settings. Containers are useful because they provide a consistent and reproducible way to package, distribute, and run software across different computing environments. 
+
+<a name="docker" /> <br /><br /><br />
+
+[**Docker**](#docker): Docker is a platform that allows you to develop, deploy, and run applications within isolated containers. Docker simplifies the process of creating, distributing, and managing software applications, making it easier to achieve consistent and reproducible deployments. It abstracts away the underlying infrastructure, allowing developers to focus on building and shipping software without worrying about compatibility issues or system-specific configurations.
 
 <a name="gpu" /> <br /><br /><br />
 

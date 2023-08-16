@@ -46,6 +46,7 @@ module.exports = {
     ],
     'Miscellaneous': [
       'glossary',
+      'FAQ'
     ],
     'Contribution Guides': [
       'contribute/markdown-guide',
