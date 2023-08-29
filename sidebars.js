@@ -20,6 +20,10 @@ module.exports = {
       'storage/transfer',
       'storage/archive',
     ],
+    'Data Commons':
+    [
+      'data-commons/requirements'
+    ],
     'Compute': [
       'compute/slurm',
       'compute/scheduling-jobs',
