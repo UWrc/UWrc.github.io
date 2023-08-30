@@ -31,3 +31,7 @@ The GitHub repository for this documentation site, with instructions for cloning
 
 We have a few additional resources on documentation formatting here: https://hyak.uw.edu/docs/contribute/markdown-guide
 :::
+
+## Additional considerations for datasets
+
+Datasets in the Data Commons don't contribute to purchased storage quotas, but they still need to be optimized for size & inode usage. This will be handled on a case-by-case basis, since dataset composition is so varied. For instance, if the submitted dataset is comprised of 200,000,000 small files, we will expect this to be combined somehow—i.e. with HDF5 or SquashFS—to keep inode usage down.
