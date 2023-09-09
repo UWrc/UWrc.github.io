@@ -27,7 +27,7 @@ export default function Pricing() {
             <a name="condo-model" />
             <h3>Condo Model</h3>
             <p>The HYAK clusters operate on a condo model. This means that the cluster is itself a contribution of resource slices from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their nodes beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
-            <p>Whatever slices your group contributes to the cluster you get access to on-demand. A cluster account also provides you access to all the other contributed nodes from other labs, subject to their availability (i.e., if the contributing labs aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but historically this has been 5 hours of continuous segments on average. Longer checkpoint jobs will continue to run and be re-queued until it completes, which is why it is important that your job be able to checkpoint or save state to resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware and setting up your own dedicated mini server.</p>
+            <p>You get access to how many resource slices your group contributes to the cluster on-demand. A cluster account also provides you access to all the other contributed slices from other labs, subject to their availability (i.e., if the contributing labs aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but historically this has been 5 hours of continuous segments on average. Longer checkpoint jobs will continue to run and be re-queued until it completes, which is why it is important that your job be able to checkpoint or save state to resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware and setting up your own dedicated mini server.</p>
             Therefore, the total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components.
             <ol>
               <li><a href="#slice-cost-annual">Slice Annual Costs</a></li>
@@ -44,7 +44,7 @@ export default function Pricing() {
                   <div class="card">
                     <div class="card__header">
                       <h5>Self-Sponsored Slices (Annual)</h5>
-                      <h3>$1,750 / 1 node / 1 year</h3>                      
+                      <h3>$1,750 / 1 slice / 1 year</h3>                      
                     </div>
                     <div class="card__footer">
                       <a href="mailto:help@uw.edu?subject=buy hyak (self-sponsored) slices&body=I would like to get some hyak self-sponsored slices.">
@@ -113,7 +113,7 @@ export default function Pricing() {
                 <li>College of Engineering</li>
                 <li>College of the Environment</li>
                 <li>Institute for Protein Design</li>
-                <li>School of Medicine</li>
+                <li>School of Medicine (Pending)</li>
               </ul>
               <li>UW Bothell</li>
               <li>UW Tacoma</li>
@@ -124,51 +124,48 @@ export default function Pricing() {
             <table style={{"margin-left": "auto", "margin-right": "auto", "text-align": "center"}}>
               <tr>
                 <td>Type</td>
-                <td colspan="4">HPC Slices</td>
+                <td colspan="3">HPC Slices</td>
                 <td colspan="2">GPU Slices</td>
               </tr>
               <tr>
                 <td>Slice Count</td>
-                <td colspan="4">1 x HPC slice</td>
+                <td colspan="3">1 x HPC slice</td>
                 <td colspan="2">1 x GPU slice</td>
               </tr>
               <tr>
                 <td>Name</td>
                 <td>standard</td>
                 <td>bigmem</td>
-                <td>hugemem</td>
-                <td>ultramem</td>
-                <td>a40</td>
-                <td>a100</td>
+                <td>custom</td>
+                <td>L40</td>
+                <td>H100</td>
               </tr>
               <tr>
                 <td>Compute Cores</td> 
-                <td colspan="4">40-cores</td>
-                <td colspan="2">13-cores</td>
+                <td colspan="5">32-cores</td>
               </tr>
               <tr>
                 <td>Memory (System)</td>
-                <td>192GB</td>
-                <td>384GB</td>
-                <td>768GB</td>
-                <td>1.5TB</td>
-                <td colspan="2">250GB</td>
+                <td colspan="1">256GB</td>
+                <td colspan="1">512GB</td>
+                <td colspan="1">&gt;512GB</td>
+                <td colspan="2">384GB</td>
               </tr>
               <tr>
                 <td>GPU Type</td>
-                <td colspan="4">N/A</td>
-                <td>2 x A40</td>
-                <td>2 x A100</td>
+                <td colspan="3">N/A</td>
+                <td>2 x L40</td>
+                <td>2 x H100</td>
               </tr>
               <tr>
                 <td>Memory (GPU)</td>
-                <td colspan="4">N/A</td>
+                <td colspan="3">N/A</td>
                 <td>48GB per GPU</td>
                 <td>80GB per GPU</td>
               </tr>
               <tr>
                 <td>Pricing ($)</td>
-                <td colspan="4"><a href="mailto:help@uw.edu?subject=hyak hpc slice pricing&body=I am curious about the latest HPC slice pricing.">Email Us</a></td>
+                <td colspan="3"><a href="mailto:help@uw.edu?subject=hyak hpc slice pricing&body=I am curious about the latest HPC slice pricing.">Email Us</a></td>
                 <td colspan="2"><a href="mailto:help@uw.edu?subject=hyak gpu slice pricing&body=I am curious about the latest GPU slice pricing.">Email Us</a></td>
               </tr>
             </table>
@@ -191,15 +188,15 @@ export default function Pricing() {
               </ul>
               HPC Slices:
               <ul>
-                <li>All slices are standardized on Intel 6230 CPUs ("Cascade Lake").</li>
-                <li>Each slice is a physical server (or node).</li>
+                <li>All slices are standardized on AMD EPYC 9654 CPUs ("Genoa").</li>
+                <li>A physical server (or node) has 192-cores and &gt;1.5TB of memory packaged in a single box. This is in turn sub-divided into 6 equal "slices" that are resources of compute units that are sold to researchers.</li>
                 <li>They are identically configured with your choice of memory (or RAM).</li>
                 <li>Any jobs requiring multiple nodes should be prepared to be independent computations (i.e., "embarassingly parallel") or make use of message passing libraries (e.g., OpenMPI) to scale across multiple nodes simultaneously.</li>
               </ul>
               GPU Slices:
               <ul>
-              <li>All slices are standardized on Intel 6230R CPUs ("Cascade Lake"). We are on the NVIDIA "Ampere" generation of GPUs.</li>
-                <li>4 x GPU slices constitutes a single physical server (or node). It is a single box with 52-cores, 1TB of memory, and 8 x GPUs of the sampe type. They are sold in resource slices to make this a more tractible cost for labs with more modest GPU needs.</li>
+              <li>All slices are standardized on AMD EPYC 9534 CPUs ("Genoa"). We are on the NVIDIA "Ada" and "Hopper" generation of GPUs.</li>
+                <li>4 x GPU slices constitutes a single physical server (or node). It is a single box with 128-cores, 1.5TB of memory, and 8 x GPUs of the same type. They are sold in resource slices to make this a more tractible cost for labs with more modest GPU needs.</li>
                 <li>Any jobs requiring more than 8 x GPUs of the same type should be prepared to make use of message passing libraries (e.g., PyTorch Lightning) to scale across multiple servers. Any job up to the equivalent of 4 x GPU nodes (i.e., 8 x GPU cards) can be run on the same physical machine and therefore scale easily without much further modification to the codebase.</li>
               </ul>
             </p>
