@@ -22,7 +22,8 @@ module.exports = {
     ],
     'Data Commons':
     [
-      'data-commons/requirements'
+      'data-commons/requirements',
+      'data-commons/imagenet',
     ],
     'Compute': [
       'compute/slurm',
