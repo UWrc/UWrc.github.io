@@ -26,9 +26,9 @@ export default function Pricing() {
           <div class="col">
             <a name="condo-model" />
             <h3>Condo Model</h3>
-            <p>The HYAK clusters operate on a condo model. This means that the cluster is itself a contribution of resource slices from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their nodes beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
-            <p>You get access to how many resource slices your group contributes to the cluster on-demand. A cluster account also provides you access to all the other contributed slices from other labs, subject to their availability (i.e., if the contributing labs aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but historically this has been 5 hours of continuous segments on average. Longer checkpoint jobs will continue to run and be re-queued until it completes, which is why it is important that your job be able to checkpoint or save state to resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware and setting up your own dedicated mini server.</p>
-            Therefore, the total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components.
+            <p>The HYAK clusters operate on a condo model. This means that the cluster is itself consists of contributed resource slices from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their slices beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
+            <p>You get access to resources equivalent to the slices your account contributes to the cluster on-demand. A cluster account also provides you access to all the other contributed slices from other entities, subject to their availability (i.e., if the contributors or the resources aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but is not uncommon for a job to run for 4 to 5 hours before requeue. Longer checkpoint jobs will continue to run and be re-queued until it completes, which is why it is important that your job be able to checkpoint or save state and resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware operating your own server.</p>
+            The total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components.
             <ol>
               <li><a href="#slice-cost-annual">Slice Annual Costs</a></li>
               <li><a href="#slice-cost-hardware">Slice Hardware Costs</a></li>
@@ -98,11 +98,11 @@ export default function Pricing() {
             <br />
 
             <p>
-              If your lab has a faculty affiliation with a sponsoring entity (listed below), then you are only responsible for a one time, up front cost of the slice quantities you would like. You get 4 years of guaranteed and fully supported utilization per slice and beyond that subject to capacity and other conditions. You can skip down to the section below for specific slice configurations.
+              If your lab has a faculty affiliation with a sponsoring entity (listed below), then you are only responsible for a one time, total up-front cost of the slices. You get 4 years of guaranteed and fully supported utilization per slice and beyond that subject to capacity and other conditions. You can skip down to the section below for specific slice configurations.
             </p>
 
             <p>
-              If your lab does <u>not</u> have a faculty affiliation with a sponsoring entity (listed below), then there is an annual cost of $1,750 per 1 slice per 1 year.
+              If your lab does <u>not</u> have a faculty affiliation with a sponsoring entity (listed below), then there is an annual cost of $1,750 per 1 slice per 1 year (Self-Sponsored Slices above).
             </p>
 
             <b>Sponsors</b>:
@@ -182,8 +182,8 @@ export default function Pricing() {
                 </ul>
                 <li><b>Storage</b>:</li>
                 <ul>
-                  <li>Local: Each slice comes with 480GB of local SSD. This is non-persistent storage and is cleared after a job ends. Data must be copied to and from local SSD before and after each job to utilize this.</li>
-                  <li>Group: Each node purchase comes with 1TB per node of scalable, shared, group storage (i.e., gscratch). Additional storage can be purchased for $10 / 1 TB / 1 month or free options exist such as scrubbed.</li>
+                  <li>Local: Each full node has 1.5TB or more of local NVME SSD disk storage. This is non-persistent storage and is cleared after a job ends. Data must be copied to and from local SSD before and after each job to utilize this.</li>
+                  <li>Group: Each slice purchase includes 1 TB of storage space and a 1 million file count limit of shared group storage (i.e., gscratch) accessible from every node. Additional storage quota increases can be purchased for $10 per month for 1TB of additional space and 1 million additional file count limit. Additional "scrubbed" shared storage is available for short-term use, but will be automatically deleted if not accessed for several weeks.</li>
                 </ul>
               </ul>
               HPC Slices:
@@ -196,8 +196,8 @@ export default function Pricing() {
               GPU Slices:
               <ul>
               <li>All slices are standardized on AMD EPYC 9534 CPUs ("Genoa"). We are on the NVIDIA "Ada" and "Hopper" generation of GPUs.</li>
-                <li>4 x GPU slices constitutes a single physical server (or node). It is a single box with 128-cores, 1.5TB of memory, and 8 x GPUs of the same type. They are sold in resource slices to make this a more tractible cost for labs with more modest GPU needs.</li>
-                <li>Any jobs requiring more than 8 x GPUs of the same type should be prepared to make use of message passing libraries (e.g., PyTorch Lightning) to scale across multiple servers. Any job up to the equivalent of 4 x GPU nodes (i.e., 8 x GPU cards) can be run on the same physical machine and therefore scale easily without much further modification to the codebase.</li>
+                <li>4 x GPU slices constitute a single physical server (or node). It is a single box with 128-cores, 1.5TB of memory, and 8 x GPUs of the same type. They are sold in resource slices to make this a more tractible cost for labs with more modest GPU needs.</li>
+                <li>Any jobs requiring more than 8 x GPUs of the same type should be prepared to make use of message passing libraries (e.g., PyTorch Lightning) to scale across multiple servers. Any job up to the equivalent of 4 x GPU slices (i.e., 8 x GPU cards) can be run on the same physical machine and therefore scale easily without much further modification to the codebase.</li>
               </ul>
             </p>
 
@@ -216,7 +216,7 @@ export default function Pricing() {
               <div class="card">
                 <div class="card__header">
                   <h5>🔥 gscratch (Parallel File System)</h5>
-                  <h3>$10 / 1 TB / 1 month</h3>                      
+                  <h3>$10 per month for 1 TB of space and 1 million file count limit; an existing Hyak account group is required</h3>
                 </div>
                 <div class="card__footer">
                   <a href="mailto:help@uw.edu?subject=buy hyak (gscratch) capacity&body=I would like to buy some gscratch capacity on hyak.">
@@ -229,7 +229,7 @@ export default function Pricing() {
                     <li>On campus parallel file system directly connected to HYAK.</li>
                     <li>No data access expenses or bandwidth limits.</li>
                     <li>100 Gbps HDR infiniband connectivity with (HYAK) compute nodes.</li>
-                    <li>100 Gbps ethernet upstream connectivity to external collaborators.</li>
+                    <li>80 Gbps aggregate Ethernet upstream connectivity to external collaborators.</li>
                     <li>Use of common tools to migrate data (e.g., scp, rsync).</li>
                   </ul>
                 </div>                    
@@ -252,7 +252,7 @@ export default function Pricing() {
                 What's included?
                   <ul class="check">
                     <li>A "warm" storage tier.</li>
-                    <li>On campus object storage with 100 Gbps connectivity.</li>
+                    <li>On campus object storage with 80 Gbps of aggregate upstream connectivity.</li>
                     <li>No data access expenses or bandwidth limits.</li>
                     <li>S3-compliant so any existing S3 tools can be used to copy and retrieve data.</li>
                     <li>Public buckets for external data sharing.</li>
