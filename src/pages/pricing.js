@@ -216,7 +216,7 @@ export default function Pricing() {
               <div class="card">
                 <div class="card__header">
                   <h5>🔥 gscratch (Parallel File System)</h5>
-                  <h3>$10 per month for 1 TB of space and 1 million file count limit; an existing Hyak account group is required</h3>
+                  <h3>$10 / 1 TB [1M files] / 1 month</h3>
                 </div>
                 <div class="card__footer">
                   <a href="mailto:help@uw.edu?subject=buy hyak (gscratch) capacity&body=I would like to buy some gscratch capacity on hyak.">
@@ -228,10 +228,11 @@ export default function Pricing() {
                     <li>A "hot" storage tier.</li>
                     <li>On campus parallel file system directly connected to HYAK.</li>
                     <li>No data access expenses or bandwidth limits.</li>
-                    <li>100 Gbps HDR infiniband connectivity with (HYAK) compute nodes.</li>
+                    <li>Direct high speed / low latency Infiniband connectivity with (HYAK) compute nodes.</li>
                     <li>80 Gbps aggregate Ethernet upstream connectivity to external collaborators.</li>
                     <li>Use of common tools to migrate data (e.g., scp, rsync).</li>
                   </ul>
+                  <b>Note:</b> An existing Hyak group account is required.
                 </div>                    
               </div>
             </div>
