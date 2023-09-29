@@ -19,7 +19,7 @@ In order for a dataset to be approved, the following criteria must be met:
 
 1. The requester must create a new page of documentation, and submit a pull request, describing the dataset:
     - A full description of the dataset, publication date, licenses, etc.
-    - Instrutions for using the dataset, i.e. any required modules, the structure of the data, etc.
+    - Instructions for using the dataset, i.e. any required modules, the structure of the data, etc.
     - Contact information for dataset maintainers (typically, the group/user submitting the request) and the intended audience or discipline of the data.
 
 2. The requester must name a minimum of 3 separate groups/labs & 3 specific users who will be using the data.
