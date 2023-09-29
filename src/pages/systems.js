@@ -115,10 +115,10 @@ export default function systems() {
               <td align="right">Operating System</td><td>Rocky 8</td>
             </tr>
             <tr>
-              <td align="right">Compute</td><td>18,376 CPU cores [Cascade Lake, Ice Lake]</td>
+              <td align="right">Compute</td><td>21,028 CPU cores [Cascade Lake, Ice Lake]</td>
             </tr>
             <tr>
-              <td align="right">Accelerators</td><td>368 GPU cards [Turing, Ampere]</td>
+              <td align="right">Accelerators</td><td>576 GPU cards [Turing, Ampere]</td>
             </tr>
             <tr>
               <td align="right">Interconnect</td><td>100 Gbps [HDR100 Infiniband]</td>
@@ -127,7 +127,7 @@ export default function systems() {
               <td align="right">Topology</td><td>3:1 blocking 2-layer fat tree</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>1.4 PB GPFS<br />500 TB NVMe Flash</td>
+              <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>2.7 PB GPFS<br />500 TB NVMe Flash</td>
             </tr>
             <tr>
               <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Klone translates to 3 in Chinook trading jargon and is the name of the 3rd HYAK cluster. <code>klone</code> is active and scheduled for a soft launch in Q1 2021 and a full launch by Q2 2021. Reported figures are updated as the cluster continues to grow.</td>
