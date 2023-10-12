@@ -49,8 +49,8 @@ By accessing this data you agree to their terms of use provided on their website
 :::
 
 1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [here](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
-2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/gscratch/data/imagenet` path. You can mount this and use directly in your code. This is preferred due to the large number of small files.
-3. **Direct**: The file path on KLONE is `/gscratch/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
+2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/mmfs1/data/imagenet` path. You can mount this and use directly in your code. This is preferred due to the large number of small files.
+3. **Direct**: The file path on KLONE is `/mmfs1/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
 
 ## How to cite?
 
