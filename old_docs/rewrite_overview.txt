@@ -1,0 +1,129 @@
+Overview / starting point:
+    klone cluster
+        links to the front page maybe?
+        a basic definition of the cluster
+        login node -> the rest of the cluster GRAPHIC!
+    first 3 steps:
+        join the mailing list
+        enable 2fa (link)
+        get account set up (link)
+
+Groups & Accounts
+    account creation
+        (have PI, no PI, etc)
+        we. don't. add. users.
+    group management
+        how does the uw groups system work
+        for group managers!
+
+Accessing Klone
+    SSH or OOD
+        LOGIN EULA
+        login shell or ssh
+    SSH Keys
+        key locations / link to storage
+        internal / intracluster keys
+        external keys / hopping to nodes
+            can't get you to the login node
+
+Compute
+    Essential Terminology
+        The Slurm Scheduler
+        Accounts & Partitions & QOS
+        Checkpoint & Idle Resources
+            link to ckpt job
+            link to hyakalloc
+    Resource Management
+        Slurm tools
+        Hyak Tools
+
+Scheduling Jobs
+    Interactive Jobs
+    Batch Jobs
+    Recurring Jobs
+    Checkpoint Jobs
+    Array Jobs
+    MPI Jobs
+
+Storage
+    Essential Terminology
+        GPFS & MMFS1
+        Quotas, Inodes, Block
+            link to hyakstorage
+    Klone Directories
+        home
+        gscratch
+            not backed up
+        scrubbed
+            DEFINITELY not backed up
+        data
+        contrib
+        sw
+        tmp /scr
+            physical disk on nodes, do work here if you can
+    Data Sets
+        requirements for inclusion
+        what we currently have in there?
+    Transferring Data
+        rclone
+        fusermount squashfs
+    Other Research Computing Services?
+        lolo? orci?
+
+Tools & Software
+    installing stuff
+        1. you do it!
+        2. it's linux, you do it where you can!
+        3. install that shit from source bruh
+        4. but actually containers
+    documentation
+        please write some for the love of god
+        how to write a markdown thing
+        how to make a pr
+        we will acknowledge you.
+    modules
+        we have some
+        contrib
+            you have some
+            others have some
+    apptainer
+        on the nodes now!
+        it makes a file!
+        basic instance vs exec vs run, building, definitions, etc.
+    r
+    python
+        jupyter, conda, conda in containers
+    compilers
+        we have some, you can install whatever you want
+        amd vs intel
+
+SSH
+    port forwarding
+        forwarding a single port through the login node
+        picking a random port with bash
+    x11 forwarding
+        basic x explanation
+        hi OOD exists
+        x recommmendations
+            basic setup
+        x forwarding to login (y vs x flags)
+            x forwarding to a node
+        x forwarding directly to node with jump host
+    advanced
+        multiplexing
+        ssh configs - wildcard for nodes
+
+OnDemand
+    Files
+        explain the auto mounts
+    Interactive Apps
+        interactive job w/ shell
+        interactive job w/ desktop
+            terminal is on the node! can load modules etc
+            this is a container, you can make your own
+        jupyter
+            this is a container, you can make your own
+        r studio
+            this is a container, you can make your own
+
+
