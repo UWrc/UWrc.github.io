@@ -1,3 +1,8 @@
+---
+id: tablib
+title: TabLib
+---
+
 Sponsoring groups are Ludwig Schmidt, Tim Althoff, and Pang Wei Koh. Student users are Josh Gardner, Mike Merrill, and Vinayak Gupta.
 
 # What is this?
@@ -30,7 +35,7 @@ tables = [pa.RecordBatchStreamReader(b).read_all() for b in df['arrow_bytes']]
 ```
 # How to access?
 
-Users who access the data should also apply for public, open credentialized access to the dataset on Hugging Face DAtasets [here](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
+Users who access the data should also apply for public, open credentialized access to the dataset on Hugging Face Datasets [here](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
 
 TabLib is a collection of publicly available data. As noted in the TabLib preprint, it is noteworthy to mention that under U.S. copyright law, facts and data are not subject to copyright protection (see [Feist v. Rural Telephone]](https://www.law.cornell.edu/supremecourt/text/499/340)). 
 
