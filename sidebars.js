@@ -24,6 +24,8 @@ module.exports = {
     [
       'data-commons/requirements',
       'data-commons/imagenet',
+      'data-commons/tablib',
+      'data-commons/the_pile',
     ],
     'Compute': [
       'compute/slurm',
