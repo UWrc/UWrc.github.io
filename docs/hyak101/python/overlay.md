@@ -114,7 +114,7 @@ You can download the script [here](https://hyak.uw.edu/files/hyak101/python/set-
 
 ```bash title="~/set-hyak-node.sh"
 #!/bin/bash
-NODE=$(ssh klone 'squeue \
+NODE=$(ssh klone-login 'squeue \
     --user $USER \
     --states RUNNING \
     --name klone-container \
