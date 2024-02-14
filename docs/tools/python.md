@@ -26,7 +26,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 Install miniconda3 to your home directory. If you use large or multiple virtual environments you'll be better off specifying a lab directory or elsewhere due to the (inode and capacity) limits of home directories.
 
 ```bash
-bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3
+bash Miniconda3-latest-Linux-x86_64.sh -p $HOME/miniconda3
 ```
 
 ### Configure
