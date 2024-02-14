@@ -112,3 +112,5 @@ connecting directly to the node will be this simple:
 ```shell terminal=true
 $ ssh klone-node
 ```
+
+Because you are effectively connecting directly from your local computer to the node, you will need to append the SSH public key from your **local** system to the `.ssh/authorized_keys` file under your cluster home directory.
