@@ -50,7 +50,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="/img/avatar/avatar_uws_uwit.png"
+                src="https://avatars3.githubusercontent.com/u/1252858?s=400&v=4"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Nam</h4>
@@ -68,7 +68,7 @@ export default function board() {
                 src="/img/avatar/avatar_uws_uwit.png"
               />
               <div class="avatar__intro">
-                <h4 class="avatar__name">Erik</h4>
+                <h4 class="avatar__name">Xiao</h4>
                 <small class="avatar__subtitle">
                   Associate Vice President <br /> UW-IT
                 </small>

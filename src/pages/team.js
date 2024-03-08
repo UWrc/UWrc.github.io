@@ -36,7 +36,7 @@ export default function team() {
             src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">David</h4>
+            <h4 class="avatar__name">Erik</h4>
             <small class="avatar__subtitle">
               Manager
             </small>
@@ -86,12 +86,12 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://avatars.githubusercontent.com/u/89407740?v=4"
+            src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Michael</h4>
+            <h4 class="avatar__name">Nebojsa</h4>
             <small class="avatar__subtitle">
-              HPC Systems Engineer
+              HPC Storage Engineer
             </small>
           </div>
         </div>
@@ -101,12 +101,12 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="/img/avatar/avatar_uws_uwit.png"
+            src="https://avatars.githubusercontent.com/u/22206944?v=4"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">We are hiring!</h4>
+            <h4 class="avatar__name">Kristen</h4>
             <small class="avatar__subtitle">
-              HPC Staff Scientist, apply <a href="https://uwhires.admin.washington.edu/eng/candidates/default.cfm?szCategory=jobprofile&szOrderID=206944&szCandidateID=0&szSearchWords=hpc&szReturnToSearch=1">here</a>.
+              HPC Staff Scientist
             </small>
           </div>
         </div>
