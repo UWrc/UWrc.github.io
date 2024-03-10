@@ -96,6 +96,7 @@ using `ProxyJump` to connect to that node through the login node.
 
 ```shell title="~/.ssh/klone-node-config"
 Host klone-node
+  User UWNetID
   Hostname n3000
   ProxyJump klone-login
 ```
@@ -104,6 +105,12 @@ This file will also need the correct permissions:
 
 ```shell terminal=true
 $ chmod 600 ~/.ssh/klone-node-config
+```
+
+We need to copy our local ssh key onto klone. While we cannot use our key as a authentication factor between our local machine and klone, we can use it when ssh'ing *between* klone nodes.
+
+```shell terminal=true
+$ ssh-copy-id klone-login
 ```
 
 Once we've requested a job, and we know what node its on, we'll swap out the `Hostname` line &
