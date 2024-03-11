@@ -65,7 +65,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="/img/avatar/avatar_uws_uwit.png"
+                src="/img/avatar/xiao_zhu.jpeg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Xiao</h4>
