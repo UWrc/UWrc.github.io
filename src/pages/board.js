@@ -35,7 +35,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://www.washington.edu/research/wp-content/uploads/Xiaosong-Li-headshot.jpg"
+                src="/img/avatar/xiaosong_li.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Xiaosong</h4>
