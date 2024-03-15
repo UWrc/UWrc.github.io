@@ -18,65 +18,21 @@ export default function About() {
       className="unique-tabs"
       defaultValue="apple"
       values={[
-        {label: 'Apple', value: 'apple'},
-        {label: 'Orange', value: 'orange'},
-        {label: 'Banana', value: 'banana'},
+        {label: 'Our Team', value: 'team'},
+        {label: 'Governance Board', value: 'board'},
+        {label: 'Publications', value: 'pub'},
       ]}>
-      <TabItem value="apple">This is an apple 🍎</TabItem>
-      <TabItem value="orange">This is an orange 🍊</TabItem>
-      <TabItem value="banana">This is a banana 🍌</TabItem>
+      <TabItem value="team">We have a very diverse team that maintains the HYAK Cluster. Learn more about us <a href="https://hyak.uw.edu/team">here</a>.</TabItem>
+      <TabItem value="boad">Click <a href="https://hyak.uw.edu/publications">here</a> to learn about our Governance Board.</TabItem>
+      <TabItem value="pub">Click <a href="https://hyak.uw.edu/publications">here</a> to learn about out Publications</TabItem>
     </Tabs>
 
 
     <div class="row">
       <p>
-      How to buy in.
+      Take a look at who we are as a team, and when you're ready, familiarize yourself with <a href="https://hyak.uw.edu/team">https://hyak.uw.edu/docs</a>. 
       </p>
 
-    </div>
-
-    <div class="row">
-      
-      <div class="col">
-        <div class="card-demo">
-          <div class="card">
-            <div class="card__header">
-              <h3>Lorem Ipsum</h3>
-            </div>
-            <div class="card__body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                suspendisse ultrices gravida.
-              </p>
-            </div>
-            <div class="card__footer">
-              <button class="button button--secondary button--block">See All</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="card-demo">
-          <div class="card">
-            <div class="card__header">
-              <h3>Lorem Ipsum</h3>
-            </div>
-            <div class="card__body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                suspendisse ultrices gravida.
-              </p>
-            </div>
-            <div class="card__footer">
-              <button class="button button--secondary button--block">See All</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    
     </div>
   </div>
 </Layout>
