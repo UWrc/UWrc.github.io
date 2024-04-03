@@ -242,7 +242,7 @@ export default function Pricing() {
             <div class="card-demo">
               <div class="card">
                 <div class="card__header">
-                  <h5>💧 LOLO Collaboration (Object Storage)</h5>
+                  <h5>💧 KOPAH (Object Storage)</h5>
                   <h3>Coming Soon</h3>
                 </div>
                 <div class="card__footer">
@@ -269,10 +269,11 @@ export default function Pricing() {
               <div class="card">
                 <div class="card__header">
                   <h5>🧊 LOLO Archive (Tape)</h5>
-                  <h3>$4 / 1 TB / 1 month</h3>
+                  <h3>$3.45 / 1 TB / 1 month</h3>
                 </div>
                 <div class="card__footer">
-                <a href="mailto:help@uw.edu?subject=buy lolo archive (tape) capacity&body=I would like to get some tape archive capacity on lolo-archive.">
+                <a href="https://uw.service-now.com/sp?
+id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963">
                   <button class="button button--secondary button--block">Get LOLO Archive Capacity</button></a>
                 </div>
                 <div class="card__body">
@@ -293,7 +294,7 @@ export default function Pricing() {
       </TabItem>
 
       <TabItem value="support">
-        All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand.
+        All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand. To start a help ticket email help@uw.edu and include HYAK in the subject line. Or use the "Email" link below.
       </TabItem>
     </Tabs>
 
