@@ -3,27 +3,70 @@ id: archive
 title: Archive on LOLO
 ---
 
-The storage attached to HYAK clusters is considered a transient place for "hot" data. This is stuff you're actively computing against. It's slow, cheap, and has physical longevity as a storage medium. These are desired properties for an archive tier.
+The storage attached to HYAK clusters is considered a transient place for "hot" data that you're actively computing against. Data stored here is **NOT BACKED UP**. LOLO is our archival storage option intended to provide our users with storage that is not immediately available but is affordable and has physical longevity as a storage medium. If you archive your data to LOLO, two additional copies are created: it does automatic duplication with one copy on UW-Seattle campus and another copy in eastern Washington.
+
+:::tip
+
+To optimize your space and minimize monthly charges, we recommend using file compression. File compression helps reduce file size and compressed files are easier to copy to remote servers like `lolo`. Below provide instructions for archiving your data on `lolo` with `tar` software utility file compression.
+
+:::
 
 ## What is LOLO Tape?
 
 LOLO is the UW's archive solution, it is an LTO-8 or "tape" based platform.
 
-:::note
-LOLO costs $4 / TB / month.
-:::
-
 ## How do I get LOLO capacity?
 
-1. Go to https://uwnetid.washington.edu/manage/
-2. Click the "Computing Services" link on the left
-3. Click the "Lolo Server" check box in the "Inactive Services" section.
-4. Click the "Subscribe >" button at the bottom of the page.
-5. Read the notice and click the "Finish" button.
+[Click here to be re-directed to the LOLO Storage Request Form](https://uw.service-now.com/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
 
-## How to back up to LOLO?
+:::note
 
-TODO
+LOLO costs $3.45 / TB / month.
+
+:::
+
+## How to back up to `lolo`?
+
+After your LOLO storage archive directory has been outfitted, you can begin transferring archived data to LOLO. Let's start by accessing your archive on `lolo` with `ssh`, your `UWNetID`, and the name of your archive directory. For this example, we will call our lolo archive directory, `mylolodir`.
+
+```bash
+//highlight-next-line
+$ ssh UWNetID@lolo.uw.edu
+[UWNetID@lolo-u1 ~]$ cd /archive/mylolodir
+```
+
+Next identify the directory of data that you wish to archive on LOLO, and navigate to the containing directory on your local computer or on `klone` via Terminal or Windows Powershell or PuTTy. For this example, we will call the directory we wish to archive, `mydata`.
+
+```bash
+$ ls
+    mydata/
+    otherfile.txt
+    otherdir/
+    ...
+```
+Next create a tar archive of `mydata` and transfer it directory to `mylolodir` with `ssh`.
+
+```bash
+$ tar zcvf - mydata/ | ssh UWNetID@lolo.uw.edu "cat > /archive/mylolodir/mydata.tar.gz"
+//highlight-next-line
+    Password:
+    ...
+```
+Contents of `mydata` will start printing to the screen as they are transferred to the tar archive. This printing might obscure the Password prompt, **you will need to provide your password.** Compression and transfer times scale with file size. 
+
+### Retrieve the archive from LOLO
+
+Use server copy (`scp`) to transfer a copy of the archive from `lolo` to your workspace on your local computer or `klone`.
+
+```bash
+$ scp UWNetID@lolo.uw.edu:/archive/mylolodir/mydata.tar.gz .
+```
+
+Extract the archive with the `tar` command on your local computer or `klone`. Be mindful that extracting the archive will require storage capacity matching its pre-compressed size. 
+
+```bash
+$ tar -xzvf mydata.tar.gz
+```
 
 ## Google Drive
 
