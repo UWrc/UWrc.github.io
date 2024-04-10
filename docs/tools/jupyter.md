@@ -13,6 +13,12 @@ These instructions cover jupyter-notebook 7.1.2, though should be easily adaptab
 
 This tutorial assumes you have already completed the [set up of Miniconda covered here](https://hyak.uw.edu/docs/tools/python#install). Throughout this exercise, it might be helpful to refer to those instructions if you get stuck. 
 
+:::warning
+
+Users frequently encounter disk storage managment issues with miniconda and conda under default settings. If you plan to use conda for your research computing, please see [THIS BLOG POST](https://hyak.uw.edu/blog/conda-disk-storage) to configure your conda settings and avoid the `Disk quota exceeded` error. 
+
+:::
+
 :::note
 
 The examples below use my `UWNetID` (finchkn) and a compute node that was available during the development of this documentation (n3097); you will have to replace finchkn with your `UWNetID` and probably `n3097` with a different compute node name when required. 
