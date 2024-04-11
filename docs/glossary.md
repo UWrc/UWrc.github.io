@@ -71,7 +71,7 @@ title: Glossary
 
 <a name="slot" /> <br /><br /><br />
 
-[**Slot**](#slot): 1 resource slice can fill 1 slot. This is a UW administration specific (at the level of HYAK sponsor) term for a unit of accounting. Tier-1 sponsors (100+slots), tier-2 (50-80 slots), and self-sponsors (1+ slots) will support a certain capacity for their investigators based on a maximum number of slots. Self-sponsored slots are for individual faculty who don’t hold appointments in sponsoring entities (e.g., College of Engineering) yet are interested in being part of the cluster. For more information about slot sponsorship and annual slot support fees, see [**Pricing**](https://hyak.uw.edu/pricing). 
+[**Slot**](#slot): 1 resource slice can fill 1 slot. This is a UW administration specific (at the level of HYAK sponsor) term for a unit of accounting. Tier-1 sponsors (100+slots), tier-2 (50+ slots), and self-sponsors (1+ slots) will support a certain capacity for their investigators based on a maximum number of slots. Self-sponsored slots are for individual faculty who don’t hold appointments in sponsoring entities (e.g., College of Engineering) yet are interested in being part of the cluster. For more information about slot sponsorship and annual slot support fees, see [**Pricing**](https://hyak.uw.edu/pricing). 
 
 <a name="slurm" /> <br /><br /><br />
 
