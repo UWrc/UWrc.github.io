@@ -1,29 +1,30 @@
-# FAQ 
-## This section is geared for people who may be newer to Linux and/or the cluster. While some of the FAQs listed here may be rudimentary, more experienced users my find some new information here about the cluster.
+---
+id: faq
+title: FAQ
+---
 
 
-### Cluster Related FAQ:
+## Cluster Related FAQ:
 | Question | Answer |
 | --- | --- |
-| **What is the UW HYAK cluster?** | The UW HYAK cluster is a robust high-performance computing infrastructure available to University of Washington researchers and faculty. It offers substantial computational resources for data analysis, simulations, and scientific research. |
-| **How do I access the HYAK cluster?** | Access the HYAK cluster by connecting through SSH using your UW NetID. Open your terminal and use the command `ssh your_netid@hyak.washington.edu` to log in. |
+| **What is the UW HYAK cluster?** | The UW HYAK cluster is a robust high-performance computing infrastructure available to University of Washington faculty, researchers, students, and affiliates. It offers substantial computational resources for data analysis, simulations, and scientific research. |
+| **How do I access the HYAK cluster?** | Access the HYAK cluster by connecting through SSH using your UW NetID. Once you have a user account, open a Terminal/Windows Powershell/PuTTy window and use the command `ssh your_netid@hyak.washington.edu` to log in. [**Need an account?**](https://hyak.uw.edu/docs/account-creation) |
 | **What is SLURM, and why is it important?** | SLURM (Simple Linux Utility for Resource Management) is the cluster's job scheduler. It manages job submission, resource allocation, and execution, optimizing the utilization of the cluster's computing power. |
-| **How do I submit jobs to the cluster?** | Submit jobs using the `sbatch` command. Craft a job script detailing resource needs, commands, and settings. The scheduler then manages job execution based on these specifications. |
-| **Can I run interactive sessions on the cluster?** | Yes, use the `srun` command to initiate interactive sessions on compute nodes. This allows real-time interaction and testing, useful for debugging and exploration. |
-| **How can I monitor my job's progress?** | Utilize the `squeue` command to monitor job statuses, including positions in the queue, resource allocations, and execution stages. |
+| **How do I submit jobs to the cluster?** | Submit jobs using the `sbatch` command. Jobs can be submitted using a job script detailing resource needs as sbatch directives and the commands to execute. The scheduler then manages job execution based on these specifications. [**More about scheduling jobs on HYAK.**](https://hyak.uw.edu/docs/compute/scheduling-jobs) [**More about `sbatch`.**](https://slurm.schedmd.com/sbatch.html)|
+| **Can I run interactive sessions on the cluster?** | Yes, use the `salloc` command to initiate interactive sessions on compute nodes. This allows real-time interaction and testing, useful for debugging and exploration. |
+| **How can I monitor my job's progress?** | Use the `squeue -u <UWNetID>` command with your UWNetID to monitor job status. |
 | **What are modules, and how do they work?** | Modules manage software dependencies. Use commands like `module load` and `module unload` to load and unload software packages, creating tailored environments for your jobs. |
 | **Are there resource limits?** | Yes, each user has resource quotas to ensure fair allocation. Familiarize yourself with your account's limits to make optimal use of the resources. |
-| **Where can I find documentation and support?** | Comprehensive documentation is available on the HYAK cluster website. If you encounter challenges or have queries, reach out to the HYAK support team for assistance. |
+| **Where can I find documentation and support?** | Comprehensive documentation is available on the HYAK cluster website - this website. If you encounter challenges or have queries, reach out to the HYAK support team for assistance by sending an email to help@uw.edu with hyak in the subject line. |
 | **How do I optimize my job's performance?** | Optimize job performance by selecting appropriate resource configurations, efficient algorithms, and parallelization techniques. Experimentation and benchmarking can guide improvements. |
 | **Can I transfer files to and from the cluster?** | Yes, use secure file transfer tools like `scp` (Secure Copy Protocol) or `rsync` to move files between your local machine and the cluster. |
 | **Can I schedule recurring jobs?** | Yes, you can schedule recurring jobs using SLURM's job arrays or by setting up cron jobs within your scripts. |
-| **How can I learn more about advanced features?** | Explore advanced features through the cluster's documentation, tutorials, and workshops offered by the HYAK team. |
-| **Where should I put things like Conda?**| To conserve space in your home directory, it's recommended to place tools like Conda in your `gscratch` space.|
+| **Where should I put things like Conda?**| To conserve space in your home directory, it's recommended to place tools like Conda in your `gscratch` space. Some software, like conda, install hidden files and directories in your home directory where you have limited disk storage (10GB). We wrote a [**blog post about configuring conda to conserve disk stroage**](https://hyak.uw.edu/blog/conda-disk-storage).|
 | **Why is it that when I updated .bashrc with the path to my executable, bash still says command not found?** | When adding executables to your PATH, ensure that the directory containing the executables is specified. For example, if your executable is in a `bin` directory, you should add `export PATH=$PATH:/path/to/bin` to your `.bashrc`. Additionally, make sure to reload the `.bashrc` file using `source ~/.bashrc`. |
-| **Why is conda saying "ERROR: File or directory already exists: /targeted/directory/"?** | When specifying a custom directory for Conda installation, ensure that the target directory doesn't already exist. Conda will create the directory and install itself there. Use a path like `/randomDir1/randomDir2/TARGET_DIRECTORY` where `TARGET_DIRECTORY` doesn't exist. |
-| **How do I SSH into a node I already have a job on?** | You can SSH into a node where you have a job running by using the command: `ssh netID@n####` where `n####` is the specific node's identifier. |
-| **Why do I keep getting this: sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified?** | In an sbatch script, the "account" parameter refers to the group you belong to, not your netID. Ensure that the account specified in the script matches the group you are associated with. |
-| **How do I know if my job ran?** | After submitting a job using sbatch, you should see a file named `XXX.job.####`, where `####` represents your job number. |
+| **Why is conda saying "ERROR: File or directory already exists: /targeted/directory/"?** | When specifying a custom directory for Conda installation, ensure that the target directory doesn't already exist. Conda will create the directory and install itself there, but it will not overwrite a directory. Use a path like `/randomDir1/randomDir2/TARGET_DIRECTORY` where `TARGET_DIRECTORY` doesn't exist. |
+| **How do I SSH into a node I already have a job on?** | You can SSH into a node where you have a job running by using the command: `ssh UWnetID@n####` where `n####` is the specific node's identifier. |
+| **Why do I keep getting this sbatch error: "Batch job submission failed: Invalid account or account/partition combination specified?"** | In an sbatch script, the sbatch directive `--account` refers to the group you belong to, not your UWnetID. Ensure that the account specified in the script matches the group you are associated with. To view accounts you are associate with use the command `hyakalloc` |
+| **How do I know if my job ran?** | Familiarize yourself with `sbatch` directives `-o` and `-e`. Using these directives or flags, you can designate a file for the standard output (`stdout`) messages usually printed to the screen while your software program is running and the standard error (`stderr`) messages also printed to the screen if your software program encounters an error. These files will write to the directory from which you launched your `sbatch` command by default, |
 | **What is port forwarding, and why do I need to do it?** | Port forwarding is a networking technique that redirects incoming network traffic from one port on a router or firewall to another port on a device within a local network. It's necessary on the cluster because nodes cannot be accessed directly from the internet. Port forwarding allows you to access services hosted on specific ports of a node from external devices. |
 | **Why am I getting an error that says something like, "Invalid account or account/partition combination specified"?** | This error occurs when you specify an invalid account or partition combination in your sbatch script. Make sure the account corresponds to your group and that the partition exists. |
 | **How do I send jobs to the cluster?** | You can submit jobs to the cluster using the `sbatch` command followed by the name of your job script. For example: `sbatch myjob.sh`. |
@@ -31,7 +32,7 @@
 | **I’m trying to build a def file for a container and install programs on it like conda. However, it keeps quitting out and failing to build the sif file when it comes time for me to agree to terms/conditions and other things. Why?** | The process of apptainer building a sif file is non-interactive, so when you install programs like conda, which need user confirmation, the sif fails to build. To fix this you need to be downloading the sif in “silent” mode. Typically this can be fixed by adding the option “-y” to your command. However, always check the documentation for your command. |
 | **I scheduled my job via sbatch, but nothing happened. Why?** | It’s possible that there were no available resources to run your job right away, and it may have been placed in the queue. Try running `hyakalloc` and see if the resources you need are currently open. You can also see if your job is in the queue by running `squeue`. |
 
-### Linux Related FAQ for new users
+## Linux Related FAQ for new users
 
 
 | Question | Answer |
