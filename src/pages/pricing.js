@@ -20,7 +20,7 @@ export default function Pricing() {
         {label: 'Compute', value: 'compute'},
         {label: 'Storage', value: 'storage'},
         {label: 'Support', value: 'support'},
-        {label: 'Try HYAK for Free', value: 'trial'},
+        {label: 'Try HYAK', value: 'trial'},
       ]}>
       <TabItem value="compute">
         <div class="row">
@@ -303,7 +303,7 @@ id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963">
 
       <TabItem value="trial">
       <h3>HYAK Demo Accounts</h3>
-            <p>The demo or free-tier accounts are intended for prospective slice owners to use the HYAK resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of HYAK will be available for demonstration, but you will be able to test workflows and software on the cluster.</p>  
+            <p>HYAK no-cost demonstration accounts are intended for prospective slice owners to use the HYAK resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of HYAK will be available for demonstration, but you will be able to test workflows and software on the cluster.</p>  
             <b>Demonstration accounts are subject to the following restrictions</b>:
             <ul>
               <li>Jobs may only be submitted to the <a href="https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition">ckpt partition</a>.</li>

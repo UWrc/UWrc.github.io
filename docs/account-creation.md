@@ -7,7 +7,7 @@ To log into any HYAK cluster you need an account created. Everyone falls into on
 
 ### I am a PI, but I'm not ready to purchase a slice yet.
 
-The demo or free-tier accounts are intended for prospective slice owners to use the HYAK resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of HYAK will be available for demonstration, but you will be able to test workflows and software on the cluster. <a href="mailto:help@uw.edu?subject=hyak free tier account">Email us</a> to open a demo account. [Please note the limitations of HYAK demo accounts listed below.](https://hyak.uw.edu/docs/account-creation#limitations-of-demo-accounts)
+HYAK no-cost demo accounts are intended for prospective slice owners to use the HYAK resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of HYAK will be available for demonstration, but you will be able to test workflows and software on the cluster. <a href="mailto:help@uw.edu?subject=hyak free tier account">Email us</a> to open a demo account. [Please note the limitations of HYAK demo accounts listed below.](https://hyak.uw.edu/docs/account-creation#limitations-of-demo-accounts)
 
 ### I have a PI and the PI contributed HYAK nodes.
 
@@ -15,7 +15,7 @@ Your PI can create a HYAK account for you by virtue of adding you to their group
 
 ### I have a PI and we have no HYAK nodes.
 
-<a href="mailto:help@uw.edu?subject=hyak free tier account">Email us</a> to open a demo or free tier account. Please provide your UW netID. <a href="https://hyak.uw.edu/docs/account-creation#limitations-of-demo-accounts">Please note the limitations of HYAK demo accounts listed below</a>. If your PI has purchased HYAK storage you will need them to follow the step above to be <a href="https://hyak.uw.edu/docs/join-group">added to the group</a> to gain access to your shared data storage on the cluster after you're able to log in.
+<a href="mailto:help@uw.edu?subject=hyak free tier account">Email us</a> to open a no-cost demonstration account. Please provide your UW netID. <a href="https://hyak.uw.edu/docs/account-creation#limitations-of-demo-accounts">Please note the limitations of HYAK demo accounts listed below</a>. If your PI has purchased HYAK storage you will need them to follow the step above to be <a href="https://hyak.uw.edu/docs/join-group">added to the group</a> to gain access to your shared data storage on the cluster after you're able to log in.
 
 ### I'm a UW student and I have no PI.
 
