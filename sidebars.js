@@ -52,6 +52,7 @@ module.exports = {
       'hyak101/python/jobs'
     ],
     'Miscellaneous': [
+      'faq',
       'glossary',
     ],
     'Contribution Guides': [
