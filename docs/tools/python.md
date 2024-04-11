@@ -37,6 +37,13 @@ You'll need to initialize your shell. For most people (i.e., unless you actively
 conda init bash
 ```
 
+:::warning
+
+Users frequently encounter disk storage managment issues with miniconda and conda under default settings. If you plan to use conda for your research computing, please see [THIS BLOG POST](https://hyak.uw.edu/blog/conda-disk-storage) to configure your conda settings and avoid the `Disk quota exceeded` error. 
+
+:::
+
+
 **Optional**: your terminal prompt will show `(base)` to indicate miniconda3 is active but it takes up a lot of screen real estate so I like to hide it until I'm actively using Python. The next command keeps miniconda3 deactivated until you call it.
 
 ```bash
@@ -70,6 +77,12 @@ base                  *  /usr/lusers/npho/miniconda3
 
 $
 ```
+
+:::warning
+
+Users frequently encounter disk storage managment issues with miniconda and conda under default settings. If you plan to use conda for your research computing, please see [THIS BLOG POST](https://hyak.uw.edu/blog/conda-disk-storage) to configure your conda settings and avoid the `Disk quota exceeded` error. 
+
+:::
 
 To load the environment at this point one would run:
 
@@ -149,6 +162,12 @@ HYAK runs Linux and as of January 2021 CUDA11 is the version on all the GPUs.
 ![pytorch-cuda11]
 
 To use the install instructions you see above in an easy copy-and-paste format see below **from within an activated conda environment**:
+
+:::warning
+
+Users also face disk storage managment issues with pip under default settings. Please see [THIS BLOG POST](https://hyak.uw.edu/blog/conda-disk-storage) to configure your pip settings and avoid the `Disk quota exceeded` error. 
+
+:::
 
 ```bash
 pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
