@@ -20,6 +20,7 @@ export default function Pricing() {
         {label: 'Compute', value: 'compute'},
         {label: 'Storage', value: 'storage'},
         {label: 'Support', value: 'support'},
+        {label: 'Try HYAK for Free', value: 'trial'},
       ]}>
       <TabItem value="compute">
         <div class="row">
@@ -294,7 +295,25 @@ id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963">
       </TabItem>
 
       <TabItem value="support">
-        All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand. To start a help ticket email help@uw.edu and include HYAK in the subject line. Or use the "Email" link below.
+      <p>All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand. To start a help ticket email help@uw.edu and include HYAK in the subject line. Or use the button below.</p>
+        
+        <a href="mailto:help@uw.edu?subject=hyak support&body=Please direct this message to the HYAK team.">
+            <button class="button button--secondary button--block">Request Support</button></a>
+      </TabItem>
+
+      <TabItem value="trial">
+      <h3>HYAK Demo Accounts</h3>
+            <p>The demo or free-tier accounts are intended for prospective slice owners to use the HYAK resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of HYAK will be available for demonstration, but you will be able to test workflows and software on the cluster.</p>  
+            <b>Demonstration accounts are subject to the following restrictions</b>:
+            <ul>
+              <li>Jobs may only be submitted to the <a href="https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition">ckpt partition</a>.</li>
+              <li>Storage is limited under the demo account to <a href="https://hyak.uw.edu/docs/storage/gscratch#user-home-directory">10GB in the home directory</a>. For additional temporary storage you may utilize <a href="https://hyak.uw.edu/docs/storage/gscratch#scrubbed"> /gscratch/scrubbed storage</a>. Be aware that files in scrubbed not used for several months will be deleted. This storage in not intended for large datasets, but can be helpful as you try out workflows on HYAK.</li>
+              <li>You may submit as many jobs as you like, but the scheduler will only allow one to run at a time.</li>
+              <li>Your jobs are limited to 80 cores, 360 GB of memory, 2 GPUs, and a maximum of 2 discrete nodes.</li>
+            </ul>
+            <a href="mailto:help@uw.edu?subject=hyak demo account&body=I would like to open a HYAK demo account.">
+            <button class="button button--secondary button--block">Request a HYAK Demo Account</button></a>
+          
       </TabItem>
     </Tabs>
 
