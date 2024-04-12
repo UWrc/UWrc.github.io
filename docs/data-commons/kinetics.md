@@ -32,27 +32,12 @@ The kinetics dataset is licensed by Google Inc. under a Creative Commons Attribu
 ## How to cite?
 If you use the Kinetics dataset or any of the components, please cite:
 
-@article{DBLP:journals/corr/KayCSZHVVGBNSZ17,
-  author       = {Will Kay and
-                  Jo{\~{a}}o Carreira and
-                  Karen Simonyan and
-                  Brian Zhang and
-                  Chloe Hillier and
-                  Sudheendra Vijayanarasimhan and
-                  Fabio Viola and
-                  Tim Green and
-                  Trevor Back and
-                  Paul Natsev and
-                  Mustafa Suleyman and
-                  Andrew Zisserman},
-  title        = {The Kinetics Human Action Video Dataset},
-  journal      = {CoRR},
-  volume       = {abs/1705.06950},
-  year         = {2017},
-  url          = {http://arxiv.org/abs/1705.06950},
-  eprinttype    = {arXiv},
-  eprint       = {1705.06950},
-  timestamp    = {Thu, 14 Oct 2021 09:15:04 +0200},
-  biburl       = {https://dblp.org/rec/journals/corr/KayCSZHVVGBNSZ17.bib},
-  bibsource    = {dblp computer science bibliography, https://dblp.org}
+```
+@article{kay2017kinetics,
+  title={The Kinetics Human Action Video Dataset},
+  author={Will Kay and Joao Carreira and Karen Simonyan and Brian Zhang and Chloe Hillier and Sudheendra Vijayanarasimhan and Fabio Viola and Tim Green and Trevor Back and Apostol Natsev and Mustafa Suleyman and Andrew Zisserman},
+  journal={ArXiv},
+  year={2017},
+  volume={abs/1705.06950},
 }
+```

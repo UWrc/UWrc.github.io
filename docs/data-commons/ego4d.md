@@ -1,6 +1,6 @@
 ---
 id: ego4d
-title: Ego4d and 4dx Dataset
+title: Ego4d and Ego-Exo4D Dataset
 ---
 
 Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are Vishwas Sathish, Chuning Zhu, and Aditya Kusupati. Initial deployment of **April 2024**.
@@ -26,11 +26,11 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 
 The license information for Ego4D can be found [here](https://ego4d-data.org/pdfs/Ego4D-Licenses-Draft.pdf) and Ego-Exo4D [here](https://ego4d-data.org/pdfs/Ego-Exo4D-Model-License.pdf)
 
-The file path for ego4d dataset on KLONE is `/data/ego4d`.
+The file path for ego4d dataset on KLONE is `/data/ego4d` and for ego-exo4D.
 
 ## How to cite?
 If you use the Ego4d or the Ego4dx dataset or any of the components, please cite:
-
+```
 @article{DBLP:journals/corr/abs-2110-07058,
   author       = {Kristen Grauman and
                   Andrew Westbury and
@@ -127,3 +127,4 @@ If you use the Ego4d or the Ego4dx dataset or any of the components, please cite
   biburl       = {https://dblp.org/rec/journals/corr/abs-2110-07058.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
+```

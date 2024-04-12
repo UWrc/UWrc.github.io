@@ -30,6 +30,7 @@ The file path for kitchens dataset on KLONE is `/data/epic_kitchens`.
 ## How to cite?
 If you use the Epic Kitchens dataset or any of the components, please cite the following papers:
 
+```
 @ARTICLE{Damen2022RESCALING,
            title={Rescaling Egocentric Vision: Collection, Pipeline and Challenges for EPIC-KITCHENS-100},
            author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria and Furnari, Antonino 
@@ -51,3 +52,4 @@ author={Damen, Dima and Doughty, Hazel and Farinella, Giovanni Maria  and Fidler
 booktitle={European Conference on Computer Vision (ECCV)},
 year={2018}
 } 
+```
