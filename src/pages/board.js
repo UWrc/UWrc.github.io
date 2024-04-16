@@ -195,9 +195,9 @@ export default function board() {
             <p>Voting members of the HGB represent the leadership of due paying campus sponsors, typically at the college level. Voting is weighted by degree of sponsorship, a linear combination of amount of HYAK capacity and years of commitment in advance.</p>
 
             <ul>
-              <li><b>Tier 1</b> sponsors commit to at least 300 HYAK slots for 6 years.</li>
+              <li><b>Tier 1</b> sponsors commit to at least 100 HYAK slots for 6 years.</li>
               <li><b>Tier 2</b> sponsors commit to at least 50 HYAK slots for 6 years.</li>
-              <li><b>Tier 3</b> sponsors commit to less than 50 HYAK slots for less than 6 years.</li>
+              <li><b>Tier 3</b> sponsors commit to fewer than 50 HYAK slots for less than 6 years.</li>
             </ul>
 
           </div>
