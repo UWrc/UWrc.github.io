@@ -176,7 +176,7 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://cneuro-web01.s.uw.edu/wordpress/wp-content/uploads/2022/01/thumbnail_EdgarPhoto.jpg"
+                src="/img/avatar/edgar.jpg"
               />
               <div class="avatar__intro">
                 <h4 class="avatar__name">Edgar</h4>
