@@ -71,4 +71,6 @@ cd ./water-cut1.0_GMX50_bare/1536
 
 3. Run container, with data available
 
+```bash
 apptainer run --nv -B ${PWD}:/host_pwd --pwd /host_pwd docker://nvcr.io/hpc/gromacs:2022.3 gmx grompp -f pme.mdp
+```
