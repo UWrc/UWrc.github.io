@@ -30,12 +30,17 @@ When we say a resource is "currently idle," that only means no running jobs are 
 
 ### Checkpoint Limitations
 
-Jobs submitted to checkpoint are limited in the following important ways:
+Jobs submitted to checkpoint are limited in the following ways:
 
-1. All checkpoint jobs are stopped & requeued every 4 hours.
-1. All checkpoint jobs can be stopped & requeued at any time—*without notice*—if a resource contributor requests their resource (this is the mechanism which provides on-demand access to contributed resources).
+1. **Non-GPU checkpoint jobs** will be stopped & requeued every 4-5 hours. **GPU checkpoint jobs** will be stopped & requeued every 8-9 hours.
+2. All checkpoint jobs can be stopped & requeued at any time—*without notice*—if a resource contributor requests their resource (this is the mechanism which provides on-demand access to contributed resources). This mechanism is called **pre-emption**.
+3. Interactive jobs on checkpoint (requested with `salloc`) are held to the same limitations listed above. 
 
 Jobs submitted to this partition should be designed to:
 
 1. Save their progress at regular intervals, or "checkpoints."
 2. Once resumed, start their work from the last saved "checkpoint."
+
+:::tip What about the `--time` directive?
+When developing your `sbatch` script, you should set a maximum runtime for your job with the `sbatch` directive `--time`. Users should always set `--time=` to the maximum expected runtime of the job with some extra margin for error. Your checkpoint jobs will requeue as many times as required either by the checkpoint time limit for non-GPU (4-5 hours) or GPU jobs (8-9 hours) or pre-emption until the *maximum* runtime has elapsed as directed by `--time`.
+:::
