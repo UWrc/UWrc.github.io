@@ -5,17 +5,18 @@ author: Kristen Finch
 author_title: HPC Staff Scientist
 author_url: https://github.com/finchnsnps
 author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
-tags: [klone,hyak,hpc,supercomputer,storage,training,ckpt,checkpoint,gpu]
+tags: [klone,hyak,hpc,supercomputer,storage,training,ckpt,checkpoint,gpu,nvidia]
 ---
 
 Hello HYAK Community,
 
-Thank you for your patience this month while we had more scheduled downtime than usual to allow for electrical reconfiguration work in the UW data center. We appreciate how disruptive this work has been in recent weeks, we wanted to assure the community that the benefit is to create additional power capacity that will allow HYAK to grow and broaden its support of the UW research community.
+Thank you for your patience this month while there was more scheduled downtime than usual to allow for electrical reconfiguration work in the UW Tower data center. We appreciate how disruptive this work has been in recent weeks. Please keep in mind that this work by the data center team has been critical in allowing the facility to increase available power to the cluster to provide future growth capacity, which was limiting deployment of new equipment in recent months.
 
-In addition to our regular maintenance, we wanted to make you aware for the following changes initiated during scheduled downtime:
-- We implemented an increase in checkpoint (`--partition=ckpt`) runtime for **GPU jobs** from 4-5 hours to 8-9 hours (pre-emption requeuing will still occur without notice). Please see our updated [**documentation page**](https://hyak.uw.edu/docs/compute/checkpoint) for more details about using idle resources. 
+The HYAK team was able to use the interruption to implement the following changes:
+- Increase in checkpoint (`--partition=ckpt`) runtime for GPU jobs from 4-5 hours to 8-9 hours (pre-emption for requeuing will still occur subject to cluster utilization). Please see the updated [**documentation page**](https://hyak.uw.edu/docs/compute/checkpoint) for information about using idle resources.
+- The NVIDIA driver has been updated for all GPUs.
 
-Our next scheduled maintenance will be Tuesday May, 14, 2024. 
+Our next scheduled maintenance will be Tuesday May 14, 2024. 
 
 #### Training Opportunities
 Follow NSF ACCESS Training and Events posting [**HERE**](https://support.access-ci.org/news/events-trainings) to find online webinars about containers, parallel computing, using GPUs, and more from HPC providers around the USA. 
