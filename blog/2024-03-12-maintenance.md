@@ -21,7 +21,7 @@ Over the last several months the login node has been crashing on occasion. We ha
 While developing your code with connectivity to the server is a great usage of our services, connecting directly to the login node via the `Remote-SSH` extension will result in VS Code server processes running silently in the background and leading to node instability. As a reminder, *we prohibit users running processes on the login node*. 
 
 :::important New Documentation
-The steps discussed here for responsible use of VS Code have been added to our documentation. [**Please review the solutions for connecting VS Code to HYAK**](/docs/tools/vscode.md).
+The steps discussed here for responsible use of VS Code have been added to our documentation. [**Please review the solutions for connecting VS Code to HYAK**](/docs/tools/vscode).
 :::
 
 1. Check which processes are running on the login node, especially if you have been receiving klone usage violations when you are not aware of jobs running. Look for `vscode-server` among the listed processes. 
