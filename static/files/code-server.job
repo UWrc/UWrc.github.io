@@ -1,0 +1,64 @@
+#!/bin/sh
+
+#SBATCH --account=uwit
+#SBATCH --partition=ckpt
+#SBATCH --time=02:00:00
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=4
+#SBATCH --mem=20G
+
+#SBATCH --name=code-server
+#SBATCH --signal=USR2
+#SBATCH --output=code-server.job.%j # The output file will save to the directory where this SLURM script is initiated.
+
+# Set home destination for code-server session
+CODER_HOME="/gscratch/scrubbed/<UWNetID>" # update this line
+# Provide container file
+CODER_SIF="code-server_latest.sif" # update this line if needed
+
+# Prepare variables
+export APPTAINERENV_USER=$(id -un)
+export APPTAINERENV_PASSWORD=$(openssl rand -base64 15)
+
+# Create config file for code-server
+cat > ${CODER_HOME}/.config/code-server/config.yaml <<END
+bind-addr: 127.0.0.1:8080
+auth: password
+password: ${APPTAINERENV_PASSWORD}
+cert: false
+END
+
+# Get unused socket per https://unix.stackexchange.com/a/132524
+# Tiny race condition between the python & apptainer commands
+readonly PORT=$(/mmfs1/sw/pyenv/versions/3.9.5/bin/python -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
+cat 1>&2 <<END
+1. SSH tunnel from your workstation using the following command:
+
+   ssh -N -L 8080:${HOSTNAME}:${PORT} ${APPTAINERENV_USER}@klone.hyak.uw.edu
+
+   and point your web browser to http://localhost:8080
+
+2. log in to Code Server using the following credentials:
+
+   password: ${APPTAINERENV_PASSWORD}
+
+When done using Code Server, terminate the job by:
+
+1. Sign out of Code Server (Find the lines icon Menu and select "Sign out of Code Server")
+2. Issue the following command on the login node:
+
+      scancel --name ${SLURM_JOB_NAME}
+END
+
+source /etc/bashrc
+module load apptainer
+
+apptainer exec --cleanenv --home ${CODER_HOME} ${CODER_HOME}/${CODER_SIF} \
+    code-server --bind-addr=${HOSTNAME}:${PORT} \
+            --auth=password 
+
+            
+APPTAINER_EXIT_CODE=$?
+echo "code server exited $APPTAINER_EXIT_CODE" 1>&2
+exit $APPTAINER_EXIT_CODE

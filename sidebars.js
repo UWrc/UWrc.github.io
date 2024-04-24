@@ -44,6 +44,13 @@ module.exports = {
       'tools/python',
       'tools/jupyter',
       'tools/matlab',
+      {
+        'Vs Code': [
+          'tools/vscode',
+          'tools/vsc-code-server',
+          'tools/vsc-proxy-jump',
+        ]
+      }
     ],
     'Hyak 101: Python': [
       'hyak101/python/syllabus',
