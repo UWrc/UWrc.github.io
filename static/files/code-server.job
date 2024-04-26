@@ -8,7 +8,7 @@
 #SBATCH --ntasks=4
 #SBATCH --mem=20G
 
-#SBATCH --name=code-server
+#SBATCH --job-name=code-server
 #SBATCH --signal=USR2
 #SBATCH --output=code-server.job.%j # The output file will save to the directory where this SLURM script is initiated.
 
