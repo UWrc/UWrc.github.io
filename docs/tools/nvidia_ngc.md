@@ -23,7 +23,7 @@ Another great place to get started with tools that are in the HPC SDK and in the
 
 ### Pre-requisites
 
-Please refer to the [Apptainer and Docker](/docs/tools/containers.md) for information on getting started with Apptainer and getting access to NGC.
+Please refer to the [Apptainer and Docker](/docs/tools/containers) for information on getting started with Apptainer and getting access to NGC.
 
 Get a summary of all the GPUs on the cluster and their current state. This will be helpful when requesting an interactive session on a GPU for the exercises below. 
 ```bash
