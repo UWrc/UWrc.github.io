@@ -43,6 +43,11 @@ wget https://hyak.uw.edu/files/code-server.job
 Edit the job script (find comments "#update this line") to set your code-server session home directory and provide the name of the container if it does not match `code-server_latest.sif`, and edit the `SBATCH` directives as needed. The code block below shows the lines that should be updated as needed. 
 
 ```bash
+# To identify accounts and partitions that are available to you, use the hyakalloc command
+//highlight-next-line
+#SBATCH --account=uwit # update this line 
+//highlight-next-line
+#SBATCH --partition=ckpt # update this line
 # Set home destination for code-server session
 //highlight-next-line
 CODER_HOME="/gscratch/scrubbed/<UWNetID>" # update this line
