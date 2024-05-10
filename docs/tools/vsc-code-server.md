@@ -11,13 +11,34 @@ title: VS Code via Code-Server
 
 3. Provides a simpler alternative to [**VS Code via ProxyJump**](tools/vsc-proxy-jump.md), which requires a lot of setup and for Windows users requires 2-factor authentication to login and change directory. 
 
-4. Involves steps: pull the docker container, launch a batch job to start the container on a compute node, SSH tunnel to the compute node where the container is running, and securely access VS Code through your browser window. 
+4. Involves steps: making a symbolic link to the container stored on hyak or pulling the docker container yourself, launching a batch job to start the container on a compute node, opening a SSH tunnel to the compute node where the container is running, and securely accessing VS Code through your browser window. 
 
-### Pull the Container
+### Accessing the Container
 
-**This step only needs to be performed during the first set up.**
+**This step only needs to be performed during initial set up.**
 
-Start an interactive job to pull the cointainer with the apptainer module. Here is an example command to start your interactive job: 
+We have pulled a version of the code-server container for our users. This removes 5 minutes of set up, and allows use of the container without occupying user disk storage. 
+
+First, navigate to a directory a where you will store your symbolic link to the code-server container. In this example, we will navigate to our home directory. 
+
+```bash
+cd $HOME
+```
+
+Create a symbolic link to the container which we have stored for you in `/mmfs1/sw/containers/code-server/`. The symbolic link shortcut will appear in the directory where the command was initiated, unless otherwise specified.
+
+```bash
+ln -s /mmfs1/sw/containers/code-server/code-server_4.89.0-39.sif code-server_4.89.0-39.sif
+# Now you can use the code-server container from your directory rather than specifying the entire path to our version of the container.
+```
+
+This will link to code-server container version 4.89.0-39. There are other versions of the container you might consider: [**code-server tags**](https://hub.docker.com/r/codercom/code-server/tags), and below, we include optional instructions for pulling the latest version of code-server. 
+
+:::tip Optional: pull the container yourself
+
+**This step only needs to be performed during initial set up.**
+
+Start an interactive job to pull the cointainer with the apptainer module. Here is an example command to start your interactive job (find out which accounts and partitions your can access with the `hyakalloc` command): 
 
 ```bash
 salloc --account=uwit --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=code-server --time=2:00:00
@@ -32,6 +53,8 @@ Pull the container from DockerHub. This will take a few minutes to complete. Whe
 ```bash
 apptainer pull docker://codercom/code-server
 ```
+
+:::
 
 ### Launch code-server with SLURM
 
@@ -48,14 +71,16 @@ Edit the job script (find comments "#update this line") to set your code-server 
 #SBATCH --account=uwit # update this line 
 //highlight-next-line
 #SBATCH --partition=ckpt # update this line
+//highlight-next-line
+#SBATCH --time=02:00:00 # update this line to change time limit
 # Set home destination for code-server session
 //highlight-next-line
 CODER_HOME="/gscratch/scrubbed/<UWNetID>" # update this line
 # Provide container file
 //highlight-next-line
-CODER_SIF="code-server_latest.sif" # update this line if needed
+CODER_SIF="code-server_4.89.0-39.sif" # update this line if needed
 ```
-Submit the script with `sbatch`. **This step launching of the code-server job script and all following steps will need to be repeated each time you log in and connect to VS Code.**
+Submit the script with `sbatch`. **Repeat this step and all following steps each time you log in and connect to VS Code.**
 ```bash
 //highlight-next-line
 sbatch code-server.job
@@ -84,6 +109,7 @@ When done using Code Server, terminate the job by:
       scancel --name code-server
 ```
 
+:::tip Pro Tip
 Monitor the job with `squeue` and your UWNetID like the following example.
 
 ```bash
@@ -92,6 +118,7 @@ squeue -u <UWNetID>
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           17440706   compute code-ser  <UWNetID>  R       3:15      1 n3088
 ```
+:::
 
 The output file (`code-server.job.17440706` in this example) will also contain messages from `code-server` as the connection is established. These messages include:
 
@@ -103,7 +130,7 @@ As your session continues, more information will be printed to this output file.
 
 ### Establish the SSH tunnel
 
-Follow the instructions in the output file. Open a new terminal/powershell/PuTTy window **ON YOUR COMPUTER** and use the command:
+Follow the instructions in the output file. Open a new terminal/powershell/PuTTy window **ON YOUR COMPUTER** and use your version of the tunnel command from your job output file (e.g., `code-server.job.17440706`). The following is an example:
 ```bash
 //highlight-next-line
 ssh -N -L 8080:n3088:59985 <UWNetID>@klone.hyak.uw.edu
@@ -112,7 +139,11 @@ ssh -N -L 8080:n3088:59985 <UWNetID>@klone.hyak.uw.edu
 ```
 The login will appear to hang, but your connection is now open. 
 
-Open a new browser window to **http://localhost:8080** and provide the password from the output file (`code-server.job.17440706` in this example).
+:::warning
+Do not use the code-server password to open the ssh tunnel. After your ssh command, your UWNetID password is required. Multiple failed login attempts will result in a IP ban. 
+:::
+
+Open a new browser window to **http://localhost:8080** and provide **the password from the output file** (`code-server.job.17440706` and `+WwYzgh7YH/yHzUWNWNS` in this example).
 
 ![](/img/docs/vscode/vsc-pw.png 'Provide Password')
 
