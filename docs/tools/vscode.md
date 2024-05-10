@@ -1,6 +1,6 @@
 ---
 id: vscode
-title: VS Code
+title: Using VS Code on HYAK
 ---
 
 [**Visual Studio Code (VS Code)**](https://code.visualstudio.com/) is a versatile and lightweight source-code editor developed by Microsoft, known for its robustness, extensive customization options, and integration with various programming languages and tools. Connecting VS Code to HYAK's HPC environment enables seamless development and debugging of complex scientific or computational applications, leveraging version control integration and efficient code editing.

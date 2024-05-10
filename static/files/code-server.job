@@ -2,7 +2,7 @@
 
 #SBATCH --account=uwit # update this line - to identify accounts and partitions that are available to you use the hyakalloc command
 #SBATCH --partition=ckpt # update this line
-#SBATCH --time=02:00:00
+#SBATCH --time=02:00:00 # update this line
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
@@ -15,7 +15,7 @@
 # Set home destination for code-server session
 CODER_HOME="/gscratch/scrubbed/<UWNetID>" # update this line
 # Provide container file
-CODER_SIF="code-server_latest.sif" # update this line if needed
+CODER_SIF="code-server_4.89.0-39.sif" # update this line if needed
 
 # Prepare variables
 export APPTAINERENV_USER=$(id -un)
@@ -37,15 +37,17 @@ cat 1>&2 <<END
 
    ssh -N -L 8080:${HOSTNAME}:${PORT} ${APPTAINERENV_USER}@klone.hyak.uw.edu
 
+   provide your UWNetID password and Duo 2-Factor authentication to complete.
+
    and point your web browser to http://localhost:8080
 
-2. log in to Code Server using the following credentials:
+2. From your browser, log in to Code Server using the following credentials:
 
    password: ${APPTAINERENV_PASSWORD}
 
 When done using Code Server, terminate the job by:
 
-1. Sign out of Code Server (Find the lines icon Menu and select "Sign out of Code Server")
+1. Signing out of Code Server (Find the lines icon Menu and select "Sign out of Code Server")
 2. Issue the following command on the login node:
 
       scancel --name ${SLURM_JOB_NAME}
