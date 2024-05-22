@@ -14,6 +14,13 @@ It has come to our attention that the default configuration of [Miniconda](https
 
 ![](/img/blog/disk-quota-exceeded.png 'Error Message')
 
+:::warning warning post under contruction
+
+We have been made aware that the solutions for disk storage presented here result in additional problems with conda environments, specifically with hardlinks to the install directory for Miniconda3 when envs_dirs and pkgs_dirs are configured to a different storage location. [**Please see this Issue for detailed information.**](https://github.com/conda/conda/issues/13923) we hope to have a better solution soon. 
+
+:::
+
+
 ### Conda's config
 
 Software is usually accompanied by a configuration file (aka "config file") or a text file used to store configuration data for software applications. It typically contains parameters and settings that dictate how the software behaves and interacts it's environment. Familiarity with config files allows for efficient troubleshooting, optimization, and adaptation of software to specific environments, like HYAK's shared HPC environment, enhancing overall usability and performance. Conda's config file `.condarc`, is customizable and lets you determine where packages and environments are stored by conda. 
