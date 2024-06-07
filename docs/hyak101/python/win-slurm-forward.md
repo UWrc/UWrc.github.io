@@ -5,6 +5,6 @@ title: SLURM Job & Port Forwarding
 
 :::note
 
-This documentation is uner construction.
+This documentation is under construction.
 
 :::

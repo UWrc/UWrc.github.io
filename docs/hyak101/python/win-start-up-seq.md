@@ -5,6 +5,6 @@ title: Start Up Sequence
 
 :::note
 
-This documentation is uner construction.
+This documentation is under construction.
 
 :::
