@@ -52,14 +52,32 @@ module.exports = {
         ]
       }
     ],
-    'Hyak 101: Python': [
+    'Hyak 101 Tutorial': [
       'hyak101/python/syllabus',
+      'hyak101/python/setup',
       'hyak101/python/container',
-      'hyak101/python/ssh',
-      'hyak101/python/overlay',
-      'hyak101/python/jobs'
+      {
+        'Mac/Linux Users': [
+          'hyak101/python/ssh',
+          'hyak101/python/overlay',
+          'hyak101/python/slurm-forward',
+          'hyak101/python/start-up-seq',
+          'hyak101/python/connect-vsc',
+        ]
+      },
+      {
+        'Windows Users': [
+          'hyak101/python/win-ssh',
+          'hyak101/python/win-overlay',
+          'hyak101/python/win-slurm-forward',
+          'hyak101/python/win-start-up-seq',
+          'hyak101/python/win-connect-vsc',
+        ]
+      },
+      'hyak101/python/interactive',
     ],
-    'Miscellaneous': [
+    'Additional Resources': [
+      'resources',
       'faq',
       'glossary',
     ],
