@@ -5,6 +5,6 @@ title: Jupyter in VS Code
 
 :::note
 
-This documentation is uner construction.
+This documentation is under construction.
 
 :::
