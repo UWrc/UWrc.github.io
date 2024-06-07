@@ -1,12 +1,12 @@
 ---
-id: ssh
+id: win-ssh
 title: Flexible Connections
 ---
 
 The next step is to set up a ProxyJump which will connect your local computer directly to the container running Jupyter on a `klone` compute node. A ProxyJump is a useful solution that can help you link external software to the server for real time code development.
 
 :::caution 
-These instructions are for **Mac/Linux users only**. If you are a Windows user, please navigate to the Windows-specific instructions.
+These instructions are for **Windows users only**. If you are a Mac/Linux user, please navigate to the Mac/Linux-specific instructions.
 :::
 
 ## Spending some time on SSH
@@ -39,7 +39,7 @@ chmod 600 ~/.ssh/authorized_keys
 ### A set of customized, local configurations
 :::important
 
-This entire next section is done on your local computer—your personal MacOS/Linux machine—***not*** on the cluster.
+This entire next section is done on your local computer—your personal Windows machine—***not*** on the cluster.
 
 :::
 
@@ -47,24 +47,16 @@ This entire next section is done on your local computer—your personal MacOS/Li
 
 First up create or edit your main SSH configuration file, located at `~/.ssh/config`. The contents of your SSH configuration file will depend on the operating system of your local machine, below is the version for Mac/Linux users. You can use the following template, making sure to replace `UWNetID` for your UW Net ID that you use to log in to `klone`:
 
-```bash title="~/.ssh/config"
+```shell title="~/.ssh/config"
 Host klone-login
 //highlight-next-line
         User UWNetID
         Hostname klone.hyak.uw.edu
         ServerAliveInterval 30
         ServerAliveCountMax 1200
-        ControlMaster auto
-        ControlPersist 3600
-        ControlPath ~/.ssh/%r@klone-login:%p
 
 Host klone-node
     Include klone-node-config
-```
-
-Whether you're creating this file for the first time, or modifying an existing config, make sure the file has the correct permissions:
-```bash
-chmod 600 ~/.ssh/config
 ```
 
 Once this is in place, we can do the following to log in to klone:
@@ -78,11 +70,6 @@ Here's a quick rundown of the options we're setting:
 - `ServerAliveInterval 30`: every 30 seconds, send a packet to the server (the login node) to keep the connection open.
 - `ServerAliveCountMax 1200`: don't close the connection unless we've sent 1200 server-alive messages
 without a response from the login node.
-- `ControlMaster auto`: enable SSH multiplexing, i.e. connection sharing. This means once we've established the first connection,
-we won't have to reauthenticate for subsequent connections: the new connection will just use the already open socket. This feature is no supported for Windows Users.
-- `ControlPersist 3600`: this keeps the control socket open for an hour after the initial connection has been closed.
-- `ControlPath ~/.ssh/%r@klone-login:%p`: this is the path where the socket, appearing as a file, will actually be located. The `%r` is
-an abbreviation for the remote username, i.e. your UW Net ID, and `%p` is an abbreviation for the port (normally 22 for SSH).
 
 Finally, the last line will include the next file we're going to make: A secondary config for the node.
 
@@ -90,20 +77,14 @@ Finally, the last line will include the next file we're going to make: A seconda
 
 These instructions are the same for Windows and Mac/Linux users. 
 
-Here we're defining `klone-node` as a compute node with a placeholder (`n3000`, until we know what the node will be), and
-using `ProxyJump` to connect to that node through the login node. Remember to replace `UWNetID` for your UW Net ID that you use to log in to `klone`.
+Here we're defining `klone-node` as a compute node (`n3000`, until we know what the node will be), and
+using `ProxyJump` to connect to that node through the login node.
 
-```bash title="~/.ssh/klone-node-config"
+```shell title="~/.ssh/klone-node-config"
 Host klone-node
   User UWNetID
   Hostname n3000
   ProxyJump klone-login
-```
-
-This file will also need the correct permissions. Update permissions with:
-
-```shell terminal=true
-$ chmod 600 ~/.ssh/klone-node-config
 ```
 
 Because you will be effectively connecting directly from your local computer to the node, you will need to append the SSH public key from your **local** system to the `.ssh/authorized_keys` file under your home directory on `klone`. Or you can do the same by copying your local ssh key onto klone. While we cannot use our key as a authentication factor between our local machine and klone, we can use it when ssh'ing *between* klone nodes.
@@ -112,8 +93,12 @@ Because you will be effectively connecting directly from your local computer to 
 ssh-copy-id klone-login
 ```
 
+**Windows may or may not require a permissions check.** 
+
+If your private key permissions are too open, ssh won't let you connect to klone. To solve this, change the permissions on your private key file. [Apply this solution.](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+
 :::tip EXTRA CREDIT: Testing your Connection
-The following is ***optional***, but demonstrates what we have just set up by configuring `klone-login` and `klone-node`. You will test the connection later on in the Hyak 101 tutorial. If you wish to test your connection now, follow these steps. 
+The following is ***optional***, but demonstrates what we have just set up by configuring `klone-login` and `klone-node`. You will test the connection in the next section of the Hyak 101 tutorial. If you wish to test your connection now, follow these steps. 
 
 First, test your new `ssh` shortcut to get onto the login node. Then, request an interactive job in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory. The `Hostname` will appear when your node is allocated, and follow your UWNetID For example:
 

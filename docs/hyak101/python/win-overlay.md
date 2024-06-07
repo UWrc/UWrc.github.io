@@ -1,7 +1,8 @@
 ---
-id: overlay
+id: win-overlay
 title: Working in the Overlay
 ---
+
 In this section we're going to create an overlay: think of it as adding a changeable layer on top of the unchangeable container.
 This section is critical because we will install Conda & modify it within the overlay.
 
