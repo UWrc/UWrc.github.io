@@ -16,6 +16,7 @@ Learn more about inodes [here](https://www.admin-magazine.com/HPC/Articles/What-
 :::
 
 We focus mostly on block quotas when assigning storage as the ratio of inode to block usage varies from lab-to-lab and workflow-to-workflow. So long as the researcher has taken every reasonable step and recommendation we have to optimize their usage of their given inodes, if it's within reason, we can accommodate further inode quota increases. Submit a ticket with details about your request.
+
 ## Checking Utilization `hyakstorage`
 
 The `hyakstorage` command is unique to KLONE and a tool to monitor your storage quota utilization in both your home and group (or lab) directories.
@@ -46,18 +47,23 @@ $
 If you run `hyakstorage` without any arguments you'll receive the status of your home and all group (or lab) directories you have access to. The viewing options, `--show-group` and `--show-user`, will show a more detailed breakdown of storage use by group & users. By default, those detailed views will be sorted by disk usage (i.e. `--by-disk`), but you can also sort by files owned with `--by-files`.
 
 :::note
-The quotas reported by `hyakstorage` are updated once every hour.
+The quotas reported by `hyakstorage` are updated once every hour, not immediately. Since quotas reported by `hyakstorage` are updated once an hour, if you receive an out of space error it might not appear that you are right away. Moreover, if you make efforts to clear storage, you might not see those efforts relected in the `hyakstorage` data for a little while. 
 :::
 
-Since quotas reported by `hyakstorage` are updated once an hour, if you receive an out of space error it might not appear that you are right away.
+:::tip pro tip: Storage monitoring
+To monitor storage changes in real-time, use the following command, which will show you how much storage is occupied by each item in the directory where the command is issued. IF you are cleaning up storage, this command will show new storage counts as changes are made. 
+```bash
+du -h --max-depth 1
+```
+:::
 
 ## User Home Directory
 
-- 10 GB, only yours, everyone has one.
+- ***10 GB, only yours, everyone has one.***
 
-Each users' home directory is located at the folder path `/mmfs1/home/netID` on KLONE or `/usr/lusers/netID` and `/gscratch/home/netID` on MOX where `netID` is your UW netID. You are placed here by default when you log into the cluster. You can always refer to it using the usual Linux shortcuts of `$HOME` or `~`.
+Each users' home directory is located at the folder path `/mmfs1/home/UWNetID` on KLONE or `/usr/lusers/UWNetID` and `/gscratch/home/UWNetID` on MOX where `UWNetID` is your UW netID. You are placed here by default when you log into the cluster.
 
-:::note
+:::caution Small disk quota
 Your home directory quota is 10 GB or ~250,000 inodes.
 :::
 
@@ -77,7 +83,7 @@ You can check your home directory usage using the `hyakstorage` command without 
 
 ```shell-session terminal=true
 $ hyakstorage --home
-                           Usage report for /mmfs1/home/mwanek
+                           Usage report for /mmfs1/home/UWNetID
 ╭──────────────────────┬────────────────────────────────┬────────────────────────────────╮
 │                      │ Disk Usage                     │ Files Usage                    │
 ├──────────────────────┼────────────────────────────────┼────────────────────────────────┤
@@ -87,6 +93,31 @@ $ hyakstorage --home
 ````
 
 Ideally you only keep personal code bases or smaller data sets here. This quota can not be changed, if you need more data one of the other storage spots on `gscratch` (e.g., lab folder, scrubbed) are better suited.
+
+:::tip PRO TRIP - FYI
+Your Home directory is a directory under the HYAK file system that each user is given when their account is created. When you log into HYAK, your shell (your view) will be you home directory. Meaning that when your use the command print working directory or `pwd` you will see the absolute path (i.e., address in the file system) of your Home directory: 
+```bash
+pwd
+/mmfs1/home/UWNetID
+```
+Above, **UWNetID** in this case will be replaced with your **UWNetID**. For example, as the author of this documentation (Dr. Kristen Finch; username `finchkn`), when I use `pwd` after I login, I see: 
+```bash
+pwd
+/mmfs1/home/finchkn
+```
+There are many shortcuts to get to your home directory from anywhere on `klone`. 
+```bash
+# All of the following will take me to my Home Directory:
+# the ~ symbol is a shorthand for the Home Directory
+cd ~ 
+# cd followed by nothing will take you to the home directory
+cd
+# $HOME is an environmental variable is synonymous with the absolute path of your Home Directory
+cd $HOME
+# print the variable $HOME to see what it assigned to in your shell
+echo $HOME
+```
+:::
 
 ## Group or Lab Directories
 
