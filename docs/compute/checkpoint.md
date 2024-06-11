@@ -32,7 +32,7 @@ You can request resources from the entire cluster's idle resources (including GP
 
 #### New `g2` Nodes
 
-Following our June 2024 maintenance, we have a new class of nodes being deployed on `klone` which we are calling `g2` because they are the second generation of nodes on `klone`. CPU `g2` nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. For this reason, you might be interested in running you jobs on `g2` node specifically, and using the `ckpt-g2` partition, for example, with: 
+Following our June 2024 maintenance, we have a new class of nodes being deployed on `klone` which we are calling `g2` because they are the second generation of nodes. CPU `g2` nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. For this reason, you might be interested in running you jobs on `g2` node specifically, and using the `ckpt-g2` partition, for example, with: 
 
 ```bash
 salloc --partition ckpt-g2
@@ -51,7 +51,7 @@ salloc --partition ckpt-all
 
 
 :::important Node Generation 1 vs. `g2`
-The new `g2` nodes will likely run faster than the previous generation of nodes. However, there are fewer `g2` nodes than generation 1. For this reason, if all users start sending jobs to `ckpt-g2` wait times for jobs could be longer in the `g2` queue for `ckpt-g2` users. (wait times will not effect `g2` resource owners who will have priority for scheduling on `g2` resources)
+The new `g2` nodes will likely run faster than the previous generation of nodes. However, there are fewer `g2` nodes than generation 1. For this reason, if all users start sending jobs to `ckpt-g2` wait times for jobs could be longer in the `g2` queue for `ckpt-g2` users. (wait times will not affect `g2` resource owners who will have priority for scheduling on `g2` resources)
 
 The new `g2` nodes have a different architecture, which might offer additional optimizations. However, this could lead to differences in compilation, and if uniformity is important to you, you should consider sticking with either `ckpt` or `ckpt-g2` rather than `ckpt-all`.
 :::
