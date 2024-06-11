@@ -17,7 +17,7 @@ Thanks again for your patience with our monthly scheduled maintenance. This mont
 * `ckpt-all` for scheduling jobs on either generation 1 or `g2` nodes.
 * `ckpt` will now schedule jobs on generation 1 nodes only. 
 
- [**Please review our documentation HERE**](https://hyak.uw.edu/docs/compute/checkpoint#new-g2-nodes) for specific instructions for accessing these resources as well as additional considerations for their usage.
+ [**Please review our documentation HERE**](https://hyak.uw.edu/docs/compute/checkpoint#new-g2-nodes) for specific instructions for accessing these resources. Additionally, [**please see the blog post here**](https://hyak.uw.edu/blog/g1-vs-g2) where we discuss additional considerations for their usage.
 
 In addition, we have two student opportunities to bring to your attention.
 
