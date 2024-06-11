@@ -23,7 +23,7 @@ This entire next section is done on your local computer—your personal MacOS/Li
 
 ### Configure SSH
 
-Prepare your main SSH configuration file, located at `~/.ssh/config` **ON YOUR COMPUTER**. The contents of your SSH configuration file will depend on the operating system of your local machine (Mac/Linux or Windows). This step will create a short cut for logging into `klone`; instead of `ssh <UWNetID>@klone.hyak.uw.edu` the command to login will be `ssh klone-login`.
+Prepare your main SSH configuration file, located at `~/.ssh/config` **ON YOUR COMPUTER**. The contents of your SSH configuration file will depend on the operating system of your local machine (Mac/Linux or Windows). This step will create a short cut for logging into `klone`; instead of `ssh UWNetID@klone.hyak.uw.edu` the command to login will be `ssh klone-login`.
 
 #### Mac/Linux Users
 
@@ -32,7 +32,7 @@ Use the following template for `~/.ssh/config` on Mac/Linux, replacing `UWNetID`
 ```bash title="~/.ssh/config"
 Host klone-login
 //highlight-next-line
-        User <UWNetID>
+        User UWNetID
         Hostname klone.hyak.uw.edu
         ServerAliveInterval 30
         ServerAliveCountMax 1200
@@ -55,7 +55,7 @@ Once this is in place, we can do the following to log in to `klone`:
 ```bash
 ssh klone-login
 #Instead of:
-#ssh <UWNetID>@klone.hyak.uw.edu
+#ssh UWNetID@klone.hyak.uw.edu
 ```
 
 Here's a summary of the options set with this configuration file:
@@ -74,7 +74,7 @@ Use the following template for `~/.ssh/config` on Windows, replacing `UWNetID` w
 ```bash title="~/.ssh/config"
 Host klone-login
 //highlight-next-line
-        User <UWNetID>
+        User UWNetID
         Hostname klone.hyak.uw.edu
         ServerAliveInterval 30
         ServerAliveCountMax 1200
@@ -92,7 +92,7 @@ Use the following template for `~/.ssh/klone-node-config` on Mac/Linux and Windo
 ```bash title="~/.ssh/klone-node-config"
 Host klone-node
 //highlight-next-line
-  User <UWNetID>
+  User UWNetID
   Hostname n3000
   ProxyJump klone-login
 ```
@@ -139,7 +139,7 @@ Manually replace the `Hostname` line with your job node. Don't forget to replace
 ```bash title="~/.ssh/klone-node-config"
 Host klone-node
 //highlight-next-line
-  User <UWNetID>
+  User UWNetID
 //highlight-next-line
   Hostname n3120
   ProxyJump klone-login

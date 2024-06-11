@@ -29,7 +29,8 @@ Create a symbolic link to the container which we have stored for you in `/mmfs1/
 
 ```bash
 ln -s /mmfs1/sw/containers/code-server/code-server_4.89.0-39.sif code-server_4.89.0-39.sif
-# Now you can use the code-server container from your directory rather than specifying the entire path to our version of the container.
+# Now you can use the code-server container from your directory 
+# rather than specifying the entire path to our version of the container.
 ```
 
 This will link to code-server container version 4.89.0-39. There are other versions of the container you might consider: [**code-server tags**](https://hub.docker.com/r/codercom/code-server/tags), and below, we include optional instructions for pulling the latest version of code-server. 
@@ -41,12 +42,7 @@ This will link to code-server container version 4.89.0-39. There are other versi
 Start an interactive job to pull the cointainer with the apptainer module. Here is an example command to start your interactive job (find out which accounts and partitions your can access with the `hyakalloc` command): 
 
 ```bash
-salloc --account=uwit --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=code-server --time=2:00:00
-```
-
-Loading the apptainer module is required. 
-```bash
-module load apptainer
+salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=code-server --time=2:00:00
 ```
 
 Pull the container from DockerHub. This will take a few minutes to complete. When complete, you will have a container image called  `code-server_lastest.sif`. There are other versions of the container you might consider rather than the latest version: [**code-server tags**](https://hub.docker.com/r/codercom/code-server/tags).
@@ -68,14 +64,12 @@ Edit the job script (find comments "#update this line") to set your code-server 
 ```bash
 # To identify accounts and partitions that are available to you, use the hyakalloc command
 //highlight-next-line
-#SBATCH --account=uwit # update this line 
-//highlight-next-line
 #SBATCH --partition=ckpt # update this line
 //highlight-next-line
 #SBATCH --time=02:00:00 # update this line to change time limit
 # Set home destination for code-server session
 //highlight-next-line
-CODER_HOME="/gscratch/scrubbed/<UWNetID>" # update this line
+CODER_HOME="/gscratch/scrubbed/UWNetID" # update this line
 # Provide container file
 //highlight-next-line
 CODER_SIF="code-server_4.89.0-39.sif" # update this line if needed
@@ -93,7 +87,7 @@ This script will start a batch job and launch the code-server container. The `SS
 cat code-server.job.17440706
 1. SSH tunnel from your workstation using the following command:
 
-   ssh -N -L 8080:n3088:59985 <UWNetID>@klone.hyak.uw.edu
+   ssh -N -L 8080:n3088:59985 UWNetID@klone.hyak.uw.edu
 
    and point your web browser to http://localhost:8080
 
@@ -116,7 +110,7 @@ Monitor the job with `squeue` and your UWNetID like the following example.
 //highlight-next-line
 squeue -u <UWNetID>
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          17440706   compute code-ser  <UWNetID>  R       3:15      1 n3088
+          17440706   compute code-ser  UWNetID  R       3:15      1 n3088
 ```
 :::
 
@@ -133,7 +127,7 @@ As your session continues, more information will be printed to this output file.
 Follow the instructions in the output file. Open a new terminal/powershell/PuTTy window **ON YOUR COMPUTER** and use your version of the tunnel command from your job output file (e.g., `code-server.job.17440706`). The following is an example:
 ```bash
 //highlight-next-line
-ssh -N -L 8080:n3088:59985 <UWNetID>@klone.hyak.uw.edu
+ssh -N -L 8080:n3088:59985 UWNetID@klone.hyak.uw.edu
 ... provide UWNetID password
 ... Duo 2 Factor Authentication
 ```

@@ -3,46 +3,65 @@ id: r
 title: R and Rstudio
 ---
 
-R is a popular statistical programming language for data science and analytics. We rely on Apptainer (formerly Singularity) and Docker containers to deploy R and you can get a refresher on [modules](modules.md) and [containers](containers.md).
+R is a popular statistical programming language for data science and analysis. To use R on HYAK, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [**modules**](modules.md) and [**containers**](containers.md) helpful before following these instructions.
 
-## R
+## User Environment
 
-We encourage users to employ the containerized versions of R instead of compiling from source and running bare-metal. We'll use Docker hub containers as that is where the most regular updates to R come from.
+If you use a non-custom R container you'll likely want to run `install.packages()` at some point. Usually on a non-shared platform like your local setup (where you have full administrative privileges) R will install things into central paths. On HYAK, R package libraries are usually installed by default in the user's Home directory, which can be problematic due to the 10GB disk storage limit. If this default setting isn't changed, users can quickly run out of storage and inodes in their Home directory and re-configure their R environment. 
 
-### User Environment
+Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you creaed under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [**Click here to review storage on HYAK.**](https://hyak.uw.edu/docs/storage/gscratch) 
 
-If you use a non-custom R container you'll likely want to run `install.packages()` at some point. Usually on a non-shared platform like your local setup (where you have full administrative privileges) R will install things into central paths. You don't want to do that on HYAK so you need to specify user paths.
+:::important
+Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
+:::
 
-```shell-session terminal=true
+Specify user library paths by editing or creating a configuration file called `.Renviron` in your Home directory. Use `nano` or `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
+
+```bash
 $ cat ~/.Renviron 
-R_LIBS="/gscratch/scrubbed/npho/R/"
-$
+R_LIBS="/gscratch/scrubbed/UWNetID/R/"
 ```
+
+:::tip pro tip: directories don't exist until you create them
+Remember if the directory you want to use doesn't exist yet, R will send an error message. If you want to create a directory for your self in `/gscratch/scrubbed` use the following command:
+
+```bash
+mkdir /gscratch/scrubbed/UWNetID/
+# remember to replace the word `UWNetID` above with YOUR username/UWNetID
+```
+And then create a directory to store your R package libraries called `R`:
+
+```bash
+mkdir /gscratch/scrubbed/UWNetID/R
+# remember to replace the word `UWNetID` above with YOUR username/UWNetID
+```
+:::
+
+Now R will install packages in your designated directory instead of your Home directory, and you will avoid disk storage management issues later on. 
 
 :::caution
 If you plan on using multiple R versions you will want to set `R_LIBS` appropriately with each different container (i.e., R version) used so packages compiled against one version of R don't conflict with another. Using sub-folders with names matching that version of R is sufficient.
 :::
 
-You can set custom R environment variables with the `.Renviron` file. I set the `R_LIBS` environment variable to point to a folder I created in "scrubbed" as an example but you will want to use a shared lab space or other path unique to your environment.
+## Containers from Rocker
 
-:::info
-If you set `R_LIBS` to your home directory you can quickly run out of inodes as R likes to create a lot of files. Use your lab directory instead.
-:::
+The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R and various package collections. [**The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R**](https://hub.docker.com/u/rocker)
+(https://hub.docker.com/u/rocker). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
 
-### Base Container
+### R-base Container
 
-Let's say we wanted to use R-4.0.3 from Docker hub
-[[www](https://hub.docker.com/_/r-base?tab=tags&page=1&ordering=last_updated)].
+Let's say we wanted to use the most up-to-date version of base R from the Rocker Project on Docker hub [[**More information here.**](https://hub.docker.com/r/rocker/r-base)]. There are many other versions are R available on Docker hub, and we encourage you to explore them to find the version that fits the needs of your research project. [**Explore versions here**](https://hub.docker.com/r/rocker/r-base/tags). 
+
+First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` parition with 16GB of RAM for 2 hours. If your lab group owns HYAK resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
 
 ```bash
-apptainer pull docker://r-base:4.0.3
+salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
 ```
+Pull the container from Docker hub with Apptainer. 
 
-Be sure to do this from a build node, you need to be routed to the internet to resolve Dockerhub so you can download and have compute resources to do the image conversion from a Docker to Apptainer container.
+```bash
+apptainer pull docker://rocker/r-base
 
-```shell-session terminal=true
-$ module load apptainer
-$ apptainer pull docker://r-base:4.0.3
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Getting image source signatures
@@ -63,25 +82,24 @@ Storing signatures
 2021/01/10 11:41:38  info unpack layer: sha256:f6f2416c67056dd5c3a5948858ab4578631e13cc36ee43bd8d44dea4ec4693f7
 2021/01/10 11:41:38  info unpack layer: sha256:0079bdf52f600362737f2c00e7e7ae11458844ef1d06265caf24115be990c4ab
 INFO:    Creating SIF file...
-INFO:    Build complete: r-base_4.0.3.sif
-$
+INFO:    Build complete: r-base_latest.sif
 ```
 
-The command will take a minute and create the SIF file in your current directory.
+The command will take a minute and create the SIF file in the directory where the apptainer command was executed (the current directory). List your directory to see the `.sif` file. If you pulled a specific version of R-base, your image will have a different name than that shown here. 
 
-```shell-session terminal=true
-$ ls -alh r-base_4.0.3.sif 
-474M r-base_4.0.3.sif
-$
+```bash
+ls -alh
+
+474M r-base_latest.sif
 ```
 
 You can run the R binary within the container like below.
 
-```shell-session terminal=true
-$ apptainer run r-base_4.0.3.sif R
+```bash
+apptainer run r-base_latest.sif R
 
-R version 4.0.3 (2020-10-10) -- "Bunny-Wunnies Freak Out"
-Copyright (C) 2020 The R Foundation for Statistical Computing
+R version 4.4.0 (DATE) -- "Some Cute Name - Typical R Stuff"
+Copyright (C) YEAR The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 > library(tidyverse)
@@ -89,28 +107,27 @@ Error in library(tidyverse) : there is no package called ‘tidyverse’
 > 
 ```
 
-You can run `install.packages()` as you normally would if you were working with R locally and it will install all the files to whatever path you set `R_LIBS` to in the [user environment](#user-environment) instructions.
+Note this R-base container has no packages except the R base packages. You can run `install.packages()` as you normally would if you were working with R locally and it will install all the files to whatever path you set `R_LIBS` to in the [**user environment**](#user-environment) instructions.
 
 ### Tidyverse Container
 
-The most popular library for R is the Tidyverse [[www](https://www.tidyverse.org)], which includes packages like `ggplot2`, `dplyr`, and others. As you can see in the [previous section](#base-container), it doesn't exist if we use the `r-base` Docker hub container.
+The most popular library for R is Tidyverse [**(More information here)**](https://www.tidyverse.org), which includes packages like `ggplot2`, `dplyr`, and others. As you can see in the [**previous section**](#base-container), it doesn't exist if we use the `r-base` Docker hub container.
 
 Your options are to: 
-1. run `install.packages("tidyverse")` or
-2. use a Docker container with it pre-installed.
+1. run `install.packages("tidyverse")` in the R-base container (`r-base_latest.sif`; as shown above) or
+2. use the Rocker container with it pre-installed.
  
 Option 1, while ok, uses a lot (and I mean a lot) of inodes as well as taking a long time to compile. It's much leaner on the cluster and faster to use a pre-built container if you know you'll use the Tidyverse.
 
-The Rocker Project [[www](https://www.rocker-project.org)] manages popular Docker containers for R, including a pre-built one with Tidyverse so you can grab the latest tagged container from Docker hub [[www](https://hub.docker.com/r/rocker/tidyverse/tags?page=1&ordering=last_updated)].
+Prior instructions on R [**user environment above**](#user-environment) apply. This container will also use the directory you designative in your `~/.Renviron` config file. Once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
 
 ```bash
-apptainer pull docker://rocker/tidyverse:4.0.1
-```
+# remember to do this on a compute node
+# start an interactive job with the following if you haven't yet
+salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
 
-Prior instructions on R [user environment](#user-environment) apply but once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
+apptainer pull docker://rocker/tidyverse
 
-```shell-session terminal=true
-$ apptainer pull docker://rocker/tidyverse:4.0.1
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Getting image source signatures
@@ -142,19 +159,19 @@ Storing signatures
 2021/01/10 12:29:22  info unpack layer: sha256:0d19f4c62fe952f2cec37dbde49decc2a787df40d87eecd7a8a657c04335c20b
 2021/01/10 12:29:22  info unpack layer: sha256:c4186f33a14ce3205196906179b6d17db22a3e9dfc9f34fedbb1f38bf2e715c9
 INFO:    Creating SIF file...
-INFO:    Build complete: tidyverse_4.0.1.sif
-$ ls -alh tidyverse_4.0.1.sif
-675M tidyverse_4.0.1.sif
-$
+INFO:    Build complete: tidyverse_latest.sif
+
+ls -alh 
+675M tidyverse_latest.sif
 ```
 
 Now when you run this container's R binary you can successfully load the Tidyverse.
 
-```shell-session terminal=true
-$ apptainer run tidyverse_4.0.1.sif R
+```bash
+apptainer run tidyverse_latest.sif R
 
-R version 4.0.1 (2020-06-06) -- "See Things Now"
-Copyright (C) 2020 The R Foundation for Statistical Computing
+R version 4.4.0 (DATE) -- "Some Cute Name - Typical R Stuff"
+Copyright (C) YEAR The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
 > library(tidyverse)
@@ -168,102 +185,191 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 ✖ dplyr::lag()    masks stats::lag()
 Warning messages:
 1: replacing previous import ‘vctrs::data_frame’ by ‘tibble::data_frame’ when loading ‘dplyr’ 
-2: package ‘purrr’ was built under R version 4.0.3 
+2: package ‘purrr’ was built under R version 4.4.0 
 > 
 ```
 
-Success!
+Success! Get on with making your pretty plots, you container superstar! 
 
-### Module
+## Rstudio Container and Graphical User Interface
 
-We've since migrated from bare-metal R binaries compiled from source and provided as a module to leveraging containers. However, there are still some version 3 variants of R still available.
-
-```shell-session terminal=true
-$ module avail r_3 contrib/r/
------ /sw/modules-1.775/modulefiles -----
-r_3.3.3  r_3.5.1  r_3.6.0  r_3.6.0+Rmpi-impi_2019  
------ /sw/modules-1.775/modulefiles -----
-contrib/r/3.4.3  contrib/r/3.5.1  contrib/r/3.6.1 
-```
-
-As a reminder all "contrib" prefixed modules are user community created and maintained (i.e., not supported by the HYAK team).
-
-## Rstudio
-
-Rstudio is an integrated development environment (IDE) for R. It's a front-end interface, historically a desktop application but it will be delivered through your browser in this instance.
-
-Rstudio will run in a Apptainer container on a compute node then be directed through the login node back to your local computer via port forwarding.
+Rstudio is an integrated development environment (IDE) for R. It's a front-end interface, historically a desktop application but it will be delivered through your browser in this instance. Rstudio will run in an Apptainer container on a compute node then be directed through the login node back to your local computer via port forwarding. In this way, you can use Rstudio on `klone`.
 
 #### Step 1: Download Rstudio Container
 
 First you need to get the Rocker Rstudio container. 
-1. Get an interactive session (e.g., `salloc -A uwit -p ckpt`). 
-2. Load Apptainer (i.e., `module load apptainer`).
-3. Pull a version of Rocker Rstudio (e.g., `apptainer pull docker://rocker/rstudio:4.1.0`).
+
+```bash
+# remember to do this on a compute node
+# start an interactive job with the following if you haven't yet
+salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
+
+# Pull the latest version of Rocker Rstudio (or the version of your choice)
+# with apptainer
+
+apptainer pull docker://rocker/rstudio
+```
+
+The following will prepare a `.sif` file called `rstudio_latest.sif`, but it might have another name if you pulled a different version. 
 
 #### Step 2: Prepare SLURM Job File
 
-You will need to get our SLURM job file [[www](https://hyak.uw.edu/files/rstudio-server.job)] which was adopted for KLONE from the tutorial by Rocker [[www](https://www.rocker-project.org/use/singularity/)]. The command below will download the file to your current directory.
+We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler sftware called SLURM. Download our SLURM job file [**from this hyperlink**](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for KLONE from the tutorial by Rocker [**More information about the original tutorial can be found here.**](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
 
-```
+```bash
 wget https://hyak.uw.edu/files/rstudio-server.job
 ```
 
-You will need to modify a few environment variables in `rstudio-server.job` related to `R`:
-1. The `RSTUDIO_CWD` path, I set it to my scrubbed directory on KLONE but if you have a persitent lab folder you should use that instead. This is the folder where the container is located and downloaded to using the `apptainer pull` command above.
-2. Set your `RSTUDIO_SIF` variable, this is name of the container file.
-3. (Optional) Set your `R_LIBS_USER` path, I set it to my scrubbed directory on KLONE as well. Note that if you have a `R` folder in your home directory then it will supercede this other path to install R packages. Your home directory is limited and can't be expanded so you will almost certainly fill it up. The SLURM job file sets `RSTUDIO_CWD` as the default folder where all `R` packages will be installed associated with this container.
+:::important
+Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
+:::
 
-You will need to modify a few things in `rstudio-server.job` related to SLURM directives. For example, fill in your specific account and partition (check your options with `hyakalloc`). Also set your job run limits, cores (i.e., `ntasks`), memory, etc.
+You will need to modify a few environment variables in `rstudio-server.job` related to `R`. Use `nano` or `vim` to edit the contents of `rstudio-server.job`:
+1. The `RSTUDIO_CWD` path, is your working directory, as if you were using the function `setwd()` within `R`. `rstudio-server.job` shows this as `/gscratch/scrubbed/UWNetID` ***You must change this line for this to work.*** We recommend setting this to the directory where you are storing your data for your intended project. Additionally, it might simplify matter if this is the folder where the container is located and downloaded to using the `apptainer pull` command above.
+2. Set your `RSTUDIO_SIF` variable, this is name of the container file. In this case, `rstudio_latest.sif`.
+3. (Optional) Set your `R_LIBS_USER` path, which in `rstudio-server.job` is `R_LIBS_USER=${RSTUDIO_CWD}/R` or `/gscratch/scrubbed/UWNetID/R` because `RSTUDIO_CWD="/gscratch/scrubbed/UWNetID"`, remember? Change these variables to fit your needs. That means for this Rstudio session my package libraries (when I use `install.packages()`) will be stored in `/gscratch/scrubbed/UWNetID/R`. In this case, I am matching this Rstudio session to my preferences set above in the [**user environment section.**](#user-environment) For your session, you might decide to designate a different directory for your R package libraries.
 
-```
-#SBATCH --account=uwit
-#SBATCH --partition=compute
+Additionally, you might decide to modify the `sbatch` directives to adjust the resources to request for your SLURM Rstudio job. For example, fill in your specific partition if applicable (check your options with `hyakalloc`). Also set your job run limits, cores (i.e., `ntasks`), memory, etc.
+
+```bash title= rstudio-server.job
+#!/bin/sh
+
+#SBATCH --job-name=rstudio-server
+//highlight-next-line
+#SBATCH --partition=ckpt #update this line - use hyakalloc to find partitions you can use
+
+//highlight-start
 #SBATCH --time=02:00:00
-
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
 #SBATCH --mem=20G
+//highlight-end
+
+#SBATCH --signal=USR2
+#SBATCH --output=%x_%j.out
+
+# This script will request a single CPU with four threads with 20GB of RAM for 2 hours. 
+# You can adjust --time, --nodes, --ntasks, and --mem above to adjust these settings for your session.
+
+# --output=%x_%j.out creates a output file called rstudio-server_XXXXXXXX.out 
+# where the %x is short hand for --job-name above and the X's are an 8-digit 
+# jobID assigned by SLURM when our job is submitted.
+
+//highlight-start
+RSTUDIO_CWD="/gscratch/scrubbed/UWNetID" # UPDATE THIS LINE
+RSTUDIO_SIF="rstudio_latest.sif" # update this line
+//highlight-end
+###
+### Truncated to save space on the web.
+###
+//highlight-next-line
+export R_LIBS_USER=${RSTUDIO_CWD}/R
 ```
+
 
 #### Step 3: Start the Rstudio Server
 
-```shell-session terminal=true
-npho@klone-login01:~ $ sbatch rstudio-server.job
-Submitted batch job 177885
-npho@klone-login01:~ $ 
+Next's we'll submit the job with `sbatch` which will launch the Rstudio container, and then we will use port forwading to interact with the RStudio interface on our web browser. 
+
+```bash
+sbatch rstudio-server.job
+Submitted batch job 12345678
+# SLURM will assign a JobID when the job was submmitted
+# it will likely be an 8-digit number, but not 12345678
 ```
 
-If you're successful a file named `rstudio-server.job.177885` will pop up in your home directory. The suffix matches the job number you see. Check out its contents like below for instructions on how to connect to your Rstudio session.
+:::tip Pro Tip
+Monitor the job with `squeue` and your UWNetID like the following example.
 
+```bash
+//highlight-next-line
+squeue -u UWNetID
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          12345678   ckpt rstudio  UWNetID  R       3:15      1 n3088
 ```
-npho@klone-login01:~ $ cat rstudio-server.job.177885
+:::
+
+SLURM will save your output file called `rstudio-server_12345678.out` in the directory where the `sbatch` command was executed. The suffix matches the job number you see. Check out its contents like below for instructions on how to connect to your Rstudio session.
+
+```bash
+cat rstudio-server_12345678.out
+
 1. SSH tunnel from your workstation using the following command:
-
-   ssh -N -L 8787:n3164:47101 npho@klone.hyak.uw.edu
-
+//highlight-next-line
+   ssh -N -L 8787:n3164:47101 UWNetID@klone.hyak.uw.edu
+//highlight-next-line
    and point your web browser to http://localhost:8787
 
 2. log in to RStudio Server using the following credentials:
-
-   user: npho
+//highlight-next-line
+   user: UWNetID
+   //highlight-next-line
    password: 410lzxMwV9EObv7aDEjm
 
 When done using RStudio Server, terminate the job by:
 
 1. Exit the RStudio Session ("power" button in the top right corner of the RStudio window)
 2. Issue the following command on the login node:
-
-      scancel -f 177885
-npho@klone-login01:~ $ 
+   //highlight-next-line
+      scancel -f 12345678
 ```
+The credentials are randomly generated for each `sbatch` job adding additional cyber security with a new session password each time you launch Rstudio this way. 
 
-In a new terminal prompt on your laptop copy and paste the other SSH command from the SLURM output. You will get your 2FA prompt and after logging in the system will appear to hang. It's fine, leave this window open and it is your connection to the Rstudio session running on KLONE. If you are disconnected and reconnect you can resume your Rstudio session. 
+#### Step 4: Start Port Forwarding
+:::important
 
-To close out the Rstudio session it will either hit the job runtime limit and self-terminate or you can (preferably) manually close it out using the `scancel` command provided with the specific jobID. If this file is accidentally deleted you can always see all your running jobs with a `sacct -X` command on your active KLONE login prompt to get the jobID.
+This next section is done on your local computer ***not*** on the cluster.
 
-The credentials are randomly generated for each `sbatch` job but once you log in you should see an environment similar to that as below. Both your KLONE home directory and gscratch folders will be mounted.
+:::
+
+In a new terminal or command prompt on ***your laptop*** copy and paste the other SSH command from the SLURM output. The following is an example:
+```bash
+//highlight-next-line
+ssh -N -L 8787:n3164:47101 UWNetID@klone.hyak.uw.edu
+... provide UWNetID password
+... Duo 2 Factor Authentication
+```
+The login will appear to hang, but your connection is now open. If you are disconnected and reconnect you can resume your Rstudio session. 
+
+:::warning
+Do not use the rstudio-server password to open the ssh tunnel. After your ssh command, your UWNetID password is required. Multiple failed login attempts will result in a IP ban. 
+:::
+
+Open a new browser window to **http://localhost:8787** and provide **the password from the output file** (`rstudio-server_12345678.out` and `410lzxMwV9EObv7aDEjm` in this example).
+
+Once you log in you should see an environment similar to that as below. Both your KLONE home directory and gscratch folders will be mounted.
 
 [rstudio]: /img/docs/rstudio-singularity.png 'rstudio'
 
 ![rstudio]
+
+#### Step 5: End your Session
+
+If you did not adjust the `--time` directive in `rstudio-server.job`, your session will end after 2 hours. 
+
+Preferably, you can end your session manually. Exit the RStudio Session ("power" button in the top right corner of the RStudio window). Then go back to `klone` and use the `scancel` command provided with the specific jobID. For example, 
+
+```bash
+scancel -f 12345678
+```
+
+#### Regular use of this method
+
+Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method everytime you want to use Rstudio by starting at **Step 3: Start the Rstudio Server above.** 
+
+If you have trouble with this method, please report errors in an email to **help@uw.edu** with HYAK in the message.
+
+### R via Modules
+
+There are some versions of R still available as modules. Use these at your own risk. They may be versions with deprecated packages, and many were contributed by other users who built them to fit their personal needs, not yours. The HYAK team will not provide support for the use of these modules. 
+
+```bash
+module avail 
+
+----- /sw/modules-1.775/modulefiles -----
+r_3.3.3  r_3.5.1  r_3.6.0  r_3.6.0+Rmpi-impi_2019  
+----- /sw/modules-1.775/modulefiles -----
+contrib/r/3.4.3  contrib/r/3.5.1  contrib/r/3.6.1 
+
+```
+

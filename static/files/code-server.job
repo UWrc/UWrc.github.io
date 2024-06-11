@@ -1,7 +1,6 @@
 #!/bin/sh
 
-#SBATCH --account=uwit # update this line - to identify accounts and partitions that are available to you use the hyakalloc command
-#SBATCH --partition=ckpt # update this line
+#SBATCH --partition=ckpt # update this line - to identify accounts and partitions that are available to you use the hyakalloc command
 #SBATCH --time=02:00:00 # update this line
 
 #SBATCH --nodes=1
@@ -13,7 +12,7 @@
 #SBATCH --output=code-server.job.%j # The output file will save to the directory where this SLURM script is initiated.
 
 # Set home destination for code-server session
-CODER_HOME="/gscratch/scrubbed/<UWNetID>" # update this line
+CODER_HOME="/gscratch/scrubbed/UWNetID" # update this line
 # Provide container file
 CODER_SIF="code-server_4.89.0-39.sif" # update this line if needed
 

@@ -208,7 +208,7 @@ Check that your pip cache has been designated.
 
 #### Configuring R
 
-[We previously covered this in our documentation.](https://hyak.uw.edu/docs/tools/r#user-environment). Edit or create a config file called `.Renviron` in your home directory. Use `nano` oe `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
+[**We previously covered this in our documentation.**](https://hyak.uw.edu/docs/tools/r#user-environment) Edit or create a config file called `.Renviron` in your home directory. Use `nano` or `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
 
 ```bash
 $ cat ~/.Renviron 

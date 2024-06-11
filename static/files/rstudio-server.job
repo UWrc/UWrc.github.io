@@ -1,18 +1,25 @@
 #!/bin/sh
 
-#SBATCH --account=uwit
-#SBATCH --partition=compute
-#SBATCH --time=02:00:00
+#SBATCH --job-name=rstudio-server
+#SBATCH --partition=ckpt #update this line - use hyakalloc to find partitions you can use
 
+#SBATCH --time=02:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
 #SBATCH --mem=20G
 
 #SBATCH --signal=USR2
-#SBATCH --output=/mmfs1/home/%u/rstudio-server.job.%j
+#SBATCH --output=%x_%j.out
 
-RSTUDIO_CWD="/gscratch/scrubbed/" # update this line
-RSTUDIO_SIF="rstudio_4.1.3.sif" # update this line
+# This script will request a single CPU with four threads with 20GB of RAM for 2 hours. 
+# You can adjust --time, --nodes, --ntasks, and --mem above to adjust these settings for your session.
+
+# --output=%x_%j.out creates a output file called rstudio-server_XXXXXXXX.out 
+# where the %x is short hand for --job-name above and the X's are an 8-digit 
+# jobID assigned by SLURM when our job is submitted.
+
+RSTUDIO_CWD="/gscratch/scrubbed/UWNetID" # UPDATE THIS LINE
+RSTUDIO_SIF="rstudio_latest.sif" # update this line
 
 # Create temp directory for ephemeral content to bind-mount in the container
 RSTUDIO_TMP=$(/usr/bin/python3 -c 'import tempfile; print(tempfile.mkdtemp())')
@@ -38,7 +45,7 @@ cat > ${RSTUDIO_TMP}/rsession.sh <<END
 #!/bin/sh
 
 export OMP_NUM_THREADS=${SLURM_JOB_CPUS_PER_NODE}
-export R_LIBS_USER=${RSTUDIO_CWD}
+export R_LIBS_USER=${RSTUDIO_CWD}/R
 exec /usr/lib/rstudio-server/bin/rsession "\${@}"
 END
 
