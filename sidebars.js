@@ -52,7 +52,16 @@ module.exports = {
         ]
       }
     ],
-    'Hyak 101 Tutorial': [
+    'Tutorial: HYAK Basics': [
+      'hyak101/basics/syllabus',
+      'hyak101/basics/login',
+      'hyak101/basics/system',
+      'hyak101/basics/linux',
+      'hyak101/basics/software', 
+      'hyak101/basics/jobs',
+      'hyak101/basics/arrays',
+    ],
+    'Tutorial: Jupyter Notebooks': [
       'hyak101/python/syllabus',
       'hyak101/python/setup',
       'hyak101/python/container',
