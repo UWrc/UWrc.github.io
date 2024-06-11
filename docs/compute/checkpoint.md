@@ -38,22 +38,23 @@ Following our June 2024 maintenance, we have a new class of nodes being deployed
 salloc --partition ckpt-g2
 ```
 
-If you don't have a node-preference for your jobs, we have created a partition `ckpt-all` which will send your job to be scheduled on either generation 1 or generation 2. Additionally, `ckpt-all` has the ability to schedule jobs on a larger number of resources. For all intents and purposes, the following commands schedule jobs on idle resources: 
+If you don't have a node-preference for your jobs, we have created a partition `ckpt-all` which will send your job to be scheduled on either `g1` or `g2`. Note: `ckpt-all` has the ability to schedule jobs on a larger number of resources. For all intents and purposes, the following commands schedule jobs on idle resources: 
 
 ```bash
-# Schedule jobs on generation 1 nodes only.
+# Schedule jobs on g1 nodes only.
 salloc --partition ckpt
-# Schedule jobs on generation 2 nodes only. 
+# Schedule jobs on g2 nodes only. 
 salloc --partition ckpt-g2
-# Schedule jobs on either generation 1 or 2 nodes. 
+# Schedule jobs on either g1 or 2 nodes. 
 salloc --partition ckpt-all
 ```
 
-
-:::important Node Generation 1 vs. `g2`
-The new `g2` nodes will likely run faster than the previous generation of nodes. However, there are fewer `g2` nodes than generation 1. For this reason, if all users start sending jobs to `ckpt-g2` wait times for jobs could be longer in the `g2` queue for `ckpt-g2` users. (wait times will not affect `g2` resource owners who will have priority for scheduling on `g2` resources)
+:::important G1 vs G2 Nodes
+The new `g2` nodes will likely run faster than the previous generation of nodes. However, there are fewer `g2` nodes than g1. For this reason, if all users start sending jobs to `ckpt-g2` wait times for jobs could be longer in the `g2` queue for `ckpt-g2` users. (wait times will not affect `g2` resource owners who will have priority for scheduling on `g2` resources)
 
 The new `g2` nodes have a different architecture, which might offer additional optimizations. However, this could lead to differences in compilation, and if uniformity is important to you, you should consider sticking with either `ckpt` or `ckpt-g2` rather than `ckpt-all`.
+
+Please see [**this blog post**](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
 :::
 
 ### Checkpoint Limitations
