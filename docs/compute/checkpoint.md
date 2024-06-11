@@ -32,7 +32,7 @@ You can request resources from the entire cluster's idle resources (including GP
 
 #### New `g2` Nodes
 
-Following our June 2024 maintenance, we have a new class of nodes being deployed on `klone` which we are calling `g2` because they are the second generation of nodes. CPU `g2` nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. For this reason, you might be interested in running you jobs on `g2` node specifically, and using the `ckpt-g2` partition, for example, with: 
+Following our June 2024 maintenance, we have a new class of nodes being deployed on `klone` which we are calling `g2` because they are the second generation of nodes. CPU `g2` nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. For this reason, you might be interested in running your jobs on `g2` node specifically, and using the `ckpt-g2` partition, for example, with: 
 
 ```bash
 salloc --partition ckpt-g2
