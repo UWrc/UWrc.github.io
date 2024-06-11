@@ -25,4 +25,4 @@ We've seen some users refer to this as "virtualization", and that is a misnomer.
 While this may seem like a minor change in language, it will greatly ease the coordination among many groups working behind the scenes to support the HYAK service. As always, we appreciate your understanding and patience as we continue to refine and improve the support provided.
 
 **See also:**
-* [Glossary of HYAK specific terms](/docs/glossary).
+* [Glossary of HYAK specific terms](https://hyak.uw.edu/docs/glossary).

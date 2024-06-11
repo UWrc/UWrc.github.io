@@ -27,5 +27,5 @@ The storage on KLONE (i.e., `mmfs1` or `gscratch`) might pretend to be a mere fo
 This necessary investment to upgrade storage will double both the maximum input-output operations-per-second (IOPS) and throughput (storage bandwidth), providing much needed overhead for current workflows as well as accommodating future growth. We are excited for this upgrade – and are doing everything we can to expedite its deployment – but due to the sheer amount of hardware we’re purchasing, we’ve been swept up in the pandemic-induced global supply chain crunch. Our vendors have predicted that the end of July is the worst-case scenario, but that a June delivery is also possible. We will update the HYAK community as we know more. As always, we welcome any questions: if you want to speak with us about something, send an email to the HYAK team via help@uw.edu and we’ll follow up with you.
 
 **See also:**
-* [Things the HYAK team has done (and currently doing) to optimize the storage environment](/blog/hyak-team-storage-optimizations).
-* [Things you as a researcher using KLONE can do to optimize your storage use](/blog/klone-users-storage-optimizations).
+* [Things the HYAK team has done (and currently doing) to optimize the storage environment](https://hyak.uw.edu/blog/hyak-team-storage-optimizations/).
+* [Things you as a researcher using KLONE can do to optimize your storage use](https://hyak.uw.edu/blog/klone-users-storage-optimizations).
