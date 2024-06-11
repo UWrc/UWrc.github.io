@@ -9,7 +9,8 @@ tags: [klone,hyak,hpc,supercomputer,g2,L40,L40S,GPUs,AMD,Genoa,NVIDIA,job,intern
 ---
 
 Hello HYAK Community,
-Thanks again for your patience with our monthly scheduled maintenance. This month, we were deployed new node resources that were purchases by various UW Researchers from across campus. These nodes are a little different, so we wanted to bring your attention to them and provide guidance on their use by the community when they are idle with the checkpoint parition. 
+
+Thanks again for your patience with our monthly scheduled maintenance. This month, we deployed new node resources that were purchased by various UW Researchers from across campus. These nodes are a little different, so we wanted to bring your attention to them and provide guidance on their use when they are idle with the checkpoint partition. 
 
 **G2 Nodes:** A new class of nodes have been deployed on `klone` which we are calling `g2` because they are the second generation of nodes. `g2` CPU nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. These nodes will join our community resources that can be used when idle (`ckpt`) under the new partitions: 
 * `ckpt-g2` for scheduling jobs on `g2` nodes only.
