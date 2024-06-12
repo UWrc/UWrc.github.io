@@ -3,6 +3,12 @@ id: syllabus
 title: Syllabus
 ---
 
+:::note
+
+This documentation is under construction.
+
+:::
+
 ### Goals & Rationale
 
 #### Our first goal is to provide a tutorial that give brand new HYAK users some fundamental skills they will need to navigate the HYAK file system and Linux command-line interface (CLI). 
