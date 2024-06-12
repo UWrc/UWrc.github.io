@@ -14,16 +14,16 @@ Thanks again for your patience with our monthly scheduled maintenance. This mont
 
 ### New G2 Nodes 
 
-A new class of nodes have been deployed on `klone` which we are calling `g2` because they are the second generation of nodes. `g2` CPU nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. These nodes will join our community resources that can be used when idle (`ckpt`) under the new partitions: 
+A new class of nodes have been deployed on `klone` which we are calling `g2` because they are the second generation of nodes, and we will retroactively refer to the first generation nodes as `g1`. `g2` CPU nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs (with H100 GPUs possibly becoming available in the future). These nodes will join our community resources that can be used when idle (`ckpt`) under the new partitions: 
 * `ckpt-g2` for scheduling jobs on `g2` nodes only.
-* `ckpt-all` for scheduling jobs on either generation 1 or `g2` nodes.
-* `ckpt` will now schedule jobs on generation 1 nodes only. 
+* `ckpt-all` for scheduling jobs on either `g1` or `g2` nodes.
+* `ckpt` will now schedule jobs on `g1` nodes only. 
 
- [**Please review our documentation HERE**](https://hyak.uw.edu/docs/compute/checkpoint#new-g2-nodes) for specific instructions for accessing these resources. Additionally, [**please see the blog post here**](https://hyak.uw.edu/blog/g1-vs-g2) where we discuss additional considerations for their usage.
+ [**Please review our documentation HERE**](https://hyak.uw.edu/docs/compute/checkpoint#new-g2-nodes) for specific instructions for accessing these resources. Additionally, [**please see the blog post HERE**](https://hyak.uw.edu/blog/g1-vs-g2) where we discuss additional considerations for their usage.
 
-To accompany the new `g2` node deployments, we built a new Open MPI module, which is now the default module when `module load ompi` is executed. The MPI test suite completed without error on both `g1` and `g2` nodes. Testing indicated that g2s completed the task slightly faster than g1s, and that the new module completed the task faster than the previous default version (`ompi/4.1.6-2`) which was built for CascadeLake, prompting the default switch. 
-
-If you were calling `ompi/4.1.6-2` specifically (i.e., `module load ompi/4.1.6-2`) and intend to switch to `--partition=ckpt-all` you may encounter MPI errors. Either stick with `--partition=ckpt` or execute `module load ompi` to load the new default module with `ckpt-all`.
+To accompany the new `g2` node deployments, we are providing a new Open MPI module (`ompi/4.1.6-2`), which is now the default module when `module load ompi` is executed.  Previous OpenMPI modules will cause errors if used with the AMD processors on the new `g2` nodes due to how the software was compiled. `ompi/4.1.6-2` (and any openmpi module versions we provide in the future) are compiled to support both Intel and AMD processors. If your MPI jobs are submitted to a partition that includes `g2` nodes, you should use `module load ompi` to use the new module by default, or explicitly load `ompi/4.1.6-2` (or a newer version in the future) via `module load ompi/4.1.6-2`.
+ 
+If you have compiled software on `g1` nodes, you should test them on `g2` nodes before bulk submitting jobs to partitions with `g2` nodes (i.e., `ckpt-g2` and `ckpt-all`), as they may or may not function properly depending on exactly how they were compiled.
 
 ### Student Opportunities
 

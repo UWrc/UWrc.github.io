@@ -3,6 +3,12 @@ id: system
 title: Navigating klone
 ---
 
+:::note
+
+This documentation is under construction.
+
+:::
+
 In this section we will discuss the `klone` file system and navigating through drectories. 
 
 :::note Important Concept: CLI vs. GUI
