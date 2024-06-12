@@ -12,12 +12,20 @@ Hello HYAK Community,
 
 Thanks again for your patience with our monthly scheduled maintenance. This month, we deployed new node resources that were purchased by various UW Researchers from across campus. These nodes are a little different, so we wanted to bring your attention to them and provide guidance on their use when they are idle with the checkpoint partition. 
 
-**G2 Nodes:** A new class of nodes have been deployed on `klone` which we are calling `g2` because they are the second generation of nodes. `g2` CPU nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. These nodes will join our community resources that can be used when idle (`ckpt`) under the new partitions: 
+### New G2 Nodes 
+
+A new class of nodes have been deployed on `klone` which we are calling `g2` because they are the second generation of nodes. `g2` CPU nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. These nodes will join our community resources that can be used when idle (`ckpt`) under the new partitions: 
 * `ckpt-g2` for scheduling jobs on `g2` nodes only.
 * `ckpt-all` for scheduling jobs on either generation 1 or `g2` nodes.
 * `ckpt` will now schedule jobs on generation 1 nodes only. 
 
  [**Please review our documentation HERE**](https://hyak.uw.edu/docs/compute/checkpoint#new-g2-nodes) for specific instructions for accessing these resources. Additionally, [**please see the blog post here**](https://hyak.uw.edu/blog/g1-vs-g2) where we discuss additional considerations for their usage.
+
+To accompany the new `g2` node deployments, we built a new Open MPI module, which is now the default module when `module load ompi` is executed. The MPI test suite completed without error on both `g1` and `g2` nodes. Testing indicated that g2s completed the task slightly faster than g1s, and that the new module completed the task faster than the previous default version (`ompi/4.1.6-2`) which was built for CascadeLake, prompting the default switch. 
+
+If you were calling `ompi/4.1.6-2` specifically (i.e., `module load ompi/4.1.6-2`) and intend to switch to `--partition=ckpt-all` you may encounter MPI errors. Either stick with `--partition=ckpt` or execute `module load ompi` to load the new default module with `ckpt-all`.
+
+### Student Opportunities
 
 In addition, we have two student opportunities to bring to your attention.
 
@@ -42,4 +50,4 @@ We encourage applicants that:
 
 Our next scheduled maintenance will be **Tuesday July, 9, 2024**. 
 
-Questions? If you have any questions for us, please reach out to the team by emailing help@uw.edu with Hyak in the subject line. ***Student intern applications sent to help@uw.edu will not be considered. Email applications to finchkn @ uw.edu***
+Questions? If you have any questions for us, please reach out to the team by emailing help@uw.edu with Hyak in the subject line. ***Student intern applications sent to help@uw.edu will not be considered. Email applications to finchkn at uw.edu***
