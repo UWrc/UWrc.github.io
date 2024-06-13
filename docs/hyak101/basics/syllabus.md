@@ -31,7 +31,7 @@ As you go through the tutorial look for tips like this one. In these boxes, we w
 
 We are going to execute several commands on HYAK, a Linux CLI. After that we are going to go more deeply into scheduling jobs with SLURM. 
 
-This tutorial also offers a worked example with tol data for submitting an array job with SLURM (i.e., submitting multiple jobs to be performed in parallel).
+This tutorial offers a worked example with publicly available data for submitting an array job with SLURM (i.e., submitting multiple jobs to be performed in parallel).
 
 :::warning
 We will focus on `klone` for this tutorial as `mox` is in its decommissioning era. However, the Linux CLI tools will be useful across many systems including `mox`. Unfortunately, there may be portions of this tutorial that are not supported on `mox` or a different cluster. 
@@ -46,5 +46,5 @@ TODO
 We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial. 
 
 :::info Acknowledgements
-Some sections were modeled after [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. 
+Some sections were modeled after or borrowed from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. 
 :::
