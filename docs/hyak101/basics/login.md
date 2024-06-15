@@ -55,7 +55,7 @@ Too many incorrect login attempts will result in a IP ban, which could last up t
 
 ### What's a shell?
 
-The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. When you use `ssh` to log into `klone`, you are using a shell called Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne) to interact with `klone`. If you were successful logging into `klone` you are looking at a shell. I like to this of it as my "view" into `klone`. This is where you will execute commands (i.e., other programs to perform various activities like viewing documents, listing the contents of a directory, etc.)
+The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code. When you use `ssh` to log into `klone`, you are using a shell called Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne) to interact with `klone`. If you were successful logging into `klone` you are looking at a shell. I like to think of it as my "view" into `klone`. This is where you will execute commands (i.e., activate programs to perform various activities like viewing documents, listing the contents of a directory, etc.)
 
 When the shell is first opened, you are presented with a prompt, indicating that the shell is waiting for input. 
 
@@ -63,10 +63,10 @@ When the shell is first opened, you are presented with a prompt, indicating that
 [UWNetID@klone-login01 ~]$
 ```
 Let's breakdown the pieces of our prompt: 
-* You will see you UW Net ID in place of the word UWNetID above, indicating you are logged in under your username for `klone`. 
-* `@klone-login01` or `@klone-login03` indicates you have logged into the login node or the "front door" of HYAK. This is where all users start. Please review our list of [**Acceptable Uses of the Login Node**](https://hyak.uw.edu/docs/setup/ssh#acceptable-uses-of-the-login-node). We will discuss how to perform all other activities later on in this tutorial. 
+* You will see your UW Net ID in place of the word UWNetID above, indicating you are logged in under your username for `klone`. 
+* `@klone-login01` or `@klone-login03` indicates you have logged into the login node or the "front door" of HYAK. This is where all users start. Please review our list of [**Acceptable Uses of the Login Node**](https://hyak.uw.edu/docs/setup/ssh#acceptable-uses-of-the-login-node). We will discuss how to perform all other activities on compute nodes later on in this tutorial. 
 * The `~` symbol is shorthand for your Home directory. This is your default login "location" on `klone`. Please review our 
-[**Storage Documentation**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) to learn about Disk Storage in your Home directory.
+[**Storage Documentation**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) to learn about Disk Storage in your Home directory, which is an important concept for HYAK users.
 
 In the next section, we will discuss you "location" on the `klone` file system and how to navigate from directory to directory. 
 

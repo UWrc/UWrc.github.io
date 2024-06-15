@@ -57,6 +57,7 @@ module.exports = {
       'hyak101/basics/login',
       'hyak101/basics/system',
       'hyak101/basics/linux',
+      'hyak101/basics/linux-2',
       'hyak101/basics/software', 
       'hyak101/basics/jobs',
       'hyak101/basics/arrays',
