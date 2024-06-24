@@ -160,6 +160,7 @@ Manually editing `~/.ssh/klone-node-config` everytime you want to connect VS Cod
 
 ```bash title="set-hyak-node.sh"
 #!/bin/bash
+set -euo pipefail
 NODE=$(ssh klone-login 'squeue \
     --user $USER \
     --states RUNNING \
