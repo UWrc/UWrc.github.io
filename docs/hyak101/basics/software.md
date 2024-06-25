@@ -9,7 +9,7 @@ This documentation is under construction.
 
 :::
 
-Tool and software are the responsibility of each individual researcher; this is important for you to ensure your own computational reproducibility. Our [**Tools & Software**](https://hyak.uw.edu/docs/tools/software) give examples for using several common tools, so here I will review the software that is necessary for your understanding of this tutorial. 
+Tools and software are the responsibility of each individual researcher; this is important for you to ensure your own computational reproducibility. Our [**Tools & Software**](https://hyak.uw.edu/docs/tools/software) give examples for using several common tools, so here I will review the software that is necessary for your understanding of this tutorial. 
 
 :::note Relevant Vocabulary
 
@@ -79,15 +79,15 @@ cp /mmfs1/sw/hyak101/basics/locator.sif .
 
 In addition, we will use the following datafiles and scripts:
 
-1. `potr_genotypes.txt` - *Populus trichocarpa* genotype matrix from Geraldes et al. 2013 [**[3]**](https://doi.org/10.1111/1755-0998.12056) converted to dosage allele format (0 - homozygous for the reference allele; 1 - heterozygous; 2 - homozygous for the alternate allele). 
-2. `potr_m_pred1.txt`, `potr_m_pred2.txt`, `potr_m_pred3.txt`, `potr_m_pred4.txt`, `potr_m_pred5.txt` - Sample origins for *Populus trichocarpa* individuals (latitude and longitude in decimal degrees); In each file, 10% of sample origins were replaced with "NA" and used as the test set of origin prediction. 
+1. `data/potr_genotypes.txt` - *Populus trichocarpa* genotype matrix from Geraldes et al. 2013 [**[3]**](https://doi.org/10.1111/1755-0998.12056) converted to dosage allele format (0 - homozygous for the reference allele; 1 - heterozygous; 2 - homozygous for the alternate allele). 
+2. `data/potr_m_pred1.txt`, `data/potr_m_pred2.txt`, `data/potr_m_pred3.txt`, `data/potr_m_pred4.txt`, `data/potr_m_pred5.txt` - Sample origins for *Populus trichocarpa* individuals (latitude and longitude in decimal degrees); In each file, 10% of sample origins were replaced with "NA" and used as the test set of origin prediction. 
 3. `locator_NN_job.slurm` - a SLURM batch script template for submitting single job to predict the origins of a subset of *Populus trichocarpa* individuals.
 4. `locator_NN_array.slurm` - a SLURM batch script template for submitting an array job to predict the origins of **5 subsets** of *Populus trichocarpa* individuals.
 
-Copy all of these materials to your current directory with the following command. Below, in the first command, the `*` or wildcard will copy all files beginning with `potr_` to your current directory. The second command uses wildcard to copy all files beginning with `locator_NN_` to your current directory.
+Copy all of these materials to your current directory with the following command. Below, the first command will recursively copy the directory called data and all of its contents to your current directory. The second command the `*` or wildcard will copy all files beginning with `locator_NN_` to your current directory.
 
 ```bash
-cp /mmfs1/sw/hyak101/basics/data/potr_* .
+cp -r /mmfs1/sw/hyak101/basics/data/ .
 cp /mmfs1/sw/hyak101/basics/locator_NN_* .
 ```
 
