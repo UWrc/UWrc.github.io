@@ -73,10 +73,10 @@ Remember you can always return to the `hyakalloc` results when preparing your co
 
 ### Interactive Jobs
 
-An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging. Request an interactive job with the `salloc` command. If you have a quick job or you are preparing software to use later, an interactive session is the best choice. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 50G of RAM with `--mem=50G`, and a maximum time of 2 hours with `--time=2:00:00`. The job will automatically end after 2 hours if we don't end it before 2 hours has elapsed. 
+An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging. Request an interactive job with the `salloc` command. If you have a quick job or you are preparing software to use later, an interactive session is the best choice. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 10G of RAM with `--mem=10G`, and a maximum time of 2 hours with `--time=2:00:00`. The job will automatically end after 2 hours if we don't end it before 2 hours has elapsed. 
 
 ```bash
-salloc --partition=ckpt --cpus-per-task=1 --mem=50G --time=2:00:00
+salloc --partition=ckpt --cpus-per-task=1 --mem=10G --time=2:00:00
 ```
 The output will look something like this:
 
@@ -162,26 +162,26 @@ Type "help", "copyright", "credits" or "license" for more information.
 Next, we can run locator with the *Populus trichocarpa* dataset. Copy the data to your current directory if you haven't already.
 
 ```bash
-cp /mmfs1/sw/hyak101/basics/data/potr_* .
+cp -r /mmfs1/sw/hyak101/basics/data/ .
 ```
 First let's take a look at the data.
 
 ```bash
-wc -l potr_genotypes.txt 
+wc -l data/potr_genotypes.txt 
 # The genotypes matrix has 425 lines
 # one row per individual tree plus a header
 
-head potr_genotypes.txt
+head data/potr_genotypes.txt
 "BELA.18.1"	1	0	0	0	0	0	0	0	0	2	0	0	2	0	1	0	0	0	0	NA	0	1	1	0	0	0
 ### Truncated for website view
 # The genotypes matrix is composed of 0s, 1s, 2s, or NA
 # The matrix has over 32,000 columns of genetic data
 
-wc -l potr_m_pred1.txt
+wc -l data/potr_m_pred1.txt
 # The sample data list has 425 lines
 # one row per individual tree plus a header
 
-head potr_m_pred1.txt
+head data/potr_m_pred1.txt
 "sampleID"	"x"	"y"
 "BELA.18.3"	-126.166667	52.416667
 "BLCG.28.1"	-125.183333	49.833333
@@ -198,17 +198,17 @@ head potr_m_pred1.txt
 ```
 10% of the tree origins in sample data were randomly replaced with NA. These trees will serve as the test set. Locator will train the neural network based on the genotypes of 90% of the trees of known origin, validate the neural network on 10% of the trees of known origin, and then predict the origins of the trees in the test set, providing a set of longitudes and latitudes that can be compared with the true origins of the test set trees. 
 
-Let's test the code by running locator on one test set `potr_m_pred1.txt`
+Let's test the code by running locator on one test set `data/potr_m_pred1.txt`
 
 ```bash
-python /locator/scripts/locator.py --matrix potr_genotypes.txt --sample_data potr_m_pred1.txt --out locator_out/potr_predictions1
+python /locator/scripts/locator.py --matrix data/potr_genotypes.txt --sample_data data/potr_m_pred1.txt --out locator_out/potr_predictions1
 # Be patient, this operation should take up to 10 minutes. 
 ```
 Let's break this command down into its parts to understand it:
 
 * `python /locator/scripts/locator.py` - starts python and executes the `locator.py` python script
-* `--matrix potr_genotypes.txt` - `--matrix` is the arguement that indicates the provided file `potr_genotypes.txt` is the genotype matrix.
-* `--sample_data potr_m_pred1.txt` - `--sample_data` is the arguement that indicates the provided file  `potr_m_pred1.txt` is the sample data.
+* `--matrix data/potr_genotypes.txt` - `--matrix` is the arguement that indicates the provided file `data/potr_genotypes.txt` is the genotype matrix.
+* `--sample_data data/potr_m_pred1.txt` - `--sample_data` is the arguement that indicates the provided file  `data/potr_m_pred1.txt` is the sample data.
 * `--out locator_out/potr_predictions1` - `--out` is the arguement that indicates that results should be saved into the `locator_out/` directory and that the files should have the prefix `potr_predictions1`.
 
 You'll know it is working when it starts providing some messages. The first messages are errors that can be ignored, unless we plan to use a GPU. There will be a few more errors because tensorflow could use a GPU. We won't use a GPU, so we can ignore the errors. The following indicated a successful start of a locator run: 
@@ -303,12 +303,12 @@ nano locator_NN_job.slurm
 #### Truncated for website view
 
 #command:
-apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/locator.py --matrix potr_genotypes.txt --sample_data potr_m_pred2.txt --out locator_out/potr_predictions2
+apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/locator.py --matrix data/potr_genotypes.txt --sample_data data/potr_m_pred2.txt --out locator_out/potr_predictions2
 
 #### Truncated for website view
 ```
 
-The lines in the script beginning with `#SBATCH` are sbatch directives, or flags passed to sbatch which give instructions about the job we are requesting. This script requests a single node, single task job with 50G of RAM for a maximum time of 1 hour. See [**SLURM sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` parition, replace `--parition=ckpt` with `--partition=compute` and your job will be scheduled faster because you will be requesting a job on resources you can use with priority access. 
+The lines in the script beginning with `#SBATCH` are sbatch directives, or flags passed to sbatch which give instructions about the job we are requesting. This script requests a single node, single task job with 10G of RAM for a maximum time of 1 hour. See [**SLURM sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` parition, replace `--parition=ckpt` with `--partition=compute` and your job will be scheduled faster because you will be requesting a job on resources you can use with priority access. 
 
 Once you have edited the script to fit your needs, you can submit it with `sbatch`.
 

@@ -230,7 +230,7 @@ cat: basilisk.dat: No such file or directory
 We get an error because we can't access `basilisk.dat` from our location without more information. However, we can provide more complete information and view `basilisk.dat`
 
 ```bash
-cd ../../creatures/basilisk.dat
+cat ../../creatures/basilisk.dat
 COMMON NAME: basilisk
 CLASSIFICATION: basiliscus vulgaris
 UPDATED: 1745-05-02
