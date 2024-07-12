@@ -114,7 +114,7 @@ export default function Pricing() {
                 <li>College of Engineering</li>
                 <li>College of the Environment</li>
                 <li>Institute for Protein Design</li>
-                <li>School of Medicine (Pending)</li>
+                <li>School of Medicine</li>
               </ul>
               <li>UW Bothell</li>
               <li>UW Tacoma</li>
