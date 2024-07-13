@@ -19,6 +19,13 @@ module.exports = {
       'storage/gscratch',
       'storage/transfer',
       'storage/archive',
+      {
+        'KOPAH S3 Storage': [
+          'storage/kopah',
+          'storage/gui',
+          'storage/cli',
+        ]
+      }
     ],
     'Data Commons':
     [
