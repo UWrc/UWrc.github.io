@@ -9,13 +9,14 @@ Every user has a [**Home directory**](#user-home-directory) by default, most use
 
 ## Understanding Block and Inode Quotas
 
-Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time.
+Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. If you need additional block or inode quota, please refer to the storage section on the [pricing page](https://hyak.uw.edu/pricing).
+
+
 
 :::info
 Learn more about inodes [**here**](https://www.admin-magazine.com/HPC/Articles/What-Is-an-Inode).
 :::
 
-We focus mostly on block quotas when assigning storage as the ratio of inode to block usage varies from lab-to-lab and workflow-to-workflow. So long as the researcher has taken every reasonable step and recommendation we have to optimize their usage of their given inodes, if it's within reason, we can accommodate further inode quota increases. Submit a ticket with details about your request to **help@uw.edu**.
 
 ## Checking Utilization `hyakstorage`
 
@@ -117,7 +118,7 @@ echo $HOME
 
 ## Group or Lab Directories
 
-- Shared lab storage at $10 / TB / month.
+- Shared lab storage at $10 / 1 TB [1M files] / month.
 - NVMe flash tier on KLONE.
 
 If you run the `groups` command you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder. Please note, on MOX the group names have a hyak prefix. For example, `stf` will appear as `hyak-stf`.
@@ -128,7 +129,7 @@ Your lab gets 1 TB per slice that your group has contributed to `klone`, which i
 Your lab quota can be increased for $10 / TB / month.
 :::
 
-Your lab storage quota can be increased (or decreased) in 1 TB granularity and adjusted on a month-to-month basis as your needs require. If you hit file (i.e., `inode`) limits, <a href="mailto:help@uw.edu?subject=hyak storage inode adjustment">email us</a> and we can increase those limits for no additional cost if your workflows warrant.
+Your lab storage quota can be increased (or decreased) in 1 TB granularity and adjusted on a month-to-month basis as your needs require. If you need additional block or inode quota, please refer to the pricing page: [HYAK Pricing](https://hyak.uw.edu/pricing)
 
 :::important
 Check group quotas and current use with the `hyakstorage` command.
