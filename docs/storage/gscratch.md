@@ -9,7 +9,7 @@ Every user has a [**Home directory**](#user-home-directory) by default, most use
 
 ## Understanding Block and Inode Quotas
 
-Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. If you need additional block or inode quota, please refer to the pricing page: [HYAK Pricing](https://hyak.uw.edu/pricing)
+Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. If you need additional block or inode quota, please refer to the storage section on the [pricing page](https://hyak.uw.edu/pricing).
 
 
 
