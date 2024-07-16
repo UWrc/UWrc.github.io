@@ -6,9 +6,9 @@ title: What is KOPAH S3?
 
 Starting in Fall 2024, we will be offering our self-hosted, on-premises S3-compatible object storage called KOPAH. 
 
-**S3 storage** is a user-friendly solution for securely storing and managing large amounts of data, whether for personal use or research computing. It works like an online storage locker where you can files of any size, accessible from anywhere with an internet connection. For researchers and those involved in data-driven studies, it provides a reliable and scalable platform to store, access, and analyze large datasets, supporting high-performance computing tasks and complex workflows. 
+**S3 storage** is a solution for securely storing and managing large amounts of data, whether for personal use or research computing. It works like an online storage locker where you store can files of any size, accessible from anywhere with an internet connection. For researchers and those involved in data-driven studies, it provides a reliable and scalable platform to store, access, and analyze large datasets, supporting high-performance computing tasks and complex workflows. 
 
-S3 uses **buckets** as containers to store data, where each bucket can hold an unlimited number of **objects**, which are the actual files or data you store. Each object within a bucket is identified by a unique key, making it easy to organize and retrieve your data efficiently. Public links can be generated for KOPAH objects so that users can share buckets and objects with collaborators. 
+S3 uses **buckets** as containers to store data, where each bucket can hold 100,000,000 **objects**, which are the actual files or data you store. Each object within a bucket is identified by a unique key, making it easy to organize and retrieve your data efficiently. Public links can be generated for KOPAH objects so that users can share buckets and objects with collaborators. 
 
 ## KOPAH Accounts
 KOPAH storage accounts can be requested by sending an email to help@uw.edu with "KOPAH" in the subject line. Opening a KOPAH storage account required a valid UW Budget and Worktag. 
