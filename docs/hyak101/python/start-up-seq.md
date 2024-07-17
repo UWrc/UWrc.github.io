@@ -19,10 +19,16 @@ Your set up is complete. Here is the inventory of the items you prepared to exec
 
 
 :::important
-Before we begin the Start Up Sequence, make sure that you have no jobs called `klone-container` running on `klone`. If you do, you can cancel those jobs with:
+Before we begin the Start Up Sequence, make sure that you have no jobs called `klone-container` running on `klone`. 
+```bash 
+squeue --user $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          12345678      ckpt klone-container UWNetID  R      00:01      1 n3219
+```
+If you do, you can cancel the job with `scancel` and the JobID:
 
 ```bash
-scancel --name klone-container
+scancel 12345678
 ```
 :::
 

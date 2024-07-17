@@ -140,7 +140,7 @@ If Hostname is left blank (i.e., no placeholder) this will not work. Edit `~/.ss
 **These steps are to be performed on your local computer**
 :::
 
-I swear, this is the last one. You can download it [here](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh) to your local computer. We'll use it during the start up sequence. The takeaway message is that this script gets your Jupyter session information from `klone` (via all the ssh configurations you set up), starts port forwarding, and gives you instructions for accessing Jupyter through the Browser on your local computer.
+I swear, this is the last one. [**You can download it to your local computer by clicking here**](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). We'll use it during the start up sequence. The takeaway message is that this script gets your Jupyter session information from `klone` (via all the ssh configurations you set up), starts port forwarding, and gives you instructions for accessing Jupyter through the Browser on your local computer.
 
 :::tip EXTRA CREDIT: Understanding the Script
 
