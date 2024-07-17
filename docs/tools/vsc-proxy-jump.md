@@ -158,6 +158,8 @@ We will use this short cut (ProxyJump) with the `Remote-SSH` extension of VS Cod
 :::tip PRO TIP
 Manually editing `~/.ssh/klone-node-config` everytime you want to connect VS Code is tedious and prone to error. Use the following bash script **ON YOUR COMPUTER** to get the hostname of the compute node you wish to connect to with your ProxyJump. [**Download the script here**](https://hyak.uw.edu/files/set-hyak-node.sh).
 
+**WARNING this script doesn'tusually work on Windows since bash and sed are not available. AND it might not work if you have a different version of sed**
+
 ```bash title="set-hyak-node.sh"
 #!/bin/bash
 set -euo pipefail

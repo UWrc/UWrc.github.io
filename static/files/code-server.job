@@ -49,7 +49,7 @@ When done using Code Server, terminate the job by:
 1. Signing out of Code Server (Find the lines icon Menu and select "Sign out of Code Server")
 2. Issue the following command on the login node:
 
-      scancel --name ${SLURM_JOB_NAME}
+      scancel -f ${SLURM_JOB_ID}
 END
 
 source /etc/bashrc
