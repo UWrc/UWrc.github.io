@@ -121,8 +121,8 @@ module.exports = {
               href: 'https://environment.uw.edu',
             },
             {
-              label: 'Institute for Protein Design',
-              href: 'https://www.ipd.uw.edu',
+              label: 'School of Medicine',
+              href: 'https://www.uwmedicine.org/school-of-medicine',
             },
           ],
         },
