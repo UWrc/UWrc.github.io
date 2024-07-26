@@ -3,7 +3,7 @@ id: syllabus
 title: Syllabus
 ---
 
-:::note
+:::caution
 
 This documentation is under construction.
 
