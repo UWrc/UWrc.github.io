@@ -16,14 +16,21 @@ Specifically here, the formatting is not complete. Use the pwd command and ls if
 Other ways to view file contents, great for viewing smaller chunks of longer files. 
 
 ```bash
-head basilisk.dat
-tail basilisk.dat
-more basilisk.dat
+head basilisk.dat # displays the first part of a file
+
+tail basilisk.dat # displays the last part of a file
+
+more basilisk.dat # displays file contents one page at a time
 # exit the more command with Q
-less basilisk.dat
+
+less basilisk.dat # displays file contents one page at a time
 # exit the less command with Q
 ```
 
+By default, the head and tail commands display the first and last 10 lines of a file. To view a specific number of lines use `-n` followed by the desired number of lines.
+```bash
+head -n 20 basilisk.dat
+```
 ### `cp`
 #### "copy" files with `cp` 
 
