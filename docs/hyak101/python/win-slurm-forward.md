@@ -3,7 +3,7 @@ id: win-slurm-forward
 title: SLURM Job & Port Forwarding
 ---
 
-:::note
+:::caution
 
 This documentation is under construction.
 
