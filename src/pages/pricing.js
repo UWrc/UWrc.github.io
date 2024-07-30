@@ -29,7 +29,7 @@ export default function Pricing() {
             <h3>Condo Model</h3>
             <p>The HYAK clusters operate on a condo model. This means that the cluster itself consists of contributed resource slices from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their slices beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
             <p>You get access to resources equivalent to the slices your account contributes to the cluster on-demand. A cluster account also provides you access to all the other contributed slices from other entities, subject to their availability (i.e., if the contributors or the resources aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but is not uncommon for a job to run for 4 to 5 hours before requeue. Longer checkpoint jobs will continue to run and be re-queued until they complete, which is why it is important that your job be able to checkpoint or save state and resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware operating your own server.</p>
-            The total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components:
+            The total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components.
             <ol>
               <li><a href="#slice-cost-annual">Slice Annual Costs</a></li>
               <li><a href="#slice-cost-hardware">Slice Hardware Costs</a></li>
@@ -172,7 +172,7 @@ export default function Pricing() {
             </table>
 
             <p>
-              General FAQ:
+              <h3>General FAQ:</h3>
               <ul>
                 <li>All hardware is procured at cost (market value with substantial university negotiated bulk discounts) and no sales tax or university overhead applied.</li>
                 <li>We reserve the 2nd Tuesday of every month for cluster maintenance.</li>
