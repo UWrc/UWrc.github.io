@@ -59,7 +59,7 @@ mv animals.csv dataset.csv
 ### `rm`
 #### "remove" a file with `rm`
 
-Wraning: permanent - delete a file (will not come back)
+::: warning Permanently deletes a file (will not come back) :::
 ```bash
 rm dataset.csv
 ```
@@ -71,20 +71,43 @@ cd shell-lesson-data/exercise-data/writing/
 ls
 rm -r thesis
 ```
-
-### `*`
-#### Use wildcards as a shorthand 
+### `touch`
+#### Create an empty file with `touch`
 
 ```bash
-cd ../alkanes
+cd ../../../ 
+pwd 
+# prints gscratch/scrubbed/UWNETID
+touch file1.txt file2.txt file3.txt
+ls # make sure the .txt files were created
+```
+#### `touch` is also useful for updating the timestamp of a file
+``` bash
+ls -l file1.txt # -l will list the current timestamp of a file
+touch file1.txt # touch will update the timestamp
+```
+### `?` and `[]` 
+#### Wildcards are special characters used as a shorthand
+
+```bash
+# ? represents any singular character
+ls file?.txt  
+# lists all file.txt files with a singular character where ? is
+ls file[2-3].txt
+# lists all file2.txt and file3.txt
+rm file[1-3].txt
+```
+### `*`
+
+
+```bash
+cd shell-lesson-data/exercise-data/alkanes
 ls
-list all ending with *.pdb
-ls *.pdb
+ls *.pdb # lists all files ending with .pdb
 ls /sw/hyak101/basics/*.slurm
 ls /sw/hyak101/basics/locator*
 ls /sw/hyak101/basics/locator_NN*
 ```
-
 
 ### `wc`
 #### apply "word count" with `wc`
@@ -110,7 +133,7 @@ ls lengths.txt
 ls
 cat lengths.txt
 ```
-
+::: caution If the file already exists, it will be overwritten. :::
 ### `>>`
 #### "append" output to a file with `>>`
 append with >>
