@@ -4,7 +4,7 @@ title: Start Here
 slug: /
 ---
 
-Welcome to the Hyak user documentation! If you do not already having a functioning Hyak account, click the 'next' link for information on how to get started.
+Welcome to the Hyak user documentation! If you do not already have a functioning Hyak account, click the 'next' link for information on how to get started.
 
 Otherwise, choose a category from the sidebar on the left.
 
