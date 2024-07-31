@@ -59,7 +59,7 @@ mv animals.csv dataset.csv
 ### `rm`
 #### "remove" a file with `rm`
 
-::: warning Permanently deletes a file (will not come back) :::
+:::warning Permanently deletes a file (will not come back) :::
 ```bash
 rm dataset.csv
 ```
@@ -133,7 +133,7 @@ ls lengths.txt
 ls
 cat lengths.txt
 ```
-::: caution If the file already exists, it will be overwritten. :::
+:::caution If the file already exists, it will be overwritten. :::
 ### `>>`
 #### "append" output to a file with `>>`
 append with >>
@@ -192,7 +192,7 @@ grep -n "it" haiku.txt
 
 grep -n -w "the" haiku.txt
 
--r (recursive) option, grep
+# -r (recursive) option, grep
 grep -r Yesterday .
 ```
 
@@ -202,7 +202,7 @@ grep -r Yesterday .
 history
 ```
 
-Use `history`, `|`, and `grep` together to find all toime the `cat` command was used. 
+Use `history`, `|`, and `grep` together to find all times the `cat` command was used. 
 ```bash
 history |grep cat
 ```
@@ -228,7 +228,23 @@ scp text.txt UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID
 ```
 
 #### Transfer data from `klone` to your local computer with "server copy" or `scp`
-#### From your local computer
+#### To your local computer
 ```bash
 scp UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 ```
+
+### `rsync`
+Similarly, data can be transferred using the `rysnc` command
+
+```
+# From Klone to your local computer
+rysnc UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
+# use -a to preserve original file permissions, timestamp, etc
+rysnc -a UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
+```
+`rsync` and `scp` can be paired with other options such as `-v` (verbose) which provides a detailed output of the transfer process or `-z` ( `-c` for `scp` ) to compress data during transfers.
+
+:::note important concept: `scp` vs `rsync`
+`rsync` is generally used for larger file transfers and file synchronization. Unlike `scp` which always transfers the entire file, `rsync` will only transfer the parts of the file that changed. `rsync` can also resume aborted transfers from lost internet connections. `scp` works well for quick file transfers that do not require the additional features rsync provides.
+:::
+
