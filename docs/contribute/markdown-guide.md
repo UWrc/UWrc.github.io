@@ -15,32 +15,32 @@ To serve as an example page when styling markdown based Docusaurus sites.
 
 # H1 - Create the best documentation
 ``` 
-#
+# Write your header after hashtag/s
 ```
 
 ## H2 - Create the best documentation
 ```
-##
+## Write your header after hashtag/s
 ```
 
 ### H3 - Create the best documentation
 ```
-###
+### Write your header after hashtag/s
 ```
 
 #### H4 - Create the best documentation
 ```
-####
+#### Write your header after hashtag/s
 ```
 
 ##### H5 - Create the best documentation
 ```
-#####
+##### Write your header after hashtag/s
 ```
 
 ###### H6 - Create the best documentation
 ```
-######
+###### Write your header after hashtag/s
 ```
 
 ---
