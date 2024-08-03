@@ -20,7 +20,7 @@ Here are some examples of GUIs which you interact with on your local computer as
 
 That's right, everytime you click and icon or item in Windows Explorer or Finder, a program is running on the command line in the background to perform the action such as viewing a list of files, opening a file, or executing an application. 
 
-Visualize your Windows Explorer or Finder view. As you click on directory or folder icons, you move through your local computer's file system to view items (documents, scripts, photos) inside. In this section we will use the CLI to move through directories and view their content. We will use commands to call programs that tell use "where we are" on `klone` and what items we can access. 
+Visualize your Windows Explorer or Finder. As you click on directory or folder icons, you move through your local computer's file system to view items (documents, scripts, photos) inside. In this section we will use the CLI to move through directories and view their content on `klone`. We will use commands to call programs that tell use "where we are" on `klone` and what items we can access. 
 :::
 
 ## Location is Key
@@ -91,8 +91,9 @@ cd
 cd $HOME
 # print the variable $HOME to see what it assigned to in your shell
 echo $HOME
-# in this case, `echo $HOME` does the same thing as `pwd` when you execute `pwd` from your Home directory
 ```
+In this case, `echo $HOME` does the same thing as `pwd` when you execute `pwd` from your Home directory.
+
 :::
 
 The concept of "location" is important because where you are on `klone` can determine what data you have access. 
@@ -101,18 +102,24 @@ The concept of "location" is important because where you are on `klone` can dete
 
 #### "list" or `ls` to show the contents of your current directory or "location" in the filesystem. 
 
-If you have just started as a HYAK user, your Home directory might be empty. Executing to following command:
+If you have just started as a HYAK user, your Home directory might be empty. 
 
 ```bash
 ls
 ```
-might produce no results. However, we can use `ls` to explore the `klone` filesystem and help us batter understand how to navigate it. Let's use `cd` to go to the base of the `klone` filesystem, which is called the "root." Rather than being called "root" the root directory is referred to as `/`. Let's move to the root directory and list its contents. 
+Executing the command above may produce no result if you haven't logged in before. However, we can use `ls` to explore the `klone` filesystem and help us batter understand how to navigate it. 
+
+Let's use `cd` to go to the base of the `klone` filesystem, which is called the "root." Rather than being called "root" the root directory is referred to as `/`. Let's move to the root directory and list its contents. 
 
 ```bash
 cd /
 
 ls
+```
 
+`ls` in `/` should produce the following:
+
+```
 0    boot   data  etc   gscratch  lib    media  mmfs1  net  proc  run   scr  sw   tmp  var
 bin  cvmfs  dev   gpfs  home      lib64  misc   mnt    opt  root  sbin  srv  sys  usr  xcatpost
 ```
@@ -123,10 +130,13 @@ Within the root directory are the directories listed above, including `mmfs1/`. 
 ```bash
 ls mmfs1/
 # notice you don't have to be inside of a directory to list its contents. 
+```
 
+`ls` in `mmfs1` should produce the following:
+```
 admin  apsearch  data  encrypted  gscratch  home  slurmdata  ssg  sw
 ```
-Some of these names might be familiar to you. For example, every user on HYAK has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` which has a directory for each HYAK user. Similarly, above we changes directory to a a directory inside of `mmfs1/` called `sw/`.
+Some of these names might be familiar to you. For example, every user on HYAK has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` which has a directory for each HYAK user. Similarly, above we changed directory to a directory inside of `mmfs1/` called `sw/`.
 
 Picture the `klone` filesystem as an upside down tree. The topmost directory is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to HYAK have their storage directories. 
 
