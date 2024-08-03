@@ -7,8 +7,6 @@ title: Basic Linux Commands II
 
 This documentation is under construction.
 
-Specifically here, the formatting is not complete. Use the pwd command and ls if something isn't working for you, or if you can't find the file specified.
-
 :::
 
 ### `head`, `tail`, `more`, `less`
@@ -59,7 +57,10 @@ mv animals.csv dataset.csv
 ### `rm`
 #### "remove" a file with `rm`
 
-:::warning Permanently deletes a file (will not come back) :::
+:::warning 
+`rm` permanently deletes a file. This action is irreversible. 
+
+:::
 ```bash
 rm dataset.csv
 ```
@@ -133,7 +134,11 @@ ls lengths.txt
 ls
 cat lengths.txt
 ```
-:::caution If the file already exists, it will be overwritten. :::
+:::caution 
+
+If the file already exists, it will be overwritten. 
+
+:::
 ### `>>`
 #### "append" output to a file with `>>`
 append with >>
@@ -236,7 +241,7 @@ scp UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 ### `rsync`
 Similarly, data can be transferred using the `rysnc` command
 
-```
+```bash
 # From Klone to your local computer
 rysnc UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 # use -a to preserve original file permissions, timestamp, etc
