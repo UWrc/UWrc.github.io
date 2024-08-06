@@ -241,6 +241,15 @@ Now, the file contents will be interpreted as numbers rather than strings and `n
 19
 22
 ```
+:::tip 
+The `sort` command will sort lines alphabetically or numerically. Lines with numbers and letters are sorted as follows:
+1. Numbers 
+2. Capital letters 
+3. Lowercase letters 
+
+Other sorting options include `-r` which sorts lines in reverse order and `-u` which removes duplicate lines.
+:::
+
 Going back to the `alkanes` directory
 ```bash
 cd alkanes
@@ -257,26 +266,52 @@ Expected output:
 30 octane.pdb
 107 total
 ```
+
+Create a sorted list of the alkane lengths and check the first output line:
 ```bash
 sort -n lengths.txt > sorted-lengths.txt
-
 head -n 1 sorted-lengths.txt
-
-sort -n lengths.txt > lengths.txt
 ```
-Other sorting options include `-r` which sorts lines in reverse order and `-u` which removes duplicate lines.
+```bash
+9 methane.pdb
+```
 
-:::note the `sort` command will sort lines alphabetically or numerically. For lines with numbers and letters: numbers > capital letters > lowercase letters. :::
+
+:::caution
+Empty file resulting from `>`. The following code will cause the contents of `lengths.txt` to be deleted:
+
+```bash
+sort -n lengths.txt > lengths.txt
+cat lengths.txt
+```
+Notice how `lengths.txt` is now an empty file. To get `lengths.txt` back, backtrack to the original command:
+```bash 
+ wc -l *.pdb > lengths.txt
+ ```
+
+:::
+
+
 
 ### `|`
 #### Use a "pipe" to string commands together
-
+Alternatively, the alkane lengths can sorted by using one line of code:
 ```bash
 wc -l *.pdb | sort -n
 
 wc -l *.pdb | sort -n > sorted_lengths_v2.txt
 
 cat sorted_lengths_v2.txt
+```
+The output should be the same at `sorted-lengths.txt`:
+```bash
+9 methane.pdb
+12 ethane.pdb
+15 propane.pdb
+20 cubane.pdb
+21 pentane.pdb
+30 octane.pdb
+107 total
 ```
 
 ### `grep`
