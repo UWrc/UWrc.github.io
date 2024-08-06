@@ -141,33 +141,132 @@ If the file already exists, it will be overwritten.
 :::
 ### `>>`
 #### "append" output to a file with `>>`
-append with >>
+
+First, change to the `animal-counts/` directory and print the contents with the `cat` command
 ```bash
 cd shell-lesson-data/exercise-data/animal-counts/
 cat animals.csv
+```
+The espected output is as follows:
+```bash
+2012-11-05,deer,5
+2012-11-05,rabbit,22
+2012-11-05,racoon,7
+2012-11-06,rabbit,19
+2012-11-06,deer,2
+2012-11-06,fox,4
+2012-11-07,rabbit,16
+2012-11-07,bear,1
+```
+Using `wc -l` to count the lines of the above output
+```bash
 wc -l animals.csv
+```
+```bash
+8 animals.csv
+```
+To create a subset of `animals.csv`, we can combine `head`, `tail`, `>`, and `>>` commands.
+```bash
 head -n 3 animals.csv > animals-subset.csv
+cat animals-subset.csv
+```
+`animals-subset.csv` should now contain the first 3 lines of `animals.csv`:
+```bash
+2012-11-05,deer,5
+2012-11-05,rabbit,22
+2012-11-05,racoon,7
+```
+Because we do not want to override `animals-subset.csv` file contents, use `>>` to append rather than `>`:
+```bash
 tail -n 2 animals.csv >> animals-subset.csv
 cat animals-subset.csv
+```
+Now, the subset reads as follows:
+```bash
+2012-11-05,deer,5
+2012-11-05,rabbit,22
+2012-11-05,racoon,7
+2012-11-07,rabbit,16
+2012-11-07,bear,1
+```
+Counting the lines once more:
+```bash
 wc -l animals-subset.csv
+```
+Expected output:
+```bash
+5 animals-subset.csv
 ```
 
 ### `sort`
 #### "sort" numbers with `sort`
 ```bash
 cd ../
+# You should now be in the exercise-data directory
+pwd
+# /gscratch/scrubbed/NETID/shell-lesson-data/exercise-data
 cat numbers.txt
-shell-lesson-data/exercise-data/numbers.txt
-sort numbers.txt
-sort -n numbers.txt
+```
+The expected output:
+```bash
+10
+2
+19
+22
+6
+```
+The `sort` command by itself will sort a text file's contents in ascending order:
 
+```bash
+sort numbers.txt
+```
+Notice how the output is sorted in lexicographical order:
+```bash
+10
+19
+2
+22
+6
+```
+
+To sort the numbers based on their numerical value, use the `-n` option
+```bash
+sort -n numbers.txt
+```
+Now, the file contents will be interpreted as numbers rather than strings and `numbers.txt` will be sorted in ascending numerical order:
+```bash
+2
+6
+10
+19
+22
+```
+Going back to the `alkanes` directory
+```bash
+cd alkanes
+cat lengths.txt
 sort -n lengths.txt
+```
+Expected output:
+```bash
+9 methane.pdb
+12 ethane.pdb
+15 propane.pdb
+20 cubane.pdb
+21 pentane.pdb
+30 octane.pdb
+107 total
+```
+```bash
 sort -n lengths.txt > sorted-lengths.txt
 
 head -n 1 sorted-lengths.txt
 
 sort -n lengths.txt > lengths.txt
 ```
+Other sorting options include `-r` which sorts lines in reverse order and `-u` which removes duplicate lines.
+
+:::note the `sort` command will sort lines alphabetically or numerically. For lines with numbers and letters: numbers > capital letters > lowercase letters. :::
 
 ### `|`
 #### Use a "pipe" to string commands together
@@ -176,6 +275,8 @@ sort -n lengths.txt > lengths.txt
 wc -l *.pdb | sort -n
 
 wc -l *.pdb | sort -n > sorted_lengths_v2.txt
+
+cat sorted_lengths_v2.txt
 ```
 
 ### `grep`
