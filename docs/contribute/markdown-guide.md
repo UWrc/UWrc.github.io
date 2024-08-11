@@ -48,10 +48,20 @@ To serve as an example page when styling markdown based Docusaurus sites.
 ## Emphasis
 
 Emphasis, aka italics, with _asterisks_ or _underscores_.
+```
+*italicized text*
+_italicized text_
+```
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
+Strong emphasis, aka bold, with double **asterisks** or double **underscores**.
+```
+**bolded text**
+__bolded text__
+```
 
 Combined emphasis with **asterisks and _underscores_**.
+```
+**makes word
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
