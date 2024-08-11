@@ -52,7 +52,6 @@ Create a conda environment and install required packages.
 Set up a password for your Jupyter Notebook Session. This will remain your password every time you log in - Remember it. 
 
 ```bash
-[finchkn@n3097 ~]$ conda create -n jupyter-notebook
 (jupyter-notebook)[finchkn@n3097 ~]$ jupyter-notebook --generate-config
 (jupyter-notebook)[finchkn@n3097 ~]$ jupyter-notebook password
 //highlight-next-line
