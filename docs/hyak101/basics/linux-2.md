@@ -322,21 +322,52 @@ The output should be the same at `sorted-lengths.txt`:
 ```bash
 cd shell-lesson-data/exercise-data/writing
 cat haiku.txt
-grep not haiku.txt
-
+grep not haiku.txt 
+```
+Only the lines containing "not" will print out. Now try the follwing `grep` command:
+```bash
 grep The haiku.txt
+```
+```bash
+The Tao that is seen
+"My Thesis" not found.
+```
+Notice how longer words containing "The" are also printed out. Use the -w option to ensure that grep is only matching whole words:
+```bash
 grep -w The haiku.txt
-
+```
+```bash
+The Tao that is seen
+```
+`grep` also works with multiple words at a time:
+```bash
 grep -w "is not" haiku.txt
-
+```
+```bash
+Today it is not working
+```
+Other options include -n which displays line numbers and -r which recursivly searches for patterns:
+```bash
 grep -n "it" haiku.txt
-
+```
+```bash
+5: With searching comes loss
+9: Yesterday it worked
+10: Today it is not working
+```
+Combining options -n and -w:
+```bash
 grep -n -w "the" haiku.txt
-
-# -r (recursive) option, grep
+```
+```
+2: Is not the true Tao, until
+6: and the presence of absence:
+```
+The -r (recursive) option:
+```bash
 grep -r Yesterday .
 ```
-
+This searches for the word Yesterday in your current directory (writing). 
 ### `history`
 #### View your history of commands with `history`
 ```bash
@@ -354,9 +385,23 @@ history |grep cat
 ```bash
 cd shell-lesson-data/exercise-data/
 find . -name numbers.txt
+```
+This will print out the location of numbers.txt :
+```bash
+./numbers.txt
+```
+Use `*` to find all .txt files starting in your current ditectory :
+```bash
 find . -name "*.txt"
-
+```
+Use `grep` and `find` togther to search for files with specific words or phrases:
+```bash
 grep "searching" $(find . -name "*.txt")
+```
+The output shows the file location and the lines with the word "searching" :
+```bash
+./writing/haiku.txt: With searching comes loss
+./writing/LittleWomen.txt: sitting on the top step, affected to be searching...
 ```
 ### `scp`
 #### Transfer your data to `klone` with "server copy" or `scp`
