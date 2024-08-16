@@ -3,13 +3,7 @@ id: linux
 title: Basic Linux Commands
 ---
 
-:::note
-
-This documentation is under construction.
-
-:::
-
-In this section, we will review more commands to get you comfortable do basic things on HYAK. The next section borrows exercises from [**Software Carpentry's Unix Shell Lesson on Working with Files and Directories.**](https://swcarpentry.github.io/shell-novice/03-create.html), which goes into more detail about these commands. 
+In this section, we will review more commands to get you comfortable do basic things on HYAK. This section has sampled some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 
 ## Your Working Directory
 

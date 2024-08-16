@@ -3,11 +3,7 @@ id: linux-2
 title: Basic Linux Commands II
 ---
 
-:::note
-
-This documentation is under construction.
-
-:::
+In this section, we will review more commands to get you comfortable do basic things on HYAK. This section has sampled some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 
 ### `head`, `tail`, `more`, `less`
 
@@ -434,3 +430,6 @@ rysnc -a UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 `rsync` is generally used for larger file transfers and file synchronization. Unlike `scp` which always transfers the entire file, `rsync` will only transfer the parts of the file that changed. `rsync` can also resume aborted transfers from lost internet connections. `scp` works well for quick file transfers that do not require the additional features rsync provides.
 :::
 
+### Well done! 
+
+You made it through the tutorial! If you have any questions about the content covered here or feedback to pass along about this tutorial, please open a ticket by emailing help@uw.edu with "Hyak" in the subject line. 

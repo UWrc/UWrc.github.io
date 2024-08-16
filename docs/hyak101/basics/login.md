@@ -3,12 +3,6 @@ id: login
 title: Logging In
 ---
 
-:::note
-
-This documentation is under construction.
-
-:::
-
 ### Accounts on Hyak
 
 To log into any HYAK cluster you need an account created. Please review our documentation around accounts and get an account before moving forward with this tutorial. [**Click here for account documentation.**](https://hyak.uw.edu/docs/account-creation)
