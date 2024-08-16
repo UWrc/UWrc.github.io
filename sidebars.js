@@ -65,9 +65,19 @@ module.exports = {
       'hyak101/basics/system',
       'hyak101/basics/linux',
       'hyak101/basics/linux-2',
-      'hyak101/basics/software', 
+    ],
+    'Tutorial: SLURM': [
+      'hyak101/basics/syllabus_slurm', 
       'hyak101/basics/jobs',
       'hyak101/basics/arrays',
+      {
+        'Advanced SLURM': [
+          'hyak101/basics/advanced',
+          'hyak101/basics/nn_batch',
+          'hyak101/basics/nn_array',
+          'hyak101/basics/nn_bash',
+        ]
+      },
     ],
     'Tutorial: Jupyter Notebooks': [
       'hyak101/python/syllabus',
