@@ -17,11 +17,15 @@ You need 2FA to log onto any HYAK cluster.
 
 ### Logging in with SSH
 
-Once you have your account and 2FA set up, you can use `ssh` to log into `klone`. `ssh` is the most common method of logging into the cluster using the command-line interface (CLI). If you're using any Linux or Linux-like system (e.g., MacOS, BSD) you probably already have a Terminal installed by default. Locate Terminal in your Applications directory on your Mac. 
+Once you have your account and 2FA set up, you can use `ssh` to log into `klone`. `ssh` is the most common method of logging into the cluster using the command-line interface (CLI). 
 
+**Mac:**
+If you're using any Linux or Linux-like system (e.g., MacOS, BSD) you probably already have a Terminal installed by default. Locate Terminal in your Applications directory on your Mac. 
+
+**Windows:**
 Newer versions of Windows also have a new Linux sub-system so there are also native options to bring up a local terminal. Alternatively, you can login to `klone` using Command Prompt or Windows Powershell. Other options include [**PuTTY**](https://www.putty.org/) and [**Git Bash - use "The Bash Shell" with Git installed on Windows from this link for a video with install instructions.**](https://carpentries.github.io/workshop-template/install_instructions/#shell). 
 
-Once you have a shell open in Terminal or any of the Windows options, you can login with the following command replacing the word `UWNetID` with your UW Net ID. You'll know it worked when you see the "klone hyak" welcome message printed to your screen. 
+Once you have a shell open in Terminal or any of the Windows options, you can login with the following command replacing the word `UWNetID` with your UW Net ID. Then you will be prompted to enter your password for your UW Net ID. You'll know it worked when you see the "klone hyak" welcome message printed to your screen. 
 
 ```bash
 ssh UWNetID@klone.hyak.uw.edu
@@ -49,7 +53,7 @@ Too many incorrect login attempts will result in a IP ban, which could last up t
 
 ### What's a shell?
 
-The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands which we will discuss in the following sections. When you use `ssh` to log into `klone`, you are using a shell called Bash (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne) to interact with `klone`. If you were successful logging into `klone` you are looking at a shell. I like to think of it as my "view" into `klone`. This is where you will execute commands (i.e., activate programs to perform various activities like viewing documents, listing the contents of a directory, etc.)
+The shell is a program where users can type commands. With the shell, it’s possible to invoke complicated programs like climate modeling software or simple commands which we will discuss in the following sections. When you use `ssh` to log into `klone`, you are using a shell called **Bash** (the Bourne Again SHell — so-called because it’s derived from a shell written by Stephen Bourne) to interact with `klone`. If you were successful logging into `klone` you are looking at a shell. I like to think of it as my "view" into `klone`. This is where you will execute commands (i.e., activate programs to perform various activities like viewing documents, listing the contents of a directory, etc.)
 
 :::note
 In Linux CLI, the term "directory" is used instead of "folder" to describe a location where files are stored, reflecting its roots in UNIX where "directory" is the standard term. While "folder" is commonly used in graphical interfaces like Windows File Explorer and MocOS Finder. "Directory" is more accurate in the context of command-line operations.
