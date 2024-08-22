@@ -73,11 +73,53 @@ Remember you can always return to the `hyakalloc` results when preparing your co
 
 ### Set Up
 
-TODO - working directory in scrubbed discussion - can link back to the discussion of working directory importance in the Basics tutorial linux.md.
+For the following exercises, the working directory will be in scrubbed:
+```bash
+cd /gscratch/scrubbed/
+```
+If you have not already, make a directory with your UW NetID with `mkdir` and go into it:
+```bash
+mkdir UWNetID
+cd UWNetID
+```
+This will be your working directory for this section. Note that files and directories will be deleted after 14 days if they are not used.
 
-TODO - copy materials from /sw/hyak101/basics to working directory
+If you are a student in a lab group who contributed resources to HYAK, you have an alternative storage option you may use under:
+```bash
+cd /mmfs1/gscratch/labname
+```
+If you are a student part of the Reseach Computing Club, you may use:
+```bash
+cd /mmfs1/gscratch/stf/
+```
+Fore more information regarding HYAK storage click [**HERE**](https://hyak.uw.edu/docs/storage/gscratch).
 
-TODO - for the next section it would be good to have 2 terminals. One for submitting jobs and editing scripts. One for 
+
+
+To start, copy the necessary tutorial materials to your working directory by adding a `.` after the command. Because we are copying an entire directory, make sure to use `-r` to recursively copy:
+```bash
+cp -r /sw/hyak101/basics .
+```
+Ensure all materials were copied into your working directory:
+```bash
+cd basics
+ls
+```
+```bash
+data
+locator.sif
+locator_NN_job.slurm
+locator_NN_array.slurm
+locator_NN_dropouts.slurm
+loop_array.slurm
+loop_job.slurm
+loop_script.sh
+```
+:::tip Pro Tip
+In the following section, it is often useful to have two terminal windows open. One for editing scipts and one for submitting and monitoring jobs. Open up a new terminal and use `ssh` to login to Hyak. On this window, monitor jobs using `squeue -u UWNetID`.
+
+:::
+
 
 ### Interactive Jobs
 
@@ -101,8 +143,41 @@ Finally, your shell prompt will show that you are no longer on the login node, o
 ```
 Except that the word `UWNetID` will be replaced with your Net ID and `n3424` will be replaced with the node SLURM assigned to your interactive job. Finally, the `~` will be replaced with the name of your current directory (your location on the filesystem). 
 
-:::tip Pro tip - 
-TODO- Requesting a GPU job
+:::tip Pro tip : Requesting a GPU job
+You can also request an interactive session on a GPU. To view information about the current status of nodes in a partition, use the command `sinfo`. The beginning of the output may look something like this:
+
+```bash
+PARTITION        AVAIL  TIMELIMIT  NODES  STATE NODELIST
+compute-bigmem      up   infinite      1   idle n3255
+```
+Some common node states you may see are idle, alloc, and mixed. An idle state indicates that it is ready to accept new jobs. An alloc state indicates that the node is already fully allocated to one or more jobs and cannot accept any more jobs until the allocated job(s) finish. A node is in a mixed state when it has allocated and idle resources.
+
+Use the following command to get a list of the GPUs used in the checkpoint partition along with CPU states and the amount of free memory on a given node:
+```bash
+sinfo -p ckpt -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v null
+ ```
+ The start of the output will look something like this: 
+ ```bash
+ HOSTNAMES           CPUS(A/I/O/T)       FREE_MEM            GRES_USED
+g3001               26/14/0/40          365755              gpu:2080ti:8(IDX:0-7)
+ ```
+Now, find an available GPU and request an interactive session on it with the `salloc` command. Replace the account name, gpus-per-node, memory, and time with the desired parameters:
+```bash
+salloc -A accountname -p ckpt --gpus-per-node=a40:1 --mem=10G --time=1:00:00 
+``` 
+Note that after `--gpus-per-node`, you must input the GPU model and the number of GPUs you want to allocate. After requesting a GPU job, you can check to see if the GPU is active using the `nvidia-smi` command:
+```bash
+nvidia-smi
+```
+
+#### Note that you may need to get started with Apptainer to use this command. For more information on getting started with Apptainer, click [**HERE**](https://hyak.uw.edu/docs/tools/containers/).
+
+The output will be two tables. The first table shows information such as the temperature (degrees Celsius), performance state (ranging from P0-P12, where P0 is the maximum performance state) and how much memory is used for all available GPUs. The second table provides information on all the processes using GPUs.
+
+To continuously update the output every 5 seconds, use the flag `--loop = 5`:
+```bash
+nvidia-smi --loop=5
+```
 :::
 
 ### Simple Script as a Command Stand-in
