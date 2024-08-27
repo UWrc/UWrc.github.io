@@ -116,8 +116,11 @@ loop_job.slurm
 loop_script.sh
 ```
 :::tip Pro Tip
-In the following section, it is often useful to have two terminal windows open. One for editing scipts and one for submitting and monitoring jobs. Open up a new terminal and use `ssh` to login to Hyak. On this window, monitor jobs using `squeue -u UWNetID`.
-
+In the following section, it is often useful to have two terminal windows open. One for editing scipts and one for submitting and monitoring jobs. Open up a new terminal and use `ssh` to login to Hyak. On this window, monitor jobs using the command:
+```bash
+watch -n 10 squeue -u UWNetID 
+```
+`watch -n 10` will redo the following command ( `squeue -u UWNetID` ) every 10 seconds. 
 :::
 
 
@@ -182,11 +185,63 @@ nvidia-smi --loop=5
 
 ### Simple Script as a Command Stand-in
 
-TODO - section about loop_script.sh - note that this part should work equivalently if a cpu or gpu job is used (in the case that they only have a GPU partition or they followed the directions in the Requesting a GPU job pro tip above).
+#### A CPU job and a GPU job will work equivilantly in this section.
 
+After requesting an interactive job, let's try to run a simple script on the compute node. If you have been following along, you should have `loop_script.sh` in the basics directory. 
+```bash
+ls
+```
+```bash
+data  locator_NN_dropouts.slurm      locator.sif      loop_job.slurm
+locator_NN_array_slurm  locator_NN_job.slurm    loop_array.slurm  loop_script.sh
+```
+:::tip Syntax Highlighting
+Note that `locator.sif` and `loop_script.sh` are green. This means that the scripts are executable. To change file or directory permissions, use the command `chmod`:
+```bash
+chmod +x loop_script.sh
+# just change loop_script.sh to any file you want to make executable
+# the +x allows executable permissions
+```
+Other colors include white for .txt files and blue for directories.
+
+:::
+
+
+ Use the `cat` or `nano` command to view this script.
+```bash
+nano loop_script.sh
+```
+`loop_script.sh` will take a starting point and an ending point and count until variable i=ending point. To execute this, use `./` with the desired starting and ending values:
+```bash
+./loop_script.sh 0 1000000
+```
+The output should look like this:
+```bash
+Sequence complete! Iterations from 0 to 1000000.
+```
+To see how long a job took, use the `time` command:
+```bash
+time ./loop_script.sh 0 1000000
+```
+The output should look something like this:
+```bash
+Sequence complete! Iterations from 0 to 1000000.
+
+real    0m4.216s
+user    0m4.071s
+sys     0m0.068s
+```
+:::note Understanding the time output
+
+The real time is the wall-clock time it takes for a job to finish. In this case, the job completed in 4.216 seconds. The user time refers to the amount of time the CPU spends in user mode within the process and the system time is the amount of time the CPU spends in kernal (or supervisor) mode.
+
+Code running in user mode refers to all code running outside the kernal. It has limited priviledges since hardware and reference memory cannot be directly accessed. Code running in kernal mode has unrestricted access to the hardware and system memory.
+
+:::
 ### Batch Jobs
 
 TODO - section about loop_job.slurm
+
 
 :::tip Pro tip - multithreading
 TODO 
