@@ -121,6 +121,11 @@ In the following section, it is often useful to have two terminal windows open. 
 watch -n 10 squeue -u UWNetID 
 ```
 `watch -n 10` will redo the following command ( `squeue -u UWNetID` ) every 10 seconds. 
+
+The state of the job is listed under "ST" in this window. Some of the most common job states are:
+
+PD: Pending job, R: Running job, S: Suspended job, CG: Completing job, and CD: Completed job
+
 :::
 
 
@@ -238,10 +243,59 @@ The real time is the wall-clock time it takes for a job to finish. In this case,
 Code running in user mode refers to all code running outside the kernal. It has limited priviledges since hardware and reference memory cannot be directly accessed. Code running in kernal mode has unrestricted access to the hardware and system memory.
 
 :::
+
+#### To end an interactive job, type `exit` into the terminal.
 ### Batch Jobs
 
-TODO - section about loop_job.slurm
+For longer jobs, it can be useful to submit them as scripts rather than running them in an interactive session. This will allow the job to run in the background. In this section, we will be using the `loop_job.slurm` script in the basics directory to run `loop_script.sh` as a batch job. 
+```
+nano loop_job.slurm
+```
+The first few lines of `loop_job.slurm` should look like this:
+```bash
+#!/bin/bash
 
+#SBATCH --job-name=loop_job
+#SBATCH --partition=ckpt
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=1G
+#SBATCH --time=5:00
+#SBATCH -o log/%x_%j.out
+```
+All `.slurm` jobs you want to submit should start with #!/bin/bash, also known as a shebang. This ensures that the bash shell is used to run the script. The subsequent flags starting with `#SBATCH` are options for the `sbatch` command which is used to submit the script. Notice how the flags are reminiscent of the `salloc` command flags. 
+
+The `#SBATCH -o log/%x_%j.out` flag changes the output file name. The job allocation number will replace the `%j` and the job name will replace the `%x`.  This flag will also make a directory called log and save the output file there. You can also specifify your desired account using `#SBATCH --account=account name`. Use `hyakalloc` to see the available accounts and partitions you have.
+
+The command you wish to execute will be at the end of the script. In this case, we want to run `loop_script.sh` from 0 to 1000000 and see how long it takes:
+```bash
+time ./loop_script.sh 0 1000000
+```
+Exit the nano text editor with ctrl+x and submit the job using `sbatch`:
+```bash
+sbatch loop_job.slurm
+```
+If you set up a separate window to monitor your jobs (see the pro tip in the setup section), details about loop_job should appear in this window. The new log directory containing the output file should also be made by now:
+```bash
+cd log
+ls
+```
+The listed output file name will look something like this:
+```bash
+loop_job_19914578.out
+```
+Examine the contents of the output file to see how long the sequence took:
+```bash
+cat loop_job_19914578.out
+```
+All outputs and error messages will appear in this file:
+```bash
+Sequence complete! Iterations from 0 to 1000000.
+
+real    0m5.617s
+user    0m5.570s
+sys     0m0.016s
+```
 
 :::tip Pro tip - multithreading
 TODO 
