@@ -35,13 +35,14 @@ As you go through the tutorial look for tips like this one. In these boxes, we w
 ### Course Content
 
 Tutorial: SLURM
-* [**Syllabus**](https://hyak.uw.edu/docs/hyak101/basics/syllabus-slurm)
+* [**Syllabus**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
 * [**Scheduling Jobs**](https://hyak.uw.edu/docs/hyak101/basics/jobs)
 * [**Job Arrays**](https://hyak.uw.edu/docs/hyak101/basics/arrays)
 * Advanced SLURM
-    * TODO
-    * TODO
-    * TODO
+    * [**Locator Neural Network**](https://hyak.uw.edu/docs/hyak101/basics/advanced)
+    * [**Interactive and Batch Jobs**](https://hyak.uw.edu/docs/hyak101/basics/nn_batch)
+    * [**Parallel Computing**](https://hyak.uw.edu/docs/hyak101/basics/nn_array)
+    * [**Parameter Sweep**](https://hyak.uw.edu/docs/hyak101/basics/nn_bash)
 
 ### Extra Practice
 
