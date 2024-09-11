@@ -25,7 +25,11 @@ openblas/0.3.28
 scalapack/2.2.0
 ```
 
-In our benchmarking tests, performance of these libraries was similar on `g1` and `g2` CPUs for each math library, regardless of architecture. The best library performer on AMD CPUs is AOCC+AOCL, and for Intel CPUs it’s OpenBLAS+ScaLAPACK. 
+In our benchmarking tests, performance of these libraries was similar on `g1` and `g2` CPUs for each math library, regardless of architecture. The best library performer on AMD CPUs is AOCC+AOCL, and for Intel CPUs it’s OpenBLAS+ScaLAPACK:
+
+<center>
+	<img src="/img/blog/HPL_CPU_perf_compare.png" alt="Image displays graph indicating that the best library performer on AMD CPUs is AOCC plus AOCL, and for Intel CPUs it’s OpenBLAS plus ScaLAPACK" width="70%" />
+</center>
 
 ### Fall Office Hours
 
