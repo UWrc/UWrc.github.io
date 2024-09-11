@@ -1,0 +1,29 @@
+<plist version="1.0">
+<dict>
+    <key>Protocol</key>
+    <string>s3</string>
+    <key>Vendor</key>
+    <string>UW HYAK</string>
+    <key>Scheme</key>
+    <string>https</string>
+    <key>Description</key>
+    <string>KOPAH S3</string>
+    <key>Default Hostname</key>
+    <string>s3.kopah.orci.washington.edu</string>
+    <key>Hostname Configurable</key>
+    <false/>
+    <key>Port Configurable</key>
+    <false/>
+    <key>Username Configurable</key>
+    <true/>
+    <key>Properties</key>
+    <array>
+    </array>
+    <key>Default Nickname</key>
+    <string>KOPAH S3</string>
+    <key>Properties</key>
+    <array>
+        <string>s3.bucket.virtualhost.disable=true</string>
+    </array>
+</dict>
+</plist>
