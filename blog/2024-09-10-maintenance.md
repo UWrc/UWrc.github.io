@@ -5,14 +5,26 @@ author: Kristen Finch
 author_title: HPC Staff Scientist
 author_url: https://github.com/finchnsnps
 author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
-tags: [klone,hyak,hpc,supercomputer,hours,help]
+tags: [klone,hyak,hpc,supercomputer,hours,help,math,amd,modules]
 ---
 
 Hello HYAK Community,
 
-Thanks again for your patience with our monthly scheduled maintenance. During this maintenance session, we were able to provide package updates to node images to ensure compliance with the latest operating system level security fixes and performance optimizations.
+Thanks again for your patience with our monthly scheduled maintenance. During this maintenance session, we were able to provide package updates to node images to ensure compliance with the latest operating system level security fixes and performance optimizations. Of note, the Nvidia GPU driver on Klone has been updated to the latest production datacenter release, version 560.35.03.
 
 The next maintenance will be **Tuesday October 8, 2024**. 
+
+### AMD Math libraries
+
+In June we announced the addition of AMD Nodes and Slices to `klone` which make up our generation 2 or `g2` collection of resources. [**Click here to read more about the difference between our `g1` and `g2` resources.**](https://hyak.uw.edu/blog/g1-vs-g2) During August, we’ve installed specialized math libraries like AOCC, AOCL, and ScaLAPACK as `modules` to make the most of this upgade. The new modules are relevant for partitions `cpu-g2`, `cpu-g2-mem2x`, and `ckpt-g2`. These tools are designed to optimize performance on AMD processors, speeding up complex mathematical computations. Whether you're working on simulations, data analysis, or any number-crunching tasks, these libraries may help ensure you get faster, more efficient results. If you're looking to boost your workflow, it's worth exploring how these libraries can benefit your projects. Here are the names of the new modules for these specialized libraries.
+
+```bash
+scalapack/2.2.0
+aocc/4.2.0
+aocl/4.2.0
+```
+
+In our benchmarking tests, performance of these libraries was similar on `g1` and `g2` CPUs for each math library, regardless of architecture. The best library performer on AMD CPUs is AOCC+AOCL and for Intel CPUs it’s OpenBLAS (module `openblas/0.3.28`). 
 
 ### Fall Office Hours
 
