@@ -5,9 +5,11 @@ title: Basic Linux Commands II
 
 In this section, we will review more commands to get you comfortable do basic things on HYAK. This section has sampled some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 
+## Tutorial:
+
 ### `head`, `tail`, `more`, `less`
 
-Other ways to view file contents, great for viewing smaller chunks of longer files. 
+These four commands are other ways to view file contents, great for viewing smaller chunks of longer files. 
 
 ```bash
 head basilisk.dat # displays the first part of a file
@@ -143,7 +145,7 @@ First, change to the `animal-counts/` directory and print the contents with the 
 cd shell-lesson-data/exercise-data/animal-counts/
 cat animals.csv
 ```
-The espected output is as follows:
+The expected output is as follows:
 ```bash
 2012-11-05,deer,5
 2012-11-05,rabbit,22
@@ -243,7 +245,8 @@ The `sort` command will sort lines alphabetically or numerically. Lines with num
 2. Capital letters 
 3. Lowercase letters 
 
-Other sorting options include `-r` which sorts lines in reverse order and `-u` which removes duplicate lines.
+Other sorting options include `-r` which sorts lines in reverse order and  
+`-u` which removes duplicate lines.
 :::
 
 Going back to the `alkanes` directory
