@@ -3,12 +3,6 @@ id: syllabus_slurm
 title: Syllabus
 ---
 
-:::caution
-
-This documentation is under construction.
-
-:::
-
 ### Goals & Rationale
 
 #### The main objective of this tutorial is to dimystify job submission and help researchers efficiently use HYAK's computing resources for their research.
