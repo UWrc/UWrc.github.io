@@ -45,6 +45,7 @@ module.exports = {
       'tools/modules',
       'tools/compilers',
       'tools/containers',
+      'tools/squashfs',
       'tools/modules-containers',
       'tools/nvidia_ngc',
       'tools/r',
