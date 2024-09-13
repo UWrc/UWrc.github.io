@@ -34,6 +34,7 @@ nano .s3cfg
 host_base = s3.kopah.orci.washington.edu
 host_bucket = s3.kopah.orci.washington.edu/%(bucket)
 use_https = True
+public_url_use_https = True
 # Login credentials
 access_key = <ACCESS_KEY>
 secret_key = <SECRET_KEY>
