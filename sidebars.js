@@ -68,6 +68,12 @@ module.exports = {
       'hyak101/basics/linux',
       'hyak101/basics/linux-2',
     ],
+    'Tutorial: Containers': [
+      'hyak101/containers/syllabus',
+      'hyak101/containers/background',
+      'hyak101/containers/demonstration',
+      'hyak101/containers/build',
+    ],
     'Tutorial: SLURM': [
       'hyak101/basics/syllabus_slurm', 
       'hyak101/basics/jobs',
