@@ -9,7 +9,7 @@ title: Syllabus
 
 Much of the HYAK documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and Linux CLI. Here we have prepared a walk-through tutorial of programs (which we will refer to as **commands**) that you may find helpful before moving forward with your resaerch computing project. Ultimately, we want you to feel comfortable working independently on HYAK.
 
-#### Learning Objective: 
+#### Learning Objectives: 
 * Introduce the command line interface (CLI) as a way to interact with a computer.
 * Understand the difference between the command line interface (CLI) and the graphical user interface (GUI).
 * Become familiar navigating a file system using Linux commands like pwd, cd, and ls.
