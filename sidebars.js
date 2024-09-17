@@ -24,6 +24,7 @@ module.exports = {
           'storage/kopah',
           'storage/gui',
           'storage/cli',
+          'storage/boto3',
         ]
       }
     ],
