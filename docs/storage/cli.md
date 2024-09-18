@@ -9,17 +9,17 @@ note:::
 These tools aren't the only ones compatible with KOPAH, however you will need to set them up to work with Ceph, KOPAH's underlying storage protocol.
 :::
 
-## S3cmd
+## s3cmd
 
-S3cmd is a free command line tool and client for uploading, retrieving and managing data in KOPAH. It is best suited for power users who are familiar with command line programs. It is also ideal for batch scripts and if automated backup to KOPAH is desired.
+s3cmd is a free command line tool and client for uploading, retrieving and managing data in KOPAH. It is best suited for power users who are familiar with command line programs. It is also ideal for batch scripts and if automated backup to KOPAH is desired.
 
-S3cmd is available for uploading data to KOPAH from your local computer and with usage on `klone`.
+s3cmd is available for uploading data to KOPAH from your local computer and with usage on `klone`.
 
-### Local S3cmd usage
+### Local s3cmd usage
 
-To get started with S3cmd, install the software on your local computer. [**Click here to Download S3cmd from the developer's website.**](https://s3tools.org/s3cmd)
+To get started with s3cmd, install the software on your local computer. [**Click here to Download s3cmd from the developer's website.**](https://s3tools.org/s3cmd)
 
-Create an S3cmd configuration file in your home directory. Call it `.s3cfg`. There are many ways to create this file. 
+Create an s3cmd configuration file in your home directory. Call it `.s3cfg`. There are many ways to create this file.
 
 #### For example, Mac and Linux users you can use the text editor `nano` in a Terminal window.
 
@@ -29,9 +29,9 @@ nano .s3cfg
 ## Use Ctrl + X to exit nano
 ```
 
-#### Windows users could use Wordpad or another text editor application. 
+#### Windows users could use Wordpad or another text editor application.
 
-`.s3cfg` should contain the following details: 
+`.s3cfg` should contain the following details:
 
 ```bash title=".s3cfg"
 [default]
@@ -44,15 +44,15 @@ access_key = <ACCESS_KEY>
 secret_key = <SECRET_KEY>
 ```
 
-Where the word `<ACCESS_KEY>` is replaced with your KOPAH Access Key and the word `<SECRET_KEY>` is replaced with your KOPAH Secret Key. 
+Where the word `<ACCESS_KEY>` is replaced with your KOPAH Access Key and the word `<SECRET_KEY>` is replaced with your KOPAH Secret Key.
 
-After that is complete. S3cmd can be used to access your KOPAH storage data with a large suite of commands. The S3cmd help includes example commands for a variety of tasks.
+After that is complete. s3cmd can be used to access your KOPAH storage data with a large suite of commands. The s3cmd help includes example commands for a variety of tasks.
 
 ```bash 
 s3cmd --help
 ```
 
-The following are a small collection of the many commands available with S3cmd. 
+The following are a small collection of the many commands available with s3cmd.
 
 | command | action|
 |---------|-------|
@@ -68,16 +68,16 @@ The following are a small collection of the many commands available with S3cmd.
 Buckets and objects shouldn't be public unless necessary, set them private whenever possible!
 :::
 
-### S3cmd usage on `klone`
+### s3cmd usage on `klone`
 
-S3cmd is installed for all `klone` users. Users need only set up their S3cmd configuration file in their home directory as shown above. 
+s3cmd is installed for all `klone` users. Users need only set up their s3cmd configuration file in their home directory as shown above.
 
 ```bash
 cd ~
 nano .s3cfg
 ## Use Ctrl + X to exit nano
 ```
-Prepare your `.s3cfg` file as shown above. 
+Prepare your `.s3cfg` file as shown above.
 
 ## S5cmd
 
