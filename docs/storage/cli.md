@@ -58,6 +58,11 @@ The following are a small collection of the many commands available with S3cmd.
 |`s3cmd put FILE [FILE...] s3://BUCKET[/PREFIX]`|Put a file into the bucket|
 |`s3cmd put --acl-public FILE [FILE...] s3://BUCKET[/PREFIX]`|Put a file into a bucket and make it public|
 |`s3cmd get s3://BUCKET/OBJECT LOCAL_FILE`|Get a file from the bucket|
+|`s3cmd setacl --acl-private s3://BUCKET/OBJECT`|Make an object in the bucket private.|
+
+:::caution
+Buckets and objects shouldn't be public unless necessary, set them private whenever possible!
+:::
 
 ### S3cmd usage on `klone`
 
