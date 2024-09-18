@@ -3,7 +3,11 @@ id: cli
 title: S3 CLIs
 ---
 
-On this page we will provide options to interact with your S3 data on KOPAH via Command Line Interfaces (CLIs).
+On this page we detail two options data on KOPAH via Command Line Interfaces (CLIs). s3cmd is a popular and widely used tool, while s5cmd is faster but less widely used.
+
+note:::
+These tools aren't the only ones compatible with KOPAH, however you will need to set them up to work with Ceph, KOPAH's underlying storage protocol.
+:::
 
 ## S3cmd
 
@@ -75,3 +79,28 @@ nano .s3cfg
 ```
 Prepare your `.s3cfg` file as shown above. 
 
+## S5cmd
+
+[**s5cmd**](https://github.com/peak/s5cmd) is an open-source tool for transferring and managing data with S3-API compatible storage. It is less widely used than s3cmd, however data transfer is much quicker.
+
+### Setup
+
+s5cmd is pre-installed on KLONE. To install locally, view the [**developer's instructions**](https://github.com/peak/s5cmd#installation).
+
+s3cmd must be configured to interact with KOPAH. To do so, set the following environment variables in your shell.
+
+:::note
+These commands should likely be added in your `~/.bashrc` file, so they are automatically run on each terminal session. The commands in your `~/.bashrc` file will automatically run on any new shell session, however you need to source it (`source ~/.bashrc`) to make the variables accessible in your current session.
+:::
+
+```bash
+export AWS_ACCESS_KEY_ID='<KOPAH ACCESS KEY>'     # replace with KOPAH access key
+export AWS_SECRET_ACCESS_KEY='<KOPAH SECRET KEY>' # replace with KOPAH secret key
+export S3_ENDPOINT_URL='https://s3.kopah.orci.washington.edu'
+```
+
+To test the setup, run `s5cmd ls` to list your existing buckets. If that succeeds, s5cmd is ready for use!
+
+### Usage
+
+Run `s5cmd -h` for information on how to use s5cmd or see the [**developer examples**](https://github.com/peak/s5cmd).
