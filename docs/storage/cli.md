@@ -1,6 +1,6 @@
 ---
 id: cli
-title: S3 CLIs
+title: CLI Usage
 ---
 
 On this page we detail two options data on KOPAH via Command Line Interfaces (CLIs). s3cmd is a popular and widely used tool, while s5cmd is faster but less widely used.
@@ -11,7 +11,7 @@ These tools aren't the only ones compatible with KOPAH, however you will need to
 
 ## S3cmd
 
-S3cmd is a free command line tool and client for uploading, retrieving and managing data in KOPAH S3. It is best suited for power users who are familiar with command line programs. It is also ideal for batch scripts and if automated backup to S3 is desired.
+S3cmd is a free command line tool and client for uploading, retrieving and managing data in KOPAH. It is best suited for power users who are familiar with command line programs. It is also ideal for batch scripts and if automated backup to KOPAH is desired.
 
 S3cmd is available for uploading data to KOPAH from your local computer and with usage on `klone`.
 
@@ -46,7 +46,7 @@ secret_key = <SECRET_KEY>
 
 Where the word `<ACCESS_KEY>` is replaced with your KOPAH Access Key and the word `<SECRET_KEY>` is replaced with your KOPAH Secret Key. 
 
-After that is complete. S3cmd can be used to access your KOPAH S3 storage data with a large suite of commands. The S3cmd help includes example commands for a variety of tasks.
+After that is complete. S3cmd can be used to access your KOPAH storage data with a large suite of commands. The S3cmd help includes example commands for a variety of tasks.
 
 ```bash 
 s3cmd --help

@@ -1,13 +1,13 @@
 ---
 id: gui
-title: S3 GUIs
+title: GUI Usage
 ---
 
-On this page we will provide options to interact with your S3 data on KOPAH via Graphical User Interfaces (GUIs).
+On this page we will provide options to interact with your data on KOPAH via Graphical User Interfaces (GUIs).
 
 ## Cyberduck 
 
-Cyberduck is an open-source client for managing and transferring files to various cloud storage services and servers, including FTP, SFTP, and S3. It offers a simple, intuitive interface that allows users to easily upload, download, and organize their files. Cyberduck is available for both Windows and macOS, making it a versatile tool for seamless file management across different platforms.
+Cyberduck is an open-source client for managing and transferring files to various cloud storage services and protocols, including FTP, SFTP, and S3. It offers a simple, intuitive interface that allows users to easily upload, download, and organize their files. Cyberduck is available for both Windows and macOS, making it a versatile tool for seamless file management across different platforms.
 
 To get started with Cyberduck, install the software on your local computer. [**Click here to Download Cyberduck from the developer's website.**](https://cyberduck.io/download/)
 
