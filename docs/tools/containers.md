@@ -1,6 +1,6 @@
 ---
 id: containers
-title: Apptainer (formerly Singularity) and Docker
+title: Containers
 ---
 
 [sylabs]: /img/docs/sylabs-cloud.png 'Sylabs Cloud'
@@ -90,15 +90,9 @@ $
 
 Notice the `git` version here is newer than the original we started with. Success!
 
-## App Stores
+## Container Repositories
 
 If you followed the tutorial above you should be able to install anything you want but why re-create the wheel? There is a large developer community out there that maintains a majority of the most common scientific applications.
-
-### Sylabs.io Cloud Library
-
-![sylabs]
-
-The largest collection of native Apptainer containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Apptainer and provides the native container format.
 
 ### Docker Hub
 
@@ -107,12 +101,6 @@ The largest collection of native Apptainer containers can be found at the Sylabs
 The biggest collection of Docker images is from Docker Hub [[www](https://hub.docker.com)].
 
 Let's say Docker Hub tells you the pull command for the container you want is `docker pull gcc:11.1.0-bullseye`. To have Apptainer grab this Docker container and convert it to a Apptainer container you'd modify the command to be `apptainer pull docker://gcc:11.1.0-bullseye`.
-
-### Biocontainers.pro
-
-![biocontainer]
-
-A bioinformatics focused set of Apptainer containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Apptainer) Docker containers as well as native Apptainer containers.
 
 ### NVIDIA GPU Cloud (NGC)
 
@@ -125,6 +113,19 @@ A container registry that specializes in common GPU accelerated applications or 
 Depending on the NGC container, it might have directions on the exact pull command for Apptainer. If it does not work be sure to prepend their pull location with `docker://` since these are native Docker containers that need to be converted to Apptainer.
 
 The example above provides a Docker pull command for PyTorch but in this case you'd modify it similarly as if you got it from Docker Hub from `docker pull nvcr.io/nvidia/pytorch:21.05-py3` to `apptainer pull docker://nvcr.io/nvidia/pytorch:21.05-py3`.
+
+### Biocontainers.pro
+
+![biocontainer]
+
+A bioinformatics focused set of Apptainer containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Apptainer) Docker containers as well as native Apptainer containers.
+
+### Sylabs.io Cloud Library
+
+![sylabs]
+
+The largest collection of native Apptainer containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Apptainer and provides the native container format.
+
 
 ### NGC API Keys
 
