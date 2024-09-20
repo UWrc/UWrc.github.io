@@ -94,7 +94,7 @@ s5cmd is not installed on KLONE by default. To install s5cmd:
 5. Delete the original archive: `rm s5cmd_2.2.2_Linux-64bit.tar.gz`
 
 :::note
-Installing s5cmd locally will likely be similar, make sure to consult their [installation documentation](s5cmd_2.2.2_Linux-64bit.tar.gz).
+Installing s5cmd locally will likely be similar, make sure to consult their [**installation documentation**](s5cmd_2.2.2_Linux-64bit.tar.gz).
 :::
 
 s3cmd must be configured to interact with KOPAH. To do so, set the following environment variables in your shell.
