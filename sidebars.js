@@ -49,6 +49,7 @@ module.exports = {
       'tools/squashfs',
       'tools/modules-containers',
       'tools/nvidia_ngc',
+      'tools/dmtcp',
       'tools/r',
       'tools/python',
       'tools/jupyter',
