@@ -70,6 +70,10 @@ Jobs submitted to this partition should be designed to:
 1. Save their progress at regular intervals, or "checkpoints."
 2. Once resumed, start their work from the last saved "checkpoint."
 
+:::info
+[**DMTCP**](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on HYAK without modifying application code. See our [**documentation**](/docs/tools/dmtcp) for more information.
+:::
+
 :::tip What about the `--time` directive?
 When developing your `sbatch` script, you should set a maximum runtime for your job with the `sbatch` directive `--time`. Users should always set `--time=` to the maximum expected runtime of the job with some extra margin for error. Your checkpoint jobs will requeue as many times as required either by the checkpoint time limit for non-GPU (4-5 hours) or GPU jobs (8-9 hours) or pre-emption until the *maximum* runtime has elapsed as directed by `--time`.
 :::
