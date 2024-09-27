@@ -3,7 +3,7 @@ id: linux-2
 title: Basic Linux Commands II
 ---
 
-In this section, we will review more commands to get you comfortable doing basic things on HYAK. This tutorial has sampled some of the data and exercises from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
+In this section, we will review more commands to get you comfortable doing basic things on Hyak. This tutorial has sampled some of the data and exercises from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most Hyak users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 
 ## Tutorial:
 

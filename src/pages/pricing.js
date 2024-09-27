@@ -20,16 +20,16 @@ export default function Pricing() {
         {label: 'Compute', value: 'compute'},
         {label: 'Storage', value: 'storage'},
         {label: 'Support', value: 'support'},
-        {label: 'Try HYAK', value: 'trial'},
+        {label: 'Try Hyak', value: 'trial'},
       ]}>
       <TabItem value="compute">
         <div class="row">
           <div class="col">
             <a name="condo-model" />
             <h3>Condo Model</h3>
-            <p>The HYAK clusters operate on a condo model. This means that the cluster itself consists of contributed resource slices from various groups across campus. The HYAK team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their slices beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
-            <p>You get access to resources equivalent to the slices your account contributes to the cluster on-demand. A cluster account also provides you access to all the other contributed slices from other entities, subject to their availability (i.e., if the contributors or the resources aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but is not uncommon for a job to run for 4 to 5 hours before requeue. Longer checkpoint jobs will continue to run and be re-queued until they complete, which is why it is important that your job be able to checkpoint or save state and resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like HYAK compared to buying the same hardware operating your own server.</p>
-            The total cost considerations for compute nodes in HYAK can be broken down into the sum of the following two components.
+            <p>The Hyak clusters operate on a condo model. This means that the cluster itself consists of contributed resource slices from various groups across campus. The Hyak team, funded through the office of research and sponsoring entities, provides the core infrastructure (e.g., networking, storage, support staff). This is why faculty that are from sponsoring entities do not have any annual, ongoing costs associated with their slices beyond the initial cost of the hardware. The leadership of their sponsoring entities cover this. Faculty that are <u>not</u> affiliated with sponsoring entities have to shoulder this annual, ongoing cost associated with any slices they wish to contribute.</p>
+            <p>You get access to resources equivalent to the slices your account contributes to the cluster on-demand. A cluster account also provides you access to all the other contributed slices from other entities, subject to their availability (i.e., if the contributors or the resources aren't actively using them). This is referred to as the "checkpoint" partition due to the lack of job run-time guarantees. Once a checkpoint job starts it can be re-queued at any moment, but is not uncommon for a job to run for 4 to 5 hours before requeue. Longer checkpoint jobs will continue to run and be re-queued until they complete, which is why it is important that your job be able to checkpoint or save state and resume gracefully. Checkpoint access can provide access to substantial resources beyond what you contribute and is the benefit of joining a shared cluster like Hyak compared to buying the same hardware operating your own server.</p>
+            The total cost considerations for compute nodes in Hyak can be broken down into the sum of the following two components.
             <ol>
               <li><a href="#slice-cost-annual">Slice Annual Costs</a></li>
               <li><a href="#slice-cost-hardware">Slice Hardware Costs</a></li>
@@ -227,9 +227,9 @@ export default function Pricing() {
                   What's included?
                   <ul class="check">
                     <li>A "hot" storage tier.</li>
-                    <li>On campus parallel file system directly connected to HYAK.</li>
+                    <li>On campus parallel file system directly connected to Hyak.</li>
                     <li>No data access expenses or bandwidth limits.</li>
-                    <li>Direct high speed / low latency Infiniband connectivity with (HYAK) compute nodes.</li>
+                    <li>Direct high speed / low latency Infiniband connectivity with (Hyak) compute nodes.</li>
                     <li>80 Gbps aggregate Ethernet upstream connectivity to external collaborators.</li>
                     <li>Use of common tools to migrate data (e.g., scp, rsync).</li>
                   </ul>
@@ -295,24 +295,24 @@ id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963">
       </TabItem>
 
       <TabItem value="support">
-      <p>All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand. To start a help ticket email help@uw.edu and include HYAK in the subject line. Or use the button below.</p>
+      <p>All storage and compute purchases come with support. A team of systems and storage engineers as well as staff scientists will provide at least next business day acknowledgement of any emails or tickets. Depending on the nature of the request or question there may be further delayed follow up for the tasks at hand. To start a help ticket email help@uw.edu and include Hyak in the subject line. Or use the button below.</p>
         
-        <a href="mailto:help@uw.edu?subject=hyak support&body=Please direct this message to the HYAK team.">
+        <a href="mailto:help@uw.edu?subject=hyak support&body=Please direct this message to the Hyak team.">
             <button class="button button--secondary button--block">Request Support</button></a>
       </TabItem>
 
       <TabItem value="trial">
-      <h3>HYAK Demo Accounts</h3>
-            <p>HYAK no-cost demonstration accounts are intended for prospective slice owners to use the HYAK resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of HYAK will be available for demonstration, but you will be able to test workflows and software on the cluster.</p>  
+      <h3>Hyak Demo Accounts</h3>
+            <p>Hyak no-cost demonstration accounts are intended for prospective slice owners to use the Hyak resources and assess whether the resources can serve their research computing needs. The account has some limits and not all features of Hyak will be available for demonstration, but you will be able to test workflows and software on the cluster.</p>  
             <b>Demonstration accounts are subject to the following restrictions</b>:
             <ul>
               <li>Jobs may only be submitted to the <a href="https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition">ckpt partition</a>.</li>
-              <li>Storage is limited under the demo account to <a href="https://hyak.uw.edu/docs/storage/gscratch#user-home-directory">10GB in the home directory</a>. For additional temporary storage you may utilize <a href="https://hyak.uw.edu/docs/storage/gscratch#scrubbed"> /gscratch/scrubbed storage</a>. Be aware that files in scrubbed not used for several months will be deleted. This storage in not intended for large datasets, but can be helpful as you try out workflows on HYAK.</li>
+              <li>Storage is limited under the demo account to <a href="https://hyak.uw.edu/docs/storage/gscratch#user-home-directory">10GB in the home directory</a>. For additional temporary storage you may utilize <a href="https://hyak.uw.edu/docs/storage/gscratch#scrubbed"> /gscratch/scrubbed storage</a>. Be aware that files in scrubbed not used for several months will be deleted. This storage in not intended for large datasets, but can be helpful as you try out workflows on Hyak.</li>
               <li>You may submit as many jobs as you like, but the scheduler will only allow one to run at a time.</li>
               <li>Your jobs are limited to 80 cores, 360 GB of memory, 2 GPUs, and a maximum of 2 discrete nodes.</li>
             </ul>
-            <a href="mailto:help@uw.edu?subject=hyak demo account&body=I would like to open a HYAK demo account.">
-            <button class="button button--secondary button--block">Request a HYAK Demo Account</button></a>
+            <a href="mailto:help@uw.edu?subject=hyak demo account&body=I would like to open a Hyak demo account.">
+            <button class="button button--secondary button--block">Request a Hyak Demo Account</button></a>
           
       </TabItem>
     </Tabs>

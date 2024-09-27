@@ -65,12 +65,6 @@ Set up a password for your Jupyter Notebook Session. This will remain your passw
 
 Remember, we chose 9195 as our random number for this exercise. You can choose any number between 4096 and 16384 for your connection, and replace 9195 with that number in the following examples. 
 
-First add the compute node to your list of known hosts, replacing your `UWNetID` and the compute node name you are logged into. 
-
-```bash
-(jupyter-notebook)[finchkn@n3097 ~]$ ssh finchkn@n3097
-    Warning: Permanently added 'n3097' (ECDSA) to the list of known hosts.
-```
 Start jupyter notebook.
 
 ```bash

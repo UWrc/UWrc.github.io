@@ -5,14 +5,14 @@ title: Logging In
 
 ### Accounts on Hyak
 
-To log into any HYAK cluster you need an account created. Please review our documentation around accounts and get an account before moving forward with this tutorial. [**Click here for account documentation.**](https://hyak.uw.edu/docs/account-creation)
+To log into any Hyak cluster you need an account created. Please review our documentation around accounts and get an account before moving forward with this tutorial. [**Click here for account documentation.**](https://hyak.uw.edu/docs/account-creation)
 
 ### Two Factor Authentication
 
-UW policy is that all services (of which HYAK is one) require 2 factor authentication (2FA) by default as a security posture. Please go to [**this 2FA page**](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
+UW policy is that all services (of which Hyak is one) require 2 factor authentication (2FA) by default as a security posture. Please go to [**this 2FA page**](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
 
 :::important
-You need 2FA to log onto any HYAK cluster.
+You need 2FA to log onto any Hyak cluster.
 :::
 
 ### Logging in with SSH
@@ -66,9 +66,9 @@ When the shell is first opened, you are presented with a **prompt**, indicating 
 ```
 Let's breakdown the pieces of our prompt: 
 * You will see your UW Net ID in place of the word UWNetID above, indicating you are logged in under your username for `klone`. 
-* `@klone-login01` or `@klone-login03` indicates you have logged into the login node or the "front door" of HYAK. This is where all users start. Please review our list of [**Acceptable Uses of the Login Node [HERE]**](https://hyak.uw.edu/docs/setup/ssh#acceptable-uses-of-the-login-node). We will discuss how to perform all other activities on compute nodes later on in this tutorial. 
+* `@klone-login01` or `@klone-login03` indicates you have logged into the login node or the "front door" of Hyak. This is where all users start. Please review our list of [**Acceptable Uses of the Login Node [HERE]**](https://hyak.uw.edu/docs/setup/ssh#acceptable-uses-of-the-login-node). We will discuss how to perform all other activities on compute nodes later on in this tutorial. 
 * The `~` symbol is shorthand for your Home directory. This is your default login "location" on `klone`. Please review our 
-[**Storage Documentation [HERE]**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) to learn about Disk Storage in your Home directory, which is an important concept for HYAK users.
+[**Storage Documentation [HERE]**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) to learn about Disk Storage in your Home directory, which is an important concept for Hyak users.
 
 In the next section, we will discuss your "location" on the `klone` file system and how to navigate from directory to directory. 
 

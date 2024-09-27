@@ -11,11 +11,11 @@ export default function Publications() {
     <div class="row">        
       <h1>Publications</h1>
       <p>
-      Conference papers, peer-reviewed journal articles, and other scholarly works are the result of your hard work of which HYAK was one helping hand. Please consider citing or acknowleding HYAK in your final work and then let us know so it can be considered to appear in our select publication list.
+      Conference papers, peer-reviewed journal articles, and other scholarly works are the result of your hard work of which Hyak was one helping hand. Please consider citing or acknowleding Hyak in your final work and then let us know so it can be considered to appear in our select publication list.
       </p>
 
       <pre>
-        The HYAK Consortium. "Title TBD." arXiv:4444.55555 (2021)
+        The Hyak Consortium. "Title TBD." arXiv:4444.55555 (2021)
       </pre>
       
       <pre>
@@ -28,7 +28,7 @@ export default function Publications() {
     <div class="row">
       <h3>Select Publications</h3>
       <p>
-      These are select works that were produced using a HYAK cluster in any given year. While hundreds of papers are produced each year using HYAK, we limit the select list below to 10 for the sake of brevity. If you would like your publication to be considered for inclusion onto this list please <a href="mailto:help@uw.edu?subject=HYAK publication">e-mail us</a> with the citation.
+      These are select works that were produced using a Hyak cluster in any given year. While hundreds of papers are produced each year using Hyak, we limit the select list below to 10 for the sake of brevity. If you would like your publication to be considered for inclusion onto this list please <a href="mailto:help@uw.edu?subject=Hyak publication">e-mail us</a> with the citation.
       </p>
     </div>
     

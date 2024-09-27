@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,storage,conda,config,quota,python,environments]
 ---
 
-Hello HYAK Users, 
+Hello Hyak Users, 
 
 It has come to our attention that the default configuration of [Miniconda](https://hyak.uw.edu/docs/tools/python#miniconda3) and [conda environments](https://hyak.uw.edu/docs/tools/python#environments) in the user's home directory leads to hitting storage limitations and the dreaded error `Disk quota exceeded`. We thought we would take some time to guide users in configuring their conda environment directories and package caches to avoid this error and proceed with their research computing. 
 
@@ -23,7 +23,7 @@ We have been made aware that the solutions for disk storage presented here resul
 
 ### Conda's config
 
-Software is usually accompanied by a configuration file (aka "config file") or a text file used to store configuration data for software applications. It typically contains parameters and settings that dictate how the software behaves and interacts it's environment. Familiarity with config files allows for efficient troubleshooting, optimization, and adaptation of software to specific environments, like HYAK's shared HPC environment, enhancing overall usability and performance. Conda's config file `.condarc`, is customizable and lets you determine where packages and environments are stored by conda. 
+Software is usually accompanied by a configuration file (aka "config file") or a text file used to store configuration data for software applications. It typically contains parameters and settings that dictate how the software behaves and interacts it's environment. Familiarity with config files allows for efficient troubleshooting, optimization, and adaptation of software to specific environments, like Hyak's shared HPC environment, enhancing overall usability and performance. Conda's config file `.condarc`, is customizable and lets you determine where packages and environments are stored by conda. 
 
 ### Understanding your Conda
 
@@ -68,7 +68,7 @@ $ conda info
 
 ```
 **The paths shown above will show your username in place of `UWNetID`**.
-Notice the highlighted lines above showing the absolute path to your config file in your home directory (e.g., `/mmfs1/home/UWNetID/.condarc`), the directory designated for your package cache (e.g., `/mmfs1/home/UWNetID/conda_pkgs`), and the directory/ies designated for your environments (e.g., `/mmfs1/home/UWNetID/miniconda3/envs`). Conda designates directories for your package cache and your environments by default, but under HYAK, your home directory has a 10G storage limit, which can quickly be maxed out by package tarballs and their contents. We can change the location for your package cache and your environments to avoid this. 
+Notice the highlighted lines above showing the absolute path to your config file in your home directory (e.g., `/mmfs1/home/UWNetID/.condarc`), the directory designated for your package cache (e.g., `/mmfs1/home/UWNetID/conda_pkgs`), and the directory/ies designated for your environments (e.g., `/mmfs1/home/UWNetID/miniconda3/envs`). Conda designates directories for your package cache and your environments by default, but under Hyak, your home directory has a 10G storage limit, which can quickly be maxed out by package tarballs and their contents. We can change the location for your package cache and your environments to avoid this. 
 
 :::tip
 

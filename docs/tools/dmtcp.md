@@ -4,7 +4,7 @@ title: DMTCP (Checkpointing)
 ---
 
 :::caution
-DMTCP is still being tested on HYAK. The module name may change after testing. Please report any issues to [help@uw.edu](mailto:help@uw.edu) with "HYAK" in the subject.
+DMTCP is still being tested on Hyak. The module name may change after testing. Please report any issues to [help@uw.edu](mailto:help@uw.edu) with "Hyak" in the subject.
 :::
 
 [**DMTCP**](https://github.com/dmtcp/dmtcp) is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using checkpointing allows for shorter job times using requeing and better use of `ckpt` resources, allowing higher throughput for your jobs. More extensive documentation can be found [**here**](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or via relevant `man` pages.
@@ -18,9 +18,9 @@ DMTCP currently does not support the following:
 
 ## DMTCP Usage
 
-We provide some opinionated examples of DMTCP usage on HYAK here, for more information see more general documentation [**here**](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or the `man` pages.
+We provide some opinionated examples of DMTCP usage on Hyak here, for more information see more general documentation [**here**](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or the `man` pages.
 
-To use DMTCP on HYAK, first load the module using `module load testing/dmtcp/3.0.0`.
+To use DMTCP on Hyak, first load the module using `module load testing/dmtcp/3.0.0`.
 
 Set the directory checkpoints will be stored at with the environment variable: `DMTCP_CHECKPOINT_DIR`. For example:
 
@@ -74,7 +74,7 @@ fi
 
 This batch script runs the application `python3 do_research.py` and checkpoints it every five minutes. It makes the assumption that `DMTCP_CHECKPOINT_DIR` doesn't exist prior to the job starting.
 
-Jobs utilizing checkpointing can be requeued (either with the `--requeue` SLURM flag or `ckpt` partition automatically requeuing). This allows for better usage of the `ckpt` partition and shorter request times, both of which get your jobs done quicker!
+Jobs utilizing checkpointing can be requeued (either with the `--requeue` Slurm flag or `ckpt` partition automatically requeuing). This allows for better usage of the `ckpt` partition and shorter request times, both of which get your jobs done quicker!
 
 :::info Acknowledgements
 This documentation is inspired by [Clemson's DMTCP documentation](https://docs.rcd.clemson.edu/palmetto/software/checkpointing/dmtcp/) and [NERSC's DMTCP documentation](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/).

@@ -17,7 +17,7 @@ This documentation is under construction.
 
 **Most importantly, software containers allow Hyak researchers to install their software package and all its dependencies without root administrative privileges.**
 
-Much of the HYAK documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and and haven't used containers before. Here we have prepared a walk-through tutorial to demonstrate fundamental commands to build and use software containers. In this tutorial, we will explain what containers are and how and why they should be used in the Hyak research computing environment. We will provide exercises to give you practice using containers and building custom containers for your research. 
+Much of the Hyak documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and and haven't used containers before. Here we have prepared a walk-through tutorial to demonstrate fundamental commands to build and use software containers. In this tutorial, we will explain what containers are and how and why they should be used in the Hyak research computing environment. We will provide exercises to give you practice using containers and building custom containers for your research. 
 
 #### Learning Objectives: 
 * Become familiar with Hyak software policies. 
@@ -25,7 +25,7 @@ Much of the HYAK documentation is organized into bite sized instructional guides
 * Become familiar with the benefits of containers for reproducible science.
 * Become proficient in container usage. 
 * Practice building customer containers. 
-* Send a command to a container via a SLURM batch script. 
+* Send a command to a container via a Slurm batch script. 
 
 :::tip PRO TIP
 As you go through the tutorial look for tips like this one. In these boxes, we will include bits of information you might be able to use to customize this tutorial into a workflow when you feel comfortable. 

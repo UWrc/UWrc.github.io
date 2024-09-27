@@ -4,7 +4,7 @@ import styles from "pages/components/MapIFrame/styles.module.css"
 import MapIFrame from "pages/components/MapIFrame/MapIFrame";
 
 export const HEAD_TITLE = 'Home'
-export const HEAD_DESC = 'HYAK Supercomputer'
+export const HEAD_DESC = 'Hyak Supercomputer'
 
 export const STAT_ITEMS = {
   'Researchers': '2,061',
@@ -35,7 +35,7 @@ export const HomePage = {
     HEADER: <h2>We speak your language</h2>,
     SECTIONS: [
       <p key={0}>
-        Any programming language that runs on an <code>x86-64</code> processor can be supported on HYAK.
+        Any programming language that runs on an <code>x86-64</code> processor can be supported on Hyak.
         The predominant ones are <b>C/C++</b> as a part of widely deployed scientific applications
         or <b>Python</b> and <b>R</b> for data science and analytics.  If you're a C/C++ or Python
         user, we have a license for <b>Intel Parallel Studio</b> with optimized compilers
@@ -43,7 +43,7 @@ export const HomePage = {
       </p>,
       <p key={1}>
         Other languages such as Go, Perl, Julia, and countless others are used every day on 
-        HYAK and you're welcome to bring your own to the community and make the platform yours.
+        Hyak and you're welcome to bring your own to the community and make the platform yours.
       </p>
     ]
   },
@@ -51,8 +51,8 @@ export const HomePage = {
     HEADER: <h2>Research App Store</h2>,
     SECTIONS: [
       <p key={0}>
-        Not a developer? Not a problem! There is a rich <b>scientific app store</b> on HYAK.
-        There are are a number of HYAK maintained modules like <b>MATLAB</b>. Community maintained
+        Not a developer? Not a problem! There is a rich <b>scientific app store</b> on Hyak.
+        There are are a number of Hyak maintained modules like <b>MATLAB</b>. Community maintained
         compiled software modules include things like <b>Gaussian</b>, <b>star-ccm</b>, and
         <b> bowtie</b>. We're also seeing increasing use of machine learning frameworks like 
         <b> TensorFlow</b> and <b>PyTorch</b> and we encourage each user to maintain their own
@@ -61,9 +61,9 @@ export const HomePage = {
       <p key={1}>
         Interested in computational best practices?  Don't want to be locked into a platform?
         The best option is to use containers for your code.  We specifically support
-        <b> Singularity</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
-        By developing your code locally in a Singularity container, it becomes easily portable
-        to HYAK or beyond to national supercomputing centers and the cloud. Your research goes
+        <b> Apptainer</b> which is usually interoperable with the more ubiquitous <b>Docker</b>.
+        By developing your code locally in a Apptainer container, it becomes easily portable
+        to Hyak or beyond to national supercomputing centers and the cloud. Your research goes
         wherever you go.
       </p>
     ]
@@ -79,14 +79,14 @@ export const HomePage = {
         <div className={styles.blankMap} />
         <MapIFrame
           key="1"
-          title="Intergalactic HQ"
+          title="Hyak Team HQ"
           name="4545 Building"
           align="right"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.179163071817!2d-122.31451588483776!3d47.66151577918835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148afd210277%3A0x378526e9274172e1!2sForty-Five%20Forty-Five%20Building%2C%204545%2015th%20Ave%20NE%2C%20Seattle%2C%20WA%2098105!5e0!3m2!1sen!2sus!4v1572905266626!5m2!1sen!2sus"
         />
         <MapIFrame
           key="2"
-          title="Global HQ"
+          title="eScience HQ"
           name="UW eScience Institute"
           align="left"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.5986053468737!2d-122.31397348483813!3d47.653366479187774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014f277b0f15d%3A0x7c2434f079426d8c!2seScience%20Institute!5e0!3m2!1sen!2sus!4v1572905032160!5m2!1sen!2sus"

@@ -1,6 +1,6 @@
 ---
 slug: klone
-title: Klone Soft Launch
+title: klone Soft Launch
 author: Nam Pho
 author_title: Director for Research Computing
 author_url: https://github.com/npho
@@ -12,13 +12,13 @@ tags: [klone, hyak, hpc, supercomputer, launch, features]
 
 ### February 25, 2021
 
-The UW research computing team celebrates the soft launch of project KLONE, the 3rd generation HYAK supercomputer. Welcome to those researchers invited to participate in the early access program 🥳 🎉
+The UW research computing team celebrates the soft launch of project `klone`, the 3rd generation Hyak supercomputer. Welcome to those researchers invited to participate in the early access program 🥳 🎉
 
 :::caution
 There will be weekly maintenance days on Tuesday during the soft launch period after which we will move back to our regular cadence of monthly maintenance windows.
 :::
 
-The user documentation [[link](/docs/)] has been updated to reflect the changes and new features of KLONE but this will be an ongoing process.
+The user documentation [[link](/docs/)] has been updated to reflect the changes and new features of `klone` but this will be an ongoing process.
 
 #### Compute
 - Soft launch with 1,920 compute cores over 48 nodes:
@@ -38,7 +38,7 @@ The user documentation [[link](/docs/)] has been updated to reflect the changes 
 #### Software
 - modules works the same as it did on mox. This is an improved implementation called LMOD on klone compared to environment modules on mox.
 - We provide the basic compilers (e.g., GNU, Intel) as modules.
-- The HYAK team is encouraging a container first world (i.e., use Singularity).
+- The Hyak team is encouraging a container first world (i.e., use Singularity).
 
 ### March 3, 2021
 
@@ -81,4 +81,4 @@ The updated total is **3,840 cores** and **96 nodes** on klone.
 
 Things have been going steady the past week and changes are coming less frequently. We are now increasing time between maintenance periods on klone from weekly on Tuesdays to monthly and aligning it with the mox maintenance as the 2nd Tuesday of every month.
 
-That wraps up our klone soft launch blog updates here, other updates will appear on our HYAK users mailing list. Don't forget to subscribe, instructions on [this page](/docs/account-activation) at the bottom.
+That wraps up our klone soft launch blog updates here, other updates will appear on our Hyak users mailing list. Don't forget to subscribe, instructions on [this page](/docs/account-activation) at the bottom.

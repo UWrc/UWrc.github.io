@@ -180,7 +180,7 @@ chmod +x set-hyak-node.sh
 ```
 This script works by setting the variable `NODE` and modifying `~/.ssh/klone-node-config` with: 
 1. The `ssh klone-login` command to login with your short cut. 
-2. The `squeue` command to view your SLURM jobs **named `vsc-proxy-jump`**.
+2. The `squeue` command to view your Slurm jobs **named `vsc-proxy-jump`**.
 3. The `sed` command then modifies `~/.ssh/klone-node-config` in place by searching `~/.ssh/klone-node-config` for "Hostname" followed by any number of any characters (`.*`), and replaces it with "Hostname $NODE" where `$NODE` is the node running your job called "vsc-proxy-jump" (`n3120` in this example).
 :::
 
@@ -194,7 +194,7 @@ Select `klone-node` in the list of configured hosts.
 
 ![](/img/docs/vscode/VSCode-klone-node.png 'Select klone-node')
 
-After two-factor authentication and when any remaining remote extensions are installed, a terminal will show that we are connected to the configured compute node. Now you will be able to navigate to the remote file structure of HYAK like your home directory or group directories in `/gscratch/`. 
+After two-factor authentication and when any remaining remote extensions are installed, a terminal will show that we are connected to the configured compute node. Now you will be able to navigate to the remote file structure of Hyak like your home directory or group directories in `/gscratch/`. 
 
 ![](/img/docs/vscode/VSCode-Connected.png 'Connected to klone-node')
 
@@ -210,4 +210,4 @@ And end the job on the compute node with `scancel` on `klone` like the following
 scancel --name vsc-proxy-jump
 ```
 
-If you have trouble with this method, please report errors in an email to **help@uw.edu** with HYAK in the message.
+If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message.

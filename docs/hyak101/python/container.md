@@ -5,7 +5,7 @@ title: Building a Container
 
 :::caution caution: the next section is optional 
 
-This section is going to describe how the main container we prepared for this tutorial was developed. We highly encourage you to read and understand the development of this container because it will help you adapt this tutorial to fit the needs of your research project. However, if you are interested in completing this tutorial to set up Jupyter Notebooks on HYAK, complete this following step, and skip to the section titled **Flexible Connections** for your OS. This saves you an hour (you're welcome).
+This section is going to describe how the main container we prepared for this tutorial was developed. We highly encourage you to read and understand the development of this container because it will help you adapt this tutorial to fit the needs of your research project. However, if you are interested in completing this tutorial to set up Jupyter Notebooks on Hyak, complete this following step, and skip to the section titled **Flexible Connections** for your OS. This saves you an hour (you're welcome).
 
 First navigate to your working directory, which you selected in the previous section titled, [**Getting Started.**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) and issue the following command: 
 
@@ -171,7 +171,7 @@ Let's take a look at the script:
 #SBATCH --time=60
 #SBATCH --output=%x_%j.out
 
-# The lines above are called sbatch directives (i.e., flags that pass specifications of your job request to SLURM). 
+# The lines above are called sbatch directives (i.e., flags that pass specifications of your job request to Slurm). 
 # Let's go through each:
 # --job-name=container-build -> this line gives the job the name "container-build"
 # --cpus-per-task=1 -> this line requests on CPU for this job
@@ -179,7 +179,7 @@ Let's take a look at the script:
 # --partition=ckpt -> this line submits the job to the ckpt partition; you can change this if you have access to other partitions (view your partitions with hyakalloc)
 # --time=60 -> this line sets a maximum time limit of 60 minutes for this job; the clock starts when the job starts, not when it is subitted
 # --output=%x_%j.out -> saved all output messages that print to the screen (i.e., stdout) to a file called container-build_XXXXXX.out 
-# (using the shorthand %x to stand of the job-name and %j which will be the job ID assigned by SLURM)
+# (using the shorthand %x to stand of the job-name and %j which will be the job ID assigned by Slurm)
 
 //highlight-start
 mkdir /tmp/$USER
@@ -230,7 +230,7 @@ watch -n30 squeue --user $USER
 # use Ctrl + C to exit the watch command
 ```
 
-Additionally, you can watch the output messages as the container is built by monitoring the output file that the sbatch script requested, which will appear in your working directory beginning with `container-build_XXXXXX.out` where the X's are the jobID assigned to the job by SLURM. For example (Use `Ctrl` + `C` to exit the `tail` command):
+Additionally, you can watch the output messages as the container is built by monitoring the output file that the sbatch script requested, which will appear in your working directory beginning with `container-build_XXXXXX.out` where the X's are the jobID assigned to the job by Slurm. For example (Use `Ctrl` + `C` to exit the `tail` command):
 
 ```bash
 tail --follow --retry container-build_12345678.out
@@ -332,7 +332,7 @@ Use a text editor to open `local-custom.def` and add the following lines:
 Bootstrap: localimage
 From: /sw/hyak101/python/hyak-container.sif
 
-# From the HYAK Team's General-Purpose container.
+# From the Hyak Team's General-Purpose container.
 # See /sw/hyak101/python/hyak-container.def for build details.
 
 # Adds matplotlib and dependencies.

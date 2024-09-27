@@ -11,7 +11,7 @@ export default function systems() {
   return (
 <Layout title="Hyak">
   <br />
-  <h3 style={{textAlign: "center"}}>HYAK</h3>
+  <h3 style={{textAlign: "center"}}>Hyak</h3>
   
   <StatContainer statItems={PageContent.STAT_ITEMS} />
 
@@ -19,7 +19,7 @@ export default function systems() {
   <br />
     <div class="row">
       <p>
-        HYAK is part of the University of Washington's cyberinfrastructure plan to support world-class research in every department. HYAK is an ecosystem of high-performance compute (HPC) clusters and supporting infrastructure (e.g., data management, computational training, scientific consulting). Acknowleding our Pacific Northwest heritage, HYAK means "fast" in Chinook jargon. Counting 1, 2, and 3 translates to "ikt", "mox", and "klone" in this local trading language. The numbers are cluster names corresponding to the generation of HYAK cluster deployed. We are currently on the 3rd generation cluster for HYAK.
+        Hyak is part of the University of Washington's cyberinfrastructure plan to support world-class research in every department. Hyak is an ecosystem of high-performance compute (HPC) clusters and supporting infrastructure (e.g., data management, computational training, scientific consulting). Acknowleding our Pacific Northwest heritage, Hyak means "fast" in Chinook jargon. Counting 1, 2, and 3 translates to "ikt", "mox", and "klone" in this local trading language. The numbers are cluster names corresponding to the generation of Hyak cluster deployed. We are currently on the 3rd generation cluster for Hyak.
       </p>
     </div>
 
@@ -62,7 +62,7 @@ export default function systems() {
               <td align="right">Storage</td><td>1.0 PB GPFS</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Ikt translates to 1 in Chinook trading jargon and was the name of the 1st HYAK cluster. <code>ikt</code> is no longer in service. Reported figures represent best records.</td>
+              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Ikt translates to 1 in Chinook trading jargon and was the name of the 1st Hyak cluster. <code>ikt</code> is no longer in service. Reported figures represent best records.</td>
             </tr>
           </table>
         </TabItem>
@@ -96,7 +96,7 @@ export default function systems() {
               <td align="right">Storage</td><td>1.0 PB GPFS</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Mox translates to 2 in Chinook trading jargon and is the name of the 2nd HYAK cluster. <code>mox</code> is active but no longer accepting node additions and not growing. Reported figures represent peak capacity during its service.</td>
+              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Mox translates to 2 in Chinook trading jargon and is the name of the 2nd Hyak cluster. <code>mox</code> is active but no longer accepting node additions and not growing. Reported figures represent peak capacity during its service.</td>
             </tr>
           </table>
         </TabItem>
@@ -130,7 +130,7 @@ export default function systems() {
               <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>2.7 PB GPFS<br />500 TB NVMe Flash</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Klone translates to 3 in Chinook trading jargon and is the name of the 3rd HYAK cluster. <code>klone</code> is active and scheduled for a soft launch in Q1 2021 and a full launch by Q2 2021. Reported figures are updated as the cluster continues to grow.</td>
+              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Klone translates to 3 in Chinook trading jargon and is the name of the 3rd Hyak cluster. <code>klone</code> is active and scheduled for a soft launch in Q1 2021 and a full launch by Q2 2021. Reported figures are updated as the cluster continues to grow.</td>
             </tr>
           </table>
         </TabItem>

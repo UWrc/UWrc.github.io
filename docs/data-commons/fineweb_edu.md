@@ -11,7 +11,7 @@ FineWeb-Edu is a textual dataset of 1.3T tokens from educational web pages filte
 You can learn more from [this introductory blogpost](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1).
 
 ## How to prepare for use?
-This serves as instructions for the research computing (i.e., HYAK) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
+This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
 ```
 import os
@@ -93,7 +93,7 @@ print(f"Dataset saved to {save_dir}")
 
 FineWeb-Edu is released under the Open Data Commons Attribution License (ODC-By) v1.0 license. The use of this dataset is also subject to CommonCrawl's Terms of Use.
 
-The file path on KLONE is `/data/fineweb_edu`.
+The file path on `klone` is `/data/fineweb_edu`.
 
 ## How to cite?
 

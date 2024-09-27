@@ -5,7 +5,7 @@ title: Syllabus
 
 ### Goals & Rationale
 
-#### Our first goal is to provide a tutorial that connects many HYAK foundational skills so that researchers can learn and customize these tools to fit their needs.
+#### Our first goal is to provide a tutorial that connects many Hyak foundational skills so that researchers can learn and customize these tools to fit their needs.
 The Hyak documentation already includes many of the instructions in this guide, but they're atomic. Instead of individual instruction sets, which aren't designed with each other in mind, everything in this guide is connected - python environments, jupyter notebook server, and connections to other external software. That means, for example, the SSH customizations *in this guide* will apply only to the container runscripts we build *in this guide*; to use these elements for other workflows, you will need to customize them to fit your needs. 
 
 #### Our second goal is to eliminate the most common problem on Hyak: conda's decimation of file quotas.

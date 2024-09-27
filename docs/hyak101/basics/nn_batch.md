@@ -29,7 +29,7 @@ Finally, your shell prompt will show that you are no longer on the login node, o
 ```bash
 [UWNetID@n3424 ~]$
 ```
-Except that the word `UWNetID` will be replaced with your Net ID and `n3424` will be replaced with the node SLURM assigned to your interactive job. Finally, the `~` will be replaced with the name of your current directory (your location on the filesystem). 
+Except that the word `UWNetID` will be replaced with your Net ID and `n3424` will be replaced with the node Slurm assigned to your interactive job. Finally, the `~` will be replaced with the name of your current directory (your location on the filesystem). 
 
 #### Using Locator in interactive mode
 
@@ -203,9 +203,9 @@ See the [**Locator publication**](https://elifesciences.org/articles/54507) (Bat
 
 ### Batch Jobs
 
-Next we are going to execute the EXACT same code, but as a batch jobs and with the second test set `potr_m_pred2.txt`. Batch jobs are ideal for operations that take a longer time to run. These jobs are submitted to the job scheduler SLURM to execute and run in the background until completed. 
+Next we are going to execute the EXACT same code, but as a batch jobs and with the second test set `potr_m_pred2.txt`. Batch jobs are ideal for operations that take a longer time to run. These jobs are submitted to the job scheduler Slurm to execute and run in the background until completed. 
 
-We made a SLURM batch script for this tutorial. You can use this script as a template for submitting a single job to SLURM and replace the main command with your command/s. 
+We made a Slurm batch script for this tutorial. You can use this script as a template for submitting a single job to Slurm and replace the main command with your command/s. 
 
 First copy the template to your current directory if you haven't already. 
 
@@ -246,7 +246,7 @@ apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/l
 #### Truncated for website view
 ```
 
-The lines in the script beginning with `#SBATCH` are sbatch directives, or flags passed to sbatch which give instructions about the job we are requesting. This script requests a single node, single task job with 10G of RAM for a maximum time of 1 hour. See [**SLURM sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` parition, replace `--parition=ckpt` with `--partition=compute` and your job will be scheduled faster because you will be requesting a job on resources you can use with priority access. 
+The lines in the script beginning with `#SBATCH` are sbatch directives, or flags passed to sbatch which give instructions about the job we are requesting. This script requests a single node, single task job with 10G of RAM for a maximum time of 1 hour. See [**Slurm sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` parition, replace `--parition=ckpt` with `--partition=compute` and your job will be scheduled faster because you will be requesting a job on resources you can use with priority access. 
 
 Once you have edited the script to fit your needs, you can submit it with `sbatch`.
 
@@ -255,7 +255,7 @@ sbatch locator_NN_job.slurm
 # the following is an example result
 sbatch: No account specified, defaulting to: account
 Submitted batch job 12345678
-# SLURM will assign a JobID when the job was submmitted
+# Slurm will assign a JobID when the job was submmitted
 # it will likely be an 8-digit number, but not 12345678
 ```
 
@@ -270,7 +270,7 @@ squeue -u UWNetID
 ```
 :::
 
-Slurm will save a file called `locator_job_12345678.out` where the number is replaced with the JobID SLURM assigned to your job. The output that would normally be printed to the screen while locator is running (which we save when we ran locator interactively) will be saved to this file. View this file with `cat`
+Slurm will save a file called `locator_job_12345678.out` where the number is replaced with the JobID Slurm assigned to your job. The output that would normally be printed to the screen while locator is running (which we save when we ran locator interactively) will be saved to this file. View this file with `cat`
 
 ```bash
 cat locator_job_12345678.out
@@ -302,12 +302,12 @@ x,y,sampleID
 -123.04024738823856,44.4420668151814,HALS.30.4
 ```
 
-That SLURM job completed completely in the background, meaning that we could have submitted the job, ended our connection to `klone` by logging out, and returned later to view the progress or results. You can instruct SLURM to send messages about jobs completing by adding the following sbatch directives to your SLURM script and replacing the work `UWNetID` with your UW Net ID: 
+That Slurm job completed completely in the background, meaning that we could have submitted the job, ended our connection to `klone` by logging out, and returned later to view the progress or results. You can instruct Slurm to send messages about jobs completing by adding the following sbatch directives to your Slurm script and replacing the work `UWNetID` with your UW Net ID: 
 
 ```bash
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=UWNetID@uw.edu
 ```
 
-In the nest section, we will use a SLURM batch script to submit multiple jobs as an array to be executed in the background in parallel. 
+In the nest section, we will use a Slurm batch script to submit multiple jobs as an array to be executed in the background in parallel. 
 

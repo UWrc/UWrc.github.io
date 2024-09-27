@@ -35,7 +35,7 @@ This tutorial will walk through the steps to set up Jupyter Notebooks usage. How
 :::warning HOT OFFER
 ### Using our pre-built container for this tutorial
 
-The next section called "Building a Container" is **OPTIONAL** and will describe how the main container we prepared for this tutorial was developed. We highly encourage you to read and understand the development of this container because it will help you adapt this tutorial to fit the needs of your research project. However, if you are interested in completing this tutorial to set up Jupyter Notebooks on HYAK, complete this following step, and skip to the section titled **Flexible Connections** under the instructions for your OS. This saves you an hour (you're welcome).
+The next section called "Building a Container" is **OPTIONAL** and will describe how the main container we prepared for this tutorial was developed. We highly encourage you to read and understand the development of this container because it will help you adapt this tutorial to fit the needs of your research project. However, if you are interested in completing this tutorial to set up Jupyter Notebooks on Hyak, complete this following step, and skip to the section titled **Flexible Connections** under the instructions for your OS. This saves you an hour (you're welcome).
 
 The main container for this tutorial is called `hyak-container.sif` and is ready for you to use. The full path is `/mmfs1/sw/hyak101/python/hyak-container.sif`.
 

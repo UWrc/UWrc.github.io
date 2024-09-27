@@ -3,9 +3,9 @@ id: requirements
 title: Start Here
 ---
 
-## The Klone Data Commons
+## The `klone` Data Commons
 
-The Klone Data Commons is our cluster-wide, shared dataset storage located at `/gscratch/data`. The purpose of the Data Commons is to provide a single location for datasets being used by multiple groups, to avoid hosting the same dataset multiple times in separate group directories.
+The `klone` Data Commons is our cluster-wide, shared dataset storage located at `/gscratch/data`. The purpose of the Data Commons is to provide a single location for datasets being used by multiple groups, to avoid hosting the same dataset multiple times in separate group directories.
 
 Historically, we've addressed requests to add datasets to the Data Commons on a case-by-case basis. We've seen a growing number of these types of requests, so we've decided to formalize & publish our expectations.
 

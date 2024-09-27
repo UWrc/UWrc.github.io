@@ -192,12 +192,12 @@ export default function board() {
           <div class="col">
             <br />
 
-            <p>Voting members of the HGB represent the leadership of due paying campus sponsors, typically at the college level. Voting is weighted by degree of sponsorship, a linear combination of amount of HYAK capacity and years of commitment in advance.</p>
+            <p>Voting members of the HGB represent the leadership of due paying campus sponsors, typically at the college level. Voting is weighted by degree of sponsorship, a linear combination of amount of Hyak capacity and years of commitment in advance.</p>
 
             <ul>
-              <li><b>Tier 1</b> sponsors commit to at least 100 HYAK slots for 6 years.</li>
-              <li><b>Tier 2</b> sponsors commit to at least 50 HYAK slots for 6 years.</li>
-              <li><b>Tier 3</b> sponsors commit to fewer than 50 HYAK slots for less than 6 years.</li>
+              <li><b>Tier 1</b> sponsors commit to at least 100 Hyak slots for 6 years.</li>
+              <li><b>Tier 2</b> sponsors commit to at least 50 Hyak slots for 6 years.</li>
+              <li><b>Tier 3</b> sponsors commit to fewer than 50 Hyak slots for less than 6 years.</li>
             </ul>
 
           </div>
@@ -297,7 +297,7 @@ export default function board() {
         <div class="row">
           <div class="col">
             <br />
-            <p>HGB observers are non-voting members of the UW community who support the HYAK service.</p>
+            <p>HGB observers are non-voting members of the UW community who support the Hyak service.</p>
           </div>
         </div>
 

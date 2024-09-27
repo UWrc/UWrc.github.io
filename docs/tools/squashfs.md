@@ -23,8 +23,8 @@ Due to the large number of small files contained in most datasets, it is recomme
     Note that the `rm` command permanently deletes files and directories. Ensure that the directory is no longer needed and the squashfs file was sucessfully created before proceeding.
 
 ## Mounting using SquashFuse
-:::note SLURM with Squash Fuse
-It is useful to utilize job/array numbers and/or your user name to avoid the risk of colliding with other users. Log into a compute node using `salloc` or create a SLURM job or SLURM job array script to run the commands in this section. Remember to submit the script using `sbatch` and monitor it using `squeue` once all the necessary commands are in the SLURM script.
+:::note Slurm with Squash Fuse
+It is useful to utilize job/array numbers and/or your user name to avoid the risk of colliding with other users. Log into a compute node using `salloc` or create a Slurm job or Slurm job array script to run the commands in this section. Remember to submit the script using `sbatch` and monitor it using `squeue` once all the necessary commands are in the Slurm script.
 :::
 
 1. Create a directory for the mount. 

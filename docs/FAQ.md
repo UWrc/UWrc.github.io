@@ -4,30 +4,30 @@ title: FAQ
 ---
 
 
-## General HYAK FAQ:
+## General Hyak FAQ:
 | Question | Answer |
 | --- | --- |
-| **What is the UW HYAK cluster?** | The UW HYAK cluster is a robust high-performance computing infrastructure available to University of Washington faculty, researchers, students, and affiliates. It offers substantial computational resources for data analysis, simulations, and scientific research. |
-| **How do I access the HYAK cluster?** | Access the HYAK cluster by connecting through SSH using your UW NetID. Once you have a user account, open a Terminal/Windows Powershell/PuTTy window and use the command `ssh your_netid@hyak.washington.edu` to log in. [**Need an account?**](https://hyak.uw.edu/docs/account-creation) |
+| **What is the UW Hyak cluster?** | The UW Hyak cluster is a robust high-performance computing infrastructure available to University of Washington faculty, researchers, students, and affiliates. It offers substantial computational resources for data analysis, simulations, and scientific research. |
+| **How do I access the Hyak cluster?** | Access the Hyak cluster by connecting through SSH using your UW NetID. Once you have a user account, open a Terminal/Windows Powershell/PuTTy window and use the command `ssh your_netid@hyak.washington.edu` to log in. [**Need an account?**](https://hyak.uw.edu/docs/account-creation) |
 | **Are there resource limits?** | Yes, each user has resource quotas to ensure fair allocation. Familiarize yourself with your account's limits to make optimal use of the resources. |
-| **Where can I find documentation and support?** | Comprehensive documentation is available on the HYAK cluster website - this website. If you encounter challenges or have queries, reach out to the HYAK support team for assistance by sending an email to help@uw.edu with hyak in the subject line. |
+| **Where can I find documentation and support?** | Comprehensive documentation is available on the Hyak cluster website - this website. If you encounter challenges or have queries, reach out to the Hyak support team for assistance by sending an email to help@uw.edu with hyak in the subject line. |
 | **Can I transfer files to and from the cluster?** | Yes, use secure file transfer tools like `scp` (Secure Copy Protocol) or `rsync` to move files between your local machine and the cluster. |
 | **Why is it that when I updated .bashrc with the path to my executable, bash still says command not found?** | When adding executables to your PATH, ensure that the directory containing the executables is specified. For example, if your executable is in a `bin` directory, you should add `export PATH=$PATH:/path/to/bin` to your `.bashrc`. Additionally, make sure to reload the `.bashrc` file using `source ~/.bashrc`. |
 | **What is port forwarding, and why do I need to do it?** | Port forwarding is a networking technique that redirects incoming network traffic from one port on a router or firewall to another port on a device within a local network. Port forwarding allows you to access services hosted on specific ports of a node from external devices. |
 | **How do I SSH into a node I already have a job on?** | You can SSH into a node where you have a job running by using the command: `ssh UWnetID@n####` where `n####` is the specific node's identifier. |
 
-## SLURM FAQ:
+## Slurm FAQ:
 | Question | Answer |
 | --- | --- |
-| **What is SLURM, and why is it important?** | SLURM (Simple Linux Utility for Resource Management) is the cluster's job scheduler. It manages job submission, resource allocation, and execution, optimizing the utilization of the cluster's computing power. |
+| **What is Slurm, and why is it important?** | Slurm (Simple Linux Utility for Resource Management) is the cluster's job scheduler. It manages job submission, resource allocation, and execution, optimizing the utilization of the cluster's computing power. |
 | **Can I run interactive sessions on the cluster?** | Yes, use the `salloc` command to initiate interactive sessions on compute nodes. This allows real-time interaction and testing, useful for debugging and exploration. |
-| **How do I submit jobs to the cluster?** | Submit jobs using the `sbatch` command. Jobs can be submitted using a job script detailing resource needs as sbatch directives and the commands to execute. The scheduler then manages job execution based on these specifications. [**More about scheduling jobs on HYAK.**](https://hyak.uw.edu/docs/compute/scheduling-jobs) [**More about `sbatch`.**](https://slurm.schedmd.com/sbatch.html)|
+| **How do I submit jobs to the cluster?** | Submit jobs using the `sbatch` command. Jobs can be submitted using a job script detailing resource needs as sbatch directives and the commands to execute. The scheduler then manages job execution based on these specifications. [**More about scheduling jobs on Hyak.**](https://hyak.uw.edu/docs/compute/scheduling-jobs) [**More about `sbatch`.**](https://slurm.schedmd.com/sbatch.html)|
 | **How can I monitor my job's progress?** | Use the `squeue -u <UWNetID>` command with your UWNetID to monitor job status. |
 | **How do I optimize my job's performance?** | Optimize job performance by selecting appropriate resource configurations, efficient algorithms, and parallelization techniques. Experimentation and benchmarking can guide improvements. |
-| **Can I schedule recurring jobs?** | Yes, you can schedule recurring jobs using SLURM's job arrays or by setting up cron jobs within your scripts. |
+| **Can I schedule recurring jobs?** | Yes, you can schedule recurring jobs using Slurm's job arrays or by setting up cron jobs within your scripts. |
 | **Why do I keep getting this sbatch error: "Batch job submission failed: Invalid account or account/partition combination specified?"** | In an sbatch script, the sbatch directive `--account` refers to the group you belong to, not your UWnetID. Ensure that the account specified in the script matches the group you are associated with. To view accounts you are associated with use the command `hyakalloc`. |
 | **How do I know if my job ran?** | Familiarize yourself with `sbatch` directives `-o` and `-e`. Using these directives or flags, you can designate a file for the standard output (`stdout`) messages usually printed to the screen while your software program is running and the standard error (`stderr`) messages also printed to the screen if your software program encounters an error. Output messages showing success and empty `stderr` files indicate successful jobs. These files will write to the directory from which you launched your `sbatch` command by default, but the location of these files and their file name can be changed. For example, `sbatch -o log/mytask_%j.out` will write a file called mytask_<JobID added with %j>.out to the log directory.|
-| **What is a batch job?** | A batch job is a task or process that is submitted to a batch processing system, like SLURM. Batch jobs are scheduled and executed without immediate user interaction, making them suitable for background processing and resource-intensive tasks. |
+| **What is a batch job?** | A batch job is a task or process that is submitted to a batch processing system, like Slurm. Batch jobs are scheduled and executed without immediate user interaction, making them suitable for background processing and resource-intensive tasks. |
 | **I scheduled my job via sbatch, but nothing happened. Why?** | It’s possible that there were no available resources to run your job right away, and it may have been placed in the queue. Try running `hyakalloc` and see if the resources you requested are currently open. You can also see if your job is in the queue by running the `squeue -u <UWNetID>` command with your UWNetID. |
 
 ## Containers/Modules/Environments FAQ:

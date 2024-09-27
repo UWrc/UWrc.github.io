@@ -3,17 +3,17 @@ id: cli
 title: CLI Usage
 ---
 
-On this page we detail two options data on KOPAH via Command Line Interfaces (CLIs). s3cmd is a popular and widely used tool, while s5cmd is faster but less widely used.
+On this page we detail two options data on Kopah via Command Line Interfaces (CLIs). s3cmd is a popular and widely used tool, while s5cmd is faster but less widely used.
 
 note:::
-These tools aren't the only ones compatible with KOPAH, however you will need to set them up to work with Ceph, KOPAH's underlying storage protocol.
+These tools aren't the only ones compatible with Kopah, however you will need to set them up to work with Ceph, Kopah's underlying storage protocol.
 :::
 
 ## s3cmd
 
-s3cmd is a free command line tool and client for uploading, retrieving and managing data in KOPAH. It is best suited for power users who are familiar with command line programs. It is also ideal for batch scripts and if automated backup to KOPAH is desired.
+s3cmd is a free command line tool and client for uploading, retrieving and managing data in Kopah. It is best suited for power users who are familiar with command line programs. It is also ideal for batch scripts and if automated backup to Kopah is desired.
 
-s3cmd is available for uploading data to KOPAH from your local computer and with usage on `klone`.
+s3cmd is available for uploading data to Kopah from your local computer and with usage on `klone`.
 
 ### Local s3cmd usage
 
@@ -44,9 +44,9 @@ access_key = <ACCESS_KEY>
 secret_key = <SECRET_KEY>
 ```
 
-Where the word `<ACCESS_KEY>` is replaced with your KOPAH Access Key and the word `<SECRET_KEY>` is replaced with your KOPAH Secret Key.
+Where the word `<ACCESS_KEY>` is replaced with your Kopah Access Key and the word `<SECRET_KEY>` is replaced with your Kopah Secret Key.
 
-After that is complete. s3cmd can be used to access your KOPAH storage data with a large suite of commands. The s3cmd help includes example commands for a variety of tasks.
+After that is complete. s3cmd can be used to access your Kopah storage data with a large suite of commands. The s3cmd help includes example commands for a variety of tasks.
 
 ```bash 
 s3cmd --help
@@ -85,7 +85,7 @@ Prepare your `.s3cfg` file as shown above.
 
 ### Setup
 
-s5cmd is not installed on KLONE by default. To install s5cmd:
+s5cmd is not installed on `klone` by default. To install s5cmd:
 
 1. Download the latest binary, currently 2.2.2: `wget  https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz`
 2. Create local binary folder if not already exists: `mkdir -p ~/.local/bin`
@@ -97,15 +97,15 @@ s5cmd is not installed on KLONE by default. To install s5cmd:
 Installing s5cmd locally will likely be similar, make sure to consult their [**installation documentation**](s5cmd_2.2.2_Linux-64bit.tar.gz).
 :::
 
-s3cmd must be configured to interact with KOPAH. To do so, set the following environment variables in your shell.
+s3cmd must be configured to interact with Kopah. To do so, set the following environment variables in your shell.
 
 :::note
 These commands should likely be added in your `~/.bashrc` file, so they are automatically run on each terminal session. The commands in your `~/.bashrc` file will automatically run on any new shell session, however you need to source it (`source ~/.bashrc`) to make the variables accessible in your current session.
 :::
 
 ```bash
-export AWS_ACCESS_KEY_ID='<KOPAH ACCESS KEY>'     # replace with KOPAH access key
-export AWS_SECRET_ACCESS_KEY='<KOPAH SECRET KEY>' # replace with KOPAH secret key
+export AWS_ACCESS_KEY_ID='<Kopah ACCESS KEY>'     # replace with Kopah access key
+export AWS_SECRET_ACCESS_KEY='<Kopah SECRET KEY>' # replace with Kopah secret key
 export S3_ENDPOINT_URL='https://s3.kopah.orci.washington.edu'
 ```
 

@@ -3,11 +3,11 @@ id: join-group
 title: Join a Group
 ---
 
-To log into any HYAK cluster you need an account created. Everyone falls into one of the following buckets. Follow through then once your sponsor has confirmed they've added you to their group, continue on to the next section to complete the final account activation.
+To log into any Hyak cluster you need an account created. Everyone falls into one of the following buckets. Follow through then once your sponsor has confirmed they've added you to their group, continue on to the next section to complete the final account activation.
 
 ## How do you become a group owner?
 
-Groups are tied to resources, your options are to contribute a node or have a dedicated lab storage space on a HYAK cluster. Once your group is created the group owner can add or remove users by their netIDs and those users will get access to those node(s) and / or associated storage.
+Groups are tied to resources, your options are to contribute a node or have a dedicated lab storage space on a Hyak cluster. Once your group is created the group owner can add or remove users by their netIDs and those users will get access to those node(s) and / or associated storage.
 
 ## How does a group owner add or remove a user?
 
@@ -21,5 +21,5 @@ A group owner, usually the PI or designated staff (e.g., lab manager), should ta
 6. Click "Do it"
 
 :::caution
-These netIDs now have access to your nodes and lab data on HYAK once they log into the cluster.
+These netIDs now have access to your nodes and lab data on Hyak once they log into the cluster.
 :::

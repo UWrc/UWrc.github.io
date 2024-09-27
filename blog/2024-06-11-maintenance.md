@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,g2,L40,L40S,GPUs,AMD,Genoa,NVIDIA,job,internship]
 ---
 
-Hello HYAK Community,
+Hello Hyak Community,
 
 Thanks again for your patience with our monthly scheduled maintenance. This month, we deployed new node resources that were purchased by various UW Researchers from across campus. These nodes are a little different, so we wanted to bring your attention to them and provide guidance on their use when they are idle with the checkpoint partition. 
 
@@ -29,7 +29,7 @@ If you have compiled software on `g1` nodes, you should test them on `g2` nodes 
 
 In addition, we have two student opportunities to bring to your attention.
 
-**Job Opportunity:** The Research Computing (RC) team at the University of Washington (UW) is looking for a student intern to spearhead projects that could involve: (1) the development of new tools and software, (2) research computing documentation and user tutorials, or (3) improvements to public-facing service catalog descriptions and service requests. HYAK is an ecosystem of high-performance computing (HPC) resources and supporting infrastructure available to UW researchers, students, and associated members of the UW community. Our team administers and maintains HYAK as well as provides support to HYAK users. Our intern will be given the choice of projects that fit their interest and experience while filling a need for the UW RC community. This role will provide students with valuable hands-on experiences that enhance academic and professional growth. 
+**Job Opportunity:** The Research Computing (RC) team at the University of Washington (UW) is looking for a student intern to spearhead projects that could involve: (1) the development of new tools and software, (2) research computing documentation and user tutorials, or (3) improvements to public-facing service catalog descriptions and service requests. Hyak is an ecosystem of high-performance computing (HPC) resources and supporting infrastructure available to UW researchers, students, and associated members of the UW community. Our team administers and maintains Hyak as well as provides support to Hyak users. Our intern will be given the choice of projects that fit their interest and experience while filling a need for the UW RC community. This role will provide students with valuable hands-on experiences that enhance academic and professional growth. 
 
 The position pays $19.97-21.50 per hour depending on experience with a maximum of 20 hours per week (Fall, Winter, and Spring) and a maximum of 40 hours allowed during summer quarter.
 How to apply: Please apply by emailing: 1) a current resume and 2) a cover letter detailing your qualifications, experience, and interest in the position to me, Kristen Finch (UWNetID: finchkn). Due to the volume of applications, we regret that we are unable to respond to every applicant or provide feedback.
@@ -42,9 +42,9 @@ Minimum Qualifications:
 We encourage applicants that:
 * meet the minimum qualifications.
 * have an interest in website accessibility and curation.
-* have experience in research computing and HYAK specifically. This could include experience in any of the following: 1) command-line interface in a Linux environment, 2) SLURM job scheduler, 3) python, 4) shell scripting. 
+* have experience in research computing and Hyak specifically. This could include experience in any of the following: 1) command-line interface in a Linux environment, 2) Slurm job scheduler, 3) python, 4) shell scripting. 
 * have an interest in computing systems administration. 
-* have an interest in developing accessible computing-focused tutorials for the HYAK user community.
+* have an interest in developing accessible computing-focused tutorials for the Hyak user community.
 
 **Conference Opportunity:** [**The 2024 NSF Cybersecurity Summit**](https://www.trustedci.org/2024-nsf-cybersecurity-summit) program committee is now accepting applications to the Student Program. This year’s summit will be held October 7th-10th at Carnegie Mellon University in Pittsburgh, PA. Both undergraduate and graduate students may apply. No specific major or course of study is required, as long as the student is interested in learning and applying cybersecurity innovations to scientific endeavors. Selected applicants will receive invitations from the Program Committee to attend the Summit in-person. Attendance includes your participation in a poster session. The deadline for applications is **Friday June 28th at 12 am CDT**, with notification of acceptance to be sent by Monday July 29th. [**Click Here to Apply**](https://docs.google.com/forms/d/e/1FAIpQLScL5fljASO6R6XWlesQrB5Js3TTx0UlAbuDmbDFDGpVnFzyvQ/viewform)
 

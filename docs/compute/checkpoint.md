@@ -71,7 +71,7 @@ Jobs submitted to this partition should be designed to:
 2. Once resumed, start their work from the last saved "checkpoint."
 
 :::info
-[**DMTCP**](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on HYAK without modifying application code. See our [**documentation**](/docs/tools/dmtcp) for more information.
+[**DMTCP**](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on Hyak without modifying application code. See our [**documentation**](/docs/tools/dmtcp) for more information.
 :::
 
 :::tip What about the `--time` directive?

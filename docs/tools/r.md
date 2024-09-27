@@ -3,13 +3,13 @@ id: r
 title: R and Rstudio
 ---
 
-R is a popular statistical programming language for data science and analysis. To use R on HYAK, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [**containers**](containers.md) and [**modules**](modules.md) helpful before following these instructions.
+R is a popular statistical programming language for data science and analysis. To use R on Hyak, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [**containers**](containers.md) and [**modules**](modules.md) helpful before following these instructions.
 
 ## User Environment
 
-If you use a non-custom R container you'll likely run `install.packages()` at some point. Usually on a non-shared platform like your local setup (where you have full administrative privileges) R will install things into central paths. On HYAK, R package libraries are usually installed by default in the user's Home directory, which can be problematic due to the 10GB disk storage limit. If this default setting isn't changed, users can quickly run out of storage and inodes in their Home directory and need to re-configure their R environment. 
+If you use a non-custom R container you'll likely run `install.packages()` at some point. Usually on a non-shared platform like your local setup (where you have full administrative privileges) R will install things into central paths. On Hyak, R package libraries are usually installed by default in the user's Home directory, which can be problematic due to the 10GB disk storage limit. If this default setting isn't changed, users can quickly run out of storage and inodes in their Home directory and need to re-configure their R environment. 
 
-Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you creaed under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [**Click here to review storage on HYAK.**](https://hyak.uw.edu/docs/storage/gscratch) 
+Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you creaed under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [**Click here to review storage on Hyak.**](https://hyak.uw.edu/docs/storage/gscratch) 
 
 :::important
 Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
@@ -52,7 +52,7 @@ The Rocker Project on Docker hub hosts many containers that were prepared by the
 
 Let's say we wanted to use the most up-to-date version of base R from the Rocker Project on Docker hub [[**More information here.**](https://hub.docker.com/r/rocker/r-base)]. There are many other versions are R available on Docker hub, and we encourage you to explore them to find the version that fits the needs of your research project. [**Explore versions here**](https://hub.docker.com/r/rocker/r-base/tags). 
 
-First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` parition with 16GB of RAM for 2 hours. If your lab group owns HYAK resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
+First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` parition with 16GB of RAM for 2 hours. If your lab group owns Hyak resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
 
 ```bash
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
@@ -212,9 +212,9 @@ apptainer pull docker://rocker/rstudio
 
 The following will prepare a `.sif` file called `rstudio_latest.sif`, but it might have another name if you pulled a different version. 
 
-#### Step 2: Prepare SLURM Job File
+#### Step 2: Prepare Slurm Job File
 
-We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler sftware called SLURM. Download our SLURM job file [**from this hyperlink**](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for KLONE from the tutorial by Rocker [**More information about the original tutorial can be found here.**](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
+We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler sftware called Slurm. Download our Slurm job file [**from this hyperlink**](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for `klone` from the tutorial by Rocker [**More information about the original tutorial can be found here.**](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
 
 ```bash
 wget https://hyak.uw.edu/files/rstudio-server.job
@@ -229,7 +229,7 @@ You will need to modify a few environment variables in `rstudio-server.job` rela
 2. Set your `RSTUDIO_SIF` variable, this is name of the container file. In this case, `rstudio_latest.sif`.
 3. (Optional) Set your `R_LIBS_USER` path, which in `rstudio-server.job` is `R_LIBS_USER=${RSTUDIO_CWD}/R` or `/gscratch/scrubbed/UWNetID/R` because `RSTUDIO_CWD="/gscratch/scrubbed/UWNetID"`, remember? Change these variables to fit your needs. That means for this Rstudio session my package libraries (when I use `install.packages()`) will be stored in `/gscratch/scrubbed/UWNetID/R`. In this case, I am matching this Rstudio session to my preferences set above in the [**user environment section.**](#user-environment) For your session, you might decide to designate a different directory for your R package libraries. Rememeber directories don't exist until you make them. 
 
-Additionally, you might decide to modify the `sbatch` directives to adjust the resources to request for your SLURM Rstudio job. For example, fill in your specific partition if applicable (check your options with `hyakalloc`). Also set your job run limits, cores (i.e., `ntasks`), memory, etc.
+Additionally, you might decide to modify the `sbatch` directives to adjust the resources to request for your Slurm Rstudio job. For example, fill in your specific partition if applicable (check your options with `hyakalloc`). Also set your job run limits, cores (i.e., `ntasks`), memory, etc.
 
 Review the highlighted sections of `rstudio-server.job` below and edit your version to fit your needs and paths you have access to:
 
@@ -255,7 +255,7 @@ Review the highlighted sections of `rstudio-server.job` below and edit your vers
 
 # --output=%x_%j.out creates a output file called rstudio-server_XXXXXXXX.out 
 # where the %x is short hand for --job-name above and the X's are an 8-digit 
-# jobID assigned by SLURM when our job is submitted.
+# jobID assigned by Slurm when our job is submitted.
 
 //highlight-start
 RSTUDIO_CWD="/gscratch/scrubbed/UWNetID" # UPDATE THIS LINE
@@ -276,7 +276,7 @@ Next's we'll submit the job with `sbatch` which will launch the Rstudio containe
 ```bash
 sbatch rstudio-server.job
 Submitted batch job 12345678
-# SLURM will assign a JobID when the job was submmitted
+# Slurm will assign a JobID when the job was submmitted
 # it will likely be an 8-digit number, but not 12345678
 ```
 
@@ -291,7 +291,7 @@ squeue -u UWNetID
 ```
 :::
 
-SLURM will save your output file called `rstudio-server_12345678.out` in the directory where the `sbatch` command was executed. The suffix matches the job number you see. Check out its contents like below for instructions on how to connect to your Rstudio session.
+Slurm will save your output file called `rstudio-server_12345678.out` in the directory where the `sbatch` command was executed. The suffix matches the job number you see. Check out its contents like below for instructions on how to connect to your Rstudio session.
 
 ```bash
 cat rstudio-server_12345678.out
@@ -324,7 +324,7 @@ This next section is done on your local computer ***not*** on the cluster.
 
 :::
 
-In a new terminal or command prompt on ***your laptop*** copy and paste the other SSH command from the SLURM output. The following is an example:
+In a new terminal or command prompt on ***your laptop*** copy and paste the other SSH command from the Slurm output. The following is an example:
 ```bash
 //highlight-next-line
 ssh -N -L 8787:n3164:47101 UWNetID@klone.hyak.uw.edu
@@ -359,11 +359,11 @@ scancel -f 12345678
 
 Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method everytime you want to use Rstudio by starting at [**Step 3: Start the Rstudio Server above.**](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
 
-If you have trouble with this method, please report errors in an email to **help@uw.edu** with HYAK in the message.
+If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message.
 
 ### R via Modules
 
-There are some versions of R still available as modules. Use these at your own risk. They may be versions with deprecated packages, and many were contributed by other users who built them to fit their personal needs, not yours. The HYAK team will not provide support for the use of these modules. 
+There are some versions of R still available as modules. Use these at your own risk. They may be versions with deprecated packages, and many were contributed by other users who built them to fit their personal needs, not yours. The Hyak team will not provide support for the use of these modules. 
 
 ```bash
 module avail 

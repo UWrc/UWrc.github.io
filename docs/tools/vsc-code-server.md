@@ -52,9 +52,9 @@ apptainer pull docker://codercom/code-server
 
 :::
 
-### Launch code-server with SLURM
+### Launch code-server with Slurm
 
-Download the SLURM batch script.
+Download the Slurm batch script.
 ```bash
 wget https://hyak.uw.edu/files/code-server.job
 ```
@@ -155,7 +155,7 @@ And end the batch job with `scancel` and the JobID on `klone` like the following
 scancel -f 12345678
 ```
 
-If you have trouble with this method, please report errors in an email to **help@uw.edu** with HYAK in the message. 
+If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message. 
 
 ### Background Reading
 

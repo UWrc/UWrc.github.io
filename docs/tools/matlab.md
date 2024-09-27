@@ -5,7 +5,7 @@ title: Matlab
 
 "MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages." [[Wikipedia](https://en.wikipedia.org/wiki/MATLAB)]
 
-The latest Matlab version on KLONE is R2020b. You can use LMOD [[www](modules.md)] to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
+The latest Matlab version on `klone` is R2020b. You can use LMOD [[www](modules.md)] to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
 
 ```shell-session terminal=true
 n3000:~ $ module load matlab                    

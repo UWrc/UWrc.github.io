@@ -25,7 +25,7 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 ## How to access?
 
 The epic kitchens dataset and benchmarks on this page are copyright by us and published under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
-The file path for kitchens dataset on KLONE is `/data/epic_kitchens`.
+The file path for kitchens dataset on `klone` is `/data/epic_kitchens`.
 
 ## How to cite?
 If you use the Epic Kitchens dataset or any of the components, please cite the following papers:

@@ -5,7 +5,7 @@ title: Glossary
 
 <a name="account" /> <br /><br /><br />
 
-[**Account**](#account): In the context of using SLURM, "account" refers to the groups you belong to, not your UWnetID. `hyakalloc` will display accounts you can submit jobs with (i.e., under the SLURM `sbatch` directive `--account`). 
+[**Account**](#account): In the context of using Slurm, "account" refers to the groups you belong to, not your UWnetID. `hyakalloc` will display accounts you can submit jobs with (i.e., under the Slurm `sbatch` directive `--account`). 
 
 <a name="apptainer" /> <br /><br /><br />
 
@@ -47,7 +47,7 @@ title: Glossary
 
 <a name="Partition" /> <br /><br /><br />
 
-[**Partition**](#partition): A partition is a logical subdivision of the HYAK cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are compute, ckpt,interactive, and GPU nodes.
+[**Partition**](#partition): A partition is a logical subdivision of the Hyak cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are compute, ckpt,interactive, and GPU nodes.
 
 <a name="Port_Forwarding" /> <br /><br /><br />
 
@@ -63,19 +63,19 @@ title: Glossary
 
 <a name="server" /> <br /><br /><br />
 
-[**Server**](#server): The smallest physical unit of compute. Typically only the HYAK engineering team will work in terms of servers. Servers can be thought of as desktop computer equivalents that are specialized to live in a data center environment in a rack mounted form factor. These are the smallest individual units of compute that the HYAK team will source from suppliers and vendors to build the cluster.
+[**Server**](#server): The smallest physical unit of compute. Typically only the Hyak engineering team will work in terms of servers. Servers can be thought of as desktop computer equivalents that are specialized to live in a data center environment in a rack mounted form factor. These are the smallest individual units of compute that the Hyak team will source from suppliers and vendors to build the cluster.
 
 <a name="slice" /> <br /><br /><br />
 
-[**Slice**](#slice): The smallest logical unit of compute purchased. Typically researchers, investigators, faculty, etc. will work in terms of slices. Slices are a HYAK-specific administrative term to represent a maximum amount of compute cores, memory, and maybe GPU(s) in a unit that are purchased on behalf of a researcher. This resource slice can be divided into as many jobs among as many users associated with that group as possible to the smallest schedulable resource (e.g., 1-compute core, 1MB of memory, 1-GPU). 
+[**Slice**](#slice): The smallest logical unit of compute purchased. Typically researchers, investigators, faculty, etc. will work in terms of slices. Slices are a Hyak-specific administrative term to represent a maximum amount of compute cores, memory, and maybe GPU(s) in a unit that are purchased on behalf of a researcher. This resource slice can be divided into as many jobs among as many users associated with that group as possible to the smallest schedulable resource (e.g., 1-compute core, 1MB of memory, 1-GPU). 
 
 <a name="slot" /> <br /><br /><br />
 
-[**Slot**](#slot): 1 resource slice can fill 1 slot. This is a UW administration specific (at the level of HYAK sponsor) term for a unit of accounting. Tier-1 sponsors (100+slots), tier-2 (50+ slots), and self-sponsors (1+ slots) will support a certain capacity for their investigators based on a maximum number of slots. Self-sponsored slots are for individual faculty who don’t hold appointments in sponsoring entities (e.g., College of Engineering) yet are interested in being part of the cluster. For more information about slot sponsorship and annual slot support fees, see [**Pricing**](https://hyak.uw.edu/pricing). 
+[**Slot**](#slot): 1 resource slice can fill 1 slot. This is a UW administration specific (at the level of Hyak sponsor) term for a unit of accounting. Tier-1 sponsors (100+slots), tier-2 (50+ slots), and self-sponsors (1+ slots) will support a certain capacity for their investigators based on a maximum number of slots. Self-sponsored slots are for individual faculty who don’t hold appointments in sponsoring entities (e.g., College of Engineering) yet are interested in being part of the cluster. For more information about slot sponsorship and annual slot support fees, see [**Pricing**](https://hyak.uw.edu/pricing). 
 
 <a name="slurm" /> <br /><br /><br />
 
-[**SLURM**](#slurm): The job scheduler used on HYAK. SLURM stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See "Scheduler" on this page to learn what a scheduler is. See [**SLURM documentation**](https://slurm.schedmd.com/man_index.html) for help using the job scheduler.
+[**Slurm**](#slurm): The job scheduler used on Hyak. Slurm stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See "Scheduler" on this page to learn what a scheduler is. See [**Slurm documentation**](https://slurm.schedmd.com/man_index.html) for help using the job scheduler.
 
 <a name="SSH" /> <br /><br /><br />
 

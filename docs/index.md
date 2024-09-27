@@ -9,7 +9,7 @@ Welcome to the Hyak user documentation! If you do not already have a functioning
 Otherwise, choose a category from the sidebar on the left.
 
 :::tip
-Sign up for the HYAK mailing list [here](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and stay up to date on system news!
+Sign up for the Hyak mailing list [here](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and stay up to date on system news!
 :::
 
-The HYAK mailing list is low volume (average < 1 email per month) and provides critical announcements in the event of a service issue, maintenance, or other updates.
+The Hyak mailing list is low volume (average < 1 email per month) and provides critical announcements in the event of a service issue, maintenance, or other updates.
