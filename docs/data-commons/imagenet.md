@@ -27,7 +27,7 @@ The first three images from the test set can be seen below.
 
 ## How to prepare for use?
 
-This serves as instructions for the research computing (i.e., HYAK) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
+This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
 1. Register on the ImageNet website [here](https://www.image-net.org/challenges/LSVRC/2012/) to agree to terms of use and receive the download links.
 2. The data should arrive as a tar file. Unpack the tar file to the desired location.
@@ -50,7 +50,7 @@ By accessing this data you agree to their terms of use provided on their website
 
 1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [here](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
 2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path. You can mount this and use directly in your code. This is preferred due to the large number of small files.
-3. **Direct**: The file path on KLONE is `/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
+3. **Direct**: The file path on `klone` is `/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
 
 ## How to cite?
 

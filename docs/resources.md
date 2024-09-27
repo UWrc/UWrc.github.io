@@ -10,7 +10,7 @@ title: External Resources
     - [Programming with R](https://swcarpentry.github.io/r-novice-inflammation/)
 
 1. **User Guides**
-   - **HIGHLY RECOMMENDED** - [General Linux Cheat Sheet from Geeks for Geeks (some may not be supported on HYAK)](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
+   - **HIGHLY RECOMMENDED** - [General Linux Cheat Sheet from Geeks for Geeks (some may not be supported on Hyak)](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/)
    - [Apptainer User Guide](https://apptainer.org/docs/user/main/)
    - [Conda Documentation](https://docs.conda.io/en/latest/)
    - [Jupyter Documentation](https://docs.jupyter.org/en/latest/)
@@ -34,7 +34,7 @@ title: External Resources
       and [For NVIDIA Containers for AI specifically](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=)
    - [BioContainers](https://biocontainers.pro/registry)
    - Google: "your-software-name Dockerfile"
-   - Small but growing collection here: [HYAK Team apptainer-images repo](https://github.com/UWrc/apptainer-images)
+   - Small but growing collection here: [Hyak Team apptainer-images repo](https://github.com/UWrc/apptainer-images)
 
 1. **BASH Videos**
    - [you need to learn BASH Scripting RIGHT NOW!! // EP 1 from NetworkChuck](https://www.youtube.com/watch?v=SPwyp2NG-bE)

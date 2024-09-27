@@ -11,7 +11,7 @@ Once you're logged into the login node (i.e., `klone-login01` or `klone.hyak.uw.
 ssh-keygen -C klone -t rsa -b 2048 -f ~/.ssh/id_rsa -q -N ""
 ```
 
-This command creates a 2048-bit RSA key with "klone" in the comment field.
+This command creates a 2048-bit RSA key with `klone` in the comment field.
 
 ### Authorizing the keys
 

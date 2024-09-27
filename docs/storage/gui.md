@@ -3,7 +3,7 @@ id: gui
 title: GUI Usage
 ---
 
-On this page we will provide options to interact with your data on KOPAH via Graphical User Interfaces (GUIs).
+On this page we will provide options to interact with your data on Kopah via Graphical User Interfaces (GUIs).
 
 ## Cyberduck
 
@@ -11,14 +11,14 @@ Cyberduck is an open-source client for managing and transferring files to variou
 
 To get started with Cyberduck, install the software from the [**developer's website**](https://cyberduck.io/download/) on your local computer.
 
-For ease of use, a pre-configured connection profile for KOPAH is available. Download the [profile](/files/kopah.cyberduckprofile) and open it in Cyberduck to load it. Saving the file with a `.cyberduckprofile` extension and double-clicking it within a file explorer should open it.
+For ease of use, a pre-configured connection profile for Kopah is available. Download the [profile](/files/kopah.cyberduckprofile) and open it in Cyberduck to load it. Saving the file with a `.cyberduckprofile` extension and double-clicking it within a file explorer should open it.
 
-Once setup, connect to KOPAH:
+Once setup, connect to Kopah:
 
 1. Open a new Cyberduck window and locate the **Open Connection** Icon.
 ![](/img/docs/kopah/cyberduck_open.png 'Open Connection')
 
-2. Select **KOPAH S3** from the drop-down box.
+2. Select **Kopah S3** from the drop-down box.
 
 ![](/img/docs/kopah/cyberduck_connect.png 'Configure Connection')
 
@@ -26,7 +26,7 @@ Once setup, connect to KOPAH:
 
 4. Click **Connect**.
 
-You can now interact with KOPAH using the GUI! Buckets can be created by right clicking and selecting **New Folder...**.
+You can now interact with Kopah using the GUI! Buckets can be created by right clicking and selecting **New Folder...**.
 
 ![](/img/docs/kopah/cyberduck_buckets.png 'Buckets')
 

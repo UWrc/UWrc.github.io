@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'HYAK',
+  title: 'Hyak',
   tagline: 'Powering discoveries in every field',
   url: 'https://hyak.uw.edu',
   baseUrl: '/',
@@ -21,7 +21,7 @@ module.exports = {
     navbar: {
       title: 'Research Computing',
       logo: {
-        alt: 'HYAK Logo',
+        alt: 'Hyak Logo',
         src: 'img/logos/uw_icon.png',
       },
       items: [
@@ -85,7 +85,7 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'HYAK',
+          title: 'Hyak',
           items: [
             {
               label: 'Home',

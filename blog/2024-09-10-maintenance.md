@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,math,amd,modules]
 ---
 
-Hello HYAK Community,
+Hello Hyak Community,
 
 Thanks again for your patience with our monthly scheduled maintenance. During this maintenance session, we were able to provide package updates to node images to ensure compliance with the latest operating system level security fixes and performance optimizations. Of note, the Nvidia GPU driver on Klone has been updated to the latest production datacenter release, version 560.35.03.
 
@@ -33,11 +33,16 @@ In our benchmarking tests, performance of these libraries was similar on `g1` an
 
 ### Fall Office Hours
 
-Hyak HPC Staff Scientist and Facilitator, Kristen Finch, will be holding office hours fall term on Wednesdays at 2pm or by appointment. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email.
+Hyak HPC Staff Scientist and Facilitator, Kristen Finch, will be holding office hours fall term. Zoom office hours will be held on Wednesdays at 2pm. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email.
 
 [**Click here to Register**](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu)
+
+In-person office hours will be held on Thursdays at 2pm at the eScience Institute (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). 
+[**Click here to RSVP for in-person Office Hours**](https://docs.google.com/spreadsheets/d/e/2PACX-1vTHNxjZuAIPACn6DxOL_QzKFx9CjE7036SrOhn382JnJ74v62QtJNHUQEMSg6GEd0HomFQXu8WvWP79/pubhtml).
+
+[**Click here to visit the eScience Office Hours page to see additional eScience office hours including AI/ML, R, Earth Data, and Python**](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule) (not available to help with Homework).
  
-If you would like to request 1 on 1 help, please send a ticket to help@uw.edu with "Hyak Office Hour" in the subject line to coordinate a meeting with Kristen.
+If you would like to request 1 on 1 help, please send a ticket to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting with Kristen.
 
 ### August 2024 Training Videos 
 
@@ -47,7 +52,7 @@ In case you missed it, we recorded the August 2024 Wednesday training sessions a
  
 * [**Hyak: Containers are your friend (August 21, 2024) recording**](https://youtu.be/zPsvUQV_GV0)
   
-* [**Hyak: SLURM and Advanced SLURM (August 14, 2024) recording**](https://youtu.be/iYM7xpRhp8I)
+* [**Hyak: Slurm and Advanced Slurm (August 14, 2024) recording**](https://youtu.be/iYM7xpRhp8I)
   
 * [**Hyak Basics: Linux CLI workshop (August 7, 2024) recording**](https://youtu.be/WqGCJMQhiC0)
 

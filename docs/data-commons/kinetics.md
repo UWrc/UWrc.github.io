@@ -25,7 +25,7 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 
 ## How to access?
 
-The file path for kinetics dataset on KLONE is `/data/kinetics`.
+The file path for kinetics dataset on `klone` is `/data/kinetics`.
 
 The kinetics dataset is licensed by Google Inc. under a Creative Commons Attribution 4.0 International License. Published. May 22, 2017.
 

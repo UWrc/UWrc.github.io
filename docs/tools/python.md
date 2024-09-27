@@ -5,9 +5,9 @@ title: Python
 
 [pytorch-cuda11]: /img/docs/pytorch-cuda11.png 'Pytorch install instructions for pip with CUDA11'
 
-Python is a scripting and general purpose programming language with a rich ecosystem of computational libraries. On HYAK it's mostly associated with Pytorch, Tensorflow, and other machine learning libraries but there are wider uses. 
+Python is a scripting and general purpose programming language with a rich ecosystem of computational libraries. On Hyak it's mostly associated with Pytorch, Tensorflow, and other machine learning libraries but there are wider uses. 
 
-Since HYAK is a shared platform and you do not have root or administrative access, you will need to control your environment and install packages in a deliberate way. We offer either virtual environments through [miniconda3](#miniconda3) or using [containers](#containers) (e.g., Apptainer, Docker).
+Since Hyak is a shared platform and you do not have root or administrative access, you will need to control your environment and install packages in a deliberate way. We offer either virtual environments through [miniconda3](#miniconda3) or using [containers](#containers) (e.g., Apptainer, Docker).
 
 ## Miniconda3
 
@@ -51,7 +51,7 @@ If you do use the command above then you will need to run `conda activate` befor
 
 ### Environments
 
-We'll assume you're using miniconda3 environments here for this walk through. It's generalizable to any Python environment but we will use an install of Pytorch against CUDA11 as the example since it is one of the most popular Python libraries used on HYAK.
+We'll assume you're using miniconda3 environments here for this walk through. It's generalizable to any Python environment but we will use an install of Pytorch against CUDA11 as the example since it is one of the most popular Python libraries used on Hyak.
 
 First create an environment, I put it in my scrubbed directory but you can put it anywhere (preferably your lab directory if you have one). We discourage using your home directory as you will likely hit your inode (i.e., file) limits. Please alter the path in the example below to suit your unique needs. Note `pytorch-cuda11` in the example below will be the environment name.
 
@@ -144,7 +144,7 @@ conda activate pytorch-cuda11
 
 Pytorch has a great install guide [[www](https://pytorch.org/get-started/locally/)] and you can see below it provides what the commands are for whichever platform you are using and which install method you prefer. We're going with `pip` as it's the most widely known and it demonstrates how easy it is to use in a conda environment.
 
-HYAK runs Linux and as of January 2021 CUDA11 is the version on all the GPUs.
+Hyak runs Linux and as of January 2021 CUDA11 is the version on all the GPUs.
 
 ![pytorch-cuda11]
 
@@ -186,7 +186,7 @@ There are multiple places to search for Python libraries. Whatever libraries you
 
 ## Containers (miniconda3)
 
-This section expands upon a Stackexchange reply [[www](https://stackoverflow.com/questions/54678805/containerize-a-conda-environment-in-a-singularity-container)] with a walk through specific for the KLONE cluster.
+This section expands upon a Stackexchange reply [[www](https://stackoverflow.com/questions/54678805/containerize-a-conda-environment-in-a-singularity-container)] with a walk through specific for the `klone` cluster.
 
 While miniconda3 is an improvement over anaconda for lean deployment, a more advanced approach is to package your entire conda environment within a (Singularity) container. As with the beauty of containers, we can use a miniconda3 container provided by continuum.io [[www](https://hub.docker.com/r/continuumio/miniconda3)] to bootstrap our environment then feed it our `environment.yml` file that specifies which Python libraries and versions to install.
 

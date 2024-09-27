@@ -3,7 +3,7 @@ id: start-up-seq
 title: Start Up Sequence
 ---
 
-Your set up is complete. Here is the inventory of the items you prepared to execute this method to connect and run Jupyter Notebook from HYAK:
+Your set up is complete. Here is the inventory of the items you prepared to execute this method to connect and run Jupyter Notebook from Hyak:
 
 | Element        | `klone` or local | Notes |
 | --------------------------- | ------------------------------ | ----- |
@@ -11,7 +11,7 @@ Your set up is complete. Here is the inventory of the items you prepared to exec
 | `conda-overlay.img` |   `klone`          |container overlay with conda and jupyter environment; in read-write or read-only mode|
 | `launch-container.sh`|   `klone`           |launches container and overlay; in read-write or read-only mode|
 | `start-jupyter-server.sh`|   `klone`          | starts jupyter |
-| `jupyter-server.job`|   `klone`          | `sbatch` script that launches the container-overlay and jupyter as a SLURM job |
+| `jupyter-server.job`|   `klone`          | `sbatch` script that launches the container-overlay and jupyter as a Slurm job |
 |`~/.ssh/config`|   local          | creates `ssh klone-login` short cut |
 |`~/.ssh/klone-node-config`|   local           | creates `ssh klone-node` short cut for ProxyJump|
 |`set-hyak-node.sh`|   local          | replaces Hostname in `~/.ssh/klone-node-config` for convenience|
@@ -50,7 +50,7 @@ Change directory to the directory you have been using during this tutorial, wher
 cd /gscratch/scrubbed/working-directory
 ```
 
-### 3. Start the Jupyter SLURM job
+### 3. Start the Jupyter Slurm job
 
 Submit the `jupyter-server.job` script with `sbatch` to start a job running the container-overlay and jupyter.
 
@@ -70,7 +70,7 @@ watch -n10 squeue --user $USER
 
 Once the job is running, or you see `R` under the column `ST` using `squeue`, use `Ctrl` + `C` to exit the `watch` command.
 
-In your working directory, you will have a file called `jupyter-server-XXXXXX.out` where the X's are the jobID assigned to the job by SLURM. Use the command `tail --follow` to print the contents of the `jupyter-server-XXXXXX.out` file and wait for the message, "Info: Jupyter server is running, port & token in ~/.jupyter-port-and-token." Once you see this message, your Jupyter server session is ready for the next step. (Use `Ctrl` + `C` to exit the `tail` command)
+In your working directory, you will have a file called `jupyter-server-XXXXXX.out` where the X's are the jobID assigned to the job by Slurm. Use the command `tail --follow` to print the contents of the `jupyter-server-XXXXXX.out` file and wait for the message, "Info: Jupyter server is running, port & token in ~/.jupyter-port-and-token." Once you see this message, your Jupyter server session is ready for the next step. (Use `Ctrl` + `C` to exit the `tail` command)
 
 ```bash
 tail --follow jupyter-server-12345678.out

@@ -11,11 +11,11 @@ This documentation is under construction.
 
 As previously mentioned, when you first ssh into `klone` you land on one of the two login nodes (e.g., `klone-login01`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should never use login nodes for heavy compute and automated mechanisms exist to monitor and enforce violations. The tool used to notify users of violations is "arbiter2" and you will receive an email for each offending process [**(Gardner, Migacz, and Haymore 2019)**](https://hyak.uw.edu/docs/compute/scheduling-jobs#ref_arbiter).
 
-To keep the login node in stable working order and ensure fair usage of the login node as a community resource, HYAK has a job scheduling software that will give you access to other nodes (i.e., different computers that are part of the `klone` cluster). The job scheduler software is called SLURM, and regular users of HYAK need to learn how to use SLURM to effectively and efficiently make use of HYAK as a resource for research computing. 
+To keep the login node in stable working order and ensure fair usage of the login node as a community resource, Hyak has a job scheduling software that will give you access to other nodes (i.e., different computers that are part of the `klone` cluster). The job scheduler software is called Slurm, and regular users of Hyak need to learn how to use Slurm to effectively and efficiently make use of Hyak as a resource for research computing. 
 
 :::note Relevant Vocabulary
 
-**Account**: In the context of using SLURM, "account" refers to the groups you belong to, not your UWnetID. `hyakalloc` will display accounts you can submit jobs with (i.e., under the SLURM `sbatch` directive `--account`).
+**Account**: In the context of using Slurm, "account" refers to the groups you belong to, not your UWnetID. `hyakalloc` will display accounts you can submit jobs with (i.e., under the Slurm `sbatch` directive `--account`).
 
 **Checkpoint partition**: Abbreviated `ckpt`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours (for HPC jobs) and >8 hours (for GPU jobs) are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [**Using Idle Resources**](https://hyak.uw.edu/docs/compute/checkpoint).
 
@@ -27,18 +27,18 @@ To keep the login node in stable working order and ensure fair usage of the logi
 * **HPC Node**: A standard compute node with no additional components and variable amounts of memory at time of procurement.
 * **GPU Node**: A standard node with GPU cards added in at time of procurement. GPUs are typically used for ML workflows and in rarer cases for applications that have been specifically ported over to GPUs to speed up the runtime.
 
-**Partition**: A partition is a logical subdivision of the HYAK cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are `compute`, `ckpt`, `compute-bigmem`, and GPU nodes. `hyakalloc` will display paritions in addition to `ckpt` that you can submit jobs with (i.e., under the SLURM `sbatch` directive `--partition`).
+**Partition**: A partition is a logical subdivision of the Hyak cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are `compute`, `ckpt`, `compute-bigmem`, and GPU nodes. `hyakalloc` will display paritions in addition to `ckpt` that you can submit jobs with (i.e., under the Slurm `sbatch` directive `--partition`).
 
-**Queue**: A queue is a waiting area for jobs that have been submitted to the cluster but are not yet executing. The scheduler manages the order in which jobs are taken from the queue for execution. The SLURM queue can be monitored with the command `squeue` and `squeue -u UWNetID` replacing the word `UWNetID` with your UE Net ID will show your job that are waiting in the queue or are being executed. 
+**Queue**: A queue is a waiting area for jobs that have been submitted to the cluster but are not yet executing. The scheduler manages the order in which jobs are taken from the queue for execution. The Slurm queue can be monitored with the command `squeue` and `squeue -u UWNetID` replacing the word `UWNetID` with your UE Net ID will show your job that are waiting in the queue or are being executed. 
 
 **Scheduler**: The scheduler is a component or software system responsible for managing and optimizing the allocation of computing resources and tasks within a distributed computing environment. It orchestrates the execution of jobs, tasks, or processes across available resources such as CPUs, memory, and storage.
 
-**SLURM**: The job scheduler used on HYAK. SLURM stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See "Scheduler" on this page to learn what a scheduler is. See [**SLURM documentation**](https://slurm.schedmd.com/man_index.html) for detailed help using the job scheduler.
+**Slurm**: The job scheduler used on Hyak. Slurm stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See "Scheduler" on this page to learn what a scheduler is. See [**Slurm documentation**](https://slurm.schedmd.com/man_index.html) for detailed help using the job scheduler.
 :::
 
 ### Accounts and Partitions
 
-The first stop on understanding job scheduling is to understand that every user is part of an account and certain partitions. Your account is usually related to a user group that you belong to; for example, you may be part of a lab group that has contributed resources to HYAK, affording you priority usage of those resources, which are organized into one or more partitions. Alternatively, you may be a student user who is part of the [**Research Computing Club**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/), or account `stf`, meaning that you have priority access on the `stf` account and partitions. Additionally, all users can use HYAK resources when they are idle by scheduling jobs on the `ckpt` paritition ([**Click here to learn about more about `ckpt` jobs.**](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
+The first stop on understanding job scheduling is to understand that every user is part of an account and certain partitions. Your account is usually related to a user group that you belong to; for example, you may be part of a lab group that has contributed resources to Hyak, affording you priority usage of those resources, which are organized into one or more partitions. Alternatively, you may be a student user who is part of the [**Research Computing Club**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/), or account `stf`, meaning that you have priority access on the `stf` account and partitions. Additionally, all users can use Hyak resources when they are idle by scheduling jobs on the `ckpt` paritition ([**Click here to learn about more about `ckpt` jobs.**](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
 
 Let's start by checking which accounts and partitions you have access to with the `hyakalloc` command. 
 
@@ -84,7 +84,7 @@ cd UWNetID
 ```
 This will be your working directory for this section. Note that files and directories will be deleted after 14 days if they are not used.
 
-If you are a student in a lab group who contributed resources to HYAK, you have an alternative storage option you may use under:
+If you are a student in a lab group who contributed resources to Hyak, you have an alternative storage option you may use under:
 ```bash
 cd /mmfs1/gscratch/labname
 ```
@@ -92,7 +92,7 @@ If you are a student part of the Reseach Computing Club, you may use:
 ```bash
 cd /mmfs1/gscratch/stf/
 ```
-Fore more information regarding HYAK storage click [**HERE**](https://hyak.uw.edu/docs/storage/gscratch).
+Fore more information regarding Hyak storage click [**HERE**](https://hyak.uw.edu/docs/storage/gscratch).
 
 
 
@@ -149,7 +149,7 @@ Finally, your shell prompt will show that you are no longer on the login node, o
 ```bash
 [UWNetID@n3424 ~]$
 ```
-Except that the word `UWNetID` will be replaced with your Net ID and `n3424` will be replaced with the node SLURM assigned to your interactive job. Finally, the `~` will be replaced with the name of your current directory (your location on the filesystem). 
+Except that the word `UWNetID` will be replaced with your Net ID and `n3424` will be replaced with the node Slurm assigned to your interactive job. Finally, the `~` will be replaced with the name of your current directory (your location on the filesystem). 
 
 :::tip Pro tip : Requesting a GPU job
 You can also request an interactive session on a GPU. To view information about the current status of nodes in a partition, use the command `sinfo`. The beginning of the output may look something like this:

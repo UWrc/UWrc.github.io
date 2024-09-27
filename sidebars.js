@@ -7,7 +7,7 @@ module.exports = {
       'account-activation',
     ],
     'Setup': [
-      'setup/index',
+      //'setup/index',
       'setup/ssh',
       'setup/intracluster-keys',
       'setup/portforwarding',
@@ -20,7 +20,7 @@ module.exports = {
       'storage/transfer',
       'storage/archive',
       {
-        'KOPAH S3 Storage': [
+        'Kopah S3 Storage': [
           'storage/kopah',
           'storage/gui',
           'storage/cli',
@@ -36,7 +36,7 @@ module.exports = {
       'data-commons/the_pile',
     ],
     'Compute': [
-      'compute/slurm',
+      'compute/start-here',
       'compute/scheduling-jobs',
       'compute/checkpoint',
       'compute/resource-monitoring',
@@ -62,7 +62,7 @@ module.exports = {
         ]
       }
     ],
-    'Tutorial: HYAK Basics': [
+    'Tutorial: Hyak Basics': [
       'hyak101/basics/syllabus',
       'hyak101/basics/login',
       'hyak101/basics/system',
@@ -75,12 +75,12 @@ module.exports = {
       'hyak101/containers/demonstration',
       'hyak101/containers/build',
     ],
-    'Tutorial: SLURM': [
+    'Tutorial: Slurm': [
       'hyak101/basics/syllabus_slurm', 
       'hyak101/basics/jobs',
       'hyak101/basics/arrays',
       {
-        'Advanced SLURM': [
+        'Advanced Slurm': [
           'hyak101/basics/advanced',
           'hyak101/basics/nn_batch',
           'hyak101/basics/nn_array',

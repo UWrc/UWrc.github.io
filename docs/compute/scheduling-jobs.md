@@ -4,11 +4,11 @@ title: Scheduling Jobs
 sidebar-label: Scheduling Jobs
 ---
 
-`KLONE` uses the [SLURM](https://slurm.schedmd.com/overview.html) job scheduler. When you first ssh into KLONE (e.g., `klone.hyak.uw.edu`) you land on one of the two login nodes (i.e., `klone1`, `klone2`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should not use login nodes for heavy compute and automated mechanisms exist to monitor and enforce violations. The tool used is "arbiter2" and you will receive an email for each offending process [(Gardner, Migacz, and Haymore 2019)](#ref_arbiter).
+`klone` uses the [Slurm](https://slurm.schedmd.com/overview.html) job scheduler. When you first ssh into `klone` (e.g., `klone.hyak.uw.edu`) you land on one of the two login nodes (i.e., `klone1`, `klone2`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should not use login nodes for heavy compute and automated mechanisms exist to monitor and enforce violations. The tool used is "arbiter2" and you will receive an email for each offending process [(Gardner, Migacz, and Haymore 2019)](#ref_arbiter).
 
 ## Compute Resources
 
-The SLURM scheduler has two high-level concepts you need to know, [accounts](#accounts) and [partitions](#partitions).
+The Slurm scheduler has two high-level concepts you need to know, [accounts](#accounts) and [partitions](#partitions).
 ### Accounts
 
 With the `hyakalloc` command [[src](/docs/compute/resource-monitoring#hyakalloc)] you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
@@ -24,7 +24,7 @@ There are a few popular types of jobs you could submit:
 * [batch](#batch-jobs) which are unattended (you get an email when completed), and
 * [recurring](#null) or "CRON-like" processes that happen on a regular basis.
 
-### SLURM Arguments
+### Slurm Arguments
 
 These are the common and recommended arguments suggested at a minimum to get a job in any form.
 
@@ -53,7 +53,7 @@ In this case you are requesting a slice of the standard compute node class that 
 
 ### Interactive Jobs (Multi Node)
 
-Building upon the previous section, if `-N` or `--nodes` is >1 when running `salloc` you are automatically placed into a shell of one of the allocated nodes. This shell is NOT part of a SLURM task. To view the names of the remainder of your allocated nodes use `scontrol show hostnames`. The `srun` command can be used to execute a command on all of the allocated nodes as shown in the example session below.
+Building upon the previous section, if `-N` or `--nodes` is >1 when running `salloc` you are automatically placed into a shell of one of the allocated nodes. This shell is NOT part of a Slurm task. To view the names of the remainder of your allocated nodes use `scontrol show hostnames`. The `srun` command can be used to execute a command on all of the allocated nodes as shown in the example session below.
 
 ```shell-session terminal=true
 [netID@klone1 ~]$ salloc -N 2 -p compute -A stf --time=5 --mem=5G
@@ -171,4 +171,3 @@ All of these man pages can also be viewed on `mox` by running `man <command>`.
 ## References
 
 1. Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [DOI: [10.1145/3332186.3333043](https://doi.org/10.1145/3332186.3333043)] [Code: [Gitlab](https://gitlab.chpc.utah.edu/arbiter2/arbiter2)] <a name="ref_arbiter" />
-2. 

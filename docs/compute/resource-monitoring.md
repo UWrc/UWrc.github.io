@@ -4,11 +4,11 @@ title: Resource Monitoring
 sidebar-label: Resource Monitoring
 ---
 
-The HYAK clusters make use of the SLURM scheduler to submit and run jobs. The scheduler provides a rich set of commands (e.g., `sacct`, `sinfo`) to query the state of the cluster but the extensive options can be daunting to navigate. We'll provide some useful example calls below in addition to some information about our custom resource monitoring program called `hyakalloc`.
+The Hyak clusters make use of the Slurm scheduler to submit and run jobs. The scheduler provides a rich set of commands (e.g., `sacct`, `sinfo`) to query the state of the cluster but the extensive options can be daunting to navigate. We'll provide some useful example calls below in addition to some information about our custom resource monitoring program called `hyakalloc`.
 
 ## sacct
 
-`sacct` displays accounting data for all jobs and job steps in the SLURM job accounting log or SLURM database.
+`sacct` displays accounting data for all jobs and job steps in the Slurm job accounting log or Slurm database.
 
 ### See all running jobs
 
@@ -28,7 +28,7 @@ sacct -s pending -a -X -o user,jobid,elapsed,alloccpus,reqmem,nnodes,account,par
 
 ## sinfo
 
-`sinfo` allows you to view information about SLURM nodes and partitions.
+`sinfo` allows you to view information about Slurm nodes and partitions.
 
 ### GPUs
 
@@ -40,7 +40,7 @@ sinfo -p ckpt -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v 
 
 ## hyakalloc
 
-While you can use built-in SLURM commands query the resources used and what is available, the HYAK team has provided a useful utility called `hyakalloc`. This program will make those queries on your behalf and present it in a user friendly format.
+While you can use built-in Slurm commands query the resources used and what is available, the Hyak team has provided a useful utility called `hyakalloc`. This program will make those queries on your behalf and present it in a user friendly format.
 
 ### Default
 

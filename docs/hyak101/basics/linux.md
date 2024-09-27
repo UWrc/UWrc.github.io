@@ -3,13 +3,13 @@ id: linux
 title: Basic Linux Commands
 ---
 
-In this section, we will review more commands to get you comfortable do basic things on HYAK. This section has sampled some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most HYAK users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
+In this section, we will review more commands to get you comfortable do basic things on Hyak. This section has sampled some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most Hyak users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 
 ## Your Working Directory
 
-We have discussed storage on HYAK a bit in this tutorial, but it is important to emphasize here, that you should avoid storing data, scripts, and software in your Home directory where you will quickly run out of storage due to its 10GB quota. For this reason, it is important to understand your other storage options on HYAK, which are as follows: 
+We have discussed storage on Hyak a bit in this tutorial, but it is important to emphasize here, that you should avoid storing data, scripts, and software in your Home directory where you will quickly run out of storage due to its 10GB quota. For this reason, it is important to understand your other storage options on Hyak, which are as follows: 
 
-1. If you are part of a lab group who contributed resources to HYAK (slices) then you have storage under their directory in `/mmfs1/gscratch/labname`. Where the word `labname` is replaced by the name of your lab group on HYAK. Check with your PI or labmates to find out what that directory is called., or use the `hyakalloc` command which will show the `labname` and the directory name for your lab.  
+1. If you are part of a lab group who contributed resources to Hyak (slices) then you have storage under their directory in `/mmfs1/gscratch/labname`. Where the word `labname` is replaced by the name of your lab group on Hyak. Check with your PI or labmates to find out what that directory is called., or use the `hyakalloc` command which will show the `labname` and the directory name for your lab.  
 2. If you are a student and you have applied to be part of the Research Computing Club (RCC), you have have storage under `/mmfs1/gscratch/stf/`. The RCC has set storage quotas for users there. Please inquire with the RCC about `stf` storage quotas. [**Apply for an `stf` account [HERE]**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/)
 3. If you don't fall into any of these categories, we have temporary community storage under `/gscratch/scrubbed/`; however, directories and files here will be automatically deleted if not used after 21 days. Please review our documentation about `/gscratch/scrubbed/` [**HERE**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). 
 

@@ -1,9 +1,9 @@
 ---
 id: gscratch
-title: Storage on HYAK
+title: Storage on Hyak
 ---
 
-Storage mounted on either the 3rd generation HYAK cluster `klone` or the 2nd generation HYAK cluster `mox` is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy.
+Storage mounted on either the 3rd generation Hyak cluster `klone` or the 2nd generation Hyak cluster `mox` is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy.
 
 Every user has a [**Home directory**](#user-home-directory) by default, most users have a cluster account by virtue of being the member of a lab group with dedicated slices so you have access to [**lab dedicated storage**](#group-or-lab-directories), and there's also [**scrubbed**](#scrubbed) storage for temporary overflow use.
 
@@ -20,7 +20,7 @@ Learn more about inodes [**here**](https://www.admin-magazine.com/HPC/Articles/W
 
 ## Checking Utilization `hyakstorage`
 
-The `hyakstorage` command is unique to KLONE and a tool to monitor your storage quota utilization in both your home and group (or lab) directories.
+The `hyakstorage` command is unique to `klone` and a tool to monitor your storage quota utilization in both your home and group (or lab) directories.
 
 ```shell-session terminal=true
 $ hyakstorage --help
@@ -62,13 +62,13 @@ du -h --max-depth 1
 
 - ***10 GB, only yours, everyone has one.***
 
-Each users' Home directory is located at the folder path `/mmfs1/home/UWnetID` on KLONE or `/usr/lusers/UWnetID` and `/gscratch/home/UWnetID` on MOX where `UWnetID` is your UW netID. You are placed here by default when you log into the cluster. 
+Each users' Home directory is located at the folder path `/mmfs1/home/UWnetID` on `klone` or `/usr/lusers/UWnetID` and `/gscratch/home/UWnetID` on MOX where `UWnetID` is your UW netID. You are placed here by default when you log into the cluster. 
 
 :::note
 Your Home directory quota is 10 GB or ~250,000 inodes.
 :::
 
-On `klone`, monitor your Home directory with `hyakstorage` as discussed above and shown below. You can check your home directory usage using the `hyakstorage` command without the `--home` flag but it will also display all the lab or group quotas you have access to. As you can see below from the `hyakstorage` output on KLONE, I am currently using 4GB out of a 10GB block quota and 4,764 inodes (i.e., files) out of a 256,000 inode quota.
+On `klone`, monitor your Home directory with `hyakstorage` as discussed above and shown below. You can check your home directory usage using the `hyakstorage` command without the `--home` flag but it will also display all the lab or group quotas you have access to. As you can see below from the `hyakstorage` output on `klone`, I am currently using 4GB out of a 10GB block quota and 4,764 inodes (i.e., files) out of a 256,000 inode quota.
 
 ```bash
 hyakstorage --home
@@ -90,7 +90,7 @@ mmlsquota --block-size G gscratch:home
 Ideally you only keep personal code bases or smaller data sets here. This quota can not be changed, if you need more data one of the other storage spots on `gscratch` (e.g., lab folder, scrubbed) are better suited.
 
 :::tip PRO TRIP - FYI
-Your Home directory is a directory under the HYAK file system that each user is given when their account is created. When you log into HYAK, your shell (your view) will be your Home directory. Meaning that when you use the command print working directory or `pwd` you will see the absolute path (i.e., address in the file system) of your Home directory: 
+Your Home directory is a directory under the Hyak file system that each user is given when their account is created. When you log into Hyak, your shell (your view) will be your Home directory. Meaning that when you use the command print working directory or `pwd` you will see the absolute path (i.e., address in the file system) of your Home directory: 
 
 ```bash
 pwd
@@ -119,7 +119,7 @@ echo $HOME
 ## Group or Lab Directories
 
 - Shared lab storage at $10 / 1 TB [1M files] / month.
-- NVMe flash tier on KLONE.
+- NVMe flash tier on `klone`.
 
 If you run the `groups` command you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder. Please note, on MOX the group names have a hyak prefix. For example, `stf` will appear as `hyak-stf`.
 
@@ -129,7 +129,7 @@ Your lab gets 1 TB per slice that your group has contributed to `klone`, which i
 Your lab quota can be increased for $10 / TB / month.
 :::
 
-Your lab storage quota can be increased (or decreased) in 1 TB granularity and adjusted on a month-to-month basis as your needs require. If you need additional block or inode quota, please refer to the pricing page: [HYAK Pricing](https://hyak.uw.edu/pricing)
+Your lab storage quota can be increased (or decreased) in 1 TB granularity and adjusted on a month-to-month basis as your needs require. If you need additional block or inode quota, please refer to the pricing page: [Hyak Pricing](https://hyak.uw.edu/pricing)
 
 :::important
 Check group quotas and current use with the `hyakstorage` command.

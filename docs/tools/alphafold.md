@@ -3,10 +3,10 @@ id: alphafold
 title: AlphaFold2
 ---
 
-AlphaFold2 Application and Data Available on Klone
+AlphaFold2 Application and Data Available on `klone`
 ----------------------------------------------------------
 
-AlphaFold2 is a deep learning system that predicts protein structure from sequence. It was developed by DeepMind and is described in this [paper](https://www.nature.com/articles/s41586-021-03819-2). The program is resource intensive and requires a large background dataset to function. These have been made available on Klone and can be accessed by following the instructions below.
+AlphaFold2 is a deep learning system that predicts protein structure from sequence. It was developed by DeepMind and is described in this [paper](https://www.nature.com/articles/s41586-021-03819-2). The program is resource intensive and requires a large background dataset to function. These have been made available on `klone` and can be accessed by following the instructions below.
 
 __BEFORE BEGINNING__: You will need a `python` environment activated to use this tool. See [here](/docs/tools/python). Ensure that you have a [compute node allocated](/docs/hyak101/python/jobs) before using this tool. 
 
@@ -24,7 +24,7 @@ See below for a full list of parameters.
 ## Usage
 
 ### Context
-The recommended usage documents creating a docker environment with GPU access, and running a python script that calls that docker image to run AF. Docker is not supported on Klone, so this process has been lightly modified:
+The recommended usage documents creating a docker environment with GPU access, and running a python script that calls that docker image to run AF. Docker is not supported on `klone`, so this process has been lightly modified:
 
 1. An apptainer image was created
 2. A script that runs the apptainer image with the proper arguments was created

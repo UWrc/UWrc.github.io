@@ -1,6 +1,6 @@
 ---
 id: win-slurm-forward
-title: SLURM Job & Port Forwarding
+title: Slurm Job & Port Forwarding
 ---
 
 :::caution

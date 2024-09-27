@@ -1,6 +1,6 @@
 ---
 id: slurm-forward
-title: SLURM Job & Port Forwarding
+title: Slurm Job & Port Forwarding
 ---
 
 Now that we have performed all of out set up, we have the following elements ready to go: 
@@ -16,15 +16,15 @@ Now that we have performed all of out set up, we have the following elements rea
 - We have launcher scripts for the container in read-only and read-write mode (`launch-container.sh` and `launch-container-ro.sh`).
 - We have a script that starts the Jupyter Notebook server (`start-jupyter-server.sh`)
 
-We need a few more elements to tie all of these together, one script on `klone` to launch the container and start jupyter as a SLURM job, a script on our local computer to help automate the ProxyJump, and a script on our local computer to start SSH port forwarding so that we can access Jupyter Notebook running on `klone` from our browser window. 
+We need a few more elements to tie all of these together, one script on `klone` to launch the container and start jupyter as a Slurm job, a script on our local computer to help automate the ProxyJump, and a script on our local computer to start SSH port forwarding so that we can access Jupyter Notebook running on `klone` from our browser window. 
 
-### A SLURM script to start Jupyter server with `sbatch`
+### A Slurm script to start Jupyter server with `sbatch`
 
 :::caution
 **These steps are to be performed on `klone`**
 :::
 
-We have prepared a `sbatch` script which will execute `launch-container.sh` and `start-jupyter-server.sh` as a SLURM job, which will launch the container and start jupyter on a compute node. This prepared script is available under `/mmfs1/sw/hyak101/python`. Copy
+We have prepared a `sbatch` script which will execute `launch-container.sh` and `start-jupyter-server.sh` as a Slurm job, which will launch the container and start jupyter on a compute node. This prepared script is available under `/mmfs1/sw/hyak101/python`. Copy
 it to your working directory, and we'll go through it.
 
 ```bash
@@ -81,7 +81,7 @@ chmod +x set-hyak-node.sh
 
 This script works by setting the variable `NODE` and modifying `~/.ssh/klone-node-config` with: 
 1. The `ssh klone-login` command to login with your short cut. 
-2. The `squeue` command to view your SLURM jobs **named `klone-container`**.
+2. The `squeue` command to view your Slurm jobs **named `klone-container`**.
 3. The `sed` command then modifies `~/.ssh/klone-node-config` in place by searching `~/.ssh/klone-node-config` for "Hostname" followed by any number of any characters (`.*`), and replaces it with "Hostname $NODE" where `$NODE` is the node running your job called "klone-container" (`n3120` in this example).
 
 If you remember, `~/.ssh/klone-node-config` looked like this with `n3000` or another compute node name as a placeholder. 

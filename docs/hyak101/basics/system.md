@@ -96,7 +96,7 @@ The concept of "location" is important because where you are on `klone` can dete
 
 #### "list" or `ls` to show the contents of your current directory or "location" in the filesystem. 
 
-If you have just started as a HYAK user, your Home directory might be empty. 
+If you have just started as a Hyak user, your Home directory might be empty. 
 
 ```bash
 ls
@@ -130,9 +130,9 @@ ls mmfs1/
 ```
 admin  apsearch  data  encrypted  gscratch  home  slurmdata  ssg  sw
 ```
-Some of these names might be familiar to you. For example, every user on HYAK has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` which has a directory for each HYAK user. Similarly, above we changed directory to a directory inside of `mmfs1/` called `sw/`.
+Some of these names might be familiar to you. For example, every user on Hyak has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` which has a directory for each Hyak user. Similarly, above we changed directory to a directory inside of `mmfs1/` called `sw/`.
 
-Picture the `klone` filesystem as an upside down tree. The topmost directory is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to HYAK have their storage directories. 
+Picture the `klone` filesystem as an upside down tree. The topmost directory is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to Hyak have their storage directories. 
 
 ![](/img/docs/hyak101/basics/filesystem.png 'filesystem')
 
@@ -222,6 +222,6 @@ Another important aspect of location on `klone` is the node or computer that you
 [UWNetID@klone-login01 ~]$
 ```
 
-As mentioned in the last section, `@klone-login01` indicates I am logged into or using one of the login nodes HYAK. Later when we learn how to start interactive jobs, this part of our prompt will change, indicating we are on a different node. Importantly, just because you are on a different node, your Home directory and working directories (for example, directories under your lab group's `/gscratch` or under `/gscratch/scrubbed`) will have the same absolute path across all computers in the `klone` cluster.  
+As mentioned in the last section, `@klone-login01` indicates I am logged into or using one of the login nodes Hyak. Later when we learn how to start interactive jobs, this part of our prompt will change, indicating we are on a different node. Importantly, just because you are on a different node, your Home directory and working directories (for example, directories under your lab group's `/gscratch` or under `/gscratch/scrubbed`) will have the same absolute path across all computers in the `klone` cluster.  
 
 In the next section, we will learn more commands to help you get used to `klone`'s Linux CLI.
