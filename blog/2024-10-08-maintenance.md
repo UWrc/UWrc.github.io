@@ -34,7 +34,7 @@ If you have any issue using these tools, please open a ticket by emailing help@u
 
 ### Upcoming Training
 
-We have planned 3 Hyak-specific trainings for this Fall (more to come, stay tuned). These trainings will be held in person, and will not be recorded since recorded materials are already publicly accessible. Capacity is limited, follow the links below to register today to guarentee your spot. 
+We have planned 3 Hyak-specific trainings for this Fall (more to come, stay tuned). These trainings will be held in person and will not be recorded since recorded materials are already publicly accessible. Capacity is limited, follow the links below to register today to guarantee your spot. 
 
 [**Hyak: Containers are your friend - Monday October 28 10am - 12pm**](https://form.jotform.com/finchkn/hyak-containers-are-your-friend). 
 
