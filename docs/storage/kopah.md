@@ -9,7 +9,7 @@ Kopah uses **buckets** as containers to store data, where each bucket can hold 1
 
 ## Accounts
 Kopah storage accounts can be requested by sending an email to help@uw.edu with "Kopah" in the subject line. Opening a Kopah storage account required a valid UW Budget and Worktag.
-f
+
 ## Access
 You will need access key and secret key to access your Kopah account. When you open an account your keys are placed in your home directory on `klone` in a file called `kopah_groupname`, where the word "groupname" is associated Hyak group.
 
