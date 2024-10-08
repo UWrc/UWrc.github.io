@@ -16,7 +16,7 @@ The next maintenance will be **Tuesday November 12, 2024**.
 
 ### New Tools Documentation
 
-Our research computing interns have been hard at work adding documentation for new user tools that might help optimize your reseaerch computing. Click the links below to review the docs for these tools. 
+Our research computing interns have been hard at work adding documentation for new user tools that might help optimize your research computing. Click the links below to review the docs for these tools. 
 
 [**Squash Fuse**](https://hyak.uw.edu/docs/tools/squashfs) - SquashFS packages multiple small files into a single read-only, compressed filesystem, reducing metadata calls and improving performance. This minimizes server load, enhancing throughput and efficiency in handling storage requests.
 
@@ -28,7 +28,7 @@ In HPC, datasets often consist of numerous small files, which can lead to perfor
 Use case on Hyak:
 DMTCP offers a solution for folks who would like to use Hyak's `ckpt` partitions, but have jobs that exceed the `ckpt` time limits of 5 hours for CPU-noly jobs and 8 hours for GPU-only jobs. Checkpointing with DMTCP facilitates efficient use of ckpt resources, allowing higher throughput for your jobs. 
 
-[**Tools for Kopah Storage Users**](https://hyak.uw.edu/docs/storage/kopah) - We have added [**Graphical User Interface options**](https://hyak.uw.edu/docs/storage/gui), [**Command Line Interface options**](https://hyak.uw.edu/docs/storage/cli), and finally [**Python-based interaction and retreival options**](https://hyak.uw.edu/docs/storage/boto3) to build your protocols to effectively use Kopah S3 storage on Hyak. 
+[**Tools for Kopah Storage Users**](https://hyak.uw.edu/docs/storage/kopah) - We have installed [**Command Line Interface tools**](https://hyak.uw.edu/docs/storage/cli) like `s3cmd` and `s5cmd` on `klone` and provide insctructions for using [**Python library `boto3` for Kopah interaction and retreival**](https://hyak.uw.edu/docs/storage/boto3) to build Kopah S3 storage usage into your research computing applciations on Hyak. 
 
 If you have any issue using these tools, please open a ticket by emailing help@uw.edu with "Hyak" in the subject line. We appreciate any feedback about how to improve ease of use for tools presented in our documentation.
 
@@ -44,7 +44,7 @@ In the first hour and a half, we will go over content. The last 30 minutes will 
 
 Location: eScience Classroom; WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor; 3910 15th Ave NE, Seattle, WA 98195
 
-Keep an eye on your indox for updates about additional trainings this fall. 
+Keep an eye on your inbox for updates about additional trainings this fall. 
 
 ### Fall Office Hours
 
