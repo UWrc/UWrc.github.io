@@ -85,22 +85,14 @@ Prepare your `.s3cfg` file as shown above.
 
 ### Setup
 
-s5cmd is not installed on `klone` by default. To install s5cmd:
-
-1. Download the latest binary, currently 2.2.2: `wget  https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz`
-2. Create local binary folder if not already exists: `mkdir -p ~/.local/bin`
-3. Unzip the s5cmd binary: `tar -xvzf s5cmd_2.2.2_Linux-64bit.tar.gz s5cmd`
-4. Move the binary to the correct location: `mv s5cmd ~/.local/bin/s5cmd`
-5. Delete the original archive: `rm s5cmd_2.2.2_Linux-64bit.tar.gz`
-
-:::note
-Installing s5cmd locally will likely be similar, make sure to consult their [**installation documentation**](s5cmd_2.2.2_Linux-64bit.tar.gz).
-:::
+s5cmd is installed on `klone` login nodes by default. See the [**s5cmd GitHub**](https://github.com/peak/s5cmd) for local installation instructions.
 
 s3cmd must be configured to interact with Kopah. To do so, set the following environment variables in your shell.
 
 :::note
 These commands should likely be added in your `~/.bashrc` file, so they are automatically run on each terminal session. The commands in your `~/.bashrc` file will automatically run on any new shell session, however you need to source it (`source ~/.bashrc`) to make the variables accessible in your current session.
+
+You'll need to do this for any device you wish to use s5cmd on (e.g. local desktop and Hyak).
 :::
 
 ```bash
