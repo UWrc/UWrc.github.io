@@ -7,7 +7,7 @@ In this section, we will build a custom container containing Ubuntu and Git. By 
 
 ## Set Up
 
-In this tutorial, you will build your own custom container using [DockerHub](https://hub.docker.com/). To start, ensure that you are using the basics directory as your working directory:
+In this tutorial, you will build your own custom container using [Docker Hub](https://hub.docker.com/). To start, ensure that you are using the basics directory as your working directory:
 ```bash
 pwd
 /gscratch/scrubbed/UWNetID/basics
@@ -26,7 +26,7 @@ salloc --partition=ckpt --cpus-per-task=1 --mem=10G --time=2:00:00
 #### Use `hyakalloc` to view your available resources
 
 ## Pulling Ubuntu
-Next, open up [DockerHub](https://hub.docker.com/) and search for Ubuntu. We will pull the latest version of Ubuntu with the following command:
+Next, open up [Docker Hub](https://hub.docker.com/) and search for Ubuntu. We will pull the latest version of Ubuntu with the following command:
 ```bash
 apptainer pull docker://ubuntu
 ```
@@ -98,7 +98,7 @@ Alternatively, you can build a container by creating your own set of "blueprints
 ```bash
 nano container-build.def
 ```
-All definition files start with `Bootstrap` followed by the bootstrap agent. The bootstrap agent specifies which base operating system the container image will use. In this tutorial, we will be using the docker bootstrap agent. Other agents you may come across are localimage, oras, and scratch. `From: ubuntu` indicates what image you want to use or the specific repository in DockerHub you are pulling from. In this case, we are using the Ubuntu repository. The final sections of our definition file will be `%post` and `%runscript`. The `%post` section is where new software and files can be downloaded and new directories can be made. The `%runscript` section can be used to test your container.  
+All definition files start with `Bootstrap` followed by the bootstrap agent. The bootstrap agent specifies which base operating system the container image will use. In this tutorial, we will be using the docker bootstrap agent. Other agents you may come across are localimage, oras, and scratch. `From: ubuntu` indicates what image you want to use or the specific repository in Docker Hub you are pulling from. In this case, we are using the Ubuntu repository. The final sections of our definition file will be `%post` and `%runscript`. The `%post` section is where new software and files can be downloaded and new directories can be made. The `%runscript` section can be used to test your container.  
 ```bash
 Bootstrap: docker
 From: ubuntu
