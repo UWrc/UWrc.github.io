@@ -14,13 +14,6 @@ It has come to our attention that the default configuration of [Miniconda](https
 
 ![](/img/blog/disk-quota-exceeded.png 'Error Message')
 
-:::warning warning post under contruction
-
-We have been made aware that the solutions for disk storage presented here result in additional problems with conda environments, specifically with hardlinks to the install directory for Miniconda3 when envs_dirs and pkgs_dirs are configured to a different storage location. [**Please see this Issue for detailed information.**](https://github.com/conda/conda/issues/13923) we hope to have a better solution soon. 
-
-:::
-
-
 ### Conda's config
 
 Software is usually accompanied by a configuration file (aka "config file") or a text file used to store configuration data for software applications. It typically contains parameters and settings that dictate how the software behaves and interacts it's environment. Familiarity with config files allows for efficient troubleshooting, optimization, and adaptation of software to specific environments, like Hyak's shared HPC environment, enhancing overall usability and performance. Conda's config file `.condarc`, is customizable and lets you determine where packages and environments are stored by conda. 
@@ -36,8 +29,11 @@ The following assumes you have already installed Miniconda in your home director
 :::
 
 ```bash
-$ conda info
+conda info
+```
+The output shoudl look something like this if you have installed Miniconda3. 
 
+```bash
      active environment : None
             shell level : 0
 //highlight-next-line
@@ -72,31 +68,25 @@ Notice the highlighted lines above showing the absolute path to your config file
 
 :::tip
 
-when you `ls` your home directory `ls /mmfs1/home/UWNetID/` you might not see `.condarc` listed. It is there! To list all hidden files (files beginning with `.`) use `ls -a /mmfs1/home/UWNetID/`.
+when you `ls` your home directory (i.e., `ls /mmfs1/home/UWNetID/` or `ls ~`)you might not see `.condarc` listed. It might not be there and you might have to create it in the next step, but you already have one, you much use the following command
+
+```bash 
+ls -a
+```
+
+to list all hidden files (files beginning with `.`).
 
 :::
 
 ### Configuring your package cache and envs directories
 
-Edit the highlighted lines in `.condarc` to designate directories with higher storage quotas for our `envs_dirs` and `pkgs_dirs`. Use a hyak preloaded editor like `nano` or `vim` to edit `.condarc` in place. [More about `nano`](https://www.nano-editor.org/docs.php). [More about `vim`](https://www.vim.org/docs.php). Your `.condarc` will look like this:
+If you don't have a `.condarc` in your home directory, you can create and edit it with a hyak preloaded editor like `nano` or `vim`. Here we will used `nano`.
 
 ```bash
-$ nano ~/.condarc
-
-channels:
-  - conda-forge
-  - bioconda
-  - defaults
-auto_activate_base: true
-envs_dirs:
-//highlight-next-line
-  - /mmfs1/home/UWNetID/miniconda3/envs
-pkgs_dirs:
-//highlight-next-line
-  - /mmfs1/home/UWNetID/conda_pkgs
-
+nano ~/.condarc
 ```
-In this exercise, we will assign our `envs_dirs` and `pkgs_dirs` directories to directories in `/gscratch/scrubbed/` where we have more storage, [although remember scrubbed storage is temporary](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). Alternatively, your lab/research group might have another directory in `/gscratch/` that can be used. 
+
+Edit **OR ADD** the highlighted lines to your `.condarc` to designate directories with higher storage quotas for our `envs_dirs` and `pkgs_dirs`. In this exercise, we will assign our `envs_dirs` and `pkgs_dirs` directories to directories in `/gscratch/scrubbed/` where we have more storage, [**although remember scrubbed storage is temporary and files are deleted automatically after 21 days if the timestamps are not updated**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). Alternatively, your lab/research group might have another directory in `/gscratch/` that can be used. 
 
 :::important
 
@@ -106,35 +96,40 @@ Remember to replace the word `UWNetID` in the paths below with YOUR username/UWN
 
 Here is what your edited .condarc should look like.
 
-```bash
-$ cat /mmfs1/home/UWNetID/.condarc
-
-channels: 
-  - conda-forge
-  - bioconda
-  - defaults
-auto_activate_base: true
+```bash title="~/.condarc"
 envs_dirs:
 //highlight-next-line
   - /gscratch/scrubbed/UWNetID/envs
 pkgs_dirs:
 //highlight-next-line
   - /gscratch/scrubbed/UWNetID/conda_pkgs
+//highlight-next-line
+always_copy: true
 
+```
+In addition to designating the directories, **please include** `always_copy: true`, which is ***required*** on the Hyak filesystem for configuring your `conda` in this way. 
+
+After `.condarc` is edited, we can use `conda info` with `grep` to see if our changes have been incorporated.
+
+```bash
+conda info |grep cache 
+```
+The result should be something like
+```bash
+/gscratch/scrubbed/UWNetID/conda_pkgs
+```
+And for the environments directory
+```bash
+conda info |grep envs
+```
+Result
+```
+/gscratch/scrubbed/UWNetID/envs
 ```
 
 :::warning
-If you don't have a directory under your UWNetID in `/gscratch/scrubbed/`or whereever you intend to designate these directories **you will need to create them now for this to work.** Use the `mkdir` command, for example `mkdir /gscratch/scrubbed/UWNetID` and replace `UWNetID` with your username. Then create directories for your package cache and envs directory, for example, `mkdir /gscratch/scrubbed/UWNetID/conda_pkgs` and `mkdir /gscratch/scrubbed/UWNetID/envs`.
+If you don't have the directories you intend to use under your UWNetID in `/gscratch/scrubbed/`or whereever you intend to designate these directories **you will need to create them now for this to work.** Use the `mkdir` command, for example `mkdir /gscratch/scrubbed/UWNetID` and replace `UWNetID` with your username. Then create directories for your package cache and envs directory, for example, `mkdir /gscratch/scrubbed/UWNetID/conda_pkgs` and `mkdir /gscratch/scrubbed/UWNetID/envs`.
 :::
-
-After `.condarc` is edited, we can use `conda info` to see if our changes have been incorporated.
-
-```bash
-$ conda info |grep cache 
-/gscratch/scrubbed/UWNetID/conda_pkgs
-$ conda info |grep envs
-/gscratch/scrubbed/UWNetID/envs
-```
 
 ### Cleaning up disk storage
 
@@ -146,12 +141,14 @@ After you have reset the package cache and environment directories with your con
 
 :::
 
+Below is an example output from the `du -h --max-depth 1` command
+
 ```bash
 $ du -h --max-depth=1 /mmfs1/home/UWNetID/
-6.7G	./miniconda3/envs
+6.7G	./miniconda3/
 4.0G	./conda_pkgs
 . . .
-$ rm -r /mmfs1/home/UWNetID/envs
+$ rm -r /mmfs1/home/UWNetID/miniconda3/envs
 $ du -h --max-depth=1 /mmfs1/home/UWNetID/
 2.6G	./miniconda3/
 4.0G	./conda_pkgs
@@ -219,3 +216,9 @@ The directory designated by `R_LIBS` will be where R installs your package libra
 ### I'm still stuck
 
 Please reach out to us by emailing help@uw.edu with "hyak" in the subject line to open a help ticket. 
+
+:::important Acknowledgements
+
+Several users noticed some idiosyncrasies when configuring `conda` to better use storage on Hyak. In short, by default miniconda3 uses softlinks to help preserve storage, storing one copy of essential packages (e.g., encodings) and using softlinks to make the single copy available to all conda environments. On Hyak, which utilizes a mounted filesystem server, these softlinks were broken, leading to broken environments after their first usage. We appreciate the help of the Miniconda team who helped us find a solution. More details about this can be found by [**following this link to the closed issue on Github**](https://github.com/conda/conda/issues/13923). 
+
+:::

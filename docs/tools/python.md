@@ -15,6 +15,10 @@ Miniconda3 is a leaner deployment of Python3 versus the more widely known Anacon
 
 We provide a summarized version below to get started but more elaborate instructions directly from anaconda [[www](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)].
 
+:::warning
+Users ofter report issues with disk storage from using Miniconda3 under its default configuration. We recommend reviewing this blog post: [**Disk Storage Management with Conda**](https://hyak.uw.edu/blog/conda-disk-storage) after you have installed Miniconda3 to avoid exceeding disk storage in your home directory while using `conda`. 
+:::
+
 ### Install
 
 Download the latest miniconda3 version.
