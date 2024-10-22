@@ -33,12 +33,12 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="/img/avatar/avatar_uws_uwit.png"
+            src="/img/avatar/xiao_zhu.jpeg"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Erik</h4>
+            <h4 class="avatar__name">Xiao</h4>
             <small class="avatar__subtitle">
-              Manager
+              AVP, Research Computing
             </small>
           </div>
         </div>
@@ -71,10 +71,10 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="/img/avatar/avatar_uws_uwit.png"
+            src="/img/avatar/jfrulla.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Ryan</h4>
+            <h4 class="avatar__name">Jake</h4>
             <small class="avatar__subtitle">
               HPC Systems Engineer
             </small>
