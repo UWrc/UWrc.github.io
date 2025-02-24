@@ -1,4 +1,4 @@
 # Add an alias to sync the fork to the parent repo
 alias sync='gh repo sync $(git config --get remote.origin.url)'
 # Add an alias to create a labelled pull request
-alias pr='gh pr create --label "site contribution" --title'
+alias pr='gh pr create --fill --title'
