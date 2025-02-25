@@ -21,7 +21,9 @@
         // Markdown shortcuts and utilities
         "yzhang.markdown-all-in-one",
         // Better markdown preview
-        "shd101wyy.markdown-preview-enhanced"
+        "shd101wyy.markdown-preview-enhanced",
+        // Markdown linter for consistent style
+        "davidanson.vscode-markdownlint"
       ]
     }
   },
