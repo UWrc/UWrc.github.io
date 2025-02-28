@@ -50,4 +50,31 @@ or
 
 
 ### 2. Apptainer Image
-Under the `Jupyter Container` section of the form, you can enter the path of the custom Apptainer image you want to use. We offer a number of pre-built Apptainer images with popular libraries and tools. If you are unfamiliar with containers, you can learn more from [our tutorial](https://hyak.uw.edu/docs/hyak101/containers/syllabus/).
+Under the `Jupyter Container` section of the form, you can enter the path of the custom Apptainer image you want to use. We offer a number of pre-built Apptainer images with popular libraries and tools. If you are unfamiliar with containers, you can learn more from [our tutorial](https://hyak.uw.edu/docs/hyak101/containers/syllabus/). A quick example is below:
+
+1. Obtain the desired container from a container catalog. For example, we can use `nvcr.io/nvidia/pytorch:25.01-py3` from the [NVIDIA catalog](https://catalog.ngc.nvidia.com).
+2. Pull the container to Hyak:
+```bash
+[bsoni@n3263 ~]$ apptainer pull docker://nvcr.io/nvidia/pytorch:25.01-py3 <directory_with_large_quota>
+```
+If we want to make modifications to the container, we can use a definition file to install packages on the image, set up environment variables, or more, as shown below:
+
+```bash
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:25.01-py3
+
+%post
+    apt-get -y update
+    apt-get -y install <package1> <package2> . . .
+    mkdir /scr /mmfs1
+    ln --symbolic /mmfs1/sw /sw
+    ln --symbolic /mmfs1/data /data
+    ln --symbolic /mmfs1/gscratch /gscratch
+%environment
+    export PATH=/usr/bin:$PATH
+```
+3. Obtain the resolved physical path of the container:
+```bash
+[bsoni@n3263 ~]$ realpath <container_path>
+```
+4. Enter the path of the container in the `Jupyter Container` section of the form.
