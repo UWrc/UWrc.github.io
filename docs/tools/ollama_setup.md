@@ -3,15 +3,15 @@ id: ollama_setup
 title: Using Ollama on Hyak
 ---
 
-Conventional LLM tools require root access for installation on Hyak. To maintain system security and stability, users do not have root or sudo access. Administrative privileges, including external program installations, are reserved for system administrators. To work around this, LLMs can be used via software [containers](https://hyak.uw.edu/docs/tools/containers).
+Conventional LLM tools require root access for installation on Hyak. To maintain system security and stability, users do not have root or sudo access. Administrative privileges, including external program installations, are reserved for system administrators. To work around this, LLMs can be used via software **[containers](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container)**.
 
 ## What Are Ollama LLMs?
 
-Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is reccommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with [Apptainer](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity) and [requesting GPU jobs](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition). 
+Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is reccommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with **[Apptainer](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity)** and **[requesting GPU jobs](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition)**. 
 
 ## Installing Ollama as a Container
 
-You can install Ollama in a container definition file. This example will use the NVIDIA HPC SDK container. The NVIDIA HPC SDK container has Nvidia and Cuda dirvers. Create the definition file with `vim` or `nano`:
+You can install Ollama in a container definition file. This example will use the **[NVIDIA HPC SDK](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc)** container. The NVIDIA HPC SDK container has Nvidia and Cuda dirvers. Create the definition file with `vim` or `nano`:
 ```bash
 nano ollama.def
 ```
@@ -23,12 +23,18 @@ From: nvcr.io/nvidia/nvhpc:24.9-devel-cuda_multi-rockylinux8
     # Ollama install
     curl -L https://ollama.com/download/ollama-linux-amd64.tgz -o ollama-linux-amd64.tgz
     tar -C /usr -xzf ollama-linux-amd64.tgz
-    
+
 ```
-Next, you will want to pull the NVIDIA base container and install Ollama inside of it. You can build the container interactively on a GPU node or as a job submission:
+:::note Customizing Your Container
+
+In this example, the v.24.9 with RockyLinux8 NVHPC container is used. You may use other versions of NVHPC containers by modifying the `From:` line in your definition file. To view other available versions of NVHPC containers, click **[HERE](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc/tags)**.
+
+:::
+
+Next, you will want to pull the NVIDIA base container and install Ollama inside of it. You can build the container interactively or as a job submission:
 ```bash
 # interactively from checkpoint
-salloc --partition=ckpt-all --gpus=l40s:1 --mem=80G --time=8:00:00
+salloc --partition=ckpt-all --cpus-per-task=2 --mem=50G --time=8:00:00
 ```
 ```bash
 apptainer build ollama.sif ollama.def
@@ -41,7 +47,7 @@ cp /mmfs1/sw/ollama/ollama.sif .
 :::note Requesting Resources for Larger LLMs
 Depending on the size of the model you wish to run, you may want to request more resources. You can request all available memory with `--mem=0`. When requesting multiple GPUs, LLMs may run into issues distributing their memory usage across the GPUs. If the model is configured properly, this should not be an issue. You can request up to 8 GPUs (an entire GPU server). Efficiency will drop when requesting more than 8 GPUs because the GPU cards will be located on different nodes.  
 
-Note that the more resources you request may increase the wait times to get your requested resources. It can be useful to convert the `salloc` flags above into `#SBATCH` directives in a executable bash ([sbatch](https://hyak.uw.edu/docs/hyak101/basics/jobs#batch-jobs)) script along with the commands you want Ollama to execute when anticipated wait times are long. Additional information on requesting a GPU job can be found [HERE](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-checkpoint). 
+Note that the more resources you request may increase the wait times to get your requested resources. It can be useful to convert the `salloc` flags above into `#SBATCH` directives in a executable bash (**[sbatch](https://hyak.uw.edu/docs/hyak101/basics/jobs#batch-jobs)**) script along with the commands you want Ollama to execute when anticipated wait times are long. Additional information on requesting a GPU job can be found **[HERE](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-checkpoint)**. 
 :::
 To ensure the container was properly built, start an interactive shell session:
 ```bash
@@ -59,10 +65,11 @@ ollama run llama3.2
 ```
 
 :::tip Managing Your Ollama Storage
-By default, pulled Ollama models will save in your home directory in a hidden file named `.ollama`. Because your home directory has a 10GB limit, you may get a disk quota error when pulling larger models. Use the following command to check the storage in your come directory:
+By default, pulled Ollama models will save in your **[home directory](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory)** in a hidden file named `.ollama`. Because your home directory has a 10GB limit, you may get a disk quota error when pulling larger models. Use the following commands to check the storage in your home directory and to list all hidden files:
 ```bash
-cd ~
-du -h --max-depth 1
+cd ~ # changing to your home directory
+ls -a # lists all hidden files
+du -h --max-depth 1 # checks your storage
 ```
 If the `.ollama` directory is large enough, you may run into a disk quota error. You will need to clear out this directory by removing the `models` directory and creating a new default directory for ollama storage.
 ```bash
@@ -89,5 +96,6 @@ cd .ollama
 ln -s /gscratch/lab-name/my-directory/ollama/models models
 ls -s
 ```
-You should see `models` highlighted in light blue with an arrow pointing to the path to the new `models` directory you created. New ollama models will save here instead of `.ollama/models` so your home directory stays under the 10GB limit.
+You should see `models` highlighted in light blue with an arrow pointing to the path to the new `models` directory you created. New ollama models will save here instead of `.ollama/models` so your home directory stays under the 10GB limit. 
 :::
+
