@@ -14,6 +14,7 @@ This thing is written based on only the cursory experimenting I've done so far
 Basically all Markdown files go in the `docs` folder
 
 Each Markdown file should have at least `id` and `title` YAML headers:
+
 ```yaml
 ---
 id: some-id  # seems like the convention is to separate words with hyphens?
@@ -30,6 +31,7 @@ title: Some Title
 Add the `id` of the Markdown document to the correct category/make new category in `sidebars.js`
 
 `sidebars.js` should have a general structure like:
+
 ```js
 module.exports = {
     sidebarName: {
@@ -58,7 +60,8 @@ module.exports = {
 ---
 
 **Full description of possible headers (more info [here](https://v2.docusaurus.io/docs/markdown-features)):**
-- `id`: A unique document id. If this field is not present, the document's `id` will default to its file name (without the extension). *(Please still explicitly include the `id` though! )* 
+
+- `id`: A unique document id. If this field is not present, the document's `id` will default to its file name (without the extension). *(Please still explicitly include the `id` though! )*
 - `title`: The title of your document. If this field is not present, the document's `title` will default to its `id`. *(Also explicitly include the title too)*
 - `hide_title`: Whether to hide the title at the top of the doc. By default it is `false`.
 - `sidebar_label`: The text shown in the document sidebar and in the next/previous button for this document. If this field is not present, the document's `sidebar_label` will default to its `title`.
