@@ -11,42 +11,34 @@ You can write content using [GitHub-flavored Markdown syntax](https://github.git
 To serve as an example page when styling markdown based Docusaurus sites.
 
 ---
-
 ## Headers
 
 # H1 - Create the best documentation
-
-```
-
+``` 
 # Write your header after hashtag/s
 ```
 
 ## H2 - Create the best documentation
-
 ```
 ## Write your header after hashtag/s
 ```
 
 ### H3 - Create the best documentation
-
 ```
 ### Write your header after hashtag/s
 ```
 
 #### H4 - Create the best documentation
-
 ```
 #### Write your header after hashtag/s
 ```
 
 ##### H5 - Create the best documentation
-
 ```
 ##### Write your header after hashtag/s
 ```
 
 ###### H6 - Create the best documentation
-
 ```
 ###### Write your header after hashtag/s
 ```
@@ -56,21 +48,18 @@ To serve as an example page when styling markdown based Docusaurus sites.
 ## Emphasis
 
 Emphasis, aka italics, with _asterisks_ or _underscores_.
-
 ```
 *italicized text*
 _italicized text_
 ```
 
 Strong emphasis, aka bold, with double **asterisks** or double **underscores**.
-
 ```
 **bolded text**
 __bolded text__
 ```
 
 Combined emphasis with **asterisks and _underscores_**.
-
 ```
 **makes word
 
@@ -87,7 +76,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅ ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅ ⋅⋅⋅(This is contrary to the typical GFM line break behavior, where trailing spaces are not required.)
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅ ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅ ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
 - Unordered list can use asterisks
 
@@ -163,7 +152,6 @@ function highlightMe() {
 Colons can be used to align columns.
 
 Code:
-
 ```
 | Tables        |      Are      |   Cool |
 | ------------- | :-----------: | -----: |
@@ -183,7 +171,6 @@ Result:
 There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
 Code:
-
 ```
 | Markdown | Less      | Pretty     |
 | -------- | --------- | ---------- |
@@ -192,11 +179,11 @@ Code:
 ```
 
 Result:
-
 | Markdown | Less      | Pretty     |
 | -------- | --------- | ---------- |
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
+
 
 ---
 
