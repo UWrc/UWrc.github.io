@@ -12,9 +12,9 @@ Here are some examples of GUIs which you interact with on your local computer as
 1. **Windows Explorer** - a file management tool for Windows that visually represents files, folders, and drives, translating the command-based operations of Command Prompt or PowerShell into intuitive, clickable icons and windows.
 2. **MacOS Finder** - a file management tool for MacOS that visually organizes and allows navigation of files, folders, and applications, translating the command-based operations of the Terminal into an intuitive, icon-based environment.
 
-That's right, everytime you click and icon or item in Windows Explorer or Finder, a program is running on the command line in the background to perform the action such as viewing a list of files, opening a file, or executing an application. 
+That's right, everytime you click an icon or item in Windows Explorer or Finder, a program is running on the command line in the background to perform the action such as viewing a list of files, opening a file, or executing an application. 
 
-Visualize your Windows Explorer or Finder. As you click on directory or folder icons, you move through your local computer's file system to view items (documents, scripts, photos) inside. In this section we will use the CLI to move through directories and view their content on `klone`. We will use commands to call programs that tell use "where we are" on `klone` and what items we can access. 
+Visualize your Windows Explorer or Finder. As you click on directory or folder icons, you move through your local computer's file system to view items (documents, scripts, photos) inside. In this section we will use the CLI to move through directories and view their content on `klone`. We will use commands to call programs that tell us "where" we are on `klone` and what items we can access. 
 :::
 
 ## Location is Key
@@ -101,7 +101,7 @@ If you have just started as a Hyak user, your Home directory might be empty.
 ```bash
 ls
 ```
-Executing the command above may produce no result if you haven't logged in before. However, we can use `ls` to explore the `klone` filesystem and help us batter understand how to navigate it. 
+Executing the command above may produce no result if you haven't logged in before. However, we can use `ls` to explore the `klone` filesystem and help us better understand how to navigate it. 
 
 Let's use `cd` to go to the base of the `klone` filesystem, which is called the "root." Rather than being called "root" the root directory is referred to as `/`. Let's move to the root directory and list its contents. 
 
@@ -130,9 +130,9 @@ ls mmfs1/
 ```
 admin  apsearch  data  encrypted  gscratch  home  slurmdata  ssg  sw
 ```
-Some of these names might be familiar to you. For example, every user on Hyak has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` which has a directory for each Hyak user. Similarly, above we changed directory to a directory inside of `mmfs1/` called `sw/`.
+Some of these names might be familiar to you. For example, every user on Hyak has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` containing a directory for each Hyak user. Similarly, above we changed directory to a directory inside of `mmfs1/` called `sw/`.
 
-Picture the `klone` filesystem as an upside down tree. The topmost directory is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to Hyak have their storage directories. 
+Picture the `klone` tree where the top is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to Hyak have their storage directories. 
 
 ![](/img/docs/hyak101/basics/filesystem.png 'filesystem')
 
@@ -222,6 +222,6 @@ Another important aspect of location on `klone` is the node or computer that you
 [UWNetID@klone-login01 ~]$
 ```
 
-As mentioned in the last section, `@klone-login01` indicates I am logged into or using one of the login nodes Hyak. Later when we learn how to start interactive jobs, this part of our prompt will change, indicating we are on a different node. Importantly, just because you are on a different node, your Home directory and working directories (for example, directories under your lab group's `/gscratch` or under `/gscratch/scrubbed`) will have the same absolute path across all computers in the `klone` cluster.  
+As mentioned in the last section, `@klone-login01` indicates you are logged into or using one of the login nodes on Hyak. Later when we learn how to start interactive jobs, this part of our prompt will change, indicating we are on a different node. Importantly, even though you are on a different node, your Home directory and working directories (for example, directories under your lab group's `/gscratch` or under `/gscratch/scrubbed`) will still have the same absolute path across all computers in the `klone` cluster.  
 
 In the next section, we will learn more commands to help you get used to `klone`'s Linux CLI.
