@@ -3,21 +3,21 @@ id: linux
 title: Basic Linux Commands
 ---
 
-In this section, we will review more commands to get you comfortable do basic things on Hyak. This section has sampled some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most Hyak users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
+In this section, we will review more commands to get you comfortable doing basic things on Hyak. Some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most Hyak users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 
 ## Your Working Directory
 
 We have discussed storage on Hyak a bit in this tutorial, but it is important to emphasize here, that you should avoid storing data, scripts, and software in your Home directory where you will quickly run out of storage due to its 10GB quota. For this reason, it is important to understand your other storage options on Hyak, which are as follows: 
 
 1. If you are part of a lab group who contributed resources to Hyak (slices) then you have storage under their directory in `/mmfs1/gscratch/labname`. Where the word `labname` is replaced by the name of your lab group on Hyak. Check with your PI or labmates to find out what that directory is called., or use the `hyakalloc` command which will show the `labname` and the directory name for your lab.  
-2. If you are a student and you have applied to be part of the Research Computing Club (RCC), you have have storage under `/mmfs1/gscratch/stf/`. The RCC has set storage quotas for users there. Please inquire with the RCC about `stf` storage quotas. [**Apply for an `stf` account [HERE]**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/)
+2. If you are a student and you have applied to be part of the Research Computing Club (RCC), you have storage under `/mmfs1/gscratch/stf/`. The RCC has set storage quotas for users there. Please inquire with the RCC about `stf` storage quotas. [**Apply for an `stf` account [HERE]**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/)
 3. If you don't fall into any of these categories, we have temporary community storage under `/gscratch/scrubbed/`; however, directories and files here will be automatically deleted if not used after 21 days. Please review our documentation about `/gscratch/scrubbed/` [**HERE**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). 
 
 For this tutorial, we will make a working directory under `/gscratch/scrubbed/` and perform the exercises there. You can do the same, or perform the following command in another storage area you have access to (i.e., a lab group directory or under `stf`).
 
 ### `mkdir`
 
-#### "make directory" or `mkdir` to make am empty directory you can work in. 
+#### "make directory" or `mkdir` to make an empty directory you can work in. 
 
 First navigate to `/gscratch/scrubbed/` or the location you have selected for your working directory. 
 
@@ -226,7 +226,7 @@ If you need to refer to names of files or directories that have spaces or other 
 
 #### use `nano` text editor on `klone`
 
-To edit files on `klone` we need to go back to basic text editors. You will not have access to a word processer and formatting and syntax doesn't always translate from Microsoft Word or similar software to executable commands on `klone`. With the next command, we will create a file called `draft.txt` and open it in the text editor `nano`.
+To edit files on `klone` we need to go back to basic text editors. You will not have access to a word processer, and formatting and syntax doesn't always translate from Microsoft Word or similar software to executable commands on `klone`. With the next command, we will create a file called `draft.txt` and open it in the text editor `nano`.
 
 First change directory to thesis:
 ```bash
@@ -268,11 +268,11 @@ it's "share and thrive".
 ```
  
 :::note important concept: Paths and Access
-In the last section we talked about your "location" or "places" in the `klone` filesystem. On the command line, your location determines what you have access to. To demonstrate this important concenpt, consider the following example: 
+In the last section we talked about your "location" or "places" in the `klone` filesystem. On the command line, your location determines what you have access to. To demonstrate this important concept, consider the following example: 
 
 There is a dataset of sequences from a mythical creatue called a Basilisk (from the Harry Potter Universe). The dataset is called `basilisk.dat`. If you wanted to execute anything on `basilisk.dat` you would not be able to unless you are inside of the directory where it is stored. Let's go find it and print its contents to the shell with `cat`.
 
-If you have been following along and you are in the thesis directory, change directory to two directories "above" thesis (i.e., two directories closer to the root directory (`/`)) and enter a directory called `creatures/`
+If you have been following along and you are in the thesis directory, change directory to two directories "above" thesis (i.e., two directories closer to the root directory `/`) and enter a directory called `creatures/`
 
 ```bash
 cd ../../creatures/
@@ -305,7 +305,7 @@ CCGCACCTCT
 ### Truncated
 ```
 
-To illustrate the concept of paths and access. Let's go back to `thesis` and try to do the same thing. Change directory to one directory "above" the `cretures`, then go into `writing` and finally `thesis`.
+To illustrate the concept of paths and access. Let's go back to `thesis` and try to do the same thing. Change directory to one directory "above" the `creatures`, then go into `writing` and finally `thesis`.
 
 ```bash
 cd ../writing/thesis
