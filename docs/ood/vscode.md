@@ -2,7 +2,7 @@
 id: vscode
 title: VS Code
 ---
-Visual Studio Code (VS Code) is a popular open-source code editor that supports a range of languages and extensions. We offer VS Code through [code-server](https://github.com/coder/code-server) as a tool for developing code on Hyak. Our OnDemand application allows users to connect to allocated compute nodes without a complicated ProxyJump setup.
+Visual Studio Code (VS Code) is a popular open-source code editor that supports a range of languages and extensions. We offer VS Code through [code-server](https://github.com/coder/code-server) as a tool for developing code on Hyak. Our OnDemand application allows users to connect to allocated compute nodes without a complicated [ProxyJump](https://hyak.uw.edu/docs/tools/vsc-proxy-jump) setup.
 
 ## Setup
 1. Ensure you have set up [<u>intracluster keys</u>](https://hyak.uw.edu/docs/setup/intracluster-keys) to SSH between klone nodes without a password.

@@ -55,7 +55,7 @@ Under the `Jupyter Container` section of the form, you can enter the path of the
 1. Obtain the desired container from a container catalog. For example, we can use `nvcr.io/nvidia/pytorch:25.01-py3` from the [NVIDIA catalog](https://catalog.ngc.nvidia.com).
 2. Pull the container to Hyak:
 ```bash
-[bsoni@n3263 ~]$ apptainer pull docker://nvcr.io/nvidia/pytorch:25.01-py3 <directory_with_large_quota>
+apptainer pull docker://nvcr.io/nvidia/pytorch:25.01-py3 <directory_with_large_quota>
 ```
 If we want to make modifications to the container, we can use a definition file to install packages on the image, set up environment variables, or more, as shown below:
 
@@ -75,6 +75,6 @@ From: nvcr.io/nvidia/pytorch:25.01-py3
 ```
 3. Obtain the resolved physical path of the container:
 ```bash
-[bsoni@n3263 ~]$ realpath <container_path>
+realpath <container_path>
 ```
 4. Enter the path of the container in the `Jupyter Container` section of the form.
