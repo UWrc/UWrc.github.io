@@ -4,6 +4,10 @@
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator. SVG logos provided using [VectorLogoZone](https://www.vectorlogo.zone) or [logosear.ch](https://logosear.ch). Using the offline search plugin from [@lelouch77](https://github.com/lelouch77/docusaurus-lunr-search).
 
+### Devcontainer Development
+
+There are directions on the [documentation site](https://hyak.uw.edu/docs/contribute/pull-request) on setting up a container based environment which we recommend. If you would still prefer a local environment then follow the directions below.
+
 ### JS Frameworks Installation
 
 Set up your local environment by installing all the required JS frameworks by using yarn.
@@ -44,7 +48,7 @@ $ GIT_USER=UWrc yarn deploy
 
 ### Code Contribution
 
-1. Create a local branch using `git checkout -b feature/feature_name`. Try to be specific with naming and use either `bugfix` or `feature` to help guide the team in what they are looking at. 
+1. Create a local branch using `git checkout -b feature/feature_name`. Try to be specific with naming and use either `bugfix` or `feature` to help guide the team in what they are looking at.
 2. Make your commits then push the branch to the central repository on Github (e.g., `git push origin mybranch`).
 3. Use the Github website to manually create a pull request (PR) and document in more detail your changes. Tag a specific team member to review, if appropriate.
 4. Once all necessary reviewing parties (minimum 1) review your code, perform a final review and either merge your code interactively through Github or using the Git CLI if you feel an interactive rebase is necessary for cleanup.
