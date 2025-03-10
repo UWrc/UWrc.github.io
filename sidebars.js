@@ -29,12 +29,12 @@ module.exports = {
       }
     ],
     'Data Commons':
-    [
-      'data-commons/requirements',
-      'data-commons/imagenet',
-      'data-commons/tablib',
-      'data-commons/the_pile',
-    ],
+      [
+        'data-commons/requirements',
+        'data-commons/imagenet',
+        'data-commons/tablib',
+        'data-commons/the_pile',
+      ],
     'Compute': [
       'compute/start-here',
       'compute/scheduling-jobs',
@@ -46,6 +46,7 @@ module.exports = {
       'ood/schedule-job',
       'ood/matlab',
       'ood/jupyter',
+      'ood/vscode',
     ],
     'Tools & Software': [
       'tools/software',
@@ -54,7 +55,7 @@ module.exports = {
       'tools/containers',
       'tools/squashfs',
       'tools/modules-containers',
-      
+
       {
         'Using GPUs on Hyak': [
           'tools/gpu_start',
@@ -97,7 +98,7 @@ module.exports = {
       },
       {
         'Slurm': [
-          'hyak101/basics/syllabus_slurm', 
+          'hyak101/basics/syllabus_slurm',
           'hyak101/basics/jobs',
           'hyak101/basics/arrays',
         ]
@@ -105,7 +106,7 @@ module.exports = {
       {
         'Advanced Slurm': [
           'hyak101/basics/syllabus_advanced',
-          'hyak101/basics/advanced', 
+          'hyak101/basics/advanced',
           'hyak101/basics/nn_batch',
           'hyak101/basics/nn_array',
           'hyak101/basics/nn_sweep',
