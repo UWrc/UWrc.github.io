@@ -4,14 +4,6 @@ title: Start Here
 ---
 GPUs offer significant performance enhancements for computationally intensive tasks. GPU cores are designed for parallel computating, making them a useful tool for training machine learning models, molecular dynamics simulations, and data mining. Unlike CPUs which excel at sequential tasks, GPUs can handle large numbers of simultaneous operations.
 
-:::note Relevant Vocabulary
-**Apptainer**: Apptainer is a container program that facilitates the ability to create and run portable and reproducible containers, especially in an HPC environment like Hyak's current generation cluster, klone.
-
-**Apptainer Definition File**: a recipe file for an Apptainer container which contains install instructions for software to be containerized. The file extension for an Apptainer definition file is .def.
-
-**NVIDIA GPU Cloud**: A container registry that specializes in common GPU accelerated applications or GPU software development tools provided by NVIDIA. The [NVIDIA NGC catalog](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has a wide variety of containers for machine learning and AI applications.
-:::
-
 ## GPU Jobs
 You can view the available GPUs on Hyak with the `sinfo -s` command. To view which GPUs are available on the `ckpt` partition, use:
 ```

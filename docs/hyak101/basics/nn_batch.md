@@ -306,7 +306,7 @@ In the next exercises, leave this terminal open and execute `watch -n 10 squeue 
 As soon as the job begins, Slurm will save a file called `locator_job_12345678.out` where the number is replaced with the JobID Slurm assigned to your job. The output that would normally be printed to the screen while locator is running (which we saw when we ran locator interactively) will be saved to this file. View this file with `cat`
 
 ```bash
-cat locator_job_12345678.out
+more locator_job_12345678.out
 ```
 Or follow the messages in real time with the `tail` command and the flag `--follow`.
 

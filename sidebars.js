@@ -41,6 +41,12 @@ module.exports = {
       'compute/checkpoint',
       'compute/resource-monitoring',
     ],
+    'GPUs':[
+      'gpus/gpu_start',
+      'gpus/nvidia_ngc',
+      'gpus/ollama_setup',
+    ],
+
     'Open OnDemand': [
       'ood/start',
       'ood/schedule-job',
@@ -55,15 +61,6 @@ module.exports = {
       'tools/containers',
       'tools/squashfs',
       'tools/modules-containers',
-
-      {
-        'Using GPUs on Hyak': [
-          'tools/gpu_start',
-          'tools/nvidia_ngc',
-          'tools/ollama_setup',
-        ]
-      },
-
       'tools/dmtcp',
       'tools/r',
       'tools/python',
