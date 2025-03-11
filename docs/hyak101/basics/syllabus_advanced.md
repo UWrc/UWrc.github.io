@@ -22,7 +22,7 @@ Now that you have mastered: (1) using the command line to navigate and execute c
 
 :::tip Video tutorial available
 
-COMING SOON
+On February 25, 2025, we delivered this tutorial live. [**Follow this link to watch the live demonstration.**](https://www.youtube.com/watch?v=Mflpj3cTMu8)
 :::
 
 :::note Relevant Vocabulary
