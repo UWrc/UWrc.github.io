@@ -76,7 +76,33 @@ From: ubuntu:16.04
 ```bash
 apptainer build --fakeroot /tmp/tools.sif ./tools.def
 ```
+:::caution Disk Quota Exceeded
 
+When building a container, you may encournter the following error:
+
+![](/img/docs/disk-quota-exceeded.png 'Disk Quota Exceeded Error Message')
+
+If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your **[home directory](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)**  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
+```bash
+du -h --max-depth 1
+```
+If you find your storage exeeding the 10GB quota, you will need to eliminate storage. It can be helpful to clear the Apptainer cache with the following:
+```bash
+apptainer cache clean
+```
+You can now start up a job on a compute node with `salloc` if you have not already. 
+When you start a job on a compute node, the internal storage of that node
+is available to be used for temporary read/write operations with the jobs.
+This makes it a great place for the apptainer cache and the physical architecture of our filesystem doesn't interfere with this. 
+You can configure Apptainer to store its cache in a directory located on the local storage of the compute node with:
+```bash
+export APPTAINER_CACHEDIR=/path/to/directory
+```
+You can now proceed with building your container:
+```bash
+apptainer build container-image.sif container-recipe.def
+```
+:::
 5. Move the container image to the desired location and run the binary.
 
 You'll do this through the `apptainer` executable to distinguish it from the `git` binary in the main operation system.
