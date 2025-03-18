@@ -129,6 +129,31 @@ Your lab storage quota can be increased (or decreased) in 1 TB granularity and a
 Check group quotas and current use with the `hyakstorage` command.
 :::
 
+## Data Lifecycle
+
+Users leaving UW should plan to remove or secure their data to prevent the exposure of confidential information and to keep the system organized. Unsecured data may expose sensitive research findings or personal data while unused or leftover data may impact the system performance for other users. To prevent this from happening, you have the option to "will" your data to another user or to transfer the data away. Listed below are various scenarios and recommended methods for removing and passing down data:
+
+1. **Changing File Ownership To Your Principal Investigator**
+
+ If you are working with a lab, the data produced during that work is the ultimate intellectual property of the Principal Investigator on the project. Before you leave, you should change ownership of the files or directories to the Principal Investigator or another person in the lab with the `chown` command:
+```bash
+# For an entire directory
+chown <new owner NetID> directory/
+# For a singular file
+chown <new owner NetID> file.txt
+```
+2. **Changing File Names**
+
+For long term stability of your data in another’s hands, it is better to change the directory name to be descriptive. Rather than changing the ownership of a file alone, if the directory is your UWNetID, it is recommended that the new owner moves the directory into a directory under their name or change the name of the directory to be descriptive (i.e., “datafiles” or “scripts”) so that these files are not associated with a user that is no longer part of the system. To do this, use the **[`mv`](https://hyak.uw.edu/docs/hyak101/basics/linux-2#mv)** command for moving and renaming files.
+
+3. **Data Transfer To External Devices**
+
+If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the **[data transfer](https://hyak.uw.edu/docs/storage/transfer)** page for more information on transferring data between Hyak and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
+
+4. **Reclaiming Data From a User That Has Left UW**
+
+In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions via sending an email to help@uw.edu with “Hyak” in the subject line.  
+
 ## Scrubbed
 
 - Free to use but files auto-deleted beyond 21 days.
