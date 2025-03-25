@@ -138,7 +138,7 @@ Users leaving UW should plan to remove or secure their data to prevent the expos
  If you are working with a lab, the data produced during that work is the ultimate intellectual property of the Principal Investigator on the project. Before you leave, you should change ownership of the files or directories to the Principal Investigator or another person in the lab with the `chown` command:
 ```bash
 # For an entire directory
-chown <new owner NetID> directory/
+chown -R <new owner NetID> directory/
 # For a singular file
 chown <new owner NetID> file.txt
 ```
