@@ -3,7 +3,7 @@ id: demonstration
 title: Pulling Containers
 ---
 
-Pulling pre-built container images is often the easiest and quickest way to run your desired software enviroment. In this tutorial, we will pull a container from [**Docker Hub**](https://hub.docker.com/). DockerHub is a cloud-based registry that provides access to a large repository of pre-built container images. Other container registries include [**NVIDIA NGC**](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=), [**Biocontainers**](https://biocontainers.pro/registry), [**Sylabs.io**](https://cloud.sylabs.io/library), and [**Quay.io**](https://quay.io/). For more information on accessible container registries, check out the containers documentation page [**HERE**](https://hyak.uw.edu/docs/tools/containers#container-repositories). 
+Pulling pre-built container images is often the easiest and quickest way to run your desired software environment. In this tutorial, we will pull a container from [**Docker Hub**](https://hub.docker.com/). DockerHub is a cloud-based registry that provides access to a large repository of pre-built container images. Other container registries include [**NVIDIA NGC**](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=), [**Biocontainers**](https://biocontainers.pro/registry), [**Sylabs.io**](https://cloud.sylabs.io/library), and [**Quay.io**](https://quay.io/). For more information on accessible container registries, check out the containers documentation page [**HERE**](https://hyak.uw.edu/docs/tools/containers#container-repositories).
 
 ## Set Up
 
@@ -13,43 +13,54 @@ To start, log into Hyak and navigate away from your home directory to a director
 # Remember to replace the word "UWNetID" in the command below with your UW NetID. 
 ssh UWNetID@klone.hyak.uw.edu
 ```
+
 Navigate to `/gscratch/scrubbed/`
+
 ```bash
 cd /gscratch/scrubbed
 ```
-If you have not already, make a directory with your UW NetID. 
+
+If you have not already, make a directory with your UW NetID.
+
 ```bash
 # Remember to replace the word "UWNetID" in the command below with your UW NetID.
 mkdir UWNetID
 cd UWNetID
 ```
+
 Next, ensure that the tutorial materials are copied to your working directory. In this tutorial, your copy of the basics directory will be our working directory:
+
 ```bash
 cp -r /sw/hyak101/basics .
 cd basics
 ```
+
 The program `klone` uses for containers is Apptainer. When pulling a Docker container, Apptainer is able to convert the Docker container into an Apptainer container. However, to use Apptainer, you must be on a compute node:
+
 ```bash
 salloc --partition=ckpt-all --cpus-per-task=1 --mem=10G --time=2:00:00
 ```
-#### Remember to use `hyakalloc` to see all of your available resources. If you are a demo account user, please use the `ckpt-all` partition as shown above. 
+
+### Remember to use `hyakalloc` to see all of your available resources. If you are a demo account user, please use the `ckpt-all` partition as shown above
 
 ## Pulling a Container to Hyak from Docker Hub
 
-For this exercise, we will pull a Python container from [**Docker Hub**](https://hub.docker.com/). [**Follow this link to open Docker Hub**](https://hub.docker.com/) and search for Python. Choose the first search result with the green badge symbol next to it. This green symbol indicates that it is an official docker image. 
+For this exercise, we will pull a Python container from [**Docker Hub**](https://hub.docker.com/). [**Follow this link to open Docker Hub**](https://hub.docker.com/) and search for Python. Choose the first search result with the green badge symbol next to it. This green symbol indicates that it is an official docker image.
 
 ![](/img/docs/containers-tutorial/dockerhub_python1.png 'Official Python Image on Docker')
 
-
-Next, click on "Tags" tab next to the "Overview" tab. Notice how you can search for previous versions of Python here. In this tutorial, we will download the most recent verison of Python (as of Fall 2024), which is installed in a container running Ubuntu's slim-bullseye release. Copy the code from the code box for the `3.9.20-bullseye` image and paste it into your terminal. 
+Next, click on the "Tags" tab next to the "Overview" tab. Notice how you can search for previous versions of Python here. In this tutorial, we will download the most recent version of Python (as of Fall 2024), which is installed in a container running Ubuntu's slim-bullseye release. Copy the code from the code box for the `3.9.20-bullseye` image and paste it into your terminal.
 
 ![](/img/docs/containers-tutorial/dockerhub_python2.png 'Container pull code for Python image')
 
 Omit `docker pull` and replace it with `apptainer pull docker://` so Apptainer pulls the container image from Docker Hub and converts it into an Apptainer container. Run this code to pull and build the container.
+
 ```bash
 apptainer pull docker://python:3.9.20-slim-bullseye
 ```
+
 The build should last 30 seconds to 1 minute. During the pull and build, you will see messages from Apptainer on the progress of the command.
+
 ```bash
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
@@ -66,54 +77,70 @@ Writing manifest to image destination
 INFO:    Creating SIF file...
 ```
 
-Once that is complete, check to see if it was sucessfully built. The container will have a file extension `.sif`.
+Once that is complete, check to see if it was successfully built. The container will have a file extension `.sif`.
+
 ```bash
 ls
 ```
+
 ```bash
 python_3.9.20-slim-bullseye.sif
 ```
+
 You are now able to open a shell inside the container where you can run Python:
+
 ```bash
 apptainer shell python_3.9.20-slim-bullseye.sif
 ```
+
 The command prompt will change and now start with `Apptainer>`. This is how you know that you are now inside the Apptainer container. Input `python` into the terminal to open the container's Python shell:
+
 ```bash
 Apptainer>python
 ```
+
 ```bash
 Python 3.9.20 (main, Oct 19 2024, 01:00:05) 
 [GCC 10.2.1 20210110] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-`>>>` should appear on the command prompt, indiciating that you are now able to use Python interactively. To exit Python, use `Ctrl+D`. 
+
+`>>>` should appear on the command prompt, indicating that you are now able to use Python interactively. To exit Python, use `Ctrl+D`.
 To exit the container write `exit`
 
-```bash 
+```bash
 exit
 ```
+
 :::note
-The above tutorial is useful if you want to use the most recent verison of Python. However, there is a native version of Python installed on Hyak. Check what version of Python this is with:
+The above tutorial is useful if you want to use the most recent version of Python. However, there is a native version of Python installed on Hyak. Check what version of Python this is with:
+
 ```bash
 python --version
 ```
+
 You can check the version of Python in the container with the following command:
+
 ```bash
 apptainer exec python_3.9.20-slim-bullseye.sif python --version
 ```
-`apptainer exec` rather than `apptainer shell` sends a command to be **executed** inside the container, rather than first opening a shell into the container. 
+
+`apptainer exec` rather than `apptainer shell` sends a command to be **executed** inside the container, rather than first opening a shell into the container.
 :::
 
-## Binding The Filesystem
+## Binding the Filesystem
 
-Recall that Apptainer containers are by default read-only. This means that under default parameters you cannot store files within the container and the container is isolated so that it cannot access any files from outside the container. To demonstrate this, try to execute `ls` from within the container, and you will see none of your files and directories on Hyak will appear. 
+Recall that Apptainer containers are by default read-only. This means that under default parameters you cannot store files within the container and the container is isolated so that it cannot access any files from outside the container. To demonstrate this, try to execute `ls` from within the container, and you will see none of your files and directories on Hyak will appear.
 
 Open a shell into the container once more
+
 ```bash
 apptainer shell python_3.9.20-slim-bullseye.sif
 ```
+
 Try `ls` to list the directory.
+
 ```bash
 ls
 ```
@@ -123,6 +150,7 @@ This isn't very practical. We will usually have more files outside of the contai
 ```bash
 nano pi.py
 ```
+
 ```bash title="pi.py"
 # Example Python script imports the Math library and prints the number pi. 
 import math
@@ -130,32 +158,44 @@ print("Executing inside the container!")
 print("Pi=",math.pi)
 # Use `Ctrl+x` to exit the text editor. 
 ```
-Try to run the `pi.py` script without binding the filesystem. 
+
+Try to run the `pi.py` script without binding the filesystem.
+
 ```bash
 apptainer exec python_3.9.20-slim-bullseye.sif python pi.py
 ```
+
 ```bash
 /usr/local/bin/python: can't open file '/gscratch/scrubbed/finchkn/basics/pi.py': [Errno 2] No such file or directory
 ```
-To access the `pi.py` script and execute it, the file system much be bound to the container. To bind the filesystem to the container AND run `pi.py`, use the following command:
+
+To access the `pi.py` script and execute it, the file system must be bound to the container. To bind the filesystem to the container AND run `pi.py`, use the following command:
+
 ```bash
 apptainer exec --bind /gscratch/ python_3.9.20-slim-bullseye.sif python pi.py
 ```
+
 ```bash
 Executing inside the container!
 Pi= 3.141592653589793
 ```
+
 You can also use `apptainer shell` to open a shell into the container and bind the filesystem so that the files are accessible and visible with `ls`.
+
 ```bash
 apptainer shell --bind /gscratch/ python_3.9.20-slim-bullseye.sif
 ```
+
 Now with `ls` you can list the contents of your working directory.
+
 ```bash
 Apptainer> ls
 ```
+
 Now you can now run `pi.py` inside the shell:
+
 ```bash
 Apptainer>python pi.py
 ```
 
-In the next section, we'll learn how to build custom containers. 
+In the next section, we'll learn how to build custom containers.

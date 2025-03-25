@@ -4,11 +4,11 @@
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator. SVG logos provided using [VectorLogoZone](https://www.vectorlogo.zone) or [logosear.ch](https://logosear.ch). Using the offline search plugin from [@lelouch77](https://github.com/lelouch77/docusaurus-lunr-search).
 
-### Devcontainer Development
+## Devcontainer Development
 
 There are directions on the [documentation site](https://hyak.uw.edu/docs/contribute/pull-request) on setting up a container based environment which we recommend. If you would still prefer a local environment then follow the directions below.
 
-### JS Frameworks Installation
+## JS Frameworks Installation
 
 Set up your local environment by installing all the required JS frameworks by using yarn.
 
