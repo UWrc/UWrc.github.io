@@ -87,13 +87,17 @@ If you find your storage exeeding the 10GB quota, you will need to eliminate sto
 ```bash
 apptainer cache clean
 ```
+#### Default Apptainer Cache
+
 You can now start up a job on a compute node with `salloc` if you have not already. 
 When you start a job on a compute node, the internal storage of that node
 is available to be used for temporary read/write operations with the jobs.
 This makes it a great place for the apptainer cache and the physical architecture of our filesystem doesn't interfere with this. 
 You can configure Apptainer to store its cache in a directory located on the local storage of the compute node with:
 ```bash
-export APPTAINER_CACHEDIR=/path/to/directory
+export APPTAINER_CACHEDIR=/scr
+# or
+export APPTAINER_CACHEDIR=/tmp
 ```
 You can now proceed with building your container:
 ```bash
