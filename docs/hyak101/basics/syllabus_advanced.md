@@ -4,21 +4,22 @@ title: Syllabus
 ---
 
 :::caution
-This tutorial was designed as the fourth is our Hyak 101 Tutorial series which includes: 
+This tutorial was designed as the fourth is our Hyak 101 Tutorial series which includes:
+
 1. [**Hyak Basics**](https://hyak.uw.edu/docs/hyak101/basics/syllabus)
 1. [**Containers**](https://hyak.uw.edu/docs/hyak101/containers/syllabus)
 1. [**Slurm**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
 
 **The demonstrations presented in the Advanced Slurm tutorial build upon modules presented in the three tutorials listed above. We recommend you review the skills presented in those tutorials before proceeding.**
-::: 
+:::
 
 ### Goals & Rationale
 
-#### The main objective of this tutorial is to provide a worked example demonstrating the use of scripting with the Job Scheduler, Slurm, to execute a program from a software container. 
+#### The main objective of this tutorial is to provide a worked example demonstrating the use of scripting with the Job Scheduler, Slurm, to execute a program from a software container
 
-Now that you have mastered: (1) using the command line to navigate and execute commands on Hyak, (2) building and customizing containers for your computing software, (3) and requesting jobs with Slurm, you are ready to combine all of these tasks. This tutorial offers an additional worked example that utilizes a container, computes against publicly available data, and uses Slurm to submit interactive, single batch, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel). Additionally, the final module provides an example of how to leverage Slurm's array feature and scripting for automating research tasks. 
+Now that you have mastered: (1) using the command line to navigate and execute commands on Hyak, (2) building and customizing containers for your computing software, (3) and requesting jobs with Slurm, you are ready to combine all of these tasks. This tutorial offers an additional worked example that utilizes a container, computes against publicly available data, and uses Slurm to submit interactive, single batch, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel). Additionally, the final module provides an example of how to leverage Slurm's array feature and scripting for automating research tasks.
 
-#### Our ultimate goal is to prepare you as an independent user of Hyak. 
+#### Our ultimate goal is to prepare you as an independent user of Hyak
 
 :::tip Video tutorial available
 
@@ -39,17 +40,18 @@ A **job scheduler** is a component or software system responsible for managing a
 
 :::
 
-#### Why Containers? 
+#### Why Containers?
 
-While there are other methods to install software such as modules and specialized environments (e.g., conda and venve). In our opinion, containerizing the software for your research is the ***best way to ensure reproducibility***. A container is some executable code packaged up with its dependencies, and the amount of dependencies can range from a handful of libraries to an entire operating system. You can publish you container along with your code and manuscript ensuring that your work can be reproduce no matter what operating system the user is running and ensuring dependencies and versions align with those under which your results are presented. 
+While there are other methods to install software such as modules and specialized environments (e.g., conda and venve). In our opinion, containerizing the software for your research is the ***best way to ensure reproducibility***. A container is some executable code packaged up with its dependencies, and the amount of dependencies can range from a handful of libraries to an entire operating system. You can publish you container along with your code and manuscript ensuring that your work can be reproduce no matter what operating system the user is running and ensuring dependencies and versions align with those under which your results are presented.
 
-Tools and software are the responsibility of each individual researcher; this is important for you to ensure your own computational reproducibility. Please click here to review our [**Software Usage Policy for Hyak Users**](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users). 
+Tools and software are the responsibility of each individual researcher; this is important for you to ensure your own computational reproducibility. Please click here to review our [**Software Usage Policy for Hyak Users**](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users).
 
 ### Learning Objectives
-* Provide an example of a protocol utilizing a software container and Slurm. 
-* Demonstrate how to submit interactive and single batch jobs with Slurm. 
-* Demonstrate how to set up an array job where each job is executing the same command on a different input file. 
-* Leverage scripting to organize and automate parallel computing. 
+
+* Provide an example of a protocol utilizing a software container and Slurm.
+* Demonstrate how to submit interactive and single batch jobs with Slurm.
+* Demonstrate how to set up an array job where each job is executing the same command on a different input file.
+* Leverage scripting to organize and automate parallel computing.
 
 ### Course Content
 
@@ -60,5 +62,4 @@ Tools and software are the responsibility of each individual researcher; this is
 
 ### Extra Practice
 
-We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial. 
-
+We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial.
