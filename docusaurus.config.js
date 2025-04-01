@@ -63,6 +63,11 @@ module.exports = {
           position: 'right',
         },
         {
+          to: 'https://calendar.washington.edu/sea_uwit-rc',
+          label: 'Events',
+          position: 'right',
+        },
+        {
           to: 'blog', 
           label: 'Blog', 
           position: 'right'
