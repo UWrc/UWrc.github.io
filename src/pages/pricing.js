@@ -26,6 +26,7 @@ export default function Pricing() {
               <li><a href="#slice-cost-hardware"><b>Slice Hardware Costs</b></a></li>
               <li><a href="#slot-fee-annual"><b>Annual Slot Fees</b></a></li>
             </ol>
+            <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=f5caba8fdbe108101ba12968489619e0"><button class="button button--secondary button--block">Try Hyak for Free - Request a Demonstration Account</button></a>
 
             <a name="slice-cost-hardware" />
             <h3>Slice Hardware Configurations</h3>
