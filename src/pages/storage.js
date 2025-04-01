@@ -24,7 +24,7 @@ export default function Pricing() {
         <h3>$10 / 1 TB [1M files] / 1 month</h3>
       </div>
       <div class="card__footer">
-        <a href="mailto:help@uw.edu?subject=buy hyak (gscratch) capacity&body=I would like to buy some gscratch capacity on hyak.">
+      <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=784e3d6c873e9a106f1997dd3fbb35b5">
         <button class="button button--secondary button--block">Get gscratch Capacity</button></a>
       </div>
       <div class="card__body">
@@ -47,12 +47,16 @@ export default function Pricing() {
   <div class="card-demo">
     <div class="card">
       <div class="card__header">
-        <h5>💧 Kopah (Object Storage)</h5>
-        <h3>Coming Soon</h3>
+        <h5>💧 Kopah (S3 Object Storage)</h5>
+        <h3>$2.60 - $5.04 / 1 TB / 1 month</h3>
       </div>
       <div class="card__footer">
-      <a href="mailto:help@uw.edu?subject=buy hyak (Kopah) storage&body=I would like more information about Kopah.">
+      <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6">
         <button class="button button--secondary button--block">Get Kopah Capacity</button></a>
+      </div>
+      <div class="card__footer">
+      <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f">
+        <button class="button button--secondary button--block">Try Kopah Free for 1 Month</button></a>
       </div>
       <div class="card__body">
       What's included?
@@ -60,10 +64,14 @@ export default function Pricing() {
           <li>A "warm" storage tier.</li>
           <li>On campus object storage with 80 Gbps of aggregate upstream connectivity.</li>
           <li>No data access expenses or bandwidth limits.</li>
-          <li>S3-compliant so any existing S3 tools can be used to copy and retrieve data.</li>
+          <li>S3-compliant - any existing S3 tools can be used to copy and retrieve data.</li>
           <li>Public buckets for external data sharing.</li>
           <li>Private buckets for internal and lab-only access.</li>
         </ul>
+      </div>
+      <div class="card__footer">
+      <a href="https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2">
+        <button class="button button--secondary button--block">Learn More</button></a>
       </div>
     </div>
   </div>
@@ -89,6 +97,10 @@ export default function Pricing() {
           <li>Use of common tools to migrate data (e.g., scp, rsync).</li>
           <li>Automatic geographical redundancy of your data (i.e., 2 copies).</li>          
         </ul>
+      </div>
+      <div class="card__footer">
+      <a href="https://uw.service-now.com/it?id=sc_entry&sys_id=77750042db1e73c037ae9ec6db961994&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2">
+        <button class="button button--secondary button--block">Learn More</button></a>
       </div>
     </div>
   </div>
