@@ -5,14 +5,15 @@ author: Kristen Finch
 author_title: HPC Staff Scientist
 author_url: https://github.com/finchnsnps
 author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
-tags: [klone,hyak,hpc,supercomputer,hours,help,tools,training,events,rcc,updates,opportunities,gpus]
+tags: [klone,hyak,hpc,supercomputer,hours,help,tools,training,events,rcc,updates,opportunities,gpus,globus]
 ---
 
-April maintenance included the latest OS patches and security enhancements for login and compute nodes, along with testing endpoint detection and response (EDR) software to strengthen cluster security. We would like to bring your attention to upcoming events featuring an [**AWS AI in Research Workshop**](https://calendar.washington.edu/sea_uwit-rc/Al-in-Research-Workshop/E182099706) (April 17), our [**annual Research Computing Club Hackathon**](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Hackathon/E181783041) (April 19), and the [**Kopah S3 Storage Launch Event "Data Storage Day"**](https://calendar.washington.edu/sea_uwit-rc/Data-Storage-Day/E182267580) (May 5), showcasing campus-wide S3-compatible storage. Additionally, GPU Day (May 15) will provide insights into GPU workflows demonstrated by experts at Cambridge Computer and NVIDIA. Regular office hours are available for research computing support. Stay informed through training resources, event subscriptions, and the [**UW-IT Research Computing Events Calendar**](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday May 13, 2025** (AKA the 2nd Tuesday of the month).
+April maintenance included the latest OS patches and security enhancements for login and compute nodes, along with testing endpoint detection and response (EDR) software to strengthen cluster security. We would like to bring your attention to upcoming events featuring an [**AWS AI in Research Workshop**](https://calendar.washington.edu/sea_uwit-rc/Al-in-Research-Workshop/E182099706) (April 17), our [**annual Research Computing Club Hackathon**](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Hackathon/E181783041) (April 19), and the [**Kopah S3 Storage Launch Event "Data Storage Day"**](https://calendar.washington.edu/sea_uwit-rc/Data-Storage-Day/E182267580) (May 5), showcasing campus-wide S3-compatible storage. Additionally, [**GPU in EDU**](https://www.cambridgecomputer.com/gpu-in-edu/) (May 15) will provide insights into GPU workflows demonstrated by experts at Cambridge Computer and NVIDIA. Regular office hours are available for research computing support. Stay informed through training resources, event subscriptions, and the [**UW-IT Research Computing Events Calendar**](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday May 13, 2025** (AKA the 2nd Tuesday of the month).
 
-### Notable Updates
+### Notable Updates, New Features
 * **Operating system** - The login and compute node images were updated to address system patches and security updates in the Linux operating system (OS). 
 * **Security solutions testing** - We tested endpoint detection and response (EDR) software as a potential solution for an enhanced cluster security posture. This testing is part of our ongoing efforts to maintain a secure computing environment in line with funding requirements (e.g., NIST-800, CMMC, HIPAA, NIH). 
+* **Globus** - We’re excited to announce that Globus has been added to [Hyak Klone](https://hyak.uw.edu/docs/storage/globus) and [Kopah S3](https://hyak.uw.edu/docs/storage/gui#globus). Globus makes it easy to transfer large datasets reliably and securely between systems, whether across campus or around the world. With features like automated transfers, fault tolerance, and a simple web interface, it’s a powerful tool for streamlining data movement in research workflows.
 
 ### Upcoming Training and Events
 
@@ -22,7 +23,7 @@ April maintenance included the latest OS patches and security enhancements for l
 
 * **RCC Hackathon** - The [**Research Computing Club**](https://depts.washington.edu/uwrcc/) (RCC), in collaboration with [**UW-IT Research Computing**](https://it.uw.edu/guides/research/research-computing/) and the [**eScience Institute**](https://escience.washington.edu/), is excited to host an all-day HPC Hackathon on Saturday, April 19th from 10:00 a.m. – 6:00 p.m. in the eScience Institute. [**Learn more**](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Hackathon/E181783041). 
 
-* **Discover Kopah: Your New S3-Compatible Campus Storage Solution at Data Storage Day!** Join us on Monday, May 5 from 1:00 – 5:00 p.m. in the eScience Institute for the official [**Kopah S3 Storage Service**](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2) Launch Event — your gateway to fast, scalable storage right on campus. Whether you're a researcher handling big data, an instructor managing course materials, or simply someone in need of reliable cloud-like storage, Kopah is designed for everyone. This event will feature live demos of S3-compatible tools like s3cmd, Globus, JuiceFS, Cyberduck, and boto3, and staff will be available to help you get started with Kopah S3. [**Learn more**](https://calendar.washington.edu/sea_uwit-rc/Data-Storage-Day/E182267580).  
+* **Discover Kopah: Your New S3-Compatible Campus Storage Solution at Data Storage Day!** Join us on Monday, May 5 from 1:00 – 5:00 p.m. in the eScience Institute for the official [**Kopah S3 Storage Service**](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2) Launch Event — your gateway to fast, scalable storage right on campus. Whether you're a researcher handling big data, an instructor managing course materials, or simply someone in need of reliable cloud-like storage, Kopah is designed for everyone. This event will feature live demos of S3-compatible tools like [s3cmd](https://hyak.uw.edu/docs/storage/cli#s3cmd), [Globus](https://hyak.uw.edu/docs/storage/gui#globus), [JuiceFS](https://hyak.uw.edu/blog/2025-juicefs-standalone), [Cyberduck](https://hyak.uw.edu/docs/storage/gui#cyberduck), and [boto3](https://hyak.uw.edu/docs/storage/boto3#boto3), and staff will be available to help you get started with Kopah S3. [**Learn more**](https://calendar.washington.edu/sea_uwit-rc/Data-Storage-Day/E182267580).  
 
 * **[GPU in EDU](https://www.cambridgecomputer.com/gpu-in-edu/) *Save the Date*** Thursday May 15th 10:00 a.m. - 4:00 p.m. – Join [**UW-IT Research Computing**](https://it.uw.edu/guides/research/research-computing/) for a day learning about GPUs from the experts at NVIDIA and Cambridge Computer. This event will feature live demonstrations for building your GPU workflows, recommendations for incorporating GPUs into instruction, computing research at UW, and more! Registration link coming soon!  
 
@@ -31,12 +32,14 @@ April maintenance included the latest OS patches and security enhancements for l
 * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [**Click here to Register for Zoom Office Hours**](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). [Click here to visit the eScience Office Hours page](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule) to see additional eScience office hours including AI/ML, R, Earth Data, and Python (not available to help with Homework).
 * The Research Computing Club officers will be hosting **in person** office hours in eScience. 
-    * 15-Apr, 1-2pm 
-    * 25-Apr, 2-3pm 
-    * 29-Apr, 1-2pm 
-    * 9-May, 2-3pm
-    * 26 May, 8-9am
-    * 2 Jun, 8-9am 
+    * [15-Apr, 1-2pm](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182219705)
+    * [25-Apr, 2-3pm](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182219715)
+    * [29-Apr, 1-2pm](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182219716)
+    * [9-May, 2-3pm](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182219719)
+    * [15-May, 1-2pm](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182363059)
+    * [22-May, 1-2pm](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182363060)
+    * [26 May, 8-9am](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182345182)
+    * [2 Jun, 8-9am](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182345183)
 
 If you would like to request 1 on 1 help, please send an email to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
