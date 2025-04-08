@@ -17,7 +17,13 @@ module.exports = {
     'Storage': [
       'storage/data',
       'storage/gscratch',
-      'storage/transfer',
+      {
+        'Data Transfer': [
+          'storage/transfer',
+          'storage/cyberduck',
+          'storage/globus',
+        ]
+      },
       'storage/archive',
       {
         'Kopah S3 Storage': [

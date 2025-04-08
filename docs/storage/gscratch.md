@@ -3,7 +3,9 @@ id: gscratch
 title: Storage on Hyak
 ---
 
-Storage mounted on either the 3rd generation Hyak cluster `klone` is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy.
+Storage on Hyak is physically separate from servers used for computation. It is best practice on every supercomputer that storage live on its own and is high-performance to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., GPFS, Lustre, BeeGFS).
+
+On `klone` the storage system (e.g., `/gscratch/`) is then mounted (i.e., accessible) from every compute node of the cluster. `klone` storage is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy. Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UW-IT Research Computing offers [**additional sotrage solutions**](https://hyak.uw.edu/storage) that may be use in combination with `/gscratch/` for longerterm data storage. 
 
 Every user has a [**Home directory**](#user-home-directory) by default, most users have a cluster account by virtue of being the member of a lab group with dedicated slices so you have access to [**lab dedicated storage**](#group-or-lab-directories), and there's also [**scrubbed**](#scrubbed) storage for temporary overflow use.
 
