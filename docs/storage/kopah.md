@@ -8,7 +8,7 @@ Starting in Fall 2024, we will be offering our self-hosted, on-premises S3-API c
 Kopah uses **buckets** as containers to store data, where each bucket can hold 100,000,000 **objects**, which are the actual files or data you store. Each object within a bucket is identified by a unique key, making it easy to organize and retrieve your data efficiently. Public links can be generated for Kopah objects so that users can share buckets and objects with collaborators.
 
 ## Accounts
-Kopah storage accounts can be requested by sending an email to help@uw.edu with "Kopah" in the subject line. Opening a Kopah storage account required a valid UW Budget and Worktag.
+Kopah storage accounts can be requested using our [**Intake Form and Cost Calculator**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6). Kopah 1-month trial accounts are available - [**Try Kopah**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f).
 
 ## Access
 You will need access key and secret key to access your Kopah account. When you open an account your keys are placed in your home directory on `klone` in a file called `kopah_groupname`, where the word "groupname" is associated Hyak group.

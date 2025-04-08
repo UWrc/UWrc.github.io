@@ -9,7 +9,15 @@ On this page we will provide options to interact with your data on Kopah via Gra
 
 As of Spring 2025, we’re excited to announce that Globus has been added to Hyak `klone` and Kopah S3. Globus makes it easy to transfer large datasets reliably and securely between systems, whether across campus or around the world. With features like automated transfers, fault tolerance, and a simple web interface, it’s a powerful tool for streamlining data movement in research workflows.
 
-Globus public sharing is available with [**Kopah S3 storage**](https://hyak.uw.edu/docs/storage/gui#globus), making it a dynamic compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration.
+Globus public sharing is available with [**Kopah S3 storage**](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2), making it a dynamic compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration.
+
+:::warning important: Globus Mapping Required
+To use Globus with Kopah S3 storage, ***at least one username must be mapped to the storage account***. This mapping connects your Globus identity to the storage system and must be set up by our staff. Contact us to get started—it's a quick, one-time step.
+
+**Request Globus mapping by emailing help@uw.edu with "Kopah + Globus" in the subject line.**
+
+Kopah storage accounts can be requested using our [**Intake Form and Cost Calculator**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6). Kopah 1-month trial accounts are available - [**Try Kopah**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f).
+:::
 
 ### Set Up
 
