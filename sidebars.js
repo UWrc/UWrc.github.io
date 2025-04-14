@@ -53,6 +53,7 @@ module.exports = {
       'ood/matlab',
       'ood/jupyter',
       'ood/vscode',
+      'ood/rstudio'
     ],
     'Tools & Software': [
       'tools/software',
