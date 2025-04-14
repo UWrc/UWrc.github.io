@@ -1,13 +1,21 @@
 ---
 id: nvidia_ngc
-title: GPUs and NVIDIA NGC Containers
+title: NVIDIA NGC Containers
 ---
 
-In the Containers section, you learned the multiple ways in which containers can be used. In this section we will cover [NGC (NVIDIA GPU Cloud) containers](https://catalog.ngc.nvidia.com/) that are performance-optimized, tested, and ready to deploy on GPU.
+In the Containers section, you learned the multiple ways in which containers can be used. In this section we will cover **[NGC (NVIDIA GPU Cloud) containers](https://catalog.ngc.nvidia.com/)** that are performance-optimized, tested, and ready to deploy on GPU.
 
 Researchers can leverage GPU acceleration to train large-scale language models, enabling more efficient processing of textual datasets and advancing tasks like text generation and sentiment analysis. GPUs play a pivotal role in accelerating training and inference tasks for deep learning models, from computer vision to speech recognition, empowering researchers to tackle complex problems with unprecedented speed and scalability. GPUs accelerate compute-intensive tasks like molecular dynamics simulations or climate modeling. GPU code acceleration offers unparalleled performance and scalability for researchers across disciplines.
 
 We encourage you to check out what containers are available within NGC, as in this page we will only cover a couple that get you started with using the GPU.
+
+:::note Relevant Vocabulary
+**Apptainer**: Apptainer is a container program that facilitates the ability to create and run portable and reproducible containers, especially in an HPC environment like Hyak's current generation cluster, klone.
+
+**Apptainer Definition File**: a recipe file for an Apptainer container which contains install instructions for software to be containerized. The file extension for an Apptainer definition file is .def.
+
+**NVIDIA GPU Cloud**: A container registry that specializes in common GPU accelerated applications or GPU software development tools provided by NVIDIA. The [NVIDIA NGC catalog](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has a wide variety of containers for machine learning and AI applications.
+:::
 
 ### Example container workloads
 Below we will walk through examples of how to use two of the many containers available in NGC. We will cover using the HPC (Software Develpment Kit) SDK in a couple different forms. Other examples of containers you could explore on your own include:
@@ -21,9 +29,20 @@ Below we will walk through examples of how to use two of the many containers ava
 - [Open Hackathons GPU Bootcamp](https://github.com/openhackathons-org/):
 Another great place to get started with tools that are in the HPC SDK and in the broader GPU software stack is through the [GPU Bootcamp](https://github.com/openhackathons-org/gpubootcamp/tree/master/). This page details how to get started with Apptainer containers for HPC and AI. It has examples in Python, C++, using OpenACC directives, and also a miniprofiler. 
 
+:::tip Getting Started with Containers
+If you are new to containers, it may be useful to refer to the following resources to help get you started:
+
+1. **[What is a Container?](https://hyak.uw.edu/docs/hyak101/containers/background/#what-is-a-container)**
+
+2. **[Getting Started With Apptainer](https://hyak.uw.edu/docs/tools/containers/#apptainer-formerly-singularity)**
+
+3. **[Containers Tutorial](https://youtu.be/zPsvUQV_GV0)**
+
+:::
+
 ### Pre-requisites
 
-Please refer to the [Apptainer and Docker](/docs/tools/containers) for information on getting started with Apptainer and getting access to NGC.
+Please refer to the **[Apptainer and Docker](/docs/tools/containers)** for information on getting started with Apptainer and getting access to NGC.
 
 Get a summary of all the GPUs on the cluster and their current state. This will be helpful when requesting an interactive session on a GPU for the exercises below. 
 ```bash

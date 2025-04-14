@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [hpc,cl,datascience,training,sdsc,opportunity,application,workshop]
 ---
 
-Hello Hyak Community! 
-
 We wanted to make you aware of two training opportunities with the San Diego Supercomputer Center (SDSC). If you are interested in picking up some additional skills and experience in HPC, please check them out.
 
 * **SDSC Cyberinfrastructure-Enabled Machine Learning (CIML) Summer Institute**: The project is focused on teaching researchers and students the best practices for effectively running machine learning (ML) and data science applications on advanced cyberinfrastructure (CI) and high-performance computing (HPC) systems. Applications due 12 April 2024. https://www.sdsc.edu/education_and_training/ciml_summer_institute.html 

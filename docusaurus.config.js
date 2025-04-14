@@ -41,6 +41,20 @@ module.exports = {
           to: 'pricing',
           label: 'Pricing',
           position: 'right',
+          items: [
+            {
+              label: 'Compute',
+              to: '/pricing',
+            },
+            {
+              label: 'Storage',
+              to: '/storage',
+            },
+            {
+              label: 'Try Hyak',
+              to: '/demo',
+            },
+          ]
         },
         {
           to: 'docs',
@@ -49,12 +63,17 @@ module.exports = {
           position: 'right',
         },
         {
+          to: 'https://calendar.washington.edu/sea_uwit-rc',
+          label: 'Events',
+          position: 'right',
+        },
+        {
           to: 'blog', 
           label: 'Blog', 
           position: 'right'
         },
         {
-          to: 'about', 
+          to: 'team', 
           label: 'About', 
           position: 'right',
           items: [
@@ -123,6 +142,14 @@ module.exports = {
             {
               label: 'School of Medicine',
               href: 'https://www.uwmedicine.org/school-of-medicine',
+            },
+            {
+              label: 'UW Bothell',
+              href: 'https://www.uwb.edu/',
+            },
+            {
+              label: 'UW Tacoma',
+              href: 'https://www.tacoma.uw.edu/',
             },
           ],
         },

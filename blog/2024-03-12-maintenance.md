@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,storage,gpfs,training,proxyjump,vscode-server,remote-ssh]
 ---
 
-Hello Hyak Users,
-
 For our March maintenance we had some notable changes we wanted to share with the community.
 
 ### Login Node 

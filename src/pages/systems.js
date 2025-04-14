@@ -75,7 +75,7 @@ export default function systems() {
               <td align="right">Cluster</td><td><code>mox</code></td>
             </tr>
             <tr>
-              <td align="right">Service</td><td>June 2018 — June 2024 (Estimated)</td>
+              <td align="right">Service</td><td>June 2018 — January 2025</td>
             </tr>
             <tr>
               <td align="right">Operating System</td><td>CentOS 7</td>
@@ -115,10 +115,10 @@ export default function systems() {
               <td align="right">Operating System</td><td>Rocky 8</td>
             </tr>
             <tr>
-              <td align="right">Compute</td><td>21,028 CPU cores [Cascade Lake, Ice Lake]</td>
+              <td align="right">Compute</td><td>30,932 CPU cores [AMD Genoa, Intel Cascade Lake, Intel Ice Lake]</td>
             </tr>
             <tr>
-              <td align="right">Accelerators</td><td>576 GPU cards [Turing, Ampere]</td>
+              <td align="right">Accelerators</td><td>832 GPU cards [Turing, Ampere]</td>
             </tr>
             <tr>
               <td align="right">Interconnect</td><td>100 Gbps [HDR100 Infiniband]</td>

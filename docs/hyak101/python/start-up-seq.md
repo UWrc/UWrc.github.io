@@ -14,7 +14,7 @@ Your set up is complete. Here is the inventory of the items you prepared to exec
 | `jupyter-server.job`|   `klone`          | `sbatch` script that launches the container-overlay and jupyter as a Slurm job |
 |`~/.ssh/config`|   local          | creates `ssh klone-login` short cut |
 |`~/.ssh/klone-node-config`|   local           | creates `ssh klone-node` short cut for ProxyJump|
-|`set-hyak-node.sh`|   local          | replaces Hostname in `~/.ssh/klone-node-config` for convenience|
+|`set-hyak-node.sh`|   local          | Mac/Linux Only - replaces Hostname in `~/.ssh/klone-node-config` for convenience|
 |`start-jupyter-forwarding.sh`|   local         | starts port forwarding and provides web address for Jupyter Notebook|
 
 
@@ -87,7 +87,9 @@ Info: Jupyter server is running, port & token in ~/.jupyter-port-and-token
 
 Above we used `squeue` to monitor the job we started. The `NODELIST` column of the `squeue` output shows the node where the job is running. **This is the Hostname for our `~/.ssh/klone-node-config` script.**
 
-Let's try to execute the `set-hyak-node.sh` script and see if it will replace our Hostname with `n3219` where the job is running (the compute node will likely be different for you; `n3219` is just an example).
+For Mac/Linux users, let's try to execute the `set-hyak-node.sh` script and see if it will replace our Hostname with `n3219` where the job is running (the compute node will likely be different for you; `n3219` is just an example). If it didn't work, please use a text editor to manually change Hostname to the node where your job is running. 
+
+For All Users, manually set replace the `Hostname` line with the correct Hostname of the compute node where your job is running. For example, 
 
 ```bash
 cat ~/.ssh/klone-node-config
@@ -105,8 +107,6 @@ Host klone-node
         Hostname n3219
         ProxyJump klone-login
 ```
-
-If it didn't work, please use a text editor to manually change Hostname to the node where your job is running. 
 
 ### 5. Start Port Forwarding
 

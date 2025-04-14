@@ -10,16 +10,14 @@ To keep the login node in stable working order and ensure fair usage of the logi
 
 :::tip Check out our tutorial Focused on Slurm
 If you are new to Hyak and using the job scheduler, Slurm, you may find our Slurm tutorial helpful to walk you thorugh basic and advanced usage. [**Click here to jump to the tutorial.**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
+This tutorial can also be followed in video form [**HERE**](https://www.youtube.com/watch?v=iYM7xpRhp8I).
 :::
 
 ## Compute Resources
 
-The Slurm scheduler has two high-level concepts you need to know, [**accounts**](#accounts) and [**partitions**](#partitions).
-### Accounts
+The Slurm scheduler has two high-level concepts you need to know, [**accounts**](https://hyak.uw.edu/docs/compute/start-here#accounts) and [**partitions**](https://hyak.uw.edu/docs/compute/start-here#partitions).
 
 With the `hyakalloc` command [[**source code here**](/docs/compute/resource-monitoring#hyakalloc)] you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
-
-### Partitions
 
 While you won't necessarily have access to them, it might be useful for you to see a list of Hyak's partitions. The `sinfo` commands contains information about the servers or nodes that compose Hyak, and the `sinfo -s` commands give you a summary for this information including the partitions and the hostnames that fall into each partition. 
 
@@ -128,7 +126,7 @@ A comprehensive list of the environment variables Slurm sets for each job can be
 
 ### Single Node Batch Jobs
 
-Below is a slurm script template.  Submit a batch job from the `mox` login node by calling `sbatch <script_name>.slurm`.
+Below is a slurm script template.  Submit a batch job from the `klone` login node by calling `sbatch <script_name>.slurm`.
 ```shell title="<script_name>.slurm" terminal=true
 #!/bin/bash
 
@@ -162,13 +160,11 @@ If your batch job is using multiple nodes, your program should also know how to 
 
 The value given for `--nodes` should be less than or equal to the total number of nodes owned by your group unless you are running in the `ckpt` partition.
 
-The value given for `--ntasks-per-node` should be either `28` for older `mox` nodes or `40` for newer `klone` nodes if you wish to maximize use of an entire node.
+The value given for `--ntasks-per-node` can be up to the number of CPUs your group has available, and CPUs exceeding the groups resources can be requested per job using the checkpoint partitions (`ckpt`, `ckpt-all`, or `ckpt-g2`). The `hyakalloc` command can be used to see the number of CPUs or GPUs that can be requested under your account/s. In the case you want to use an entire node, the number of CPUs or cores per node varies based on the hardware model, but some common partitions are the `compute` partition which have `40` cores and the `cpu-g2` and `cpu-g2-mem2x` partitions which have `192` cores. For example, the below would request 4 complete nodes from a `compute` partition.
 
 ```shell
 SBATCH --nodes=4
 
-SBATCH --ntasks-per-node=28
-# OR
 SBATCH --ntasks-per-node=40
 ```
 
@@ -180,7 +176,7 @@ SBATCH --ntasks-per-node=40
 ## Utility Commands 
 
 With `<net_id>` as your UW NetID and `<group_name>` as your Hyak group partition name, and `<job_id>` as an individual job ID:
-- [**`sinfo`**](https://slurm.schedmd.com/sinfo.html) is used to view information about `mox` nodes and partitions.  Use `sinfo -p <group_name>` to view information about your group's partition or allocation.
+- [**`sinfo`**](https://slurm.schedmd.com/sinfo.html) is used to view information about `klone` nodes and partitions. Use `sinfo -p <group_name>` to view information about your group's partition or allocation. Use `sinfo -s` to see a list of all partitions.
 - [**`squeue`**](https://slurm.schedmd.com/squeue.html) is used to view information about jobs located in the scheduling queue.  Use `squeue -p <group_name>` to view information about your group's nodes.  Use `squeue -u <net_id>` to view your jobs.
 - [**`scancel`**](https://slurm.schedmd.com/scancel.html) is used to cancel jobs.  Use `scancel <job_id>` to cancel a job with the given job ID, or use `scancel -u <net_id>` to cancel all of your jobs.
 - [**`sstat`**](https://slurm.schedmd.com/sstat.html) displays status information of a running job pertaining to CPU, Task, Node, Resident Set Size (RSS), and Virtual Memory (VM) statistics.  Read the [man page](https://slurm.schedmd.com/sstat.html) for a comprehensive list of format options.  
@@ -189,7 +185,7 @@ With `<net_id>` as your UW NetID and `<group_name>` as your Hyak group partition
 
 ## Man Pages
 
-All of these man pages can also be viewed on `mox` by running `man <command>`. 
+All of these man pages can also be viewed on `klone` by running `man <command>`. Exit the `man` command with `q`.
 
 - [**`sacct`**](https://slurm.schedmd.com/sacct.html)
 - [**`salloc`**](https://slurm.schedmd.com/salloc.html)

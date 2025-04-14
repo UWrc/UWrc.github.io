@@ -45,7 +45,7 @@ ln --symbolic /mmfs1/sw/hyak101/python/hyak-container.sif hyak-container.sif
 ```
 :::
 
-#### Done. If you do not need to build a custom container right now, move onto the next section: Flexible Connections for your OS (Mac/Linux or Windows)
+#### Done. If you do not need to build a custom container right now, move onto the next section: Flexible Connections
 Don't worry, you can come back later when you are ready. 
 
 ### Additional Resources

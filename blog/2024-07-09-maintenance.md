@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer]
 ---
 
-Hello Hyak Community,
-
 Thanks again for your patience with our monthly scheduled maintenance. During this maintenance session, we were able to provide package updates to node images to ensure compliance with the latest operating system level security fixes and performance optimizations.
 
 The next maintenance will be **Tuesday August 13, 2024**. 

@@ -3,17 +3,17 @@ id: join-group
 title: Join a Group
 ---
 
-To log into any Hyak cluster you need an account created. Everyone falls into one of the following buckets. Follow through then once your sponsor has confirmed they've added you to their group, continue on to the next section to complete the final account activation.
+To log into any Hyak cluster, you need an account connected to your UWNetID, which uses [**Two-Factor Authentication**](https://hyak.uw.edu/docs/account-activation). All community members into one of the following categories. Identify your account sponsor to be added to a Hyak group account. 
 
 ## How do you become a group owner?
 
-Groups are tied to resources, your options are to contribute a node or have a dedicated lab storage space on a Hyak cluster. Once your group is created the group owner can add or remove users by their netIDs and those users will get access to those node(s) and / or associated storage.
+Groups are tied to resources, your options are to contribute a resource slice (specific resource configuration) to the Hyak cluster. Once your group is created the group owner can add or remove users by their UWNetIDs and those users will get access to the resources and associated storage.
 
 ## How does a group owner add or remove a user?
 
 A group owner, usually the PI or designated staff (e.g., lab manager), should take the following steps:
 
-1. Log into [groups.uw.edu](https://groups.uw.edu)
+1. Log into [**groups.uw.edu**](https://groups.uw.edu)
 2. Click "My groups" in the top menu bar
 3. Go to `u_hyak_mylab` where `mylab` is your groups' name
 4. Click "Membership" just underneath the top menu bar
@@ -21,5 +21,5 @@ A group owner, usually the PI or designated staff (e.g., lab manager), should ta
 6. Click "Do it"
 
 :::caution
-These netIDs now have access to your nodes and lab data on Hyak once they log into the cluster.
+These netIDs now have access to your resources and lab data on Hyak once they log into the cluster.
 :::

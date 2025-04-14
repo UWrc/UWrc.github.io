@@ -26,7 +26,7 @@ import boto3
 
 s3 = boto3.resource(
     's3',
-    endpoint_url='https://s3.kopah.orci.washington.edu',
+    endpoint_url='https://s3.kopah.uw.edu',
     aws_access_key_id='<Kopah ACCESS KEY>',     # replace with your access key
     aws_secret_access_key='<Kopah SECRET KEY>', # replace with your secret key
 )

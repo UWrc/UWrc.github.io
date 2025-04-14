@@ -7,6 +7,21 @@ sidebar-label: Resource Monitoring
 
 The Hyak clusters make use of the Slurm scheduler to submit and run jobs. The scheduler provides a rich set of commands (e.g., `sacct`, `sinfo`) to query the state of the cluster but the extensive options can be daunting to navigate. We'll provide some useful example calls below in addition to some information about our custom resource monitoring program called `hyakalloc`.
 
+## squeue
+`squeue` is used to monitor the Slurm queue. By default, `squeue` displays a list of all jobs running on Hyak. To monitor the status of a specific user's jobs, use `squeue -u UWNetID`, replacing `UWNetID` with the UW Net ID of the user of interest. To view the queue for a specific account, use `squeue -A accountname`.
+```bash
+squeue -A stf
+```
+```
+          JOBID      PARTITION   NAME   USER   ST       TIME      NODES NODELIST(REASON)
+          23314234   compute   SR_H_1  UWNetID PD       0:00      1 (Priority)
+          23314235   compute   SR_H_2  UWNetID PD       0:00      1 (Priority)
+          23314236   compute   SR_H_3  UWNetID PD       0:00      1 (Priority)
+          23314237   compute   SR_H_4  UWNetID PD       0:00      1 (Priority)
+          23313236   compute interact  UWNetID PD       0:00      1 (Priority)
+          23350637   compute interact  UWNetID  R      54:22      1 n3263
+```
+
 ## sacct
 
 `sacct` displays accounting data for all jobs and job steps in the Slurm job accounting log or Slurm database.

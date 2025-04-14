@@ -3,6 +3,18 @@ id: syllabus
 title: Syllabus
 ---
 
+:::warning
+This is an advanced tutorial for setting up Jupyter Notebooks via VS Code using a container and a ProxyJump. The tutorial is a good demonstration of many Hyak fundamental skills, but there are other streamlined ways to use Jupyter and VS Code. Use the following links to navigate to those docs: 
+
+[**Jupyter via Open OnDemand**](https://hyak.uw.edu/docs/ood/jupyter)
+
+[**Jupyter via SSH port forwarding**](https://hyak.uw.edu/docs/tools/jupyter)
+
+[**Using VS Code on Hyak**](https://hyak.uw.edu/docs/tools/vscode)
+
+:::
+
+
 ### Goals & Rationale
 
 #### Our first goal is to provide a tutorial that connects many Hyak foundational skills so that researchers can learn and customize these tools to fit their needs.
@@ -42,6 +54,7 @@ We are going to create a general-purpose, customizable Apptainer container to us
 1. Installing Conda in a mutable container overlay.
 1. Starting & connecting to a Jupyter Notebook server.
 1. Running Slurm & custom Hyak commands.
+1. Using VS Code as your platform for running Jupyter Server on Hyak. 
 
 ### Course Content
 
@@ -49,34 +62,16 @@ We are going to create a general-purpose, customizable Apptainer container to us
 Be advised that we have broken the tutorial into separate instructions for Mac/Linux and Windows users. The same content is covered, but with different steps. 
 :::
 
-TODO- FIX WITH NEW LAYOUT
+1. [**Getting Started**](https://hyak.uw.edu/docs/hyak101/python/setup)
+1. [**Building a Container**](https://hyak.uw.edu/docs/hyak101/python/container)
+1. [**Flexible Connections**](https://hyak.uw.edu/docs/hyak101/python/ssh)
+1. [**Working in the Overlay**](https://hyak.uw.edu/docs/hyak101/python/overlay)
+1. [**Slurm Job & Port Forwarding**](https://hyak.uw.edu/docs/hyak101/python/slurm-forward)
+1. [**Start Up Sequence**](https://hyak.uw.edu/docs/hyak101/python/start-up-seq)
+1. [**Jupyter in VS Code**](https://hyak.uw.edu/docs/hyak101/python/connect-vsc)
+1. [**Interactive Mode**](https://hyak.uw.edu/docs/hyak101/python/interactive)
 
-1. [**Getting Started**](https://hyak.uw.edu/docs/hyak101/python/setup):
-   - Prerequisites
-   - Selecting your Working Directory
-   - Initial Set Up vs. Start Up Sequence
-   - Additional Resources
 
-1. [**Building a Container**](https://hyak.uw.edu/docs/hyak101/python/container):
-   - [The briefest introduction to containers](https://hyak.uw.edu/docs/hyak101/python/container#the-briefest-introduction-to-containers),
-   - [Our general-purpose container definition](https://hyak.uw.edu/docs/hyak101/python/container#our-general-purpose-container-definition),
-   - [Building containers on Hyak](https://hyak.uw.edu/docs/hyak101/python/container#building-containers-on-hyak).
-
-1. [**Flexible Connections**](https://hyak.uw.edu/docs/hyak101/python/ssh):
-   - [Spending some time on SSH](https://hyak.uw.edu/docs/hyak101/python/ssh#spending-some-time-on-ssh),
-   - [Your configuration on the cluster](https://hyak.uw.edu/docs/hyak101/python/ssh#your-configuration-on-the-cluster),
-   - [A set of customized, local configurations](https://hyak.uw.edu/docs/hyak101/python/ssh#a-set-of-customized-local-configurations).
-
-1. [**Working in the Overlay**](https://hyak.uw.edu/docs/hyak101/python/overlay):
-   - [Creating a mutable overlay](https://hyak.uw.edu/docs/hyak101/python/overlay#creating-a-mutable-overlay),
-   - [A direct line to the node](https://hyak.uw.edu/docs/hyak101/python/overlay#a-direct-line-to-the-node),
-   - [Installing Miniconda](https://hyak.uw.edu/docs/hyak101/python/overlay#installing-miniconda),
-   - [Configuring Jupyter](https://hyak.uw.edu/docs/hyak101/python/overlay#configuring-jupyter).
-
-1. [**Interactivity & Jobs**](https://hyak.uw.edu/docs/hyak101/python/jobs):
-   - [Open up Jupyter](https://hyak.uw.edu/docs/hyak101/python/jobs#open-up-jupyter),
-   - [Using Conda and Slurm](https://hyak.uw.edu/docs/hyak101/python/jobs#using-conda-and-slurm),
-   - [Connect with VSCode](https://hyak.uw.edu/docs/hyak101/python/jobs#connect-with-vscode).
 
 :::info Acknowledgements
 Special thanks goes out to the researchers who volunteered their time to provide feedback and testing for these instructions.

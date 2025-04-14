@@ -3,7 +3,9 @@ id: gscratch
 title: Storage on Hyak
 ---
 
-Storage mounted on either the 3rd generation Hyak cluster `klone` or the 2nd generation Hyak cluster `mox` is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy.
+Storage on Hyak is physically separate from servers used for computation. It is best practice on every supercomputer that storage live on its own and is high-performance to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., GPFS, Lustre, BeeGFS).
+
+On `klone` the storage system (e.g., `/gscratch/`) is then mounted (i.e., accessible) from every compute node of the cluster. `klone` storage is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy. Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UW-IT Research Computing offers [**additional sotrage solutions**](https://hyak.uw.edu/storage) that may be use in combination with `/gscratch/` for longerterm data storage. 
 
 Every user has a [**Home directory**](#user-home-directory) by default, most users have a cluster account by virtue of being the member of a lab group with dedicated slices so you have access to [**lab dedicated storage**](#group-or-lab-directories), and there's also [**scrubbed**](#scrubbed) storage for temporary overflow use.
 
@@ -62,7 +64,7 @@ du -h --max-depth 1
 
 - ***10 GB, only yours, everyone has one.***
 
-Each users' Home directory is located at the folder path `/mmfs1/home/UWnetID` on `klone` or `/usr/lusers/UWnetID` and `/gscratch/home/UWnetID` on MOX where `UWnetID` is your UW netID. You are placed here by default when you log into the cluster. 
+Each users' Home directory is located at the folder path `/mmfs1/home/UWnetID` on `klone` where `UWnetID` is your UW netID. You are placed here by default when you log into the cluster. 
 
 :::note
 Your Home directory quota is 10 GB or ~250,000 inodes.
@@ -79,12 +81,6 @@ hyakstorage --home
 │ Total:               │ 4GB / 10GB                     │ 4764 / 256000 files            │
 │                      │ 40%                            │ 2%                             │
 ╰──────────────────────┴────────────────────────────────┴────────────────────────────────╯
-```
-
-To check your home directory quota on `mox`.
-
-```
-mmlsquota --block-size G gscratch:home
 ```
 
 Ideally you only keep personal code bases or smaller data sets here. This quota can not be changed, if you need more data one of the other storage spots on `gscratch` (e.g., lab folder, scrubbed) are better suited.
@@ -121,7 +117,7 @@ echo $HOME
 - Shared lab storage at $10 / 1 TB [1M files] / month.
 - NVMe flash tier on `klone`.
 
-If you run the `groups` command you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder. Please note, on MOX the group names have a hyak prefix. For example, `stf` will appear as `hyak-stf`.
+If you run the `groups` or `hyakalloc` command you'll see what groups you are a member of. For example, one of my groups is `stf`, which means I'm a member of the "stf" group (i.e., the Research Computing Club). Whatever groups you are seeing here you can access your lab storage at `/gscratch/mylab/` where `mylab` is any group you're a member of. In this example that means I have access to the `/gscratch/stf/` and only members of the `stf` group have access to this folder. 
 
 Your lab gets 1 TB per slice that your group has contributed to `klone`, which includes HPC (CPU-only) and GPU slices.
 
@@ -135,6 +131,31 @@ Your lab storage quota can be increased (or decreased) in 1 TB granularity and a
 Check group quotas and current use with the `hyakstorage` command.
 :::
 
+## Data Lifecycle
+
+Users leaving UW should plan to remove or secure their data to prevent the exposure of confidential information and to keep the system organized. Unsecured data may expose sensitive research findings or personal data while unused or leftover data may impact the system performance for other users. To prevent this from happening, you have the option to "will" your data to another user or to transfer the data away. Listed below are various scenarios and recommended methods for removing and passing down data:
+
+1. **Changing File Ownership To Your Principal Investigator**
+
+ If you are working with a lab, the data produced during that work is the ultimate intellectual property of the Principal Investigator on the project. Before you leave, you should change ownership of the files or directories to the Principal Investigator or another person in the lab with the `chown` command:
+```bash
+# For an entire directory
+chown -R <new owner NetID> directory/
+# For a singular file
+chown <new owner NetID> file.txt
+```
+2. **Changing File Names**
+
+For long term stability of your data in another’s hands, it is better to change the directory name to be descriptive. Rather than changing the ownership of a file alone, if the directory is your UWNetID, it is recommended that the new owner moves the directory into a directory under their name or change the name of the directory to be descriptive (i.e., “datafiles” or “scripts”) so that these files are not associated with a user that is no longer part of the system. To do this, use the **[`mv`](https://hyak.uw.edu/docs/hyak101/basics/linux-2#mv)** command for moving and renaming files.
+
+3. **Data Transfer To External Devices**
+
+If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the **[data transfer](https://hyak.uw.edu/docs/storage/transfer)** page for more information on transferring data between Hyak and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
+
+4. **Reclaiming Data From a User That Has Left UW**
+
+In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions via sending an email to help@uw.edu with “Hyak” in the subject line.  
+
 ## Scrubbed
 
 - Free to use but files auto-deleted beyond 21 days.
@@ -146,8 +167,6 @@ If you need space but only temporarily (i.e., less than 3 weeks) then you can ma
 :::warning
 AUTO-DELETE: Files not accessed for 3 weeks (i.e., 21 days) in scrubbed will automatically be deleted. Consider purchasing `gscratch` storage if you want a more persistent storage location.
 :::
-
-Starting with the `klone` cluster there are additional differentiating factors beyond the auto-delete policy, namely that all read and writes here will only stay on spinning disk. `gscratch` on `klone` has access to a tiering engine that auto writes to a performant NVMe flash tier so scrubbed will be slower than paid for `gscratch` on `klone`. On `mox` there is no additional performance distinction for scrubbed compared to `gscratch`.
 
 Please note the scrubbed space permissions are completely open by default so use Linux group changes and modifications to restrict access as appropriate.
 

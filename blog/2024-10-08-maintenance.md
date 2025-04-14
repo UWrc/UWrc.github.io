@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,training,rcc]
 ---
 
-Hello Hyak Community,
-
 Our October maintenance is complete. Thank you for your patience while we make package updates to node images, ensuring the security and behavior you expect from Hyak `klone`.
 
 The next maintenance will be **Tuesday November 12, 2024**. 

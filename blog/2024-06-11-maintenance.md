@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,g2,L40,L40S,GPUs,AMD,Genoa,NVIDIA,job,internship]
 ---
 
-Hello Hyak Community,
-
 Thanks again for your patience with our monthly scheduled maintenance. This month, we deployed new node resources that were purchased by various UW Researchers from across campus. These nodes are a little different, so we wanted to bring your attention to them and provide guidance on their use when they are idle with the checkpoint partition. 
 
 ### New G2 Nodes 

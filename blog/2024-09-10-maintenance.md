@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,math,amd,modules]
 ---
 
-Hello Hyak Community,
-
 Thanks again for your patience with our monthly scheduled maintenance. During this maintenance session, we were able to provide package updates to node images to ensure compliance with the latest operating system level security fixes and performance optimizations. Of note, the Nvidia GPU driver on Klone has been updated to the latest production datacenter release, version 560.35.03.
 
 The next maintenance will be **Tuesday October 8, 2024**. 

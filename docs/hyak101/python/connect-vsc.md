@@ -35,12 +35,13 @@ Once the job is running, or you see `R` under the column `ST` using `squeue`, us
 
 #### 2. On your local machine, get the job's node
 
-Once we have the job, on our local machine we'll use `set-hyak-node.sh` to set the Hostname to match our job's node.
+Once we have the job, manually set this `Hostname` line in `~/.ssh/klone-node-config` to match our job's node. If applicable, use  `set-hyak-node.sh` to set the Hostname to match our job's node.
 
 ```bash
 ./set-hyak-node.sh
 cat ~/.ssh/klone-node-config
 Host klone-node
+//highlight-next-line
         Hostname n3219
         ProxyJump klone-login
 ```

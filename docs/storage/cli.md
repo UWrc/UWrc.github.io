@@ -5,7 +5,7 @@ title: CLI Usage
 
 On this page we detail two options data on Kopah via Command Line Interfaces (CLIs). s3cmd is a popular and widely used tool, while s5cmd is faster but less widely used.
 
-note:::
+:::note
 These tools aren't the only ones compatible with Kopah, however you will need to set them up to work with Ceph, Kopah's underlying storage protocol.
 :::
 
@@ -35,8 +35,8 @@ nano .s3cfg
 
 ```bash title=".s3cfg"
 [default]
-host_base = s3.kopah.orci.washington.edu
-host_bucket = s3.kopah.orci.washington.edu/%(bucket)
+host_base = s3.kopah.uw.edu
+host_bucket = s3.kopah.uw.edu/%(bucket)
 use_https = True
 public_url_use_https = True
 # Login credentials
@@ -98,7 +98,7 @@ You'll need to do this for any device you wish to use s5cmd on (e.g. local deskt
 ```bash
 export AWS_ACCESS_KEY_ID='<Kopah ACCESS KEY>'     # replace with Kopah access key
 export AWS_SECRET_ACCESS_KEY='<Kopah SECRET KEY>' # replace with Kopah secret key
-export S3_ENDPOINT_URL='https://s3.kopah.orci.washington.edu'
+export S3_ENDPOINT_URL='https://s3.kopah.uw.edu'
 ```
 
 To test the setup, run `s5cmd ls` to list your existing buckets. If that succeeds, s5cmd is ready for use!

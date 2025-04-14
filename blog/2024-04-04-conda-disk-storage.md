@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,storage,conda,config,quota,python,environments]
 ---
 
-Hello Hyak Users, 
-
 It has come to our attention that the default configuration of [Miniconda](https://hyak.uw.edu/docs/tools/python#miniconda3) and [conda environments](https://hyak.uw.edu/docs/tools/python#environments) in the user's home directory leads to hitting storage limitations and the dreaded error `Disk quota exceeded`. We thought we would take some time to guide users in configuring their conda environment directories and package caches to avoid this error and proceed with their research computing. 
 
 ![](/img/blog/disk-quota-exceeded.png 'Error Message')

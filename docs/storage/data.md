@@ -3,13 +3,13 @@ id: data
 title: Start Here
 ---
 
-Storage for your data works a little bit different on a supercomputer compared to your desktop. A high-level introduction can be found [below](#what-is-storage-for-a-supercomputer). This page also covers [best practices](#3-2-1-policy) around how to handle your data, this is the 3-2-1 policy. Each Hyak cluster has its own storage, refer to the [klone](klone) or [mox](mox) storage page for more cluster-specific in-depth details.
+Storage for your data works a little bit different on a supercomputer compared to your desktop. A high-level introduction can be found [below](#what-is-storage-for-a-supercomputer). This page also covers [best practices](#3-2-1-policy) around how to handle your data, this is the 3-2-1 policy. Each Hyak cluster has its own storage.
 
 ## What is storage for a supercomputer?
 
 Storage on every Hyak cluster is physically separate. It is best practice on every supercomputer that storage live as its own infrastructure to be high-performance and able to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., [GPFS](https://en.wikipedia.org/wiki/GPFS), [Lustre](https://en.wikipedia.org/wiki/Lustre_(file_system)), [BeeGFS](https://en.wikipedia.org/wiki/BeeGFS)).
 
-Storage systems are mounted (i.e., accessible) from every compute node of the cluster. Each Hyak cluster (e.g., `klone`, `mox`) has its own separate parallel file system. The storage attached to each Hyak cluster has its own policies, hierachy, etc. Please refer to their respective pages for more information. 
+Storage systems are mounted (i.e., accessible) from every compute node of the cluster. Each Hyak cluster (e.g., `klone`) has its own separate parallel file system. The storage attached to each Hyak cluster has its own policies, hierachy, etc. Please refer to their respective pages for more information. 
 
 :::warning
 Cluster storage is not backed up!
