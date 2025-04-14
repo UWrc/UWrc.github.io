@@ -146,3 +146,145 @@ End the interactive job.
 salloc: Relinquishing job allocation 1546486
 salloc: Job allocation 1546486 has been revoked.
 ```
+
+## Jupyter via Slurm Job
+
+This section describes how to run Jupyter Lab/Notebook as a Slurm job, which provides an automated way to set up your Jupyter sessions. This method is particularly useful for automating the setup process described in the previous sections, as it handles many of the configuration steps automatically.
+
+:::tip Alternative: Open OnDemand
+The easiest way to run Jupyter notebooks on Hyak is through [**Open OnDemand**](https://ondemand.hyak.uw.edu/). Simply navigate to `Interactive Apps > Jupyter` and follow the prompts. This method requires no manual configuration or SSH tunneling.
+:::
+
+### Step 1: Prepare Slurm Job File
+
+We will launch Jupyter as a job using `sbatch`. Download our Slurm job file [**from this hyperlink**](https://hyak.uw.edu/files/jupyter-server.job) which has been adapted for `klone`. The command below will download the file to your current directory.
+
+```bash
+wget https://hyak.uw.edu/files/jupyter-server.job
+```
+
+:::important
+Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
+:::
+
+You will need to modify a few environment variables in `jupyter-server.job`:
+1. The `JUPYTER_CWD` path is your working directory. The default is `/gscratch/scrubbed/UWNetID` - ***You must change this line for this to work.*** We recommend setting this to the directory where you are storing your data for your intended project.
+2. Set your `JUPYTER_SIF` variable to the name of your container file.
+3. (Optional) Adjust the Slurm directives (`--partition`, `--time`, `--mem`, etc.) to match your resource requirements.
+
+:::tip Direct Execution
+If you are already on an allocated compute node, you can run the script directly without using `sbatch`:
+```bash
+./jupyter-server.job
+```
+This will start the Jupyter server immediately on your current node.
+:::
+
+Review the highlighted sections of `jupyter-server.job` below and edit your version to fit your needs:
+
+```bash title="jupyter-server.job"
+#!/bin/bash
+
+#SBATCH --job-name=jupyter-server
+//highlight-next-line
+#SBATCH --account=uwit      # update this line - use hyakalloc to find accounts you can use
+//highlight-next-line
+#SBATCH --partition=compute # update this line - use hyakalloc to find partitions you can use
+
+//highlight-start
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH --mem=1G
+//highlight-end
+
+#SBATCH --signal=USR2
+#SBATCH --output=%x_%j.out
+
+//highlight-start
+JUPYTER_CWD="/gscratch/scrubbed/UWNetID" # UPDATE THIS LINE
+JUPYTER_SIF="datascience-notebook_latest.sif" # update this line
+//highlight-end
+```
+
+### Step 2: Start the Jupyter Server
+
+Submit the job with `sbatch`:
+
+```bash
+sbatch jupyter-server.job
+Submitted batch job 12345678
+```
+
+Monitor the job with `squeue`:
+
+```bash
+squeue -u UWNetID
+             JOBID PARTITION           NAME    USER ST       TIME  NODES NODELIST(REASON)
+          12345678   compute jupyter-server UWNetID  R       3:15      1    n3286
+```
+
+Slurm will create an output file named `jupyter-server_12345678.out` in your working directory. Check its contents for connection instructions:
+
+```bash
+cat jupyter-server_12345678.out
+
+1. SSH TUNNEL COMMAND:
+//highlight-next-line
+    ssh UWNetID@klone.hyak.uw.edu -L 8787:n3286.hyak.local:8787
+
+2. JUPYTER LAB URL:
+//highlight-next-line
+   http://localhost:32843/lab?token=81b3a8c8aadfbc666669a9f3
+
+3. AUTHENTICATION TOKEN:
+   81b3a8c8aadfbc666669a9f3
+
+4. TO TERMINATE THIS JOB:
+   a. Close Jupyter Lab (File → Shut Down)
+   b. Run: scancel -f 25372780
+```
+
+### Step 3: Start Port Forwarding
+
+:::important
+This next section is done on your local computer ***not*** on the cluster.
+:::
+
+In a new terminal or command prompt on ***your laptop***, copy and paste the SSH command from the Slurm output:
+
+```bash
+ssh UWNetID@klone.hyak.uw.edu -L 8787:n3286.hyak.local:8787
+... provide UWNetID password
+... Duo 2 Factor Authentication
+```
+
+The login will appear to hang, but your connection is now open. If you are disconnected and reconnect, you can resume your Jupyter session.
+
+:::warning
+Do not use the Jupyter token to open the SSH tunnel. After your SSH command, your UWNetID password is required. Multiple failed login attempts will result in an IP ban.
+:::
+
+Next, open a new browser window to the **Jupyter Lab URL** provided in the output file. This will automatically authenticate your session with the generated token.
+
+### Step 4: End your Session
+
+If you did not adjust the `--time` directive in `jupyter-server.job`, your session will end after the specified time.
+
+Preferably, you can end your session manually:
+1. Exit the Jupyter Session ("power" button in the top right corner of the Jupyter window)
+2. Go back to `klone` and use the `scancel` command with your job ID:
+```bash
+scancel -f 12345678
+```
+
+### Regular use of this method
+
+Once you are satisfied with the job settings and configuration of your Jupyter session, you can reuse this method every time you want to use Jupyter by starting at [**Step 2: Start the Jupyter Server**](#step-2-start-the-jupyter-server).
+
+:::note
+This method provides automation of the setup process but does not offer additional stability or persistence compared to the manual setup described earlier. For the most reliable long-running sessions, consider using Open OnDemand.
+:::
+
+If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message.
