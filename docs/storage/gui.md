@@ -16,11 +16,11 @@ For ease of use, a pre-configured connection profile for Kopah is available. Dow
 Once setup, connect to Kopah:
 
 1. Open a new Cyberduck window and locate the **Open Connection** Icon.
-![](/img/docs/kopah/cyberduck_open.png 'Open Connection')
+![Image shows that the needed "Open Connection" button is located in the top taskbar in Cyberduck](/img/docs/kopah/cyberduck_open.png 'Open Connection')
 
 2. Select **Kopah S3** from the drop-down box.
 
-![](/img/docs/kopah/cyberduck_connect.png 'Configure Connection')
+![Image shows to click on drop menu of page and to select the option SFTP(SSH File Transfer Protocol) which is shown as the third option](/img/docs/kopah/cyberduck_connect.png 'Configure Connection')
 
 3. Enter you Access Key and Secret Key, which can be found in your home directory on `klone`.
 

@@ -132,9 +132,9 @@ admin  apsearch  data  encrypted  gscratch  home  slurmdata  ssg  sw
 ```
 Some of these names might be familiar to you. For example, every user on Hyak has a Home directory, which, like yours, is inside of the directory called `mmfs1/` which has a directory inside of it called `home/` which has a directory for each Hyak user. Similarly, above we changed directory to a directory inside of `mmfs1/` called `sw/`.
 
-Picture the `klone` filesystem as an upside down tree. The topmost directory is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to Hyak have their storage directories. 
+Picture the `klone` filesystem as an upside down tree. The topmost directory is the root directory (`/`) that holds everything else. The picture is a truncated view of the filesystem showing the root directory `/`, a few directories within it, including `mmfs1` and a few directories within `mmfs1/`: `home/` where the Home directories are, `sw/` where we keep software and scripts, and `gscratch/` where the lab groups that contribute to Hyak have their storage directories.
 
-![](/img/docs/hyak101/basics/filesystem.png 'filesystem')
+![Photo shows a diagrammatic representation of the klone filesystem directory tree. The klone directory tree shows the root directory at the top which holds all subdirectories. The picture is a truncated view of the filesystem showing the root directory and a few directories within it, including mmfs1 and a few directories within mmfs1/: home/ where the Home directories are, sw/ where we keep software and scripts, and gscratch/ where the lab groups that contribute to Hyak have their storage directories](/img/docs/hyak101/basics/filesystem.png 'filesystem')
 
 With Windows File Explorer and MacOS Finder, you can click on icons like those shown in the photo to navigate your filesystem, opening directories and listing contents, on `klone` and most CLIs, we navigate the filesystem with these commands. You'll get the hang of it fast. 
 
