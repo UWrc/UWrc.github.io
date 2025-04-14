@@ -55,7 +55,7 @@ The `klone` cluster uses the more feature-rich LMOD implementation of modules. Y
 
 ### LMOD
 
-![LMOD](../../static/img/docs/tools-modules-lmod.png)
+![LMOD logo](../../static/img/docs/tools-modules-lmod.png)
 
 LMOD [[documentation](https://lmod.readthedocs.io/en/latest/)] [[project page](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)] is an upgraded implementation of environment modules created by the Texas Advanced Computing Center (TACC) at the University of Texas.
 
@@ -95,7 +95,7 @@ You place your modulefiles in `/sw/contrib/modulefiles/mylab` and when anyone ru
 
 ### Environment Modules
 
-![Environment modules](../../static/img/docs/tools-modules-environment.png)
+![Environment Modules Logo](../../static/img/docs/tools-modules-environment.png)
 
 Environment modules [[documentation](https://modules.readthedocs.io/en/latest/)] [[Wikipedia](https://en.wikipedia.org/wiki/Environment_Modules_(software))] has a long development history going back to the 1990's. It's still in use today due to its simplicity and ease of deployment for cluster administrators and end users alike.
 

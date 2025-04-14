@@ -126,7 +126,7 @@ If you followed the tutorial above you should be able to install anything you wa
 
 ### Docker Hub
 
-![docker-hub]
+![Screenshot of Docker Hub's "Container" page][docker-hub]
 
 The biggest collection of Docker images is from Docker Hub [[www](https://hub.docker.com)].
 
@@ -134,11 +134,11 @@ Let's say Docker Hub tells you the pull command for the container you want is `d
 
 ### NVIDIA GPU Cloud (NGC)
 
-![ngc]
+![Screenshot of NVIDIA GPU Cloud "Containers" page][ngc]
 
 A container registry that specializes in common GPU accelerated applications or GPU software development tools is provided by NVIDIA called the NVIDIA GPU Cloud (NGC) [[www](https://ngc.nvidia.com/catalog/containers)]. For example, you might want to use a PyTorch container optimized for NVIDIA GPUs as seen below.
 
-![ngc-pytorch]
+![Screenshot of PyTorch container page][ngc-pytorch]
 
 Depending on the NGC container, it might have directions on the exact pull command for Apptainer. If it does not work be sure to prepend their pull location with `docker://` since these are native Docker containers that need to be converted to Apptainer.
 
@@ -146,13 +146,13 @@ The example above provides a Docker pull command for PyTorch but in this case yo
 
 ### Biocontainers.pro
 
-![biocontainer]
+![Screenshot of Biocontainers.pro homepage][biocontainer]
 
 A bioinformatics focused set of Apptainer containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Apptainer) Docker containers as well as native Apptainer containers.
 
 ### Sylabs.io Cloud Library
 
-![sylabs]
+![Screenshot of Sylbas.io Cloud Library Page][sylabs]
 
 The largest collection of native Apptainer containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Apptainer and provides the native container format.
 
