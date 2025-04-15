@@ -152,7 +152,7 @@ salloc: Job allocation 1546486 has been revoked.
 This section describes how to run Jupyter Lab/Notebook as a Slurm job, which provides an automated way to set up your Jupyter sessions. This method is particularly useful for automating the setup process described in the previous sections, as it handles many of the configuration steps automatically.
 
 :::tip Alternative: Open OnDemand
-The easiest way to run Jupyter notebooks on Hyak is through [**Open OnDemand**](https://ondemand.hyak.uw.edu/). Simply navigate to `Interactive Apps > Jupyter` and follow the prompts. This method requires no manual configuration or SSH tunneling.
+The easiest way to run Jupyter notebooks on Hyak is through [**Open OnDemand**](https://ondemand.hyak.uw.edu/). Simply navigate to `Interactive Apps > Jupyter` and follow the prompts. This method requires no manual configuration or SSH tunneling. See the [**Jupyter OOD Docs**](https://hyak.uw.edu/docs/ood/jupyter) for more.
 :::
 
 ### Step 1: Prepare Slurm Job File
@@ -163,7 +163,7 @@ We will launch Jupyter as a job using `sbatch`. Download our Slurm job file [**f
 wget https://hyak.uw.edu/files/jupyter-server.job
 ```
 
-:::important
+:::warning
 Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
 :::
 
