@@ -146,7 +146,7 @@ chown <new owner NetID> file.txt
 ```
 2. **Changing File Names**
 
-For long term stability of your data in another’s hands, it is better to change the directory name to be descriptive. Rather than changing the ownership of a file alone, if the directory is your UWNetID, it is recommended that the new owner moves the directory into a directory under their name or change the name of the directory to be descriptive (i.e., “datafiles” or “scripts”) so that these files are not associated with a user that is no longer part of the system. To do this, use the **[`mv`](https://hyak.uw.edu/docs/hyak101/basics/linux-2#mv)** command for moving and renaming files.
+For long term stability of your data in another’s hands, it is better to change the directory name to be descriptive. Rather than changing the ownership of a file alone, if the directory is your UWNetID, it is recommended that the new owner moves the directory into a directory under their name or change the name of the directory to be descriptive (i.e., “MyName_Datafiles” or “ProjectName_Scripts”) so that these files are not associated with a user that is no longer part of the system. In general, after a user's account is removed, directories named after their NetID can be difficult for others to recognize. To change file names, use the **[`mv`](https://hyak.uw.edu/docs/hyak101/basics/linux-2#mv)** command for moving and renaming files.
 
 3. **Data Transfer To External Devices**
 
@@ -155,6 +155,10 @@ If you are leaving UW and are working independently, you should make plans to re
 4. **Reclaiming Data From a User That Has Left UW**
 
 In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions via sending an email to help@uw.edu with “Hyak” in the subject line.  
+
+5. **Removing Unused Data**
+
+If you are no longer using your data and do not anticipate needed it in the future, you should delete it using the `rm` command. To delete a directory and all of its contents, use the `-r` (recursive) flag. Using `rm` is <ins>irreversible and will permenetally delete a file.</ins> 
 
 ## Scrubbed
 
