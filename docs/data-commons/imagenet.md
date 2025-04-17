@@ -21,9 +21,9 @@ The training data, the subset of ImageNet containing the 1000 categories and 1.2
 
 The first three images from the test set can be seen below.
 
-<img src="/img/data-commons/ILSVRC2012_test_00000001.JPEG" width="180px" height="150px" />
-<img src="/img/data-commons/ILSVRC2012_test_00000002.JPEG" width="180px" height="150px" />
-<img src="/img/data-commons/ILSVRC2012_test_00000003.JPEG" width="180px" height="150px" />
+<img src="/img/data-commons/ILSVRC2012_test_00000001.JPEG" alt="Test image" width="180px" height="150px"/>
+<img src="/img/data-commons/ILSVRC2012_test_00000002.JPEG" alt="Test image" width="180px" height="150px" />
+<img src="/img/data-commons/ILSVRC2012_test_00000003.JPEG" alt="Test image" width="180px" height="150px" />
 
 ## How to prepare for use?
 
