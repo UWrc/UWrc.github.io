@@ -37,7 +37,7 @@ mkdir /gscratch/scrubbed/UWNetID/R
 ```
 :::
 
-Now R will install packages in your designated directory instead of your Home directory, and you will avoid disk storage management issues later on. 
+Now R will install packages in your designated directory instead of your Home directory, and you will avoid disk storage management issues later on. Don't forget to bind your designated directory when you run R, which we cover below and you can learn more about [**in the container tutorial**](https://hyak.uw.edu/docs/hyak101/containers/syllabus).
 
 :::caution
 If you plan on using multiple R versions you will want to set `R_LIBS` appropriately with each different container (i.e., R version) used so packages compiled against one version of R don't conflict with another. Using sub-folders with names matching that version of R is sufficient.
@@ -93,10 +93,10 @@ ls -alh
 474M r-base_latest.sif
 ```
 
-You can run the R binary within the container like below.
+You can run the R binary within the container like below. If you created the R library directory as described above (and, more generally, if you want to load or save files), don't forget to use the --bind command. You can bind anywhere deeper on the filepath than from where you need to load or save things, with `/gscratch` being a good option.
 
 ```bash
-apptainer run r-base_latest.sif R
+apptainer run --bind /gscratch r-base_latest.sif R
 
 R version 4.4.0 (DATE) -- "Some Cute Name - Typical R Stuff"
 Copyright (C) YEAR The R Foundation for Statistical Computing
@@ -165,10 +165,10 @@ ls -alh
 675M tidyverse_latest.sif
 ```
 
-Now when you run this container's R binary you can successfully load the Tidyverse.
+Now when you run this container's R binary you can successfully load the Tidyverse. Again, we bind above the place where our user libraries will be stored.
 
 ```bash
-apptainer run tidyverse_latest.sif R
+apptainer run --bind /gscratch tidyverse_latest.sif R
 
 R version 4.4.0 (DATE) -- "Some Cute Name - Typical R Stuff"
 Copyright (C) YEAR The R Foundation for Statistical Computing
