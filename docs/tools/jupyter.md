@@ -103,11 +103,11 @@ kristenfinch@Kristens-MBP-3 ~ % ssh -L 9195:n3097:9195 finchkn@klone.hyak.uw.edu
 
 Next direct your browser to [http://localhost:9195](http://localhost:9195). You will be prompted for the password you set with jupyter-notebook a few steps ago. 
 
-![](/img/docs/jupyter-notebook/jupyter-notebook-password-prompt.png 'Provide Password')
+![Password input page on Jupyter](/img/docs/jupyter-notebook/jupyter-notebook-password-prompt.png 'Provide Password')
 
 The browser will open the Jupyter Notebook Session and you will see contents of the directory on klone. 
 
-![](/img/docs/jupyter-notebook/jupyter-notebook-files.png 'Files')
+![Jupter notebook session page showing directory.](/img/docs/jupyter-notebook/jupyter-notebook-files.png 'Files')
 
 Your token for this session will also appear in the terminal window connected to the compute node. 
 
@@ -121,7 +121,7 @@ While the connection is open. Another option is to direct your browser to [http:
 
 End your session from the browser with the File Menu and "Shut Down" or "Log Out." 
 
-![](/img/docs/jupyter-notebook/jupyter-notebook-end.png 'End Session')
+![Screenshot showing how to shut down session](/img/docs/jupyter-notebook/jupyter-notebook-end.png 'End Session')
 
 Then go to your terminal window to the compute node and use Control + C to end the session there. 
 

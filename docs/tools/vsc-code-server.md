@@ -139,7 +139,7 @@ Do not use the code-server password to open the ssh tunnel. After your ssh comma
 
 Open a new browser window to **http://localhost:8080** and provide **the password from the output file** (`code-server.job.17440706` and `+WwYzgh7YH/yHzUWNWNS` in this example).
 
-![](/img/docs/vscode/vsc-pw.png 'Provide Password')
+![INput password from output file.](/img/docs/vscode/vsc-pw.png 'Provide Password')
 
 Extensions can be installed through the browser and will be stored in `~/.local/share/code-server/extensions` in your home directory.
 
@@ -147,7 +147,7 @@ Extensions can be installed through the browser and will be stored in `~/.local/
 
 To end your session, find the three-lines icon Menu and select "Sign out of Code Server."
 
-![](/img/docs/vscode/vsc-signout.png 'Sign Out')
+![Page with arrow indicating to click on the top left to sign of of code server](/img/docs/vscode/vsc-signout.png 'Sign Out')
 
 And end the batch job with `scancel` and the JobID on `klone` like the following example.
 
