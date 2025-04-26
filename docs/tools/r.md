@@ -341,9 +341,8 @@ Next, open a new browser window to **http://localhost:8787** and provide **the p
 
 Once you log in you should see an environment similar to the below. Both your Home directory and gscratch folders will be mounted.
 
-[rstudio]: /img/docs/rstudio-singularity.png 'rstudio'
+![rstudio console and enviornment](/img/docs/rstudio-singularity.png 'rstudio')
 
-![rstudio]
 
 #### Step 5: End your Session
 
