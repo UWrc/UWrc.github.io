@@ -1,0 +1,172 @@
+#!/bin/bash
+
+#SBATCH --job-name=jupyter-server
+#SBATCH --account=uwit       # update this line - use hyakalloc to find accounts you can use
+#SBATCH --partition=gpu-l40s # update this line - use hyakalloc to find partitions you can use
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gpus=1
+#SBATCH --mem=1G
+
+#SBATCH --signal=USR2
+#SBATCH --output=%x_%j.out
+
+#############################################################################
+# Jupyter Lab Server on SLURM
+# ----------------------------
+# This script launches a Jupyter Lab server on a compute node and provides
+# instructions for connecting to it via SSH tunneling.
+
+# Modify the following variables to suit your environment:
+# - SBATCH options above to modify job resources
+# - JUPYTER_CWD: working directory for Jupyter Lab
+# - JUPYTER_SIF: path to your custom Singularity container
+#############################################################################
+
+# Set these variables for your environment
+JUPYTER_CWD="/gscratch/scrubbed/UWNetID"              # UPDATE THIS LINE
+JUPYTER_SIF="datascience-notebook_latest.sif"         # UPDATE THIS LINE with your container path
+
+#############################################################################
+# Detect if running interactively or as a batch job
+#############################################################################
+
+# Check if stdout is a terminal - if so, we're running interactively
+if [ -t 1 ]; then
+    # Running in terminal - use colors
+    BLUE="\033[1;34m"
+    GREEN="\033[1;32m"
+    YELLOW="\033[1;33m"
+    RED="\033[1;31m"
+    CYAN="\033[1;36m"
+    BOLD="\033[1m"
+    RESET="\033[0m"
+else
+    # Running as batch job - no colors
+    BLUE=""
+    GREEN=""
+    YELLOW=""
+    RED=""
+    CYAN=""
+    BOLD=""
+    RESET=""
+fi
+
+#############################################################################
+# Parameter validation
+#############################################################################
+
+# Function to print error messages and exit
+error_exit() {
+    echo -e "\n${RED}ERROR:${RESET} $1" >&2
+    exit 1
+}
+
+# Validate work directory
+if [[ ! -d "$JUPYTER_CWD" ]]; then
+    error_exit "Work directory $JUPYTER_CWD does not exist.\nPlease update JUPYTER_CWD in the script."
+fi
+
+# Validate container file
+if [[ ! -f "${JUPYTER_CWD}/${JUPYTER_SIF}" ]]; then
+    error_exit "Container file ${JUPYTER_CWD}/${JUPYTER_SIF} not found.\nPlease update JUPYTER_SIF in the script."
+fi
+
+# Check for apptainer/singularity
+if ! command -v apptainer &> /dev/null && ! command -v singularity &> /dev/null; then
+    error_exit "Neither apptainer nor singularity found. Please load the appropriate module."
+fi
+
+#############################################################################
+# Setup environment
+#############################################################################
+
+echo -e "\n${BLUE}>>> Setting up environment...${RESET}"
+
+# Generate a secure token for Jupyter
+export JUPYTER_TOKEN=$(openssl rand -hex 12)
+
+#############################################################################
+# Find available port and prepare connection details
+#############################################################################
+
+echo -e "${BLUE}>>> Configuring network...${RESET}"
+
+# Get unused socket between 8000-9000
+readonly PORT=$(/mmfs1/sw/pyenv/versions/3.9.5/bin/python -c '
+import socket
+s=socket.socket()
+s.bind(("", 0))
+port=s.getsockname()[1]
+s.close()
+print(port)
+')
+
+if [[ -z "$PORT" ]]; then
+    error_exit "Failed to find an available port."
+fi
+
+# Get the current compute node name
+NODE_NAME=$(hostname -s)
+if [[ -z "$NODE_NAME" ]]; then
+    error_exit "Failed to get the compute node name."
+fi
+
+#############################################################################
+# Load modules and launch server
+#############################################################################
+
+echo -e "${BLUE}>>> Loading modules...${RESET}"
+source /etc/bashrc
+module load apptainer
+
+#############################################################################
+# Display connection information
+#############################################################################
+
+echo -e "\n${GREEN}╔════════════════════════════════════════════════════════════╗"
+echo -e "║                JUPYTER LAB SERVER INFORMATION              ║"
+echo -e "╚════════════════════════════════════════════════════════════╝${RESET}"
+
+echo -e "\n${CYAN}1. SSH TUNNEL COMMAND:${RESET}"
+echo -e "${BOLD}ssh $USER@klone.hyak.uw.edu -N -L ${PORT}:${NODE_NAME}.hyak.local:${PORT}${RESET}"
+
+echo -e "\n${CYAN}2. JUPYTER LAB URL:${RESET}"
+echo -e "   ${BOLD}http://localhost:${PORT}/lab?token=${JUPYTER_TOKEN}${RESET}"
+
+echo -e "\n${CYAN}3. AUTHENTICATION TOKEN:${RESET}"
+echo -e "   ${BOLD}${JUPYTER_TOKEN}${RESET}"
+
+echo -e "\n${CYAN}4. TO TERMINATE THIS JOB:${RESET}"
+echo -e "   a. Close Jupyter Lab (File → Shut Down)"
+echo -e "   b. Run: ${BOLD}scancel -f ${SLURM_JOB_ID}${RESET}\n"
+
+echo -e "${YELLOW}>>> Starting Jupyter Lab server...${RESET}"
+
+#############################################################################
+# Launch Jupyter Lab
+#############################################################################
+
+# Run Jupyter Lab inside the container with only essential bind mounts
+apptainer exec --cleanenv --nv --home ${JUPYTER_CWD} \
+    --bind ${JUPYTER_CWD}:${JUPYTER_CWD},/gscratch:/gscratch \
+    ${JUPYTER_CWD}/${JUPYTER_SIF} \
+    jupyter-lab --no-browser \
+                --port=${PORT} \
+                --ip="0.0.0.0" \
+                --NotebookApp.token=${JUPYTER_TOKEN} \
+                --notebook-dir=${JUPYTER_CWD}
+
+# Capture exit code
+APPTAINER_EXIT_CODE=$?
+
+# Report exit status
+if [[ $APPTAINER_EXIT_CODE -eq 0 ]]; then
+    echo -e "\n${GREEN}>>> Jupyter Lab server completed successfully.${RESET}" 1>&2
+else
+    echo -e "\n${RED}>>> Jupyter Lab server exited with code ${APPTAINER_EXIT_CODE}${RESET}" 1>&2
+fi
+
+exit $APPTAINER_EXIT_CODE
+
