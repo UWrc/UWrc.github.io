@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "docusaurus start",
-    "build": "NODE_OPTIONS='--openssl-legacy-provider' docusaurus build",
+    "start": "NODE_OPTIONS='--openssl-legacy-provider' docusaurus start",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle --danger",
-    "deploy": "GIT_USER=UWrc docusaurus deploy"
+    "deploy": "docusaurus deploy"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.70",
