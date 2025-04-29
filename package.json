@@ -6,7 +6,7 @@
     "start": "docusaurus start",
     "build": "NODE_OPTIONS='--openssl-legacy-provider' docusaurus build",
     "swizzle": "docusaurus swizzle --danger",
-    "deploy": "docusaurus deploy"
+    "deploy": "GIT_USER=UWrc docusaurus deploy"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.70",
