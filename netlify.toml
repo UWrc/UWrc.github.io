@@ -1,7 +1,7 @@
 [build]
   command = "yarn build"
   publish = "build"
-  environment = { NODE_VERSION = "20" }
+  environment = { NODE_VERSION = "20.12.1" }
 
 [[redirects]]
   from = "/*"
