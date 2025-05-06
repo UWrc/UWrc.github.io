@@ -9,14 +9,17 @@ module.exports = {
   plugins: [require.resolve('docusaurus-lunr-search')],
   onBrokenLinks: 'ignore',
   themeConfig: {
-    sidebarCollapsible: true,
-    hideableSidebar: true,
     prism: {
       additionalLanguages: ['shell-session']
     },
     colorMode: {
       defaultMode: 'light', // "light" | "dark"
       disableSwitch: false, // Hides the switch in the navbar
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+      }
     },
     navbar: {
       title: 'Research Computing',
@@ -184,6 +187,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsible: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
