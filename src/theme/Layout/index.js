@@ -22,6 +22,7 @@ import LayoutProvider from '@theme/Layout/Provider';
 import ErrorPageContent from '@theme/ErrorPageContent';
 import { useScrollPercentage } from 'react-scroll-percentage';
 import styles from './styles.module.css';
+import { useLocation } from '@docusaurus/router';
 
 function Layout(props) {
   const {
@@ -34,6 +35,8 @@ function Layout(props) {
   } = props;
 
   useKeyboardNavigation();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   // Scroll notifier calculations
   let effectiveDocumentHeight = 1;
@@ -56,7 +59,7 @@ function Layout(props) {
 
       <AnnouncementBar />
 
-      <Navbar scrollPercent={scrollPercent} />
+      <Navbar scrollPercent={isHomePage ? undefined : scrollPercent} />
 
       <div
         id={SkipToContentFallbackId}

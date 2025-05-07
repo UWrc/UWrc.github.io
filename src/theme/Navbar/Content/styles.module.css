@@ -5,6 +5,19 @@ Hide color mode toggle in small viewports
   .colorModeToggle {
     display: none;
   }
+
+  /* Hide main navbar items in mobile view */
+  :global(.navbar__items:not(:first-child)) {
+    display: none;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  :global(.navbar__items--right) {
+    position: absolute;
+    right: var(--ifm-navbar-padding-horizontal);
+  }
 }
 
 .colorModeToggle {
@@ -20,3 +33,8 @@ Hide color mode toggle in small viewports
   transition: width 0.1s ease;
   z-index: 1000;
 }
+
+/* Ensure dropdowns appear above scroll indicator */
+:global(.navbar__item.dropdown) {
+  z-index: 1001;
+} 
