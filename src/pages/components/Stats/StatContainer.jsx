@@ -12,7 +12,6 @@ const Colors = {
 
 function buildStatContainer(statItems) {
   if (!statItems || typeof statItems !== 'object') {
-    console.warn('StatContainer: statItems must be a valid object');
     return null;
   }
 
@@ -21,7 +20,6 @@ function buildStatContainer(statItems) {
   return statItemMappings.map((item, i) => {
     const [caption, value] = item;
     if (!caption || value === undefined) {
-      console.warn(`StatContainer: Invalid data for item at index ${i}`);
       return null;
     }
     return (

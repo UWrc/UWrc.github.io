@@ -52,7 +52,6 @@ export default function Home() {
         }}
       >
         {CAROUSEL_ITEMS.map((carouselItem, i) => {
-          console.log(i, carouselItem)
           return <CarouselItem key={i} {...carouselItem} />
         })}
       </Carousel>
