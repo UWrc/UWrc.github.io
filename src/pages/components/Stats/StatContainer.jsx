@@ -11,17 +11,29 @@ const Colors = {
 }
 
 function buildStatContainer(statItems) {
+  if (!statItems || typeof statItems !== 'object') {
+    console.warn('StatContainer: statItems must be a valid object');
+    return null;
+  }
+
   let statItemMappings = Object.entries(statItems)
   let colors = Object.values(Colors)
-  return statItemMappings.map((item, i) => 
-    <StatSlotMachineItem
-      key={i}
-      idx={i}
-      caption={item[0]}
-      value={item[1]}
-      backgroundColor={colors[i]}
-    />
-  )
+  return statItemMappings.map((item, i) => {
+    const [caption, value] = item;
+    if (!caption || value === undefined) {
+      console.warn(`StatContainer: Invalid data for item at index ${i}`);
+      return null;
+    }
+    return (
+      <StatSlotMachineItem
+        key={i}
+        idx={i}
+        caption={caption}
+        value={value.toString()}
+        backgroundColor={colors[i]}
+      />
+    );
+  }).filter(Boolean); // Remove any null items
 }
 
 StatContainer.propTypes = {

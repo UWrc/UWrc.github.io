@@ -1,9 +1,8 @@
 import React from "react";
 import Reel from "react-reel";
-import useInView from "react-cool-inview";
+import { useInView } from "react-intersection-observer";
 import PropTypes from "prop-types";
 import styles from "./styles.module.css"
-
 
 StatSlotMachineItem.propTypes = {
   value: PropTypes.string.isRequired,
@@ -13,10 +12,14 @@ StatSlotMachineItem.propTypes = {
 
 export default function StatSlotMachineItem(props) {
   const { ref, inView } = useInView({
-    unobserveOnEnter: true
-  })
+    triggerOnce: true,
+    threshold: 0.1
+  });
 
-  let reel = inView ? <Reel text={props.value} theme={styles} /> : <></>
+  // Ensure we have a valid string value, defaulting to '0' if undefined
+  const textValue = props.value?.toString() || '0';
+
+  let reel = inView ? <Reel text={textValue} theme={styles} /> : <></>;
 
   return <div ref={ref}>
     <div
@@ -27,7 +30,7 @@ export default function StatSlotMachineItem(props) {
       }}
     >
       {reel}
-      <p className={styles.statCaption}>{props.caption}</p>
+      <p className={styles.statCaption}>{props.caption || ''}</p>
     </div>
   </div>
 }
