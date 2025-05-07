@@ -93,7 +93,7 @@ apptainer exec --cleanenv --bind /gscratch locator.sif \
 * `apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/locator.py` - Runs the Python script inside an Apptainer container.
 * `--matrix ${INPUTMATRIX} --sample_data ${FILE}` - Uses genotype matrix (`INPUTMATRIX`) and test set (`FILE`) as inputs.
 * `--dropout_prop ${DROPOUT}` - Applies a dropout rate (DROPOUT).
-* `--out ${OUTDIR}dropout_sweep_${DROPOUT}_${FILEINDEX}` - Saves results to out/dropout_sweep_<dropout_value>_<file_index>.
+* `--out ${OUTDIR}dropout_sweep_${DROPOUT}_${FILEINDEX}` - Saves results to out/dropout_sweep_\<dropout_value\>_\<file_index\>.
 
 ### Job array variable values
 
@@ -203,4 +203,4 @@ Including `echo` commands in your scripts is a good method of confirming the cor
 
 The files in `out/` are the results from the analysis. The next step would be to combine the results, calculate the prediction error for each tree, and compare performance for each dropout rate. However, this is beyond the scope of this tutorial.
 
-We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email **<help@uw.edu>** with "Hyak Advanced Slurm Tutorial" in the subject line, and let us know what you think. Thank you!
+We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email **\<help@uw.edu\>** with "Hyak Advanced Slurm Tutorial" in the subject line, and let us know what you think. Thank you!

@@ -3,8 +3,18 @@ lunr.tokenizer.separator = /[\s\-/]+/;
 
 class LunrSearchAdapter {
     constructor(searchDocs, searchIndex) {
+        if (!searchDocs || !Array.isArray(searchDocs)) {
+            throw new Error('searchDocs must be a valid array');
+        }
+        if (!searchIndex) {
+            throw new Error('searchIndex must be provided');
+        }
         this.searchDocs = searchDocs;
-        this.lunrIndex = lunr.Index.load(searchIndex);
+        try {
+            this.lunrIndex = lunr.Index.load(searchIndex);
+        } catch (err) {
+            this.lunrIndex = new lunr.Index();
+        }
     }
 
     getLunrResult(input) {
@@ -111,34 +121,45 @@ class LunrSearchAdapter {
 
     }
     search(input) {
-        return new Promise((resolve, rej) => {
-            const results = this.getLunrResult(input);
-            const hits = [];
-            results.length > 5 && (results.length = 5);
-            this.titleHitsRes = []
-            this.contentHitsRes = []
-            results.forEach(result => {
-                const doc = this.searchDocs[result.ref];
-                const { metadata } = result.matchData;
-                for (let i in metadata) {
-                    if (metadata[i].title) {
-                        if (!this.titleHitsRes.includes(result.ref)) {
-                            const position = metadata[i].title.position[0]
-                            hits.push(this.getTitleHit(doc, position, input.length));
-                            this.titleHitsRes.push(result.ref);
+        return new Promise((resolve) => {
+            try {
+                const results = this.getLunrResult(input);
+                const hits = [];
+                if (results && Array.isArray(results)) {
+                    results.length > 5 && (results.length = 5);
+                    this.titleHitsRes = [];
+                    this.contentHitsRes = [];
+                    results.forEach(result => {
+                        if (!result || !result.ref || !this.searchDocs[result.ref]) {
+                            return;
                         }
-                    } else if (metadata[i].content) {
-                        const position = metadata[i].content.position[0]
-                        hits.push(this.getContentHit(doc, position))
-                    } else if (metadata[i].keywords) {
-                        const position = metadata[i].keywords.position[0]
-                        hits.push(this.getKeywordHit(doc, position, input.length));
-                        this.titleHitsRes.push(result.ref);
-                    }
+                        const doc = this.searchDocs[result.ref];
+                        const { metadata } = result.matchData;
+                        for (let i in metadata) {
+                            if (metadata[i].title) {
+                                if (!this.titleHitsRes.includes(result.ref)) {
+                                    const position = metadata[i].title.position[0];
+                                    hits.push(this.getTitleHit(doc, position, input.length));
+                                    this.titleHitsRes.push(result.ref);
+                                }
+                            } else if (metadata[i].content) {
+                                const position = metadata[i].content.position[0];
+                                hits.push(this.getContentHit(doc, position));
+                            } else if (metadata[i].keywords) {
+                                const position = metadata[i].keywords.position[0];
+                                hits.push(this.getKeywordHit(doc, position, input.length));
+                                this.titleHitsRes.push(result.ref);
+                            }
+                        }
+                    });
+                    hits.length > 5 && (hits.length = 5);
+                    resolve(hits);
+                } else {
+                    resolve([]);
                 }
-            });
-            hits.length > 5 && (hits.length = 5);
-            resolve(hits);
+            } catch {
+                resolve([]);
+            }
         });
     }
 }

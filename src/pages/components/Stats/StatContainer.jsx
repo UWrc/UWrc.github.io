@@ -11,17 +11,27 @@ const Colors = {
 }
 
 function buildStatContainer(statItems) {
+  if (!statItems || typeof statItems !== 'object') {
+    return null;
+  }
+
   let statItemMappings = Object.entries(statItems)
   let colors = Object.values(Colors)
-  return statItemMappings.map((item, i) => 
-    <StatSlotMachineItem
-      key={i}
-      idx={i}
-      caption={item[0]}
-      value={item[1]}
-      backgroundColor={colors[i]}
-    />
-  )
+  return statItemMappings.map((item, i) => {
+    const [caption, value] = item;
+    if (!caption || value === undefined) {
+      return null;
+    }
+    return (
+      <StatSlotMachineItem
+        key={i}
+        idx={i}
+        caption={caption}
+        value={value.toString()}
+        backgroundColor={colors[i]}
+      />
+    );
+  }).filter(Boolean); // Remove any null items
 }
 
 StatContainer.propTypes = {

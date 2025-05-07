@@ -5,16 +5,44 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useState } from "react";
 import classnames from "classnames";
 import { useHistory } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+
 const Search = props => {
   const initialized = useRef(false);
   const searchBarRef = useRef(null);
+  const [isExpanded, setIsExpanded] = useState(false);
   const history = useHistory();
   const { siteConfig = {} } = useDocusaurusContext();
   const { baseUrl } = siteConfig;
+
+  // Use provided toggle handler or fallback to local state
+  const handleSearchBarToggle = useCallback(
+    expanded => {
+      if (props.handleSearchBarToggle) {
+        props.handleSearchBarToggle(expanded);
+      } else {
+        setIsExpanded(expanded);
+      }
+    },
+    [props.handleSearchBarToggle]
+  );
+
+  const toggleSearchIconClick = useCallback(
+    e => {
+      if (!searchBarRef.current.contains(e.target)) {
+        searchBarRef.current.focus();
+      }
+      handleSearchBarToggle(!props.isSearchBarExpanded);
+    },
+    [handleSearchBarToggle, props.isSearchBarExpanded]
+  );
+
+  // Use provided expanded state or fallback to local state
+  const isSearchBarExpanded = props.isSearchBarExpanded ?? isExpanded;
+
   const initAlgolia = (searchDocs, searchIndex, DocSearch) => {
       new DocSearch({
         searchDocs,
@@ -49,27 +77,22 @@ const Search = props => {
   const loadAlgolia = () => {
     if (!initialized.current) {
       Promise.all([
-        getSearchDoc(),
-        getLunrIndex(),
+        getSearchDoc().catch(() => []),
+        getLunrIndex().catch(() => ({})),
         import("./lib/DocSearch"),
         import("./algolia.css")
       ]).then(([searchDocs, searchIndex, { default: DocSearch }]) => {
-        initAlgolia(searchDocs, searchIndex, DocSearch);
+        if (Array.isArray(searchDocs) && searchDocs.length > 0 && searchIndex) {
+          try {
+            initAlgolia(searchDocs, searchIndex, DocSearch);
+          } catch {
+          }
+        }
+      }).catch(() => {
       });
       initialized.current = true;
     }
   };
-
-  const toggleSearchIconClick = useCallback(
-    e => {
-      if (!searchBarRef.current.contains(e.target)) {
-        searchBarRef.current.focus();
-      }
-
-      props.handleSearchBarToggle(!props.isSearchBarExpanded);
-    },
-    [props.isSearchBarExpanded]
-  );
 
   return (
     <div className="navbar__search" key="search-box">
@@ -77,7 +100,7 @@ const Search = props => {
         aria-label="expand searchbar"
         role="button"
         className={classnames("search-icon", {
-          "search-icon-hidden": props.isSearchBarExpanded
+          "search-icon-hidden": isSearchBarExpanded
         })}
         onClick={toggleSearchIconClick}
         onKeyDown={toggleSearchIconClick}
@@ -90,13 +113,13 @@ const Search = props => {
         aria-label="Search"
         className={classnames(
           "navbar__search-input",
-          { "search-bar-expanded": props.isSearchBarExpanded },
-          { "search-bar": !props.isSearchBarExpanded }
+          { "search-bar-expanded": isSearchBarExpanded },
+          { "search-bar": !isSearchBarExpanded }
         )}
         onClick={loadAlgolia}
         onMouseOver={loadAlgolia}
-        onFocus={toggleSearchIconClick}
-        onBlur={toggleSearchIconClick}
+        onFocus={() => handleSearchBarToggle(true)}
+        onBlur={() => handleSearchBarToggle(false)}
         ref={searchBarRef}
       />
     </div>

@@ -97,11 +97,11 @@ The file path on `klone` is `/data/fineweb_edu`.
 
 ## How to cite?
 
-@software{lozhkov2024fineweb-edu,
+`@software{lozhkov2024fineweb-edu,
   author = {Lozhkov, Anton and Ben Allal, Loubna and von Werra, Leandro and Wolf, Thomas},
   title = {FineWeb-Edu},
   month = May,
   year = 2024,
   doi = { 10.57967/hf/2497 },
   url = {https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu}
-}
+}`

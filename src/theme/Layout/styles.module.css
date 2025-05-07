@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  transition: var(--ifm-transition-fast) ease color;
+}
+
+.mainWrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+}
+
+/* Docusaurus-specific utility class */
+:global(.docusaurus-mt-lg) {
+  margin-top: 3rem;
+}
+
+:global(#__docusaurus) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

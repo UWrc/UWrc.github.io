@@ -1,0 +1,40 @@
+/*
+Hide color mode toggle in small viewports
+ */
+@media (max-width: 996px) {
+  .colorModeToggle {
+    display: none;
+  }
+
+  /* Hide main navbar items in mobile view */
+  :global(.navbar__items:not(:first-child)) {
+    display: none;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  :global(.navbar__items--right) {
+    position: absolute;
+    right: var(--ifm-navbar-padding-horizontal);
+  }
+}
+
+.colorModeToggle {
+  margin-right: 0.5rem;
+}
+
+.scrollbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #96BF47;
+  transition: width 0.1s ease;
+  z-index: 1000;
+}
+
+/* Ensure dropdowns appear above scroll indicator */
+:global(.navbar__item.dropdown) {
+  z-index: 1001;
+} 

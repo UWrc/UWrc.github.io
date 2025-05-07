@@ -8,10 +8,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import clsx from 'clsx';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import copy from 'copy-text-to-clipboard';
-import rangeParser from 'parse-numeric-range';
-import usePrismTheme from '@theme/hooks/usePrismTheme';
+import rangeParser from 'parse-numeric-range';;
 import styles from './styles.module.css';
-import { useThemeConfig } from '@docusaurus/theme-common';
+import { useThemeConfig, usePrismTheme } from '@docusaurus/theme-common';
 import MacOSCircle from "./MacOSCircle";
 const highlightLinesRangeRegex = /{([\d,-]+)}/;
 

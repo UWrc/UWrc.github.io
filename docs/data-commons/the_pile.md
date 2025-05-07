@@ -24,9 +24,11 @@ The file path on `klone` is `/data/pile`.
 ## How to cite?
 If you use the Pile or any of the components, please cite:
 
+```
 @article{pile,
   title={The {P}ile: An 800GB Dataset of Diverse Text for Language Modeling},
   author={Gao, Leo and Biderman, Stella and Black, Sid and Golding, Laurence and Hoppe, Travis and Foster, Charles and Phang, Jason and He, Horace and Thite, Anish and Nabeshima, Noa and Presser, Shawn and Leahy, Connor},
   journal={arXiv preprint arXiv:2101.00027},
   year={2020}
 }
+```
