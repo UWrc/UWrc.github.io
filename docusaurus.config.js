@@ -6,7 +6,15 @@ module.exports = {
   favicon: 'img/logos/uw_icon.png',
   organizationName: 'UWrc', // Github org/user name
   projectName: 'UWrc.github.io', // repo name
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [
+    [
+      require.resolve('docusaurus-lunr-search'),
+      {
+        languages: ['en'],
+        maxSearchResults: 10,
+      },
+    ],
+  ],
   onBrokenLinks: 'ignore',
   themeConfig: {
     prism: {
