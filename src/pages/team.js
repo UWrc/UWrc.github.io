@@ -127,6 +127,21 @@ export default function team() {
         </div>
       </div>
 
+      <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
+            src="https://avatars.githubusercontent.com/u/84157030?s=400&v=4"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">Kaichen</h4>
+            <small class="avatar__subtitle">
+              HPC Staff Scientist
+            </small>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <br />
