@@ -17,12 +17,12 @@ You are also able to select a Rstudio server container that is provided from the
 
 Once you specify the Rstudio server container, you have the option to change the User R Library Path (R_LIBS_USER). When you use the `install.packages()` command, the package library along with all of its dependencies will be installed in the directory specified with the User R Library path (R_LIBS_USER) field. This path defines the library location where R stores packages. By default, this is the path to your **[home directory](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)** which has a 10G storage limit. If you plan on using `install.packages()`, it is recommended to change the User R Library Path to somewhere with a larger storage quota to install libraries. 
 
-![Sample Rstudio form on Hyak's OOD.](/img/docs/ood/rstudio-interactive-app.JPG 'Sample Rstudio form on Hyak's OOD.')
+![Sample Rstudio form on Hyak's OOD.](/img/docs/ood/rstudio-interactive-app.JPG 'Rstudio form.')
 Once you click Launch, you should see your job under the "My Interactive Sessions" tab. It may take some time for your job to move through the queue depending on the amount of resources requested. Once your job has the requested resources, you will be able to connect to the Rstudio server:
 
-![Connecting to the Rstudio server on Hyak's OOD.](/img/docs/ood/rstudio-connect.JPG 'Connecting to the Rstudio server on Hyak's OOD.')
+![Connecting to the Rstudio server on Hyak's OOD.](/img/docs/ood/rstudio-connect.JPG 'Connect Rstudio.')
 
-![Sample Rstudio interface on Hyak's OOD.](/img/docs/ood/rstudio-interactive-session.JPG 'Sample Rstudio interface on Hyak's OOD.')
+![Sample Rstudio interface on Hyak's OOD.](/img/docs/ood/rstudio-interactive-session.JPG 'Rstudio interface.')
 
 ## Custom R Containers
 
