@@ -46,7 +46,6 @@ If you would like to request 1 on 1 help, please send an email to **help@uw.edu*
 
 <img src="/img/logos/escience-logo-768x193.png" alt="eScience logo." width="400"/>
 
-* The next **Software Carpentry** workshop from eScience will be May 27th –30th, 2025. [**Learn more and register here**](https://escience.washington.edu/data-science-learning/software-carpentry/).
 * **Intro Programming Workshop** - eScience is holding a Software Carpentry workshop on May 27th–30th (9:00 a.m. – noon each day). The workshop will teach software tools that can make researchers more effective, automate research tasks, and track research over time. Specifically, the Unix Shell, Git, and Python will be taught with a focus on reproducible research.
 [**Register here.**](https://uwescience.github.io/2025-05-27-uw/) 
 * **Teach your own LLM** - On Friday, May 23rd from 10:30 - noon in the Open Scholarship Commons, Jose Cols will lead the workshop “Teach your own LLM: Fine-tuning Models on Custom Datasets” covering how LLMs work and how to fine-tune a Llama 3 model for tasks like sentiment analysis and summarization. 
