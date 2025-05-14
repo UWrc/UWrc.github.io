@@ -40,7 +40,6 @@ export default function Pricing() {
               <h4>GPU slices (Nvidia):</h4>
               <ul>
                 <li>L40S: 32-cores, 384GB, 2 x L40S GPUs (w/48GB per card) last quoted $17,889.75 (pending order and delivery).</li>
-                <li>H200: 32-cores, 384GB, 2 x H200 (w/141GB per card) $58,910.25 (pending order and delivery; requires at least four slice purchases before an order can be made)</li>
               </ul>
               <p>Additional RAM may NOT be added to a slice after it is purchased; however additional slices can be added to the equivalent desired RAM.</p>
               <a href="https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=56f324af0faa6bc06cad419ce1050ed2"><button class="button button--secondary button--block">Buy Slices</button></a>
