@@ -26,13 +26,13 @@ Since this is now the latest and greatest on Hyak I've taken the opportunity to 
 
 Before the January 12, 2021 cluster maintenance every GPU on Hyak had a driver with CUDA10 and all of your codes were previously compiled against it. To test that the GPU driver update to CUDA11 wouldn't impact the most popular machine learning libraries we are compiling Pytorch against our pre-maintenance CUDA10 and testing it against a GPU with the newer CUDA11 installed.
 
-```bash
+```js
 conda create -p /gscratch/scrubbed/npho/pytorch-cuda10 python=3.8 -y
 ```
 
 Activate your new `pytorch-cuda10` environment:
 
-```bash
+```js
 conda activate pytorch-cuda10
 ```
 
@@ -42,7 +42,7 @@ The Pytorch website [[www](https://pytorch.org/get-started/locally/)] has a nice
 
 The command shown above to copy-and-paste below:
 
-```bash
+```js
 pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 

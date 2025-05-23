@@ -74,7 +74,7 @@ Hyak users may find it useful to use Docker to build containers on their local c
 
 To create a container, you need a container image. Container images can either be built or pulled from container repositories. Container repositories are registries of downloadable container images. A common repository you may come across is [**Docker Hub**](https://hub.docker.com/). You can pull container images from Docker Hub by using the command
 
-```bash
+```js
  apptainer pull docker://publisher/container-tag
 ```
 

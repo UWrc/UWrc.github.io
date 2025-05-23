@@ -17,7 +17,7 @@ Remember to replace the word `UWNetID` in the paths below with YOUR username/UWN
 
 Specify user library paths by editing or creating a configuration file called `.Renviron` in your Home directory. Use `nano` or `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
 
-```bash
+```js
 $ cat ~/.Renviron 
 R_LIBS="/gscratch/scrubbed/UWNetID/R/"
 ```
@@ -25,13 +25,13 @@ R_LIBS="/gscratch/scrubbed/UWNetID/R/"
 :::tip pro tip: directories don't exist until you create them
 Remember if the directory you want to use doesn't exist yet, R will send an error message. If you want to create a directory for yourself in `/gscratch/scrubbed` use the following command:
 
-```bash
+```js
 mkdir /gscratch/scrubbed/UWNetID/
 # remember to replace the word `UWNetID` above with YOUR username/UWNetID
 ```
 And then create a directory to store your R package libraries called `R`:
 
-```bash
+```js
 mkdir /gscratch/scrubbed/UWNetID/R
 # remember to replace the word `UWNetID` above with YOUR username/UWNetID
 ```
@@ -54,12 +54,12 @@ Let's say we wanted to use the most up-to-date version of base R from the Rocker
 
 First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` parition with 16GB of RAM for 2 hours. If your lab group owns Hyak resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
 
-```bash
+```js
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
 ```
 Pull the container from Docker hub with Apptainer. 
 
-```bash
+```js
 apptainer pull docker://rocker/r-base
 
 INFO:    Converting OCI blobs to SIF format
@@ -87,7 +87,7 @@ INFO:    Build complete: r-base_latest.sif
 
 The command will take a minute and create the SIF file in the directory where the apptainer command was executed (the current directory). List your directory to see the `.sif` file. If you pulled a specific version of R-base, your image will have a different name than that shown here. 
 
-```bash
+```js
 ls -alh
 
 474M r-base_latest.sif
@@ -95,7 +95,7 @@ ls -alh
 
 You can run the R binary within the container like below. If you created the R library directory as described above (and, more generally, if you want to load or save files), don't forget to use the --bind command. You can bind anywhere deeper on the filepath than from where you need to load or save things, with `/gscratch` being a good option.
 
-```bash
+```js
 apptainer run --bind /gscratch r-base_latest.sif R
 
 R version 4.4.0 (DATE) -- "Some Cute Name - Typical R Stuff"
@@ -121,7 +121,7 @@ Option 1, while ok, uses a lot (and I mean a lot) of inodes as well as taking a 
 
 Prior instructions on R [**user environment above**](#user-environment) apply. This container will also use the directory you designative in your `~/.Renviron` config file. Once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
 
-```bash
+```js
 # remember to do this on a compute node
 # start an interactive job with the following if you haven't yet
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
@@ -167,7 +167,7 @@ ls -alh
 
 Now when you run this container's R binary you can successfully load the Tidyverse. Again, we bind above the place where our user libraries will be stored.
 
-```bash
+```js
 apptainer run --bind /gscratch tidyverse_latest.sif R
 
 R version 4.4.0 (DATE) -- "Some Cute Name - Typical R Stuff"
@@ -199,7 +199,7 @@ Rstudio is an integrated development environment (IDE) for R. It's a front-end i
 
 First, you need the Rocker Rstudio container. 
 
-```bash
+```js
 # remember to do this on a compute node
 # start an interactive job with the following if you haven't yet
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
@@ -216,7 +216,7 @@ The following will prepare a `.sif` file called `rstudio_latest.sif`, but it mig
 
 We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler sftware called Slurm. Download our Slurm job file [**from this hyperlink**](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for `klone` from the tutorial by Rocker [**More information about the original tutorial can be found here.**](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
 
-```bash
+```js
 wget https://hyak.uw.edu/files/rstudio-server.job
 ```
 
@@ -233,7 +233,7 @@ Additionally, you might decide to modify the `sbatch` directives to adjust the r
 
 Review the highlighted sections of `rstudio-server.job` below and edit your version to fit your needs and paths you have access to:
 
-```bash title= rstudio-server.job
+```js title= rstudio-server.job
 #!/bin/sh
 
 #SBATCH --job-name=rstudio-server
@@ -273,7 +273,7 @@ export R_LIBS_USER=${RSTUDIO_CWD}/R
 
 Next's we'll submit the job with `sbatch` which will launch the Rstudio container, and then we will use port forwading to interact with the RStudio interface on our web browser. 
 
-```bash
+```js
 sbatch rstudio-server.job
 Submitted batch job 12345678
 # Slurm will assign a JobID when the job was submmitted
@@ -283,7 +283,7 @@ Submitted batch job 12345678
 :::tip Pro Tip
 Monitor the job with `squeue` and your `UWNetID` like the following example:
 
-```bash
+```js
 //highlight-next-line
 squeue -u UWNetID
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -293,7 +293,7 @@ squeue -u UWNetID
 
 Slurm will save your output file called `rstudio-server_12345678.out` in the directory where the `sbatch` command was executed. The suffix matches the job number you see. Check out its contents like below for instructions on how to connect to your Rstudio session.
 
-```bash
+```js
 cat rstudio-server_12345678.out
 
 1. SSH tunnel from your workstation using the following command:
@@ -325,7 +325,7 @@ This next section is done on your local computer ***not*** on the cluster.
 :::
 
 In a new terminal or command prompt on ***your laptop*** copy and paste the other SSH command from the Slurm output. The following is an example:
-```bash
+```js
 //highlight-next-line
 ssh -N -L 8787:n3164:47101 UWNetID@klone.hyak.uw.edu
 ... provide UWNetID password
@@ -350,7 +350,7 @@ If you did not adjust the `--time` directive in `rstudio-server.job`, your sessi
 
 Preferably, you can end your session manually. Exit the RStudio Session ("power" button in the top right corner of the RStudio window). Then go back to `klone` and use the `scancel` command provided with the specific jobID. For example, 
 
-```bash
+```js
 scancel -f 12345678
 ```
 
@@ -364,7 +364,7 @@ If you have trouble with this method, please report errors in an email to **help
 
 There are some versions of R still available as modules. Use these at your own risk. They may be versions with deprecated packages, and many were contributed by other users who built them to fit their personal needs, not yours. The Hyak team will not provide support for the use of these modules. 
 
-```bash
+```js
 module avail 
 
 ----- /sw/modules-1.775/modulefiles -----

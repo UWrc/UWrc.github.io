@@ -7,7 +7,7 @@ title: Set Up
 
 This tutorial offers a worked example that utilizes a container, computes against publicly available data from a genetic study focused on black cottonwood or *Populus trichocarpa* [**[1]**](https://doi.org/10.1111/1755-0998.12056), and uses Slurm to submit interactive, single batch, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel). For this tutorial, we will be using a container made based on a Neural Network called Locator [**[2]**](https://elifesciences.org/articles/54507). Locator is a set of python tools [**[3]**](https://github.com/kr-colab/locator.git) that build a neural network with TensorFlow to predict the location of organisms based on their genotype (DNA; or genetic background). The Locator container was built using a python container (version 3.8-slim-buster) with Docker [**[4]**](https://github.com/finchnSNPs/Docker_kr-colab_locator) following the Locator installation instructions. The container is publicly available on Docker Hub [**[5]**](https://hub.docker.com/repository/docker/finchnsnps/locator/general) where it can be pulled to Hyak `klone` and used with Apptainer using the following command:
 
-```bash
+```js
 # OPTIONAL : Code for reference. No need to run this now. 
 apptainer pull locator.sif docker://finchnsnps/locator:locator_v2
 ```
@@ -38,21 +38,21 @@ Remember there is a 10GB disk storage limit in your Home directory. For our tuto
 
 If you have set up your working directory, execute the following command from your working directory to make a copy of the tutorial materials.
 
-```bash
+```js
 cp -r /mmfs1/sw/hyak101/basics/ .
 # The "." is short hand for "here" meaning to make a copy in your current directory.
 ```
 
 Change directory to the `basics/` directory and list its contents.  
 
-```bash
+```js
 cd basics
 ls
 ```
 
 Listing the contents of the basics directory will show materials for this tutorial and our other tutorials.
 
-```bash
+```js
 24.07-tf2-py3-ood.sif  locator_NN_array.slurm     locator.sif       loop_script.sh            tf_tutorial.py
 container-build.def    locator_NN_dropouts.slurm  loop_array.slurm  pi.py                     ubuntu-git.sif
 data                   locator_NN_job.slurm       loop_job.slurm    tensorflow_nvgpu_ood.def  ubuntu.sif

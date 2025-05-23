@@ -27,12 +27,12 @@ We need a few more elements to tie all of these together, one script on `klone` 
 We have prepared a `sbatch` script which will execute `launch-container.sh` and `start-jupyter-server.sh` as a Slurm job, which will launch the container and start jupyter on a compute node. This prepared script is available under `/mmfs1/sw/hyak101/python`. Copy
 it to your working directory, and we'll go through it.
 
-```bash
+```js
 cp /mmfs1/sw/hyak101/python/jupyter-server.job .
 ```
 Let's go through it. 
 
-```bash title="jupyter-server.job"
+```js title="jupyter-server.job"
 #!/bin/bash
 #SBATCH --job-name=klone-container #DO NOT CHANGE
 #SBATCH --cpus-per-task=1 #number of CPUs
@@ -68,7 +68,7 @@ This script may take a little hacking on your part: while the Bash portion shoul
 of your operating system, there are too many versions of `sed` to make this work for everyone.
 [**You can download the script by clicking here**](https://hyak.uw.edu/files/hyak101/python/set-hyak-node.sh), and we'll walk through it afterwards:
 
-```bash title="set-hyak-node.sh"
+```js title="set-hyak-node.sh"
 #!/bin/bash
 NODE=$(ssh klone-login 'squeue \
     --user $USER \
@@ -82,7 +82,7 @@ sed -I '' -E s"/Hostname.*/Hostname $NODE/" ~/.ssh/klone-node-config
 :::note
 For at least one other version of `sed` this script works after a small adjustment. If the script version above doesn't work for you, try the following: 
 
-```bash title="set-hyak-node.sh"
+```js title="set-hyak-node.sh"
 #!/bin/bash
 NODE=$(ssh klone-login 'squeue \
     --user $USER \
@@ -97,7 +97,7 @@ sed -i -E s"/Hostname.*/Hostname $NODE/" ~/.ssh/klone-node-config
 
 
 Don't forget to make the script executable. 
-```bash
+```js
 chmod +x set-hyak-node.sh
 ```
 
@@ -108,7 +108,7 @@ This script works by setting the variable `NODE` and modifying `~/.ssh/klone-nod
 
 If you remember, `~/.ssh/klone-node-config` looked like this with `n3000` or another compute node name as a placeholder. 
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
   User UWNetID
   //highlight-next-line
@@ -118,7 +118,7 @@ Host klone-node
 
 If you execute this `set-hyak-node.sh` while your `klone-container` job is actively running on `klone` (on compute node `n3120` in this example), you should see something like this:
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
   User UWNetID
   //highlight-next-line
@@ -135,7 +135,7 @@ edit this file by hand, with `nano` or another text editor, and change the `Host
 
 If you want to test that your script works to replace the Hostname, [**Return to Flexible Connections EXTRA CREDIT at the bottom of the page**](https://hyak.uw.edu/docs/hyak101/python/ssh), and once you have a job called `klone-container` running on `klone`, execute `set-hyak-node.sh` and see if the script works by viewing `~/.ssh/klone-node-config` before and after running the script to see when Hostname changes. Like this: 
 
-```bash
+```js
 cat ~/.ssh/klone-node-config
 
 Host klone-node
@@ -164,7 +164,7 @@ If Hostname is left blank (i.e., no placeholder) this will not work. Edit `~/.ss
 
 I swear, this is the last one. [**You can download it to your local computer by clicking here**](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). Don't forget to make the script executabe after you download it. 
 
-```bash
+```js
 chmod +x start-jupyter-forwarding.sh
 ```
 
@@ -175,12 +175,12 @@ We'll use it during the [**Start up Sequence in the Next Section**](https://hyak
 Let's go through `start-jupyter-forwarding.sh` script as it is fairly complex.
 
 First, use `cat` to concatenate the script and we will walk through the sections.
-```bash 
+```js 
 cat start-jupyter-forwarding.sh
 ```
 
 #### Retrieving the connection information
-```bash title="start-jupyter-forwarding.sh"
+```js title="start-jupyter-forwarding.sh"
 #!/bin/bash
 JUPYTER_INFO=$(ssh klone-node 'cat ~/.jupyter-port-and-token' 2>/dev/null)
 
@@ -208,7 +208,7 @@ If the variable is empty (which we check with `-z`), the script exits after prin
 
 Here's a bit of advanced Bash:
 
-```bash title="start-jupyter-forwarding.sh"
+```js title="start-jupyter-forwarding.sh"
 JUPYTER_PORT=${JUPYTER_INFO% *}
 JUPYTER_TOKEN=${JUPYTER_INFO#* }
 ```
@@ -220,7 +220,7 @@ The Linux Documentation Project's [**Advanced Bash Guide**](https://tldp.org/LDP
 
 #### Forwarding the port
 
-```bash title="start-jupyter-forwarding.sh"
+```js title="start-jupyter-forwarding.sh"
 ssh -N -L 8888:localhost:$JUPYTER_PORT klone-node &
 SSH_PID=$!
 
@@ -242,7 +242,7 @@ and we make sure it didn't exit with an error (the last exit code is saved in `$
 
 #### Print it all out
 
-```bash title="start-jupyter-forwarding.sh"
+```js title="start-jupyter-forwarding.sh"
 echo
 echo "Connect to:"
 echo "  http://localhost:8888/?token=$JUPYTER_TOKEN"
@@ -257,7 +257,7 @@ This part of the script is what you see printed to the screen when you run it. I
 
 We'll run this for real during the start up sequence, but just so you know it will look like something this when we execute the `start-jupyter-forwarding.sh` script: 
 
-```bash
+```js
 ./start-jupyter-forwarding.sh
 
 Connect to:
@@ -271,7 +271,7 @@ You will then copy and paste the web address into your browser, and you should b
 
 When you're finished, you can use the kill command we generated to ensure your port forwarding is stopped:
 
-```bash
+```js
 kill 99999
 ```
 

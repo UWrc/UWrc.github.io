@@ -8,12 +8,12 @@ Mathematica is a mathematical computational program. In HPC, Mathematica is espe
 
 ## Mathematica on Hyak
 To start up Mathematica on Hyak, launch a job on a compute node with the [salloc](https://hyak.uw.edu/docs/compute/scheduling-jobs#interactive-jobs-single-node) command. All modules, including Mathematica, are unavailable on login nodes. 
-```bash
+```js
 # using the salloc command to switch from a login node to a compute node
 salloc
 ```
 Next, use [LMOD](https://hyak.uw.edu/docs/tools/modules) to load the Mathematica module:
-```bash
+```js
 module load mathematica
 ```
 Once it has loaded, you can start the Mathematica kernal:

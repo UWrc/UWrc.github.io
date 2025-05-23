@@ -24,7 +24,7 @@ I'll start with the end result for those of you who just want to use it but foll
 
 This is a GPU-enabled version of gromacs so we need a GPU first (can verify with `nvidia-smi`).
 
-```bash
+```js
 salloc -A uwit -p ckpt --time=4:00:00 -n 4 --mem=20G --gpus=1
 ```
 
@@ -32,7 +32,7 @@ salloc -A uwit -p ckpt --time=4:00:00 -n 4 --mem=20G --gpus=1
 
 Once we have a GPU we use modules to load gromacs-2020.4 and all its required dependencies (e.g., CUDA11).
 
-```bash
+```js
 module load gromacs/2020.4-cuda11.1
 ```
 
@@ -69,7 +69,7 @@ CUDA runtime:       11.10
 
 I used a tutorial from the gromacs website [here](http://www.gromacs.org/@api/deki/files/198/=gmx-tutorial.pdf) to show it runs processes on GPU(s). The tutorial runs an MD simulation on a lysozyme but that's the extent of my study there. The commands below are a summary of the tutorial with a note that the `genbox` subcommand is now replaced by `solvate`.
 
-```bash
+```js
 gmx pdb2gmx -f 1LYD.pdb -water tip3p
 gmx editconf -f conf.gro -bt dodecahedron -d 0.5 -o box.gro
 gmx solvate -cp box.gro -cs spc216.gro -p topol.top -o solvated.gro
@@ -79,7 +79,7 @@ gmx grompp -f em.mdp -p topol.top -c solvated.gro -o em.tpr -maxwarn 3
 
 The final gromacs command below starts the fun, the documentation suggests it will automatically identify the GPUs available to send work to them. However, there are more explicit GPU arguments we encourage you to explore.
 
-```bash
+```js
 gmx mdrun -v -deffnm em
 ```
 
@@ -118,19 +118,19 @@ You need CUDA11, GNU Compiler, and OpenBLAS library for the version I put togeth
 
 From the login node I staged a folder in the [modules](/docs/tools/modules) directory.
 
-```bash
+```js
 cd /sw/gromacs/2020.4-cuda11.1
 ```
 
 Grab regression tests.
 
-```bash
+```js
 wget http://gerrit.gromacs.org/download/regressiontests-2020.4.tar.gz
 ```
 
 Download gromacs-2020.4 [[source](https://manual.gromacs.org/documentation/2020.4/download.html)].
 
-```bash
+```js
 wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-2020.4.tar.gz
 ```
 
@@ -138,19 +138,19 @@ wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-2020.4.tar.gz
 
 I used the shared `build-gpu` node for an interactive session but if you are affiliated with a group that has their own you can use that instead.
 
-```bash
+```js
 salloc -A uwit -p ckpt --time=4:00:00 -n 4 --mem=20G --gpus=1
 ```
 
 Once you get a session with GPU (you can run `nvidia-smi` to confirm you see one). Extract regression tests.
 
-```bash
+```js
 tar xvzf regressiontests-2020.4.tar.gz
 ```
 
 Do the same for the gromacs code and enter the directory.
 
-```bash
+```js
 tar xzvf gromacs-2020.4.tar.gz
 cd gromacs-2020.4
 ```
@@ -159,7 +159,7 @@ cd gromacs-2020.4
 
 Modules loaded individually for readability but you could load all modules in one command. Get a refresher on modules [here](/docs/tools/modules).
 
-```bash
+```js
 module load cmake/3.11.2
 module load gcc/10.1.0
 module load cuda/11.1.1-1
@@ -170,14 +170,14 @@ module load contrib/openblas/0.2.20
 
 I created a subdirectory within the source to compile.
 
-```bash
+```js
 mkdir cuda11
 cd cuda11
 ```
 
 Use `cmake` to create the `Makefile`. **Note**: if you copy-and-paste the `cmake` command below you *will* have to modify the paths referenced for your environment.
 
-```bash
+```js
 cmake .. -DGMX_BUILD_OWN_FFTW=OFF -DREGRESSIONTEST_DOWNLOAD=OFF -DGMX_GPU=ON -DGMX_MPI=OFF -DCMAKE_INSTALL_PREFIX=/sw/gromacs/2020.4-cuda11.1 -DREGRESSIONTEST_PATH=/sw/gromacs/2020.4-cuda11.1/regressiontests-2020.4 -DCUDA_TOOLKIT_ROOT_DIR=/sw/cuda/11.1.1-1
 ```
 

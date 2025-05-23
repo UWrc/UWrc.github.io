@@ -55,7 +55,7 @@ The quotas reported by `hyakstorage` are updated once every hour, not immediatel
 
 :::tip pro tip: Storage monitoring
 To monitor storage changes in real-time, use the following command, which will show you how much storage is occupied by each item in the directory where the command is executed. IF you are cleaning up storage, this command will show new storage counts as changes are made. 
-```bash
+```js
 du -h --max-depth 1
 ```
 :::
@@ -72,7 +72,7 @@ Your Home directory quota is 10 GB or ~250,000 inodes.
 
 On `klone`, monitor your Home directory with `hyakstorage` as discussed above and shown below. You can check your home directory usage using the `hyakstorage` command without the `--home` flag but it will also display all the lab or group quotas you have access to. As you can see below from the `hyakstorage` output on `klone`, I am currently using 4GB out of a 10GB block quota and 4,764 inodes (i.e., files) out of a 256,000 inode quota.
 
-```bash
+```js
 hyakstorage --home
                            Usage report for /mmfs1/home/UWNetID
 ╭──────────────────────┬────────────────────────────────┬────────────────────────────────╮
@@ -88,18 +88,18 @@ Ideally you only keep personal code bases or smaller data sets here. This quota 
 :::tip PRO TRIP - FYI
 Your Home directory is a directory under the Hyak file system that each user is given when their account is created. When you log into Hyak, your shell (your view) will be your Home directory. Meaning that when you use the command print working directory or `pwd` you will see the absolute path (i.e., address in the file system) of your Home directory: 
 
-```bash
+```js
 pwd
 /mmfs1/home/UWNetID
 ```
 Above, **UWNetID** in this case will be replaced with your **UWNetID**. For example, as the author of this documentation (username `finchkn`), when I use `pwd` after I login, I see: 
-```bash
+```js
 pwd
 //highlight-next-line
 /mmfs1/home/finchkn
 ```
 There are many shortcuts to get to your home directory from anywhere on `klone`. 
-```bash
+```js
 # All of the following will take me to my Home Directory:
 # the ~ symbol is a shorthand for the Home Directory
 cd ~ 
@@ -138,7 +138,7 @@ Users leaving UW should plan to remove or secure their data to prevent the expos
 1. **Changing File Ownership To Your Principal Investigator**
 
  If you are working with a lab, the data produced during that work is the ultimate intellectual property of the Principal Investigator on the project. Before you leave, you should change ownership of the files or directories to the Principal Investigator or another person in the lab with the `chown` command:
-```bash
+```js
 # For an entire directory
 chown -R <new owner NetID> directory/
 # For a singular file

@@ -11,7 +11,7 @@ A lot of software you may want to use and compile yourself could be written in C
 
 The latest GNU compiler provided as a module is version 10.2 [[www](https://gcc.gnu.org/gcc-10/)]. This was built with the `--enable-languages=c,c++,fortran` flag.
 
-```bash
+```js
 module load gcc/10.2.0
 ```
 
@@ -29,6 +29,6 @@ $
 
 The latest Intel compiler is the 2021 version, this module comes bundled with the entire oneAPI suite (e.g., Intel MPI).
 
-```bash
+```js
 module load intel/oneAPI/2021.1.1 
 ```

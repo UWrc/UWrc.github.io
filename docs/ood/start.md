@@ -25,7 +25,7 @@ If you access OOD from off campus, you will need to connect to the UW VPN. You c
 
 1. To access Hyak's Open OnDemand, open a web browser and navigate to [<u>https://ondemand.hyak.uw.edu/</u>](https://ondemand.hyak.uw.edu/). You will be prompted to log in with your UW NetID, password, and verify your identity with Duo. Once you have successfully logged in, you will be taken to Hyak's OOD dashboard.
 2. Interactive apps bind to your home directory by default, making it difficult to navigate to other directories and possibly filling your [<u>home directory quota</u>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory). To set up temporary storage, create a directory in a lab space or `/gscratch/scrubbed/`. Then, use 
-```bash
+```js
 ln -s <path_to_storage> ~
 ``` 
 to create a symbolic link to the new directory. Now, apps spawned in the home directory can easily access the new storage location.

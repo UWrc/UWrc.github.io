@@ -7,7 +7,7 @@ The Hyak clusters operate on a condo model, the details of which are here: https
 
 The **first** component of this model is on-demand access to the resources your group has contributed. When you request resources from a partition, for example, with:
 
-```bash
+```js
 salloc --partition compute
 # the above will default to the first account you were added to 
 # add --account followed by your lab/group name to specify the account
@@ -20,7 +20,7 @@ To see which groups and partitions you belong to, use the `hyakalloc` command on
 ### The Checkpoint Partition
 The **second** component of our condo model—and one of the major advantages of contributing to the cluster—is the "checkpoint" partition, `ckpt`. When you request resources from `ckpt`, for example, with:
 
-```bash
+```js
 salloc --partition ckpt
 ```
 
@@ -34,13 +34,13 @@ You can request resources from the entire cluster's idle resources (including GP
 
 Following our June 2024 maintenance, we have a new class of nodes being deployed on `klone` which we are calling `g2` because they are the second generation of nodes. CPU `g2` nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. For this reason, you might be interested in running your jobs on `g2` node specifically, and using the `ckpt-g2` partition, for example, with: 
 
-```bash
+```js
 salloc --partition ckpt-g2
 ```
 
 If you don't have a node-preference for your jobs, we have created a partition `ckpt-all` which will send your job to be scheduled on either `g1` or `g2`. Note: `ckpt-all` has the ability to schedule jobs on a larger number of resources. For all intents and purposes, the following commands schedule jobs on idle resources: 
 
-```bash
+```js
 # Schedule jobs on g1 nodes only.
 salloc --partition ckpt
 # Schedule jobs on g2 nodes only. 

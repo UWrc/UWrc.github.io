@@ -26,12 +26,12 @@ The following assumes you have already installed Miniconda in your home director
 
 :::
 
-```bash
+```js
 conda info
 ```
 The output shoudl look something like this if you have installed Miniconda3. 
 
-```bash
+```js
      active environment : None
             shell level : 0
 //highlight-next-line
@@ -68,7 +68,7 @@ Notice the highlighted lines above showing the absolute path to your config file
 
 when you `ls` your home directory (i.e., `ls /mmfs1/home/UWNetID/` or `ls ~`)you might not see `.condarc` listed. It might not be there and you might have to create it in the next step, but you already have one, you much use the following command
 
-```bash 
+```js 
 ls -a
 ```
 
@@ -80,7 +80,7 @@ to list all hidden files (files beginning with `.`).
 
 If you don't have a `.condarc` in your home directory, you can create and edit it with a hyak preloaded editor like `nano` or `vim`. Here we will used `nano`.
 
-```bash
+```js
 nano ~/.condarc
 ```
 
@@ -94,7 +94,7 @@ Remember to replace the word `UWNetID` in the paths below with YOUR username/UWN
 
 Here is what your edited .condarc should look like.
 
-```bash title="~/.condarc"
+```js title="~/.condarc"
 envs_dirs:
 //highlight-next-line
   - /gscratch/scrubbed/UWNetID/envs
@@ -109,15 +109,15 @@ In addition to designating the directories, **please include** `always_copy: tru
 
 After `.condarc` is edited, we can use `conda info` with `grep` to see if our changes have been incorporated.
 
-```bash
+```js
 conda info |grep cache 
 ```
 The result should be something like
-```bash
+```js
 /gscratch/scrubbed/UWNetID/conda_pkgs
 ```
 And for the environments directory
-```bash
+```js
 conda info |grep envs
 ```
 Result
@@ -141,13 +141,13 @@ After you have reset the package cache and environment directories with your con
 
 Below is an example output from the `du -h --max-depth 1` command
 
-```bash
-$ du -h --max-depth=1 /mmfs1/home/UWNetID/
+```js
+du -h --max-depth=1 /mmfs1/home/UWNetID/
 6.7G	./miniconda3/
 4.0G	./conda_pkgs
 . . .
-$ rm -r /mmfs1/home/UWNetID/miniconda3/envs
-$ du -h --max-depth=1 /mmfs1/home/UWNetID/
+rm -r /mmfs1/home/UWNetID/miniconda3/envs
+du -h --max-depth=1 /mmfs1/home/UWNetID/
 2.6G	./miniconda3/
 4.0G	./conda_pkgs
 . . .
@@ -170,8 +170,8 @@ Be aware that many software packages are configured similarly to conda. Explore 
 
 If you are installing with `pip`, you might have a pip cache in `~/.cache/pip`. Let's locate your the `pip` config file location under variant "global." **You might have to activate a previously built conda environment to do this**. For this exercise we will use an environment called `project1_env`. 
 
-```bash
-$ conda activate project1_env
+```js
+conda activate project1_env
 (project1_env) $ pip config list -v
 . . .
 For variant 'user', will try loading '/mmfs1/home/UWNetID/.pip/pip.conf'
@@ -179,22 +179,22 @@ For variant 'user', will try loading '/mmfs1/home/UWNetID/.pip/pip.conf'
 ```
 The message "will try loading" rather than listing the config file `pip.conf` means that a pip config file has not been created. We will create our config file and set our pip cache. Create a directory in your home directory (e.g.,`/mmfs1/home/UWNetID/.pip`) to hold your pip config file and create a file called `pip.conf` with the `touch` command. Remember to also create the new directory for your new pip cache if you haven't yet. 
 
-```bash
-$ mkdir /mmfs1/home/UWNetID/.pip/
-$ touch /mmfs1/home/UWNetID/.pip/pip.conf
-$ mkdir /gscratch/scrubbed/UWNetID/pip_cache
+```js
+mkdir /mmfs1/home/UWNetID/.pip/
+touch /mmfs1/home/UWNetID/.pip/pip.conf
+mkdir /gscratch/scrubbed/UWNetID/pip_cache
 ```
 
 Open `pip.conf` with `nano` or `vim` and add the following lines to designate the location of your pip cache. 
 
-```bash
+```js
 [global]
 //highlight-next-line
 cache-dir=/gscratch/scrubbed/UWNetID/pip_cache
 ```
 
 Check that your pip cache has been designated. 
-```bash
+```js
 (project1_env) $ pip config list
 /mmfs1/home/UWNetID/.pip/pip.conf
 (project1_env) $ pip cache dir
@@ -205,8 +205,7 @@ Check that your pip cache has been designated.
 
 [**We previously covered this in our documentation.**](https://hyak.uw.edu/docs/tools/r#user-environment) Edit or create a config file called `.Renviron` in your home directory. Use `nano` or `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
 
-```bash
-$ cat ~/.Renviron 
+```js title="~/.Renviron" 
 R_LIBS="/gscratch/scrubbed/UWNetID/R/"
 ```
 The directory designated by `R_LIBS` will be where R installs your package libraries. 

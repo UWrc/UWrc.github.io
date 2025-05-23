@@ -11,7 +11,7 @@ In this section, we will review more commands to get you comfortable doing basic
 
 These four commands are other ways to view file contents, great for viewing smaller chunks of longer files.
 
-```bash
+```js
 head basilisk.dat # displays the first part of a file
 
 tail basilisk.dat # displays the last part of a file
@@ -25,7 +25,7 @@ less basilisk.dat # displays file contents one page at a time
 
 By default, the head and tail commands display the first and last 10 lines of a file. To view a specific number of lines use `-n` followed by the desired number of lines.
 
-```bash
+```js
 head -n 20 basilisk.dat
 ```
 
@@ -35,20 +35,20 @@ head -n 20 basilisk.dat
 
 Move to top of working directory.
 
-```bash
+```js
 cd /gscratch/scrubbed/UWNetID
 pwd
 ```
 
 Copy `animals.csv` to your current directory using the shorthand `.` to mean "here"
 
-```bash
+```js
 cp /mmfs1/sw/hyak101/basics/data/animals.csv .
 ```
 
 Copy a directory with all its contents using recursive copy
 
-```bash
+```js
 cp -r /mmfs1/sw/hyak101/basics/data/ .
 ```
 
@@ -56,7 +56,7 @@ cp -r /mmfs1/sw/hyak101/basics/data/ .
 
 #### "move" file to a new name (rename) with `mv`
 
-```bash
+```js
 mv animals.csv dataset.csv
 ```
 
@@ -68,13 +68,13 @@ mv animals.csv dataset.csv
 `rm` permanently deletes a file. This action is irreversible.
 :::
 
-```bash
+```js
 rm dataset.csv
 ```
 
 Remove a directory with recursive rm.
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/writing/
 ls
 rm -r thesis
@@ -84,7 +84,7 @@ rm -r thesis
 
 #### Create an empty file with `touch`
 
-```bash
+```js
 cd ../../../ 
 pwd 
 # prints gscratch/scrubbed/UWNETID
@@ -103,7 +103,7 @@ touch file1.txt # touch will update the timestamp
 
 #### Wildcards are special characters used as a shorthand
 
-```bash
+```js
 # ? represents any singular character
 ls file?.txt  
 # lists all file.txt files with a singular character where ? is
@@ -114,7 +114,7 @@ rm file[1-3].txt
 
 ### `*`
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/alkanes
 ls
 ls *.pdb # lists all files ending with .pdb
@@ -127,7 +127,7 @@ ls /sw/hyak101/basics/locator_NN*
 
 #### apply "word count" with `wc`
 
-```bash
+```js
 cd alkanes
 ls 
 wc cubane.pdb
@@ -137,7 +137,7 @@ wc *.pdb
 
 #### `wc -l` counts lines
 
-```bash
+```js
 wc -l *.pdb
 ```
 
@@ -145,7 +145,7 @@ wc -l *.pdb
 
 #### "redirect" output to a file with `>`
 
-```bash
+```js
 wc -l *.pdb > lengths.txt
 ls lengths.txt
 ls
@@ -162,14 +162,14 @@ If the file already exists, it will be overwritten.
 
 First, change to the `animal-counts/` directory and print the contents with the `cat` command
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/animal-counts/
 cat animals.csv
 ```
 
 The expected output is as follows:
 
-```bash
+```js
 2012-11-05,deer,5
 2012-11-05,rabbit,22
 2012-11-05,racoon,7
@@ -182,24 +182,24 @@ The expected output is as follows:
 
 Using `wc -l` to count the lines of the above output
 
-```bash
+```js
 wc -l animals.csv
 ```
 
-```bash
+```js
 8 animals.csv
 ```
 
 To create a subset of `animals.csv`, we can combine `head`, `tail`, `>`, and `>>` commands.
 
-```bash
+```js
 head -n 3 animals.csv > animals-subset.csv
 cat animals-subset.csv
 ```
 
 `animals-subset.csv` should now contain the first 3 lines of `animals.csv`:
 
-```bash
+```js
 2012-11-05,deer,5
 2012-11-05,rabbit,22
 2012-11-05,racoon,7
@@ -207,14 +207,14 @@ cat animals-subset.csv
 
 Because we do not want to override `animals-subset.csv` file contents, use `>>` to append rather than `>`:
 
-```bash
+```js
 tail -n 2 animals.csv >> animals-subset.csv
 cat animals-subset.csv
 ```
 
 Now, the subset reads as follows:
 
-```bash
+```js
 2012-11-05,deer,5
 2012-11-05,rabbit,22
 2012-11-05,racoon,7
@@ -224,13 +224,13 @@ Now, the subset reads as follows:
 
 Counting the lines once more:
 
-```bash
+```js
 wc -l animals-subset.csv
 ```
 
 Expected output:
 
-```bash
+```js
 5 animals-subset.csv
 ```
 
@@ -238,7 +238,7 @@ Expected output:
 
 #### "sort" numbers with `sort`
 
-```bash
+```js
 cd ../
 # You should now be in the exercise-data directory
 pwd
@@ -248,7 +248,7 @@ cat numbers.txt
 
 The expected output:
 
-```bash
+```js
 10
 2
 19
@@ -258,13 +258,13 @@ The expected output:
 
 The `sort` command by itself will sort a text file's contents in ascending order:
 
-```bash
+```js
 sort numbers.txt
 ```
 
 Notice how the output is sorted in lexicographical order:
 
-```bash
+```js
 10
 19
 2
@@ -274,13 +274,13 @@ Notice how the output is sorted in lexicographical order:
 
 To sort the numbers based on their numerical value, use the `-n` option
 
-```bash
+```js
 sort -n numbers.txt
 ```
 
 Now, the file contents will be interpreted as numbers rather than strings and `numbers.txt` will be sorted in ascending numerical order:
 
-```bash
+```js
 2
 6
 10
@@ -301,7 +301,7 @@ Other sorting options include `-r` which sorts lines in reverse order and
 
 Going back to the `alkanes` directory
 
-```bash
+```js
 cd alkanes
 cat lengths.txt
 sort -n lengths.txt
@@ -309,7 +309,7 @@ sort -n lengths.txt
 
 Expected output:
 
-```bash
+```js
 9 methane.pdb
 12 ethane.pdb
 15 propane.pdb
@@ -321,26 +321,26 @@ Expected output:
 
 Create a sorted list of the alkane lengths and check the first output line:
 
-```bash
+```js
 sort -n lengths.txt > sorted-lengths.txt
 head -n 1 sorted-lengths.txt
 ```
 
-```bash
+```js
 9 methane.pdb
 ```
 
 :::caution
 Empty file resulting from `>`. The following code will cause the contents of `lengths.txt` to be deleted:
 
-```bash
+```js
 sort -n lengths.txt > lengths.txt
 cat lengths.txt
 ```
 
 Notice how `lengths.txt` is now an empty file. To get `lengths.txt` back, backtrack to the original command:
 
-```bash
+```js
  wc -l *.pdb > lengths.txt
  ```
 
@@ -352,7 +352,7 @@ Notice how `lengths.txt` is now an empty file. To get `lengths.txt` back, backtr
 
 Alternatively, the alkane lengths can sorted by using one line of code:
 
-```bash
+```js
 wc -l *.pdb | sort -n
 
 wc -l *.pdb | sort -n > sorted_lengths_v2.txt
@@ -362,7 +362,7 @@ cat sorted_lengths_v2.txt
 
 The output should be the same at `sorted-lengths.txt`:
 
-```bash
+```js
 9 methane.pdb
 12 ethane.pdb
 15 propane.pdb
@@ -378,7 +378,7 @@ The output should be the same at `sorted-lengths.txt`:
 
 `grep` finds and prints lines in files that match a pattern
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/writing
 cat haiku.txt
 grep not haiku.txt 
@@ -386,42 +386,42 @@ grep not haiku.txt
 
 Only the lines containing "not" will print out. Now try the following `grep` command:
 
-```bash
+```js
 grep The haiku.txt
 ```
 
-```bash
+```js
 The Tao that is seen
 "My Thesis" not found.
 ```
 
 Notice how longer words containing "The" are also printed out. Use the -w option to ensure that grep is only matching whole words:
 
-```bash
+```js
 grep -w The haiku.txt
 ```
 
-```bash
+```js
 The Tao that is seen
 ```
 
 `grep` also works with multiple words at a time:
 
-```bash
+```js
 grep -w "is not" haiku.txt
 ```
 
-```bash
+```js
 Today it is not working
 ```
 
 Other options include -n which displays line numbers and -r which recursively searches for patterns:
 
-```bash
+```js
 grep -n "it" haiku.txt
 ```
 
-```bash
+```js
 5: With searching comes loss
 9: Yesterday it worked
 10: Today it is not working
@@ -429,7 +429,7 @@ grep -n "it" haiku.txt
 
 Combining options -n and -w:
 
-```bash
+```js
 grep -n -w "the" haiku.txt
 ```
 
@@ -441,7 +441,7 @@ grep -n -w "the" haiku.txt
 
 The -r (recursive) option:
 
-```bash
+```js
 grep -r Yesterday .
 ```
 
@@ -451,13 +451,13 @@ This searches for the word Yesterday in your current directory (writing).
 
 #### View your history of commands with `history`
 
-```bash
+```js
 history
 ```
 
 Use `history`, `|`, and `grep` together to find all times the `cat` command was used.
 
-```bash
+```js
 history |grep cat
 ```
 
@@ -465,32 +465,32 @@ history |grep cat
 
 #### "find" files or files matching a pattern with `file`
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/
 find . -name numbers.txt
 ```
 
 This will print out the location of numbers.txt :
 
-```bash
+```js
 ./numbers.txt
 ```
 
 Use `*` to find all .txt files starting in your current directory :
 
-```bash
+```js
 find . -name "*.txt"
 ```
 
 Use `grep` and `find` together to search for files with specific words or phrases:
 
-```bash
+```js
 grep "searching" $(find . -name "*.txt")
 ```
 
 The output shows the file location and the lines with the word "searching" :
 
-```bash
+```js
 ./writing/haiku.txt: With searching comes loss
 ./writing/LittleWomen.txt: sitting on the top step, affected to be searching...
 ```
@@ -503,7 +503,7 @@ The output shows the file location and the lines with the word "searching" :
 
 Find a file you would like to transfer. Let's say it is called text.txt. Use the following to transfer text.txt from your local computer to `klone`. We will transfer it to our working directory in `gscratch/scrubbed`
 
-```bash
+```js
 scp text.txt UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID
 ```
 
@@ -511,7 +511,7 @@ scp text.txt UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID
 
 #### To your local computer
 
-```bash
+```js
 scp UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 ```
 
@@ -519,7 +519,7 @@ scp UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 
 Similarly, data can be transferred using the `rysnc` command
 
-```bash
+```js
 # From Klone to your local computer
 rysnc UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 # use -a to preserve original file permissions, timestamp, etc

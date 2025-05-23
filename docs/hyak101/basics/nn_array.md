@@ -15,12 +15,12 @@ The method for solving this embarrassingly parallel computing problem is very si
 
 And use the text editor `nano` to edit it as needed. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` partition, replace `--partition=ckpt` with `--partition=compute` and your job will be scheduled faster because you will be requesting a job on resources you can use with priority access.
 
-```bash
+```js
 nano locator_NN_array.slurm
 # exit nano by holding Ctrl and pressing X; then save it by pushing Y
 ```
 
-```bash title="locator_NN_array.slurm"
+```js title="locator_NN_array.slurm"
 #!/bin/bash
 
 #SBATCH --job-name=locator_array
@@ -56,11 +56,11 @@ The work of transforming this batch job into an array job is done by attaching t
 
 To start building what we need, we save the list of sample data input files or test sets as a variable called `FILE_LIST` the value of which can be viewed with the following command:
 
-```bash
+```js
 ls -1 data/potr_m_pred*
 ```
 
-```bash
+```js
 data/potr_m_pred0.txt
 data/potr_m_pred1.txt
 data/potr_m_pred2.txt
@@ -82,7 +82,7 @@ This single script will schedule an array of 5 jobs, one for each test set (`FIL
 
 Once you have edited the script to fit your needs, you can submit it with `sbatch`.
 
-```bash
+```js
 sbatch locator_NN_array.slurm
 # the following is an example result
 sbatch: No account specified, defaulting to: account
@@ -93,7 +93,7 @@ Submitted batch job 12345678
 
 And use `squeue` with `watch` to monitor the progress of the jobs in real time.
 
-```bash
+```js
 watch squeue -u UWNetID
              JOBID PARTITION     NAME     USER ST TIME  NODES NODELIST(REASON)
         12345678_0 ckpt locator_  UWNetID  R 0:07   1 n3263
@@ -106,11 +106,11 @@ watch squeue -u UWNetID
 
 List the `log/` directory with the `-ltr` flag to see the log files from this tutorial in the order they were generated with the most recent at the bottom.
 
-```bash
+```js
 ls -ltr log/
 ```
 
-```bash
+```js
 total 1024
 -rw-r--r-- 1 UwNetID all 106480 Feb 22 16:34 locator_job_12345678.out
   //highlight-next-line

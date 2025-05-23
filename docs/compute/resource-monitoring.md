@@ -9,7 +9,7 @@ The Hyak clusters make use of the Slurm scheduler to submit and run jobs. The sc
 
 ## squeue
 `squeue` is used to monitor the Slurm queue. By default, `squeue` displays a list of all jobs running on Hyak. To monitor the status of a specific user's jobs, use `squeue -u UWNetID`, replacing `UWNetID` with the UW Net ID of the user of interest. To view the queue for a specific account, use `squeue -A accountname`.
-```bash
+```js
 squeue -A stf
 ```
 ```

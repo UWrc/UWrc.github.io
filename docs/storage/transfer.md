@@ -6,17 +6,17 @@ title: scp & rsync
 ### Using `scp` and `rsync` to transfer data
 
 #### Transfer data from `klone` to your local computer with "server copy" or `scp`
-```bash
+```js
 scp UWNetID@klone.hyak.uw.edu:/path/to/data_to_transfer .
 # The `.` specifies the current directory at the destination for the transferred files.
 ```
 #### Transfer data from your local computer to `klone` with "server copy" or `scp`
-```bash
+```js
 scp data_to_transfer UWNetID@klone.hyak.uw.edu:/path/to/directory
 ```
 #### Similarly, data can be transferred using the `rysnc` command
 
-```bash
+```js
 # From klone to your local computer
 rysnc UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 # use -a to preserve original file permissions, timestamp, etc
@@ -31,20 +31,20 @@ rysnc -a UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 #### For larger data files, you can compress them into tar files to facilitate transfer.
 
 First, identify which files or directories you would like to transfer **on your local device** and compress them into tar archives:
-```bash
+```js
 # compressing an entire directory
 tar -cvf data.tar data_directory
 ```
-```bash
+```js
 # compressing a single file
 tar -cvf data.tar data_file
 ```
 The `-c` flag creates the tar archive, `-v` prints out all the files being processed, and `-f` allows you to name the archive. Once the files are compressed, transfer the tar file to `klone` from your local device with `scp` or `rsync`:
-```bash
+```js
 scp data.tar UWNetID@klone.hyak.uw.edu:/path/to/directory
 ```
 `data.tar` will save to the specified `/path/to/directory`. To check if it transferred, log into Hyak and navigate to the target directory:
-```bash
+```js
 ssh UWNetID@klone.hyak.uw.edu
 [UWNetID@klone-login03 ~] cd /path/to/directory
 [UWNetID@klone-login03 ~] ls
@@ -52,7 +52,7 @@ ssh UWNetID@klone.hyak.uw.edu
 data.tar
 ```
 On `klone` under default user profile settings, `data.tar` should be color coded red, indiciating that is it an archive file. From here, you can unzip the tar file with the command:
-```bash
+```js
 tar -xvf data.tar
 ```
 :::note Tar Options
@@ -69,7 +69,7 @@ tar -xvf data.tar
 :::
 
 Alternatively, you can create a tar archive **and** copy it to `klone` from your local device in one step:
-```bash
+```js
 tar cvf - data_directory/ | ssh UWNetID@hyak.klone.uw.edu "cat > /path/to/file/data.tar"
     Password:
     ...

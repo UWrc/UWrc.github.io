@@ -35,20 +35,20 @@ To keep the login node in stable working order and ensure fair usage of the logi
 
 If you haven't already log on to `klone` for this tutorial.
 
-```bash
+```js
 # Below replace the word "UWNetID" with your UW NetID.
 ssh UWNetid@klone.hyak.uw.edu
 ```
 
 For the following exercises, we will create a working directory for this tutorial. We recommend starting your working directory in a filesystem location where you have a large storage quota, not in your Home directory (limit 10GB; [**Click here to learn more about Home directory storage limits**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory)). For this demonstration, we will create a working directory to use Hyak's free community storage under `/gscratch/scrubbed` ([**Click here to learn more about Scrubbed storage**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed)). First navigate to `/gscratch/scrubbed`:
 
-```bash
+```js
 cd /gscratch/scrubbed/
 ```
 
 If you have not already, make a directory with your UW NetID with `mkdir` and go into it:
 
-```bash
+```js
 # Below replace the word "UWNetID" with your UW NetID.
 mkdir UWNetID
 cd UWNetID
@@ -58,21 +58,21 @@ This will be your working directory for this section. Note that files and direct
 
 To start, copy the necessary tutorial materials to your working directory. Because we are copying an entire directory, make sure to use `-r` to recursively copy:
 
-```bash
+```js
 cp -r /sw/hyak101/basics .
 # Above the "." is shorthand for "here" or the current directory.
 ```
 
 Ensure all materials were copied into your working directory:
 
-```bash
+```js
 cd basics
 ls
 ```
 
 This directory contains other materials, but the materials listed below will be used in the next exercises.
 
-```bash
+```js
 data/
 locator.sif
 locator_NN_job.slurm
@@ -93,13 +93,13 @@ If you are a **student** who is paying the student technology fee (STF), you are
 
 Let's start by checking which accounts and partitions you have access to with the `hyakalloc` command.
 
-```bash
+```js
 hyakalloc
 ```
 
 The result will look different for each user. Yours ***might*** look something like this:  
 
-```bash
+```js
       Account resources available to user: UWNetID       
 ╭─────────┬──────────────┬──────┬────────┬──────┬───────╮
 │ Account │    Partition │ CPUs │ Memory │ GPUs │       │
@@ -127,7 +127,7 @@ The `hyakalloc` results are a tool for you to prepare your job request. For exam
 :::caution Hyak Demo Account Users
 If you are using Hyak is a demonstration account, your `hyakalloc` table will look like the following because you are not part of a Hyak account group and you have not been given access to a partition with priority access.
 
-```bash
+```js
 ╭─────────┬───────────┬──────┬────────────────────┬──────┬───────╮
 │ Account │ Partition │ CPUs │             Memory │ GPUs │       │
 ├─────────┼───────────┼──────┼────────────────────┼──────┼───────┤
@@ -143,11 +143,11 @@ For some of the next presented exercises, you can ignore the `--account` flag, a
 
 While you won't necessarily have access to them, it might be useful for you to see a list of Hyak's partitions. The `sinfo` commands contains information about the servers or nodes that compose Hyak, and the `sinfo -s` commands give you a summary for this information including the partitions and the hostnames that fall into each partition.
 
-```bash
+```js
 sinfo -s
 ```
 
-```bash
+```js
 PARTITION        AVAIL  TIMELIMIT   NODES(A/I/O/T) NODELIST
 compute-bigmem      up   infinite        28/0/0/28 n[3008-3011,3064,3066,3132-3133,3190,3244-3247,3252-3255,3353-3355,3400-3407]
 ckpt                up   infinite   327/173/10/510 g[3001-3007,3010-3017,3020-3027,3030-3037,3040-3047,3050-3057,3060-3067,3070-3077,3080-3085],n[3000-3431],z[3001-3002,3005-3011]
@@ -174,7 +174,7 @@ compute-ultramem    up   infinite          3/0/0/3 z[3007-3009]
 
 In the following section, it is often useful to have two terminal windows open and logged into `klone`. One for editing scripts and issuing commands and one for monitoring active jobs in the squeue. Open up a second terminal and use `ssh` to login to Hyak. In this terminal, monitor jobs using the command:
 
-```bash
+```js
 # Below replace the word "UWNetID" with your UW NetID.
 watch -n 10 squeue -u UWNetID 
 ```
@@ -199,13 +199,13 @@ In the next exercises, leave this terminal open and executing the `watch -n 10 s
 
 An interactive session on the cluster allows users to access a computing node in real time for tasks that require direct interaction, exploration, or debugging. Use the `salloc` command to request an interactive job. If you have a quick job, need to test many commands individual that will later become the components of a script, or you are preparing software to use later, an interactive session may be the best choice. Let's start an interactive job on the `ckpt-all` partition (feel free to use another partition if you like). We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 10G of RAM with `--mem=10G`, and a maximum time of 2 hours with `--time=2:00:00`. The job will automatically end after 2 hours if we don't end it before 2 hours has elapsed.
 
-```bash
+```js
 salloc --partition=ckpt-all --cpus-per-task=1 --mem=10G --time=2:00:00
 ```
 
 The output will look something like this:
 
-```bash
+```js
 salloc: Pending job allocation 18981043
 salloc: job 18981043 queued and waiting for resources
 salloc: job 18981043 has been allocated resources
@@ -220,7 +220,7 @@ Relevant information from this output is:
 
 After your job has been requested and has started, your shell prompt will show that you are no longer on the login node, or look something like this:
 
-```bash
+```js
 [UWNetID@n3424 basics]$
 ```
 
@@ -235,7 +235,7 @@ You can also request an interactive session on a GPU with `salloc`.
 
 Use your `hyakalloc` command to see the GPU partitions associated to the accounts you are part of; you will be able to schedule jobs on these GPU resources with priority. Using this example:
 
-```bash
+```js
       Account resources available to user: UWNetID       
 ╭─────────┬──────────────┬──────┬────────┬──────┬───────╮
 │ Account │    Partition │ CPUs │ Memory │ GPUs │       │
@@ -248,7 +248,7 @@ Use your `hyakalloc` command to see the GPU partitions associated to the account
 
 The command to start an interactive job on a GPU node would look like the following:
 
-```bash
+```js
 salloc --account=account --partition=gpu-rtx6k --gpus=1 --mem=10G --time=2:00:00
 # Above replace the account and partition flags to match your account and partitions.
 ```
@@ -259,7 +259,7 @@ Which would give you a job with 1 CPU (default), 1 GPU, and 10G of RAM for 2 hou
 
 If you are requesting a GPU job as a demonstration account user or as a user without priority access to a GPU partition, you will request GPU jobs from checkpoint idle resources. If you need to request a GPU node via checkpoint, the `salloc` command will be similar to the following:
 
-```bash
+```js
 salloc --partition=ckpt-all --gpus-per-node=a40:1 --mem=10G --time=2:00:00 
 ```
 
@@ -269,7 +269,7 @@ Which would give you a job with 1 CPU (default), 1 A40 GPU, and 10G of RAM for 2
 
 When requesting GPUs from checkpoint idle resources, it might be useful to use the following command to identify idle GPU types.
 
-```bash
+```js
 sinfo -p ckpt-all -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v null
  ```
 
@@ -282,7 +282,7 @@ g3003           10/0/30/40          361637       gpu:2080ti:8     gpu:2080ti:1(I
 
 Showing that there are at least seven (out of eight) idle 2080ti GPUs and one could be requested with
 
-```bash
+```js
 salloc --partition=ckpt-all --gpus-per-node=2080ti:1 --mem=10G --time=2:00:00 
 ```
 
@@ -290,7 +290,7 @@ salloc --partition=ckpt-all --gpus-per-node=2080ti:1 --mem=10G --time=2:00:00
 
 After requesting a GPU job, you can check to see if the GPU is active using the `nvidia-smi` command:
 
-```bash
+```js
 nvidia-smi
 ```
 
@@ -298,7 +298,7 @@ The output will be two tables. The first table shows information such as the tem
 
 To continuously update the output every 5 seconds, use the flag `--loop = 5`:
 
-```bash
+```js
 nvidia-smi --loop=5
 ```
 
@@ -310,18 +310,18 @@ nvidia-smi --loop=5
 
 After requesting an interactive job, let's try to run a simple script on the compute node. If you have been following along, you should have `loop_script.sh` in the basics directory.
 
-```bash
+```js
 ls
 ```
 
-```bash
+```js
 data  locator_NN_dropouts.slurm      locator.sif      loop_job.slurm
 locator_NN_array_slurm  locator_NN_job.slurm    loop_array.slurm  loop_script.sh
 ```
 
  Use the `cat` or `nano` command to view this script.
 
-```bash
+```js
 cat loop_script.sh
 ```
 
@@ -329,7 +329,7 @@ cat loop_script.sh
 The point of showing you this script is not how the script is coded or what the script does. We will use this script in the next sections to demonstrate executing commands with Slurm job scheduler. This script is a proxy for scripts or commands you might use on Hyak. **Our main goal is to prepare you to adapt the Slurm commands for your research computing projects on Hyak.**
 :::
 
-```bash title="loop_script.sh"
+```js title="loop_script.sh"
 #!/bin/bash
 
 start=$1  # Starting number (first argument)
@@ -349,25 +349,25 @@ done
 
 `loop_script.sh` will take a starting point and an ending point and count until variable i=ending point. To execute this, use `./` with the desired starting and ending values:
 
-```bash
+```js
 ./loop_script.sh 0 1000000
 ```
 
 The output should look like this:
 
-```bash
+```js
 Sequence complete! Iterations from 0 to 1000000.
 ```
 
 To see how long a job took, use the `time` command:
 
-```bash
+```js
 time ./loop_script.sh 0 1000000
 ```
 
 The output should look something like this:
 
-```bash
+```js
 Sequence complete! Iterations from 0 to 1000000.
 
 real    0m4.216s
@@ -390,13 +390,13 @@ For longer running jobs, we recommend using a Slurm or `sbatch` script to submit
 
 In this section, we will be using the `loop_job.slurm` script in the basics directory to run `loop_script.sh` as a batch job. Use `nano` to view and edit `loop_job.slurm`, and we will walk through sections of the script.
 
-```bash
+```js
 nano loop_job.slurm
 ```
 
 The first few lines of `loop_job.slurm` should look like this:
 
-```bash
+```js
 #!/bin/bash
 
 #SBATCH --job-name=loop_job
@@ -416,7 +416,7 @@ Notice, we haven't specified an account, and Slurm will choose an account by def
 
 The commands you wish to execute will follow the `#SBATCH` option lines. In this case, we want to run `loop_script.sh` from 0 to 1000000 and see how long it takes:
 
-```bash
+```js
 time ./loop_script.sh 0 1000000
 ```
 
@@ -424,32 +424,32 @@ At the bottom of `loop_job.slurm` we explain all options in some detail for your
 
 Exit the nano text editor with ctrl+x. The command to submit batch jobs is `sbatch`. Submit the job using `sbatch`:
 
-```bash
+```js
 sbatch loop_job.slurm
 ```
 
 If you set up a separate window to monitor your jobs (see the pro tip above), details about loop_job should appear in this window. The new log directory containing the output file should also be made by now:
 
-```bash
+```js
 cd log
 ls
 ```
 
 The listed output file name will look something like this:
 
-```bash
+```js
 loop_job_123456789.out
 ```
 
 Examine the contents of the output file to see how long the sequence took:
 
-```bash
+```js
 cat loop_job_123456789.out
 ```
 
 All outputs and error messages will appear in this file:
 
-```bash
+```js
 Sequence complete! Iterations from 0 to 1000000.
 
 real    0m5.617s

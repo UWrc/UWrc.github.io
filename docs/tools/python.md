@@ -23,13 +23,13 @@ Users ofter report issues with disk storage from using Miniconda3 under its defa
 
 Download the latest miniconda3 version.
 
-```bash
+```js
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
 Install miniconda3 to your home directory. If you use large or multiple virtual environments you'll be better off specifying a lab directory or elsewhere due to the (inode and capacity) limits of home directories.
 
-```bash
+```js
 bash Miniconda3-latest-Linux-x86_64.sh -p $HOME/miniconda3
 ```
 
@@ -37,13 +37,13 @@ bash Miniconda3-latest-Linux-x86_64.sh -p $HOME/miniconda3
 
 You'll need to initialize your shell. For most people (i.e., unless you actively changed it) should be using the cluster default of `bash`. If use `zsh`, `fish`, or any other terminal then you'll need to swap out your terminal as appropriate.
 
-```bash
+```js
 conda init bash
 ```
 
 **Optional**: your terminal prompt will show `(base)` to indicate miniconda3 is active but it takes up a lot of screen real estate so I like to hide it until I'm actively using Python. The next command keeps miniconda3 deactivated until you call it.
 
-```bash
+```js
 conda config --set auto_activate_base false
 ```
 
@@ -59,7 +59,7 @@ We'll assume you're using miniconda3 environments here for this walk through. It
 
 First create an environment, I put it in my scrubbed directory but you can put it anywhere (preferably your lab directory if you have one). We discourage using your home directory as you will likely hit your inode (i.e., file) limits. Please alter the path in the example below to suit your unique needs. Note `pytorch-cuda11` in the example below will be the environment name.
 
-```bash
+```js
 conda create -p /gscratch/scrubbed/npho/pytorch-cuda11 python=3.8 -y
 ```
 
@@ -77,7 +77,7 @@ $
 
 To load the environment at this point one would run:
 
-```bash
+```js
 conda activate /gscratch/scrubbed/npho/pytorch-cuda11
 ```
 
@@ -85,7 +85,7 @@ Note you have to provide the full path. If you use the `--name` or `-n` option i
 
 If you are going to use a non-miniconda3 path regularly then you may want to run a variant of the command below to indicate an additional path that conda should search for your environments.
 
-```bash
+```js
 conda config --append envs_dirs /gscratch/scrubbed/npho
 ```
 
@@ -105,7 +105,7 @@ Adding a new conda environment prefix path will allow your environments to be re
 
 Now (for me) loading my conda environment is a more concise command of:
 
-```bash
+```js
 conda activate pytorch-cuda11
 ```
 
@@ -117,7 +117,7 @@ If you use the alternative method of making your environment references more con
 
 Instead of adding a path to the `envs_dirs` variable as demonstrated [above](#environments) you can create a symbolic link for each conda environment after you create it. Modify your link command below as appropriate.
 
-```bash
+```js
 ln -s /gscratch/scrubbed/npho/pytorch-cuda10 ~/miniconda3/envs/
 ```
 
@@ -142,7 +142,7 @@ However, I don't create / remove environments often so this extra step is nice i
 
 If you've followed the full page up til this point you have a blank conda environment using python3.8 and have loaded it using a variant of the following command:
 
-```bash
+```js
 conda activate pytorch-cuda11
 ```
 
@@ -154,7 +154,7 @@ Hyak runs Linux and as of January 2021 CUDA11 is the version on all the GPUs.
 
 To use the install instructions you see above in an easy copy-and-paste format see below **from within an activated conda environment**:
 
-```bash
+```js
 pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
@@ -200,13 +200,13 @@ First we'll need to have a Singularity definition file that defines how to build
 
 Get an interactive session.
 
-```bash
+```js
 salloc -A uwit -p compute --time=1:00:00 -n 4 --mem=10G
 ```
 
 Load singularity.
 
-```bash
+```js
 module load singularity
 ```
 
@@ -214,7 +214,7 @@ module load singularity
 
 Build your container, I set the output container to land on the compute node's local SSD drive (presented as `/tmp`) and copy it over to my current directory afterwards. 
 
-```bash
+```js
 singularity build --fakeroot /tmp/compute.sif ./compute.def
 ```
 
@@ -255,13 +255,13 @@ By default we suggest you use `cuda:11.4.2-base-ubuntu20.04` since it's currentl
 
 Get an interactive session with a GPU.
 
-```bash
+```js
 salloc -A uwit -p gpu-rtx6k --time=1:00:00 -n 4 --mem=20G --gpus=1
 ```
 
 Load singularity.
 
-```bash
+```js
 module load singularity
 ```
 
@@ -269,7 +269,7 @@ module load singularity
 
 Build the container and save it to the local node SSD. As a reminder be sure to copy it over to `/gscratch` upon completion.
 
-```bash
+```js
 singularity build --fakeroot /tmp/cuda-pytorch.sif ./cuda-pytorch.def
 ```
 

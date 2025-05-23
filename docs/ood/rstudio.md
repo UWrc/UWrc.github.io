@@ -30,7 +30,7 @@ The `install.packages()` command can be used to install most packages during you
 
 To start off, create a definition file to build your container. This may look something like the following:
 
-```bash
+```js
 Bootstrap: docker
 From: rocker/tidyverse
 

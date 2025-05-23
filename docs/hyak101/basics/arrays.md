@@ -13,7 +13,7 @@ In HPC, an **"embarrassingly parallel" problem** is like this task. It's a big j
 
 It can be useful to run an array job when you want to run a command multiple times with different parameters or execute the same command on multiple files. This is a common technique for testing different configurations in a simulation. Array jobs are also useful in situations where you want to run the same analysis on different datasets. Let's run an array job with  `loop_array.slurm` located in the basics directory. [**Click here to return to the Set Up steps**](https://hyak.uw.edu/docs/hyak101/basics/jobs#set-up) in the previous section if you can't find this script.
 
-```bash
+```js
 nano loop_array.slurm
 ```
 
@@ -21,13 +21,13 @@ This should look similar to `loop_job.slurm` but with the extra argument `#SBATC
 
 The main difference between `loop_array.slurm` and `loop_job.slurm` that we saw in the last section, is that here we are using bash scripting and variable syntax to set up the interval for `loop_script.sh` to count. Remember that `loop_script.sh` requires two arguments, a starting and ending integer and then simply counts from the start integer until the ending integer is met. With `loop_array.slurm` we are doing the same, except that our main command is changed so that the two arguments are now two variables `START` and `END`:
 
-```bash
+```js
 time ./loop_script.sh ${START} ${END}
 ```
 
 Before executing the command, we define the variables `START`, `END`, and a third variable `COUNT`:
 
-```bash
+```js
 COUNT=5000000
 START=$((${SLURM_ARRAY_TASK_ID}*${COUNT}))
 END=$((${START}+${COUNT}-1))
@@ -52,7 +52,7 @@ Each job in the array will have a different `SLURM_ARRAY_TASK_ID` set by `#SBATC
 
 If necessary, exit the text reader with `Ctrl+x` and submit the script using `sbatch`:
 
-```bash
+```js
 sbatch loop_array.slurm
 ```
 
@@ -60,14 +60,14 @@ Notice the jobs as they appear in your terminal showing `squeue`. [**Click here 
 
 Once the jobs have completed, check the output files in the log directory:
 
-```bash
+```js
 cd log
 ls
 ```
 
 Your list of output files from `loop_array.slurm` should look like the following but with 123456789 replaced by the JobID assigned to your array job when it was submitted.
 
-```bash
+```js
 loop_array_123456789_0.out  loop_array_123456789_1.out  loop_array_123456789_2.out
 loop_array_123456789_3.out  loop_array_123456789_4.out  loop_array_123456789_5.out
 loop_array_123456789_6.out  loop_array_123456789_7.out  loop_array_123456789_8.out
@@ -76,7 +76,7 @@ loop_array_123456789_9.out  loop_array_123456789_10.out
 
 Each output file will contain information about the interval that was counted. For example,
 
-```bash title="loop_array_123456789_0.out"
+```js title="loop_array_123456789_0.out"
 Sequence complete! Iterations from 0 to 4,999,999.
 
 real    0m5.617s

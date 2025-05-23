@@ -21,7 +21,7 @@ We recommend using a Miniconda environment for your Jupyter Notebook setup. Inst
 
 
 First, install the `ipykernel` package, which provides the IPython kernel required to run Jupyter Notebooks:
-```bash
+```js
 (myEnv) [bsoni@n3263 ~]$ conda install -c anaconda ipykernel
 ```
 This will install the necessary package to create and manage Jupyter kernels within your Conda environment.
@@ -29,7 +29,7 @@ This will install the necessary package to create and manage Jupyter kernels wit
 
 
 Next, create a new kernel for the environment you want to use. Replace `myEnv` with the name of your environment.
-```bash
+```js
 (myEnv) [bsoni@n3263 ~]$ python -m ipykernel install --user --name=myEnv --display-name "Python (myEnv)"
 ```
 Now, you have a new kernel that you can select from within your Jupyter notebook (`Kernel > Change Kernel`). Any packages installed in your conda environment will automatically be available to you.
@@ -39,11 +39,11 @@ It is not recommended to install packages using `pip install` directly **inside*
 
 
 To properly manage packages within a Conda environment, always install packages **outside** the notebook in the terminal, using one of the following commands:
-```bash
+```js
 (myEnv) [bsoni@n3263 ~]$ conda install packageName
 ```
 or 
-```bash
+```js
 (myEnv) [bsoni@n3263 ~]$ pip install packageName
 ```
 :::
@@ -54,12 +54,12 @@ Under the `Jupyter Container` section of the form, you can enter the path of the
 
 1. Obtain the desired container from a container catalog. For example, we can use `nvcr.io/nvidia/pytorch:25.01-py3` from the [NVIDIA catalog](https://catalog.ngc.nvidia.com).
 2. Pull the container to Hyak:
-```bash
+```js
 apptainer pull docker://nvcr.io/nvidia/pytorch:25.01-py3 <directory_with_large_quota>
 ```
 If we want to make modifications to the container, we can use a definition file to install packages on the image, set up environment variables, or more, as shown below:
 
-```bash
+```js
 Bootstrap: docker
 From: nvcr.io/nvidia/pytorch:25.01-py3
 
@@ -74,7 +74,7 @@ From: nvcr.io/nvidia/pytorch:25.01-py3
     export PATH=/usr/bin:$PATH
 ```
 3. Obtain the resolved physical path of the container:
-```bash
+```js
 realpath <container_path>
 ```
 4. Enter the path of the container in the `Jupyter Container` section of the form.

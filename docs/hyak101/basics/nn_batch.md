@@ -9,13 +9,13 @@ An interactive session on the cluster allows users to access a computing node in
 
 Request an interactive job with the `salloc` command. Let's start an interactive job on the `ckpt` partition. We will specify that we want a single CPU with the flag `--cpus-per-task=1`, 5G of RAM with `--mem=5G`, and a maximum time of 20 minutes with `--time=20:00`. The job will automatically end after 20 minutes if we don't end it with the command `exit` before 20 minutes has elapsed.
 
-```bash
+```js
 salloc --partition=ckpt --cpus-per-task=1 --mem=5G --time=20:00
 ```
 
 The output will look something like this:
 
-```bash
+```js
 salloc: Pending job allocation 18981043
 salloc: job 18981043 queued and waiting for resources
 salloc: job 18981043 has been allocated resources
@@ -25,7 +25,7 @@ salloc: Nodes n3424 are ready for job
 
 Finally, your shell prompt will show that you are no longer on the login node, or look something like this:
 
-```bash
+```js
 [UWNetID@n3424 basics]$
 ```
 
@@ -37,13 +37,13 @@ Now that we have a job open on a compute node, we can work interactively in the 
 
 Before we do that, we will need a directory where our Locator results will be stored. For this tutorial, make a directory called `out` to hold your locator results.
 
-```bash
+```js
 mkdir out
 ```
 
 Next open a shell inside the locator container, `locator.sif` with the following command.
 
-```bash
+```js
 apptainer shell --cleanenv --bind /gscratch/ locator.sif
 ```
 
@@ -56,44 +56,44 @@ Let's break this command down into its parts to understand it:
 
 You will know that you are inside of the container when your shell prompt looks like the following:
 
-```bash
+```js
 Apptainer>
 ```
 
 Let's explore within the container by listing the root directory `/`
 
-```bash
+```js
 ls /
 bin  boot  dev environment  etc  gscratch  home  lib  lib64  locator  media  mmfs1  mnt  opt  proc  root  run sbin  scr  singularity srv  sys  tmp  usr  var
 ```
 
 Notice that we have all the directories we would have if we listed the root directory of `klone`, but now we have a directory `locator/`, which contains the files associated with the [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git). Let's list the Locator program files:
 
-```bash
+```js
 ls /locator/
 ```
 
-```bash
+```js
 LICENSE.txt  README.md data  locator_py  out  req.txt scripts  setup.py
 ```
 
 Specifically the `/locator/scripts/` subdirectory contains a file called `locator.py`, which is the python script used to run Locator neural network.
 
-```bash
+```js
 ls /locator/scripts/
 ```
 
-```bash
+```js
 install_R_packages.R  locator.py  locator_phased.py  plot_locator.R  vcf_to_zarr.py
 ```
 
 Additionally, we have a version of python within the container and we can activate python as follows:
 
-```bash
+```js
 python
 ```
 
-```bash
+```js
 Python 3.8.13 (default, Mar 29 2022, 14:56:46) 
 [GCC 8.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -110,21 +110,21 @@ If you haven't already, it is critical you complete the [**set up instructions**
 
 First, let's take a look at the data.
 
-```bash
+```js
 wc -l data/potr_genotypes1000.txt 
 # The genotypes matrix has 425 lines
 # one row per individual tree plus a header
 ```
 
-```bash
+```js
 425 data/potr_genotypes1000.txt
 ```
 
-```bash
+```js
 head -3 data/potr_genotypes1000.txt
 ```
 
-```bash
+```js
 ### Truncated for website view
 "ALAA.20.1" 1 0 0 0 0 0 0 0 0 2 0 0 2 0 1 0 0 0 0 NA 0 1 1 0 0 0
 "BELA.18.2" 0 0 0 0 1 0 0 0 0 0 1 0 0 NA 2 0 1 0 1 0 0 1 0 0  1  NA
@@ -135,21 +135,21 @@ The genotypes matrix is composed of 0s, 1s, 2s, or NA. For this demonstration, I
 
 Let's look at the sample data files as well.
 
-```bash
+```js
 wc -l data/potr_m_pred1.txt
 ```
 
-```bash
+```js
 425 data/potr_m_pred1.txt
 ```
 
 The sample data files each have 425 lines one row per individual tree plus a header.
 
-```bash
+```js
 head data/potr_m_pred1.txt
 ```
 
-```bash
+```js
 "sampleID" "x" "y"
 "BELA.18.3" -126.166667 52.416667
 "BLCG.28.1" -125.183333 49.833333
@@ -172,7 +172,7 @@ The sample data contains:
 
 Let's test the code by running locator on one test set `data/potr_m_pred1.txt`
 
-```bash
+```js
 python /locator/scripts/locator.py --matrix data/potr_genotypes1000.txt --sample_data data/potr_m_pred1.txt --out out/potr_predictions1 
 # you should see the Epochs begin to compute after 10-30 seconds
 ```
@@ -186,7 +186,7 @@ Let's break this command down into its parts to understand it:
 
 You'll know it is working when it starts providing some messages. The first messages are errors that can be ignored, unless we plan to use a GPU. There will be a few more errors because tensorflow could use a GPU. We won't use a GPU, so we can ignore the errors. The following indicated a successful start of a locator run:
 
-```bash
+```js
 loaded (1000, 424, 2) genotypes
 
 
@@ -220,11 +220,11 @@ With that command, you trained a neural network based on genotypes of *Populus t
 
 Let's look at your results.
 
-```bash
+```js
 ls out/
 ```
 
-```bash
+```js
 potr_predictions1_fitplot.pdf  potr_predictions1_history.txt  potr_predictions1_params.json  potr_predictions1_predlocs.txt
 ```
 
@@ -232,11 +232,11 @@ See the [**Locator publication**](https://elifesciences.org/articles/54507) (Bat
 
 The `potr_predictions1_predlocs.txt` file shows longitude and latitude positions for all individuals that were treated as unknowns in the test.
 
-```bash
+```js
 head out/potr_predictions1_predlocs.txt
 ```
 
-```bash
+```js
 x,y,sampleID
 -134.91964819211591,58.435803669001785,ALSC.1.4
 -122.8459170387414,45.644072664997694,CARS.29.3
@@ -253,7 +253,7 @@ These data can be used to calculate the Haversine distance (a.k.a. "as the crow 
 
 Exit the container with `exit`. Your command prompt should return.
 
-```bash
+```js
 Apptainer> exit
 exit
 [UWNetID@n3162 basics]$
@@ -267,12 +267,12 @@ We made a Slurm batch script for this tutorial. You can use this script as a tem
 
 Use the text editor `nano` to edit it as needed.
 
-```bash
+```js
 nano locator_NN_job.slurm
 # exit nano by holding Ctrl and pressing X; then save it by pushing Y
 ```
 
-```bash title="locator_NN_job.slurm"
+```js title="locator_NN_job.slurm"
 #!/bin/bash
 
 #SBATCH --job-name=locator_job
@@ -294,7 +294,7 @@ The command being executed is the same as that explained above, but with a diffe
 
 Once you have edited the script to fit your needs, you can submit it with `sbatch`.
 
-```bash
+```js
 sbatch locator_NN_job.slurm
 # the following is an example result
 sbatch: No account specified, defaulting to: account
@@ -309,7 +309,7 @@ Submitted batch job 12345678
 
 In this section, it is often useful to have two terminal windows open and logged into `klone`. One for editing scripts and issuing commands and one for monitoring active jobs in the squeue. Open up a second terminal and use `ssh` to login to Hyak. In this terminal, monitor jobs using the command:
 
-```bash
+```js
 # Below replace the word "UWNetID" with your UW NetID.
 watch squeue -u UWNetID 
 ```
@@ -332,20 +332,20 @@ In the next exercises, leave this terminal open and execute `watch -n 10 squeue 
 
 As soon as the job begins, Slurm will save a file called `locator_job_12345678.out` where the number is replaced with the JobID Slurm assigned to your job. The output that would normally be printed to the screen while locator is running (which we saw when we ran locator interactively) will be saved to this file. View this file with `cat`
 
-```bash
+```js
 more locator_job_12345678.out
 ```
 
 Or follow the messages in real time with the `tail` command and the flag `--follow`.
 
-```bash
+```js
 tail --follow locator_job_12345678.out
 # Use Ctrl + C to exit the tail command
 ```
 
 Congratulations, you just trained a neural network based on genotypes of *Populus trichocarpa* trees and you have predicted origins for a second test set of *Populus trichocarpa* trees based on their DNA alone. But this time you did it with an unsupervised batch job. Let's look at your results.
 
-```bash
+```js
 ls out/
 potr_predictions1_fitplot.pdf  potr_predictions1_params.json   potr_predictions2_fitplot.pdf  potr_predictions2_params.json
 potr_predictions1_history.txt  potr_predictions1_predlocs.txt  potr_predictions2_history.txt  potr_predictions2_predlocs.txt
@@ -365,7 +365,7 @@ x,y,sampleID
 
 The Slurm job completed completely in the background, meaning that we could have submitted the job, ended our connection to `klone` by logging out, and returned later to view the progress or results. You can instruct Slurm to send messages about jobs completing by adding the following sbatch directives to your Slurm script and replacing the work `UWNetID` with your UW Net ID:
 
-```bash
+```js
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=UWNetID@uw.edu
 ```

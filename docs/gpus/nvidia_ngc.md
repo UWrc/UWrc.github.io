@@ -45,7 +45,7 @@ If you are new to containers, it may be useful to refer to the following resourc
 Please refer to the **[Apptainer and Docker](/docs/tools/containers)** for information on getting started with Apptainer and getting access to NGC.
 
 Get a summary of all the GPUs on the cluster and their current state. This will be helpful when requesting an interactive session on a GPU for the exercises below. 
-```bash
+```js
 sinfo -p ckpt -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v null
 ```
 
@@ -54,13 +54,13 @@ The [HPC SDK](https://developer.nvidia.com/hpc-sdk) houses compilers, libraries,
 
 1. Get an interactive session on a GPU instance using some variant of the below command.
 
-```bash
+```js
 salloc -A mygroup -p ckpt --gpus-per-node=a40:1 --mem=10G --time=1:00:00 --job-name=LULESH_testing
 ```
 
 2. Run container, with LULESH code available. To do so we must first clone the LULESH repo, and then mount it in our container.
 
-```bash
+```js
 git clone --branch 2.0.2-dev https://github.com/LLNL/LULESH.git
 
 apptainer shell --nv -B LULESH:/source --pwd /source docker://nvcr.io/nvidia/nvhpc:23.1-devel-cuda12.0-ubuntu20.04
@@ -75,13 +75,13 @@ You can try out the other features included in the HPC SDK. This includes our pr
 
 1. Get an interactive session on a GPU instance using some variant of the below command.
 
-```bash
+```js
 salloc -A mygroup -p ckpt --gpus-per-node=a40:1 --mem=10G --time=1:00:00 --job-name=gromacs_testing
 ```
 
 2. Get the example data, or use your own if you already are using GROMACS
 
-```bash
+```js
 DATA_SET=water_GMX50_bare
 wget -c https://ftp.gromacs.org/pub/benchmarks/${DATA_SET}.tar.gz
 tar xf ${DATA_SET}.tar.gz
@@ -90,6 +90,6 @@ cd ./water-cut1.0_GMX50_bare/1536
 
 3. Run container, with data available
 
-```bash
+```js
 apptainer run --nv -B ${PWD}:/host_pwd --pwd /host_pwd docker://nvcr.io/hpc/gromacs:2022.3 gmx grompp -f pme.mdp
 ```

@@ -22,7 +22,7 @@ During this Tutorial, you should be mindful of your long term usage of these too
 
 For this tutorial, we will work in `/gscratch/scrubbed`. Remember storage on `/gscratch/scrubbed` is not permanent and these files will be deleted after a few weeks if they are not used regularly, but the quota is larger and useful for our learning objectives [**click here to learn more**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). If you don't have a directory for yourself in `/gscratch/scrubbed` you can make one with the following command named after **your UWNetID**: 
 
-```bash
+```js
 //highlight-next-line
 mkdir /gscratch/scrubbed/UWNetID
 # above replace "UWNetID" with your UWNetID
@@ -40,7 +40,7 @@ The next section called "Building a Container" is **OPTIONAL** and will describe
 The main container for this tutorial is called `hyak-container.sif` and is ready for you to use. The full path is `/mmfs1/sw/hyak101/python/hyak-container.sif`.
 
 The best way to use the container for the rest of the tutorial is to make a symbolic link to it (kind of link a short cut). First navigate to your working directory, which you set up above. Then issue the following command. 
-```bash
+```js
 ln --symbolic /mmfs1/sw/hyak101/python/hyak-container.sif hyak-container.sif
 ```
 :::

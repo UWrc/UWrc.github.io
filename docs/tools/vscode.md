@@ -19,6 +19,6 @@ VS Code’s high usage is due to it silently installing its built in features in
 
 Silent processes from VS Code will continue to run on `klone` even after you have logged off. Check which processes are running on the login node, especially if you have been receiving usage violations when you are not aware of jobs running. Look for `vscode-server` among the listed processes with the following command, replaceing `UWNetID` with **your UW Net ID**.
 
-```bash
+```js
 ps aux | grep <UWNetID>
 ``` 

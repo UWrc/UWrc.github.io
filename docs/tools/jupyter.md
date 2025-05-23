@@ -40,7 +40,7 @@ This method will require a container to get started, look for copies at `/sw/ond
 
 We will launch Jupyter as a job using `sbatch`. Download our Slurm job file [**from this hyperlink**](https://hyak.uw.edu/files/jupyter-server.job) which has been adapted for `klone`. The command below will download the file to your current directory.
 
-```bash
+```js
 wget https://hyak.uw.edu/files/jupyter-server.job
 ```
 
@@ -55,7 +55,7 @@ You will need to modify a few environment variables in `jupyter-server.job`:
 
 :::tip Direct Execution
 If you are already on an allocated compute node, you can run the script directly without using `sbatch`:
-```bash
+```js
 ./jupyter-server.job
 ```
 This will start the Jupyter server immediately on your current node.
@@ -63,7 +63,7 @@ This will start the Jupyter server immediately on your current node.
 
 Review the highlighted sections of `jupyter-server.job` below and edit your version to fit your needs:
 
-```bash title="jupyter-server.job"
+```js title="jupyter-server.job"
 #!/bin/bash
 
 #SBATCH --job-name=jupyter-server
@@ -93,14 +93,14 @@ JUPYTER_SIF="datascience-notebook_latest.sif" # update this line
 
 Submit the job with `sbatch`:
 
-```bash
+```js
 sbatch jupyter-server.job
 Submitted batch job 12345678
 ```
 
 Monitor the job with `squeue`:
 
-```bash
+```js
 squeue -u UWNetID
              JOBID PARTITION           NAME    USER ST       TIME  NODES NODELIST(REASON)
           12345678      ckpt jupyter-server UWNetID  R       3:15      1    n3286
@@ -108,7 +108,7 @@ squeue -u UWNetID
 
 Slurm will create an output file named `jupyter-server_12345678.out` in your working directory. Check its contents for connection instructions:
 
-```bash
+```js
 cat jupyter-server_12345678.out
 
 1. SSH TUNNEL COMMAND:
@@ -135,7 +135,7 @@ This next section is done on your local computer ***not*** on the cluster.
 
 In a new terminal or command prompt on ***your laptop***, copy and paste the SSH command from the Slurm output:
 
-```bash
+```js
 ssh UWNetID@klone.hyak.uw.edu -L 8787:n3286.hyak.local:8787
 ... provide UWNetID password
 ... Duo 2 Factor Authentication
@@ -156,7 +156,7 @@ If you did not adjust the `--time` directive in `jupyter-server.job`, your sessi
 Preferably, you can end your session manually:
 1. Exit the Jupyter Session ("power" button in the top right corner of the Jupyter window)
 2. Go back to `klone` and use the `scancel` command with your job ID:
-```bash
+```js
 scancel -f 12345678
 ```
 
@@ -197,7 +197,7 @@ Before beginnning this exercise, **please select a random number between 4096 an
 :::
 Start an interactive job on a compute node with `salloc`. 
 
-```bash
+```js
 [finchkn@klone-login03 ~]$ salloc -A uwit -p ckpt --time=4:00:00 --mem=10G -c 4
     salloc: Pending job allocation 1546486
     salloc: job 1546486 queued and waiting for resources
@@ -212,14 +212,14 @@ Start an interactive job on a compute node with `salloc`.
 
 Create a conda environment and install required packages. 
 
-```bash
+```js
 [finchkn@n3097 ~]$ conda create -n jupyter-notebook
 [finchkn@n3097 ~]$ conda activate jupyter-notebook
 (jupyter-notebook)[finchkn@n3097 ~]$ conda install -c conda-forge notebook
 ```
 Set up a password for your Jupyter Notebook Session. This will remain your password every time you log in - Remember it. 
 
-```bash
+```js
 (jupyter-notebook)[finchkn@n3097 ~]$ jupyter-notebook --generate-config
 (jupyter-notebook)[finchkn@n3097 ~]$ jupyter-notebook password
 //highlight-next-line
@@ -235,7 +235,7 @@ Remember, we chose 9195 as our random number for this exercise. You can choose a
 
 Start jupyter notebook.
 
-```bash
+```js
 (jupyter-notebook)[finchkn@n3097 ~]$ jupyter notebook --port 9195 --ip 0.0.0.0
     [I 2024-04-01 16:05:45.434 ServerApp] Extension package jupyter_lsp took 0.9552s to import
     ...
@@ -249,7 +249,7 @@ Keep this window open. Messages about your session will be printed there.
 
 Now open a new Terminal/Windows Powershell/PuTTy window and start an `ssh` tunnel from your local computer to the jupyter notebook session that you initiated on the klone compute node. 
 
-```bash
+```js
 kristenfinch@Kristens-MBP-3 ~ % ssh -L 9195:n3097:9195 finchkn@klone.hyak.uw.edu
     (finchkn@klone.hyak.uw.edu) Password: 
     (finchkn@klone.hyak.uw.edu) Duo two-factor login for finchkn
@@ -279,7 +279,7 @@ The browser will open the Jupyter Notebook Session and you will see contents of 
 
 Your token for this session will also appear in the terminal window connected to the compute node. 
 
-```bash
+```js
 [I 2024-04-01 16:13:54.521 ServerApp] User 99999somee92ftoken1bfhere9999999 logged in.
 [I 2024-04-01 16:13:54.522 ServerApp] 302 POST /login?next=%2Ftree%3F (99999somee92ftoken1bfhere9999999) 462.64ms
 ```
@@ -293,7 +293,7 @@ End your session from the browser with the File Menu and "Shut Down" or "Log Out
 
 Then go to your terminal window to the compute node and use Control + C to end the session there. 
 
-```bash
+```js
 $ ^C
     [I 2024-04-01 16:54:11.419 ServerApp] interrupted
     [I 2024-04-01 16:54:11.419 ServerApp] Serving notebooks from local directory: /dir/
@@ -309,7 +309,7 @@ $ ^C
 
 End the interactive job.
 
-```bash
+```js
 (jupyter-notebook) [finchkn@n3097 ~]$ exit
 salloc: Relinquishing job allocation 1546486
 salloc: Job allocation 1546486 has been revoked.

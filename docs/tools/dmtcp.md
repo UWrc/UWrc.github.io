@@ -24,13 +24,13 @@ To use DMTCP on Hyak, first load the module using `module load testing/dmtcp/3.0
 
 Set the directory checkpoints will be stored at with the environment variable: `DMTCP_CHECKPOINT_DIR`. For example:
 
-```bash
+```js
 export DMTCP_CHECKPOINT_DIR=/gscratch/scrubbed/mycheckpoints/
 ```
 
 To start a job, use the `dmtcp_launch` command, e.g.:
 
-```bash
+```js
 dmtcp_launch --interval <NUM> <COMMANDS TO RUN>
 ```
 
@@ -38,7 +38,7 @@ Where `<NUM>` is the number of seconds between checkpoints and `<COMMANDS TO RUN
 
 To restart a stopped job, use the `dmtcp_restart` command, e.g.:
 
-```bash
+```js
 dmtcp_restart --interval <NUM> $DMTCP_CHECKPOINT_DIR/*.dmtcp
 ```
 
@@ -46,7 +46,7 @@ This will reload a job from a saved checkpoint. The restarted job will also be c
 
 DMTCP can also be used in a batch script which automatically resumes from a prior checkpoint if it exists. A brief outline is as follows:
 
-```bash
+```js
 #!/bin/bash
 
 #SBATCH -p ckpt-all

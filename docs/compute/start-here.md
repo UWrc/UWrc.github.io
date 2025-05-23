@@ -18,7 +18,7 @@ The account(s) you are a part of determine the priority access you have to certi
 ### What Resources Do You Have?
 The `hyakalloc` command allows users to see which accounts and partitions they are a part of and the current utilization of these resources. Resource limits are directly proportional to what was contributed by that group. By default, the output of `hyakalloc` might look something like this:
 
-```bash
+```js
 Account resources available to user: UWNetID   
    
 ╭─────────┬──────────────┬──────┬────────┬──────┬───────╮
@@ -40,7 +40,7 @@ Account resources available to user: UWNetID
 ╰───────┴──────┴──────╯
 ```
 Note that `hyakalloc` shows all the idle resources on the checkpoint (`ckpt`) partition you have access to. For a demo account, the output to `hyakalloc` should look something like this: 
-```bash        
+```js        
 ╭─────────┬───────────┬──────┬────────────────────────────────╮
 │ Account │ Partition │ CPUs │  Memory │ GPUs    │       │    │  
 ├─────────┼───────────┼──────┼────────────────────────────────┤
@@ -51,10 +51,10 @@ Note that `hyakalloc` shows all the idle resources on the checkpoint (`ckpt`) pa
 ```
 
 Users can use several optional arguments with the `hyakalloc` command to execute specific actions. A list of all optional arguments will print to your screen with the `hyakalloc --help` command:
-```bash
+```js
 hyakalloc --help
 ```
-```bash
+```js
 usage: hyakalloc [-h] [-a | -c | -C CC | -u USER | -g GROUP] [-p PARTITION]
 
 Queries Hyak allocation for users or groups.
@@ -71,10 +71,10 @@ optional arguments:
                         (Optional) Filter by partition name.
 ```
 The `sinfo` command allows users to view information about all partitions on Hyak. Similarly to `hyakalloc`, the `sinfo` command supports a variety of optional arguments, allowing for more complex commands. For example, `sinfo -s` will summarize the default output of `sinfo` by printing out a more concise and readable list of partitions and their corresponding host names.
-```bash
+```js
 sinfo -s
 ```
-```bash
+```js
 PARTITION        AVAIL  TIMELIMIT   NODES(A/I/O/T) NODELIST
 compute-bigmem      up   infinite        26/1/1/28 n[3008-3011,3064,3066,3132-3133,3190,3244-3247,3252-3255,3353-3355,3400-3407]
 ckpt                up   infinite    444/50/16/510 g[3001-3007,3010-3017,3020-3027,3030-3037,3040-3047,3050-3057,3060-3067,3070-3077,3080-3087],n[3000-3431],z[3001-3002,3005-3009]
