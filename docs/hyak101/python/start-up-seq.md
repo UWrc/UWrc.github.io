@@ -20,14 +20,14 @@ Your set up is complete. Here is the inventory of the items you prepared to exec
 
 :::important
 Before we begin the Start Up Sequence, make sure that you have no jobs called `klone-container` running on `klone`. 
-```bash 
+```js 
 squeue --user $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           12345678      ckpt klone-container UWNetID  R      00:01      1 n3219
 ```
 If you do, you can cancel the job with `scancel` and the JobID:
 
-```bash
+```js
 scancel 12345678
 ```
 :::
@@ -38,7 +38,7 @@ Now we begin the Start Up Sequence:
 
 Log in using your `klone-login` short cut. 
 
-```bash
+```js
 ssh klone-login
 ```
 
@@ -46,7 +46,7 @@ ssh klone-login
 
 Change directory to the directory you have been using during this tutorial, where you have your materials stored. For example:
 
-```bash
+```js
 cd /gscratch/scrubbed/working-directory
 ```
 
@@ -54,14 +54,14 @@ cd /gscratch/scrubbed/working-directory
 
 Submit the `jupyter-server.job` script with `sbatch` to start a job running the container-overlay and jupyter.
 
-```bash
+```js
 sbatch jupyter-server.job
 Submitted batch job 12345678
 ```
 
 Use the `watch` command with the `squeue` command to monitor the job in real time. `watch -n10` will issue the `squeue` every 10 seconds. Use `Ctrl` + `C` to exit the `watch` command.
 
-```bash
+```js
 watch -n10 squeue --user $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           12345678      ckpt klone-container UWNetID  R      00:01      1 n3219
@@ -72,7 +72,7 @@ Once the job is running, or you see `R` under the column `ST` using `squeue`, us
 
 In your working directory, you will have a file called `jupyter-server-XXXXXX.out` where the X's are the jobID assigned to the job by Slurm. Use the command `tail --follow` to print the contents of the `jupyter-server-XXXXXX.out` file and wait for the message, "Info: Jupyter server is running, port & token in ~/.jupyter-port-and-token." Once you see this message, your Jupyter server session is ready for the next step. (Use `Ctrl` + `C` to exit the `tail` command)
 
-```bash
+```js
 tail --follow jupyter-server-12345678.out
 //highlight-next-line
 Info: Jupyter server is running, port & token in ~/.jupyter-port-and-token
@@ -91,7 +91,7 @@ For Mac/Linux users, let's try to execute the `set-hyak-node.sh` script and see 
 
 For All Users, manually set replace the `Hostname` line with the correct Hostname of the compute node where your job is running. For example, 
 
-```bash
+```js
 cat ~/.ssh/klone-node-config
 
 Host klone-node
@@ -116,7 +116,7 @@ Host klone-node
 
 Execute the `start-jupyter-forwarding.sh` script to get the web address to use Jupyter Notebook in the browser. 
 
-```bash
+```js
 ./start-jupyter-forwarding.sh
 
 Connect to:
@@ -130,6 +130,6 @@ Copy and paste the web address into your browser, and you should be connected to
 
 When you're finished, you can use the kill command we generated to ensure your port forwarding is stopped:
 
-```bash
+```js
 kill 99999
 ```

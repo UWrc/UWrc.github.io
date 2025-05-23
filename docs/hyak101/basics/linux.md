@@ -21,7 +21,7 @@ For this tutorial, we will make a working directory under `/gscratch/scrubbed/` 
 
 First navigate to `/gscratch/scrubbed/` or the location you have selected for your working directory.
 
-```bash
+```js
 cd /gscratch/scrubbed/
 
 pwd 
@@ -29,31 +29,31 @@ pwd
 
 If you are following along and are in the right place the output of the `pwd` command should be:
 
-```bash
+```js
 /mmfs1/gscratch/scrubbed/
 ```
 
 Then make your working directory with the following, but replacing the word `UWNetID` with your UW Net ID.
 
-```bash
+```js
 mkdir UWNetID
 ```
 
 Change directory to enter your new directory.
 
-```bash
+```js
 cd UWNetID
 ```
 
 Double check your location on `klone` and the absolute path to your working directory for this part of the tutorial.
 
-```bash
+```js
 pwd
 ```
 
 If you are following along and are in the right place the output of the `pwd` command should be:
 
-```bash
+```js
 /mmfs1/gscratch/scrubbed/UWNetID
 # the word UWNetID will be replaced with your UW Net ID
 ```
@@ -64,69 +64,69 @@ If you are following along and are in the right place the output of the `pwd` co
 
 Now we are going to download some data from the Software Carpentry github repository for the next exercises.
 
-```bash
+```js
 wget https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
 ```
 
 List your working directory to show the zipped version of the lesson directory.
 
-```bash
+```js
 ls
 ```
 
 `ls` should show a zipped version of the shell-lesson-data directory.
 
-```bash
+```js
 shell-lesson-data.zip
 ```
 
 Unzip the lesson directory with the `unzip` command.
 
-```bash
+```js
 unzip shell-lesson-data.zip
 ```
 
 List your working directory again to show the unzipped version of the lesson directory and the zipped version.
 
-```bash
+```js
 ls
 ```
 
 `ls` should show a unzipped version of the shell-lesson-data directory as well as the zipped version.
 
-```bash
+```js
 shell-lesson-data
 shell-lesson-data.zip
 ```
 
 Change directory to go into shell-lesson-data/exercise-data/writing/
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/writing/
 ```
 
 Print your working directory to understand where you are.
 
-```bash
+```js
 pwd
 ```
 
 If you are in the right place to continue your output of `pwd` should show the absolute path to the data we will use in the next activity and read:
 
-```bash
+```js
 /mmfs1/gscratch/scrubbed/UWNetID/shell-lesson-data/exercise-data/writing/
 # the word UWNetID will be replaced with your UW Net ID
 ```
 
 List the writing directory
 
-```bash
+```js
 ls 
 ```
 
 The expected result is:
 
-```bash
+```js
 haiku.txt  LittleWomen.txt
 ```
 
@@ -136,66 +136,66 @@ haiku.txt  LittleWomen.txt
 
 Print your working directory to understand where you are.
 
-```bash
+```js
 pwd
 ```
 
 The expected result is:
 
-```bash
+```js
 /mmfs1/gscratch/scrubbed/UWNetID/shell-lesson-data/exercise-data/writing/
 # the word UWNetID will be replaced with your UW Net ID
 ```
 
-```bash
+```js
 cd ../
 ```
 
 Print working directory again to see the result of `cd ../`
 
-```bash
+```js
 pwd
 ```
 
 The expected result is:
 
-```bash
+```js
 /mmfs1/gscratch/scrubbed/UWNetID/shell-lesson-data/exercise-data/
 ```
 
 Use `cd` and `../` to go backward 2 directories
 
-```bash
+```js
 cd ../../
 ```
 
 Print working directory again to see the result of `cd ../`
 
-```bash
+```js
 pwd
 ```
 
 The expected result is:
 
-```bash
+```js
 /mmfs1/gscratch/scrubbed/UWNetID/
 ```
 
 Let's go back to `shell-lesson-data/exercise-data/writing` and practice making a directory again.
 
-```bash
+```js
 cd shell-lesson-data/exercise-data/writing
 ```
 
 Make a directory called thesis
 
-```bash
+```js
 mkdir thesis
 ```
 
 Note that `mkdir` is not limited to creating single directories one at a time. The `-p` option allows `mkdir` to create a directory with nested subdirectories in a single operation:
 
-```bash
+```js
 # make a directory called project with subdirectories data and results
 # make these one directory "above" where we are now 
 mkdir -p ../project/data ../project/results
@@ -203,7 +203,7 @@ mkdir -p ../project/data ../project/results
 
 You can list the contents of the directory "above" where we are now without changing directory.
 
-```bash
+```js
 
 ls ../
 
@@ -217,7 +217,7 @@ alkanes  animal-counts  creatures  numbers.txt  project  writing
 
 `-F` option with ls puts a / after directories to differentiate them from other objects.
 
-```bash
+```js
 ls -F
 ```
 
@@ -229,13 +229,13 @@ haiku.txt  LittleWomen.txt  thesis/
 
 The `-R` option to the ls command will list all nested subdirectories within a directory. Let’s use `ls -FR` to recursively list the new directory hierarchy we just created in the project directory:
 
-```bash
+```js
 ls -FR ../project
 ```
 
 You should see:
 
-```bash
+```js
 ../project:
 data/  results/
 
@@ -267,13 +267,13 @@ To edit files on `klone` we need to go back to basic text editors. You will not 
 
 First change directory to thesis:
 
-```bash
+```js
 cd thesis
 ```
 
 The create and open a file called draft.txt with the command:
 
-```bash
+```js
 nano draft.txt
 ```
 
@@ -295,13 +295,13 @@ Once our file is saved, we can use `Ctrl`+`X` to quit the editor and return to t
 
 Let's view our work. List the directory to see our new file, `draft.txt` there.
 
-```bash
+```js
 ls
 ```
 
 Now let's view the contents of draft with `cat`
 
-```bash
+```js
 cat draft.txt
 ```
 
@@ -317,29 +317,29 @@ There is a dataset of sequences from a mythical creature called a Basilisk (from
 
 If you have been following along and you are in the thesis directory, change directory to two directories "above" thesis (i.e., two directories closer to the root directory `/`) and enter a directory called `creatures/`
 
-```bash
+```js
 cd ../../creatures/
 ```
 
 List the directory.
 
-```bash
+```js
 ls
 ```
 
-```bash
+```js
 basilisk.dat  minotaur.dat  unicorn.dat
 ```
 
 `cat` the Basilisk data
 
-```bash
+```js
 cat basilisk.dat 
 ```
 
 The expected output:
 
-```bash
+```js
 COMMON NAME: basilisk
 CLASSIFICATION: basiliscus vulgaris
 UPDATED: 1745-05-02
@@ -353,7 +353,7 @@ CCGCACCTCT
 
 To illustrate the concept of paths and access. Let's go back to `thesis` and try to do the same thing. Change directory to one directory "above" the `creatures`, then go into `writing` and finally `thesis`.
 
-```bash
+```js
 cd ../writing/thesis
 
 cat basilisk.dat
@@ -361,19 +361,19 @@ cat basilisk.dat
 
 The expected output:
 
-```bash
+```js
 cat: basilisk.dat: No such file or directory
 ```
 
 We get an error because we can't access `basilisk.dat` from our location without more information. However, we can provide more complete information and view `basilisk.dat`
 
-```bash
+```js
 cat ../../creatures/basilisk.dat
 ```
 
 Will return:
 
-```bash
+```js
 COMMON NAME: basilisk
 CLASSIFICATION: basiliscus vulgaris
 UPDATED: 1745-05-02
@@ -389,14 +389,14 @@ In this example, we have provided more information about the location of `basili
 
 We can also use ***absolute*** paths to access a file from **ANY** location on the `klone` filesystem. This is a error-proof method of making sure you can execute commands on files no matter where on the filesystem the command is issued. Let's use an ***absolute*** path to see a file from elsewhere on the filesystem. There is a dataset called `animals.csv` under `/mmfs1/sw/hyak101/basics/data/`. Let's view it with `cat` from our current directory.
 
-```bash
+```js
 # first print your working directory to see your location
 pwd
 ```
 
 Now use the absolute path to `animals.csv` to `cat` it
 
-```bash
+```js
 cat /mmfs1/sw/hyak101/basics/data/animals.csv
 ```
 

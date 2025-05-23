@@ -27,7 +27,7 @@ Newer versions of Windows have a new Linux sub-system so there are native option
 
 Once you have a shell open in Terminal or any of the Windows options, you can login with the following command by replacing the word `UWNetID` with your UW Net ID. Then you will be prompted to enter your password for your UW Net ID. You'll know it worked when you see the "klone hyak" welcome message printed to your screen.
 
-```bash
+```js
 ssh UWNetID@klone.hyak.uw.edu
 Password: ***********
 Duo two-factor login for UWNetID
@@ -61,7 +61,7 @@ In Linux CLI, the term "directory" is used instead of "folder" to describe a loc
 
 When the shell is first opened, you are presented with a **prompt**, indicating that the shell is waiting for input.
 
-```bash
+```js
 [UWNetID@klone-login01 ~]$
 ```
 

@@ -14,7 +14,7 @@ If you are just jumping into this tutorial starting on this page, you should com
 
 To start, ensure that you are in a directory where you have storage, and use this directory as storage for the workshop materials. For example, you can make a directory for yourself in `/gscratch/scrubbed/`
 
-```bash
+```js
 cd /gscratch/scrubbed/
 mkdir UWNetID/
 # You should see your UW NetID above replacing the word "UWNetID"
@@ -22,14 +22,14 @@ mkdir UWNetID/
 
 If don't have the workshop materials, please copy them to a directory where you have storage, and use the `basics/` directory as your working directory. Copy and open the basics directory as follows:
 
-```bash
+```js
 cp -r /sw/hyak101/basics .
 cd basics
 ```
 
 For this tutorial, we will be pulling containers from Docker Hub using Apptainer. To do this, we must be in a compute node. Start a job on a compute node with the `salloc` command:
 
-```bash
+```js
 salloc --partition=ckpt-all --cpus-per-task=1 --mem=10G --time=2:00:00
 ```
 
@@ -45,7 +45,7 @@ We'll start this section of the tutorial by demonstrating how to alter and rebui
 
 Start by opening up [**Docker Hub**](https://hub.docker.com/) and searching for Ubuntu. We will pull the latest version of Ubuntu with the following command:
 
-```bash
+```js
 apptainer pull docker://ubuntu
 ```
 
@@ -53,7 +53,7 @@ apptainer pull docker://ubuntu
 
 The build should last 30 seconds to 1 minute. During the pull and build, you will see messages from Apptainer on the progress of the command.
 
-```bash
+```js
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Copying blob ff65ddf9395b done   | 
@@ -65,21 +65,21 @@ INFO:    Creating SIF file...
 
 Check to see if the Ubuntu container was successfully pulled with `ls`.
 
-```bash
+```js
 ls 
 ```
 
-```bash
+```js
 ubuntu_latest.sif
 ```
 
 You can use the following command to check the version of Ubuntu you are running and the date it was uploaded:
 
-```bash
+```js
 apptainer inspect ubuntu_latest.sif
 ```
 
-```bash
+```js
 org.label-schema.build-arch: amd64
 org.label-schema.build-date: Sunday_20_October_2024_19:58:50_PDT
 org.label-schema.schema-version: 1.0
@@ -94,11 +94,11 @@ As with previous exercises, you can use `apptainer shell` to open a shell into `
 
 Before we do that, let's check the native version of Git that is installed on Hyak.
 
-```bash
+```js
 git --version
 ```
 
-```bash
+```js
 git version 2.43.5
 ```
 
@@ -106,19 +106,19 @@ Remember that this version of Git will not be available inside the Ubuntu contai
 
 Open a shell into the `ubuntu_latest.sif` container.
 
-```bash
+```js
 apptainer shell ubuntu_latest.sif
 ```
 
 Execute the command to obtain the Git version.
 
-```bash
+```js
 Apptainer>git --version
 ```
 
 The following will result indicating there is no version of Git installed in the container.
 
-```bash
+```js
 bash: git: command not found
 ```
 
@@ -130,13 +130,13 @@ In this section we will create a writable directory known as a "sandbox" for thi
 
 Convert our Ubuntu container into a sandbox with the following command:
 
-```bash
+```js
 apptainer build --sandbox ubuntu_latest ubuntu_latest.sif
 ```
 
 This conversion should take 1-2 minutes.
 
-```bash
+```js
 INFO:    Starting build...
 INFO:    Verifying bootstrap image ubuntu_latest.sif
 INFO:    Creating sandbox directory...
@@ -145,11 +145,11 @@ INFO:    Build complete: ubuntu_latest
 
 This will create a directory named `ubuntu_latest`. Open this directory using `cd` to and use `ls` to see the contents. Notice how the contents of `ubuntu_latest` reflects aspects of an Ubuntu operating system.
 
-```bash
+```js
 ls
 ```
 
-```bash
+```js
 bin   dev          etc   lib    media  opt   root  sbin         srv  tmp  var
 boot  environment  home  lib64  mnt    proc  run   singularity  sys  usr
 ```
@@ -158,17 +158,17 @@ Everything that was installed inside of the container image should be present in
 
 `cd` back into the basics directory and shell into the writable, sandboxed version of ubuntu_latest to work interactively:
 
-```bash
+```js
 cd ../
 ```
 
-```bash
+```js
 apptainer shell --writable --fakeroot ubuntu_latest
 ```
 
 You will see the following messages and warnings that indicate that some Hyak paths and features do not exist inside the sandboxed container.
 
-```bash
+```js
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace
 INFO:    Using fakeroot command combined with root-mapped namespace
 WARNING: Skipping mount /etc/localtime [binds]: /etc/localtime doesn't exist in container
@@ -185,23 +185,23 @@ The `--fakeroot` flag allows users who may not have root access to simulate runn
 
 Finally, we can install Git into the container. Before proceeding with this installation, it is important to first update the package information in the `ubuntu_latest` sandbox container. The next command refreshes package lists, updates package information, and updates the local cache; without updating the package information the Git package can not be found and installed. To start an update, use the Ubuntu package manager `apt`:
 
-```bash
+```js
 apt -y update
 ```
 
 Next install Git.
 
-```bash
+```js
 apt -y install git
 ```
 
 Then confirm that Git is installed and check the version with:
 
-```bash
+```js
 git --version
 ```
 
-```bash
+```js
 git version 2.43.0
 ```
 
@@ -211,13 +211,13 @@ You'll notice that this version of Git is distinct from the local version that i
 
 Exit the Apptainer with `exit` and build a new container from the `ubuntu_latest` sandbox that now has Git installed. This can be named anything. In this tutorial, we will call it `ubuntu_latest-git.sif`.
 
-```bash
+```js
 apptainer build ubuntu_latest_git.sif ubuntu_latest
 ```
 
 This should take 30 seconds to 1 minute to complete.
 
-```bash
+```js
 INFO:    Starting build...
 INFO:    Creating SIF file...
 INFO:    Build complete: ubuntu_latest_git.sif
@@ -225,7 +225,7 @@ INFO:    Build complete: ubuntu_latest_git.sif
 
 You can check the version of git installed outside of the shell with:
 
-```bash
+```js
 apptainer exec ubuntu_latest_git.sif git --version
 ```
 
@@ -237,13 +237,13 @@ In the previous example, you built a container interactively. Alternatively, you
 
 A definition file is simply a text file with specialized syntax for Apptainer. So let's start a new text file called `container-build.def` with `nano`:
 
-```bash
+```js
 nano container-build.def
 ```
 
 And paste the following text into the file.
 
-```bash title="container-build.def"
+```js title="container-build.def"
 Bootstrap: docker
 From: ubuntu
 
@@ -266,13 +266,13 @@ Let's break down what these sections do when Apptainer builds the container:
 
 Save and exit the text editor. Use `Ctrl+x` to exit the text editor. Next we will build the container using your definition file.
 
-```bash
+```js
 apptainer build git-container.sif container-build.def
 ```
 
 The build should take 1-2 minutes. The completed container will be called `git-container.sif`.
 
-```bash
+```js
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace
 INFO:    The %post section will be run under fakeroot
 INFO:    Starting build...
@@ -291,11 +291,11 @@ INFO:    Build complete: git-container.sif
 
 FInally, use `apptainer run` to execute the runscript and test the container. In this case, the runscript executes commands to print the versions of Curl and Git.
 
-```bash
+```js
 apptainer run git-container.sif
 ```
 
-```bash
+```js
 curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.7
 Release-Date: 2023-12-06, security patched: 8.5.0-2ubuntu10.4
 Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp
@@ -309,13 +309,13 @@ Instead of pulling a container image from the internet to build your custom cont
 
 If you followed the previous section of the tutorial on [**Pulling Containers**](https://hyak.uw.edu/docs/hyak101/containers/demonstration), you should have the `python_3.9.20-slim-bullseye.sif` container. In this section, we will install TensorFlow using Python that is installed inside `python_3.9.20-slim-bullseye.sif`. Start by creating a new definition file.
 
-```bash
+```js
 nano tf-python3.def
 ```
 
 And paste the following text into the file.
 
-```bash title="tf-python3.def"
+```js title="tf-python3.def"
 Bootstrap: localimage
 From: python_3.9.20-slim-bullseye.sif
 
@@ -332,13 +332,13 @@ Notice that this time we are using `localimage` as the Bootstrap agent, which me
 
 Like before, build the container using the definition file. `tensorflow_py3.sif` will be the name of the new container.
 
-```bash
+```js
 apptainer build tensorflow_py3.sif tf-python3.def
 ```
 
 This build could take 5-6 minutes to complete.
 
-```bash
+```js
 INFO:    User not listed in /etc/subuid, trying root-mapped namespace
 INFO:    The %post section will be run under fakeroot
 INFO:    Starting build...
@@ -355,11 +355,11 @@ INFO:    Creating SIF file...
 
 To demonstrate that the container has TensorFlow installed, use the following command to run the runscript:
 
-```bash
+```js
 apptainer run tensorflow_py3.sif 
 ```
 
-```bash
+```js
 Hello from your custom Python Container Image!
 2024-10-20 22:50:17.628290: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
 2024-10-20 22:50:17.657501: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
@@ -375,7 +375,7 @@ TensorFlow Version = 2.17.0
 
 Finally, we prepared a script to demonstrate TensorFlow with this container. You should have the python file `tf_tutorial.py` in your basics directory. You can now bind the filesystem with `--bind` and run the Python script with the following command:
 
-```bash
+```js
 apptainer exec --bind /gscratch/ tensorflow_py3.sif python tf_tutorial.py
 ```
 

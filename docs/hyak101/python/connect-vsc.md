@@ -18,13 +18,13 @@ This is very similar to [**our instructions for connecting to VS Code via a Prox
 
 Once again, we're requesting an interactive job with 1 CPU and 16GB of memory. Just have to wait for it to be allocated.
 
-```bash
+```js
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=klone-container
 ```
 
 Use the `watch` command with the `squeue` command to monitor the job in real time. `watch -n10` will issue the `squeue` every 10 seconds. Use `Ctrl` + `C` to exit the `watch` command.
 
-```bash
+```js
 watch -n10 squeue --user $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           12345678      ckpt klone-container UWNetID  R      00:01      1 n3219
@@ -37,7 +37,7 @@ Once the job is running, or you see `R` under the column `ST` using `squeue`, us
 
 Once we have the job, manually set this `Hostname` line in `~/.ssh/klone-node-config` to match our job's node. If applicable, use  `set-hyak-node.sh` to set the Hostname to match our job's node.
 
-```bash
+```js
 ./set-hyak-node.sh
 cat ~/.ssh/klone-node-config
 Host klone-node
@@ -80,7 +80,7 @@ we'll have to connect directly to the container. First, we need to add a couple 
 
 We're going to modify our **local** SSH configurations again, starting with the main config at `~/.ssh/config`. Add the highlightes lines below to your `~/.ssh/config`:
 
-```bash title="~/.ssh/config"
+```js title="~/.ssh/config"
 Host klone-login
         User UWNetID
         Hostname klone.hyak.uw.edu
@@ -112,7 +112,7 @@ These new shortcuts will allow us to connect (through klone-login) to our contai
 
 Also, the `Host` from `~/.ssh/klone-node-config` needs to apply to both `klone-node` and `klone-container` shortcuts, so don't forget to update `~/.ssh/klone-node-config` by adding `klone-container*` to the `Host` line:
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 //highlight-next-line
 Host klone-node klone-container*
   Hostname n3000

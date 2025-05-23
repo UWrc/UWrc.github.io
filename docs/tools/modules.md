@@ -11,7 +11,7 @@ Please refer to the cluster specific sections on `klone` [[link](#klone)] below 
 
 ### What software is available?
 
-```bash
+```js
 module avail
 ```
 
@@ -25,7 +25,7 @@ The Hyak team encourages the use of Apptainer to better promote computational po
 
 ### What modules do I currently have loaded?
 
-```bash
+```js
 module list
 ```
 
@@ -33,19 +33,19 @@ module list
 
 Replace "software" below with a specific module you know exists or identified via `module avail` above.
 
-```bash
+```js
 module load <software>
 ```
 
 Conversely, you can unload a specific module.
 
-```bash
+```js
 module unload <software>
 ```
 
 You can unload every module you might have loaded.
 
-```bash
+```js
 module purge
 ```
 
@@ -80,7 +80,7 @@ fi
 
 This advanced user documentation page from the LMOD developers walks you through this [[link](https://lmod.readthedocs.io/en/latest/020_advanced.html)]. You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
 
-```bash
+```js
 module use /path/to/personal/modulefiles
 ```
 

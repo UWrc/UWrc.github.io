@@ -16,7 +16,7 @@ The next maintenance will be **Tuesday October 8, 2024**.
 
 In June we announced the addition of AMD Nodes and Slices to `klone` which make up our generation 2 or `g2` collection of resources. [**Click here to read more about the difference between our `g1` and `g2` resources.**](https://hyak.uw.edu/blog/g1-vs-g2) During August, we installed a new AMD compiler suite, AOCC, along with specialized math libraries like AOCL, OpenBLAS, and ScaLAPACK as `modules` to make the most of this upgade. The new modules are useful on all partitions. The AOCC and AOCL modules are particularly relevant for partitions `cpu-g2`, `cpu-g2-mem2x`, and `ckpt-g2`. These tools are designed to optimize performance on AMD processors, speeding up complex mathematical computations. Whether you're working on simulations, data analysis, or any number-crunching tasks, these libraries may help ensure you get faster, more efficient results. If you're looking to boost your workflow, it's worth exploring how these libraries can benefit your projects. Here are the names of the new modules:
 
-```bash
+```js
 aocc/4.2.0
 aocl/4.2.0
 openblas/0.3.28

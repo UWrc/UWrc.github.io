@@ -29,7 +29,7 @@ Lolo costs $3.45 / TB / month.
 
 After your Lolo storage archive directory has been outfitted, you can begin transferring archived data to Lolo. Let's start by accessing your archive on `lolo` with `ssh`, your `UWNetID`, and the name of your archive directory. For this example, we will call our lolo archive directory, `mylolodir`.
 
-```bash
+```js
 //highlight-next-line
 $ ssh UWNetID@lolo.uw.edu
 [UWNetID@lolo-u1 ~]$ cd /archive/mylolodir
@@ -37,7 +37,7 @@ $ ssh UWNetID@lolo.uw.edu
 
 Next identify the directory of data that you wish to archive on Lolo, and navigate to the containing directory on your local computer or on `klone` via Terminal or Windows Powershell or PuTTy. For this example, we will call the directory we wish to archive, `mydata`.
 
-```bash
+```js
 $ ls
     mydata/
     otherfile.txt
@@ -46,7 +46,7 @@ $ ls
 ```
 Next create a tar archive of `mydata` and transfer it directory to `mylolodir` with `ssh`.
 
-```bash
+```js
 $ tar cvf - mydata/ | ssh UWNetID@lolo.uw.edu "cat > /archive/mylolodir/mydata.tar"
 //highlight-next-line
     Password:
@@ -58,13 +58,13 @@ Contents of `mydata` will start printing to the screen as they are transferred t
 
 Use server copy (`scp`) to transfer a copy of the archive from `lolo` to your workspace on your local computer or `klone`.
 
-```bash
+```js
 $ scp UWNetID@lolo.uw.edu:/archive/mylolodir/mydata.tar .
 ```
 
 Extract the archive with the `tar` command on your local computer or `klone`. Be mindful that extracting the archive will require storage capacity matching its pre-compressed size. 
 
-```bash
+```js
 $ tar -xvf mydata.tar
 ```
 

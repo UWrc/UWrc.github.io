@@ -26,13 +26,13 @@ In this section, we will introduce three commands that you should get into the h
 
 #### "print working directory" or `pwd` shows you "where you are" or more specifically which directory your shell is inside of on `klone`
 
-```bash
+```js
 pwd
 ```
 
 For example, as the author of this documentation (username `finchkn`), when I use `pwd` after I login, I see:
 
-```bash
+```js
 pwd
 //highlight-next-line
 /mmfs1/home/finchkn
@@ -46,27 +46,27 @@ pwd
 
 In this example, we will use `cd` and `pwd` to move to the directory where our data for this tutorial is stored on `klone` and then back to our Home directory.
 
-```bash
+```js
 cd /mmfs1/sw/hyak101/basics/
 # you have just moved into the directory called basics under the directory at /sw/hyak101/
 ```
 
 Additionally, your new shell prompt will show your your new location in short form:
 
-```bash
+```js
 [UWNetID@klone-login01 basics/]$
 ```
 
 Now use `pwd` to show your "address" or the absolute path to the directory with our tutorial data:
 
-```bash
+```js
 pwd
 /mmfs1/sw/hyak101/basics
 ```
 
 Now let's go back to our Home directory to complete this exercise.
 
-```bash
+```js
 cd ~ 
 pwd 
 /mmfs1/home/UWNetID
@@ -74,14 +74,14 @@ pwd
 
 And your prompt should once again show `~` as your location:
 
-```bash
+```js
 [UWNetID@klone-login01 ~]$
 ```
 
 :::tip PRO TRIP - FYI
 There are many shortcuts to get back to your Home directory from anywhere on `klone` with `cd`.
 
-```bash
+```js
 # All of the following will take me to my Home Directory:
 # the ~ symbol is a shorthand for the Home Directory
 cd ~ 
@@ -105,7 +105,7 @@ The concept of "location" is important because where you are on `klone` can dete
 
 If you have just started as a Hyak user, your Home directory might be empty.
 
-```bash
+```js
 ls
 ```
 
@@ -113,7 +113,7 @@ Executing the command above may produce no result if you haven't logged in befor
 
 Let's use `cd` to go to the base of the `klone` filesystem, which is called the "root." Rather than being called "root" the root directory is referred to as `/`. Let's move to the root directory and list its contents.
 
-```bash
+```js
 cd /
 
 ls
@@ -121,7 +121,7 @@ ls
 
 `ls` in `/` should produce the following:
 
-```bash
+```js
 0    boot   data  etc   gscratch  lib    media  mmfs1  net  proc  run   scr  sw   tmp  var
 bin  cvmfs  dev   gpfs  home      lib64  misc   mnt    opt  root  sbin  srv  sys  usr  xcatpost
 ```
@@ -129,14 +129,14 @@ bin  cvmfs  dev   gpfs  home      lib64  misc   mnt    opt  root  sbin  srv  sys
 You have just listed the contents of the root directory, and the items here are other directories or shortcuts.
 Within the root directory are the directories listed above, including `mmfs1/`. Use `ls` to list the contents of `mmfs1/`:
 
-```bash
+```js
 ls mmfs1/
 # notice you don't have to be inside of a directory to list its contents. 
 ```
 
 `ls` in `mmfs1` should produce the following:
 
-```bash
+```js
 admin  apsearch  data  encrypted  gscratch  home  slurmdata  ssg  sw
 ```
 
@@ -148,7 +148,7 @@ With Windows File Explorer and MacOS Finder, you can click on icons like those s
 
 Let's practice a little now. Start in the root directory if you aren't there already:
 
-```bash
+```js
 cd /
 
 # can you find your Home directory on the list?
@@ -165,7 +165,7 @@ ls mmfs1/sw/hyak101/basics/data
 Notice that there are two meanings for the / character. When it appears at the front of a file or directory name, it refers to the root directory. When it appears inside a path, it’s just a separator.
 :::
 
-```bash
+```js
 # list all files, including files that are hidden with the -a flag
 # list the hidden files in your Home directory
 ls -a ~
@@ -208,14 +208,14 @@ drwxr-xr-x    8 root root   4080 Jun 11 12:05 xcatpost
 
 `ls -l` lists contents showing their permissions [**(Learn more about permissions here.)**](https://quickref.me/chmod.html), date of last edit, and their owner. Most items within the root directory are owned by "root" our name for our administrator. There are many flags for `ls` that can help you list contents in different ways, and many users have their favorite set of flags that they use regularly. Review all possible flags with the following command:
 
-```bash
+```js
 man ls
 # use the "q" key to exit the man command. 
 ```
 
 The `man` command stands for manual pages and brings up the user guide for a command. Another way to learn what a command does is with the help pages. Activate `ls` help pages with:
 
-```bash
+```js
 ls --help
 ```
 
@@ -225,7 +225,7 @@ As you use `cd` and `ls` to explore `klone` you might run into the message "Perm
 
 Another important aspect of location on `klone` is the node or computer that you are using at any given time. Your prompt also shows you this location.
 
-```bash
+```js
 [UWNetID@klone-login01 ~]$
 ```
 

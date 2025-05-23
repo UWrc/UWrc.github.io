@@ -21,10 +21,10 @@ With the `hyakalloc` command [[**source code here**](/docs/compute/resource-moni
 
 While you won't necessarily have access to them, it might be useful for you to see a list of Hyak's partitions. The `sinfo` commands contains information about the servers or nodes that compose Hyak, and the `sinfo -s` commands give you a summary for this information including the partitions and the hostnames that fall into each partition. 
 
-```bash
+```js
 sinfo -s
 ```
-```bash
+```js
 PARTITION        AVAIL  TIMELIMIT   NODES(A/I/O/T) NODELIST
 compute-bigmem      up   infinite        28/0/0/28 n[3008-3011,3064,3066,3132-3133,3190,3244-3247,3252-3255,3353-3355,3400-3407]
 ckpt                up   infinite   327/173/10/510 g[3001-3007,3010-3017,3020-3027,3030-3037,3040-3047,3050-3057,3060-3067,3070-3077,3080-3085],n[3000-3431],z[3001-3002,3005-3011]

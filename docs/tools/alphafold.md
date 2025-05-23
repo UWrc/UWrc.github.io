@@ -37,16 +37,16 @@ __Important__: These changes mean that some of the command line parameters have 
 The program can be run on CPU but it is highly recommended to request a job with 1-4 GPUs available.
 
 Load the module
-```bash
+```js
 module load escience/alphafold-2.3.0
 ```
 Install dependancies and ensure the executable is available. You only need to do this once. __Make sure you have a python environment activated before running this command__, and activate the same environment before running the main program.
-```bash
+```js
 install_alphafold
 which run_alphafold # should not error
 ```
 Run the main program on your protein sequences. If you're here, I assume you know how to create a fasta file of your sequences...
-```bash
+```js
 run_alphafold \
   --fasta_paths=/path/to/my/protein/T1050.fasta \
   --max_template_date=2020-05-14 \

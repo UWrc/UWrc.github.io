@@ -13,7 +13,7 @@ However, setting un a module for everybody to use involving containers necessita
 
 ## `ffmpeg` Example Usage
 The ffmpeg module can be laoded using the following command:
-```bash
+```js
 module load mamslab/ffmpeg/4.4
 ```
 As soon as it is loaded the following message gets displayed:
@@ -36,7 +36,7 @@ $
 ```
 What this means is that the container will be downloaded into the user apptainer cache folder which usually resides in `/mmfs1/home/myName/.apptainer`.
 This folder can be changed by exporting the proper environment variable:
-```bash
+```js
 export APPTAINER_CACHEDIR=/folder/you/want/to/use
 ```
 and as a reminder, the last message will say how big is the cache folder (remember there is a 10gb limit on user home directories) and where the cache folder is currently located. In the above example, the folder size is 306mb and it resides in `/mmfs1/home/adeleo/.apptainer/`. The cache folder can be cleaned by running the command `apptainer cache clean`.
@@ -54,7 +54,7 @@ In this section a more in-details example of how create modules that utilize con
 
 The .lua module file (located in `/sw/contrib/modulefiles/mamslab/ffmpeg/4.4.lua`) of the containerized ffmpeg package is the following:
 
-```bash
+```js
 help([[
 ffmpeg-4.4 (loaded via apptainer)
 ]])

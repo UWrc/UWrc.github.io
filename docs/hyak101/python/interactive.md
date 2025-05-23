@@ -65,7 +65,7 @@ Running non-interactive jobs is a little more complex, since we'll need to pass 
 Let's say you've written a bit of code that uses one of the conda environments in your overlay: we'll call
 it `~/do-some-research.py`. We'll start by writing a Bash script to get into the conda environment & run the script:
 
-```bash title="~/start-research.sh"
+```js title="~/start-research.sh"
 #!/bin/bash
 . ~/.bashrc
 conda activate ResearchEnvironment
@@ -79,7 +79,7 @@ Don't forget to make this script executable:
 
 Now we'll make an SBATCH script, where we pass this script to our container:
 
-```bash title="~/research.job"
+```js title="~/research.job"
 #!/bin/bash
 #SBATCH --job-name=research
 #SBATCH --cpus-per-task=8

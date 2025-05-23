@@ -23,7 +23,7 @@ Create an s3cmd configuration file in your home directory. Call it `.s3cfg`. The
 
 #### For example, Mac and Linux users you can use the text editor `nano` in a Terminal window.
 
-```bash
+```js
 cd ~
 nano .s3cfg
 ## Use Ctrl + X to exit nano
@@ -33,7 +33,7 @@ nano .s3cfg
 
 `.s3cfg` should contain the following details:
 
-```bash title=".s3cfg"
+```js title=".s3cfg"
 [default]
 host_base = s3.kopah.uw.edu
 host_bucket = s3.kopah.uw.edu/%(bucket)
@@ -48,7 +48,7 @@ Where the word `<ACCESS_KEY>` is replaced with your Kopah Access Key and the wor
 
 After that is complete. s3cmd can be used to access your Kopah storage data with a large suite of commands. The s3cmd help includes example commands for a variety of tasks.
 
-```bash 
+```js 
 s3cmd --help
 ```
 
@@ -72,7 +72,7 @@ Buckets and objects shouldn't be public unless necessary, set them private whene
 
 s3cmd is installed for all `klone` users. Users need only set up their s3cmd configuration file in their home directory as shown above.
 
-```bash
+```js
 cd ~
 nano .s3cfg
 ## Use Ctrl + X to exit nano
@@ -95,7 +95,7 @@ These commands should likely be added in your `~/.bashrc` file, so they are auto
 You'll need to do this for any device you wish to use s5cmd on (e.g. local desktop and Hyak).
 :::
 
-```bash
+```js
 export AWS_ACCESS_KEY_ID='<Kopah ACCESS KEY>'     # replace with Kopah access key
 export AWS_SECRET_ACCESS_KEY='<Kopah SECRET KEY>' # replace with Kopah secret key
 export S3_ENDPOINT_URL='https://s3.kopah.uw.edu'

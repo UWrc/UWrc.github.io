@@ -46,13 +46,13 @@ Let's say you want a newer version AND you also want it running on Ubuntu for so
 
 1. Get an interactive session using some variant of the below command.
 
-```bash
+```js
 salloc -A mygroup -p compute -N 1 -n 2 --mem=10G --time=1:00:00
 ```
 
 2. Load the Apptainer module.
 
-```bash
+```js
 module load apptainer
 ```
 
@@ -73,7 +73,7 @@ From: ubuntu:16.04
 
     When using the `--fakeroot` option, build the container image in `/tmp`. This avoids [[a potential permission issue](https://sylabs.io/guides/3.6/admin-guide/installation.html#fakeroot-sub-uid-gid-mapping)] with our shared storage filesystem, GPFS.
 
-```bash
+```js
 apptainer build --fakeroot /tmp/tools.sif ./tools.def
 ```
 :::caution Disk Quota Exceeded
@@ -83,11 +83,11 @@ When building a container, you may encournter the following error:
 ![](/img/docs/disk-quota-exceeded.png 'Disk Quota Exceeded Error Message')
 
 If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your **[home directory](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)**  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
-```bash
+```js
 du -h --max-depth 1
 ```
 If you find your storage exeeding the 10GB quota, you will need to eliminate storage. It can be helpful to clear the Apptainer cache with the following:
-```bash
+```js
 apptainer cache clean
 ```
 #### Default Apptainer Cache
@@ -97,13 +97,13 @@ When you start a job on a compute node, the internal storage of that node
 is available to be used for temporary read/write operations with the jobs.
 This makes it a great place for the apptainer cache and the physical architecture of our filesystem doesn't interfere with this. 
 You can configure Apptainer to store its cache in a directory located on the local storage of the compute node with:
-```bash
+```js
 export APPTAINER_CACHEDIR=/scr
 # or
 export APPTAINER_CACHEDIR=/tmp
 ```
 You can now proceed with building your container:
-```bash
+```js
 apptainer build container-image.sif container-recipe.def
 ```
 :::

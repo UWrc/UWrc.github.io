@@ -17,7 +17,7 @@ There's really only one thing that needs to be set up on the cluster: your intra
 Like many other parts of this guide, we [**already have instructions**](https://hyak.uw.edu/docs/setup/ssh#intracluster-ssh-keys) on this, but since we're keeping this guide self-contained, we'll go through it again here:
 
 If you haven't already done so, log in to the cluster & generate an intracluster SSH key:
-```bash
+```js
 ssh UWNetID@klone.hyak.uw.edu
 (UWNetID@klone.hyak.uw.edu) Password:
 ###
@@ -27,7 +27,7 @@ ssh-keygen -C klone -t rsa -b 2048 -f ~/.ssh/id_rsa -q -N ""
 ```
 
 After that, add the key to your `authorized_keys` file and ensure the permissions are correct:
-```bash
+```js
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
@@ -52,7 +52,7 @@ This entire next section is done on your local computer—your personal MacOS/Li
 
 First up create or edit your main SSH configuration file, located at `~/.ssh/config`. The contents of your SSH configuration file will depend on the operating system of your local machine, below is the version for Mac/Linux users. You can use the following template, making sure to replace `UWNetID` for your UW Net ID that you use to log in to `klone`:
 
-```bash title="~/.ssh/config"
+```js title="~/.ssh/config"
 Host klone-login
 //highlight-next-line
         User UWNetID
@@ -68,12 +68,12 @@ Host klone-node
 ```
 
 Whether you're creating this file for the first time, or modifying an existing config, make sure the file has the correct permissions:
-```bash
+```js
 chmod 600 ~/.ssh/config
 ```
 
 Once this is in place, we can do the following to log in to klone:
-```bash
+```js
 ssh klone-login
 # Instead of:
 # ssh UWNetID@klone.hyak.uw.edu
@@ -98,7 +98,7 @@ These instructions are the same for Windows and Mac/Linux users.
 Here we're defining `klone-node` as a compute node with a placeholder (`n3000`, until we know what the node will be), and
 using `ProxyJump` to connect to that node through the login node. Remember to replace `UWNetID` for your UW Net ID that you use to log in to `klone`.
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
   User UWNetID
   Hostname n3000
@@ -113,7 +113,7 @@ $ chmod 600 ~/.ssh/klone-node-config
 
 Because you will be effectively connecting directly from your local computer to the node, you will need to append the SSH public key from your **local** system to the `.ssh/authorized_keys` file under your home directory on `klone`. Or you can do the same by copying your local ssh key onto klone. While we cannot use our key as a authentication factor between our local machine and klone, we can use it when ssh'ing *between* klone nodes.
 
-```bash
+```js
 ssh-copy-id klone-login
 ```
 
@@ -122,7 +122,7 @@ The following is ***optional***, but demonstrates what we have just set up by co
 
 First, test your new `ssh` shortcut to get onto the login node. Then, request an interactive job in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory. The `Hostname` will appear when your node is allocated, and follow your UWNetID For example:
 
-```bash
+```js
 ssh klone-login
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=klone-container
 ...
@@ -132,7 +132,7 @@ salloc: Nodes n3319 are ready for job
 
 The next section of the tutorial will introduce a script that when run on locally will replace the `Hostname` line of your `~/.ssh/klone-node-config` file. For now, manually replace the `Hostname` line with your job node by editing `~/.ssh/klone-node-config` with a text editor. Remember to replace `UWNetID` for your UW Net ID that you use to log in to `klone` if you have not already done that.
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
   User UWNetID
 //highlight-next-line
@@ -142,7 +142,7 @@ Host klone-node
 
 Test your shortcut to connect directly to the node from your local computer:
 
-```bash
+```js
 ssh klone-node
 ###
 ### Truncated Log in Messages and Duo 2FA if required
@@ -178,7 +178,7 @@ Host klone-node
 ```
 
 Once this is in place, we can do the following to log in to klone:
-```bash
+```js
 ssh klone-login
 # Instead of:
 # ssh UWNetID@klone.hyak.uw.edu
@@ -207,7 +207,7 @@ Host klone-node
 
 Because you will be effectively connecting directly from your local computer to the node, you will need to append the SSH public key from your **local** system to the `.ssh/authorized_keys` file under your home directory on `klone`. Or you can do the same by copying your local ssh key onto klone. While we cannot use our key as a authentication factor between our local machine and klone, we can use it when ssh'ing *between* klone nodes.
 
-```bash
+```js
 ssh-copy-id klone-login
 ```
 
@@ -220,7 +220,7 @@ The following is ***optional***, but demonstrates what we have just set up by co
 
 First, test your new `ssh` shortcut to get onto the login node. Then, request an interactive job in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory. The `Hostname` will appear when your node is allocated, and follow your UWNetID For example:
 
-```bash
+```js
 ssh klone-login
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=klone-container
 ...
@@ -230,7 +230,7 @@ salloc: Nodes n3319 are ready for job
 
 The next section of the tutorial will introduce a script that when run on locally will replace the `Hostname` line of your `~/.ssh/klone-node-config` file. For now, manually replace the `Hostname` line with your job node by editing `~/.ssh/klone-node-config` with a text editor. Remember to replace `UWNetID` for your UW Net ID that you use to log in to `klone` if you have not already done that.
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
   User UWNetID
 //highlight-next-line
@@ -240,7 +240,7 @@ Host klone-node
 
 Test your shortcut to connect directly to the node from your local computer:
 
-```bash
+```js
 ssh klone-node
 ###
 ### Truncated Log in Messages and Duo 2FA if required

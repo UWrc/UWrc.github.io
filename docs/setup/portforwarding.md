@@ -19,6 +19,6 @@ OpenSSH Client (Linux/Mac/ConEmu)
 ---------------------------------
 
 In your SSH Connection string, include the `-L` flag followed by `PORT:HOSTNAME:PORT` where the hostname is the one for the node running the service in the `klone` network and the port is the one provided at service start.
-```bash
+```js
 ssh klone.hyak.uw.edu -L 8555:z3003.hyak.local:8555
 ```

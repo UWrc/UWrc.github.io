@@ -9,20 +9,20 @@ Pulling pre-built container images is often the easiest and quickest way to run 
 
 To start, log into Hyak and navigate away from your home directory to a directory where you have access to storage. For this tutorial, we will work these exercises using a directory in `/gscratch/scrubbed/`. You may choose a working directory under another path on the filesystem, but we recommend not performing these exercises in your Home directory due to storage limitations. Learn more about storage on Hyak [**HERE**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory).  
 
-```bash
+```js
 # Remember to replace the word "UWNetID" in the command below with your UW NetID. 
 ssh UWNetID@klone.hyak.uw.edu
 ```
 
 Navigate to `/gscratch/scrubbed/`
 
-```bash
+```js
 cd /gscratch/scrubbed
 ```
 
 If you have not already, make a directory with your UW NetID.
 
-```bash
+```js
 # Remember to replace the word "UWNetID" in the command below with your UW NetID.
 mkdir UWNetID
 cd UWNetID
@@ -30,14 +30,14 @@ cd UWNetID
 
 Next, ensure that the tutorial materials are copied to your working directory. In this tutorial, your copy of the basics directory will be our working directory:
 
-```bash
+```js
 cp -r /sw/hyak101/basics .
 cd basics
 ```
 
 The program `klone` uses for containers is Apptainer. When pulling a Docker container, Apptainer is able to convert the Docker container into an Apptainer container. However, to use Apptainer, you must be on a compute node:
 
-```bash
+```js
 salloc --partition=ckpt-all --cpus-per-task=1 --mem=10G --time=2:00:00
 ```
 
@@ -55,13 +55,13 @@ Next, click on the "Tags" tab next to the "Overview" tab. Notice how you can sea
 
 Omit `docker pull` and replace it with `apptainer pull docker://` so Apptainer pulls the container image from Docker Hub and converts it into an Apptainer container. Run this code to pull and build the container.
 
-```bash
+```js
 apptainer pull docker://python:3.9.20-slim-bullseye
 ```
 
 The build should last 30 seconds to 1 minute. During the pull and build, you will see messages from Apptainer on the progress of the command.
 
-```bash
+```js
 INFO:    Converting OCI blobs to SIF format
 INFO:    Starting build...
 Copying blob 51915174edd6 done   | 
@@ -79,11 +79,11 @@ INFO:    Creating SIF file...
 
 Once that is complete, check to see if it was successfully built. The container will have a file extension `.sif`.
 
-```bash
+```js
 ls
 ```
 
-```bash
+```js
 python_3.9.20-slim-bullseye.sif
 ```
 
@@ -94,11 +94,11 @@ When building a container, you may encournter the following error:
 ![](/img/docs/disk-quota-exceeded.png 'Disk Quota Exceeded Error Message')
 
 If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your **[home directory](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)**  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
-```bash
+```js
 du -h --max-depth 1
 ```
 If you find your storage exeeding the 10GB quota, you will need to eliminate storage. It can be helpful to clear the Apptainer cache with the following:
-```bash
+```js
 apptainer cache clean
 ```
 #### Default Apptainer Cache
@@ -108,30 +108,30 @@ When you start a job on a compute node, the internal storage of that node
 is available to be used for temporary read/write operations with the jobs.
 This makes it a great place for the apptainer cache and the physical architecture of our filesystem doesn't interfere with this. 
 You can configure Apptainer to store its cache in a directory located on the local storage of the compute node with:
-```bash
+```js
 export APPTAINER_CACHEDIR=/scr
 # or
 export APPTAINER_CACHEDIR=/tmp
 ```
 You can now proceed with building your container:
-```bash
+```js
 apptainer build container-image.sif container-recipe.def
 ```
 :::
 
 You are now able to open a shell inside the container where you can run Python:
 
-```bash
+```js
 apptainer shell python_3.9.20-slim-bullseye.sif
 ```
 
 The command prompt will change and now start with `Apptainer>`. This is how you know that you are now inside the Apptainer container. Input `python` into the terminal to open the container's Python shell:
 
-```bash
+```js
 Apptainer>python
 ```
 
-```bash
+```js
 Python 3.9.20 (main, Oct 19 2024, 01:00:05) 
 [GCC 10.2.1 20210110] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -141,20 +141,20 @@ Type "help", "copyright", "credits" or "license" for more information.
 `>>>` should appear on the command prompt, indicating that you are now able to use Python interactively. To exit Python, use `Ctrl+D`.
 To exit the container write `exit`
 
-```bash
+```js
 exit
 ```
 
 :::note
 The above tutorial is useful if you want to use the most recent version of Python. However, there is a native version of Python installed on Hyak. Check what version of Python this is with:
 
-```bash
+```js
 python --version
 ```
 
 You can check the version of Python in the container with the following command:
 
-```bash
+```js
 apptainer exec python_3.9.20-slim-bullseye.sif python --version
 ```
 
@@ -167,23 +167,23 @@ Recall that Apptainer containers are by default read-only. This means that under
 
 Open a shell into the container once more
 
-```bash
+```js
 apptainer shell python_3.9.20-slim-bullseye.sif
 ```
 
 Try `ls` to list the directory.
 
-```bash
+```js
 ls
 ```
 
 This isn't very practical. We will usually have more files outside of the container upon which we want to execute commands. To make the Hyak filesystem accessible to the container, you must bind your filesystem to your container. In this section, we will bind the Hyak filesystem and run a simple Python script in the container. If you have not already, exit Apptainer with `exit`. Using the `nano` text editor, let's create our Python script:
 
-```bash
+```js
 nano pi.py
 ```
 
-```bash title="pi.py"
+```js title="pi.py"
 # Example Python script imports the Math library and prints the number pi. 
 import math
 print("Executing inside the container!")
@@ -193,40 +193,40 @@ print("Pi=",math.pi)
 
 Try to run the `pi.py` script without binding the filesystem.
 
-```bash
+```js
 apptainer exec python_3.9.20-slim-bullseye.sif python pi.py
 ```
 
-```bash
+```js
 /usr/local/bin/python: can't open file '/gscratch/scrubbed/finchkn/basics/pi.py': [Errno 2] No such file or directory
 ```
 
 To access the `pi.py` script and execute it, the file system must be bound to the container. To bind the filesystem to the container AND run `pi.py`, use the following command:
 
-```bash
+```js
 apptainer exec --bind /gscratch/ python_3.9.20-slim-bullseye.sif python pi.py
 ```
 
-```bash
+```js
 Executing inside the container!
 Pi= 3.141592653589793
 ```
 
 You can also use `apptainer shell` to open a shell into the container and bind the filesystem so that the files are accessible and visible with `ls`.
 
-```bash
+```js
 apptainer shell --bind /gscratch/ python_3.9.20-slim-bullseye.sif
 ```
 
 Now with `ls` you can list the contents of your working directory.
 
-```bash
+```js
 Apptainer> ls
 ```
 
 Now you can now run `pi.py` inside the shell:
 
-```bash
+```js
 Apptainer>python pi.py
 ```
 

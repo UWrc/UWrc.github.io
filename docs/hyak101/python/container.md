@@ -9,7 +9,7 @@ This section is going to describe how the main container we prepared for this tu
 
 First navigate to your working directory, which you selected in the previous section titled, [**Getting Started.**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) and issue the following command: 
 
-```bash
+```js
 ln --symbolic /mmfs1/sw/hyak101/python/hyak-container.sif hyak-container.sif
 ```
 :::
@@ -33,7 +33,7 @@ we're building a personal Linux machine.
 
 Start by navigating to the working directory you selected for this tutorial. For example, we selected a directory under `/gscratch/scrubbed` named with our UWNetID. NOTE: this following step will be different for every user. Please see the [**Getting Started.**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) Section for more information about how to set this up for you. Use something similar to the following command to navigate to your working directory: 
 
-```bash
+```js
 cd /gscratch/scrubbed/UWNetID
 ```
 
@@ -41,12 +41,12 @@ cd /gscratch/scrubbed/UWNetID
 
 Apptainer containers are represented by a single file (normally suffixed `.sif`), and they're created from definition files (kind of like a recipe for your container).
 We've already created the definition file we're going to use for this at `/mmfs1/sw/hyak101/python/hyak-container.def`. Next, make a copy of it in your working directory (we will use a shorthand where `.` will copy the file to the directory where the command is issued, in this case your working directory):
-```bash
+```js
 cp /mmfs1/sw/hyak101/python/hyak-container.def .
 ```
 After copying the `.def` file to your working directory, you should see the file is there with the list command or `ls`, and you can print the `.def` file to the screen and take a look at its contents with the `cat` command
 
-```bash
+```js
 ls
 # you should see hyak-container.def among the other items you may have in the directory
 cat hyak-container.def
@@ -54,7 +54,7 @@ cat hyak-container.def
 
 Now, let's take a look at the different sections of the definition, starting from the top.
 
-```bash title="hyak-container.def"
+```js title="hyak-container.def"
 Bootstrap: docker
 From: nvcr.io/nvidia/cuda:11.8.0-devel-rockylinux8
 ```
@@ -68,7 +68,7 @@ host OS as possible. We're using Rocky Linux 8 and our current CUDA version is 1
 
 Next we'll look at the `%setup` and `%files` sections which are for preparing for the build.
 
-```bash title="hyak-container.def"
+```js title="hyak-container.def"
 %setup
     grep ^slurm: /etc/passwd >> ${APPTAINER_ROOTFS}/etc/passwd
     grep ^slurm: /etc/group >> ${APPTAINER_ROOTFS}/etc/group
@@ -76,7 +76,7 @@ Next we'll look at the `%setup` and `%files` sections which are for preparing fo
 Be careful with the `%setup` step: these actions are performed on the *host* operating system, not on the container's.
 For example, with the `%setup` section above, we're appending the user ID and group ID of the node's Slurm user into the container, using the `${APPTAINER_ROOTFS}` variable.
 
-```bash title="hyak-container.def"
+```js title="hyak-container.def"
 %files
     /etc/yum.repos.d/hyak-slurm.repo
     /opt/hyak-user-tools
@@ -89,7 +89,7 @@ In the `%files` section, we're copying over a few files from the host operating 
 
 #### `%post` section for post-build instructions
 
-```bash title="hyak-container.def"
+```js title="hyak-container.def"
 %post
     dnf install --assumeyes --allowerasing \
       @core @standard slurm python39
@@ -119,7 +119,7 @@ After we have these basic packages installed, we made a couple directories (with
 
 #### `%runscript`: What the container does
 
-```bash title="hyak-container.def"
+```js title="hyak-container.def"
 %runscript
     case ${@} in
         "")
@@ -156,13 +156,13 @@ In other words, resource-intensive actions like building a container should be d
 
 We will use a `sbatch` script to build our container, but will submit the build job to a compute node and it will run in the background until it is complete. First, copy the script to your working directory from `/mmfs1/sw/hyak101/python`:
 
-```bash
+```js
 cp /mmfs1/sw/hyak101/python/container-build.job .
 # "." is shorthand for "here" copy the script to the directory where the command was issued (i.e., your working directory)
 ```
 Let's take a look at the script:
 
-```bash title="container-build.job"
+```js title="container-build.job"
 #!/bin/bash
 #SBATCH --job-name=container-build
 #SBATCH --cpus-per-task=1
@@ -217,13 +217,13 @@ You can use the `hyakstorage` command to see your file & space quotas, in your h
 
 Submit the job to build the container with `sbatch`. 
 
-```bash
+```js
 sbatch container-build.job
 Submitted batch job 12345678
 ```
 Use the `watch` command with the `squeue` command to monitor the job in real time. `watch -n30` will issue the `squeue` every 30 seconds. Use `Ctrl` + `C` to exit the `watch` command.
 
-```bash
+```js
 watch -n30 squeue --user $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
           12345678      ckpt containe UWNetID  R      00:01      1 n3000
@@ -232,7 +232,7 @@ watch -n30 squeue --user $USER
 
 Additionally, you can watch the output messages as the container is built by monitoring the output file that the sbatch script requested, which will appear in your working directory beginning with `container-build_XXXXXX.out` where the X's are the jobID assigned to the job by Slurm. For example (Use `Ctrl` + `C` to exit the `tail` command):
 
-```bash
+```js
 tail --follow --retry container-build_12345678.out
 # Use Ctrl + C to exit the tail command
 ```
@@ -254,13 +254,13 @@ Option 2 above is truely PRO MODE. You can pull ANY container from the internet 
 
 Make a copy of `hyak-container.def` for your custom build.
 
-```bash
+```js
 cp hyak-container.def hyak-container-custom.def
 ```
 
 Open `hyak-container-custom.def` with a text editor and add additional installation instructions to the `%post` section. For example, I want to install `matplotlib` with `pip`, so I will add `pip install matplotlib` to `hyak-container-custom.def` as shown below:
 
-```bash title="hyak-container-custom.def"
+```js title="hyak-container-custom.def"
 %post
     dnf install --assumeyes --allowerasing \
       @core @standard slurm python39
@@ -277,7 +277,7 @@ Open `hyak-container-custom.def` with a text editor and add additional installat
 
 Also make a copy of `container-build.job` to submit this job using the new definition file. 
 
-```bash
+```js
 cp container-build.job container-build-custom.job
 ```
 
@@ -286,7 +286,7 @@ Edit the sbatch script `container-build-custom.job` as follows:
 2. Replace `hyak-container.sif` with `hyak-container-custom.sif` to avoid overwriting the original version of the container
 3. Change the `--job-name` line to `container-build-custom`
 
-```bash title="container-build-custom.job"
+```js title="container-build-custom.job"
 #!/bin/bash
 //highlight-start
 #SBATCH --job-name=container-build-custom
@@ -308,7 +308,7 @@ cp /tmp/$USER/hyak-container-custom.sif .
 
 Submit the build job.
 
-```bash
+```js
 sbatch container-build-custom.job
 ```
 
@@ -322,13 +322,13 @@ We can build custom containers on top of existing containers, which comes with a
 
 Create an empty text document called `local-custom.def` with the `touch` command: 
 
-```bash
+```js
 touch local-custom.def
 ```
 
 Use a text editor to open `local-custom.def` and add the following lines: 
 
-```bash title="local-custom.def"
+```js title="local-custom.def"
 Bootstrap: localimage
 From: /sw/hyak101/python/hyak-container.sif
 
@@ -343,7 +343,7 @@ From: /sw/hyak101/python/hyak-container.sif
 
 Also make a copy of `container-build.job` to submit this job using the new definition file. 
 
-```bash
+```js
 cp container-build.job local-custom-build.job
 ```
 
@@ -352,7 +352,7 @@ Edit the sbatch script `local-custom-build.job` as follows:
 2. Replace `hyak-container.sif` with `local-custom.sif` to avoid overwriting the original version of the container
 3. Change the `--job-name` line to `local-custom-build`
 
-```bash title="local-custom-build.job"
+```js title="local-custom-build.job"
 #!/bin/bash
 //highlight-start
 #SBATCH --job-name=local-custom-build
@@ -374,7 +374,7 @@ cp /tmp/$USER/local-custom.sif .
 
 Submit the build job.
 
-```bash
+```js
 sbatch local-custom-build.job
 ```
 

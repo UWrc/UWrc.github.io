@@ -24,12 +24,12 @@ In the next steps you will be setting up a configuration that will require the u
 
 First, ensure you have a SSH public and private keypair for your local computer. You may have set this up in the past. From your Home directory on your local computer, search for `id_rsa` and `id_rsa.pub` the one ending in `.pub` is the public part of the key pair that you will share with `klone` to decode your private key and log on securely. These should be in a directory `~/.ssh` on your local computer. 
 
-```bash
+```js
 cd ~/.ssh
 ```
 
 If you don't have `id_rsa` and `id_rsa.pub` on your local computer, you should generate a new keypair with the following command: 
-```bash
+```js
 ssh-keygen -t rsa -b 4096
 ```
 
@@ -39,7 +39,7 @@ The public key should look something like the following:
 Search for `id_rsa.pub` under `~/.ssh` on your local computer. 
 :::
 
-```bash title="id_rsa.pub"
+```js title="id_rsa.pub"
 ssh-rsa AAAAB3NzaC1...SOME_STRING...FbFvEYcw== username@user-Device
 ```
 Where it starts with ssh-rsa, contains some long and seemingly-random string, and ends with the username for your computer `@` the name of your computer. You will want to copy this key and paste it into a file called `authorized_keys` on `klone` in your Home Directory under the directory `.ssh`. 
@@ -48,11 +48,11 @@ Where it starts with ssh-rsa, contains some long and seemingly-random string, an
 Paste the contents of your `id_rsa.pub` into `~/.ssh/authorized_keys` on `klone`. 
 :::
 
-```bash title="~/.ssh/authorized_keys"
+```js title="~/.ssh/authorized_keys"
 ssh-rsa AAAAB3NzaC1...SOME_STRING...FbFvEYcw== username@user-Device
 ```
 You can do this manually with copy and paste, or with the command
-```bash
+```js
 ssh-copy-id klone-login
 ```
 Below you will be prompted to do this, but we wanted to give you the tools to set this up now. This is a common stumbling block for completing this method for setting up VS Code on Hyak. 
@@ -66,25 +66,25 @@ Here is where things get confusing because we will use the same protocol to also
 Your next required keypair is called an [**Intracluster SSH Key, which we explained elsewhere in our docs**](https://hyak.uw.edu/docs/setup/intracluster-keys). This pair is for navigating between nodes on `klone` with ssh (Intracluster = Within `klone`, get it?). 
 
 **ON `klone`** execute the following command
-```bash
+```js
 ssh-keygen -C klone -t rsa -b 2048 -f ~/.ssh/id_rsa -q -N ""
 ```
 This command creates a 2048-bit RSA key with `klone` in the comment field and will look something like the following
-```bash title="id_rsa.pub"
+```js title="id_rsa.pub"
 ssh-rsa AAAAB3NzaC1...SOME_OTHER_STRING...FbFvEYcw== klone
 ```
 Next, add the contents of your public key to the `authorized_keys` file in your home directory with the following commands:
-```bash
+```js
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
 This also ensures the `authorized_keys` file has appropriate permissions.
 
 Your `authorized_keys` file should have at least two keypairs: one for your local computer and one for `klone`. 
-```bash 
+```js 
 cat ~/.ssh/authorized_keys
 ```
-```bash title="~/.ssh/authorized_keys"
+```js title="~/.ssh/authorized_keys"
 ssh-rsa AAAAB3NzaC1...SOME_STRING...FbFvEYcw== username@user-Device
 ssh-rsa AAAAB3NzaC1...SOME_OTHER_STRING...FbFvEYcw== klone
 ```
@@ -104,7 +104,7 @@ Prepare your main SSH configuration file, located at `~/.ssh/config` **ON YOUR C
 
 Use the following template for `~/.ssh/config` on Mac/Linux, replacing `UWNetID` with **your UW Net ID**.
 
-```bash title="~/.ssh/config"
+```js title="~/.ssh/config"
 Host klone-login
 //highlight-next-line
         User UWNetID
@@ -121,13 +121,13 @@ Host klone-node
 
 Whether you're creating this file for the first time, or modifying an existing config, make sure the file has the correct permissions:
 
-```bash
+```js
 chmod 600 ~/.ssh/config
 ```
 
 Once this is in place, we can do the following to log in to `klone`:
 
-```bash
+```js
 ssh klone-login
 #Instead of:
 #ssh UWNetID@klone.hyak.uw.edu
@@ -146,7 +146,7 @@ without a response from the login node.
 
 Use the following template for `~/.ssh/config` on Windows, replacing `UWNetID` with **your UW Net ID**. The Windows version config has fewer settings but accomplishes the same. 
 
-```bash title="~/.ssh/config"
+```js title="~/.ssh/config"
 Host klone-login
 //highlight-next-line
         User UWNetID
@@ -164,7 +164,7 @@ Host klone-node
 
 Use the following template for `~/.ssh/klone-node-config` on Mac/Linux and Windows, replacing `UWNetID` with **your UW Net ID**. Define `klone-node` as a compute node `n3000` as a placeholder until we know what the node will be, and using `ProxyJump` to connect to that node through the login node.
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
 //highlight-next-line
   User UWNetID
@@ -174,14 +174,14 @@ Host klone-node
 
 This file will also need the correct permissions. **Windows should not require a permissions check.** Mac/Linux update permissions with:
 
-```bash
+```js
 chmod 600 ~/.ssh/klone-node-config
 ```
 
 :::note
 You may have already completed this step as a prerequisite, but here it is again just in case. Because you will be effectively connecting directly from your local computer to the node, you will need to append the SSH public key from your **local** system to the `~/.ssh/authorized_keys` file under your cluster home directory on `klone`. This command will update your authorized keys list. 
 
-```bash
+```js
 ssh-copy-id klone-login
 ```
 :::
@@ -196,24 +196,24 @@ If your private key permissions are too open, ssh won't let you connect to klone
 
 Test your new `ssh` shortcut to get onto the login node.
 
-```bash
+```js
 ssh klone-login
 ```
 Request an interactive job in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory. **Note: the job will be called "vsc-proxy-jump" as per `--job-name=`.** 
-```bash
+```js
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=vsc-proxy-jump
 ```
 
 The `Hostname` will appear when your node is allocated, and follow your UWNetID For example:
 
-```bash
+```js
 salloc: Nodes n3120 are ready for job
 [UWNetID@n3120 ~]$
 ```
 
 Manually replace the `Hostname` line with your job node. Don't forget to replace `UWNetID` with **your UW Net ID** if you have not already.
 
-```bash title="~/.ssh/klone-node-config"
+```js title="~/.ssh/klone-node-config"
 Host klone-node
 //highlight-next-line
   User UWNetID
@@ -224,7 +224,7 @@ Host klone-node
 
 Test your shortcut to connect directly to the node from your local computer:
 
-```bash
+```js
 $ ssh klone-node
 . . .
 [UWNetID@n3120 ~]$
@@ -237,7 +237,7 @@ Manually editing `~/.ssh/klone-node-config` everytime you want to connect VS Cod
 
 **WARNING this script doesn'tusually work on Windows since bash and sed are not available. If might work if your re on Windows with WSL or Gitbash. MOREOVER, it might not work if you have a different version of sed**
 
-```bash title="set-hyak-node.sh"
+```js title="set-hyak-node.sh"
 #!/bin/bash
 NODE=$(ssh klone-login 'squeue \
     --user $USER \
@@ -251,7 +251,7 @@ sed -I '' -E s"/Hostname.*/Hostname $NODE/" ~/.ssh/klone-node-config
 **NOTE** : *If the interactive job you request is not named "vsc-proxy-jump" designated by `--job-name` then `set-hyak-node.sh` will not work.* **Your `salloc --job-name` (requested above) and `set-hyak-node.sh` line `--name` must match.**
 
 Don't forget to make the script executable. 
-```bash
+```js
 chmod +x set-hyak-node.sh
 ```
 This script works by setting the variable `NODE` and modifying `~/.ssh/klone-node-config` with: 
@@ -263,7 +263,7 @@ This script works by setting the variable `NODE` and modifying `~/.ssh/klone-nod
 :::note
 For at least one other version of `sed` this script works after a small adjustment. If the script version above doesn't work for you, try the following: 
 
-```bash title="set-hyak-node.sh"
+```js title="set-hyak-node.sh"
 #!/bin/bash
 NODE=$(ssh klone-login 'squeue \
     --user $USER \
@@ -298,7 +298,7 @@ To end your session, use the File menu and select "Close Remote Connection."
 
 And end the job on the compute node with `scancel` on `klone` like the following example.
 
-```bash
+```js
 scancel --name vsc-proxy-jump
 ```
 
