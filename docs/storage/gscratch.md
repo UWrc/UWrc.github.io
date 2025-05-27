@@ -163,17 +163,23 @@ If you are no longer using your data and do not anticipate needed it in the futu
 ## Scrubbed
 
 - Free to use but files auto-deleted beyond 21 days.
+- 10TB individual quota, from a shared 100TB quota in total.
 - Slower than `gscratch` lab directories.
 - No snapshots.
 
 If you need space but only temporarily (i.e., less than 3 weeks) then you can make use of the scrubbed folder. The scrubbed folder lives at `/gscratch/scrubbed/` and anything underneath this folder is a free-for-all space. You can create a directory for yourself and do whatever you need subject to system constraints but note there is a purge policy where any file not accessed for 21 days (i.e., 3 weeks) is automatically deleted. This is to provide a useful (and free) flexible storage capacity for any research group that needs it and can work within these policy restraints. However, we encourage users who need a more persistent storage location to purchase `gscratch`.
 
 :::warning
-AUTO-DELETE: Files not accessed for 3 weeks (i.e., 21 days) in scrubbed will automatically be deleted. Consider purchasing `gscratch` storage if you want a more persistent storage location.
+AUTO-DELETE: Files not accessed for 3 weeks (i.e., 21 days) in `scrubbed` will automatically be deleted. Consider purchasing `gscratch` storage if you want a more persistent storage location.
+>Attempting to circumvent the auto-delete policy violates our usage policy and is against the spirit of `scrubbed` as a community resource.
+:::
+
+:::warning
+10TB INDIVIDUAL LIMIT: The 10TB per-user limit is not guaranteed. `scrubbed` is a shared space with 100TB total quota, and heavy use by a few users can affect accessibility for others. This is the main reason for the auto-delete policy.
 :::
 
 Please note the scrubbed space permissions are completely open by default so use Linux group changes and modifications to restrict access as appropriate.
 
 :::caution
-PRIVACY: Writes to `scrubbed` are public by default, it is the responsibility of the individual researcher to lock down anything they wish to use in scrubbed.
+PRIVACY: Writes to `scrubbed` are public by default, it is the responsibility of the individual researcher to lock down anything they wish to use in `scrubbed`.
 :::
