@@ -3,7 +3,7 @@ id: archive
 title: Archive on Lolo
 ---
 
-The storage attached to HYAK clusters is considered a transient place for "hot" data that you're actively computing against. Data stored here is **NOT BACKED UP**. Lolo is our archival storage option intended to provide our users with storage that is not immediately available but is affordable and has physical longevity as a storage medium. If you archive your data to Lolo, two additional copies are created: it does automatic duplication with one copy on UW-Seattle campus and another copy in eastern Washington.
+The storage attached to Hyak clusters is considered a transient place for "hot" data that you're actively computing against. Data stored here is **NOT BACKED UP**. Lolo is our archival storage option intended to provide our users with storage that is not immediately available but is affordable and has physical longevity as a storage medium. If you archive your data to Lolo, two additional copies are created: it does automatic duplication with one copy on UW-Seattle campus and another copy in eastern Washington.
 
 :::tip
 
@@ -19,9 +19,13 @@ Lolo is the UW's archive solution, it is an LTO-8 or "tape" based platform.
 
 [Click here to be re-directed to the Lolo Storage Request Form](https://uw.service-now.com/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
 
+[Click here to access the Lolo service catalog](https://uw.service-now.com/it?id=sc_entry&sys_id=77750042db1e73c037ae9ec6db961994&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2).
+
 :::note
 
 Lolo costs $3.45 / TB / month.
+
+Lolo supports up to 1,000 files per TB of data stored.
 
 :::
 
@@ -67,6 +71,18 @@ Extract the archive with the `tar` command on your local computer or `klone`. Be
 ```js
 $ tar -xvf mydata.tar
 ```
+
+:::tip tips for efficient use of Lolo
+
+**Small files:**
+Lolo performs best with large files. Storing large numbers of small files is inefficient for tape-based systems and can make data retrieval slow or difficult. For this reason, we strongly encourage you to combine collections of small files into .tar or .zip files before transferring them to Lolo. To enforce this, inode quotas are in place which limit the number of files that you can store. 
+
+**Large Files:**
+Though we encourage you to bundle data sets into large archives, very large (10TB+) file sizes may cause issues. If you have a very large data set, please split the archive into smaller files. 
+
+If a large number of small files are uploaded by mistake, or if you need help splitting large files, please contact help@uw.edu for assistance.
+
+:::
 
 ## Google Drive
 
