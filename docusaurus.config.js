@@ -79,13 +79,13 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'blog', 
-          label: 'Blog', 
+          to: 'blog',
+          label: 'Blog',
           position: 'right'
         },
         {
-          to: 'team', 
-          label: 'About', 
+          to: 'team',
+          label: 'About',
           position: 'right',
           items: [
             /*
@@ -200,6 +200,10 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-7HN3YJC91Z',
+          anonymizeIP: true,
+        }
       },
     ],
   ],
@@ -295,7 +299,7 @@ module.exports = {
         {
           caption: 'Kubernetes',
           image: 'img/software/kubernetes.svg',
-        },        
+        },
         {
           caption: 'Slurm',
           image: 'img/software/slurm.svg',
