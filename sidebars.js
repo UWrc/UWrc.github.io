@@ -31,6 +31,7 @@ module.exports = {
           'storage/gui',
           'storage/cli',
           'storage/boto3',
+          'storage/juicefs',
         ]
       }
     ],
