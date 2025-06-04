@@ -115,10 +115,10 @@ export default function systems() {
               <td align="right">Operating System</td><td>Rocky 8</td>
             </tr>
             <tr>
-              <td align="right">Compute</td><td>30,932 CPU cores [AMD Genoa, Intel Cascade Lake, Intel Ice Lake]</td>
+              <td align="right">Compute</td><td>44,184 CPU cores [AMD Genoa, Intel Cascade Lake, Intel Ice Lake]</td>
             </tr>
             <tr>
-              <td align="right">Accelerators</td><td>832 GPU cards [Turing, Ampere]</td>
+              <td align="right">Accelerators</td><td>954 GPU cards [Turing, Ampere, Hopper]</td>
             </tr>
             <tr>
               <td align="right">Interconnect</td><td>100 Gbps [HDR100 Infiniband]</td>
