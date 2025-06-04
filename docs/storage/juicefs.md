@@ -3,7 +3,7 @@ id: juicefs
 title: Drop In Support
 ---
 
-While it is always better to write any new programs using Kopah with tools designed for it, like boto3, sometimes that just isn't feasible. If you need to make an existing script backwards compatible with Kopah storage, [juicefs](https://juicefs.com/docs/community/getting-started/standalone) is a possible option. While juicefs can be a helpful tool, there are also a lot of time that you **shouldn't** use it since it also has a lot of limitations. The primary limitation is the fact that Kopah uses juicefs in whats called Standalone mode, which makes it difficult to access the same data across multiple nodes. That means if you workload requires multiple nodes (not just multiple processes since those can ber an on the same node) then juicefs likely isn't the tool for you.
+While it is always better to write any new programs using Kopah with tools designed for it, like boto3, sometimes that just isn't feasible. If you need to make an existing script backwards compatible with Kopah storage, [juicefs](https://juicefs.com/docs/community/getting-started/standalone) is a possible option. While juicefs can be a helpful tool, there are also a lot of time that you **shouldn't** use it since it also has a lot of limitations. The primary limitation is the fact that Kopah uses juicefs in whats called Standalone mode, which makes it difficult to access the same data across multiple nodes. That means if you workload requires multiple nodes (not just multiple processes since those can be ran on the same node) then juicefs likely isn't the tool for you.
 
 ## Installation
 
@@ -17,13 +17,17 @@ or alternatively you can copy the Hyak binary to your current directory with `mv
 
 ## Usage
 
-It is strongly discouraged, and very inconvenient, to hard code your Kopah keys to any scripts your commands, so before continuing it is recommended to follow the [s5cmd setup](cli.md) instructions to create environment variables of your keys so that you can easily access them. Once you have your variables set up you can create a juicefs bucket with
+It is strongly discouraged, and very inconvenient, to hard code your Kopah keys to any scripts or commands, so before continuing it is recommended to follow the [s5cmd setup](cli.md) instructions to create environment variables of your keys so that you can easily access them. Once you have your variables set up you can create a juicefs bucket with
 
 ```bash
 juicefs format --storage s3 --bucket $S3_ENDPOINT_URL/<bucket_name> --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_KEY_ID sqlite3://<db_name>.db <db_name>
 ```
 
-where \<bucket_name\> and \<db_name\> are the names of your s3 bucket and database file respectively, which can but don't have to be the same name (although its easiest if they are). There are other options for this command, which you can see with `juicefs format --help`, but by default it will create a sqlite database file in the current directory called \<db_name\>.db that is required to read the data in the bucket you created. If you lose the database file then the data in your bucket is essentially lost so it is recommended to back it up somewhere off of Hyak.
+where \<bucket_name\> and \<db_name\> are the names of your s3 bucket and database file respectively, which can but don't have to be the same name (although its easiest if they are). There are other options for this command, which you can see with `juicefs format --help`, but by default it will create a sqlite database file in the current directory called \<db_name\>.db that is required to read the data in the bucket you created.
+
+:::caution
+If you lose the database file then the data in your bucket is essentially lost, so it is recommended to back it up somewhere off of Hyak.
+:::
 
 Now you can mount your juicefs bucket to the current node with
 
@@ -37,7 +41,7 @@ where \<mount_point\> is the path to the directory you want to mount to, and -d 
 juicefs umount <mount_point>
 ```
 
-noticing that it is umount and not unmount, and also being aware that simply closing your terminal won't unmount the bucket if you ran juicefs with the -d flag.
+noticing that it is `umount` and not **unmount**, and also being aware that simply closing your terminal won't unmount the bucket if you ran juicefs with the -d flag.
 
 ## Example Script
 

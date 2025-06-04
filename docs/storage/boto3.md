@@ -3,7 +3,7 @@ id: boto3
 title: Programmatic Usage
 ---
 
-As Kopah has a S3-compliant API, many tools developed for S3 will also work with Kopah. This page documents one such tool, the Python AWS SDK [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), but there are also [AWS SDKs](https://aws.amazon.com/developer/tools/) for many other languages and third party tools. Boto3 provides a programmatic interface for most, if not all, s3/s5cmd options on top of handling all of the behind the scenes to provide efficient network access so you don't have to.
+As Kopah has a S3-compliant API, many tools developed for S3 will also work with Kopah. This page documents one such tool, the Python AWS SDK [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), but there are also [AWS SDKs](https://aws.amazon.com/developer/tools/) for many other languages and third party tools. Boto3 provides a programmatic interface for most, if not all, [s3/s5cmd](cli.md) options on top of handling all of the behind the scenes to provide efficient network access so you don't have to.
 
 :::note
 While boto3 is a powerful tool, its not always the best one for the job. If you are working with commonly formatted data, such as csv files, it may be worth doing some searching to see if there are existing tools designed for that out there already before trying to reinvent the wheel
