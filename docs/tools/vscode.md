@@ -10,8 +10,8 @@ While developing your code with connectivity Hyak is a great usage of our servic
 :::
 
 Here we provide three solutions to connect VS Code to Hyak that will will help limit the possibility that your work would cause system instability on the login node: 
-- [**VS Code via Code-server**](tools/vsc-code-server.md): a Docker container which uses a server to develop and execute your code reducing battery usage. `code-server` handles the VS Code background processes, preventing them from slowing down your local machine.
 - [**(Simplest) VS Code on Open OnDemand via Code-server**](ood/vscode.md): Open OnDemand (OOD) is a web-based portal that provides an integrated, single access point for access to the Klone HPC Cluster. VS Code on OOD is provided through code-server. 
+- [**VS Code via Code-server**](tools/vsc-code-server.md): a Docker container which uses a server to develop and execute your code reducing battery usage. `code-server` handles the VS Code background processes, preventing them from slowing down your local machine.
 - [**VS Code via ProxyJump**](tools/vsc-proxy-jump.md): uses ProxyJump and the `Remote-SSH` VS Code extension to connect to a compute node. This option requires more from your local machine, more set up, and more authentication steps for Windows users. 
 
 #### Additional Considerations
