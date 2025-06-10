@@ -19,10 +19,16 @@ During June's maintenance, we've refreshed the operating system images for both 
 	* Users will need to **re-create their crontabs** one more time after this maintenance 
 	* This is intended to be a **permanent fix**—no more resets in future maintenance 
 	* FYI - *Cron jobs* are recurring scheduled tasks run by the system using each user's `crontab`. 
-	* We recommend `scrontab` for routine operations. [<ins>**Learn more from Slurm**</ins>](https://slurm.schedmd.com/scrontab.html). [<ins>**Learn more from NERSC**</ins>](https://docs.nersc.gov/jobs/workflow/scrontab/).    
+	* We recommend `scrontab` for routine operations. [<ins>**Learn more from Slurm**</ins>](https://slurm.schedmd.com/scrontab.html). [<ins>**Learn more from NERSC**</ins>](https://docs.nersc.gov/jobs/workflow/scrontab/).  
+
+### Action Required: Research Computing Club (stf account) Members 
+To <ins>***keep your access to RCC-supported Hyak accounts***</ins>, please fill out the following form by <ins>***Friday, June 13, 2025***</ins>: 
+
+[<ins>**2025 RCC Usage Check-In Form**</ins>](https://forms.office.com/r/z48tU08YQU)
+
+This short form is required for Student Technology Fee reporting and ensures the RCC can continue offering free computing resources to UW students. It only takes a few minutes, just tell us how you’ve used RCC resources this past year. Thanks for helping us keep RCC resources funded and accessible! 
 
 ### Spotlight: Kopah Object Storage 
-
 Our Kopah S3-compatible storage service is available to all campus researchers and staff. It’s a flexible, scalable storage solution to complement your research computing portfolio.  
 
 If you missed our recent Data Storage Day on May 5, we’ve published the full set of demonstration videos on our [<ins>**YouTube Playlist**</ins>](https://www.youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj). Topics covered and relevant links: 
