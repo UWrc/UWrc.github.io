@@ -50,21 +50,6 @@ export default function board() {
             <div class="avatar avatar--vertical">
               <img
                 class="avatar__photo avatar__photo--xl"
-                src="https://avatars3.githubusercontent.com/u/1252858?s=400&v=4"
-              />
-              <div class="avatar__intro">
-                <h4 class="avatar__name">Nam</h4>
-                <small class="avatar__subtitle">
-                  Director
-                </small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="avatar avatar--vertical">
-              <img
-                class="avatar__photo avatar__photo--xl"
                 src="/img/avatar/xiao_zhu.jpeg"
               />
               <div class="avatar__intro">
