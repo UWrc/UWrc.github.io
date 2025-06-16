@@ -33,21 +33,6 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://avatars3.githubusercontent.com/u/1252858?s=400&v=4"
-          />
-          <div class="avatar__intro">
-            <h4 class="avatar__name">Nam Pho</h4>
-            <small class="avatar__subtitle">
-              HPC Arcitect
-            </small>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="avatar avatar--vertical">
-          <img
-            class="avatar__photo avatar__photo--xl"
             src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
