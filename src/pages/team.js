@@ -18,27 +18,12 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://avatars3.githubusercontent.com/u/1252858?s=400&v=4"
-          />
-          <div class="avatar__intro">
-            <h4 class="avatar__name">Nam</h4>
-            <small class="avatar__subtitle">
-              Director
-            </small>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="avatar avatar--vertical">
-          <img
-            class="avatar__photo avatar__photo--xl"
             src="/img/avatar/xiao_zhu.jpeg"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Xiao</h4>
+            <h4 class="avatar__name">Xiao Zhu</h4>
             <small class="avatar__subtitle">
-              AVP, Research Computing
+              AVP, Research Computing (RC)
             </small>
           </div>
         </div>
@@ -48,12 +33,12 @@ export default function team() {
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="/img/avatar/Sumaiya_Sathar.jpg"
+            src="https://avatars3.githubusercontent.com/u/1252858?s=400&v=4"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Sumaiya</h4>
+            <h4 class="avatar__name">Nam Pho</h4>
             <small class="avatar__subtitle">
-              Technical Product Manager
+              HPC Arcitect
             </small>
           </div>
         </div>
@@ -66,9 +51,24 @@ export default function team() {
             src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Now Hiring</h4>
+            <h4 class="avatar__name">David Cox</h4>
             <small class="avatar__subtitle">
-              HPC Systems Engineer
+              Director, RC Operations
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
+            src="https://avatars.githubusercontent.com/u/22206944?v=4"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">Kristen Finch</h4>
+            <small class="avatar__subtitle">
+              Director, RC Solutions
             </small>
           </div>
         </div>
@@ -89,7 +89,37 @@ export default function team() {
             src="/img/avatar/jfrulla.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Jake</h4>
+            <h4 class="avatar__name">Jake Frulla</h4>
+            <small class="avatar__subtitle">
+              HPC Systems Engineer
+            </small>
+          </div>
+        </div>
+      </div>
+
+          <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
+            src="https://avatars.githubusercontent.com/u/89407740?v=4"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">Michael Wanek</h4>
+            <small class="avatar__subtitle">
+              HPC Systems Engineer
+            </small>
+          </div>
+        </div>
+      </div>
+
+          <div class="col">
+        <div class="avatar avatar--vertical">
+          <img
+            class="avatar__photo avatar__photo--xl"
+            src="https://avatars.githubusercontent.com/u/35117549?v=4"
+          />
+          <div class="avatar__intro">
+            <h4 class="avatar__name">Gabriel Nguyen</h4>
             <small class="avatar__subtitle">
               HPC Systems Engineer
             </small>
@@ -104,24 +134,25 @@ export default function team() {
             src="/img/avatar/avatar_uws_uwit.png"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Nebojsa</h4>
+            <h4 class="avatar__name">Nebojsa Hrmic</h4>
             <small class="avatar__subtitle">
               HPC Storage Engineer
             </small>
           </div>
         </div>
       </div>
+    
 
       <div class="col">
         <div class="avatar avatar--vertical">
           <img
             class="avatar__photo avatar__photo--xl"
-            src="https://avatars.githubusercontent.com/u/22206944?v=4"
+            src="/img/avatar/Sumaiya_Sathar.jpg"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Kristen</h4>
+            <h4 class="avatar__name">Sumaiya Sathar</h4>
             <small class="avatar__subtitle">
-              HPC Staff Scientist
+              Technical Product Manager
             </small>
           </div>
         </div>
@@ -134,7 +165,7 @@ export default function team() {
             src="https://avatars.githubusercontent.com/u/84157030?s=400&v=4"
           />
           <div class="avatar__intro">
-            <h4 class="avatar__name">Kaichen</h4>
+            <h4 class="avatar__name">Kaichen Xie</h4>
             <small class="avatar__subtitle">
               HPC Staff Scientist
             </small>
