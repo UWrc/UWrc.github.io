@@ -8,7 +8,7 @@ title: FAQ
 | Question | Answer |
 | --- | --- |
 | **What is the UW Hyak cluster?** | The UW Hyak cluster is a robust high-performance computing infrastructure available to University of Washington faculty, researchers, students, and affiliates. It offers substantial computational resources for data analysis, simulations, and scientific research. |
-| **How do I access the Hyak cluster?** | Access the Hyak cluster by connecting through SSH using your UW NetID. Once you have a user account, open a Terminal/Windows Powershell/PuTTy window and use the command `ssh your_netid@hyak.washington.edu` to log in. [**Need an account?**](https://hyak.uw.edu/docs/account-creation) |
+| **How do I access the Hyak cluster?** | Access the Hyak cluster by connecting through SSH using your UW NetID. Once you have a user account, open a Terminal/Windows Powershell/PuTTy window and use the command `ssh your_netid@klone.hyak.uw.edu` to log in. [**Need an account?**](https://hyak.uw.edu/docs/account-creation) |
 | **Are there resource limits?** | Yes, each user has resource quotas to ensure fair allocation. Familiarize yourself with your account's limits to make optimal use of the resources. |
 | **Where can I find documentation and support?** | Comprehensive documentation is available on the Hyak cluster website - this website. If you encounter challenges or have queries, reach out to the Hyak support team for assistance by sending an email to help@uw.edu with hyak in the subject line. |
 | **Can I transfer files to and from the cluster?** | Yes, use secure file transfer tools like `scp` (Secure Copy Protocol) or `rsync` to move files between your local machine and the cluster. |
