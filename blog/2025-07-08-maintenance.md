@@ -14,7 +14,6 @@ During June's maintenance, we've refreshed the operating system images for both 
 * **Routine package updates** – images for both the login and compute nodes have been refreshed to incorporate the latest Linux OS security updates and system patches.  
 * **Slurm Upgrade to version 25.05** – Slurm 25.05 introduces encrypted job communication, improved support for complex network topologies, and new features like optional TLS, job start events in Kafka, and better license request handling. While you won’t notice major changes in your day-to-day workflow, this upgrade improves security, enables more flexible job scheduling, and lays the groundwork for new features in the future. [<ins>**Learn more from Slurm's release notes**</ins>](https://slurm.schedmd.com/release_notes.html). 
 * **SSHD changes** – We’ve updated some behind-the-scenes SSH settings to improve login handling. These changes help ensure account access stays consistent across Klone and Tillicum, but you won’t need to do anything differently when connecting. 
-* **Jumbo Frames** – We’ve enabled jumbo frames on Klone’s Data Transfer Node (DTN). This improves performance for large data transfers while maintaining secure and monitored connections — no user action is needed, but transfers to and from Klone may be faster in some cases. 
 
 ### New Training Videos
 This month we uploaded several training videos to our [<ins>**YouTube Playlist**</ins>](https://www.youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj) that may be of interest: 
