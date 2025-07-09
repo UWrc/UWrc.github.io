@@ -10,7 +10,7 @@ OOD can be used to manage and schedule jobs on the `klone` cluster. Specifically
 
 # Launch an Interactive Session
 
-Offered applications are available from the `Interactive Apps` tab. Clicking on an application will open a form where you can specify the resouces you need for your job. If you're unfamiliar with the concepts of Accounts and Partitions, check out a brief [overview](https://hyak.uw.edu/docs/hyak101/basics/jobs#accounts-and-partitions).
+Offered applications are available from the `Interactive Apps` tab. Clicking on an application will open a form where you can specify the resouces you need for your job. If you're unfamiliar with the concepts of Accounts and Partitions, check out a brief [<ins>**overview**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#accounts-and-partitions).
 
 
 

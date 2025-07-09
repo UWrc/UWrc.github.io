@@ -11,7 +11,7 @@ Much of the Hyak documentation is organized into bite sized instructional guides
 
 :::tip Video tutorial available
 
-On August 7, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/WqGCJMQhiC0)
+On August 7, 2024, we delivered this tutorial live on Zoom. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://youtu.be/WqGCJMQhiC0)
 :::
 
 #### Learning Objectives:
@@ -28,16 +28,16 @@ On August 7, 2024, we delivered this tutorial live on Zoom. [**Follow this link 
 
 Tutorial: Hyak Basics
 
-* [**Syllabus**](https://hyak.uw.edu/docs/hyak101/basics/syllabus)
-* [**Logging In**](https://hyak.uw.edu/docs/hyak101/basics/login)
-* [**Navigating Klone**](https://hyak.uw.edu/docs/hyak101/basics/system)
-* [**Basic Linux Commands**](https://hyak.uw.edu/docs/hyak101/basics/linux)
-* [**Basic Linux Commands II**](https://hyak.uw.edu/docs/hyak101/basics/linux-2)
+* [<ins>**Syllabus**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus)
+* [<ins>**Logging In**</ins>](https://hyak.uw.edu/docs/hyak101/basics/login)
+* [<ins>**Navigating Klone**</ins>](https://hyak.uw.edu/docs/hyak101/basics/system)
+* [<ins>**Basic Linux Commands**</ins>](https://hyak.uw.edu/docs/hyak101/basics/linux)
+* [<ins>**Basic Linux Commands II**</ins>](https://hyak.uw.edu/docs/hyak101/basics/linux-2)
 
 ### Extra Practice
 
-We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial.
+We have curated a list of [<ins>**Additional Resources**</ins>](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial.
 
 :::info Acknowledgements
-Some of the data and exercises for this tutorial were sampled from [**The Unix Shell by Software Carpentry**](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most Hyak users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
+Some of the data and exercises for this tutorial were sampled from [<ins>**The Unix Shell by Software Carpentry**</ins>](https://swcarpentry.github.io/shell-novice/index.html), but have been tailored to fit most Hyak users. Sampled materials are under the Copyright of Software Carpentry and are made available under the Creative Commons Attribution license (CC BY 4.0).
 :::

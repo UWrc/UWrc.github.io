@@ -5,10 +5,10 @@ title: Modules with Containers
 
 Modules can also be setup in such a way they will utilize apptainer containers. This can be useful for codes which prerequisits are difficult to meet if not sudo user.
 
-An example is given here for the application [ffmpeg](https://ffmpeg.org/) but it can be easily modified to run with whatever other container from any library. This code is used to produce high quality video from simulation files obtained with ParaView.
-The ufficial guide to compile on centos is given [here](https://trac.ffmpeg.org/wiki/CompilationGuide/Centos/). It can be noticed right away how complex such compilation would be to simply be able to run the ffmpeg executable as many prerequisites are needed (nasm, yasm, etc...).
+An example is given here for the application [<ins>**ffmpeg**</ins>](https://ffmpeg.org/) but it can be easily modified to run with whatever other container from any library. This code is used to produce high quality video from simulation files obtained with ParaView.
+The ufficial guide to compile on centos is given [<ins>**here**</ins>](https://trac.ffmpeg.org/wiki/CompilationGuide/Centos/). It can be noticed right away how complex such compilation would be to simply be able to run the ffmpeg executable as many prerequisites are needed (nasm, yasm, etc...).
 
-By using a docker container [ffmpeg-docker](https://hub.docker.com/r/linuxserver/ffmpeg) this task can be easily done.
+By using a docker container [<ins>**ffmpeg-docker**</ins>](https://hub.docker.com/r/linuxserver/ffmpeg) this task can be easily done.
 However, setting un a module for everybody to use involving containers necessitates a few extra steps.
 
 ## `ffmpeg` Example Usage

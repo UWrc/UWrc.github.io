@@ -12,21 +12,21 @@ tags: [icml, ml, machine learning, papers]
 	<img src="/img/blog/icml-logo.png" style={{background: 'white'}} alt="International Conference on Machine Learning" width="40%"/>
 </center>
 
- We were delighted to see so many Huskies in attendance at the Fortieth [International Conference on Machine Learning](https://icml.cc/), which took place at the end of July. The researchers using Hyak are doing incredible work, and we wanted to say congratulations to those who had their papers accepted:
+ We were delighted to see so many Huskies in attendance at the Fortieth [<ins>**International Conference on Machine Learning**</ins>](https://icml.cc/), which took place at the end of July. The researchers using Hyak are doing incredible work, and we wanted to say congratulations to those who had their papers accepted:
 
-- Ian Connick Covert, Wei Qiu, Mingyu Lu, Na Yoon Kim, Nathan J White, Su-In Lee: [Learning to Maximize Mutual Information for Dynamic Feature Selection](https://proceedings.mlr.press/v202/covert23a.html)
+- Ian Connick Covert, Wei Qiu, Mingyu Lu, Na Yoon Kim, Nathan J White, Su-In Lee: [<ins>**Learning to Maximize Mutual Information for Dynamic Feature Selection**</ins>](https://proceedings.mlr.press/v202/covert23a.html)
 
-- Tim Dettmers, Luke Zettlemoyer: [The case for 4-bit precision: k-bit Inference Scaling Laws](https://proceedings.mlr.press/v202/dettmers23a.html)
+- Tim Dettmers, Luke Zettlemoyer: [<ins>**The case for 4-bit precision: k-bit Inference Scaling Laws**</ins>](https://proceedings.mlr.press/v202/dettmers23a.html)
 
-- Runlong Zhou, Zhang Zihan, Simon Shaolei Du: [Sharp Variance-Dependent Bounds in Reinforcement Learning: Best of Both Worlds in Stochastic and Deterministic Environments](https://proceedings.mlr.press/v202/zhou23t.html)
+- Runlong Zhou, Zhang Zihan, Simon Shaolei Du: [<ins>**Sharp Variance-Dependent Bounds in Reinforcement Learning: Best of Both Worlds in Stochastic and Deterministic Environments**</ins>](https://proceedings.mlr.press/v202/zhou23t.html)
 
-- Haotian Ye, Xiaoyu Chen, Liwei Wang, Simon Shaolei Du: [On the Power of Pre-training for Generalization in RL: Provable Benefits and Hardness](https://proceedings.mlr.press/v202/ye23a.html)
+- Haotian Ye, Xiaoyu Chen, Liwei Wang, Simon Shaolei Du: [<ins>**On the Power of Pre-training for Generalization in RL: Provable Benefits and Hardness**</ins>](https://proceedings.mlr.press/v202/ye23a.html)
 
-- Jikai Jin, Zhiyuan Li, Kaifeng Lyu, Simon Shaolei Du, Jason D. Lee: [Understanding Incremental Learning of Gradient Descent: A Fine-grained Analysis of Matrix Sensing](https://proceedings.mlr.press/v202/jin23a.html)
+- Jikai Jin, Zhiyuan Li, Kaifeng Lyu, Simon Shaolei Du, Jason D. Lee: [<ins>**Understanding Incremental Learning of Gradient Descent: A Fine-grained Analysis of Matrix Sensing**</ins>](https://proceedings.mlr.press/v202/jin23a.html)
 
-- Runlong Zhou, Ruosong Wang, Simon Shaolei Du: [Horizon-Free and Variance-Dependent Reinforcement Learning for Latent Markov Decision Processes](https://proceedings.mlr.press/v202/zhou23l.html)
+- Runlong Zhou, Ruosong Wang, Simon Shaolei Du: [<ins>**Horizon-Free and Variance-Dependent Reinforcement Learning for Latent Markov Decision Processes**</ins>](https://proceedings.mlr.press/v202/zhou23l.html)
 
-- Yiping Wang, Yifang Chen, Kevin Jamieson, Simon Shaolei Du: [Improved Active Multi-Task Representation Learning via Lasso](https://proceedings.mlr.press/v202/wang23b.html)
+- Yiping Wang, Yifang Chen, Kevin Jamieson, Simon Shaolei Du: [<ins>**Improved Active Multi-Task Representation Learning via Lasso**</ins>](https://proceedings.mlr.press/v202/wang23b.html)
 
 Also, special congratulations for those with accepted shadow papers:
 

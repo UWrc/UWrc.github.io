@@ -20,7 +20,7 @@ If you have a GPU partition, you can start an interactive session on a GPU node 
 salloc --account=account --partition=gpu-rtx6k --gpus=1 --mem=10G --time=2:00:00
 # Replace the account and partition flags to match your account and partitions.
 ```
-If you are unsure if your accounts have GPU partitions, use the `hyakalloc` command to see all of your available resources. A detailed walkthrough for requesting a GPU job can be found **[HERE](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-a-gpu-partition)**.
+If you are unsure if your accounts have GPU partitions, use the `hyakalloc` command to see all of your available resources. A detailed walkthrough for requesting a GPU job can be found [<ins>**HERE**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-a-gpu-partition).
 
 
 :::note GPU Types on Hyak

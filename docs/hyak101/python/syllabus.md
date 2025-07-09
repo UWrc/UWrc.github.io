@@ -6,11 +6,11 @@ title: Syllabus
 :::warning
 This is an advanced tutorial for setting up Jupyter Notebooks via VS Code using a container and a ProxyJump. The tutorial is a good demonstration of many Hyak fundamental skills, but there are other streamlined ways to use Jupyter and VS Code. Use the following links to navigate to those docs: 
 
-[**Jupyter via Open OnDemand**](https://hyak.uw.edu/docs/ood/jupyter)
+[<ins>**Jupyter via Open OnDemand**</ins>](https://hyak.uw.edu/docs/ood/jupyter)
 
-[**Jupyter via SSH port forwarding**](https://hyak.uw.edu/docs/tools/jupyter)
+[<ins>**Jupyter via SSH port forwarding**</ins>](https://hyak.uw.edu/docs/tools/jupyter)
 
-[**Using VS Code on Hyak**](https://hyak.uw.edu/docs/tools/vscode)
+[<ins>**Using VS Code on Hyak**</ins>](https://hyak.uw.edu/docs/tools/vscode)
 
 :::
 
@@ -21,11 +21,11 @@ This is an advanced tutorial for setting up Jupyter Notebooks via VS Code using 
 The Hyak documentation already includes many of the instructions in this guide, but they're atomic. Instead of individual instruction sets, which aren't designed with each other in mind, everything in this guide is connected - python environments, jupyter notebook server, and connections to other external software. That means, for example, the SSH customizations *in this guide* will apply only to the container runscripts we build *in this guide*; to use these elements for other workflows, you will need to customize them to fit your needs. 
 
 #### Our second goal is to eliminate the most common problem on Hyak: conda's decimation of file quotas.
-The [**conda**](https://docs.conda.io/en/latest/) ecosystem is a powerful resource for researchers, and unsurprisingly
+The [<ins>**conda**</ins>](https://docs.conda.io/en/latest/) ecosystem is a powerful resource for researchers, and unsurprisingly
 it is among the most commonly-used pieces of software on the cluster. One of the things conda does—whether you're building
-lean with [**Miniconda**](https://docs.conda.io/en/latest/miniconda.html) or with [**Anaconda**](https://www.anaconda.com/)—is create tens of thousands of files.
+lean with [<ins>**Miniconda**</ins>](https://docs.conda.io/en/latest/miniconda.html) or with [<ins>**Anaconda**</ins>](https://www.anaconda.com/)—is create tens of thousands of files.
 
-Due to the way GPFS (the technology behind our shared filesystems) handles [**inodes**](https://en.wikipedia.org/wiki/Inode), we have cautious quotas on the number of files
+Due to the way GPFS (the technology behind our shared filesystems) handles [<ins>**inodes**</ins>](https://en.wikipedia.org/wiki/Inode), we have cautious quotas on the number of files
 individuals and groups are allowed to create. Home directories are limited to 256,000 files, which may seem large, but almost
 every day we answer a ticket where conda has busted a quota. Due to the integral nature of home directories on Linux, this
 means most things just won't work until the user clears up some files.
@@ -40,7 +40,7 @@ the simplest way, most of the time, is to use a container. Here, we're going to 
 
 As you go through the tutorial look for tips like this one. In these boxes, we will include bits of information you might be able to use to customize this tutorial when you feel comfortable. 
 
-On that note, your first PRO TIP: Untangling tech jargon is tough, and there's no shortage of essays explaining containers and "container-ization" ([**See Additional Resources**](https://hyak.uw.edu/docs/hyak101/python/setup#additional-resources)). We encourage you to educate yourself about containers and other relevant topics as additional learning to accompany this tutorial. 
+On that note, your first PRO TIP: Untangling tech jargon is tough, and there's no shortage of essays explaining containers and "container-ization" ([<ins>**See Additional Resources**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#additional-resources)). We encourage you to educate yourself about containers and other relevant topics as additional learning to accompany this tutorial. 
 
 :::
 
@@ -62,14 +62,14 @@ We are going to create a general-purpose, customizable Apptainer container to us
 Be advised that we have broken the tutorial into separate instructions for Mac/Linux and Windows users. The same content is covered, but with different steps. 
 :::
 
-1. [**Getting Started**](https://hyak.uw.edu/docs/hyak101/python/setup)
-1. [**Building a Container**](https://hyak.uw.edu/docs/hyak101/python/container)
-1. [**Flexible Connections**](https://hyak.uw.edu/docs/hyak101/python/ssh)
-1. [**Working in the Overlay**](https://hyak.uw.edu/docs/hyak101/python/overlay)
-1. [**Slurm Job & Port Forwarding**](https://hyak.uw.edu/docs/hyak101/python/slurm-forward)
-1. [**Start Up Sequence**](https://hyak.uw.edu/docs/hyak101/python/start-up-seq)
-1. [**Jupyter in VS Code**](https://hyak.uw.edu/docs/hyak101/python/connect-vsc)
-1. [**Interactive Mode**](https://hyak.uw.edu/docs/hyak101/python/interactive)
+1. [<ins>**Getting Started**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup)
+1. [<ins>**Building a Container**</ins>](https://hyak.uw.edu/docs/hyak101/python/container)
+1. [<ins>**Flexible Connections**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh)
+1. [<ins>**Working in the Overlay**</ins>](https://hyak.uw.edu/docs/hyak101/python/overlay)
+1. [<ins>**Slurm Job & Port Forwarding**</ins>](https://hyak.uw.edu/docs/hyak101/python/slurm-forward)
+1. [<ins>**Start Up Sequence**</ins>](https://hyak.uw.edu/docs/hyak101/python/start-up-seq)
+1. [<ins>**Jupyter in VS Code**</ins>](https://hyak.uw.edu/docs/hyak101/python/connect-vsc)
+1. [<ins>**Interactive Mode**</ins>](https://hyak.uw.edu/docs/hyak101/python/interactive)
 
 
 

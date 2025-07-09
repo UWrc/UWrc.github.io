@@ -9,7 +9,7 @@ title: VS Code via Code-Server
 
 2. Uses a server to develop and execute your code reducing battery usage. `code-server` handles the VSCode background processes, preventing them from slowing down your local machine. 
 
-3. Provides a simpler alternative to [**VS Code via ProxyJump**](tools/vsc-proxy-jump.md), which requires a lot of setup and for Windows users requires 2-factor authentication to login and change directory. 
+3. Provides a simpler alternative to [<ins>**VS Code via ProxyJump**</ins>](tools/vsc-proxy-jump.md), which requires a lot of setup and for Windows users requires 2-factor authentication to login and change directory. 
 
 4. Involves steps: making a symbolic link to the container stored on hyak or pulling the docker container yourself, launching a batch job to start the container on a compute node, opening a SSH tunnel to the compute node where the container is running, and securely accessing VS Code through your browser window. 
 
@@ -33,7 +33,7 @@ ln -s /mmfs1/sw/containers/code-server/code-server_4.89.0-39.sif code-server_4.8
 # rather than specifying the entire path to our version of the container.
 ```
 
-This will link to code-server container version 4.89.0-39. There are other versions of the container you might consider: [**code-server tags**](https://hub.docker.com/r/codercom/code-server/tags), and below, we include optional instructions for pulling the latest version of code-server. 
+This will link to code-server container version 4.89.0-39. There are other versions of the container you might consider: [<ins>**code-server tags**</ins>](https://hub.docker.com/r/codercom/code-server/tags), and below, we include optional instructions for pulling the latest version of code-server. 
 
 :::tip Optional: pull the container yourself
 
@@ -45,7 +45,7 @@ Start an interactive job to pull the cointainer with the apptainer module. Here 
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=code-server --time=2:00:00
 ```
 
-Pull the container from DockerHub. This will take a few minutes to complete. When complete, you will have a container image called  `code-server_lastest.sif`. There are other versions of the container you might consider rather than the latest version: [**code-server tags**](https://hub.docker.com/r/codercom/code-server/tags).
+Pull the container from DockerHub. This will take a few minutes to complete. When complete, you will have a container image called  `code-server_lastest.sif`. There are other versions of the container you might consider rather than the latest version: [<ins>**code-server tags**</ins>](https://hub.docker.com/r/codercom/code-server/tags).
 ```js
 apptainer pull docker://codercom/code-server
 ```
@@ -139,7 +139,7 @@ Do not use the code-server password to open the ssh tunnel. After your ssh comma
 
 Open a new browser window to **http://localhost:8080** and provide **the password from the output file** (`code-server.job.17440706` and `+WwYzgh7YH/yHzUWNWNS` in this example).
 
-![INput password from output file.](/img/docs/vscode/vsc-pw.png 'Provide Password')
+![Input password from output file.](/img/docs/vscode/vsc-pw.png 'Provide Password')
 
 Extensions can be installed through the browser and will be stored in `~/.local/share/code-server/extensions` in your home directory.
 
@@ -159,12 +159,12 @@ If you have trouble with this method, please report errors in an email to **help
 
 ### Background Reading
 
-[**Coder Home**](https://coder.com/)
+[<ins>**Coder Home**</ins>](https://coder.com/)
 
-[**Code-server github repo**](https://github.com/coder/code-server)
+[<ins>**Code-server github repo**</ins>](https://github.com/coder/code-server)
 
-[**Code-server documentation**](https://coder.com/docs/code-server/latest)
+[<ins>**Code-server documentation**</ins>](https://coder.com/docs/code-server/latest)
 
-[**DockerHub page**](https://hub.docker.com/r/codercom/code-server)
+[<ins>**DockerHub page**</ins>](https://hub.docker.com/r/codercom/code-server)
 
-[**Video explaining the benefits of Code-server**](https://www.youtube.com/watch?v=h17bHCCEcvI&pp=ygULY29kZS1zZXJ2ZXI%3D)
+[<ins>**Video explaining the benefits of Code-server**</ins>](https://www.youtube.com/watch?v=h17bHCCEcvI&pp=ygULY29kZS1zZXJ2ZXI%3D)

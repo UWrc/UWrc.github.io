@@ -32,6 +32,6 @@ The `klone` login node (i.e. `klone-login01` or `klone.hyak.uw.edu`) is a resour
 
 :::tip
 
-If your command would run a little slow on an inexpensive laptop from 2002, you shouldn't run it on the login node! Instead, request an [interactive job](https://hyak.uw.edu/docs/compute/scheduling-jobs#interactive-jobs-single-node) on a compute node.
+If your command would run a little slow on an inexpensive laptop from 2002, you shouldn't run it on the login node! Instead, request an [<ins>**interactive job**</ins>](https://hyak.uw.edu/docs/compute/scheduling-jobs#interactive-jobs-single-node) on a compute node.
 
 :::

@@ -4,7 +4,7 @@ title: Markdown Guide
 sidebar_label: Markdown Guide
 ---
 
-You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
+You can write content using [<ins>**GitHub-flavored Markdown syntax**</ins>](https://github.github.com/gfm/).
 
 ## Markdown Syntax
 
@@ -99,13 +99,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ## Links
 
-[I'm an inline-style link](https://www.google.com)
+[<ins>**I'm an inline-style link**</ins>](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[<ins>**I'm an inline-style link with title**</ins>](https://www.google.com "Google's Homepage")
 
 [I'm a reference-style link][arbitrary case-insensitive reference text]
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[<ins>**I'm a relative reference to a repository file**</ins>](../blob/master/LICENSE)
 
 [You can use numbers for reference-style link definitions][1]
 
@@ -125,7 +125,7 @@ Some text to show that the reference links can follow later.
 
 Here's our logo (hover to see the title text):
 
-Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
+Inline-style: ![<ins>**alt text**</ins>](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
 
 Reference-style: ![alt text][logo]
 

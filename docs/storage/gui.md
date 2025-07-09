@@ -9,21 +9,21 @@ On this page we will provide options to interact with your data on Kopah via Gra
 
 As of Spring 2025, we’re excited to announce that Globus has been added to Hyak `klone` and Kopah S3. Globus makes it easy to transfer large datasets reliably and securely between systems, whether across campus or around the world. With features like automated transfers, fault tolerance, and a simple web interface, it’s a powerful tool for streamlining data movement in research workflows.
 
-Globus public sharing is available with [**Kopah S3 storage**](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2), making it a dynamic compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration.
+Globus public sharing is available with [<ins>**Kopah S3 storage**</ins>](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2), making it a dynamic compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration.
 
 :::warning important: Globus Mapping Required
 To use Globus with Kopah S3 storage, ***at least one username must be mapped to the storage account***. This mapping connects your Globus identity to the storage system and must be set up by our staff. Contact us to get started—it's a quick, one-time step.
 
 **Request Globus mapping by emailing help@uw.edu with "Kopah + Globus" in the subject line.**
 
-Kopah storage accounts can be requested using our [**Intake Form and Cost Calculator**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6). Kopah 1-month trial accounts are available - [**Try Kopah**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f).
+Kopah storage accounts can be requested using our [<ins>**Intake Form and Cost Calculator**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6). Kopah 1-month trial accounts are available - [<ins>**Try Kopah**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f).
 :::
 
 ### Set Up
 
 Logging into Globus is straight forward:
 
-* Go to [**globus.org**](https://www.globus.org/) and "LOG IN" with University of Washington. Sign in will include Duo 2-Factor Authentication. 
+* Go to [<ins>**globus.org**</ins>](https://www.globus.org/) and "LOG IN" with University of Washington. Sign in will include Duo 2-Factor Authentication. 
 * Using the **File Manager - Collection Search** tab look for "UW Hyak Kopah".
 * Once you click on the "UW Hyak Kopah" collection, be sure to Bookmark the collection so that it appears in the **Bookmarks** tab for future searches and operations as shown below. 
 
@@ -37,10 +37,10 @@ Logging into Globus is straight forward:
 
 Setting up **Globus Connect Personal** on your local computer lets you create a personal endpoint, making it easy to transfer files between your computer and other Globus collections—including our cluster—using a simple, secure interface.
 
-* [**Install Globus Connect Personal**](https://www.globus.org/globus-connect-personal) for your operating system. 
+* [<ins>**Install Globus Connect Personal**</ins>](https://www.globus.org/globus-connect-personal) for your operating system. 
 
 :::tip Video tutorial available
-[**Video guide**](https://www.youtube.com/watch?v=bpnVcAN99WY) from the Globus Team. 
+[<ins>**Video guide**</ins>](https://www.youtube.com/watch?v=bpnVcAN99WY) from the Globus Team. 
 
 *Note: the Endpoints Menu Tool appears to be deprecated and now "Endpoint" and "Collection" are synonymous. Your personal endpoint can be found by searching Collections.*
 :::
@@ -97,19 +97,19 @@ In Globus, each bucket must be turned into its own collection to enable sharing.
 Globus is a great tools and we will continue to bring you tips and tricks for using it. 
 
 Learn More: 
-* Please explore Globus' extensive [**user documentation**](https://docs.globus.org/?_gl=1*s0ry7u*_ga*MTE2MzI4NzMxNi4xNzQyMzQxMTg3*_ga_7ZB89HGG0P*MTc0NDA3MjY1Ny4xNy4xLjE3NDQwNzI2NTcuMC4wLjA.) 
-* Including [**video tutorials**](https://www.youtube.com/@GlobusOnline/featured). 
-    * We found [**Introduction to Globus for Researchers and New Users**](https://www.youtube.com/watch?v=-j7Mp3FN1zo&list=PLLCSx-IFoBeu2F-HF-DMoc5_AUsvYft8c&index=2) informative. 
+* Please explore Globus' extensive [<ins>**user documentation**</ins>](https://docs.globus.org/?_gl=1*s0ry7u*_ga*MTE2MzI4NzMxNi4xNzQyMzQxMTg3*_ga_7ZB89HGG0P*MTc0NDA3MjY1Ny4xNy4xLjE3NDQwNzI2NTcuMC4wLjA.) 
+* Including [<ins>**video tutorials**</ins>](https://www.youtube.com/@GlobusOnline/featured). 
+    * We found [<ins>**Introduction to Globus for Researchers and New Users**</ins>](https://www.youtube.com/watch?v=-j7Mp3FN1zo&list=PLLCSx-IFoBeu2F-HF-DMoc5_AUsvYft8c&index=2) informative. 
 
 ## Cyberduck
 
 Cyberduck is an open-source client for managing and transferring files to various cloud storage services and protocols, including FTP, SFTP, and S3. It offers a simple, intuitive interface that allows users to easily upload, download, and organize their files. Cyberduck is available for both Windows and macOS, making it a versatile tool for seamless file management across different platforms.
 
-To get started with Cyberduck, install the software from the [**developer's website**](https://cyberduck.io/download/) on your local computer.
+To get started with Cyberduck, install the software from the [<ins>**developer's website**</ins>](https://cyberduck.io/download/) on your local computer.
 
 Steps for connecting to Kopah:
 
-1. For ease of use, a pre-configured connection profile for Kopah is available. [**Click this link to Download the profile**](/files/kopah.cyberduckprofile). After the file is finished downloading, change the filename to `kopah.cyberduckprofile`. You may decide to move this file from your Downloads directory and store it in a more peranent location. Once the file is in its final location, double-click it within a file explorer it will open in Cyberduck.
+1. For ease of use, a pre-configured connection profile for Kopah is available. [<ins>**Click this link to Download the profile**</ins>](/files/kopah.cyberduckprofile). After the file is finished downloading, change the filename to `kopah.cyberduckprofile`. You may decide to move this file from your Downloads directory and store it in a more peranent location. Once the file is in its final location, double-click it within a file explorer it will open in Cyberduck.
 
 
 1. Open a new Cyberduck window and locate the **Open Connection** Icon.
@@ -121,10 +121,10 @@ Steps for connecting to Kopah:
 
 3. Once that is complete, Kopah S3 will appear on your Cyberduck bookmarks or server list. **Connect** by double clicking on the **Kopah S3** bookmark. 
 
-![](/img/docs/kopah/cyberduck_bookmarks.png 'Cyberduck bookmarks or list of servers')
+![Cyberduck bookmarks or list of servers](/img/docs/kopah/cyberduck_bookmarks.png 'Cyberduck bookmarks or list of servers')
 
 4. You can now interact with Kopah using the GUI! Buckets can be created by right clicking and selecting **New Folder...**. Objects can be added to bucket by ***dragging and dropping*** files and directories into the buckets. 
 
-![](/img/docs/kopah/cyberduck_buckets.png 'Buckets')
+![Buckets](/img/docs/kopah/cyberduck_buckets.png 'Buckets')
 
 In the example above there are two buckets, `bucket1` and `bucket2`, each with one file.

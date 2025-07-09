@@ -43,7 +43,7 @@ We'll start this section of the tutorial by demonstrating how to alter and rebui
 
 ### Pulling Ubuntu
 
-Start by opening up [**Docker Hub**](https://hub.docker.com/) and searching for Ubuntu. We will pull the latest version of Ubuntu with the following command:
+Start by opening up [<ins>**Docker Hub**</ins>](https://hub.docker.com/) and searching for Ubuntu. We will pull the latest version of Ubuntu with the following command:
 
 ```js
 apptainer pull docker://ubuntu
@@ -307,7 +307,7 @@ git version 2.43.0
 
 Instead of pulling a container image from the internet to build your custom container, you can use a local image to build your container. This can be useful to continue customizing your containers by continuing to build upon them and installing additional software for your project.
 
-If you followed the previous section of the tutorial on [**Pulling Containers**](https://hyak.uw.edu/docs/hyak101/containers/demonstration), you should have the `python_3.9.20-slim-bullseye.sif` container. In this section, we will install TensorFlow using Python that is installed inside `python_3.9.20-slim-bullseye.sif`. Start by creating a new definition file.
+If you followed the previous section of the tutorial on [<ins>**Pulling Containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/demonstration), you should have the `python_3.9.20-slim-bullseye.sif` container. In this section, we will install TensorFlow using Python that is installed inside `python_3.9.20-slim-bullseye.sif`. Start by creating a new definition file.
 
 ```js
 nano tf-python3.def

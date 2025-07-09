@@ -5,7 +5,7 @@ title: Cyberduck
 
 Cyberduck is an open-source client for managing and transferring files to various cloud storage services and protocols, including FTP, SFTP, and S3. It offers a simple, intuitive interface that allows users to easily upload, download, and organize their files. Cyberduck is available for both Windows and macOS, making it a versatile tool for seamless file management across different platforms.
 
-1. To use Cyberduck, you will need to download it on your local computer. **[Download Cyberduck Here](https://cyberduck.io/download/)**. Once it has downloaded, open Cyberduck in a file explorer and open a connection.
+1. To use Cyberduck, you will need to download it on your local computer. [<ins>**Download Cyberduck Here**</ins>](https://cyberduck.io/download/). Once it has downloaded, open Cyberduck in a file explorer and open a connection.
 
 <img src="/img/docs/cyberduck/1_open_connection.png" alt = "Open Connection" width="800" height="600" /> 
 
@@ -25,7 +25,7 @@ Cyberduck is an open-source client for managing and transferring files to variou
     <img src="/img/docs/cyberduck/5_DUO_2fa.png" alt = "DUO 2fa" width="300" height="420"  /> 
 </p>
 
-5. After completing the two-factor authorization, you should be able to see all of your files located in your home directory on Hyak. You can navigate between directories using this visual interface. With Cyberduck, you can "drag and drop" files from your local computer to Klone. Each file transferred requires 2 Factor Authentication with Duo, so we recommend moving all the files you wish to transfer first to a directory on your local computer and transfer them all with one Duo step. For large files, [**compression may be helpful**](https://hyak.uw.edu/docs/storage/transfer#for-large-files-compression-prior-to-transfer). 
+5. After completing the two-factor authorization, you should be able to see all of your files located in your home directory on Hyak. You can navigate between directories using this visual interface. With Cyberduck, you can "drag and drop" files from your local computer to Klone. Each file transferred requires 2 Factor Authentication with Duo, so we recommend moving all the files you wish to transfer first to a directory on your local computer and transfer them all with one Duo step. For large files, [<ins>**compression may be helpful**</ins>](https://hyak.uw.edu/docs/storage/transfer#for-large-files-compression-prior-to-transfer). 
 
 <img src="/img/docs/cyberduck/6_home_dir.png" alt = "Home Directory" width="800" height="600" /> 
 

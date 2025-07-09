@@ -8,14 +8,14 @@ As of Spring 2025, we’re excited to announce that Globus has been added to Hya
 :::caution `klone` sharing not yet enabled
 This service is still new to our environment, and we’re actively working to understand how Globus integrates with our current and future security posture. As a result, Globus public sharing is not yet enabled on `klone`, but we’ll provide updates as we continue evaluating and expanding its capabilities.
 
-Globus public sharing is available with [**Kopah S3 storage**](https://hyak.uw.edu/docs/storage/gui#globus), which we recommend as a compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration. 
+Globus public sharing is available with [<ins>**Kopah S3 storage**</ins>](https://hyak.uw.edu/docs/storage/gui#globus), which we recommend as a compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration. 
 :::
 
 ### Getting Started with Globus
 
 Logging into Globus is straight forward:
 
-* Go to [**globus.org**](https://www.globus.org/) and "LOG IN" with University of Washington. Sign in will include Duo 2-Factor Authentication. 
+* Go to [<ins>**globus.org**</ins>](https://www.globus.org/) and "LOG IN" with University of Washington. Sign in will include Duo 2-Factor Authentication. 
 * Using the **File Manager - Collection Search** tab look for "UW Hyak Klone" for `/gscratch/`
 * Once you click on the "UW Hyak Klone" collection, be sure to Bookmark the collection so that it appears in the **Bookmarks** tab for future searches and operations as shown below. 
 
@@ -29,10 +29,10 @@ Logging into Globus is straight forward:
 
 Setting up **Globus Connect Personal** on your local computer lets you create a personal endpoint, making it easy to transfer files between your computer and other Globus collections—including our cluster—using a simple, secure interface.
 
-* [**Install Globus Connect Personal**](https://www.globus.org/globus-connect-personal) for your operating system. 
+* [<ins>**Install Globus Connect Personal**</ins>](https://www.globus.org/globus-connect-personal) for your operating system. 
 
 :::tip Video tutorial available
-[**Video guide**](https://www.youtube.com/watch?v=bpnVcAN99WY) from the Globus Team. 
+[<ins>**Video guide**</ins>](https://www.youtube.com/watch?v=bpnVcAN99WY) from the Globus Team. 
 
 *Note: the Endpoints Menu Tool appears to be deprecated and now "Endpoint" and "Collection" are synonymous. Your personal endpoint can be found by searching Collections.*
 :::
@@ -58,6 +58,6 @@ Globus offers many options for transferring data, shown below. Options include s
 Globus is a great tools and we will continue to bring you tips and tricks for using it. 
 
 Learn More: 
-* Please explore Globus' extensive [**user documentation**](https://docs.globus.org/?_gl=1*s0ry7u*_ga*MTE2MzI4NzMxNi4xNzQyMzQxMTg3*_ga_7ZB89HGG0P*MTc0NDA3MjY1Ny4xNy4xLjE3NDQwNzI2NTcuMC4wLjA.) 
-* Including [**video tutorials**](https://www.youtube.com/@GlobusOnline/featured). 
-    * We found [**Introduction to Globus for Researchers and New Users**](https://www.youtube.com/watch?v=-j7Mp3FN1zo&list=PLLCSx-IFoBeu2F-HF-DMoc5_AUsvYft8c&index=2) informative. 
+* Please explore Globus' extensive [<ins>**user documentation**</ins>](https://docs.globus.org/?_gl=1*s0ry7u*_ga*MTE2MzI4NzMxNi4xNzQyMzQxMTg3*_ga_7ZB89HGG0P*MTc0NDA3MjY1Ny4xNy4xLjE3NDQwNzI2NTcuMC4wLjA.) 
+* Including [<ins>**video tutorials**</ins>](https://www.youtube.com/@GlobusOnline/featured). 
+    * We found [<ins>**Introduction to Globus for Researchers and New Users**</ins>](https://www.youtube.com/watch?v=-j7Mp3FN1zo&list=PLLCSx-IFoBeu2F-HF-DMoc5_AUsvYft8c&index=2) informative. 

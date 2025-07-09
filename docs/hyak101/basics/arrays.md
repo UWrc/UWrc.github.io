@@ -11,7 +11,7 @@ In HPC, an **"embarrassingly parallel" problem** is like this task. It's a big j
 
 ### Array Jobs
 
-It can be useful to run an array job when you want to run a command multiple times with different parameters or execute the same command on multiple files. This is a common technique for testing different configurations in a simulation. Array jobs are also useful in situations where you want to run the same analysis on different datasets. Let's run an array job with  `loop_array.slurm` located in the basics directory. [**Click here to return to the Set Up steps**](https://hyak.uw.edu/docs/hyak101/basics/jobs#set-up) in the previous section if you can't find this script.
+It can be useful to run an array job when you want to run a command multiple times with different parameters or execute the same command on multiple files. This is a common technique for testing different configurations in a simulation. Array jobs are also useful in situations where you want to run the same analysis on different datasets. Let's run an array job with  `loop_array.slurm` located in the basics directory. [<ins>**Click here to return to the Set Up steps**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#set-up) in the previous section if you can't find this script.
 
 ```js
 nano loop_array.slurm
@@ -56,7 +56,7 @@ If necessary, exit the text reader with `Ctrl+x` and submit the script using `sb
 sbatch loop_array.slurm
 ```
 
-Notice the jobs as they appear in your terminal showing `squeue`. [**Click here to return to the Pro Tip box with instructions to Monitor the Slurm Job Queue to set that view up again.**](https://hyak.uw.edu/docs/hyak101/basics/jobs#monitoring-the-slurm-job-queue)
+Notice the jobs as they appear in your terminal showing `squeue`. [<ins>**Click here to return to the Pro Tip box with instructions to Monitor the Slurm Job Queue to set that view up again.**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#monitoring-the-slurm-job-queue)
 
 Once the jobs have completed, check the output files in the log directory:
 
@@ -90,7 +90,7 @@ This exercise demonstrates:
 * The usage of Bash variables to set up arguments for commands.
 * The usage of Slurm environment variable `SLURM_ARRAY_TASK_ID` as a identifier for each job in the array and a multiplier for defining variables.
 
-Utilizing Slurm environment variables like `SLURM_ARRAY_TASK_ID` and Bash can help you generate job arrays for testing configurations and parameters for your research computing project. [**See Slurm documentation to explore more Slurm output environment variables.**](https://slurm.schedmd.com/sbatch.html#SECTION_OUTPUT-ENVIRONMENT-VARIABLES)
+Utilizing Slurm environment variables like `SLURM_ARRAY_TASK_ID` and Bash can help you generate job arrays for testing configurations and parameters for your research computing project. [<ins>**See Slurm documentation to explore more Slurm output environment variables.**</ins>](https://slurm.schedmd.com/sbatch.html#SECTION_OUTPUT-ENVIRONMENT-VARIABLES)
 
 In the Advanced Slurm tutorial, we explore the usage of `SLURM_ARRAY_TASK_ID` to execute the same command on a file set, and we use Bash scripting to perform a parameter sweep.
 

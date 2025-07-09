@@ -19,15 +19,15 @@ Have you ever found yourself saying:
 
 2. I'm trying to work on my local computer then move it to Hyak and resume without friction? How about you set up something and now want to share that *exact* compute environment with a collaborator (or vice-versa)?
 
-The answer to either (or both) of those things are containers! Software containers are a way to package everything you need into a file to send around and have it work exactly the same across environments. The most popular containerization format is [Docker](#docker) but that does require administrative access to run natively, so for shared platforms (e.g., HPC clusters like Hyak) an alternative called [Apptainer](#apptainer) was developed. Almost every Docker container can be seamlessly converted to Apptainer so they're effectively interchangable.
+The answer to either (or both) of those things are containers! Software containers are a way to package everything you need into a file to send around and have it work exactly the same across environments. The most popular containerization format is [<ins>**Docker**</ins>](#docker) but that does require administrative access to run natively, so for shared platforms (e.g., HPC clusters like Hyak) an alternative called [<ins>**Apptainer**</ins>](#apptainer) was developed. Almost every Docker container can be seamlessly converted to Apptainer so they're effectively interchangable.
 
 What are the costs, trade offs, or downsides? You might imagine performance or that containerized applications run slower than native ones. This is not always true, in most instances they are near equivalent.
 
 ## Apptainer (formerly Singularity)
 
-March 2022: 'Singularity' became a Linux Foundation supported project and was renamed **'Apptainer'** [[www](https://www.linuxfoundation.org/press-release/new-linux-foundation-project-accelerates-collaboration-on-container-systems-between-enterprise-and-high-performance-computing-environments/)].
+March 2022: 'Singularity' became a Linux Foundation supported project and was renamed **'Apptainer'** [<ins>**www**</ins>](https://www.linuxfoundation.org/press-release/new-linux-foundation-project-accelerates-collaboration-on-container-systems-between-enterprise-and-high-performance-computing-environments/).
 
-The official Apptainer documentation [[www](https://apptainer.org/docs/user/main/)] is the best source.
+The official Apptainer documentation [<ins>**www**</ins>](https://apptainer.org/docs/user/main/) is the best source.
 
 
 ### Ubuntu `apt-get` Example
@@ -42,7 +42,7 @@ git version 1.8.3.1
 $
 ```
 
-Let's say you want a newer version AND you also want it running on Ubuntu for some reason. Here we'll walk you through installing the latest `git` binary using `apt` repositories for Ubuntu 16.04 [[www](https://releases.ubuntu.com/16.04/)] or "Xenial Xerus".
+Let's say you want a newer version AND you also want it running on Ubuntu for some reason. Here we'll walk you through installing the latest `git` binary using `apt` repositories for Ubuntu 16.04 [<ins>**www**</ins>](https://releases.ubuntu.com/16.04/) or "Xenial Xerus".
 
 1. Get an interactive session using some variant of the below command.
 
@@ -56,7 +56,7 @@ salloc -A mygroup -p compute -N 1 -n 2 --mem=10G --time=1:00:00
 module load apptainer
 ```
 
-3. Create a Apptainer definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Apptainer definition files reference page [[www](https://sylabs.io/guides/latest/user-guide/definition_files.html)] for more advanced options.
+3. Create a Apptainer definition file. Mine is below called `tools.def` to install the latest `curl` and `git` binaries from the Ubuntu repositories. Please see the Apptainer definition files reference page [<ins>**www**</ins>](https://sylabs.io/guides/latest/user-guide/definition_files.html) for more advanced options.
 
 ```dockerfile
 Bootstrap: docker
@@ -71,7 +71,7 @@ From: ubuntu:16.04
 
     The `.def` definition file should either be A) executable or B) a relative path (e.g. `./tools.def` while in the same directory as the file) or an absolute path (e.g. `/full/path/to/tools.def`).
 
-    When using the `--fakeroot` option, build the container image in `/tmp`. This avoids [[a potential permission issue](https://sylabs.io/guides/3.6/admin-guide/installation.html#fakeroot-sub-uid-gid-mapping)] with our shared storage filesystem, GPFS.
+    When using the `--fakeroot` option, build the container image in `/tmp`. This avoids [<ins>**a potential permission issue**</ins>](https://sylabs.io/guides/3.6/admin-guide/installation.html#fakeroot-sub-uid-gid-mapping) with our shared storage filesystem, GPFS.
 
 ```js
 apptainer build --fakeroot /tmp/tools.sif ./tools.def
@@ -80,9 +80,9 @@ apptainer build --fakeroot /tmp/tools.sif ./tools.def
 
 When building a container, you may encournter the following error:
 
-![](/img/docs/disk-quota-exceeded.png 'Disk Quota Exceeded Error Message')
+![Disk Quota Exceeded Error Message](/img/docs/disk-quota-exceeded.png 'Disk Quota Exceeded Error Message')
 
-If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your **[home directory](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)**  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
+If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your [<ins>**home directory**</ins>](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
 ```js
 du -h --max-depth 1
 ```
@@ -128,7 +128,7 @@ If you followed the tutorial above you should be able to install anything you wa
 
 ![Screenshot of Docker Hub's "Container" page][docker-hub]
 
-The biggest collection of Docker images is from Docker Hub [[www](https://hub.docker.com)].
+The biggest collection of Docker images is from Docker Hub [<ins>**www**</ins>](https://hub.docker.com).
 
 Let's say Docker Hub tells you the pull command for the container you want is `docker pull gcc:11.1.0-bullseye`. To have Apptainer grab this Docker container and convert it to a Apptainer container you'd modify the command to be `apptainer pull docker://gcc:11.1.0-bullseye`.
 
@@ -136,7 +136,7 @@ Let's say Docker Hub tells you the pull command for the container you want is `d
 
 ![Screenshot of NVIDIA GPU Cloud "Containers" page][ngc]
 
-A container registry that specializes in common GPU accelerated applications or GPU software development tools is provided by NVIDIA called the NVIDIA GPU Cloud (NGC) [[www](https://ngc.nvidia.com/catalog/containers)]. For example, you might want to use a PyTorch container optimized for NVIDIA GPUs as seen below.
+A container registry that specializes in common GPU accelerated applications or GPU software development tools is provided by NVIDIA called the NVIDIA GPU Cloud (NGC) [<ins>**www**</ins>](https://ngc.nvidia.com/catalog/containers). For example, you might want to use a PyTorch container optimized for NVIDIA GPUs as seen below.
 
 ![Screenshot of PyTorch container page][ngc-pytorch]
 
@@ -148,13 +148,13 @@ The example above provides a Docker pull command for PyTorch but in this case yo
 
 ![Screenshot of Biocontainers.pro homepage][biocontainer]
 
-A bioinformatics focused set of Apptainer containers can be found at the Biocontainers.pro registry [[www](https://biocontainers.pro/registry)]. It is a collection of (convertible to Apptainer) Docker containers as well as native Apptainer containers.
+A bioinformatics focused set of Apptainer containers can be found at the Biocontainers.pro registry [<ins>**www**</ins>](https://biocontainers.pro/registry). It is a collection of (convertible to Apptainer) Docker containers as well as native Apptainer containers.
 
 ### Sylabs.io Cloud Library
 
 ![Screenshot of Sylbas.io Cloud Library Page][sylabs]
 
-The largest collection of native Apptainer containers can be found at the Sylabs.io Cloud Container Library [[www](https://cloud.sylabs.io/library)]. This would be the ideal first place to look for containers built by others since it is maintained by the creators of Apptainer and provides the native container format.
+The largest collection of native Apptainer containers can be found at the Sylabs.io Cloud Container Library [<ins>**www**</ins>](https://cloud.sylabs.io/library). This would be the ideal first place to look for containers built by others since it is maintained by the creators of Apptainer and provides the native container format.
 
 
 ### NGC API Keys

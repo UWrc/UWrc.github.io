@@ -6,7 +6,7 @@ title: Introduction
 
 ### Hyak Software Usage Policy
 
-Hyak is a shared research environment with a baseline software setup to serve the majority of users and some pre-installed modules for commonly used tools. Researchers do not have root or sudo access to ensure system security and stability. Researchers must install, manage, and maintain any additional software required for their projects, ensuring reproducibility of their research. Support is available through the Hyak help desk and ticketing system, along with documentation for guidance. [**Click here for more information about Hyak’s Software Usage Policy**](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users).  
+Hyak is a shared research environment with a baseline software setup to serve the majority of users and some pre-installed modules for commonly used tools. Researchers do not have root or sudo access to ensure system security and stability. Researchers must install, manage, and maintain any additional software required for their projects, ensuring reproducibility of their research. Support is available through the Hyak help desk and ticketing system, along with documentation for guidance. [<ins>**Click here for more information about Hyak’s Software Usage Policy**</ins>](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users).  
 
 ### What is a Container?
 
@@ -46,13 +46,13 @@ Specifically, the Hyak OS is Rocky Linux 8 (kernel space) and some software have
 
 :::
 
-The container program `klone` uses is called Apptainer. Apptainer uses a SIF container format. SIF stands for **S**ingularity **I**mage **F**ormat and is essentially a compressed [**SquashFS**](https://hyak.uw.edu/docs/tools/squashfs) filesystem. This means that all containers on Apptainer act as a single file, making them easy to share. Apptainer also supports a sandbox format by using the `--sandbox` option (discussed later), which lets users create writable directories that allow file modifications and additional software installations since SquashFS filesystems are read-only by default.
+The container program `klone` uses is called Apptainer. Apptainer uses a SIF container format. SIF stands for **S**ingularity **I**mage **F**ormat and is essentially a compressed [<ins>**SquashFS**</ins>](https://hyak.uw.edu/docs/tools/squashfs) filesystem. This means that all containers on Apptainer act as a single file, making them easy to share. Apptainer also supports a sandbox format by using the `--sandbox` option (discussed later), which lets users create writable directories that allow file modifications and additional software installations since SquashFS filesystems are read-only by default.
 
 ### Read-only filesystem
 
 Apptainer containers are by default read-only. This means that under default parameters you cannot store files within the container and the container is isolated so that it cannot access any files from outside the container. During this tutorial we will provide exercises to demonstrate the read-only filesystem of containers and methods to allow the container to access your files on Hyak (i.e., using `--bind /gscratch/`) and to manipulate files stored within the container (`--sandbox`).
 
-#### For more detailed information, please refer to the Apptainer documentation [HERE](https://apptainer.org/docs/user/latest/)
+#### For more detailed information, please refer to the Apptainer documentation [<ins>**HERE**</ins>](https://apptainer.org/docs/user/latest/)
 
 ### Apptainer vs. Docker
 
@@ -68,11 +68,11 @@ Apptainer containers are by default read-only. This means that under default par
 
 If you have heard of containers before starting this tutorial, you have likely heard about them in the context of Docker containers. Docker is another container program, but it requires users to have root access to build writable containers. Under Hyak's shared computing environment, users are not given root access and Apptainer on Hyak allows users to build containers with the `--fakeroot` tag simulating root access and resulting in a read-only container and filesystem. Apptainer is often used in High Performance Computing (HPC) because it allows users to install with simulated root access (`fakeroot`) in the shared computing environment.
 
-Hyak users may find it useful to use Docker to build containers on their local computer, upload them to Docker Hub, and download and convert them to Apptainer containers for use on Hyak. Apptainer performs this conversion, allowing Docker containers to be run on Hyak. Docker Hub is a great resource for publishing containers. Using Docker is a skill unto itself and outside of the scope of this tutorial. Docker is not loaded on Hyak. For interested users, we have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources), including more information and videos about Docker.
+Hyak users may find it useful to use Docker to build containers on their local computer, upload them to Docker Hub, and download and convert them to Apptainer containers for use on Hyak. Apptainer performs this conversion, allowing Docker containers to be run on Hyak. Docker Hub is a great resource for publishing containers. Using Docker is a skill unto itself and outside of the scope of this tutorial. Docker is not loaded on Hyak. For interested users, we have curated a list of [<ins>**Additional Resources**</ins>](https://hyak.uw.edu/docs/resources), including more information and videos about Docker.
 
 ### Container Repositories
 
-To create a container, you need a container image. Container images can either be built or pulled from container repositories. Container repositories are registries of downloadable container images. A common repository you may come across is [**Docker Hub**](https://hub.docker.com/). You can pull container images from Docker Hub by using the command
+To create a container, you need a container image. Container images can either be built or pulled from container repositories. Container repositories are registries of downloadable container images. A common repository you may come across is [<ins>**Docker Hub**</ins>](https://hub.docker.com/). You can pull container images from Docker Hub by using the command
 
 ```js
  apptainer pull docker://publisher/container-tag
@@ -83,13 +83,13 @@ Container publishers and tags are found on the repository site. You can think of
 :::note Useful Tools
 Some popular tools that have Docker containers are:
 
-1. [**python**](https://hub.docker.com/_/python)
-2. [**ubuntu**](https://hub.docker.com/_/ubuntu)
-3. [**R**](https://hub.docker.com/r/rocker/rstudio)
-4. [**tensorflow**](https://hub.docker.com/r/tensorflow/tensorflow)
-5. [**pytorch**](https://hub.docker.com/r/pytorch/pytorch)
+1. [<ins>**python**</ins>](https://hub.docker.com/_/python)
+2. [<ins>**ubuntu**</ins>](https://hub.docker.com/_/ubuntu)
+3. [<ins>**R**</ins>](https://hub.docker.com/r/rocker/rstudio)
+4. [<ins>**tensorflow**</ins>](https://hub.docker.com/r/tensorflow/tensorflow)
+5. [<ins>**pytorch**</ins>](https://hub.docker.com/r/pytorch/pytorch)
 :::
 
-In addition to Docker Hub, the [**NVIDIA NGC**](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) is a repository for containers with various GPU software packaged inside. You can also download [**tensorflow**](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-tensorflow) and [**pytorch**](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch) containers from NVIDIA. Other container repositories include [**Biocontainers**](https://biocontainers.pro/registry) for bioinformatics and other life science software containers, native Apptainer containers at [**Sylabs.io**](https://cloud.sylabs.io/library), and Red Hat's container repository [**Quay.io**](https://quay.io/). More information regarding other container repositories can be found [**HERE**](https://hyak.uw.edu/docs/tools/containers/).
+In addition to Docker Hub, the [<ins>**NVIDIA NGC**</ins>](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) is a repository for containers with various GPU software packaged inside. You can also download [<ins>**tensorflow**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-tensorflow) and [<ins>**pytorch**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch) containers from NVIDIA. Other container repositories include [<ins>**Biocontainers**</ins>](https://biocontainers.pro/registry) for bioinformatics and other life science software containers, native Apptainer containers at [<ins>**Sylabs.io**</ins>](https://cloud.sylabs.io/library), and Red Hat's container repository [<ins>**Quay.io**</ins>](https://quay.io/). More information regarding other container repositories can be found [<ins>**HERE**</ins>](https://hyak.uw.edu/docs/tools/containers/).
 
 In the next section, we will practice pulling pre-built containers from Docker Hub.

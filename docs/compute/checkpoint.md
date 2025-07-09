@@ -28,7 +28,7 @@ salloc --partition ckpt
 When we say a resource is "currently idle," that only means no running jobs are using it at this moment. "Idle" does **not** imply that you are guaranteed to receive a resource if you request it! Our job scheduler, Slurm, may already have a plan for that resource (by the lab who contributed it, or even by another checkpoint user). In other words, "currently idle" doesn't mean "idle in 5 minutes from now".
 :::
 
-You can request resources from the entire cluster's idle resources (including GPUs, regardless of whether your lab has contributed any). You can view currently idle resources, both for your lab's partition and for the whole cluster, using our `hyakalloc` command ([**further documentation here**](https://hyak.uw.edu/docs/compute/resource-monitoring#hyakalloc)).
+You can request resources from the entire cluster's idle resources (including GPUs, regardless of whether your lab has contributed any). You can view currently idle resources, both for your lab's partition and for the whole cluster, using our `hyakalloc` command ([<ins>**further documentation here**</ins>](https://hyak.uw.edu/docs/compute/resource-monitoring#hyakalloc)).
 
 #### New `g2` Nodes
 
@@ -54,7 +54,7 @@ The new `g2` nodes will likely run faster than the previous generation of nodes.
 
 The new `g2` nodes have a different architecture, which might offer additional optimizations. However, this could lead to differences in compilation, and if uniformity is important to you, you should consider sticking with either `ckpt` or `ckpt-g2` rather than `ckpt-all`.
 
-Please see [**this blog post**](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
+Please see [<ins>**this blog post**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
 :::
 
 ### Checkpoint Limitations
@@ -71,7 +71,7 @@ Jobs submitted to this partition should be designed to:
 2. Once resumed, start their work from the last saved "checkpoint."
 
 :::info
-[**DMTCP**](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on Hyak without modifying application code. See our [**documentation**](/docs/tools/dmtcp) for more information.
+[<ins>**DMTCP**</ins>](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on Hyak without modifying application code. See our [<ins>**documentation**</ins>](/docs/tools/dmtcp) for more information.
 :::
 
 :::tip What about the `--time` directive?

@@ -18,7 +18,7 @@ The UW research computing team celebrates the soft launch of project `klone`, th
 There will be weekly maintenance days on Tuesday during the soft launch period after which we will move back to our regular cadence of monthly maintenance windows.
 :::
 
-The user documentation [[link](/docs/)] has been updated to reflect the changes and new features of `klone` but this will be an ongoing process.
+The user documentation [<ins>**link**</ins>](/docs/) has been updated to reflect the changes and new features of `klone` but this will be an ongoing process.
 
 #### Compute
 - Soft launch with 1,920 compute cores over 48 nodes:
@@ -64,11 +64,11 @@ The updated total is **3,840 cores** and **96 nodes** on klone.
 ### March 9, 2021
 
 #### Storage
-- Snapshots are here! We are piloting once an hour for 24 hours for every lab storage folder under `/gscratch/`. Check out the updated documentation [here](/docs/storage/gscratch#group-or-lab-directories) on how to access past snapshots.
+- Snapshots are here! We are piloting once an hour for 24 hours for every lab storage folder under `/gscratch/`. Check out the updated documentation [<ins>**here**</ins>](/docs/storage/gscratch#group-or-lab-directories) on how to access past snapshots.
 
 #### Software
 - We created more LMOD software modules: 
-  - Matlab R2020b [[docs](/docs/tools/matlab)]
+  - Matlab R2020b [<ins>**docs**</ins>](/docs/tools/matlab)
   - OpenMPI-4.1.0
 
 ### March 12, 2021
@@ -81,4 +81,4 @@ The updated total is **3,840 cores** and **96 nodes** on klone.
 
 Things have been going steady the past week and changes are coming less frequently. We are now increasing time between maintenance periods on klone from weekly on Tuesdays to monthly and aligning it with the mox maintenance as the 2nd Tuesday of every month.
 
-That wraps up our klone soft launch blog updates here, other updates will appear on our Hyak users mailing list. Don't forget to subscribe, instructions on [this page](/docs/account-activation) at the bottom.
+That wraps up our klone soft launch blog updates here, other updates will appear on our Hyak users mailing list. Don't forget to subscribe, instructions on [<ins>**this page**</ins>](/docs/account-activation) at the bottom.

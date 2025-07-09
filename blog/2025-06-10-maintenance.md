@@ -57,7 +57,7 @@ If you would like to request 1 on 1 help, please send an email to <ins>**help@uw
 
 ### Opportunities
 
-#### Computing Training from [<ins>eScience</ins>](https://escience.washington.edu/) and more
+#### Computing Training from [<ins>**eScience**</ins>](https://escience.washington.edu/) and more
 
 <img src="/img/logos/escience-logo-768x193.png" alt="eScience logo." width="400"/>
 

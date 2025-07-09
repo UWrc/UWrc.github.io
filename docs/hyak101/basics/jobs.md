@@ -3,7 +3,7 @@ id: jobs
 title: Scheduling Jobs
 ---
 
-When you first ssh into `klone` you land on one of the two login nodes (e.g., `klone-login01`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should never use login nodes for heavy computing and automated mechanisms exist to monitor and enforce violations. The tool used to notify users of violations is "arbiter2" and you will receive an email for each offending process [**(Gardner, Migacz, and Haymore 2019)**](https://hyak.uw.edu/docs/compute/scheduling-jobs#ref_arbiter).
+When you first ssh into `klone` you land on one of the two login nodes (e.g., `klone-login01`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should never use login nodes for heavy computing and automated mechanisms exist to monitor and enforce violations. The tool used to notify users of violations is "arbiter2" and you will receive an email for each offending process [<ins>**(Gardner, Migacz, and Haymore 2019)**</ins>](https://hyak.uw.edu/docs/compute/scheduling-jobs#ref_arbiter).
 
 To keep the login node in stable working order and ensure fair usage of the login node as a community resource, Hyak has a job scheduling software that will give you access to other nodes (i.e., different computers that are part of the `klone` cluster). The job scheduler software is called Slurm, and regular users of Hyak need to learn how to use Slurm to effectively and efficiently make use of Hyak as a resource for research computing.
 
@@ -11,7 +11,7 @@ To keep the login node in stable working order and ensure fair usage of the logi
 
 **Account**: In the context of using Slurm, "account" refers to the group/s you belong to, not your UWnetID. The `hyakalloc` command will display accounts you can submit jobs with (i.e., under the Slurm `sbatch` directive `--account`).
 
-**Checkpoint partitions**: Abbreviated `ckpt`, `ckpt-g2`, and `ckpt-all`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours (for HPC jobs) and >8 hours (for GPU jobs) are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [**Using Idle Resources**](https://hyak.uw.edu/docs/compute/checkpoint).
+**Checkpoint partitions**: Abbreviated `ckpt`, `ckpt-g2`, and `ckpt-all`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours (for HPC jobs) and >8 hours (for GPU jobs) are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [<ins>**Using Idle Resources**</ins>](https://hyak.uw.edu/docs/compute/checkpoint).
 
 **Idle Resource**: A cluster resource is "idle" when it currently has no running jobs. Requested idle resources are not guaranteed.
 
@@ -28,7 +28,7 @@ To keep the login node in stable working order and ensure fair usage of the logi
 
 **Scheduler**: A job scheduler is a component or software system responsible for managing and optimizing the allocation of computing resources and tasks within a distributed computing environment. It orchestrates the execution of jobs, tasks, or processes across available resources such as CPUs, memory, and storage.
 
-**Slurm**: The job scheduler used on Hyak. Slurm stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See [**Slurm documentation**](https://slurm.schedmd.com/man_index.html) for detailed help using the job scheduler.
+**Slurm**: The job scheduler used on Hyak. Slurm stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See [<ins>**Slurm documentation**</ins>](https://slurm.schedmd.com/man_index.html) for detailed help using the job scheduler.
 :::
 
 ### Set Up
@@ -40,7 +40,7 @@ If you haven't already log on to `klone` for this tutorial.
 ssh UWNetid@klone.hyak.uw.edu
 ```
 
-For the following exercises, we will create a working directory for this tutorial. We recommend starting your working directory in a filesystem location where you have a large storage quota, not in your Home directory (limit 10GB; [**Click here to learn more about Home directory storage limits**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory)). For this demonstration, we will create a working directory to use Hyak's free community storage under `/gscratch/scrubbed` ([**Click here to learn more about Scrubbed storage**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed)). First navigate to `/gscratch/scrubbed`:
+For the following exercises, we will create a working directory for this tutorial. We recommend starting your working directory in a filesystem location where you have a large storage quota, not in your Home directory (limit 10GB; [<ins>**Click here to learn more about Home directory storage limits**</ins>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory)). For this demonstration, we will create a working directory to use Hyak's free community storage under `/gscratch/scrubbed` ([<ins>**Click here to learn more about Scrubbed storage**</ins>](https://hyak.uw.edu/docs/storage/gscratch#scrubbed)). First navigate to `/gscratch/scrubbed`:
 
 ```js
 cd /gscratch/scrubbed/
@@ -85,10 +85,10 @@ loop_script.sh
 
 ### Accounts and Partitions
 
-The first stop on understanding job scheduling is to understand that every user is part of an account and thus has access to certain partitions. Your account is usually related to a lab or research group that you belong to; for example, you may be part of a lab group that has contributed resources to Hyak, affording you priority usage of those resources, which are organized into one or more partitions. Alternatively, you may be a student user who is part of the [**Research Computing Club**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/), or account `stf`, meaning that you have priority access on the `stf` account, which allows you to use several partitions. Additionally, all users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` partitions ([**Click here to learn about more about `ckpt` jobs.**](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)).
+The first stop on understanding job scheduling is to understand that every user is part of an account and thus has access to certain partitions. Your account is usually related to a lab or research group that you belong to; for example, you may be part of a lab group that has contributed resources to Hyak, affording you priority usage of those resources, which are organized into one or more partitions. Alternatively, you may be a student user who is part of the [<ins>**Research Computing Club**</ins>](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/), or account `stf`, meaning that you have priority access on the `stf` account, which allows you to use several partitions. Additionally, all users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` partitions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)).
 
 :::tip Pro Tip - Get an STF account
-If you are a **student** who is paying the student technology fee (STF), you are eligible for an `stf` account which will increase your access and user experience on Hyak because there are designated resources for students. [**Click here to find out how to get an STF account**](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/). NOTE: The Hyak Team doesn't manage the `stf` account group.
+If you are a **student** who is paying the student technology fee (STF), you are eligible for an `stf` account which will increase your access and user experience on Hyak because there are designated resources for students. [<ins>**Click here to find out how to get an STF account**</ins>](https://depts.washington.edu/uwrcc/getting-started-2/getting-started/). NOTE: The Hyak Team doesn't manage the `stf` account group.
 :::
 
 Let's start by checking which accounts and partitions you have access to with the `hyakalloc` command.
@@ -191,7 +191,7 @@ The state of the job is listed under "ST" in this window. Some of the most commo
 
 In the next exercises, leave this terminal open and executing the `watch -n 10 squeue -u UWNetID` and continue with the exercises in the other terminal window.
 
-![](/img/docs/hyak101/basics/two_terminals.png 'Screencapture showing two terminals.')
+![Screencapture showing two terminals.](/img/docs/hyak101/basics/two_terminals.png)
 
 :::
 
@@ -465,4 +465,4 @@ TODO
 
 ### Literature Cited
 
-Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [DOI: [**10.1145/3332186.3333043**](https://doi.org/10.1145/3332186.3333043)] [Code: [**Gitlab**](https://gitlab.chpc.utah.edu/arbiter2/arbiter2)] <a name="ref_arbiter" />
+Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [<ins>**DOI: 10.1145/3332186.3333043**</ins>](https://doi.org/10.1145/3332186.3333043) [<ins>**Code: Gitlab**</ins>](https://gitlab.chpc.utah.edu/arbiter2/arbiter2) <a name="ref_arbiter" />

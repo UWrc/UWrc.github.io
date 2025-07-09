@@ -9,7 +9,7 @@ OOD allows users to launch notebooks on the Home directory without any set-up, s
 
 ## Accessing Jupyter
 
-To access Jupyter, navigate to [Hyak OnDemand](https://ondemand.hyak.uw.edu/) and select `Interactive Apps > Jupyter`. You will be prompted to enter information about the job you want to run. 
+To access Jupyter, navigate to [<ins>**Hyak OnDemand**</ins>](https://ondemand.hyak.uw.edu/) and select `Interactive Apps > Jupyter`. You will be prompted to enter information about the job you want to run. 
 
 ## Custom Environments
 
@@ -17,7 +17,7 @@ Custom environments allow you import external libraries like Numpy into your Jup
 
 ### 1. Conda Environment
 
-We recommend using a Miniconda environment for your Jupyter Notebook setup. Instructions for installing and setting up Miniconda on Hyak can be found [here](https://hyak.uw.edu/docs/tools/python#miniconda3). Once you have created and activated your desired environment, follow these steps to connect your Jupyter Notebook to the environment.
+We recommend using a Miniconda environment for your Jupyter Notebook setup. Instructions for installing and setting up Miniconda on Hyak can be found [<ins>**here**</ins>](https://hyak.uw.edu/docs/tools/python#miniconda3). Once you have created and activated your desired environment, follow these steps to connect your Jupyter Notebook to the environment.
 
 
 First, install the `ipykernel` package, which provides the IPython kernel required to run Jupyter Notebooks:
@@ -50,9 +50,9 @@ or
 
 
 ### 2. Apptainer Image
-Under the `Jupyter Container` section of the form, you can enter the path of the custom Apptainer image you want to use. We offer a number of pre-built Apptainer images with popular libraries and tools. If you are unfamiliar with containers, you can learn more from [our tutorial](https://hyak.uw.edu/docs/hyak101/containers/syllabus/). A quick example is below:
+Under the `Jupyter Container` section of the form, you can enter the path of the custom Apptainer image you want to use. We offer a number of pre-built Apptainer images with popular libraries and tools. If you are unfamiliar with containers, you can learn more from [<ins>**our tutorial**</ins>](https://hyak.uw.edu/docs/hyak101/containers/syllabus/). A quick example is below:
 
-1. Obtain the desired container from a container catalog. For example, we can use `nvcr.io/nvidia/pytorch:25.01-py3` from the [NVIDIA catalog](https://catalog.ngc.nvidia.com).
+1. Obtain the desired container from a container catalog. For example, we can use `nvcr.io/nvidia/pytorch:25.01-py3` from the [<ins>**NVIDIA catalog**</ins>](https://catalog.ngc.nvidia.com).
 2. Pull the container to Hyak:
 ```js
 apptainer pull docker://nvcr.io/nvidia/pytorch:25.01-py3 <directory_with_large_quota>

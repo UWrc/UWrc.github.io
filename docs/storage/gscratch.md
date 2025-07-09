@@ -5,18 +5,18 @@ title: Storage on Hyak
 
 Storage on Hyak is physically separate from servers used for computation. It is best practice on every supercomputer that storage live on its own and is high-performance to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., GPFS, Lustre, BeeGFS).
 
-On `klone` the storage system (e.g., `/gscratch/`) is then mounted (i.e., accessible) from every compute node of the cluster. `klone` storage is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [**storage introduction page**](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy. Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UW-IT Research Computing offers [**additional sotrage solutions**](https://hyak.uw.edu/storage) that may be use in combination with `/gscratch/` for longerterm data storage. 
+On `klone` the storage system (e.g., `/gscratch/`) is then mounted (i.e., accessible) from every compute node of the cluster. `klone` storage is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [<ins>**storage introduction page**</ins>](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy. Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UW-IT Research Computing offers [<ins>**additional sotrage solutions**</ins>](https://hyak.uw.edu/storage) that may be use in combination with `/gscratch/` for longerterm data storage. 
 
-Every user has a [**Home directory**](#user-home-directory) by default, most users have a cluster account by virtue of being the member of a lab group with dedicated slices so you have access to [**lab dedicated storage**](#group-or-lab-directories), and there's also [**scrubbed**](#scrubbed) storage for temporary overflow use.
+Every user has a [<ins>**Home directory**</ins>](#user-home-directory) by default, most users have a cluster account by virtue of being the member of a lab group with dedicated slices so you have access to [<ins>**lab dedicated storage**</ins>](#group-or-lab-directories), and there's also [<ins>**scrubbed**</ins>](#scrubbed) storage for temporary overflow use.
 
 ## Understanding Block and Inode Quotas
 
-Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. If you need additional block or inode quota, please refer to the storage section on the [pricing page](https://hyak.uw.edu/pricing).
+Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. If you need additional block or inode quota, please refer to the storage section on the [<ins>**pricing page**</ins>](https://hyak.uw.edu/pricing).
 
 
 
 :::info
-Learn more about inodes [**here**](https://www.admin-magazine.com/HPC/Articles/What-Is-an-Inode).
+Learn more about inodes [<ins>**here**</ins>](https://www.admin-magazine.com/HPC/Articles/What-Is-an-Inode).
 :::
 
 
@@ -125,7 +125,7 @@ Your lab gets 1 TB per slice that your group has contributed to `klone`, which i
 Your lab quota can be increased for $10 / TB / month.
 :::
 
-Your lab storage quota can be increased (or decreased) in 1 TB granularity and adjusted on a month-to-month basis as your needs require. If you need additional block or inode quota, please refer to the pricing page: [Hyak Pricing](https://hyak.uw.edu/pricing)
+Your lab storage quota can be increased (or decreased) in 1 TB granularity and adjusted on a month-to-month basis as your needs require. If you need additional block or inode quota, please refer to the pricing page: [<ins>**Hyak Pricing**</ins>](https://hyak.uw.edu/pricing)
 
 :::important
 Check group quotas and current use with the `hyakstorage` command.
@@ -146,11 +146,11 @@ chown <new owner NetID> file.txt
 ```
 2. **Changing File Names**
 
-For long term stability of your data in another’s hands, it is better to change the directory name to be descriptive. Rather than changing the ownership of a file alone, if the directory is your UWNetID, it is recommended that the new owner moves the directory into a directory under their name or change the name of the directory to be descriptive (i.e., “MyName_Datafiles” or “ProjectName_Scripts”) so that these files are not associated with a user that is no longer part of the system. In general, after a user's account is removed, directories named after their NetID can be difficult for others to recognize. To change file names, use the **[`mv`](https://hyak.uw.edu/docs/hyak101/basics/linux-2#mv)** command for moving and renaming files.
+For long term stability of your data in another’s hands, it is better to change the directory name to be descriptive. Rather than changing the ownership of a file alone, if the directory is your UWNetID, it is recommended that the new owner moves the directory into a directory under their name or change the name of the directory to be descriptive (i.e., “MyName_Datafiles” or “ProjectName_Scripts”) so that these files are not associated with a user that is no longer part of the system. In general, after a user's account is removed, directories named after their NetID can be difficult for others to recognize. To change file names, use the [<ins>**`mv`**</ins>](https://hyak.uw.edu/docs/hyak101/basics/linux-2#mv) command for moving and renaming files.
 
 3. **Data Transfer To External Devices**
 
-If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the **[data transfer](https://hyak.uw.edu/docs/storage/transfer)** page for more information on transferring data between Hyak and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
+If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the [<ins>**data transfer**</ins>](https://hyak.uw.edu/docs/storage/transfer) page for more information on transferring data between Hyak and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
 
 4. **Reclaiming Data From a User That Has Left UW**
 
