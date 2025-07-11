@@ -32,7 +32,7 @@ Two things to keep in mind:
    - This means that while you want the file to be large enough to fit Conda, you will anger your lab if you allocate 100GB when you only needed 5GB.
 
 
-By this point in the tutorial, we hope you understand that disk storage management is important, as we have stressed [**selecting your working directory**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory). 
+By this point in the tutorial, we hope you understand that disk storage management is important, as we have stressed [<ins>**selecting your working directory**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory). 
 Here is the command to create your overlay for conda:
 ```js
 apptainer overlay create --size 5120 conda-overlay.img
@@ -102,7 +102,7 @@ apptainer run --overlay conda-overlay.img hyak-container.sif ${@}
 The only difference between these launchers is the inclusion of `:ro` in the latter, which
 mounts the overlay read-only.
 
-In the [**Building a Container**](container#runscript-what-the-container-does) section,
+In the [<ins>**Building a Container**</ins>](container#runscript-what-the-container-does) section,
 we defined a couple methods of running the container.
 1. Without arguments: launch an interactive shell.
 2. With arguments: try to execute the arguments.
@@ -189,7 +189,7 @@ Apptainer> exit
 ```
 
 ### Creating our Jupyter server launch script
-If you recall from the [**Building a Container**](container#runscript-what-the-container-does) section,
+If you recall from the [<ins>**Building a Container**</ins>](container#runscript-what-the-container-does) section,
 we defined a second way to start our container: `apptainer run hyak-container.sif arguments`, which attempts to run
 whatever we put in `arguments`. We need script called `start-jupyter-server.sh` that will launch a Jupyter server for us, so that we can pass that
 to the container as our argument.

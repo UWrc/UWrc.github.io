@@ -9,11 +9,11 @@ title: Syllabus
 
 **Containers** are lightweight, isolated software environments that encapsulate an application, along with its dependencies and runtime settings. Containers are useful because they provide a consistent and reproducible way to package, distribute, and run software across different computing environments.
 
-**Most importantly, software containers allow Hyak researchers to install their software package and all its dependencies without root administrative privileges.** [**Click here to see the Hyak's Software Usage Policies for more information.**](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users)
+**Most importantly, software containers allow Hyak researchers to install their software package and all its dependencies without root administrative privileges.** [<ins>**Click here to see the Hyak's Software Usage Policies for more information.**</ins>](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users)
 
 :::tip Video tutorial available
 
-On August 21, 2024, we delivered this tutorial live on Zoom. [**Follow this link to watch the live demonstration.**](https://youtu.be/zPsvUQV_GV0)
+On August 21, 2024, we delivered this tutorial live on Zoom. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://youtu.be/zPsvUQV_GV0)
 
 :::
 
@@ -34,11 +34,11 @@ Use the sidebar to navigate or click the links below to jump to different sectio
 
 #### Tutorial: Containers
 
-* [**This page - Syllabus**](https://hyak.uw.edu/docs/hyak101/containers/syllabus)
-* [**Introduction**](https://hyak.uw.edu/docs/hyak101/containers/background)
-* [**Pulling Containers**](https://hyak.uw.edu/docs/hyak101/containers/demonstration)
-* [**Building Containers**](https://hyak.uw.edu/docs/hyak101/containers/build)
+* [<ins>**This page - Syllabus**</ins>](https://hyak.uw.edu/docs/hyak101/containers/syllabus)
+* [<ins>**Introduction**</ins>](https://hyak.uw.edu/docs/hyak101/containers/background)
+* [<ins>**Pulling Containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/demonstration)
+* [<ins>**Building Containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/build)
 
 ### Extra Practice
 
-We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and many are relevant for this tutorial.
+We have curated a list of [<ins>**Additional Resources**</ins>](https://hyak.uw.edu/docs/resources) and many are relevant for this tutorial.

@@ -12,7 +12,7 @@ Let's start with the easy part.
 
 ### Using VS Code on a compute node
 
-This is very similar to [**our instructions for connecting to VS Code via a ProxyJump**](https://hyak.uw.edu/docs/tools/vsc-proxy-jump), but more complex. All we need to do here is add a single step to our interactive job setup.
+This is very similar to [<ins>**our instructions for connecting to VS Code via a ProxyJump**</ins>](https://hyak.uw.edu/docs/tools/vsc-proxy-jump), but more complex. All we need to do here is add a single step to our interactive job setup.
 
 #### 1. Start an interactive job named called 'klone-container'
 
@@ -54,15 +54,15 @@ Host klone-node
 
 With the `klone-node` SSH target ready to go, we'll first use the Remote-SSH extension to connect to a host:
 
-![](/img/docs/hyak101/python/VSCode-Connect.png 'Connect to Host')
+![Connect to Host](/img/docs/hyak101/python/VSCode-Connect.png)
 
 Then we'll enter `klone-node`:
 
-![](/img/docs/hyak101/python/VSCode-klone-node.png 'Select klone-node')
+![Select klone-node](/img/docs/hyak101/python/VSCode-klone-node.png)
 
 And, after VSCode finishes installing the remote extensions, we should see that we're connected:
 
-![](/img/docs/hyak101/python/VSCode-Connected.png 'Connected to klone-node')
+![Connected to klone-node](/img/docs/hyak101/python/VSCode-Connected.png)
 
 That's it. You can now open remote folders like your home directory, or your group's `gscratch` directories, and
 use VSCode as you usually do.
@@ -126,7 +126,7 @@ be worth troubleshooting.
 :::
 
 With that disclaimer out of the way, let's modify our VS Code's `settings.json`:
-![](/img/docs/hyak101/python/VSCode-open-json.png 'Open VSCode Settings')
+![Open VSCode Settings](/img/docs/hyak101/python/VSCode-open-json.png)
 
 Once you have it open, you need to add the following:
 
@@ -139,24 +139,24 @@ Assuming you still have your `klone-container` job running, and your `~/.ssh/klo
 the correct compute node for the job, we can connect directly to the container. Select the `Connect to Host...` option
 in the Remote-SSH extension again:
 
-![](/img/docs/hyak101/python/VSCode-Connect.png 'Connect to Host')
+![Connect to Host](/img/docs/hyak101/python/VSCode-Connect.png)
 
 But this time, connect to `klone-container-rw`:
 
-![](/img/docs/hyak101/python/VSCode-klone-container.png 'Select klone-container-rw')
+![Select klone-container-rw](/img/docs/hyak101/python/VSCode-klone-container.png)
 
 It may take a few moments to connect, but once you're in it will look quite similar to when
 we connected directly to the node.
 Since we're already in the container, we can interact with `conda` right away:
 
-![](/img/docs/hyak101/python/VSCode-conda.png 'Activate conda')
+![Activate conda](/img/docs/hyak101/python/VSCode-conda.png)
 
 #### Installing VSCode extensions remotely
 In this demonstration, we're going to run the the VS Code Jupyter extension,
 which means we'll have to install the extensions on klone.
 When you browse the 'Extensions' tab, you should see an option to "Install in SSH: klone-container-rw":
 
-![](/img/docs/hyak101/python/VSCode-install-extensions.png 'Install Jupyter remotely')
+![Install Jupyter remotely](/img/docs/hyak101/python/VSCode-install-extensions.png)
 
 Install both the Jupyter and the Python extensions before continuing.
 
@@ -164,24 +164,24 @@ Install both the Jupyter and the Python extensions before continuing.
 
 Once the extensions are installed, open up your home directory in VS Code and we'll try to make a new Jupyter Notebook:
 
-![](/img/docs/hyak101/python/VSCode-jupyter.png 'Create a Notebook')
+![Create a Notebook](/img/docs/hyak101/python/VSCode-jupyter.png)
 
 The first time you run the VS Code Jupyter plugins, it'll ask you where you want to run Jupyter. In this case,
 we're going to select "Default", because it will run Jupyter "locally" (in the container):
 
-![](/img/docs/hyak101/python/VSCode-jupyter-server.png 'Select the local Jupyter')
+![Select the local Jupyter](/img/docs/hyak101/python/VSCode-jupyter-server.png)
 
 It will prompt you to reload the window, which you should do, and finally we'll make sure we're using the right Python:
 
-![](/img/docs/hyak101/python/VSCode-select-python.png 'Select the Python interpreter')
+![Select the Python interpreter](/img/docs/hyak101/python/VSCode-select-python.png)
 
 You'll see a list, probably something similar to this, and you can select whichever conda environment's Python you want:
 
-![](/img/docs/hyak101/python/VSCode-python-list.png 'Pick a conda environment')
+![Pick a conda environment](/img/docs/hyak101/python/VSCode-python-list.png)
 
 And with all of that configuration in place, we should be able to test it out with something simple, like this:
 
-![](/img/docs/hyak101/python/VSCode-cell-test.png 'A simple test cell')
+![A simple test cell](/img/docs/hyak101/python/VSCode-cell-test.png)
 
 #### Is it worth it?
 

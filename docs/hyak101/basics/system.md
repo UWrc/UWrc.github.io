@@ -206,7 +206,7 @@ drwxr-xr-x   22 root root    520 Jun 11 12:05 var
 drwxr-xr-x    8 root root   4080 Jun 11 12:05 xcatpost
 ```
 
-`ls -l` lists contents showing their permissions [**(Learn more about permissions here.)**](https://quickref.me/chmod.html), date of last edit, and their owner. Most items within the root directory are owned by "root" our name for our administrator. There are many flags for `ls` that can help you list contents in different ways, and many users have their favorite set of flags that they use regularly. Review all possible flags with the following command:
+`ls -l` lists contents showing their permissions [<ins>**(Learn more about permissions here.)**</ins>](https://quickref.me/chmod.html), date of last edit, and their owner. Most items within the root directory are owned by "root" our name for our administrator. There are many flags for `ls` that can help you list contents in different ways, and many users have their favorite set of flags that they use regularly. Review all possible flags with the following command:
 
 ```js
 man ls

@@ -9,7 +9,7 @@ Sponsoring groups are Erik Lundberg, Rob Fatland, and Xiaosong Li. Student users
 
 Colloquially known as "ImageNet", this is the **Large Scale Visual Recognition Challenge (ILSVRC)** subset of ImageNet from 2012, which is the most highly-used subset and includes "1000 object classes and contains 1,281,167 training images, 50,000 validation images and 100,000 test images". This is a popular machine learning benchmark dataset.
 
-You can learn more at their website [here](https://www.image-net.org/challenges/LSVRC/index.php) or from their paper [here](https://link.springer.com/article/10.1007/s11263-015-0816-y).
+You can learn more at their website [<ins>**here**</ins>](https://www.image-net.org/challenges/LSVRC/index.php) or from their paper [<ins>**here**</ins>](https://link.springer.com/article/10.1007/s11263-015-0816-y).
 
 The verbatim description from their website is as follows.
 
@@ -29,12 +29,12 @@ The first three images from the test set can be seen below.
 
 This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
-1. Register on the ImageNet website [here](https://www.image-net.org/challenges/LSVRC/2012/) to agree to terms of use and receive the download links.
+1. Register on the ImageNet website [<ins>**here**</ins>](https://www.image-net.org/challenges/LSVRC/2012/) to agree to terms of use and receive the download links.
 2. The data should arrive as a tar file. Unpack the tar file to the desired location.
 
 ## How to access?
 
-By accessing this data you agree to their terms of use provided on their website [here](https://www.image-net.org/download.php) and below in full. Data access is available in three formats: PyTorch, SquashFS, and Direct that follow the terms of use agreement.
+By accessing this data you agree to their terms of use provided on their website [<ins>**here**</ins>](https://www.image-net.org/download.php) and below in full. Data access is available in three formats: PyTorch, SquashFS, and Direct that follow the terms of use agreement.
 
 :::caution
 [RESEARCHER_FULLNAME] (the "Researcher") has requested permission to use the ImageNet database (the "Database") at Princeton University and Stanford University. In exchange for such permission, Researcher hereby agrees to the following terms and conditions:
@@ -48,13 +48,13 @@ By accessing this data you agree to their terms of use provided on their website
 7. The law of the State of New Jersey shall apply to all disputes under this agreement.
 :::
 
-1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [here](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
+1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [<ins>**here**</ins>](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
 2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path. You can mount this and use directly in your code. This is preferred due to the large number of small files.
 3. **Direct**: The file path on `klone` is `/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
 
 ## How to cite?
 
-Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, Alexander C. Berg and Li Fei-Fei. **ImageNet Large Scale Visual Recognition Challenge**. *IJCV, 2015*. [[www](https://www.image-net.org/challenges/LSVRC/index.php)] [[pdf](https://link.springer.com/article/10.1007/s11263-015-0816-y)]
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, Alexander C. Berg and Li Fei-Fei. **ImageNet Large Scale Visual Recognition Challenge**. *IJCV, 2015*. [<ins>**www**</ins>](https://www.image-net.org/challenges/LSVRC/index.php) [<ins>**pdf**</ins>](https://link.springer.com/article/10.1007/s11263-015-0816-y)
 
 ```
 @article{ILSVRC15,

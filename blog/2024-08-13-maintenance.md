@@ -18,7 +18,7 @@ We are happy to announce the preview launch of our self-hosted S3 storage called
 
 S3 uses **buckets** as containers to store data, where each bucket can hold 100,000,000 **objects**, which are the actual files or data you store. Each object within a bucket is identified by a unique key, making it easy to organize and retrieve your data efficiently. Public links can be generated for KOPAH objects so that users can share buckets and objects with collaborators. 
 
-[**Click here to learn more about KOPAH S3.**](https://hyak.uw.edu/docs/storage/kopah)
+[<ins>**Click here to learn more about KOPAH S3.**</ins>](https://hyak.uw.edu/docs/storage/kopah)
 
 #### Who should use KOPAH?
 
@@ -35,7 +35,7 @@ Requirements:
 
 ### Opportunities
 
-PhD students should check out this opportunity for funding from NVIDIA: [**Graduate Research Fellowship Program**](https://research.nvidia.com/graduate-fellowships?ncid=em-anno-418307&mkt_tok=MTU2LU9GTi03NDIAAAGU66sxhZb7nVknt2ICFMyZpmhp3x-btkJltaLrwMw8SmjKcfYYXy3SoWfDaQgRnSLcpzCf-X_Enesg5ERgNElSwKPLtuRUx5Q-D236iO2nNV_hCkoNsLQ)
+PhD students should check out this opportunity for funding from NVIDIA: [<ins>**Graduate Research Fellowship Program**</ins>](https://research.nvidia.com/graduate-fellowships?ncid=em-anno-418307&mkt_tok=MTU2LU9GTi03NDIAAAGU66sxhZb7nVknt2ICFMyZpmhp3x-btkJltaLrwMw8SmjKcfYYXy3SoWfDaQgRnSLcpzCf-X_Enesg5ERgNElSwKPLtuRUx5Q-D236iO2nNV_hCkoNsLQ)
 
 
 Questions? If you have any questions for us, please reach out to the team by emailing help@uw.edu with Hyak in the subject line.

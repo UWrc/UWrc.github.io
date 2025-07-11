@@ -3,7 +3,7 @@ id: boto3
 title: Programmatic Usage
 ---
 
-As Kopah has a S3-compliant API, many tools developed for S3 will also work with Kopah. This page documents one such tool, the Python AWS SDK [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), but there are also [AWS SDKs](https://aws.amazon.com/developer/tools/) for many other languages and third party tools. Boto3 provides a programmatic interface for most, if not all, [s3/s5cmd](cli.md) options on top of handling all of the behind the scenes to provide efficient network access so you don't have to.
+As Kopah has a S3-compliant API, many tools developed for S3 will also work with Kopah. This page documents one such tool, the Python AWS SDK [<ins>**Boto3**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html), but there are also [<ins>**AWS SDKs**</ins>](https://aws.amazon.com/developer/tools/) for many other languages and third party tools. Boto3 provides a programmatic interface for most, if not all, [<ins>**s3/s5cmd**</ins>](cli.md) options on top of handling all of the behind the scenes to provide efficient network access so you don't have to.
 
 :::note
 While boto3 is a powerful tool, its not always the best one for the job. If you are working with commonly formatted data, such as csv files, it may be worth doing some searching to see if there are existing tools designed for that out there already before trying to reinvent the wheel
@@ -11,13 +11,13 @@ While boto3 is a powerful tool, its not always the best one for the job. If you 
 
 ## Installation
 
-Boto3 is installed in the default python docker image, which you can pull with `apptainer pull docker://python`, so any image based on that will come with Boto3 out of the box. If you do need to install it there are instructions for both [pip](https://pypi.org/project/boto3/) and [conda](https://anaconda.org/conda-forge/boto3). Once Boto3 is installed there is no required setup, but it is strongly recommended to setup environment variables for your Kopah keys as outlined in the [S5cmd setup](cli.md) to avoid hardcoding keys.
+Boto3 is installed in the default python docker image, which you can pull with `apptainer pull docker://python`, so any image based on that will come with Boto3 out of the box. If you do need to install it there are instructions for both [<ins>**pip**</ins>](https://pypi.org/project/boto3/) and [<ins>**conda**</ins>](https://anaconda.org/conda-forge/boto3). Once Boto3 is installed there is no required setup, but it is strongly recommended to setup environment variables for your Kopah keys as outlined in the [<ins>**S5cmd setup**</ins>](cli.md) to avoid hardcoding keys.
 
 ## Usage
 
 ### Boilerplate
 
-Since there isn't any setup with Boto3, that does mean there is some required boilerplate instead. Here is a boilerplate that you can use to create a client object pointing to Kopah. Note [client](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session.client) can be replaced with [resource](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/resources.html) depending on your workload.
+Since there isn't any setup with Boto3, that does mean there is some required boilerplate instead. Here is a boilerplate that you can use to create a client object pointing to Kopah. Note [<ins>**client**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/session.html#boto3.session.Session.client) can be replaced with [<ins>**resource**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/core/resources.html) depending on your workload.
 
 ```python
 import boto3
@@ -31,11 +31,11 @@ s3 = boto3.client('s3', endpoint_url=os.environ['S3_ENDPOINT_URL'],
 
 ### Transfer Files
 
-You can [download or upload](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-uploading-files.html) a file with a file path using `s3.download_file('<bucket_name>', '<obj_name>', '<file_path')` and `s3.upload_file('<file_path', '<bucket_name>', '<obj_name>')`, where s3 is an initialized boto3.client(). Alternatively you can use `s3.download_fileobj()` and `s3.upload_fileobj()` to instead work with file objects (like those returned by open()) instead of direct file paths.
+You can [<ins>**download or upload**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-uploading-files.html) a file with a file path using `s3.download_file('<bucket_name>', '<obj_name>', '<file_path')` and `s3.upload_file('<file_path', '<bucket_name>', '<obj_name>')`, where s3 is an initialized boto3.client(). Alternatively you can use `s3.download_fileobj()` and `s3.upload_fileobj()` to instead work with file objects (like those returned by open()) instead of direct file paths.
 
 ### Modifying Buckets
 
-You can [create](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-creating-buckets.html) or [delete](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/delete_bucket.html) buckets with `s3.create_bucket(Bucket='<bucket_name>')` and `s3.delete_bucket(Bucket='<bucket_name>'`. It is also possible to change bucket access permissions and properties, for example making it publicly readable with a url, as detailed in the [Boto3 docs](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3.html). For all of these commands replace `<bucket_name>` with the actual name of the Kopah S3 bucket you want to create/delete/modify.
+You can [<ins>**create**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-creating-buckets.html) or [<ins>**delete**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/delete_bucket.html) buckets with `s3.create_bucket(Bucket='<bucket_name>')` and `s3.delete_bucket(Bucket='<bucket_name>'`. It is also possible to change bucket access permissions and properties, for example making it publicly readable with a url, as detailed in the [<ins>**Boto3 docs**</ins>](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3.html). For all of these commands replace `<bucket_name>` with the actual name of the Kopah S3 bucket you want to create/delete/modify.
 
 ### Streaming a File
 

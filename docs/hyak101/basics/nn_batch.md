@@ -67,7 +67,7 @@ ls /
 bin  boot  dev environment  etc  gscratch  home  lib  lib64  locator  media  mmfs1  mnt  opt  proc  root  run sbin  scr  singularity srv  sys  tmp  usr  var
 ```
 
-Notice that we have all the directories we would have if we listed the root directory of `klone`, but now we have a directory `locator/`, which contains the files associated with the [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git). Let's list the Locator program files:
+Notice that we have all the directories we would have if we listed the root directory of `klone`, but now we have a directory `locator/`, which contains the files associated with the [<ins>**Locator GitHub Repository**</ins>](https://github.com/kr-colab/locator.git). Let's list the Locator program files:
 
 ```js
 ls /locator/
@@ -105,7 +105,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Next, we can run Locator with the *Populus trichocarpa* dataset.
 
 :::warning
-If you haven't already, it is critical you complete the [**set up instructions**](https://hyak.uw.edu/docs/hyak101/basics/advanced#tutorial-materials) to follow along.
+If you haven't already, it is critical you complete the [<ins>**set up instructions**</ins>](https://hyak.uw.edu/docs/hyak101/basics/advanced#tutorial-materials) to follow along.
 :::
 
 First, let's take a look at the data.
@@ -228,7 +228,7 @@ ls out/
 potr_predictions1_fitplot.pdf  potr_predictions1_history.txt  potr_predictions1_params.json  potr_predictions1_predlocs.txt
 ```
 
-See the [**Locator publication**](https://elifesciences.org/articles/54507) (Battey et al. 2020) and [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git) for full explanation of the output files.
+See the [<ins>**Locator publication**</ins>](https://elifesciences.org/articles/54507) (Battey et al. 2020) and [<ins>**Locator GitHub Repository**</ins>](https://github.com/kr-colab/locator.git) for full explanation of the output files.
 
 The `potr_predictions1_predlocs.txt` file shows longitude and latitude positions for all individuals that were treated as unknowns in the test.
 
@@ -290,7 +290,7 @@ apptainer exec --cleanenv --bind /gscratch locator.sif python /locator/scripts/l
 #### Truncated for website view
 ```
 
-The command being executed is the same as that explained above, but with a different `--sample_data` input file and a distinct prefix for the output files. The difference we are demonstrating with this exercise is the lines in the script beginning with `#SBATCH` also known as "sbatch directives" or flags passed to sbatch which give instructions about the job we are requesting. This script requests a **single node** or a single server/computer and a **single task** with **5G of RAM** or memory for a **maximum time of 10 minutes**. See [**Slurm sbatch documentation**](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` or `cpu-g2` partition available, replace `--partition=ckpt` with `--partition=compute` or `--partition=cpu-g2` and your job will be scheduled faster because you will be requesting a job on resources with priority access.
+The command being executed is the same as that explained above, but with a different `--sample_data` input file and a distinct prefix for the output files. The difference we are demonstrating with this exercise is the lines in the script beginning with `#SBATCH` also known as "sbatch directives" or flags passed to sbatch which give instructions about the job we are requesting. This script requests a **single node** or a single server/computer and a **single task** with **5G of RAM** or memory for a **maximum time of 10 minutes**. See [<ins>**Slurm sbatch documentation**</ins>](https://slurm.schedmd.com/sbatch.html) for the full list of options. Remember to use `hyakalloc` to find which accounts and partitions are available to you. If you have a `compute` or `cpu-g2` partition available, replace `--partition=ckpt` with `--partition=compute` or `--partition=cpu-g2` and your job will be scheduled faster because you will be requesting a job on resources with priority access.
 
 Once you have edited the script to fit your needs, you can submit it with `sbatch`.
 
@@ -326,7 +326,7 @@ The STate of the job is listed under "ST" in this window. Some of the most commo
 
 In the next exercises, leave this terminal open and execute `watch -n 10 squeue -u UWNetID`. Continue with the exercises in the other terminal window.
 
-![](/img/docs/hyak101/basics/two_terminals.png 'Screencapture showing two terminals.')
+![Screencapture showing two terminals](/img/docs/hyak101/basics/two_terminals.png)
 
 :::
 

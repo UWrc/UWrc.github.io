@@ -17,9 +17,9 @@ Lolo is the UW's archive solution, it is an LTO-8 or "tape" based platform.
 
 ## How do I get Lolo capacity?
 
-[Click here to be re-directed to the Lolo Storage Request Form](https://uw.service-now.com/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
+[<ins>**Click here to be re-directed to the Lolo Storage Request Form**</ins>](https://uw.service-now.com/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
 
-[Click here to access the Lolo service catalog](https://uw.service-now.com/it?id=sc_entry&sys_id=77750042db1e73c037ae9ec6db961994&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2).
+[<ins>**Click here to access the Lolo service catalog**</ins>](https://uw.service-now.com/it?id=sc_entry&sys_id=77750042db1e73c037ae9ec6db961994&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2).
 
 :::note
 

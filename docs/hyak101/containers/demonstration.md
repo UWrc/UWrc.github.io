@@ -3,11 +3,11 @@ id: demonstration
 title: Pulling Containers
 ---
 
-Pulling pre-built container images is often the easiest and quickest way to run your desired software environment. In this tutorial, we will pull a container from [**Docker Hub**](https://hub.docker.com/). DockerHub is a cloud-based registry that provides access to a large repository of pre-built container images. Other container registries include [**NVIDIA NGC**](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=), [**Biocontainers**](https://biocontainers.pro/registry), [**Sylabs.io**](https://cloud.sylabs.io/library), and [**Quay.io**](https://quay.io/). For more information on accessible container registries, check out the containers documentation page [**HERE**](https://hyak.uw.edu/docs/tools/containers#container-repositories).
+Pulling pre-built container images is often the easiest and quickest way to run your desired software environment. In this tutorial, we will pull a container from [<ins>**Docker Hub**</ins>](https://hub.docker.com/). DockerHub is a cloud-based registry that provides access to a large repository of pre-built container images. Other container registries include [<ins>**NVIDIA NGC**</ins>](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=), [<ins>**Biocontainers**</ins>](https://biocontainers.pro/registry), [<ins>**Sylabs.io**</ins>](https://cloud.sylabs.io/library), and [<ins>**Quay.io**</ins>](https://quay.io/). For more information on accessible container registries, check out the containers documentation page [<ins>**HERE**</ins>](https://hyak.uw.edu/docs/tools/containers#container-repositories).
 
 ## Set Up
 
-To start, log into Hyak and navigate away from your home directory to a directory where you have access to storage. For this tutorial, we will work these exercises using a directory in `/gscratch/scrubbed/`. You may choose a working directory under another path on the filesystem, but we recommend not performing these exercises in your Home directory due to storage limitations. Learn more about storage on Hyak [**HERE**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory).  
+To start, log into Hyak and navigate away from your home directory to a directory where you have access to storage. For this tutorial, we will work these exercises using a directory in `/gscratch/scrubbed/`. You may choose a working directory under another path on the filesystem, but we recommend not performing these exercises in your Home directory due to storage limitations. Learn more about storage on Hyak [<ins>**HERE**</ins>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory).  
 
 ```js
 # Remember to replace the word "UWNetID" in the command below with your UW NetID. 
@@ -45,13 +45,13 @@ salloc --partition=ckpt-all --cpus-per-task=1 --mem=10G --time=2:00:00
 
 ## Pulling a Container to Hyak from Docker Hub
 
-For this exercise, we will pull a Python container from [**Docker Hub**](https://hub.docker.com/). [**Follow this link to open Docker Hub**](https://hub.docker.com/) and search for Python. Choose the first search result with the green badge symbol next to it. This green symbol indicates that it is an official docker image.
+For this exercise, we will pull a Python container from [<ins>**Docker Hub**</ins>](https://hub.docker.com/). [<ins>**Follow this link to open Docker Hub**</ins>](https://hub.docker.com/) and search for Python. Choose the first search result with the green badge symbol next to it. This green symbol indicates that it is an official docker image.
 
-![](/img/docs/containers-tutorial/dockerhub_python1.png 'Official Python Image on Docker')
+![Official Python Image on Docker](/img/docs/containers-tutorial/dockerhub_python1.png)
 
 Next, click on the "Tags" tab next to the "Overview" tab. Notice how you can search for previous versions of Python here. In this tutorial, we will download the most recent version of Python (as of Fall 2024), which is installed in a container running Ubuntu's slim-bullseye release. Copy the code from the code box for the `3.9.20-bullseye` image and paste it into your terminal.
 
-![](/img/docs/containers-tutorial/dockerhub_python2.png 'Container pull code for Python image')
+![Container pull code for Python image](/img/docs/containers-tutorial/dockerhub_python2.png)
 
 Omit `docker pull` and replace it with `apptainer pull docker://` so Apptainer pulls the container image from Docker Hub and converts it into an Apptainer container. Run this code to pull and build the container.
 
@@ -91,9 +91,9 @@ python_3.9.20-slim-bullseye.sif
 
 When building a container, you may encournter the following error:
 
-![](/img/docs/disk-quota-exceeded.png 'Disk Quota Exceeded Error Message')
+![Disk Quota Exceeded Error Message](/img/docs/disk-quota-exceeded.png)
 
-If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your **[home directory](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)**  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
+If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the stroage limit in your [<ins>**home directory**</ins>](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory)  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
 ```js
 du -h --max-depth 1
 ```

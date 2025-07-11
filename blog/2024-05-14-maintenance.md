@@ -18,8 +18,8 @@ Thanks again for your patience with our monthly scheduled maintenance, there are
 
 **Apptainer on MOX:** Apptainer (formerly Singularity) is the root-less containerization solution we provide on both Hyak clusters. Apptainer version 1.3.1 was deployed on both `klone` and MOX. As a reminder, on `klone` Apptainer is accessed through a module and is only available on compute nodes after `module load apptainer`. On MOX, Apptainer is default software and can be accessed with Apptainer commands directly after starting an interactive job for example, `apptainer --version`. 
 
-**Training Opportunities:** COMPLECS (San Diego Supercomputer) is hosting an Intermediate Linux Shell Scripting online workshop on Thursday May, 16 at 11:00 am Pacific Time. [**Register here**](https://na.eventscloud.com/ereg/newreg.php?eventid=780668&).
+**Training Opportunities:** COMPLECS (San Diego Supercomputer) is hosting an Intermediate Linux Shell Scripting online workshop on Thursday May, 16 at 11:00 am Pacific Time. [<ins>**Register here**</ins>](https://na.eventscloud.com/ereg/newreg.php?eventid=780668&).
 
-Our next scheduled maintenance will be **Tuesday June, 11, 2024**. Stay informed by joining our mailing list. [**Sign up here.**](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)  
+Our next scheduled maintenance will be **Tuesday June, 11, 2024**. Stay informed by joining our mailing list. [<ins>**Sign up here.**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)  
 
 **Questions?** If you have any questions for us, please reach out to the team by emailing **help@uw.edu** with Hyak in the subject line.

@@ -18,13 +18,13 @@ The next maintenance will be **Tuesday December 10, 2024**.
 
 ### Upcoming Training
 
-**Hyak: Scheduling jobs with Slurm workshop** is on Thursday, November 14th, from 10 a.m. to 12 p.m. in the WRF Data Science Studio (UW Physics/Astronomy Tower, 6th Floor; 3910 15th Ave NE, Seattle, WA 98195), and will cover Hyak’s job scheduler Slurm, interactive jobs, batch jobs, and array jobs.  [**REGISTER HERE!**](https://form.jotform.com/finchkn/hyak-scheduling-jobs-with-slurm) 
+**Hyak: Scheduling jobs with Slurm workshop** is on Thursday, November 14th, from 10 a.m. to 12 p.m. in the WRF Data Science Studio (UW Physics/Astronomy Tower, 6th Floor; 3910 15th Ave NE, Seattle, WA 98195), and will cover Hyak’s job scheduler Slurm, interactive jobs, batch jobs, and array jobs.  [<ins>**REGISTER HERE!**</ins>](https://form.jotform.com/finchkn/hyak-scheduling-jobs-with-slurm) 
 
-**Hyak: Introduction to Deep Learning workshop** is on Tuesday, December 3rd, from 10 to 11:50 a.m. in CSE2 (Gates Center) Room 371. Participants will start with a computer vision example, training a model on a sample dataset, and then learn how to execute the training process on Hyak. [**REGISTER HERE!**](https://form.jotform.com/finchkn/hyak-intro-deep-learning)
+**Hyak: Introduction to Deep Learning workshop** is on Tuesday, December 3rd, from 10 to 11:50 a.m. in CSE2 (Gates Center) Room 371. Participants will start with a computer vision example, training a model on a sample dataset, and then learn how to execute the training process on Hyak. [<ins>**REGISTER HERE!**</ins>](https://form.jotform.com/finchkn/hyak-intro-deep-learning)
 
 ### Office Hours
 
-**Zoom office hours** will be held on Wednesdays at 2pm. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [**Click here to Register for Zoom Office Hours**](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu)
+**Zoom office hours** will be held on Wednesdays at 2pm. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu)
 
 **In-person office hours** will be held on Thursdays at 2pm at the eScience Institute (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). 
  

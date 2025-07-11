@@ -58,15 +58,15 @@ We are not going to run this script right now, but when we do, it produces an ou
 #### For Windows Users: 
 Jump to demonstrations for how to manually set the host name: 
 
-[**Flexible Connections EXTRA CREDIT**](https://hyak.uw.edu/docs/hyak101/python/ssh#windows-users-a-set-of-customized-local-configurations)
+[<ins>**Flexible Connections EXTRA CREDIT**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh#windows-users-a-set-of-customized-local-configurations)
 
-[**Jump to Next Step**](https://hyak.uw.edu/docs/hyak101/python/slurm-forward#a-script-for-ssh-port-forwarding)
+[<ins>**Jump to Next Step**</ins>](https://hyak.uw.edu/docs/hyak101/python/slurm-forward#a-script-for-ssh-port-forwarding)
 
 :::
 
 This script may take a little hacking on your part: while the Bash portion should work regardless
 of your operating system, there are too many versions of `sed` to make this work for everyone.
-[**You can download the script by clicking here**](https://hyak.uw.edu/files/hyak101/python/set-hyak-node.sh), and we'll walk through it afterwards:
+[<ins>**You can download the script by clicking here**</ins>](https://hyak.uw.edu/files/hyak101/python/set-hyak-node.sh), and we'll walk through it afterwards:
 
 ```js title="set-hyak-node.sh"
 #!/bin/bash
@@ -126,14 +126,14 @@ Host klone-node
   ProxyJump klone-login
 ```
 
-In short, `set-hyak-node.sh` is a whole script to replace the `Hostname` with whatever node is running your `klone-container` job. That is why during the [**Flexible Connections EXTRA CREDIT at the bottom of the previous section**](https://hyak.uw.edu/docs/hyak101/python/ssh), we had you "test your connection" by manually replacing `n3000` with the compute node where you had a job running. The result of using this script and manually changing this is the same. 
+In short, `set-hyak-node.sh` is a whole script to replace the `Hostname` with whatever node is running your `klone-container` job. That is why during the [<ins>**Flexible Connections EXTRA CREDIT at the bottom of the previous section**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh), we had you "test your connection" by manually replacing `n3000` with the compute node where you had a job running. The result of using this script and manually changing this is the same. 
 
 :::warning `sed` version matters
 If this `sed` doesn't work, and you can't figure out how to modify it for your version of `sed`, you can just as easily
 edit this file by hand, with `nano` or another text editor, and change the `Hostname` line to the correct node.
 :::
 
-If you want to test that your script works to replace the Hostname, [**Return to Flexible Connections EXTRA CREDIT at the bottom of the page**](https://hyak.uw.edu/docs/hyak101/python/ssh), and once you have a job called `klone-container` running on `klone`, execute `set-hyak-node.sh` and see if the script works by viewing `~/.ssh/klone-node-config` before and after running the script to see when Hostname changes. Like this: 
+If you want to test that your script works to replace the Hostname, [<ins>**Return to Flexible Connections EXTRA CREDIT at the bottom of the page**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh), and once you have a job called `klone-container` running on `klone`, execute `set-hyak-node.sh` and see if the script works by viewing `~/.ssh/klone-node-config` before and after running the script to see when Hostname changes. Like this: 
 
 ```js
 cat ~/.ssh/klone-node-config
@@ -162,13 +162,13 @@ If Hostname is left blank (i.e., no placeholder) this will not work. Edit `~/.ss
 **These steps are to be performed on your local computer**
 :::
 
-I swear, this is the last one. [**You can download it to your local computer by clicking here**](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). Don't forget to make the script executabe after you download it. 
+I swear, this is the last one. [<ins>**You can download it to your local computer by clicking here**</ins>](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). Don't forget to make the script executabe after you download it. 
 
 ```js
 chmod +x start-jupyter-forwarding.sh
 ```
 
-We'll use it during the [**Start up Sequence in the Next Section**](https://hyak.uw.edu/files/hyak101/python/start-up-seq). The takeaway message is that this script gets your Jupyter session information from `klone` (via all the ssh configurations you set up), starts port forwarding, and gives you instructions for accessing Jupyter through the Browser on your local computer.
+We'll use it during the [<ins>**Start up Sequence in the Next Section**</ins>](https://hyak.uw.edu/files/hyak101/python/start-up-seq). The takeaway message is that this script gets your Jupyter session information from `klone` (via all the ssh configurations you set up), starts port forwarding, and gives you instructions for accessing Jupyter through the Browser on your local computer.
 
 :::tip EXTRA CREDIT: Understanding the Script
 
@@ -216,7 +216,7 @@ JUPYTER_TOKEN=${JUPYTER_INFO#* }
 The variable `JUPYTER_PORT` will strip a space (and everything after it) from `JUPYTER_INFO`, leaving us with just the port. The variable `JUPYTER_TOKEN` is the opposite: it will strip a space (and everything *before* it) from `JUPYTER_INFO`, leaving us with just the token.
 
 If you want to learn more about string manipulation in Bash, check out
-The Linux Documentation Project's [**Advanced Bash Guide**](https://tldp.org/LDP/abs/html/string-manipulation.html).
+The Linux Documentation Project's [<ins>**Advanced Bash Guide**</ins>](https://tldp.org/LDP/abs/html/string-manipulation.html).
 
 #### Forwarding the port
 

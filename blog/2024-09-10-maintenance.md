@@ -14,7 +14,7 @@ The next maintenance will be **Tuesday October 8, 2024**.
 
 ### AMD Math libraries
 
-In June we announced the addition of AMD Nodes and Slices to `klone` which make up our generation 2 or `g2` collection of resources. [**Click here to read more about the difference between our `g1` and `g2` resources.**](https://hyak.uw.edu/blog/g1-vs-g2) During August, we installed a new AMD compiler suite, AOCC, along with specialized math libraries like AOCL, OpenBLAS, and ScaLAPACK as `modules` to make the most of this upgade. The new modules are useful on all partitions. The AOCC and AOCL modules are particularly relevant for partitions `cpu-g2`, `cpu-g2-mem2x`, and `ckpt-g2`. These tools are designed to optimize performance on AMD processors, speeding up complex mathematical computations. Whether you're working on simulations, data analysis, or any number-crunching tasks, these libraries may help ensure you get faster, more efficient results. If you're looking to boost your workflow, it's worth exploring how these libraries can benefit your projects. Here are the names of the new modules:
+In June we announced the addition of AMD Nodes and Slices to `klone` which make up our generation 2 or `g2` collection of resources. [<ins>**Click here to read more about the difference between our `g1` and `g2` resources.**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) During August, we installed a new AMD compiler suite, AOCC, along with specialized math libraries like AOCL, OpenBLAS, and ScaLAPACK as `modules` to make the most of this upgade. The new modules are useful on all partitions. The AOCC and AOCL modules are particularly relevant for partitions `cpu-g2`, `cpu-g2-mem2x`, and `ckpt-g2`. These tools are designed to optimize performance on AMD processors, speeding up complex mathematical computations. Whether you're working on simulations, data analysis, or any number-crunching tasks, these libraries may help ensure you get faster, more efficient results. If you're looking to boost your workflow, it's worth exploring how these libraries can benefit your projects. Here are the names of the new modules:
 
 ```js
 aocc/4.2.0
@@ -33,12 +33,12 @@ In our benchmarking tests, performance of these libraries was similar on `g1` an
 
 Hyak HPC Staff Scientist and Facilitator, Kristen Finch, will be holding office hours fall term. Zoom office hours will be held on Wednesdays at 2pm. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email.
 
-[**Click here to Register**](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu)
+[<ins>**Click here to Register**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu)
 
 In-person office hours will be held on Thursdays at 2pm at the eScience Institute (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). 
-[**Click here to RSVP for in-person Office Hours**](https://docs.google.com/spreadsheets/d/e/2PACX-1vTHNxjZuAIPACn6DxOL_QzKFx9CjE7036SrOhn382JnJ74v62QtJNHUQEMSg6GEd0HomFQXu8WvWP79/pubhtml).
+[<ins>**Click here to RSVP for in-person Office Hours**</ins>](https://docs.google.com/spreadsheets/d/e/2PACX-1vTHNxjZuAIPACn6DxOL_QzKFx9CjE7036SrOhn382JnJ74v62QtJNHUQEMSg6GEd0HomFQXu8WvWP79/pubhtml).
 
-[**Click here to visit the eScience Office Hours page to see additional eScience office hours including AI/ML, R, Earth Data, and Python**](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule) (not available to help with Homework).
+[<ins>**Click here to visit the eScience Office Hours page to see additional eScience office hours including AI/ML, R, Earth Data, and Python**</ins>](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule) (not available to help with Homework).
  
 If you would like to request 1 on 1 help, please send a ticket to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting with Kristen.
 
@@ -46,12 +46,12 @@ If you would like to request 1 on 1 help, please send a ticket to **help@uw.edu*
 
 In case you missed it, we recorded the August 2024 Wednesday training sessions and posted them on the UW-IT YouTube channel under the playlist, "Hyak Training." Here are the links: 
 
-* [**Hyak: R and Rstudio (August 28, 2024) recording.**](https://youtu.be/rcorOJV93tY)
+* [<ins>**Hyak: R and Rstudio (August 28, 2024) recording.**</ins>](https://youtu.be/rcorOJV93tY)
  
-* [**Hyak: Containers are your friend (August 21, 2024) recording**](https://youtu.be/zPsvUQV_GV0)
+* [<ins>**Hyak: Containers are your friend (August 21, 2024) recording**</ins>](https://youtu.be/zPsvUQV_GV0)
   
-* [**Hyak: Slurm and Advanced Slurm (August 14, 2024) recording**](https://youtu.be/iYM7xpRhp8I)
+* [<ins>**Hyak: Slurm and Advanced Slurm (August 14, 2024) recording**</ins>](https://youtu.be/iYM7xpRhp8I)
   
-* [**Hyak Basics: Linux CLI workshop (August 7, 2024) recording**](https://youtu.be/WqGCJMQhiC0)
+* [<ins>**Hyak Basics: Linux CLI workshop (August 7, 2024) recording**</ins>](https://youtu.be/WqGCJMQhiC0)
 
-Keep an eye on your indox for updates about our Fall training schedule; training sessions are currently TBA. Trainings will be announced via the Hyak mailing list, [**click here to join the mailing list.**](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)
+Keep an eye on your indox for updates about our Fall training schedule; training sessions are currently TBA. Trainings will be announced via the Hyak mailing list, [<ins>**click here to join the mailing list.**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)

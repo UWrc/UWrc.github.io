@@ -19,7 +19,7 @@ Over the last several months the login node has been crashing on occasion. We ha
 While developing your code with connectivity to the server is a great usage of our services, connecting directly to the login node via the `Remote-SSH` extension will result in VS Code server processes running silently in the background and leading to node instability. As a reminder, *we prohibit users running processes on the login node*. 
 
 :::important New Documentation
-The steps discussed here for responsible use of VS Code have been added to our documentation. [**Please review the solutions for connecting VS Code to Hyak**](/docs/tools/vscode).
+The steps discussed here for responsible use of VS Code have been added to our documentation. [<ins>**Please review the solutions for connecting VS Code to Hyak**</ins>](/docs/tools/vscode).
 :::
 
 1. Check which processes are running on the login node, especially if you have been receiving klone usage violations when you are not aware of jobs running. Look for `vscode-server` among the listed processes. 
@@ -28,15 +28,15 @@ The steps discussed here for responsible use of VS Code have been added to our d
     $ ps aux | grep UWNetID
     ``` 
 
-2. If you need to develop your code with connectivity to VS Code, use a `ProxyJump` to open a connection directly to a compute node. [Step 1 documentation.](/docs/hyak101/python/ssh) and then use the `Remote-SSH` extension to connect to that node through VS Code on your local machine, preserving the login node for the rest of the community. [Step 2 documentation.](/docs/hyak101/python/jobs#using-vscode-on-a-compute-node)
+2. If you need to develop your code with connectivity to VS Code, use a `ProxyJump` to open a connection directly to a compute node. [<ins>**Step 1 documentation.**</ins>](/docs/hyak101/python/ssh) and then use the `Remote-SSH` extension to connect to that node through VS Code on your local machine, preserving the login node for the rest of the community. [<ins>**Step 2 documentation.**</ins>](/docs/hyak101/python/jobs#using-vscode-on-a-compute-node)
 
-3. Lastly, VS Code’s high usage is due to it silently installing its built in features into the user's home directory `~/.vscode` on klone enabling intelligent autocomplete features. This is a well known issue, and there is a solution that involves disabling the `@builtin TypeScript` plugin from the VS Code on your local machine. [Here is a link to a blog post about the issue and the super-easy solution.](https://medium.com/good-robot/use-visual-studio-code-remote-ssh-sftp-without-crashing-your-server-a1dc2ef0936d) Disabling `@builtin TypeScript` will reduce your usage of the shared resources and avoid problems. 
+3. Lastly, VS Code’s high usage is due to it silently installing its built in features into the user's home directory `~/.vscode` on klone enabling intelligent autocomplete features. This is a well known issue, and there is a solution that involves disabling the `@builtin TypeScript` plugin from the VS Code on your local machine. [<ins>**Here is a link to a blog post about the issue and the super-easy solution.**</ins>](https://medium.com/good-robot/use-visual-studio-code-remote-ssh-sftp-without-crashing-your-server-a1dc2ef0936d) Disabling `@builtin TypeScript` will reduce your usage of the shared resources and avoid problems. 
 
 In addition to the upgrade of the storage driver, we performed updates to security packages. 
 
 ### Training Opportunities
 
-We wanted to make you aware of two training opportunities with the San Diego Supercomputer Center. If you are interested in picking up some additional skills and experience in HPC, [check this blog post](/blog/2024-sdsc-training).
+We wanted to make you aware of two training opportunities with the San Diego Supercomputer Center. If you are interested in picking up some additional skills and experience in HPC, [<ins>**check this blog post**</ins>](/blog/2024-sdsc-training).
 
 ### Questions?
 
