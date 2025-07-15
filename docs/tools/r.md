@@ -46,7 +46,7 @@ If you plan on using multiple R versions you will want to set `R_LIBS` appropria
 ## Containers from Rocker
 
 The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R and many include various package collections. [<ins>**The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R**</ins>](https://hub.docker.com/u/rocker)
-(https://hub.docker.com/u/rocker). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
+(<ins>https://hub.docker.com/u/rocker</ins>). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
 
 ### R-base Container
 
@@ -337,7 +337,7 @@ The login will appear to hang, but your connection is now open. If you are disco
 Do not use the rstudio-server password to open the ssh tunnel. After your ssh command, your UWNetID password is required. Multiple failed login attempts will result in a IP ban. 
 :::
 
-Next, open a new browser window to **http://localhost:8787** and provide **the password from the output file** (`rstudio-server_12345678.out` and `410lzxMwV9EObv7aDEjm` in this example).
+Next, open a new browser window to <ins>**http://localhost:8787**</ins> and provide **the password from the output file** (`rstudio-server_12345678.out` and `410lzxMwV9EObv7aDEjm` in this example).
 
 Once you log in you should see an environment similar to the below. Both your Home directory and gscratch folders will be mounted.
 
@@ -358,7 +358,7 @@ scancel -f 12345678
 
 Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method everytime you want to use Rstudio by starting at [<ins>**Step 3: Start the Rstudio Server above.**</ins>](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
 
-If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message.
+If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message.
 
 ### R via Modules
 

@@ -18,13 +18,13 @@ Offered applications are available from the `Interactive Apps` tab. Clicking on 
 
 While some may offer additional configuration, all forms allow you to specify the following parameters:
 
-- ** Account ** - The account that has access to the resouces you need. This may be your lab or research group's name.
-- ** Partition ** - The partition that has the resources you need. 
-- ** Tasks ** - Instances of your application -  maximum number of parallel tasks lauched by the job. Most jobs will only need one task.
-- ** CPUs per task ** - Number of CPUs per task.
-- ** Memory (GB) ** - Total memory required per node in GB. 
-- ** GPU Type (optional) ** Type of GPU card required.
-- ** Number of hours ** - Maximum number of hours the jobs will run.
+- **Account** - The account that has access to the resouces you need. This may be your lab or research group's name.
+- **Partition** - The partition that has the resources you need. 
+- **Tasks** - Instances of your application -  maximum number of parallel tasks lauched by the job. Most jobs will only need one task.
+- **CPUs per task** - Number of CPUs per task.
+- **Memory (GB)** - Total memory required per node in GB. 
+- **GPU Type (optional)** Type of GPU card required.
+- **Number of hours** - Maximum number of hours the jobs will run.
 
 :::info
 Allocating more resources, especially GPUs, can lead to longer wait times. Use `hyakalloc` to identify free resources before submitting a job.

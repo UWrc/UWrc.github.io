@@ -51,7 +51,7 @@ module purge
 
 ## `klone`
 
-The `klone` cluster uses the more feature-rich LMOD implementation of modules. You're welcome to <a href="mailto:help@uw.edu?subject=klone module help">email</a> us if you have any questions about modulefile creation on `klone`.
+The `klone` cluster uses the more feature-rich LMOD implementation of modules. You're welcome to [<ins>**email**</ins>](mailto:help@uw.edu?subject=klone-module-help) us if you have any questions about modulefile creation on `klone`.
 
 ### LMOD
 

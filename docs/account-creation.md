@@ -36,9 +36,9 @@ Having aUW NetID is a pre-requisite for any type of Hyak account. If you are an 
 ### Limitations of Demo Accounts
 
 Demonstration accounts are subject to the following restrictions:
-* Jobs may only be submitted to the <a href="https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition">**ckpt, ckpt-g2, or ckpt-all partitions**</a>.
-* Storage is limited under the demo account to <a href="https://hyak.uw.edu/docs/storage/gscratch#user-home-directory">**10GB in the home directory**</a>. For additional temporary storage you may utilize <a href="https://hyak.uw.edu/docs/storage/gscratch#scrubbed"> **/gscratch/scrubbed storage**</a>. Be aware that files in scrubbed not used for several months will be deleted. This storage in not intended for large datasets, but can be helpful as you try out workflows on Hyak.
+* Jobs may only be submitted to the [<ins>**ckpt, ckpt-g2, or ckpt-all partitions**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)
+* Storage is limited under the demo account to [<ins>**10GB in the home directory**</ins>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory). For additional temporary storage you may utilize [<ins>**/gscratch/scrubbed storage**</ins>](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). Be aware that files in scrubbed not used for several months will be deleted. This storage in not intended for large datasets, but can be helpful as you try out workflows on Hyak.
 * You may submit as many jobs as you like, but the scheduler will only allow one to run at a time.
 * Your jobs are limited to 80 cores, 360 GB of memory, 2 GPUs, and a maximum of 2 discrete nodes.
 
-If you intend to purchase slices and are unable to test your workflows to your satisfaction, <a href="mailto:help@uw.edu?subject=hyak support">**please click here to open a support ticket**</a> explaining the features you would like to test before purchasing slices, and we will find a way to accomedate you. 
+If you intend to purchase slices and are unable to test your workflows to your satisfaction, [<ins>**please click here to open a support ticket**</ins>](mailto:help@uw.edu?subject=hyaksupport) explaining the features you would like to test before purchasing slices, and we will find a way to accomedate you. 

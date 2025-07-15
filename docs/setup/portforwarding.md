@@ -6,7 +6,7 @@ title: SSH Port Forwarding
 Configuring SSH Single-Port Forwarding
 --------------------------------------
 
-Single port forwarding allows you make a port on your machine behave as though it aimed at another machine on the same port. This allows you to forward a hosted port for a service like RStudio or Jupyter-Notebook on a node inside the `klone` network onto your local machine for access via browser. If properly configured, you should be able to access (per the example below) an HTTP service running on http://z3003.hyak.local:9591 by opening a browser and navigating to http://localhost:9591
+Single port forwarding allows you make a port on your machine behave as though it aimed at another machine on the same port. This allows you to forward a hosted port for a service like RStudio or Jupyter-Notebook on a node inside the `klone` network onto your local machine for access via browser. If properly configured, you should be able to access (per the example below) an HTTP service running on <ins>http://z3003.hyak.local:9591</ins> by opening a browser and navigating to <ins>http://localhost:9591</ins>
 
 Before beginnning this work, you will need to know the node the web service is being run on and port that it can accessed at. The port number should be provided to you when you start the service and the node's hostname is available by typing `hostname` on the terminal after starting an interactive session.
 

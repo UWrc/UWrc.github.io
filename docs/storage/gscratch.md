@@ -154,7 +154,7 @@ If you are leaving UW and are working independently, you should make plans to re
 
 4. **Reclaiming Data From a User That Has Left UW**
 
-In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions via sending an email to help@uw.edu with “Hyak” in the subject line.  
+In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions via sending an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with “Hyak” in the subject line.  
 
 5. **Removing Unused Data**
 

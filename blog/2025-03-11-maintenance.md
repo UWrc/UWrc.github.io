@@ -38,7 +38,7 @@ March maintenance is complete, and Klone is back in operation. Notable updates f
     * 14-Mar: 12:00 PM – 1:00 PM 
     * 19-Mar: 2:00 PM - 3:00 PM
  
-If you would like to request 1 on 1 help, please send an email to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to <ins>**help@uw.edu**</ins> with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Opportunities
 
@@ -54,7 +54,7 @@ If you would like to request 1 on 1 help, please send an email to **help@uw.edu*
 
 * [<ins>**Tania Malik**</ins>](https://www.linkedin.com/in/tania-malik-65251413/), a lecturer at the School of Informatics and Cybersecurity, and a director of [<ins>**HPC Nexus lab**</ins>](www.hpcnexuslab.ie) at TU Dublin, Ireland is looking to support one postdoc under the [<ins>**SUSTAIN-FIT Horizon Europe Programme**</ins>](https://horizoneurope.ie/sustain-fit). If you are passionate about Energy-Efficient High-Performance Computing (HPC) or Green Computing for modern HPC platforms feel free to contact **tania.malik@tudublin.ie** with your CV and a brief research proposal. 
 
-If you have any questions about using Hyak, please start a help request by emailing help@uw.edu with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing <ins>**help@uw.edu**</ins> with "Hyak" in the subject line. 
 
 Happy Computing, 
 
