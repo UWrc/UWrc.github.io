@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,ai,survey,taskforce]
 ---
 
-The Research Working Group of the [<ins>**UW AI Task Force**</ins>](https://www.washington.edu/provost/2024/02/15/task-force-appointed-to-address-ai/) would like faculty and research staff input on the needs and challenges of using AI in research at UW across a broad spectrum of disciplines. Please help by responding to a short survey at: https://forms.gle/mZrV3aCgJYNNBV6j8. Responses by **April 25** would be most helpful, but the survey will remain open until **April 30**.
+The Research Working Group of the [<ins>**UW AI Task Force**</ins>](https://www.washington.edu/provost/2024/02/15/task-force-appointed-to-address-ai/) would like faculty and research staff input on the needs and challenges of using AI in research at UW across a broad spectrum of disciplines. Please help by responding to a short survey at: <ins>https://forms.gle/mZrV3aCgJYNNBV6j8.</ins> Responses by **April 25** would be most helpful, but the survey will remain open until **April 30**.
 
 Thank you in advance for your time, 
 

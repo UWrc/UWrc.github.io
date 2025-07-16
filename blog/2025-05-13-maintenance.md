@@ -31,7 +31,7 @@ During May's maintenance, we've refreshed the operating system images for both l
     * [<ins>**26 May, 8-9am**</ins>](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182345182)
     * [<ins>**2 Jun, 8-9am**</ins>](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182345183)
 
-If you would like to request 1 on 1 help, please send an email to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to <ins>**help@uw.edu**</ins> with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Training Resources  
 

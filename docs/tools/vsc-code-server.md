@@ -137,7 +137,7 @@ The login will appear to hang, but your connection is now open.
 Do not use the code-server password to open the ssh tunnel. After your ssh command, your UWNetID password is required. Multiple failed login attempts will result in a IP ban. 
 :::
 
-Open a new browser window to **http://localhost:8080** and provide **the password from the output file** (`code-server.job.17440706` and `+WwYzgh7YH/yHzUWNWNS` in this example).
+Open a new browser window to <ins>**http://localhost:8080**</ins> and provide **the password from the output file** (`code-server.job.17440706` and `+WwYzgh7YH/yHzUWNWNS` in this example).
 
 ![Input password from output file.](/img/docs/vscode/vsc-pw.png 'Provide Password')
 
@@ -155,7 +155,7 @@ And end the batch job with `scancel` and the JobID on `klone` like the following
 scancel -f 12345678
 ```
 
-If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message. 
+If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message. 
 
 ### Background Reading
 

@@ -3,7 +3,7 @@ id: checkpoint
 title: Using Idle Resources
 ---
 ### Hyak's Condo Model
-The Hyak clusters operate on a condo model, the details of which are here: https://hyak.uw.edu/pricing
+The Hyak clusters operate on a condo model, the details of which are here: [<ins>**Hyak Pricing**</ins>](https://hyak.uw.edu/pricing)
 
 The **first** component of this model is on-demand access to the resources your group has contributed. When you request resources from a partition, for example, with:
 

@@ -302,4 +302,4 @@ And end the job on the compute node with `scancel` on `klone` like the following
 scancel --name vsc-proxy-jump
 ```
 
-If you have trouble with this method, please report errors in an email to **help@uw.edu** with Hyak in the message.
+If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message.
