@@ -13,9 +13,27 @@ If you are a **student** who is paying the student technology fee (STF), you are
 :::
 
 ### Partitions
-The account(s) you are a part of determine the priority access you have to certian partitions. All users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` parititions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
+The account(s) you are a part of determine the priority access you have to certian partitions. The table below outlines the types of compute resources available for each partition. This includes the number of slices, CPU cores, and memory per node.
+:::note Hyak Partition Overview: Slices, CPUs, and Memory Resources
+
+| Partition         | Slices per Node | CPU Cores per Node | Memory per Node |
+|------------------|------------------|---------------------|------------------|
+| compute          | 1                | 16                  | 192 GB           |
+| cpu-g2           | 6                | 192                 | 1536 GB          |
+| cpu-g2-mem2x     | 6                | 192                 | 3072 GB          |
+| gpu-2080ti       | 1                | 40                  | 384 GB           |
+| gpu-l40          | 4                | 128                 | 1536 GB          |
+| gpu-l40s         | 4                | 128                 | 1536 GB          |
+| compute-hugemem  | 1                | 40                  | 750 GB           |
+| interactive      | 1                | 1                   | 192 GB           |
+
+:::
+
+
+All users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` parititions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
 
 ### What Resources Do You Have?
+
 The `hyakalloc` command allows users to see which accounts and partitions they are a part of and the current utilization of these resources. Resource limits are directly proportional to what was contributed by that group. By default, the output of `hyakalloc` might look something like this:
 
 ```js
