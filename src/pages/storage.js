@@ -108,8 +108,17 @@ export default function Pricing() {
 
 </div>
 
-
-  </div>
-</Layout>
+<div style={{ marginTop: '40px', textAlign: 'center' }}>
+          <iframe
+            width="600"
+            height="345"
+            src="https://www.youtube.com/embed/E_IO7HTiOjg"
+            title="Kopah Overview"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div> 
+    </Layout>
   );
 }

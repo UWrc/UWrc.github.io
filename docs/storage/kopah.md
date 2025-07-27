@@ -3,9 +3,13 @@ id: kopah
 title: Kopah Information
 ---
 
-Starting in Fall 2024, we will be offering our self-hosted, on-premises S3-API compatible object storage called Kopah.
+Starting in Fall 2024, we will be offering our self-hosted, on-premises S3-API compatible object storage called Kopah. 
 
-Kopah uses **buckets** as containers to store data, where each bucket can hold 100,000,000 **objects**, which are the actual files or data you store. Each object within a bucket is identified by a unique key, making it easy to organize and retrieve your data efficiently. Public links can be generated for Kopah objects so that users can share buckets and objects with collaborators.
+Kopah uses **buckets** as containers to store data, where each bucket can hold 100,000,000 **objects**, which are the actual files or data you store. Each object within a bucket is identified by a unique key, making it easy to organize and retrieve your data efficiently. Public links can be generated for Kopah objects so that users can share buckets and objects with collaborators. To get started, please refer to the following video overview of Kopah:
+
+<iframe width="600" height="345" src="https://www.youtube.com/embed/E_IO7HTiOjg" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 ## Accounts
 Kopah storage accounts can be requested using our [<ins>**Intake Form and Cost Calculator**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6). Kopah 1-month trial accounts are available - [<ins>**Try Kopah**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f).
