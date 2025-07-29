@@ -123,7 +123,11 @@ module.exports = {
             },
             {
               label: 'Sign Up',
-              to: '/sign-up',
+              to: 'https://uw.service-now.com/it?id=sc_entry&sys_id=bbcd76e1db12bb8037ae9ec6db961948&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2',
+            },
+            {
+              label: 'Free Student Account',
+              to: 'https://depts.washington.edu/uwrcc/hyak_access/',
             },
             {
               label: 'Documentation',
