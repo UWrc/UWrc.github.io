@@ -52,6 +52,9 @@ export default function systems() {
 
           <table>
             <tr>
+              <td align="right"></td><td><img style={{width: "300px", height: "200px"}} src="/img/systems/tillicum2.png" alt="Tillicum GPU server image 1"/><img style={{width: "300px", height: "200px"}} src="/img/systems/tillicum1.png" alt="Tillicum GPU server image 2"/></td>
+            </tr>
+            <tr>
               <td align="right">Cluster</td><td><code>tillicum</code></td>
             </tr>
             <tr>
