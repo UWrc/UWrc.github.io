@@ -13,9 +13,39 @@ If you are a **student** who is paying the student technology fee (STF), you are
 :::
 
 ### Partitions
-The account(s) you are a part of determine the priority access you have to certian partitions. All users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` parititions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
+The account(s) you are a part of determine the priority access you have to certian partitions. 
+
+:::important 
+The table below outlines the types of compute resources available for each partition. This includes the number of slices, CPU cores, and memory per node. Use this table to determine the maximum single-node job size for each node type. For example, 40 CPUs and just under 192 GB of RAM (some RAM is dedicated to the node image) is the maximum job size for a job using a single node. Larger jobs submitted to the compute partition will be spread over multiple nodes. To ensure all 40 CPUs are requested from a single node, include the `sbatch` or `salloc` directive `--nodes=1`, otherwise Slurm will schedule your job on the first 40 CPUs available, which may be across one or more nodes. 
+:::
+
+:::note Hyak Partition Overview: Slices, CPUs, and Memory Resources
+
+| Partition         | Slices per Node | CPU Cores per Node  | Memory per Node  | GPUs per Node    | Memory per GPU      |
+|------------------|------------------|---------------------|------------------|------------------|------------------|
+| compute          | 1                | 40                  | 192 GB           | 0                | -                |
+| compute-bigmem   | 1                | 40                  | 384 GB           | 0                | -                |
+| compute-hugemem  | 1                | 40                  | 750 GB           | 0                | -                |
+| compute-ultramem | 1                | 52                  | 1536 GB          | 0                | -                |
+| cpu-g2           | 6                | 192                 | 1536 GB          | 0                | -                |
+| cpu-g2-mem2x     | 6                | 192                 | 3072 GB          | 0                | -                |
+| gpu-2080ti       | 1                | 40                  | 384 GB           | 8                | 11 GB            |
+| gpu-rtx6k        | 4                | 40                  | 384 GB           | 8                | 48 GB            |
+| gpu-p100         | 2                | 56                  | 1024 GB          | 4                | 16 GB            |
+| gpu-titan        | 2                | 40                  | 384 GB           | 4                | 24 GB            |
+| gpu-a100         | 4                | 52                  | 1024 GB          | 8                | 40 GB            |
+| gpu-a40          | 4                | 52                  | 1024 GB          | 8                | 48 GB            |
+| gpu-l40          | 4                | 128                 | 1536 GB          | 8                | 48 GB            |
+| gpu-l40s         | 4                | 128                 | 1536 GB          | 8                | 48 GB            |
+| gpu-h200         | 4                | 128                 | 2304 GB          | 8                | 141 GB           |
+
+:::
+
+
+All users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` parititions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
 
 ### What Resources Do You Have?
+
 The `hyakalloc` command allows users to see which accounts and partitions they are a part of and the current utilization of these resources. Resource limits are directly proportional to what was contributed by that group. By default, the output of `hyakalloc` might look something like this:
 
 ```js
