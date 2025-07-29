@@ -47,6 +47,16 @@ module.exports = {
           to: '/systems',
           label: 'Systems',
           position: 'right',
+          items: [
+            {
+              label: 'Hyak',
+              to: '/systems',
+            },
+            {
+              label: 'Tillicum',
+              to: '/tillicum'
+            },
+          ]
         },
         {
           to: 'pricing',
