@@ -62,7 +62,7 @@ export default function systems() {
               <td align="right">Storage</td><td>1.0 PB GPFS</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Ikt translates to 1 in Chinook trading jargon and was the name of the 1st Hyak cluster. <code>ikt</code> is no longer in service. Reported figures represent best records.</td>
+              <td align="right" style={{verticalAlign: "top"}}>Namesake</td><td>Ikt translates to 1 in Chinook trading jargon and was the name of the 1st Hyak cluster. <code>ikt</code> is no longer in service. Reported figures represent best records.</td>
             </tr>
           </table>
         </TabItem>
@@ -96,7 +96,7 @@ export default function systems() {
               <td align="right">Storage</td><td>1.0 PB GPFS</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Mox translates to 2 in Chinook trading jargon and is the name of the 2nd Hyak cluster. <code>mox</code> is active but no longer accepting node additions and not growing. Reported figures represent peak capacity during its service.</td>
+              <td align="right" style={{verticalAlign: "top"}}>Namesake</td><td>Mox translates to 2 in Chinook trading jargon and is the name of the 2nd Hyak cluster. <code>mox</code> is active but no longer accepting node additions and not growing. Reported figures represent peak capacity during its service.</td>
             </tr>
           </table>
         </TabItem>
@@ -127,10 +127,10 @@ export default function systems() {
               <td align="right">Topology</td><td>3:1 blocking 2-layer fat tree</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>2.7 PB GPFS<br />500 TB NVMe Flash</td>
+              <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>2.7 PB GPFS</td>
             </tr>
             <tr>
-              <td align="right" style={{verticalAlign: "top"}}>Notes</td><td>Klone translates to 3 in Chinook trading jargon and is the name of the 3rd Hyak cluster. <code>klone</code> is active and scheduled for a soft launch in Q1 2021 and a full launch by Q2 2021. Reported figures are updated as the cluster continues to grow.</td>
+              <td align="right" style={{verticalAlign: "top"}}>Namesake</td><td>Klone translates to 3 in Chinook trading jargon and is the name of the 3rd Hyak cluster. <code>klone</code> is active and scheduled for a soft launch in Q1 2021 and a full launch by Q2 2021. Reported figures are updated as the cluster continues to grow.</td>
             </tr>
           </table>
         </TabItem>
