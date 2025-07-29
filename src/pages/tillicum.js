@@ -76,9 +76,6 @@ export default function systems() {
               <td align="right">Interconnect</td><td>400 Gbps HDR InfiniBand</td>
             </tr>
             <tr>
-              <td align="right">Topology</td><td>1:1 non-blocking</td>
-            </tr>
-            <tr>
               <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>~3 PB high-performance flash storage for active computing</td>
             </tr>
             <tr>
