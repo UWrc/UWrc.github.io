@@ -57,6 +57,12 @@ The new `g2` nodes have a different architecture, which might offer additional o
 Please see [<ins>**this blog post**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
 :::
 
+:::important Checkpoint Throttling
+When the filesystem is under heavy read/write load, we may throttle checkpoint (`ckpt`) jobs to increase storage performance and prioritize general cluster navigation and contributed resources. Priority queues are never throttled since our service level agreement is on-demand access of those queues for account members if there are resources available (i.e., not being used by users from the same account). While it may appear that the compute nodes are underutilized, the filesystem server is above 90% utilization at these moments and not idle. Our IOP Saver protocol works to balance compute and storage demands, keeping Hyak stable and responsive under I/O heavy workloads. 
+
+To view current `ckpt` job limitations, use the `hyakalloc` command. The last line of its output will state how many jobs checkpoint is limited to. `ckpt` jobs will wait in the job queue until there are enough resources available and `ckpt` job limits allow it to run. If you are trying to start an interactive job, it is recommended to avoid `ckpt` when jobs are limited as wait times will be high. If possible, users should stick to their priority account allocations for interactive jobs.
+:::
+
 ### Checkpoint Limitations
 
 Jobs submitted to checkpoint are limited in the following ways:
