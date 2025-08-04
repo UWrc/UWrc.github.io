@@ -9,7 +9,7 @@ export const HEAD_DESC = 'Hyak Supercomputer'
 export const STAT_ITEMS = {
   'Researchers': '3,267',
   'Compute Cores': '44,184',
-  'GPUs': '954',
+  'GPUs': '920',
 }
 
 export const HomePage = {
