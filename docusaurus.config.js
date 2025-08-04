@@ -49,21 +49,21 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'pricing',
+          to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560',
           label: 'Pricing',
           position: 'right',
           items: [
             {
-              label: 'Compute',
-              to: '/pricing',
+              label: 'Compute: Hyak Klone',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560',
             },
             {
-              label: 'Storage',
-              to: '/storage',
+              label: 'Try Hyak Klone',
+              to: 'https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=f5caba8fdbe108101ba12968489619e0',
             },
             {
-              label: 'Try Hyak',
-              to: '/demo',
+              label: 'Research Storage',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580',
             },
           ]
         },
@@ -72,6 +72,21 @@ module.exports = {
           activeBasePath: 'docs',
           label: 'Documentation',
           position: 'right',
+        },
+                {
+          to: 'https://www.youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj',
+          label: 'Training Videos',
+          position: 'right',
+          items: [
+            {
+              label: 'Short How-Tos',
+              to: 'https://www.youtube.com/playlist?list=PL-uLiqrTav1qqP5bXbyd6dMNWnV35s9hg',
+            },
+            {
+              label: 'Recording Training',
+              to: 'https://www.youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj',
+            },
+          ]
         },
         {
           to: 'https://calendar.washington.edu/sea_uwit-rc',
