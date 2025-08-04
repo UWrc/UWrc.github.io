@@ -1,67 +1,83 @@
 module.exports = {
   someSidebar: {
-    'Get Started': [
-      'index',
-      'join-group',
-      'account-creation',
-      'account-activation',
-    ],
-    'Setup': [
-      //'setup/index',
-      'setup/ssh',
-      'setup/intracluster-keys',
-      'setup/portforwarding',
-      'setup/x11'
-      //'setup/vscode',
-    ],
-    'Storage': [
-      'storage/data',
-      'storage/gscratch',
+    'Hyak Klone': [
       {
-        'Data Transfer': [
-          'storage/transfer',
-          'storage/cyberduck',
-          'storage/globus',
+        'Get Started': [
+          'index',
+          'join-group',
+          'account-creation',
+          'account-activation',
         ]
       },
-      'storage/archive',
       {
-        'Kopah S3 Storage': [
-          'storage/kopah',
-          'storage/gui',
-          'storage/cli',
-          'storage/boto3',
-          'storage/juicefs',
+        'Setup': [
+          'setup/ssh',
+          'setup/intracluster-keys',
+          'setup/portforwarding',
+          'setup/x11',
+        ]
+      },
+      {
+        'Storage': [
+          'storage/data',
+          'storage/gscratch',
+          {
+            'Data Transfer': [
+              'storage/transfer',
+              'storage/cyberduck',
+              'storage/globus',
+            ]
+          },
+          'storage/archive',
+        ]
+      },
+      {
+        'Compute': [
+          'compute/start-here',
+          'compute/scheduling-jobs',
+          'compute/checkpoint',
+          'compute/resource-monitoring',
+        ]
+      },
+            {
+        'GPUs': [
+          'gpus/gpu_start',
+          'gpus/nvidia_ngc',
+          'gpus/ollama_setup',
+        ]
+      },
+      {
+        'Data Commons': [
+          'data-commons/requirements',
+          'data-commons/imagenet',
+          'data-commons/tablib',
+          'data-commons/the_pile',
+        ]
+      },
+      {
+        'Open OnDemand': [
+          'ood/start',
+          'ood/schedule-job',
+          'ood/matlab',
+          'ood/jupyter',
+          'ood/vscode',
+          'ood/rstudio'
         ]
       }
     ],
-    'Data Commons':
-      [
-        'data-commons/requirements',
-        'data-commons/imagenet',
-        'data-commons/tablib',
-        'data-commons/the_pile',
-      ],
-    'Compute': [
-      'compute/start-here',
-      'compute/scheduling-jobs',
-      'compute/checkpoint',
-      'compute/resource-monitoring',
-    ],
-    'GPUs':[
-      'gpus/gpu_start',
-      'gpus/nvidia_ngc',
-      'gpus/ollama_setup',
+
+    'Tillicum': [
+      'tillicum/tillicum',
     ],
 
-    'Open OnDemand': [
-      'ood/start',
-      'ood/schedule-job',
-      'ood/matlab',
-      'ood/jupyter',
-      'ood/vscode',
-      'ood/rstudio'
+    'Kopah S3 Storage': [
+      'storage/kopah',
+      'storage/gui',
+      'storage/cli',
+      'storage/boto3',
+      'storage/juicefs',
     ],
+
     'Tools & Software': [
       'tools/software',
       'tools/modules',
@@ -83,6 +99,7 @@ module.exports = {
         ]
       }
     ],
+
     'Tutorials': [
       {
         'Hyak Basics': [
@@ -131,11 +148,13 @@ module.exports = {
         ]
       },
     ],
+
     'Additional Resources': [
       'resources',
       'faq',
       'glossary',
     ],
+
     'Contribution Guides': [
       'contribute/pull-request',
       'contribute/markdown-guide',
