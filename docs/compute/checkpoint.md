@@ -30,6 +30,12 @@ When we say a resource is "currently idle," that only means no running jobs are 
 
 You can request resources from the entire cluster's idle resources (including GPUs, regardless of whether your lab has contributed any). You can view currently idle resources, both for your lab's partition and for the whole cluster, using our `hyakalloc` command ([<ins>**further documentation here**</ins>](https://hyak.uw.edu/docs/compute/resource-monitoring#hyakalloc)).
 
+:::important Checkpoint Throttling
+When the filesystem is under heavy read/write load, we may throttle checkpoint (`ckpt`) jobs to increase storage performance and prioritize general cluster navigation and contributed resources. Priority queues are never throttled since our service level agreement is on-demand access of those queues for account members if there are resources available (i.e., not being used by users from the same account). While it may appear that the compute nodes are underutilized, the filesystem server is above 90% utilization at these moments and not idle. Our IOPS Saver protocol works to balance compute and storage demands, keeping Hyak stable and responsive under I/O heavy workloads. 
+
+To view current `ckpt` job limitations, use the `hyakalloc` command. If checkpoint jobs are being limited, the last line of its output will state how many jobs checkpoint is limited to. `ckpt` jobs will wait in the job queue until there are enough resources available and `ckpt` job limits allow it to run. If you are trying to start an interactive job, it is recommended to avoid `ckpt` when jobs are limited as wait times will be high. If possible, users should stick to their priority account allocations for interactive jobs.
+:::
+
 #### New `g2` Nodes
 
 Following our June 2024 maintenance, we have a new class of nodes being deployed on `klone` which we are calling `g2` because they are the second generation of nodes. CPU `g2` nodes feature AMD EPYC 9000-series 'Genoa' processors, and new GPU nodes featuring either NVIDIA L40 or L40S GPUs. For this reason, you might be interested in running your jobs on `g2` node specifically, and using the `ckpt-g2` partition, for example, with: 
@@ -56,6 +62,8 @@ The new `g2` nodes have a different architecture, which might offer additional o
 
 Please see [<ins>**this blog post**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
 :::
+
+
 
 ### Checkpoint Limitations
 
