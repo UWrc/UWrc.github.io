@@ -13,6 +13,9 @@ ssh UWNetID@klone.hyak.uw.edu
 
 You log into the `klone.hyak.uw.edu` cluster above at the terminal using your netID. You will be prompted for your password and 2FA (DUO) authentication. We don't allow ssh keys to the login node since it would be bypassing one of the factors (of 2-factor authentication).
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uHMPkHqigeg?si=IXAhWRPtfpZddFhC" title="Hyak Login Instructions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 :::warning Monitoring & Warnings
 
 Login-node CPU and memory usage are closely monitored by automation. Any egregious use will result in immediate performance throttling, the severity of which escalates exponentially while the offending activity persists. Warnings describing the crossed thresholds & the extent of the throttling will be sent by our monitoring system, *Arbiter2*, to the email associated with your UW NetID.
