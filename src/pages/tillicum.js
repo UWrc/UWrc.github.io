@@ -36,7 +36,7 @@ export default function systems() {
     <ul>
       <li><strong>24 Dell XE9680 servers</strong></li>
       <li><strong>GPU Acceleration:</strong> 192 NVIDIA H200 GPUs with 141 GB memory and ultra-high-bandwidth NVLink 4.0</li>
-      <li><strong>High-Speed Networking:</strong> 400 Gbps HDR InfiniBand for low-latency GPU communication</li>
+      <li><strong>High-Speed Networking:</strong> 400 Gbps NDR InfiniBand for low-latency GPU communication</li>
       <li><strong>High-Performance Storage:</strong> Shared 3 PB flash storage optimized for active, high-throughput computing</li>
       <li><strong>Common Datasets:</strong> Curated datasets preloaded or available upon request for AI and data science workloads</li>
       <li><strong>Flexible Scheduling:</strong> Support for interactive, batch, and multi-node workloads</li>
@@ -73,7 +73,7 @@ export default function systems() {
               <td align="right">GPU Interconnect</td><td>NVLink™ 4.0 (900 GB/s GPU-to-GPU bandwidth)</td>
             </tr>
                         <tr>
-              <td align="right">Interconnect</td><td>400 Gbps HDR InfiniBand</td>
+              <td align="right">Interconnect</td><td>400 Gbps NDR InfiniBand</td>
             </tr>
             <tr>
               <td align="right" style={{verticalAlign: "top"}}>Storage</td><td>~3 PB high-performance flash storage for active computing</td>
