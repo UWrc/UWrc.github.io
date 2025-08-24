@@ -56,10 +56,12 @@
   font-size: xxx-large;
   z-index: 1;
   top: 0;
-  width: 120px;
+  width: 6%;
+  min-width: 55px;
   height: 100%;
   cursor: pointer;
-  transition: 0.3s
+  transition: 0.3s;
+  text-align:center;
 }
 
 .carouselArrow:hover {
@@ -67,13 +69,8 @@
   transition: 0.3s;
 }
 
-.carouselArrow.left {
-  text-align: right;
-}
-
 .carouselArrow.right {
   right: 0;
-  text-align: left;
 }
 
 .carouselIndicator {

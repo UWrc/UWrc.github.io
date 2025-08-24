@@ -15,9 +15,6 @@ export default function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
 
-
-  
-
   return (
     <Layout
       title={PageContent.HEAD_TITLE}
