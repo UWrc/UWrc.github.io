@@ -55,3 +55,16 @@ ul.check li {
   padding: 0px 0px 0px 25px;
   margin: 0px 0px 0px 0px;
 }
+
+.footer {
+  background-color: #32006E;
+}
+
+.footer .container {
+  max-width: 1100px;
+  margin:auto;
+}
+
+.footer__bottom {
+  margin-top:3em;
+}

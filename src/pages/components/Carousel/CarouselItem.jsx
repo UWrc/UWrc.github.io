@@ -13,8 +13,10 @@ export default function CarouselItem(props) {
 
   let itemContent = <div className={styles.carouselContainer}>
     <img className={styles.carouselImage} src={props.image} alt={props.title} />
-    <h3 className={styles.carouselTitle}><span>{props.title}</span></h3>
-    <p className={styles.carouselCaption}><span>{props.caption}</span></p>
+    <div className={styles.carouselTextsContainer}>
+      <h3 className={styles.carouselTitle}><span>{props.title}</span></h3>
+      <p className={styles.carouselCaption}><span>{props.caption}</span></p>
+    </div>
   </div>
 
   if (props.linkUrl) {

@@ -1,0 +1,66 @@
+.contentCard {
+  margin: 12px;
+  text-align: left;
+  background-color: white;
+  box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+}
+
+.contentCard:hover {
+  /*border: solid 1px rgba(200,200,200,0.6);*/
+  box-shadow: 0px 2px 9px rgba(0,0,0,0.3);
+  scale: 101%;
+  transition: all 0.20s;
+}
+
+.contentCard .imageContainer {
+  color: white;
+  position: relative;
+  width:100%;
+  height:160px;
+}
+
+.contentCard .contentCardImage {
+  position:absolute;
+  background-color: #ddd;
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.contentCard .playButton {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-size: 60px;
+  line-height: 1em;
+  width: 100%;
+  top: 50px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.75);
+}
+
+
+.contentCard .playButtonContainer p {
+  text-align: center;
+}
+
+.contentCardTextContainer{
+  padding: 12px;
+}
+
+.contentCardTextContainer h3 {
+  width: 100%;
+  font-size: 1.15em;
+  line-height: 1.2em;
+  margin: 0em;
+  text-align: left;
+}
+
+.contentCardTextContainer p {
+  margin:0;
+  padding: 0;
+  font-size: 0.9em;
+  text-align: left;
+}

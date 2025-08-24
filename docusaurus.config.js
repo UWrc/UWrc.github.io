@@ -30,7 +30,7 @@ module.exports = {
       }
     },
     navbar: {
-      title: 'Research Computing',
+      title: 'Research Computing Documentation',
       logo: {
         alt: 'Hyak Logo',
         src: 'img/logos/uw_icon.png',
@@ -80,7 +80,7 @@ module.exports = {
         {
           to: 'docs',
           activeBasePath: 'docs',
-          label: 'Documentation',
+          label: 'Docs',
           position: 'right',
         },
                 {
@@ -108,17 +108,16 @@ module.exports = {
           label: 'Blog',
           position: 'right'
         },
-        {
+        /*{
           to: 'team',
           label: 'About',
           position: 'right',
           items: [
-            /*
-            {
-              label: 'Supporting You',
-              to: '/about',
-            },
-            */
+            
+            //{
+            //  label: 'Supporting You',
+            //  to: '/about',
+            //},
             {
               label: 'Our Team',
               to: '/team',
@@ -132,7 +131,7 @@ module.exports = {
               to: '/publications',
             },
           ]
-        },
+        },*/
 
       ],
     },
@@ -140,27 +139,31 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Hyak',
+          title: 'Research Computing',
           items: [
             {
               label: 'Home',
               to: '/',
             },
             {
-              label: 'Sign Up',
-              to: 'https://uw.service-now.com/it?id=sc_entry&sys_id=bbcd76e1db12bb8037ae9ec6db961948&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2',
-            },
-            {
-              label: 'Free Student Account',
-              to: 'https://depts.washington.edu/uwrcc/hyak_access/',
-            },
-            {
-              label: 'Documentation',
+              label: 'Docs',
               to: '/docs',
             },
             {
-              label: 'About',
-              to: '/about',
+              label: 'Free Student Hyak Account',
+              href: 'https://depts.washington.edu/uwrcc/hyak_access/',
+            },
+            {
+              label: 'Cloud Credits for Students',
+              href: 'https://depts.washington.edu/uwrcc/cloud/',
+            },
+            {
+              label: 'Research Computing Services',
+              href: 'https://it.uw.edu/research',
+            },
+            {
+              label: 'UW-IT Home',
+              href: 'https://it.uw.edu',
             },
           ],
         },
@@ -199,6 +202,10 @@ module.exports = {
             {
               label: 'E-mail',
               href: 'mailto:help@uw.edu?subject=hyak help footer',
+            },
+            {
+              label: 'Help Desk',
+              href: 'https://it.uw.edu/help/uw/',
             },
             {
               label: 'Mailing List',

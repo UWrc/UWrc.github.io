@@ -1,34 +1,31 @@
-.logoContainer {
-  margin: 32px 0;
-  padding: 0 20px;
+.homeSection {
+  width:100%;
+  max-width: 1200px;
+  margin: 1em auto;
+  padding: 0 15px;
   text-align: center;
+
 }
   
-.logoContainer h2 {
-  font-size: 300%;
+.homeSection > h2 {
+  font-size: 2em;
   line-height: 1em;
-  margin: 20px;
+  margin: 8px 8px 8px 32px;
   padding: 10px 0;
-  text-align: center;
+  text-align: left;
 }
 
-.logoContainer p {
+.homeSection p {
   margin: 0 auto;
-  max-width: 600px;
+  
   padding: 0.8em 0;
   text-align: left;
 }
 
-.logoContainer .logos {
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 0 20px 20px;
-}
-
-.logoContainer .logos img {
-  height: 90px;
-  margin: 20px 20px 0;
-  width: auto;
+.homeSection .cards {
+  align-items: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: left;
+  padding: 0 20px;
 }
