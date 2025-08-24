@@ -1,7 +1,7 @@
 export const CAROUSEL_ITEMS = [
     {
     image: '/img/carousel/supercomp.jpg',
-    title: 'COMING SOON : Tillicum GPU Cluster',
+    title: 'Coming soon: Tillicum GPU Cluster',
     caption: 'UW\'s next-generation AI-accelerated research computing platform.',
     linkUrl: 'https://hyak.uw.edu/tillicum',
   },

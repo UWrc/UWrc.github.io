@@ -4,8 +4,6 @@ import styles from "./styles.module.css"
 
 import ContentCard from "../ContentCard/ContentCard";
 
-import { mapImgItemsToHTMLImgs } from "utils"
-
 
 HomeSection.propTypes = {
   header: PropTypes.element.isRequired,
@@ -24,7 +22,7 @@ export default function HomeSection(props) {
       <h2>{props.header}</h2>
       
       <div className={styles.cards}>
-        {props.cards.map(card => (
+        {props.cards?.map(card => (
           <ContentCard header={card.header} caption={card.caption} image={card.image} link={card.link} isvideo={card.isvideo} />
         ))}
       </div>
