@@ -67,6 +67,7 @@ module.exports = {
     ],
 
     'Tillicum': [
+      'tillicum/architecture',
       'tillicum/tillicum',
     ],
 
@@ -102,7 +103,7 @@ module.exports = {
 
     'Tutorials': [
       {
-        'Hyak Basics': [
+        'Linux Basics': [
           'hyak101/basics/syllabus',
           'hyak101/basics/login',
           'hyak101/basics/system',

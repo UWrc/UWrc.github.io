@@ -4,16 +4,23 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import * as PageContent from "../pageContent";
+import * as PageContent from "../pageContent/homePageContent";
+import * as LearnPageContent from "../pageContent/learnPageContent";
 import HomeSection from "./components/HomeSection/HomeSection";
 import CarouselItem from "./components/Carousel/CarouselItem";
 import CarouselArrow from "./components/Carousel/CarouselArrow";
 import CarouselIndicator from "./components/Carousel/CarouselIndicator";
-import { CAROUSEL_ITEMS } from "../carouselItems";
+import { CAROUSEL_ITEMS } from "../pageContent/carouselItems";
 
 export default function Home() {  
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
+
+  // Fetch learn cards with isfeatured enabled, and sort them by featuredSortIndex
+  let FeaturedCards = LearnPageContent.LearnHowToCards.concat(LearnPageContent.LearnTutorialCards, LearnPageContent.LearnServicesCards);
+  FeaturedCards = FeaturedCards.filter(item => item.isfeatured);
+  FeaturedCards = FeaturedCards.sort((a,b) => { return a.featuredSortIndex > b.featuredSortIndex ? 1 : -1});
+
 
   return (
     <Layout
@@ -59,18 +66,23 @@ export default function Home() {
       <HomeSection
         header='Service Documentation'
         cards={PageContent.DocumentationCards}
+        maxCards='6'
       />
       <HomeSection
         header='Learn'
-        cards={PageContent.LearnCards}
+        cards={FeaturedCards}
+        maxCards='6'
+        seeMoreLink='/learn'
       />
       <HomeSection
         header='Highlights'
         cards={PageContent.HighlightsCards}
+        maxCards='6'
       />
       <HomeSection
         header='Support'
         cards={PageContent.SupportCards}
+        maxCards='6'
       />
       <br/>
       <br/>

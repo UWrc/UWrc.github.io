@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 
-import * as PageContent from "../pageContent";
+import * as PageContent from "../pageContent/homePageContent";
 import StatContainer from "./components/Stats/StatContainer";
 
 import Tabs from '@theme/Tabs';

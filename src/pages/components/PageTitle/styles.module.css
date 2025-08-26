@@ -1,0 +1,16 @@
+.pageTitle {
+  width:100%;
+  max-width: 1200px;
+  margin: 1em auto 0em auto;
+  padding: 0 15px;
+  text-align: center;
+
+}
+  
+.pageTitle > h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin: 8px 8px 8px 8px;
+  padding: 6px 0;
+  text-align: left;
+}

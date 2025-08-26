@@ -11,9 +11,9 @@ title: Syllabus
 
 **Most importantly, software containers allow Hyak researchers to install their software package and all its dependencies without root administrative privileges.** [<ins>**Click here to see the Hyak's Software Usage Policies for more information.**</ins>](https://hyak.uw.edu/docs/tools/software#software-usage-policy-for-hyak-users)
 
-:::tip Video tutorial available
+:::tip Video available
 
-On August 21, 2024, we delivered this tutorial live on Zoom. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://youtu.be/zPsvUQV_GV0)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zPsvUQV_GV0?si=jJiqmgJTVk23PLFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 :::
 

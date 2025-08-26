@@ -9,9 +9,9 @@ title: Syllabus
 
 Much of the Hyak documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and and haven't used a job scheduler before. Here we have prepared a walk-through tutorial of Slurm commands so that you can feel comfortable working independently on Hyak and tailoring tools and scripts to the needs of your research project. The advanced section of this tutorial offers an additional worked example with publicly available data for submitting interactive, single, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel).
 
-:::tip Video tutorial available
+:::tip Video available
 
-On August 14, 2024, we delivered this tutorial live on Zoom. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://youtu.be/iYM7xpRhp8I)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iYM7xpRhp8I?si=Ojs8VPqrbj54P8oH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
 
 #### Our ultimate goal is to prepare you as an independent user of Hyak

@@ -9,9 +9,9 @@ title: Syllabus
 
 Much of the Hyak documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and Linux CLI. Here we have prepared a walk-through tutorial of programs (which we will refer to as **commands**) that you may find helpful before moving forward with your research computing project. Ultimately, we want you to feel comfortable working independently on Hyak.
 
-:::tip Video tutorial available
+:::tip Video available
 
-On August 7, 2024, we delivered this tutorial live on Zoom. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://youtu.be/WqGCJMQhiC0)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WqGCJMQhiC0?si=i9JJwSrZj6ep6EcZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
 
 #### Learning Objectives:
@@ -26,7 +26,7 @@ On August 7, 2024, we delivered this tutorial live on Zoom. [<ins>**Follow this 
 
 ### Course Content
 
-Tutorial: Hyak Basics
+Tutorial: Linux Basics
 
 * [<ins>**Syllabus**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus)
 * [<ins>**Logging In**</ins>](https://hyak.uw.edu/docs/hyak101/basics/login)

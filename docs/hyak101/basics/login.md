@@ -12,7 +12,7 @@ To log into any Hyak cluster you need an account created. Please review our docu
 UW policy is that all services (of which Hyak is one) require 2 factor authentication (2FA) by default as a security posture. Please go to [<ins>**this 2FA page**</ins>](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
 
 :::important
-You need 2FA to log onto any Hyak cluster.
+You need 2FA to log onto any UW-IT Research Computing cluster.
 :::
 
 ### Logging in with SSH
@@ -29,6 +29,8 @@ Once you have a shell open in Terminal or any of the Windows options, you can lo
 
 ```js
 ssh UWNetID@klone.hyak.uw.edu
+```
+```js
 Password: ***********
 Duo two-factor login for UWNetID
 
