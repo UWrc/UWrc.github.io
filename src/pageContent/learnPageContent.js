@@ -59,13 +59,6 @@ export const LearnTutorialCards = [
             isfeatured: true,
             featuredSortIndex: 30,
           },
-          { image: '/img/learn/ood.jpg',
-            header: 'Tutorial: Open OnDemand', 
-            caption: 'Open OnDemand is a web-based portal that allows you to use your favorite graphical software on our supercomputers.',
-            link: '/docs/ood/start',
-            isfeatured: true,
-            featuredSortIndex: 30,
-          },
         ];
         
 export const LearnServicesCards = [
