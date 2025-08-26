@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Hyak',
+  title: 'Research Computing Documentation',
   tagline: 'Powering discoveries in every field',
   url: 'https://hyak.uw.edu',
   baseUrl: '/',
@@ -83,20 +83,10 @@ module.exports = {
           label: 'Docs',
           position: 'right',
         },
-                {
-          to: 'https://www.youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj',
-          label: 'Training Videos',
+        {
+          to: '/learn',
+          label: 'Learn',
           position: 'right',
-          items: [
-            {
-              label: 'Short How-Tos',
-              to: 'https://www.youtube.com/playlist?list=PL-uLiqrTav1qqP5bXbyd6dMNWnV35s9hg',
-            },
-            {
-              label: 'Recording Training',
-              to: 'https://www.youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj',
-            },
-          ]
         },
         {
           to: 'https://calendar.washington.edu/sea_uwit-rc',

@@ -14,6 +14,8 @@ HomeSection.propTypes = {
     link: PropTypes.string.isRequired,
     isvideo: PropTypes.boolean,
   })).isRequired,
+  seeMoreLink: PropTypes.string.isRequired,
+  maxCards: PropTypes.number,
 }
 
 export default function HomeSection(props) {
@@ -22,10 +24,16 @@ export default function HomeSection(props) {
       <h2>{props.header}</h2>
       
       <div className={styles.cards}>
-        {props.cards?.map(card => (
+        {props.cards?.slice(0, props.maxCards ?? props.cards?.length).map(card => (
           <ContentCard header={card.header} caption={card.caption} image={card.image} link={card.link} isvideo={card.isvideo} />
         ))}
       </div>
+
+      { props.maxCards && props.cards.length >= props.maxCards &&
+            <a href={props.seeMoreLink} className={styles.seeMore}> 
+                See more
+            </a>
+      }
     </div>
   )
 }

@@ -4,13 +4,12 @@ title: Syllabus
 ---
 
 :::caution
-This tutorial was designed as the fourth is our Hyak 101 Tutorial series which includes:
+Advanced Slurm builds upon modules presented in the following tutorials. We recommend you review the skills presented before proceeding.
 
 1. [<ins>**Hyak Basics**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus)
 1. [<ins>**Containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/syllabus)
 1. [<ins>**Slurm**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
 
-**The demonstrations presented in the Advanced Slurm tutorial build upon modules presented in the three tutorials listed above. We recommend you review the skills presented in those tutorials before proceeding.**
 :::
 
 ### Goals & Rationale
@@ -21,9 +20,9 @@ Now that you have mastered: (1) using the command line to navigate and execute c
 
 #### Our ultimate goal is to prepare you as an independent user of Hyak
 
-:::tip Video tutorial available
+:::tip Video available
 
-On February 25, 2025, we delivered this tutorial live. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://www.youtube.com/watch?v=Mflpj3cTMu8)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mflpj3cTMu8?si=Kiqg5tSfSDEbGNMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
 
 :::note Relevant Vocabulary

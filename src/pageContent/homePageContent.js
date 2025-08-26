@@ -28,42 +28,7 @@ export const DocumentationCards = [
             caption: 'Kopah user guides',
             link: '/docs/storage/kopah',
           },
-          
-        ];
-
-  export const LearnCards = [
-          { image: '/img/learn/homedir.jpg',
-            header: 'Short How-To: Hyak Home Directories', 
-            caption: 'Learn the basics of your home directory on Hyak. This video is ideal for new users getting started with Hyak.',
-            link: 'https://youtu.be/h--muyCPFHs',
-            isvideo: true,
-          },
-          { image: '/img/learn/linux101.jpg',
-            header: 'Tutorial: Linux Basics', 
-            caption: 'Become familiar with the Linux command-line interface and Hyak\'s file system.',
-            link: '/docs/hyak101/basics/syllabus',
-          },
-          { image: '/img/learn/slurm.jpg',
-            header: 'Tutorial: Slurm', 
-            caption: 'Learn how to schedule your computing jobs with Slurm.',
-            link: '/docs/hyak101/basics/syllabus_slurm',
-          },
-          { image: '/img/learn/containers.jpg',
-            header: 'Tutorial: Containers', 
-            caption: 'Discover containers and containerization of software for usage on Hyak.',
-            link: '/docs/hyak101/containers/syllabus',
-          },
-          { image: '/img/learn/advancedslurm.jpg',
-            header: 'Tutorial: Advanced Slurm', 
-            caption: 'Worked example demonstrating the use of scripting with Slurm job arrays.',
-            link: '/docs/hyak101/basics/syllabus_advanced',
-          },
-          { image: '/img/learn/ood.jpg',
-            header: 'Tutorial: Open OnDemand', 
-            caption: 'Open OnDemand is a web-based portal that allows you to use your favorite graphical software on our supercomputers.',
-            link: '/docs/ood/start',
-          },
-        ];
+        ]; 
 
   export const HighlightsCards = [
           { image: '/img/highlights/jayadevlab.jpg',
@@ -99,8 +64,8 @@ export const DocumentationCards = [
           },
           { image: '/img/icons/students.jpg',
             header: 'Research Computing Club', 
-            caption: 'Free Hyak Access for Students + Join the RCC Slack Community.',
-            link: 'https://depts.washington.edu/uwrcc/',
+            caption: 'Join the RCC Slack Community.',
+            link: 'https://uw-hpcc.slack.com/',
           },
         ];
 

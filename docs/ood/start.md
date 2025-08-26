@@ -2,8 +2,8 @@
 id: start
 title: Start Here
 ---
-:::tip Video tutorial available
-On January 31, 2025, we delivered a tutorial live. [<ins>**Follow this link to watch the live demonstration.**</ins>](https://www.youtube.com/watch?v=U_LlktlDyI4)
+:::tip Video available
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U_LlktlDyI4?si=g3BIgH2YnI0mvVS0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::
 
 ## What is Open OnDemand?
