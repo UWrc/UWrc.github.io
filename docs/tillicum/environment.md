@@ -37,8 +37,38 @@ Miniforge (conda) has been loaded.
     source ~/.bashrc
 ```
 
-- **Containers**: Tillicum supports **Apptainer containers** for running portable, reproducible software stacks. However, on Tillicum the GPFS storage filestsem named `/gpfs` so remember to use `--bind /gpfs`.
+- **Containers**: Tillicum supports **Apptainer containers** for running portable, reproducible software stacks. However, on Tillicum the GPFS storage filesystem named `/gpfs` so remember to use `--bind /gpfs`.
 
 ```js
 apptainer shell --bind /gpfs container.sif
 ```
+
+## Using Modules  
+
+Modules help you load compilers, libraries, and applications into your environment. Tillicum uses a **hierarchical module structure**.
+
+List available compilers:  
+
+```js
+module avail
+```
+
+Load a compiler:
+
+```js
+module load cuda
+```
+
+After loading a compiler, new software modules built with that compiler will become available.
+
+```js
+module avail
+```
+
+## Using Apptainer
+
+We highly recommend using containers to build your software environment on Tillicum. In particular, NVIDIA NGC Catalog has containers with CUDA and NVIDIA drivers configured, which work well with the Tillicum environment. 
+
+[<ins>**NVIDIA NGC Catalog**</ins>](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=)
+
+If you are new to containers, we recommend our [<ins>**Containers Tutorial**</ins>](../hyak101/containers/syllabus.md).
