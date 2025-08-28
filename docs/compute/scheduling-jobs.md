@@ -127,7 +127,7 @@ A comprehensive list of the environment variables Slurm sets for each job can be
 ### Single Node Batch Jobs
 
 Below is a slurm script template.  Submit a batch job from the `klone` login node by calling `sbatch <script_name>.slurm`.
-```shell title="<script_name>.slurm" terminal=true
+```js title="<script_name>.slurm" terminal=true
 #!/bin/bash
 
 #SBATCH --job-name=<name>
