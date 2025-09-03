@@ -28,7 +28,6 @@ module.exports = {
               'storage/globus',
             ]
           },
-          'storage/archive',
         ]
       },
       {
@@ -79,6 +78,11 @@ module.exports = {
       'storage/cli',
       'storage/boto3',
       'storage/juicefs',
+    ],
+
+    'Lolo Tape Archive': [
+      'lolo/lolo',
+      'lolo/archive'
     ],
 
     'Tools & Software': [
