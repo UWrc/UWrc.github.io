@@ -28,7 +28,6 @@ module.exports = {
               'storage/globus',
             ]
           },
-          'storage/archive',
         ]
       },
       {
@@ -70,7 +69,8 @@ module.exports = {
       'tillicum/architecture',
       'tillicum/tillicum',
       'tillicum/scheduling-jobs',
-      'tillicum/environment'
+      'tillicum/environment',
+      'tillicum/storage'
     ],
 
     'Kopah S3 Storage': [
