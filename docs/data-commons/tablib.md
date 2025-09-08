@@ -3,6 +3,10 @@ id: tablib
 title: TabLib
 ---
 
+:::warning 
+This dataset is only available on **Hyak Klone**. 
+:::
+
 Sponsoring groups are Ludwig Schmidt, Tim Althoff, and Pang Wei Koh. Student users are Josh Gardner, Mike Merrill, and Vinayak Gupta.
 
 # What is this?

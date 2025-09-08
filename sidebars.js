@@ -22,13 +22,6 @@ module.exports = {
         'Storage': [
           'storage/data',
           'storage/gscratch',
-          {
-            'Data Transfer': [
-              'storage/transfer',
-              'storage/cyberduck',
-              'storage/globus',
-            ]
-          },
         ]
       },
       {
@@ -44,24 +37,6 @@ module.exports = {
           'gpus/gpu_start',
           'gpus/nvidia_ngc',
           'gpus/ollama_setup',
-        ]
-      },
-      {
-        'Data Commons': [
-          'data-commons/requirements',
-          'data-commons/imagenet',
-          'data-commons/tablib',
-          'data-commons/the_pile',
-        ]
-      },
-      {
-        'Open OnDemand': [
-          'ood/start',
-          'ood/schedule-job',
-          'ood/matlab',
-          'ood/jupyter',
-          'ood/vscode',
-          'ood/rstudio'
         ]
       }
     ],
@@ -86,7 +61,31 @@ module.exports = {
       'lolo/lolo',
       'lolo/archive'
     ],
-
+   'Data Transfer': [
+       'storage/transfer',
+       'storage/cyberduck',
+       'storage/globus',
+    ],
+    'Data Commons': [
+      'data-commons/requirements',
+      'data-commons/ego4d',
+      'data-commons/kitchens',
+      'data-commons/fineweb_edu',
+      'data-commons/imagenet',
+      'data-commons/kinetics',
+      'data-commons/olmo-mix-1124',
+      'data-commons/tablib',
+      'data-commons/tcga',
+      'data-commons/the_pile',
+    ],
+    'Open OnDemand': [
+      'ood/start',
+      'ood/schedule-job',
+      'ood/matlab',
+      'ood/jupyter',
+      'ood/vscode',
+      'ood/rstudio'
+    ],
     'Tools & Software': [
       'tools/software',
       'tools/modules',

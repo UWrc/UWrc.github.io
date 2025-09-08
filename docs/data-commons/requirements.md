@@ -3,15 +3,19 @@ id: requirements
 title: Start Here
 ---
 
-## The `klone` Data Commons
+## UW Research Computing Data Commons
 
-The `klone` Data Commons is our cluster-wide, shared dataset storage located at `/data`. The purpose of the Data Commons is to provide a single location for datasets being used by multiple groups, to avoid hosting the same dataset multiple times in separate group directories.
+Both Hyak Klone and Tillicum clusters have cluster-wide, shared dataset storage referred to as Data Commons. 
 
-Historically, we've addressed requests to add datasets to the Data Commons on a case-by-case basis. We've seen a growing number of these types of requests, so we've decided to formalize & publish our expectations.
+On `klone` the path to Data Commons is `/data/`.
+
+On `tillicum` the path to Data Commons is `/gpfs/datasets/`.
+
+The purpose of the Data Commons is to provide a central location for datasets being used by multiple groups, to avoid hosting the same dataset multiple times in separate group directories.
 
 ## Requirements
 
-In order for a dataset to be approved, the following criteria must be met:
+In order request dataset addition to Data Commons, the following criteria must be met:
 
 1. The requester must create a new page of documentation (in this folder, `/docs/data-commons`), and submit a pull request, describing the dataset:
     - A full description of the dataset, publication date, licenses, etc.
@@ -26,7 +30,7 @@ In order for a dataset to be approved, the following criteria must be met:
 
 4. Every person included in the request (again, at least 6), must indivudally attest that the dataset has been vetted: that, to the best of their knowledge, the dataset contains no material where its download/storage/use violates any State or Federal law and/or the rules/policies of UW, including intellectual property laws.
 
-:::note Documentation Contributions
+:::important Documentation Contributions
 The GitHub repository for this documentation site, with instructions for cloning & local development, is here: https://github.com/UWrc/UWrc.github.io.
 
 We have a few additional resources on documentation formatting here: https://hyak.uw.edu/docs/contribute/markdown-guide
