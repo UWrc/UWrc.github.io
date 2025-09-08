@@ -18,7 +18,8 @@
 
 .carouselTitle span, .carouselCaption span {
   color: white; 
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'EncodeSans';
+  font-weight: 700;
   line-height: 1.0;  
   padding: 10px; 
 }

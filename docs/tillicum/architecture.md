@@ -1,9 +1,12 @@
 ---
 id: architecture
-title: System Architecture
+sidebar_label: System Architecture
+title: Tillicum System Architecture
 ---
 
-## Coming soon!
+:::warning 
+Tillicum in an early access phase and will soon be available for general access. **The projected date for general access is early Fall 2025.**
+:::
 
 **Tillicum** is the University of Washington’s next-generation AI-accelerated research computing platform, purpose-built for the most demanding scientific workflows in machine learning, data science, and simulation. Designed around cutting-edge NVIDIA H200 GPUs with ultra-fast NVLink 4.0 interconnect and a 400 Gbps InfiniBand network, Tillicum enables researchers to move beyond the limits of traditional HPC with transformative performance and efficiency. 
 
@@ -18,9 +21,6 @@ title: System Architecture
 - **Container Support:** Apptainer and Docker-compatible environments
 - **Research Software Support:** Optimized deep learning frameworks (e.g., PyTorch, TensorFlow), MPI, CUDA, and more
 
-## System Architecture
-
-
 | Component         | Details |
 |-------------------|---------|
 | **Cluster**       | `tillicum` |
@@ -31,4 +31,4 @@ title: System Architecture
 | **GPU Interconnect** | NVLink™ 4.0 (900 GB/s GPU-to-GPU bandwidth) |
 | **Interconnect**  | 400 Gbps NDR InfiniBand |
 | **Storage**       | ~3 PB high-performance flash storage for active computing |
-| **Namesake**      | Tillicum is a word in Chinook Jargon, meaning *“the people.”* C
+| **Namesake**      | Tillicum is a word in Chinook Jargon, meaning *“the people.”* 

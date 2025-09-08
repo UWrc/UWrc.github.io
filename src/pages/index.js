@@ -66,23 +66,18 @@ export default function Home() {
       <HomeSection
         header='Service Documentation'
         cards={PageContent.DocumentationCards}
-        maxCards='6'
+        maxCards='8'
       />
       <HomeSection
         header='Learn'
         cards={FeaturedCards}
-        maxCards='6'
+        maxCards='8'
         seeMoreLink='/learn'
-      />
-      <HomeSection
-        header='Highlights'
-        cards={PageContent.HighlightsCards}
-        maxCards='6'
       />
       <HomeSection
         header='Support'
         cards={PageContent.SupportCards}
-        maxCards='6'
+        maxCards='8'
       />
       <br/>
       <br/>
