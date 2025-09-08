@@ -3,6 +3,10 @@ id: the_pile
 title: The Pile
 ---
 
+:::tip 
+This dataset is available on **Hyak Klone and Tillicum**. 
+:::
+
 Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Hannaneh Hajishirzi. Student users are Rulin Shao, Sewon Min, and Jacqueline He. Initial deployment of **October 2023**.
 
 ## What is this?
@@ -20,6 +24,8 @@ The format of the Pile is jsonlines data compressed using zstandard.
 By accessing this data you agree to their terms of use provided on their website [<ins>**here**</ins>](https://pile.eleuther.ai/) and [<ins>**MIT License**</ins>](https://github.com/EleutherAI/the-pile/blob/master/LICENSE). 
 
 The file path on `klone` is `/data/pile`.
+
+The file path on `tillicum` is `/gpfs/datasets/pile-uncopyrighted`.
 
 ## How to cite?
 If you use the Pile or any of the components, please cite:

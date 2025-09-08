@@ -1,7 +1,12 @@
 ---
 id: ego4d
-title: Ego4d and Ego-Exo4D Dataset
+sidebar_label: Ego4d & Ego-Exo4D
+title: Ego4d & Ego-Exo4D Dataset
 ---
+
+:::warning 
+This dataset is only available on **Hyak Klone**. 
+:::
 
 Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are Vishwas Sathish, Chuning Zhu, and Aditya Kusupati. Initial deployment of **April 2024**.
 

@@ -1,7 +1,12 @@
 ---
 id: fineweb_edu
-title: FineWeb-Edu
+sidebar_label: FineWeb-Edu
+title: FineWeb-Edu Dataset
 ---
+
+:::tip 
+This dataset is available on **Hyak Klone and Tillicum**. 
+:::
 
 Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Yulia Tsvetkov. Student users are Jacqueline He, Rulin Shao, and Stella Li. Initial deployment of **June 2024**.
 
@@ -94,6 +99,8 @@ print(f"Dataset saved to {save_dir}")
 FineWeb-Edu is released under the Open Data Commons Attribution License (ODC-By) v1.0 license. The use of this dataset is also subject to CommonCrawl's Terms of Use.
 
 The file path on `klone` is `/data/fineweb_edu`.
+
+The file path on `tillicum` is `/gpfs/datasets/fineweb_edu`.
 
 ## How to cite?
 

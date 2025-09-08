@@ -1,7 +1,12 @@
 ---
 id: kinetics
+sidebar_label: Kinetics
 title: Kinetics Dataset
 ---
+
+:::warning 
+This dataset is only available on **Hyak Klone**. 
+:::
 
 Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are Vishwas Sathish, Chuning Zhu, and Aditya Kusupati. Initial deployment of **April 2024**.
 

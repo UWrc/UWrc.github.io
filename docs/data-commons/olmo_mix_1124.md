@@ -1,24 +1,29 @@
 ---
 id: olmo-mix-1124
-title: olmo-mix-1124
+sidebar_label: Olmo-mix-1124
+title: olmo-mix-1124 Dataset
 ---
+
+:::warning 
+This dataset is only available on **Tillicum**. 
+:::
 
 Sponsoring groups are Noah A. Smith, Luke Zettlemoyer, and Jeffrey Heer. Student users are Rahul Nadkarni, Luiza Pozzobon, and Emily Reif. Initial deployment of **May 2025**.
 
 ## What is this?
-This is a collection of data used to train the OLMo-2-1124 language models. You can find more information on the dataset at the [Hugging Face datasets link](https://huggingface.co/datasets/allenai/olmo-mix-1124) or in the [OLMo 2 tech report](https://arxiv.org/pdf/2501.00656). The original dataset was released on November 2024 under the Open Data Commons Attribution License (ODC-By) v1.0 [license](https://opendatacommons.org/licenses/by/1-0/), and its use is also subject to [Common Crawl's Terms of Use](https://commoncrawl.org/terms-of-use).
+This is a collection of data used to train the OLMo-2-1124 language models. You can find more information on the dataset at the [<ins>**Hugging Face datasets link**</ins>](https://huggingface.co/datasets/allenai/olmo-mix-1124) or in the [<ins>**OLMo 2 tech report**</ins>](https://arxiv.org/pdf/2501.00656). The original dataset was released on November 2024 under the Open Data Commons Attribution License (ODC-By) v1.0 [<ins>**license**</ins>](https://opendatacommons.org/licenses/by/1-0/), and its use is also subject to [<ins>**Common Crawl's Terms of Use**</ins>](https://commoncrawl.org/terms-of-use).
 
 ## How to prepare for use?
-This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
+This serves as instructions for the research computing team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
-The format of this dataset is a series of memory-mapped Numpy arrays containing integer token IDs corresponding to the OLMo 2 tokenizer (e.g., [allenai/OLMo-2-1124-7B](https://huggingface.co/allenai/OLMo-2-1124-7B) on Hugging Face). The following BASH script downloads the config file for an OLMo 2 model that was trained using this data and extracts the URLs pointing to the Numpy arrays, saving the URLs to a file:
+The format of this dataset is a series of memory-mapped Numpy arrays containing integer token IDs corresponding to the OLMo 2 tokenizer (e.g., [<ins>**allenai/OLMo-2-1124-7B**</ins>](https://huggingface.co/allenai/OLMo-2-1124-7B) on Hugging Face). The following BASH script downloads the config file for an OLMo 2 model that was trained using this data and extracts the URLs pointing to the Numpy arrays, saving the URLs to a file:
 
 ```bash
 #!/bin/bash
 
 # create and change to dataset directory
-mkdir -p /data/olmo-mix-1124
-cd /data/olmo-mix-1124
+mkdir -p /gpfs/datasets/olmo-mix-1124
+cd /gpfs/datasets/olmo-mix-1124
 
 # get config file for OLMo-2-1124-7B to get URLs for data files
 wget https://raw.githubusercontent.com/allenai/OLMo/refs/heads/main/configs/official-1124/OLMo2-7B-stage1.yaml
@@ -30,13 +35,12 @@ grep "http://olmo-data.org/preprocessed" OLMo2-7B-stage1.yaml | cut -d" " -f 6 |
 rm OLMo2-7B-stage1.yaml
 ```
 
-The following Slurm script then uses the file of URLs to download the Numpy data files, using an array job to download them in parallel (to be run from the `/data/olmo-mix-1124` directory):
+The following Slurm script then uses the file of URLs to download the Numpy data files, using an array job to download them in parallel (to be run from the `/gpfs/datasets/olmo-mix-1124` directory):
 
 ```bash
 #!/bin/bash
 
 #SBATCH --partition=ckpt
-#SBATCH --account=cse
 #SBATCH --job-name=download
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -62,7 +66,7 @@ wget -O $FILEPATH $URL
 ```
 
 ## How to access?
-The path to all data files on `klone` is `/data/olmo-mix-1124`. To load the files into a single dataset, first clone the [OLMo Github repo](https://github.com/allenai/OLMo/) and follow the instructions for setting it up. Then, modify the URLs in the `data` section of the config file you wish to use (e.g., `configs/official-1124/OLMo2-7B-stage1.yaml`) to point to the files located on `klone` (this should just require replacing `http://olmo-data.org` with `/data/olmo-mix-1124`). Finally, you can load the dataset with the following Python code:
+The path to all data files on `tillicum` is `/gpfs/datasets/olmo-mix-1124`. To load the files into a single dataset, first clone the [<ins>**OLMo Github repo**</ins>](https://github.com/allenai/OLMo/) and follow the instructions for setting it up. Then, modify the URLs in the `data` section of the config file you wish to use (e.g., `configs/official-1124/OLMo2-7B-stage1.yaml`) to point to the files located on `tillicum` (this should just require replacing `http://olmo-data.org` with `/gpfs/datasets/olmo-mix-1124`). Finally, you can load the dataset with the following Python code:
 
 ```python
 from olmo.config import TrainConfig
@@ -85,7 +89,7 @@ import numpy as np
 from transformers import AutoTokenizer
 
 # load token IDs as memory-mapped Numpy array
-file_path = "/data/olmo-mix-1124/preprocessed/dclm/text_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train/allenai/dolma2-tokenizer/part-000-00000.npy"
+file_path = "/gpfs/datasets/olmo-mix-1124/preprocessed/dclm/text_openhermes_reddit_eli5_vs_rw_v2_bigram_200k_train/allenai/dolma2-tokenizer/part-000-00000.npy"
 size = os.path.getsize(file_path)
 token_ids = np.memmap(file_path, mode="r+", dtype=np.uint32, shape=(size,))
 
