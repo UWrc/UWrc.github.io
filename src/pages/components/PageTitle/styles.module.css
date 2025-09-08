@@ -8,6 +8,8 @@
 }
   
 .pageTitle > h1 {
+  font-family: 'EncodeSans';
+  font-weight: 700;
   font-size: 3em;
   line-height: 1em;
   margin: 8px 8px 8px 8px;

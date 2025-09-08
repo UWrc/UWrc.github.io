@@ -30,6 +30,16 @@ export default function Learn() {
         header='Services'
         cards={PageContent.LearnServicesCards}
       />
+
+      <HomeSection
+        header='Research Spotlight'
+        cards={PageContent.LearnSpotlightCards}
+      />
+
+      <HomeSection
+        header='Special Events'
+        cards={PageContent.LearnSpecialCards}
+      />
       
       <br/>
       <br/>

@@ -51,6 +51,8 @@
 }
 
 .contentCardTextContainer h3 {
+  font-family: 'EncodeSans';
+  font-weight: 700;
   width: 100%;
   font-size: 1.15em;
   line-height: 1.2em;
@@ -59,8 +61,11 @@
 }
 
 .contentCardTextContainer p {
+  font-family: 'EncodeSans';
+  font-weight: normal;
   margin:0;
   padding: 0;
   font-size: 0.9em;
+  line-height: 1.3em;
   text-align: left;
 }

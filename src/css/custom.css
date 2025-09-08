@@ -21,6 +21,7 @@
 /* bootstrap override */
 .navbar__title {
   font-weight: var(--ifm-font-weight-bold);
+  font-family: EncodeSans;
 }
 
 .navbar .navbar__item {
@@ -33,6 +34,7 @@
   cursor: pointer;
   padding: var(--ifm-navbar-item-padding-vertical) var(--ifm-navbar-item-padding-horizontal);
   text-decoration: none;
+  font-family: EncodeSans;
   font-weight: normal;
 }
 
@@ -58,6 +60,11 @@ ul.check li {
 
 .footer {
   background-color: #32006E;
+  font-family: EncodeSans !important;
+}
+
+.footer__title {
+    font-family: EncodeSans !important;
 }
 
 .footer .container {
@@ -68,3 +75,18 @@ ul.check li {
 .footer__bottom {
   margin-top:3em;
 }
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('/static/font/EncodeSansFamily/EncodeSansNormal/EncodeSansNormal-400-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('/static/font/EncodeSansFamily/EncodeSansNormal/EncodeSansNormal-700-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+

@@ -1,6 +1,7 @@
 module.exports = {
   someSidebar: {
     'Hyak Klone': [
+      'klone/architecture',
       {
         'Get Started': [
           'index',

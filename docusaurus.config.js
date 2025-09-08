@@ -33,7 +33,7 @@ module.exports = {
       title: 'Research Computing Documentation',
       logo: {
         alt: 'Hyak Logo',
-        src: 'img/logos/uw_icon.png',
+        src: 'img/logos/W-Logo_Purple_RGB.png',
       },
       items: [
         /*
@@ -44,36 +44,33 @@ module.exports = {
         },
         */
         {
-          to: '/systems',
-          label: 'Systems',
-          position: 'right',
-          items: [
-            {
-              label: 'Hyak',
-              to: '/systems',
-            },
-            {
-              label: 'Tillicum',
-              to: '/tillicum'
-            },
-          ]
-        },
-        {
           to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560',
           label: 'Pricing',
           position: 'right',
           items: [
             {
-              label: 'Compute: Hyak Klone',
+              label: 'Hyak Klone HPC',
               to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560',
             },
             {
-              label: 'Try Hyak Klone',
-              to: 'https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=f5caba8fdbe108101ba12968489619e0',
+              label: 'Tillicum GPU Cluster',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077',
             },
             {
-              label: 'Research Storage',
-              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580',
+              label: 'Cloud Computing',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036116',
+            },
+            {
+              label: 'Computing for Restricted Access',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035679',
+            },
+            {
+              label: 'Kopah S3 Storage',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083',
+            },
+            {
+              label: 'Lolo Data Archive',
+              to: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084',
             },
           ]
         },

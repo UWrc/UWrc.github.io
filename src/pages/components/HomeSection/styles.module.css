@@ -1,6 +1,6 @@
 .homeSection {
   width:100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 1em auto;
   padding: 0 15px;
   text-align: center;
@@ -8,6 +8,8 @@
 }
   
 .homeSection > h2 {
+  font-family: 'EncodeSans';
+  font-weight: 700;
   font-size: 2em;
   line-height: 1em;
   margin: 8px 8px 8px 8px;

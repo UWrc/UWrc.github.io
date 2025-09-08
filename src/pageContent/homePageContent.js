@@ -28,28 +28,12 @@ export const DocumentationCards = [
             caption: 'Kopah user guides',
             link: '/docs/storage/kopah',
           },
+          { image: '/img/icons/lolo.jpg',
+            header: 'Lolo Data Archive',
+            caption: 'Lolo user guides',
+            link: '/docs/lolo/',
+          },
         ]; 
-
-  export const HighlightsCards = [
-          { image: '/img/highlights/jayadevlab.jpg',
-            header: 'Jayadev Lab', 
-            caption: 'Advancing Alzheimer\'s Research with UW\'s Supercomputer',
-            link: 'https://youtu.be/9w8A7FpDyRs',
-            isvideo: true,
-          },
-          { image: '/img/highlights/cardss.jpg',
-            header: 'Cardiac Systems Simulation Laboratory', 
-            caption: 'Cardiovascular Disease and UW\'s Supercomputer',
-            link: 'https://youtu.be/qpyin6iakLw',
-            isvideo: true,
-          },
-          { image: '/img/highlights/qlora.jpg',
-            header: 'QLoRA', 
-            caption: 'Efficient Finetuning of Quantized LLMs',
-            link: 'https://youtu.be/G8mn5SVgThA',
-            isvideo: true,
-          },
-        ];      
 
   export const SupportCards = [
           { image: '/img/icons/help.jpg',
@@ -66,6 +50,11 @@ export const DocumentationCards = [
             header: 'Research Computing Club', 
             caption: 'Join the RCC Slack Community.',
             link: 'https://uw-hpcc.slack.com/',
+          },
+          { image: '/img/icons/services.jpg',
+            header: 'Research Computing Services', 
+            caption: 'Explore services to accelorate your research.',
+            link: 'https://it.uw.edu/research/',
           },
         ];
 
