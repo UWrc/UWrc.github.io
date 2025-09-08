@@ -7,7 +7,7 @@ title: ImageNet
 This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
-Sponsoring groups are Erik Lundberg, Rob Fatland, and Xiaosong Li. Student users are Nam Pho and Brenden Pelkie. Initial deployment of **October 2023**.
+Sponsoring groups are Erik Lundberg, Rob Fatland, and Xiaosong Li. Student users are Nam Pho and Brenden Pelkie. Initial deployment of **October 2023** on Klone. Deployment of **Sep 2025** on Tillicum.
 
 ## What is this?
 
@@ -34,7 +34,7 @@ The first three images from the test set can be seen below.
 This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
 1. Register on the ImageNet website [<ins>**here**</ins>](https://www.image-net.org/challenges/LSVRC/2012/) to agree to terms of use and receive the download links.
-2. The data should arrive as a tar file. Unpack the tar file to the desired location.
+2. Alternative: Accept the rules on Kaggle [<ins>**here**</ins>](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/rules) and download the dataset [<ins>**here**</ins>](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data).
 
 ## How to access?
 
@@ -52,9 +52,15 @@ By accessing this data you agree to their terms of use provided on their website
 7. The law of the State of New Jersey shall apply to all disputes under this agreement.
 :::
 
+### Klone
+
 1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [<ins>**here**</ins>](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
 2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path on `klone` and `/gpfs/data/imagenet` on `tillicum`. You can mount this and use directly in your code. This is preferred due to the large number of small files.
 3. **Direct**: The file path on `klone` is `/data/imagenet` and on `tillicum` is `/gpfs/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
+
+### Tillicum
+
+Please see the instructions for the [<ins>**ImageNet Object Localization Challenge**</ins>](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/overview).
 
 ## How to cite?
 

@@ -16,6 +16,9 @@ FineWeb-Edu is a textual dataset of 1.3T tokens from educational web pages filte
 You can learn more from [<ins>**this introductory blogpost**</ins>](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1).
 
 ## How to prepare for use?
+
+### Klone
+
 This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
 ```
@@ -93,6 +96,12 @@ for file_url in parquet_urls:
 progress_bar.close()
 print(f"Dataset saved to {save_dir}")
 ```
+
+### Tillicum
+
+Download data from Hugging Face datasets repo [<ins>**HuggingFaceFW/fineweb-edu**</ins>](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu).
+
+The format of the dataset is Parquet files.
 
 ## How to access?
 
