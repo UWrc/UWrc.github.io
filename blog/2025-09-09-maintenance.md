@@ -14,7 +14,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 
 ### Notable Updates
 * **Node image updates** – Routine updates and security patches. 
-* **NVIDIA Driver upgrade to ≥580.65.06** – this upgrade enables CUDA 13. 
+* **NVIDIA Driver upgrade to 580.82.07** – this upgrade enables CUDA 13. 
 * **Network configuration** changes to support [<ins>**Tillicum**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077). 
 
 ### A New Look!
