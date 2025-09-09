@@ -49,6 +49,8 @@ If you are new to containers, we recommend our [<ins>**Containers Tutorial**</in
 
 ## Using Modules  
 
+### Module Heirarchy
+
 Modules help you load compilers, libraries, and applications into your environment. Tillicum uses a **hierarchical module structure**.
 
 With a clean environment `module avail` lists only the available core modules which include compilers.
@@ -56,13 +58,10 @@ With a clean environment `module avail` lists only the available core modules wh
 ```js
 module avail
 ```
-Results as of September 3, 2025. 
+Results as of September 9, 2025. 
 ```js
-
 ----------------------- /gpfs/software/modulefiles/Core -----------------------
-   conda/Miniforge3-25.3.1-3        cuda/13.0.0    parallel/20240822
-   cuda/12.9.1               (D)    gcc/13.4.0
-
+   conda/Miniforge3-25.3.1-3    gcc/13.4.0    parallel/20240822
 ```
 
 Once you select you a compiler, the output of `module avail` will change to show you only the modules that were built using the selected compiler. For exmaple, **CMake 3.31.8** can be loaded by first loading **GCC 13.4.0**.
@@ -70,26 +69,22 @@ Once you select you a compiler, the output of `module avail` will change to show
 ```js
 module load gcc/13.4.0
 ```
+```js
+module avail
+```
 
 ```js
 -------------------- /gpfs/software/modulefiles/gcc/13.4.0 --------------------
-   cmake/3.31.8    ffmpeg/7.1
+   cmake/3.31.8    cuda/12.9.1 (D)    cuda/13.0.0    ffmpeg/7.1
 
 ----------------------- /gpfs/software/modulefiles/Core -----------------------
-   conda/Miniforge3-25.3.1-3        cuda/13.0.0        parallel/20240822
-   cuda/12.9.1               (D)    gcc/13.4.0  (L)
+   conda/Miniforge3-25.3.1-3    gcc/13.4.0 (L)    parallel/20240822
    ```
 
 Then load **CMake 3.31.8**
 
 ```js
 module load cmake/3.31.8
-```
-
-To clear the module list use 
-
-```js
-module purge
 ```
 
 **OpenMPI 5.0.8** on Tillicum was built with **GCC 13.4.0** and **CUDA 12.9.1**. Load it with 
@@ -100,4 +95,43 @@ module load gcc/13.4.0
 module load cuda/12.9.1
 
 module load openmpi/5.0.8
+```
+
+### Exploring Versions and Dependencies
+
+If you want to know if a module is available without loading multiple compilers to investigate, use 
+
+```js
+module spider cuda
+```
+The output will show you available CUDA modules and versions. 
+```
+----------------------------------------------------------------------------
+  cuda:
+----------------------------------------------------------------------------
+    Description:
+      NVIDIA CUDA Toolkit for GPU-accelerated computing.
+
+     Versions:
+        cuda/12.9.1
+        cuda/13.0.0
+
+----------------------------------------------------------------------------
+  For detailed information about a specific "cuda" package (including how to loa
+d the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modu
+les.
+  For example:
+
+     $ module spider cuda/13.0.0
+----------------------------------------------------------------------------
+```
+As the output suggests, to see the dependencies for each version use module spider with the version number. 
+
+### Clear Modules
+
+To clear the module list use 
+
+```js
+module purge
 ```
