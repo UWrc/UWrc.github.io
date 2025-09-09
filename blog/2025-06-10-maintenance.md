@@ -2,7 +2,7 @@
 slug: 2025-june-maintenance
 title: June 2025 Maintenance Update
 author: Kristen Finch
-author_title: HPC Staff Scientist
+author_title: Director of Research Computing Solutions
 author_url: https://github.com/finchnsnps
 author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,stroage,videos]

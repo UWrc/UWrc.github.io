@@ -2,7 +2,7 @@
 slug: 2025-august-maintenance
 title: August 2025 Maintenance Update
 author: Kristen Finch
-author_title: HPC Staff Scientist
+author_title: Director of Research Computing Solutions
 author_url: https://github.com/finchnsnps
 author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,globus,storage,onedrive,kopah,office365]
@@ -43,7 +43,7 @@ If you would like to request 1 on 1 help, please send an email to <ins>**help@uw
 * **Cloud Clinic** August 14 10-11am - guest presenter Niris Okram from AWS presenting on “The Utility of Capacity Blocks: Optimizing computing horsepower per budget dollar.” This will be followed by a short presentation on building small-scale (“Littlest”) JupyterHubs. [<ins>**LEARN MORE HERE.**</ins>](https://escience.washington.edu/events/cloud-clinic-capacity-blocks/)
 * [<ins>**DubHacks**</ins>](https://dh25.dubhacks.co/) - October 18 - October 19, 2025 - DubHacks 2025 takes you back to where it all began—the childhood bedroom. A space for imagination, curiosity, and bold ideas. Now, with code instead of crayons, you get to build what makes your younger self proud. No limits, just pure creativity. What will you create when you let yourself play? 
 
-### Training Opportunities
+### External Training Opportunities
 
 * **Automating Research with Globus: The Modern Research IT Platform** - Aug. 18, 2025, 9 a.m. – 12 p.m. (Pacific Time) This workshop introduces Globus Flows and its role in automating research workflows. Participants will explore data portals, science gateways, and commons, enabling seamless data discovery and access. [<ins>**Enroll here**</ins>](https://internet2.edu/cloud/cloud-learning-and-skills-sessions/automating-research-with-globus-the-modern-research-it-platform/?utm_source=CLASS+Spring+2025+Training+Campaign+-+May+2025&utm_medium=email&utm_campaign=class).
 * **CU-RMACC Webinars: Should I be Scared of AI?** Aug. 18, 2025 - 3:00 PM - 4:00 PM EDT Throughout history, new technologies have sparked both excitement and fear—AI is no different. In this talk, Dr. Shelley Knuth, Assistant Vice Chancellor for Research Computing at the University of Colorado explores the common fears surrounding artificial intelligence, why we feel them, and how we can shift our perspective to focus on positive outcomes. We’ll look at practical ways to address risks, embrace innovation, and move forward with AI as a powerful tool rather than something to fear. [<ins>**Learn more and register.**</ins>](https://docs.google.com/forms/d/e/1FAIpQLScYcy6hMLlHCBB2oECEQbqLe3qWknmj6KGQPZzOCWgTO_kTEg/viewform)

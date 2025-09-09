@@ -5,7 +5,7 @@ title: TCGA Dataset
 ---
 
 :::warning 
-This dataset is only available on **Tillicum**. 
+This dataset will be available on **Tillicum** soon! 
 :::
 
 Sponsoring groups are Su-In Lee, Linda Shapiro, Sheng Wang. Student users are Chanwoo Kim, Rustin Soraki, and Zucks Liu. Initial deployment of **March 2025**.
