@@ -83,7 +83,8 @@ module.exports = {
 
     'Lolo Tape Archive': [
       'lolo/lolo',
-      'lolo/archive'
+      'lolo/archive',
+      'lolo/lolo-usage',
     ],
 
     'Tools & Software': [
