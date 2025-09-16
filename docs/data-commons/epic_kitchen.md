@@ -4,8 +4,8 @@ sidebar_label: Epic Kitchens
 title: Epic Kitchens Dataset
 ---
 
-:::warning 
-This dataset is only available on **Hyak Klone**. 
+:::tip 
+This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
 Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are Vishwas Sathish, Chuning Zhu, and Aditya Kusupati. Initial deployment of **April 2024**.
@@ -30,7 +30,10 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 ## How to access?
 
 The epic kitchens dataset and benchmarks on this page are copyright by us and published under the [<ins>**Creative Commons Attribution-NonCommercial 4.0 International License**</ins>](https://creativecommons.org/licenses/by-nc/4.0/).
-The file path for kitchens dataset on `klone` is `/data/epic_kitchens`.
+
+The file path for epic kitchens dataset on `klone` is `/data/epic_kitchens`.
+
+The file path for epic kitchens dataset on `tillicum` is `/gpfs/datasets/epic_kitchens`.
 
 ## How to cite?
 If you use the Epic Kitchens dataset or any of the components, please cite the following papers:

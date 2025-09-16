@@ -7,7 +7,7 @@ title: ImageNet
 This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
-Sponsoring groups are Erik Lundberg, Rob Fatland, and Xiaosong Li. Student users are Nam Pho and Brenden Pelkie. Initial deployment of **October 2023** on Klone. Deployment of **Sep 2025** on Tillicum.
+Sponsoring groups are Erik Lundberg, Rob Fatland, and Xiaosong Li. Student users are Nam Pho and Brenden Pelkie. Initial deployment of **October 2023** on Klone and **Sep 2025** on Tillicum.
 
 ## What is this?
 
@@ -55,8 +55,8 @@ By accessing this data you agree to their terms of use provided on their website
 ### Klone
 
 1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [<ins>**here**</ins>](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
-2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path on `klone` and `/gpfs/data/imagenet` on `tillicum`. You can mount this and use directly in your code. This is preferred due to the large number of small files.
-3. **Direct**: The file path on `klone` is `/data/imagenet` and on `tillicum` is `/gpfs/data/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
+2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path on `klone` and `/gpfs/datasets/imagenet` on `tillicum`. You can mount this and use directly in your code. This is preferred due to the large number of small files.
+3. **Direct**: The file path on `klone` is `/data/imagenet` and on `tillicum` is `/gpfs/datasets/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
 
 ### Tillicum
 

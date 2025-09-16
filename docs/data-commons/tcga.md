@@ -8,7 +8,7 @@ title: TCGA Dataset
 This dataset is only available on **Tillicum**. 
 :::
 
-Sponsoring groups are Su-In Lee, Linda Shapiro, Sheng Wang. Student users are Chanwoo Kim, Rustin Soraki, and Zucks Liu. Initial deployment of **March 2025**.
+Sponsoring groups are Su-In Lee, Linda Shapiro, Sheng Wang. Student users are Chanwoo Kim, Rustin Soraki, and Zucks Liu. Initial deployment of **Sep 2025**.
 
 ## What is this?
 <!-- ![TCGA Infographic](https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_infographic/2021-02/tcga-infographic-enlarge.png?itok=r6HLN-Ex) -->

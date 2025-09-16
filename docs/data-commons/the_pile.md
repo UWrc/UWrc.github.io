@@ -7,7 +7,7 @@ title: The Pile
 This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
-Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Hannaneh Hajishirzi. Student users are Rulin Shao, Sewon Min, and Jacqueline He. Initial deployment of **October 2023** on Klone. The Pile **uncopyrighted version** depoyed in **Sep 2025** on Tillicum.
+Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Hannaneh Hajishirzi. Student users are Rulin Shao, Sewon Min, and Jacqueline He. Initial deployment of **October 2023** on Klone. The Pile **uncopyrighted version** deployed in **Sep 2025** on Tillicum.
 
 ## What is this?
 The Pile is a 825 GiB diverse, open source language modelling data set that consists of 22 smaller, high-quality datasets combined together. 

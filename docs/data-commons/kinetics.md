@@ -4,11 +4,11 @@ sidebar_label: Kinetics
 title: Kinetics Dataset
 ---
 
-:::warning 
-This dataset is only available on **Hyak Klone**. 
+:::tip 
+This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
-Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are Vishwas Sathish, Chuning Zhu, and Aditya Kusupati. Initial deployment of **April 2024**.
+Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are Vishwas Sathish, Chuning Zhu, and Aditya Kusupati. Initial deployment of **April 2024** on Klone and **Sep 2025** on Tillicum.
 
 ## What is this?
 Kinetics is a collection of large-scale, high-quality datasets of URL links of up to 650,000 video clips that cover 400/600/700 human action classes, depending on the dataset version. 
@@ -31,6 +31,8 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 ## How to access?
 
 The file path for kinetics dataset on `klone` is `/data/kinetics`.
+
+The file path for kinetics dataset on `tillicum` is `/gpfs/datasets/kinetics`.
 
 The kinetics dataset is licensed by Google Inc. under a Creative Commons Attribution 4.0 International License. Published. May 22, 2017.
 
