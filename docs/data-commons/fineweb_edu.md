@@ -8,7 +8,7 @@ title: FineWeb-Edu Dataset
 This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
-Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Yulia Tsvetkov. Student users are Jacqueline He, Rulin Shao, and Stella Li. Initial deployment of **June 2024**.
+Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Yulia Tsvetkov. Student users are Jacqueline He, Rulin Shao, and Stella Li. Initial deployment of **June 2024** on Klone and **Sep 2025** on Tillicum.
 
 ## What is this?
 FineWeb-Edu is a textual dataset of 1.3T tokens from educational web pages filtered from FineWeb (a 15T token dataset derived from 96 CommonCrawl snapshots). 

@@ -3,11 +3,11 @@ id: tablib
 title: TabLib
 ---
 
-:::warning 
-This dataset is only available on **Hyak Klone**. 
+:::tip 
+This dataset is available on **Hyak Klone and Tillicum**. 
 :::
 
-Sponsoring groups are Ludwig Schmidt, Tim Althoff, and Pang Wei Koh. Student users are Josh Gardner, Mike Merrill, and Vinayak Gupta.
+Sponsoring groups are Ludwig Schmidt, Tim Althoff, and Pang Wei Koh. Student users are Josh Gardner, Mike Merrill, and Vinayak Gupta. Initial deployment of **Sep 2025** on Tillicum.
 
 # What is this?
 
@@ -38,6 +38,10 @@ tables = [pa.RecordBatchStreamReader(b).read_all() for b in df['arrow_bytes']]
 
 ```
 # How to access?
+
+The file path for TablLib dataset on `klone` is `/data/tablib`.
+
+The file path for TablLib dataset on `tillicum` is `/gpfs/datasets/tablib`.
 
 Users who access the data should also apply for public, open credentialized access to the dataset on Hugging Face Datasets [<ins>**here**</ins>](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
 
