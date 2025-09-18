@@ -21,6 +21,8 @@ Tillicum in an early access phase and will soon be available for general access.
 - **Container Support:** Apptainer and Docker-compatible environments
 - **Research Software Support:** Optimized deep learning frameworks (e.g., PyTorch, TensorFlow), MPI, CUDA, and more
 
+<img style={{width: "300px", height: "200px"}} src="/img/systems/tillicum_2.jpg" alt="Tillicum cluster image"/>
+
 | Component         | Details |
 |-------------------|---------|
 | **Cluster**       | `tillicum` |

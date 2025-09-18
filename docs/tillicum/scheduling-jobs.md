@@ -7,10 +7,21 @@ Tillicum uses the **Slurm workload manager** for scheduling and running jobs. Wh
 
 ## Key Differences from Klone  
 
-- **Tillicum** uses a **usage-based model**. All users have the same priority, and access is controlled through **QOS (Quality of Service)** rather than partitions.  
+- **Tillicum** uses a **usage-based model**. All users have the same priority, and access is controlled through [<ins>**QOS (Quality of Service)**</ins>](#tillicum-qos) rather than partitions.  
 - **No checkpoint partition** exists on Tillicum.  
-- **Simpler access** – you don’t need to determine partitions; just select the appropriate QOS.  
+- **Simpler access** – you don’t need to determine partitions; just select the appropriate [<ins>**QOS**</ins>](#tillicum-qos).  
 - **Klone** uses a **condo model**. Research groups have dedicated **accounts** and **partitions** tied to the resources they purchased. This makes partition choice complex, and we provide `hyakalloc` to help users determine access. Klone also provides the *checkpoint partitions* (i.e., `ckpt`, `ckpt-g2`, and `ckpt-all`) for accessing idle resources outside priority accounts.  
+    - On Tillicum, use `squeue` and `sinfo` to monitor your jobs and cluster traffic. [<ins>**Learn more below**</ins>](#monitoring-jobs-and-resource-availability).
+
+:::important Tillicum Usage Rates
+***GPU Hour*** = Elapsed Time x ***N*** GPUs
+
+**Usgae Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UW-IT's ITBill system. 
+Every scheduled job on Tillicum is subject to a the usage rate and requires at least 1 GPU (141GB RAM). 
+* Jobs are bound by a **maximum of ~200GB system RAM and 8 CPUs**
+* ***If more system RAM or more CPUs are required, additional GPUs must be added***
+:::
+
 
 ---
 
@@ -20,10 +31,12 @@ Jobs on Tillicum run under a **QOS** that defines limits like wall time, resourc
 
 **All nodes on Tillicum have 8 GPUs each with 141 GB of RAM.**
 
-| QOS   | Max Wall Time  | Max Resources                | Per-User Job Limit | Memory Availability            | Use Case                               |
+| QOS   | Max Wall Time  | Max Resources                | Per-User Resource Limit | Memory Availability            | Use Case                               |
 |-------|---------------|------------------------------|--------------------|--------------------------------|-----------------------------------------|
-| **normal** (default) | 12 hours      | Up to 16 GPUs or 2 nodes   | 3 jobs             | ~2 TB RAM per node, 141 GB per GPU | Standard research jobs, production runs |
+| **normal** (default) | 12 hours      | Up to 16 GPUs or 2 nodes   | 32 GPUs running simultaneously             | ~2 TB RAM per node, 141 GB per GPU | Standard research jobs, production runs |
 | **debug**            | 2 hours       | 8 CPUs, 1 GPU, 200 GB System RAM  | 1 job              | 200 GB System RAM, 141 GB per GPU                     | Testing protocols, quick experiments    |
+| **long**            | 24 hours       | Up to 8 GPUs or 1 node  | 8 GPUs running simultaneously              | 200 GB System RAM, 141 GB per GPU                     | Testing protocols, quick experiments    |
+
 
 ---
 
@@ -76,6 +89,23 @@ module load conda
 conda activate my_env
 python my_script.py
 ```
+
+### Monitoring Jobs and Resource Availability
+
+Your best tool for monitoring the progress of your jobs is the `squeue` command which will show you all jobs runnning or requested on the cluster. A quick look at `squeue` output will allows you to estimate cluster traffic. `squeue` with the `-u` flag and your NetID will show you the jobs you have submitted. 
+
+```js
+squeue -u $USER
+```
+
+If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a mainteance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [<ins>**Guide to job reasons.**</ins>](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
+
+`sinfo` can also be helpful for determining how many nodes are available. The following command provides a useful summary.
+
+```js
+sinfo -r
+```
+
 
 ### Budgeting and Tillicum Usage
 

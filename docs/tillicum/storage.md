@@ -5,8 +5,9 @@ title: Storage
 
 Tillicum provides high-speed, temporary storage designed for active computation. 
 
-* All storage is scratch space (**NOT BACKED UP**)
-* No persistent or archival storage is supported
+* [<ins>**Project/lab dedicated storage**</ins>](#project-storage) and [<ins>**Home directory**</ins>](#user-home-directory) storage is backed up daily
+* [<ins>**Scrubbed**</ins>](#scrubbed) storage is scratch space (**NOT BACKED UP**)
+* ***No persistent or archival storage is supported***
 * Data will be purged periodically and at project end
 * Users are responsible for transferring results to external systems (e.g., [<ins>**Kopah S3**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [<ins>**Lolo Archive**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084))
 
@@ -17,6 +18,7 @@ Every user has a [<ins>**Home directory**</ins>](#user-home-directory) by defaul
 ## User Home Directory
 
 - ***10 GB, only yours, everyone has one.***
+- ***Daily recovery Snapshots.***
 
 Each users' Home directory is located at the folder path `/gpfs/home/UWnetID` on `tillicum` where `UWnetID` is your UW netID. You originate here by default when you log into the cluster. 
 
@@ -31,12 +33,19 @@ du -h -d 1
 
 ## Project Storage
 
-When you request an allocation for your project or lab on Tillicum, we will ask to estimate how much storage you will require for the lifecycle of your project. After your project is complete, you will have 1 month to backup your data and results elsewhere. 
+- ***1 TB shared project or lab storage.***
+- ***Daily recovery Snapshots.***
 
-***More information coming soon.***
+Each requested alloaction, whether at the lab or project level, will be provided a shared directory with a 1TB storage quota under `/gpfs/projects`.
+
+***We will constantly evaluate this policy based on user feedback.***
 
 ## Scrubbed
 
-If you need space but only temporarily then you can make use of the scrubbed folder. The scrubbed folder is located under `/gpfs/scrubbed/` is intended to be a community storage space for active computing. Persistent or archival storage is not permitted. 
+- ***100 TB individual limit.***
+- ***60-Day erasure policy***
+- ***Not backed up.***
 
-***More information about individual limits and the purge policy coming soon.*** 
+If you need space but only temporarily then you can make use of the scrubbed folder. The scrubbed folder is located under `/gpfs/scrubbed/` is intended to be a community storage space for active computing. Persistent or archival storage is not permitted. Files in `/gpfs/scrubbed/` will be purged automatically after 60 days inactivity. 
+
+***We will constantly evaluate this policy based on user feedback, but our priority will be to maintain this storage space for the community.***
