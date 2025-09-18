@@ -16,7 +16,7 @@ Tillicum uses the **Slurm workload manager** for scheduling and running jobs. Wh
 :::important Tillicum Usage Rates
 ***GPU Hour*** = Elapsed Time x ***N*** GPUs
 
-**Usgae Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UW-IT's ITBill system. 
+**Usage Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UW-IT's ITBill system. 
 Every scheduled job on Tillicum is subject to a the usage rate and requires at least 1 GPU (141GB RAM). 
 * Jobs are bound by a **maximum of ~200GB system RAM and 8 CPUs**
 * ***If more system RAM or more CPUs are required, additional GPUs must be added***
