@@ -4,6 +4,28 @@ title: Get Started
 ---
 
 
+## Pay-as-you-go by the GPU Hour
+
+On Tillicum, computing units are "GPU Hours" and are applied to all jobs scheduled with [<ins>**Slurm**</ins>](/docs/tillicum/scheduling-jobs).
+
+:::important Tillicum Usage Rates
+***GPU Hour*** = Elapsed Time x ***N*** GPUs
+
+**Usgae Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UW-IT's ITBill system. 
+
+Every scheduled job on Tillicum is subject to a the usage rate and requires at least 1 GPU (141GB RAM). 
+* Jobs are bound by a **maximum of ~200GB system RAM and 8 CPUs**
+* ***If more system RAM or more CPUs are required, additional GPUs must be added***
+:::
+
+Tillicum Processes ***not*** subject to charge: 
+* [<ins>**storage**</ins>](/docs/tillicum/storage.md)
+* data [<ins>**import, export**</ins>](/docs/storage/globus.md)
+* data parsing, manipulation
+* code development on the Login node (any code development via a Slurm Job in subject to charge)
+
+----
+
 ## Tillicum Login Date TBA
 
 ### Accounts
