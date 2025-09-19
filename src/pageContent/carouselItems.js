@@ -3,7 +3,7 @@ export const CAROUSEL_ITEMS = [
     image: '/img/carousel/supercomp.jpg',
     title: 'Coming soon: Tillicum GPU Cluster',
     caption: 'UW\'s next-generation AI-accelerated research computing platform.',
-    linkUrl: 'https://hyak.uw.edu/tillicum',
+    linkUrl: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077',
   },
     {
     image: '/img/carousel/suzzalo.jpg',
@@ -15,7 +15,7 @@ export const CAROUSEL_ITEMS = [
     image: '/img/carousel/class.jpg',
     title: 'Regular Training Opportunities',
     caption: 'Learn new skills and optimize your computing portfolio.',
-    linkUrl: 'https://calendar.washington.edu/sea_uwit-rc',
+    linkUrl: 'https://it.uw.edu/guides/research/research-computing-events/',
   },
     {
     image: '/img/carousel/storage2.jpg',
