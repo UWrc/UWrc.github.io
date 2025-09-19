@@ -15,7 +15,7 @@ export const CAROUSEL_ITEMS = [
     image: '/img/carousel/class.jpg',
     title: 'Regular Training Opportunities',
     caption: 'Learn new skills and optimize your computing portfolio.',
-    linkUrl: 'https://it.uw.edu/guides/research/research-computing-events/',
+    linkUrl: 'https://calendar.washington.edu/sea_uwit-rc',
   },
     {
     image: '/img/carousel/storage2.jpg',
