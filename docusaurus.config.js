@@ -86,7 +86,7 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'https://it.uw.edu/guides/research/research-computing-events/',
+          to: 'https://calendar.washington.edu/sea_uwit-rc',
           label: 'Events',
           position: 'right',
         },
