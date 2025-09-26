@@ -1,5 +1,5 @@
 #!/bin/bash
-NODE=$(ssh klone 'squeue \
+NODE=$(ssh klone-login 'squeue \
     --user $USER \
     --states RUNNING \
     --name vsc-proxy-jump \
