@@ -47,6 +47,8 @@ We highly recommend using containers to build your software environment on Tilli
 
 If you are new to containers, we recommend our [<ins>**Containers Tutorial**</ins>](../hyak101/containers/syllabus.md).
 
+--- 
+
 ## Using Modules  
 
 ### Module Heirarchy

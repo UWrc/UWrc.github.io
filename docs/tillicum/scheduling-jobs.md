@@ -27,16 +27,30 @@ Every scheduled job on Tillicum is subject to a the usage rate and requires at l
 
 ## Tillicum QOS  
 
-Jobs on Tillicum run under a **QOS** that defines limits like wall time, resource size, and per-user job limits. 
+Tillicum jobs are submitted under a "Quality-of-Service" or **QOS**, which defines limits like wall time, GPU count, and concurrent jobs. 
+* All Tillicum compute nodes have **8 GPUs (141 GB each)** and these are provisioned with 200 GB system RAM per GPU and 8 CPUs per GPU.
+* You must request at least 1 GPU. *CPU-only jobs are not allowed.*
 
-**All nodes on Tillicum have 8 GPUs each with 141 GB of RAM.**
+| QOS             | Max Time   | Max GPUs per Job | Concurrent GPU Limit | Notes                           |
+| --------------- | ---------- | ---------------- | -------------------- | ------------------------------- |
+| **normal**      | 24 hours   | 16               | 48 GPUs              | Standard production work        |
+| **debug**       | 30 minutes | 1                | 1 job                | Low-cost testing and setup      |
+| **interactive** | 8 hours    | 2                | 2 jobs               | For real-time work or debugging |
+| **long**        | by request | details TBA       | details TBA           | For special long jobs           |
+| **wide**        | by request | details TBA       | details TBA           | For distributed jobs            |
 
-| QOS   | Max Wall Time  | Max Resources                | Per-User Resource Limit | Memory Availability            | Use Case                               |
-|-------|---------------|------------------------------|--------------------|--------------------------------|-----------------------------------------|
-| **normal** (default) | 12 hours      | Up to 16 GPUs or 2 nodes   | 32 GPUs running simultaneously             | ~2 TB RAM per node, 141 GB per GPU | Standard research jobs, production runs |
-| **debug**            | 2 hours       | 8 CPUs, 1 GPU, 200 GB System RAM  | 1 job              | 200 GB System RAM, 141 GB per GPU                     | Testing protocols, quick experiments    |
-| **long**            | 24 hours       | Up to 8 GPUs or 1 node  | 8 GPUs running simultaneously              | 200 GB System RAM, 141 GB per GPU                     | Testing protocols, quick experiments    |
+***We will constantly evaluate this policy based on user feedback.***
 
+---
+
+## Understanding Job Types
+
+There are two main ways to run work on Tillicum:
+
+| Job Type            | Command  | Best For                     | Runs On                                         |
+| ------------------- | -------- | ---------------------------- | ----------------------------------------------- |
+| **Interactive Job** | `salloc` | Exploratory or hands-on work | A compute node you connect to directly          |
+| **Batch Job**       | `sbatch` | Long or unattended jobs      | Runs automatically when resources are available |
 
 ---
 
@@ -90,7 +104,9 @@ conda activate my_env
 python my_script.py
 ```
 
-### Monitoring Jobs and Resource Availability
+---
+
+## Monitoring Jobs and Resource Availability
 
 Your best tool for monitoring the progress of your jobs is the `squeue` command which will show you all jobs runnning or requested on the cluster. A quick look at `squeue` output will allows you to estimate cluster traffic. `squeue` with the `-u` flag and your NetID will show you the jobs you have submitted. 
 
@@ -107,7 +123,9 @@ sinfo -r
 ```
 
 
-### Budgeting and Tillicum Usage
+---
+
+## Budgeting and Tillicum Usage
 
 To help guide your work, our Slurm job submit script will show you an estimate of how much your job will cost when using Slurm to schedule a job. For example, 
 
