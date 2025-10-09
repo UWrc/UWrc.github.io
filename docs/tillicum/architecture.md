@@ -4,10 +4,6 @@ sidebar_label: System Architecture
 title: Tillicum System Architecture
 ---
 
-:::warning 
-Tillicum in an early access phase and will soon be available for general access. **The projected date for general access is early Fall 2025.**
-:::
-
 **Tillicum** is the University of Washington’s next-generation AI-accelerated research computing platform, purpose-built for the most demanding scientific workflows in machine learning, data science, and simulation. Designed around cutting-edge NVIDIA H200 GPUs with ultra-fast NVLink 4.0 interconnect and a 400 Gbps InfiniBand network, Tillicum enables researchers to move beyond the limits of traditional HPC with transformative performance and efficiency. 
 
 ## Key Features
@@ -26,7 +22,7 @@ Tillicum in an early access phase and will soon be available for general access.
 | Component         | Details |
 |-------------------|---------|
 | **Cluster**       | `tillicum` |
-| **Service**       | Coming Fall 2025 |
+| **Service**       | Deployed August 2025, Early Access August 28-October 6, 2025, General Availability October 15 2025 - |
 | **Operating System** | Rocky 9 |
 | **Compute**       | 1,536 CPU cores [Intel Emerald Rapids] |
 | **Accelerators**  | 192 GPU cards (141 GB memory per GPU) [NVIDIA Hopper – H200 SXM] |

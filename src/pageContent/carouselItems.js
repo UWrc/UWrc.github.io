@@ -1,8 +1,8 @@
 export const CAROUSEL_ITEMS = [
     {
-    image: '/img/carousel/supercomp.jpg',
-    title: 'Coming soon: Tillicum GPU Cluster',
-    caption: 'UW\'s next-generation AI-accelerated research computing platform.',
+    image: '/img/carousel/Final-Tillicum-Artwork-ServerSize-2070x890.png',
+    title: 'Tillicum GPU Cluster',
+    caption: 'UW\'s next-generation GPU-accelerated research computing platform is here.',
     linkUrl: 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077',
   },
     {

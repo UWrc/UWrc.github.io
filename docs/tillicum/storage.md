@@ -3,26 +3,53 @@ id: storage
 title: Storage
 ---
 
-Tillicum provides high-speed, temporary storage designed for active computation. 
+On Tillicum, storage is **physically separate** from computation nodes. It’s mounted so every node in the cluster can access it under `/gpfs/`. 
 
-* [<ins>**Project/lab dedicated storage**</ins>](#project-storage) and [<ins>**Home directory**</ins>](#user-home-directory) storage is backed up daily
-* [<ins>**Scrubbed**</ins>](#scrubbed) storage is scratch space (**NOT BACKED UP**)
-* ***No persistent or archival storage is supported***
-* Data will be purged periodically and at project end
-* Users are responsible for transferring results to external systems (e.g., [<ins>**Kopah S3**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [<ins>**Lolo Archive**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084))
+You’ll often hear Tillicum storage referred to as "GPFS", which stands for **General Parallel File System** — IBM’s high-performance, cluster-wide filesystem. It allows all compute nodes to read and write to the same shared data simultaneously with very high throughput.
 
-Storage on Tillicum is physically separate from servers used for computation. On `tillicum` the storage system (e.g., `/gpfs/`) is then mounted (i.e., accessible) from every compute node of the cluster. `tillicum` storage is referred to as `gpfs` due to that being the mount point on the cluster (i.e., `/gpfs/somefolder/anotherfolder`).  
+So whenever you see a path like:
 
-Every user has a [<ins>**Home directory**</ins>](#user-home-directory) by default, [<ins>**project/lab dedicated storage**</ins>](#project-storage), and [<ins>**scrubbed**</ins>](#scrubbed) storage for temporary overflow use.
+```bash
+/gpfs/home/UWnetID
+```
+that means you’re accessing your home directory on the GPFS storage system, not a local disk on the login node.
 
-## User Home Directory
+ ---
 
-- ***10 GB, only yours, everyone has one.***
-- ***Daily recovery Snapshots.***
+## The Filesystem
 
-Each users' Home directory is located at the folder path `/gpfs/home/UWnetID` on `tillicum` where `UWnetID` is your UW netID. You originate here by default when you log into the cluster. 
+![Diagrammatic representation of the Tillicum filesystem directory tree. The directory tree shows the root directory at the top which holds all subdirectories. The picture is a truncated view of the filesystem showing the root directory and a few directories within it, including GPFS and a few directories within GPFS/: home/ where the Home directories are, software/ where we keep software, datasets/ where common datasets are stored, scrubbed/ where users can utilize temporary storage, and projects/ where the lab groups their dedicated storage.](/img/docs/directory_graphic.jpg 'filesystem')
+*Diagram - truncated view of the Tillicum filesystem. Above the directory `group/` is meant to represent any research group and the directory `dir/` is meant to represent any directory.*
 
-**We recommend only keeping configuration files in your home directory and using other storage spaces for data, software, and code storage.**
+
+As shown above, the Tillicum filesystem is organized under the root directory `/`. Within it, `/gpfs/` contains several key subdirectories:
+
+* `home/` — individual user home directories for configuration and small files.
+* `software/` — centrally managed shared applications and tools.
+* `datasets/` — curated public or shared research datasets. We have a process by which groups can nominate datasets for storage under our [**<ins>Data Commons</ins>**](https://hyak.uw.edu/docs/data-commons/requirements). 
+* `scrubbed/` — temporary scratch space for active work, periodically cleaned.
+* `projects/` — long-term storage for groups and project-specific data.
+
+
+ ---
+
+ ## User Storage
+Every user on Tillicum has access to three key storage spaces mounted under `/gpfs/` where they can **write** *and* **read** files:
+
+1. **Home directory** (`/gpfs/home/UWNetID`)— personal, backed-up storage
+1. **Project/lab dedicated storage** (`/gpfs/projects/group-name`) — shared, backed-up storage for research groups
+1. **Scrubbed storage** (`/gpfs/scrubbed/some-directory`) — large, temporary scratch space for active computation
+
+Here’s a quick overview of Tillicum storage policies:
+| Storage             | Size / Quota          | Backup          | Notes                                                                        |
+| ------------------- | --------------------- | --------------- | ---------------------------------------------------------------------------- |
+| Home Directory      | 10 GB per user        | Daily snapshots | Keep only configuration files here; use other spaces for data/code           |
+| Project/Lab Storage | 1 TB per project/lab  | Daily snapshots | Request allocation via [**<ins>Tillicum intake form</ins>**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077)                             |
+| Scrubbed Storage    | Up to 100 TB per user | None            | Scratch space, purged after 60 days of inactivity; not for long-term storage |
+
+***Tillicum is a new service. We will constantly evaluate these storage policies based on user feedback.***
+
+Users are responsible for transferring results to external systems (e.g., [<ins>**Kopah S3**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [<ins>**Lolo Archive**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084))
 
 :::tip pro tip: Storage monitoring
 To monitor and investigate storage usage, use the following command, which will show you how much storage is occupied by each subdirectory in the directory where the command is executed. If you are cleaning up storage, this command will show new storage counts as changes are made. 
@@ -31,21 +58,3 @@ du -h -d 1
 ```
 :::
 
-## Project Storage
-
-- ***1 TB shared project or lab storage.***
-- ***Daily recovery Snapshots.***
-
-Each requested alloaction, whether at the lab or project level, will be provided a shared directory with a 1TB storage quota under `/gpfs/projects`.
-
-***We will constantly evaluate this policy based on user feedback.***
-
-## Scrubbed
-
-- ***100 TB individual limit.***
-- ***60-Day erasure policy***
-- ***Not backed up.***
-
-If you need space but only temporarily then you can make use of the scrubbed folder. The scrubbed folder is located under `/gpfs/scrubbed/` is intended to be a community storage space for active computing. Persistent or archival storage is not permitted. Files in `/gpfs/scrubbed/` will be purged automatically after 60 days inactivity. 
-
-***We will constantly evaluate this policy based on user feedback, but our priority will be to maintain this storage space for the community.***

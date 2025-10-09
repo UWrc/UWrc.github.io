@@ -3,8 +3,29 @@ id: tillicum
 title: Get Started
 ---
 
+## Tillicum Onboarding Training
 
+***New to Tillicum?*** We have prepared a guided introduction to the Tillicum GPU cluster at the University of Washington.
+
+Check it out here → [<ins>**Tillicum Onboarding Training**</ins>](https://github.com/UWrc/tillicum-onboarding)
+
+---
+
+## Project Allocations
+
+**Tillicum is available to:**
+* UW faculty, academic staff, and research units.
+* UW affiliates supported by a sponsoring department.
+* A UW worktag is required to enroll in this service.
+
+**Eligible and ready to try it?**
+* Sign up for a project allocation to start using Tillicum → [<ins>**Tillicum Access Request Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581)
+* See if Tillicum is right for you with 100 GPU hours and 50GB of dedicated project storage → [<ins>**Tillicum Demo Account Request**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=b71cefcc97ef2a500a7637b6f053af15)
+
+---
 ## Pay-as-you-go by the GPU Hour
+
+***Your first 100 GPU hours are free!***
 
 On Tillicum, computing units are "GPU Hours" and are applied to all jobs scheduled with [<ins>**Slurm**</ins>](/docs/tillicum/scheduling-jobs).
 
@@ -24,15 +45,10 @@ Tillicum Processes ***not*** subject to charge:
 * data parsing, manipulation
 * code development on the Login node (any code development via a Slurm Job in subject to charge)
 
-----
+---
 
-## Tillicum Login Date TBA
 
-### Accounts
-
-More information coming soon.
-
-### Two Factor Authentication
+## Two Factor Authentication
 
 UW policy is that all services require 2 factor authentication (2FA) by default as a security posture. Please go to [<ins>**this 2FA page**</ins>](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
 
@@ -40,7 +56,7 @@ UW policy is that all services require 2 factor authentication (2FA) by default 
 You need 2FA to log onto any UW-IT Research Computing cluster.
 :::
 
-### Logging in with SSH
+## Logging in with SSH
 
 Once you have your account and 2FA set up, you can use `ssh` to log into `tillicum`. `ssh` is the most common method of logging into the cluster using the command-line interface (CLI).
 
