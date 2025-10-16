@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[3622],{84018:a=>{a.exports=JSON.parse('{"tag":{"label":"gromacs","permalink":"/blog/tags/gromacs","allTagsPath":"/blog/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/gromacs","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

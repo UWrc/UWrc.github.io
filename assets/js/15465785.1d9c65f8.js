@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[6142],{74223:a=>{a.exports=JSON.parse('{"tag":{"label":"kopah","permalink":"/blog/tags/kopah","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/kopah","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

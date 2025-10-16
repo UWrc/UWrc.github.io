@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[3245],{24708:a=>{a.exports=JSON.parse('{"tag":{"label":"rcc","permalink":"/blog/tags/rcc","allTagsPath":"/blog/tags","count":8,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/rcc","page":1,"postsPerPage":10,"totalPages":1,"totalCount":8,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[372],{97759:a=>{a.exports=JSON.parse('{"tag":{"label":"gpus","permalink":"/blog/tags/gpus","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/gpus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

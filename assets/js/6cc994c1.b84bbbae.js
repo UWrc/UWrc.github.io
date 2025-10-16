@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[6277],{67773:a=>{a.exports=JSON.parse('{"tag":{"label":"centos","permalink":"/blog/tags/centos","allTagsPath":"/blog/tags","count":2,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/centos","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

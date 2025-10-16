@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[4458],{20339:a=>{a.exports=JSON.parse('{"tag":{"label":"videos","permalink":"/blog/tags/videos","allTagsPath":"/blog/tags","count":3,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/videos","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

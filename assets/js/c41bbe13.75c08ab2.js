@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[4060],{5579:a=>{a.exports=JSON.parse('{"tag":{"label":"quota","permalink":"/blog/tags/quota","allTagsPath":"/blog/tags","count":2,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/quota","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

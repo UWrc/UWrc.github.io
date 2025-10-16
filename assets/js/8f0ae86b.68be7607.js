@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[8443],{66872:a=>{a.exports=JSON.parse('{"tag":{"label":"nvidia","permalink":"/blog/tags/nvidia","allTagsPath":"/blog/tags","count":4,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/nvidia","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

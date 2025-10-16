@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[5735],{96494:(e,t,a)=>{a.r(t),a.d(t,{default:()=>r});a(96540);var i=a(5556),l=a.n(i);const s={pageTitle:"pageTitle_Q8me"};var n=a(74848);function r(e){return(0,n.jsx)("div",{className:s.pageTitle,children:(0,n.jsx)("h1",{children:e.title})})}r.propTypes={title:l().element.isRequired}}}]);

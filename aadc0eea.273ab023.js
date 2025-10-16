@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[67],{136:function(p){p.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"supercomputer","name":"supercomputer","count":2,"permalink":"/blog/tags/supercomputer"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[9100],{86657:a=>{a.exports=JSON.parse('{"tag":{"label":"mmfs1","permalink":"/blog/tags/mmfs-1","allTagsPath":"/blog/tags","count":5,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/mmfs-1","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

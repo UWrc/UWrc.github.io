@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhyak=self.webpackChunkhyak||[]).push([[8106],{54681:a=>{a.exports=JSON.parse('{"tag":{"label":"updates","permalink":"/blog/tags/updates","allTagsPath":"/blog/tags","count":7,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/updates","page":1,"postsPerPage":10,"totalPages":1,"totalCount":7,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
