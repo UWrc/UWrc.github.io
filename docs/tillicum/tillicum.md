@@ -20,7 +20,7 @@ Check it out here → [<ins>**Tillicum Onboarding Training**</ins>](https://gith
 
 **Eligible and ready to try it?**
 * Sign up for a project allocation to start using Tillicum → [<ins>**Tillicum Access Request Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581)
-* See if Tillicum is right for you with 100 GPU hours and 50GB of dedicated project storage → [<ins>**Tillicum Demo Account Request**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=b71cefcc97ef2a500a7637b6f053af15)
+* See if Tillicum is right for you with 100 GPU hours and 100GB of dedicated project storage → [<ins>**Tillicum Demo Account Request**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=b71cefcc97ef2a500a7637b6f053af15)
 
 ---
 ## Pay-as-you-go by the GPU Hour
