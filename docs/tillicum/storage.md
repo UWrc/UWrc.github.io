@@ -61,21 +61,42 @@ du -h -d 1
 ---
 
 ## Storage Snapshots
-User home directories and project directories have daily snapshots taken at midnight local (Seattle) time. Only 7 daily snapshots are kept. The snapshots are kept under `/gpfs/.snapshots/` and are named by the date and time they were taken. Since these snapshots are named by the date and time, you will see different output when you review the snapshot directory.
+User home directories and project directories have daily snapshots taken at midnight local (Seattle) time. Only 7 daily snapshots are kept. The snapshots are kept under `/gpfs/home/.snapshots` and `/gpfs/projects/<projectname>/.snapshots` for home and projects, respectively. Each snapshot folder is named by the date and time they were taken. Since these snapshot folders are named by the date and time, you will see different output when you review the snapshot directory.
 
 ```bash
-$ ls -alh /gpfs/.snapshots
-total 520K
-dr-xr-xr-x  6 root root 8.0K Oct 20 17:00 .
-drwxr-xr-x 17 root root 256K Oct 13 14:46 ..
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.18-00.00.07
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.19-00.00.07
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.20-00.00.07
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.21-00.00.07
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.21-22.41.07
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.22-00.00.07
-drwxr-xr-x 17 root root 4.0K Oct 13 14:46 @GMT-2025.10.23-00.00.07
+$ ls -alh /gpfs/home/.snapshots
+total 85K
+dr-xr-xr-x   6 root root 8.0K Oct 20 17:00 .
+drwxr-xr-x 139 root root 8.0K Oct 22 16:23 ..
+drwxr-xr-x 132 root root 4.0K Oct 16 15:57 @GMT-2025.10.17-17.38.07
+drwxr-xr-x 132 root root 8.0K Oct 16 15:57 @GMT-2025.10.18-00.00.07
+drwxr-xr-x 133 root root 8.0K Oct 18 14:48 @GMT-2025.10.19-00.00.07
+drwxr-xr-x 135 root root 8.0K Oct 19 12:36 @GMT-2025.10.20-00.00.07
+drwxr-xr-x 136 root root 4.0K Oct 20 15:32 @GMT-2025.10.21-00.00.07
+drwxr-xr-x 136 root root 4.0K Oct 20 15:32 @GMT-2025.10.21-22.41.07
+drwxr-xr-x 136 root root 8.0K Oct 20 15:32 @GMT-2025.10.22-00.00.07
+drwxr-xr-x 139 root root 4.0K Oct 22 16:23 @GMT-2025.10.23-00.00.07
 $
 ```
 
-For example, if my netID is `npho` and I wanted to check the oldest snapshot available of my home directory that is `/gpfs/home/npho` then I would look in `/gpfs/.snapshots/@GMT-2025.10.18-00.00.07/home/npho/`. Within this snapshot directory I could copy out any previously deleted or modified files to my current home directory (or any other non-snapshot location) to recover.
+For example, if my netID is `npho` and I wanted to check the oldest snapshot available of my home directory that is `/gpfs/home/npho` then I would look in `/gpfs/home/.snapshots/@GMT-2025.10.17-17.38.07/npho/`. Within this snapshot directory I could copy out any previously deleted or modified files to my current home directory (or any other non-snapshot location) to recover.
+
+Similarly, if my project name is `hyakteam` then I could review available project snapshots like so.
+
+```bash
+$ ls -alh /gpfs/projects/hyakteam/.snapshots
+total 9.5K
+dr-xr-xr-x 6 root root     8.0K Oct 20 17:00 .
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 ..
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.17-17.38.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.18-00.00.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.19-00.00.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.20-00.00.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.21-00.00.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.21-22.41.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.22-00.00.07
+drwxrws--- 3 root hyakteam 4.0K Oct 15 09:47 @GMT-2025.10.23-00.00.07
+$
+```
+
+Similarly, I could navigate the oldest copy of the state of my project directory by going to `/gpfs/projects/hyakteam/.snapshots/@GMT-2025.10.17-17.38.07/` and copying out any files I need to recover.
