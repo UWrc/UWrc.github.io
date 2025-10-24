@@ -45,8 +45,10 @@ module.exports = {
       'tillicum/architecture',
       'tillicum/tillicum',
       'tillicum/scheduling-jobs',
+      'tillicum/monitoring-jobs',
       'tillicum/environment',
-      'tillicum/storage'
+      'tillicum/storage',
+      'tillicum/ood'
     ],
 
     'Kopah S3 Storage': [
