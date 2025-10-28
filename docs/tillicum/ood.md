@@ -3,7 +3,7 @@ id: ood
 title: Open OnDemand
 ---
 
-[Open OnDemand (OOD)](https://tillicum-ood.hyak.uw.edu/) is a web-based portal that provides an integrated, single access point for remote HPC Cluster.
+[<ins>**Open OnDemand (OOD)**</ins>](https://tillicum-ood.hyak.uw.edu/) is a web-based portal that provides an integrated, single access point for remote HPC Cluster.
 
 It enables you to perform many common tasks without CLI, including:
 
