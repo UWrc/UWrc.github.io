@@ -70,7 +70,7 @@ The module command sets the appropriate environment variable independent of your
 | `module help [module]` | Show module-specific help message |
 | `module use [-a] [path]` | Prepend or append path to `MODULEPATH` |
 
-Lmod provides a convenient shortcut command [`ml`](https://lmod.readthedocs.io/en/latest/010_user.html#ml-a-convenient-tool) for the `module` command.
+Lmod provides a convenient shortcut command [<ins>**`ml`**</ins>](https://lmod.readthedocs.io/en/latest/010_user.html#ml-a-convenient-tool) for the `module` command.
 
 :::tip
 `ml` can be used instead of module, module load, or module list depending on the situation. This can be seen in the examples below.
@@ -237,7 +237,7 @@ Do not include `module load` commands in your startup files (e.g., $HOME/.bashrc
 
 ### User Collections
 
-You can save and restore commonly used modules using [user collections](https://lmod.readthedocs.io/en/latest/010_user.html#user-collections). Note that Lmod can load only one user collection at a time.
+You can save and restore commonly used modules using [<ins>**user collections**</ins>](https://lmod.readthedocs.io/en/latest/010_user.html#user-collections). Note that Lmod can load only one user collection at a time.
 
 ## Conda Environments
 
@@ -325,4 +325,4 @@ pip install seaborn
 
 This ensures that `pip` installs packages into the active Conda environment — **not globally** — making it easy to clean up completely when you are done.
 
-See the [best practices](https://www.anaconda.com/blog/using-pip-in-a-conda-environment) from Anaconda for using `pip` with Conda and [pip documentation](https://pip.pypa.io/en/stable/cli/pip_install/) for more information.
+See the [<ins>**best practices**</ins>](https://www.anaconda.com/blog/using-pip-in-a-conda-environment) from Anaconda for using `pip` with Conda and [<ins>**pip documentation**</ins>](https://pip.pypa.io/en/stable/cli/pip_install/) for more information.
