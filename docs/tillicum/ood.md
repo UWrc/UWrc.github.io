@@ -65,7 +65,7 @@ conda install ipykernel
 
 **Step 2: Register Your Environment as a Jupyter Kernel**
 
-Run `ipykernel install` in your activated environment to set up a Jupyter [kernelspec](https://jupyter-client.readthedocs.io/en/latest/kernels.html).
+Run `ipykernel install` in your activated environment to set up a Jupyter [<ins>**kernelspec**</ins>](https://jupyter-client.readthedocs.io/en/latest/kernels.html).
 
 ```js
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"
