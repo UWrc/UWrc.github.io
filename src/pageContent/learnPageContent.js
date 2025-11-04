@@ -25,6 +25,14 @@ export const LearnHowToCards = [
             isfeatured: true,
             featuredSortIndex: 10,
           },
+          { image: '/img/learn/Slurm-thumbnail.jpg',
+            header: 'Hyak Klone Slurm', 
+            caption: 'An intro to Slurm on Hyak Klone.',
+            link: 'https://youtu.be/jgHXB7IfGPQ?si=0lFpU_ujrQoUUmyb',
+            isvideo: true,
+            isfeatured: true,
+            featuredSortIndex: 15,
+          },
         ];
 
 export const LearnTutorialCards = [
