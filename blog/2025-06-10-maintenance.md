@@ -5,7 +5,7 @@ author: Kristen Finch
 author_title: Director of Research Computing Solutions
 author_url: https://github.com/finchnsnps
 author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
-tags: [klone,hyak,hpc,supercomputer,hours,help,tools,stroage,videos]
+tags: [klone,hyak,hpc,supercomputer,hours,help,tools,storage,videos]
 ---
 
 During June's maintenance, we've refreshed the operating system images for both login and compute nodes, and we've responded to user feedback with a solution to make Cron jobs persistent. Good news: we are holding office hours all summer to support your research grind. Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday July 8, 2025** (AKA the 2nd Tuesday of the month).

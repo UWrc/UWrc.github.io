@@ -9,7 +9,7 @@ A lot of software you may want to use and compile yourself could be written in C
 
 ## GNU Compiler
 
-The latest GNU compiler provided as a module is version 10.2 [<ins>**www**</ins>](https://gcc.gnu.org/gcc-10/). This was built with the `--enable-languages=c,c++,fortran` flag.
+The latest [<ins>**GNU compiler**</ins>](https://gcc.gnu.org/gcc-10/) provided as a module is version 10.2. This was built with the `--enable-languages=c,c++,fortran` flag.
 
 ```js
 module load gcc/10.2.0

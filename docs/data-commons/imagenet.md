@@ -64,7 +64,7 @@ Please see the instructions for the [<ins>**ImageNet Object Localization Challen
 
 ## How to cite?
 
-Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, Alexander C. Berg and Li Fei-Fei. **ImageNet Large Scale Visual Recognition Challenge**. *IJCV, 2015*. [<ins>**www**</ins>](https://www.image-net.org/challenges/LSVRC/index.php) [<ins>**pdf**</ins>](https://link.springer.com/article/10.1007/s11263-015-0816-y)
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, Alexander C. Berg and Li Fei-Fei. [<ins>**ImageNet Large Scale Visual Recognition Challenge**</ins>](https://www.image-net.org/challenges/LSVRC/index.php). *IJCV, 2015*. [<ins>**PDF**</ins>](https://link.springer.com/article/10.1007/s11263-015-0816-y).
 
 ```
 @article{ILSVRC15,
