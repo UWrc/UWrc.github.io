@@ -22,7 +22,7 @@ Hyak clusters work on a "condo" model: labs are able to utilize their contribute
 
 ### Problem
 
-Fairshare was simpler to calculate in the pre-GPU days because our infrastructure was homogenous: one node contributed to the cluster equaled one fairshare unit. During the last two years of exponential GPU adoption on Hyak, the fairshare calculation has not evolved: 1 HPC node was the same as 1 GPU node at 1 fairshare unit. This didn’t hold because a GPU node can cost between 4 to 8 times (or more) than a traditional HPC node. The result was that labs with GPU or other speciality (e.g., high-memory) nodes tended to have smaller fairshares compared to groups with the same dollar investment but only in traditional CPU nodes. In practice, this meant these GPU users often directly competed for resources with non-GPU jobs in the checkpoint partition on a non-level playing field.
+Fairshare was simpler to calculate in the pre-GPU days because our infrastructure was homogeneous: one node contributed to the cluster equaled one fairshare unit. During the last two years of exponential GPU adoption on Hyak, the fairshare calculation has not evolved: 1 HPC node was the same as 1 GPU node at 1 fairshare unit. This didn’t hold because a GPU node can cost between 4 to 8 times (or more) than a traditional HPC node. The result was that labs with GPU or other speciality (e.g., high-memory) nodes tended to have smaller fairshares compared to groups with the same dollar investment but only in traditional CPU nodes. In practice, this meant these GPU users often directly competed for resources with non-GPU jobs in the checkpoint partition on a non-level playing field.
 
 ### Solution
 
