@@ -30,7 +30,7 @@ hyakusage
 - Shows total GPU-hours and costs per account at the top of each account.
 - Integrates user- and account-level budgets (if set) to show progress toward limits.
 
-**Example output of November 12, 2025:**
+**Example output from November 12, 2025:**
 
 ```js
   * Billing cycle starts on the 26th of each month.
