@@ -9,7 +9,7 @@ An example is given here for the application [<ins>**ffmpeg**</ins>](https://ffm
 The ufficial guide to compile on centos is given [<ins>**here**</ins>](https://trac.ffmpeg.org/wiki/CompilationGuide/Centos/). It can be noticed right away how complex such compilation would be to simply be able to run the ffmpeg executable as many prerequisites are needed (nasm, yasm, etc...).
 
 By using a docker container [<ins>**ffmpeg-docker**</ins>](https://hub.docker.com/r/linuxserver/ffmpeg) this task can be easily done.
-However, setting un a module for everybody to use involving containers necessitates a few extra steps.
+However, setting up a module for everybody to use involving containers necessitates a few extra steps.
 
 ## `ffmpeg` Example Usage
 The ffmpeg module can be laoded using the following command:
