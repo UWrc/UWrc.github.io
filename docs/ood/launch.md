@@ -10,7 +10,7 @@ OOD can be used to manage and schedule jobs on the `klone` cluster. Specifically
 
 # Launch an Interactive Session
 
-Offered applications are available from the `Interactive Apps` tab. Clicking on an application will open a form where you can specify the resouces you need for your job. If you're unfamiliar with the concepts of Accounts and Partitions, check out a brief [<ins>**overview**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#accounts-and-partitions).
+Offered applications are available from the `Interactive Apps` tab. Clicking on an application will open a form where you can specify the resources you need for your job. If you're unfamiliar with the concepts of Accounts and Partitions, check out a brief [<ins>**overview**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#accounts-and-partitions).
 
 
 
@@ -18,9 +18,9 @@ Offered applications are available from the `Interactive Apps` tab. Clicking on 
 
 While some may offer additional configuration, all forms allow you to specify the following parameters:
 
-- **Account** - The account that has access to the resouces you need. This may be your lab or research group's name.
+- **Account** - The account that has access to the resources you need. This may be your lab or research group's name.
 - **Partition** - The partition that has the resources you need. 
-- **Tasks** - Instances of your application -  maximum number of parallel tasks lauched by the job. Most jobs will only need one task.
+- **Tasks** - Instances of your application -  maximum number of parallel tasks launched by the job. Most jobs will only need one task.
 - **CPUs per task** - Number of CPUs per task.
 - **Memory (GB)** - Total memory required per node in GB. 
 - **GPU Type (optional)** Type of GPU card required.

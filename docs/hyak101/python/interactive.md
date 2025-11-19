@@ -94,7 +94,7 @@ Now we'll make an SBATCH script, where we pass this script to our container:
 ```
 
 This will start a job named 'research' with 8 CPUs, 64GB of RAM, and a time limit
-of 8 hours. Don't forget to change the account or parition.
+of 8 hours. Don't forget to change the account or partition.
 This tells our container (with our conda overlay in read-only) to run
 the `~/start-research.sh` wrapper for our `~/do-some-research.py` Python script.
 All that's left is to submit the job with `sbatch ~/research.job` and wait for the results.

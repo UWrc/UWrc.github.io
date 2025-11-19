@@ -12,7 +12,7 @@ This section is performed entirely on `klone`, not your local computer.
 ## Creating a mutable overlay
 We recommend exiting any interactive jobs on `klone` if applicable and using `exit` to log out of `klone` completely, starting with a clean slate. 
 
-First, we'll use our new `ssh` shortcut to get onto the login node. Then, we'll request an interactive job called `klone-container` in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory for a mazimum time of 4 hours:
+First, we'll use our new `ssh` shortcut to get onto the login node. Then, we'll request an interactive job called `klone-container` in the `ckpt` partition with 1 CPU (unless otherwise specified with `--ntasks`, a job will have 1 task) and 16GB of memory for a maximum time of 4 hours:
 
 ```js
 ssh klone-login
@@ -85,7 +85,7 @@ If you attach an overlay in `read-only` mode, you can use it as many times as yo
 :::
 
 The command to run our container is rather long, and there's two different ways we might call it (one for read-write, one for read-only),
-so we've made two short scripts to lauch the container with overlay, which we want you to copy into your working directory:
+so we've made two short scripts to launch the container with overlay, which we want you to copy into your working directory:
 
 ```js 
 cp /sw/hyak101/python/launch-container.sh .
@@ -154,7 +154,7 @@ modified      /mmfs1/home/UWNetID/.bashrc
 Now we'll reconnect & see if it worked:
 ```js
 Apptainer> exit
-# Relauch the container with the launch-container.sh script
+# Relaunch the container with the launch-container.sh script
 ./launch-container.sh
 Apptainer> conda
 usage: conda [-h] [-V] command ...
@@ -290,7 +290,7 @@ done
 ```
 This loop will try 5 times to get the port & token for the Jupyter server that we started.
 Once we see some output from the `jupyter notebook` command, i.e. the `RUNNING_SERVER` variable isn't empty,
-we'll use a Python oneliner to:
+we'll use a Python one-liner to:
 1. Parse and print the port and token.
 2. Place that information in a hidden file for us later.
 

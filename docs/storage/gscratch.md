@@ -5,7 +5,7 @@ title: Storage on Hyak
 
 Storage on Hyak is physically separate from servers used for computation. It is best practice on every supercomputer that storage live on its own and is high-performance to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., GPFS, Lustre, BeeGFS).
 
-On `klone` the storage system (e.g., `/gscratch/`) is then mounted (i.e., accessible) from every compute node of the cluster. `klone` storage is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [<ins>**storage introduction page**</ins>](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy. Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UW-IT Research Computing offers [<ins>**additional sotrage solutions**</ins>](https://hyak.uw.edu/storage) that may be use in combination with `/gscratch/` for longerterm data storage. 
+On `klone` the storage system (e.g., `/gscratch/`) is then mounted (i.e., accessible) from every compute node of the cluster. `klone` storage is referred to as `gscratch` due to that being the mount point on the cluster (i.e., `/gscratch/somefolder/anotherfolder`) and a reminder to our researchers that anything here is "scratch" or **NOT BACKED UP**. Refer to the [<ins>**storage introduction page**</ins>](https://hyak.uw.edu/docs/storage/data) for details on how to manage your data life cycle and adhere to the 3-2-1 backup policy. Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UW-IT Research Computing offers [<ins>**additional storage solutions**</ins>](https://hyak.uw.edu/storage) that may be use in combination with `/gscratch/` for longerterm data storage. 
 
 Every user has a [<ins>**Home directory**</ins>](#user-home-directory) by default, most users have a cluster account by virtue of being the member of a lab group with dedicated slices so you have access to [<ins>**lab dedicated storage**</ins>](#group-or-lab-directories), and there's also [<ins>**scrubbed**</ins>](#scrubbed) storage for temporary overflow use.
 
@@ -158,7 +158,7 @@ In the case that a lab member has left your group without transferring ownership
 
 5. **Removing Unused Data**
 
-If you are no longer using your data and do not anticipate needed it in the future, you should delete it using the `rm` command. To delete a directory and all of its contents, use the `-r` (recursive) flag. Using `rm` is <ins>irreversible and will permenetally delete a file.</ins> 
+If you are no longer using your data and do not anticipate needed it in the future, you should delete it using the `rm` command. To delete a directory and all of its contents, use the `-r` (recursive) flag. Using `rm` is <ins>irreversible and will permanently delete a file.</ins> 
 
 ## Scrubbed
 

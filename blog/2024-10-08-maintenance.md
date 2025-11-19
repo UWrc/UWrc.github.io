@@ -21,12 +21,12 @@ Our research computing interns have been hard at work adding documentation for n
 Use case on Hyak:
 In HPC, datasets often consist of numerous small files, which can lead to performance bottlenecks due to excessive metadata operations. By utilizing SquashFS, HPC applications can significantly reduce metadata overhead, improving data access speeds and enhancing overall system performance, particularly in large-scale distributed storage systems.
 
-[<ins>**Checkpointing with DMTCP**</ins>](https://hyak.uw.edu/docs/tools/dmtcp) - DMTCP is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using DMTCP with your code allows checkpointing at regular intervals so if your job is pre-empted or reaches the time limit, it will resume from its last checkpoint.  
+[<ins>**Checkpointing with DMTCP**</ins>](https://hyak.uw.edu/docs/tools/dmtcp) - DMTCP is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using DMTCP with your code allows checkpointing at regular intervals so if your job is preempted or reaches the time limit, it will resume from its last checkpoint.  
 
 Use case on Hyak:
-DMTCP offers a solution for folks who would like to use Hyak's `ckpt` partitions, but have jobs that exceed the `ckpt` time limits of 5 hours for CPU-noly jobs and 8 hours for GPU-only jobs. Checkpointing with DMTCP facilitates efficient use of ckpt resources, allowing higher throughput for your jobs. 
+DMTCP offers a solution for folks who would like to use Hyak's `ckpt` partitions, but have jobs that exceed the `ckpt` time limits of 5 hours for CPU-only jobs and 8 hours for GPU-only jobs. Checkpointing with DMTCP facilitates efficient use of ckpt resources, allowing higher throughput for your jobs. 
 
-[<ins>**Tools for Kopah Storage Users**</ins>](https://hyak.uw.edu/docs/storage/kopah) - We have installed [<ins>**Command Line Interface tools**</ins>](https://hyak.uw.edu/docs/storage/cli) like `s3cmd` and `s5cmd` on `klone` and provide insctructions for using [<ins>**Python library `boto3` for Kopah interaction and retreival**</ins>](https://hyak.uw.edu/docs/storage/boto3) to build Kopah S3 storage usage into your research computing applciations on Hyak. 
+[<ins>**Tools for Kopah Storage Users**</ins>](https://hyak.uw.edu/docs/storage/kopah) - We have installed [<ins>**Command Line Interface tools**</ins>](https://hyak.uw.edu/docs/storage/cli) like `s3cmd` and `s5cmd` on `klone` and provide instructions for using [<ins>**Python library `boto3` for Kopah interaction and retrieval**</ins>](https://hyak.uw.edu/docs/storage/boto3) to build Kopah S3 storage usage into your research computing applications on Hyak. 
 
 If you have any issue using these tools, please open a ticket by emailing help@uw.edu with "Hyak" in the subject line. We appreciate any feedback about how to improve ease of use for tools presented in our documentation.
 
@@ -62,7 +62,7 @@ The Research Computing Club will be holding office hours fall term. **In-person 
 | Officer        |      Date      |   Time|
 | ------------- | :-----------: | -----: |
 | Brenden Pelkie |   16 Oct    |  1pm |
-| Nels Schimek |   23 Oct    |    ipm |
+| Nels Schimek |   23 Oct    |    1pm |
 | Nels Schimek |   6 Nov    |    1pm |
 | Sam Shin      | 19 Nov | 2pm |
 | Teerth Mehta      | 3 Dec | 2pm |

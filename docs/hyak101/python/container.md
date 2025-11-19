@@ -177,7 +177,7 @@ Let's take a look at the script:
 # --cpus-per-task=1 -> this line requests on CPU for this job
 # --mem=16GB -> this line requests on 16GB of RAM for this job
 # --partition=ckpt -> this line submits the job to the ckpt partition; you can change this if you have access to other partitions (view your partitions with hyakalloc)
-# --time=60 -> this line sets a maximum time limit of 60 minutes for this job; the clock starts when the job starts, not when it is subitted
+# --time=60 -> this line sets a maximum time limit of 60 minutes for this job; the clock starts when the job starts, not when it is submitted
 # --output=%x_%j.out -> saved all output messages that print to the screen (i.e., stdout) to a file called container-build_XXXXXX.out 
 # (using the shorthand %x to stand of the job-name and %j which will be the job ID assigned by Slurm)
 
@@ -244,10 +244,10 @@ Remember that if for some reason this doesn't work, the container image has alre
 You now have a generalized container for hyak that you can edit or add your own software to. There are two options for customizing your container: 
 
 1. Edit the `%post` section of `hyak-container.def` to install more packages. 
-2. Start a new `.def` file that builds a new container based on `hyak-container.sif` rather than rebuilding the container everytime you want to make a change. 
+2. Start a new `.def` file that builds a new container based on `hyak-container.sif` rather than rebuilding the container every time you want to make a change. 
 
 :::tip PRO TIP
-Option 2 above is truely PRO MODE. You can pull ANY container from the internet and make a new `.def` file based on it. This means you can customize ANY container image with your choice of software. For example, the below can be applied to NVIDIA containers, Python containers, Linux foundation containers, YOU NAME IT YOU BUILD IT. 
+Option 2 above is truly PRO MODE. You can pull ANY container from the internet and make a new `.def` file based on it. This means you can customize ANY container image with your choice of software. For example, the below can be applied to NVIDIA containers, Python containers, Linux foundation containers, YOU NAME IT YOU BUILD IT. 
 :::
 
 #### Option 1 container customization: edit `hyak-container.def`

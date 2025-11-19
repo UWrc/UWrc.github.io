@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help]
 ---
 
-During October’s maintenance, we refreshed the operating system images for both login and compute nodesand made improvements to our monitoring stack. 
+During October’s maintenance, we refreshed the operating system images for both login and compute nodes and made improvements to our monitoring stack. 
 
 Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, November 11, 2025** (the second Tuesday of the month).
 

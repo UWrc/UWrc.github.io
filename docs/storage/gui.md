@@ -9,7 +9,7 @@ On this page we will provide options to interact with your data on Kopah via Gra
 
 As of Spring 2025, we’re excited to announce that Globus has been added to Hyak `klone` and Kopah S3. Globus makes it easy to transfer large datasets reliably and securely between systems, whether across campus or around the world. With features like automated transfers, fault tolerance, and a simple web interface, it’s a powerful tool for streamlining data movement in research workflows.
 
-Globus public sharing is available with [<ins>**Kopah S3 storage**</ins>](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2), making it a dynamic compliment for your research storage portfolio if you anticipate reuiring regular sharing and collaboration.
+Globus public sharing is available with [<ins>**Kopah S3 storage**</ins>](https://uw.service-now.com/it?id=sc_entry&sys_id=f617c851935e565086a27b847aba1018&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2), making it a dynamic compliment for your research storage portfolio if you anticipate requiring regular sharing and collaboration.
 
 :::warning important: Globus Mapping Required
 To use Globus with Kopah S3 storage, ***at least one username must be mapped to the storage account***. This mapping connects your Globus identity to the storage system and must be set up by our staff. Contact us to get started—it's a quick, one-time step.
@@ -45,7 +45,7 @@ Setting up **Globus Connect Personal** on your local computer lets you create a 
 *Note: the Endpoints Menu Tool appears to be deprecated and now "Endpoint" and "Collection" are synonymous. Your personal endpoint can be found by searching Collections.*
 :::
 * While configuring your Globus Connect Personal endpoint, be sure to select a unique name for your device (e.g., User-MacBook-Pro or Lab-Desktop), you will use this name again when you start transferring data. 
-* Once you have Globus Connect Personal installed and configured, you can start transferring data between your personal device and Kopah S3. There are many ways to use Globus. Below, we provide some exmaples: 
+* Once you have Globus Connect Personal installed and configured, you can start transferring data between your personal device and Kopah S3. There are many ways to use Globus. Below, we provide some examples: 
 
 Globus has a two-pane view option which can allow you to see two collections in the same window and perform transfers between them. With UW Hyak Kopah in one pane, click search in the other to select a different collection. 
 
@@ -55,7 +55,7 @@ Using the **File Manager - Collection Search** and the **Collections** tab find 
 
 <img src="/img/docs/globus/3_gcp_endpoint.png" alt = "Image shows collections tab where personal endpoint should be if configured correctly." /> 
 
-Once your Globus Connect Personal collection is loaded on the second pane, you can navigate to the files you wish to transfer. Select files to transfer with the check box and press start. Once a transfer has started, a green box will show that your transfer request has been successfully submitted and you have the option to "View details." For small transfers, speeds are fast and results are complete quickly; you can "refresh list" on the receiving collection to see newly transferred files. Larger transfers can occur unsupervised and with minimal interruptions. Globus will send you an email when your transfer is compelted. 
+Once your Globus Connect Personal collection is loaded on the second pane, you can navigate to the files you wish to transfer. Select files to transfer with the check box and press start. Once a transfer has started, a green box will show that your transfer request has been successfully submitted and you have the option to "View details." For small transfers, speeds are fast and results are complete quickly; you can "refresh list" on the receiving collection to see newly transferred files. Larger transfers can occur unsupervised and with minimal interruptions. Globus will send you an email when your transfer is completed. 
 
 <img src="/img/docs/globus/4_kopah_transfer.png" alt = "Image shows how to select a file with the check box, start the transfer with the start button, and view transfer details as needed." />
 
@@ -65,7 +65,7 @@ Globus offers many options for transferring data, shown below. Options include s
 
 ### Transfer to and from Klone `/gscratch`
 
-As above, you can set UW Hyak Klone as the second Collection with the two-pane view to request transfers between your Kopah S3 buckets and Hyak `klone`. Using the **File Manager - Collection Search** search for "UW Hyak Klone" and select it. Navigate to a destination on `klone` that you have permissions to view. Select the data to transfer with the checkbox. Click the Start button to request the transfer. Globus will send you an email when your transfer is compelted. 
+As above, you can set UW Hyak Klone as the second Collection with the two-pane view to request transfers between your Kopah S3 buckets and Hyak `klone`. Using the **File Manager - Collection Search** search for "UW Hyak Klone" and select it. Navigate to a destination on `klone` that you have permissions to view. Select the data to transfer with the checkbox. Click the Start button to request the transfer. Globus will send you an email when your transfer is completed. 
 
 <img src="/img/docs/globus/6_klone_kopah.png" alt = "Image shows how transferring from klone to kopah would look." />
 
@@ -109,7 +109,7 @@ To get started with Cyberduck, install the software from the [<ins>**developer's
 
 Steps for connecting to Kopah:
 
-1. For ease of use, a pre-configured connection profile for Kopah is available. [<ins>**Click this link to Download the profile**</ins>](/files/kopah.cyberduckprofile). After the file is finished downloading, change the filename to `kopah.cyberduckprofile`. You may decide to move this file from your Downloads directory and store it in a more peranent location. Once the file is in its final location, double-click it within a file explorer it will open in Cyberduck.
+1. For ease of use, a pre-configured connection profile for Kopah is available. [<ins>**Click this link to Download the profile**</ins>](/files/kopah.cyberduckprofile). After the file is finished downloading, change the filename to `kopah.cyberduckprofile`. You may decide to move this file from your Downloads directory and store it in a more permanent location. Once the file is in its final location, double-click it within a file explorer it will open in Cyberduck.
 
 
 1. Open a new Cyberduck window and locate the **Open Connection** Icon.

@@ -13,7 +13,7 @@ Juicefs isn't installed to nodes by default so you have to download the newest v
 wget https://github.com/juicedata/juicefs/releases/download/v1.2.3/juicefs-1.2.3-linux-amd64.tar.gz -O - | tar xzvf -
 ```
 
-or alternatively you can copy the Hyak binary to your current directory with `mv /sw/juicefs/juicefs .` (which is the currently up to date v1.2.3). Then just copy the binary to a directory of your choice thats on your PATH (readable with `echo $PATH`) and is visible from both klone and compute nodes. I would recommend `/home/$USER/.local/bin` since it fulfills all of those by default. You may have to make one or both directories before moving the binary with `mv juicefs ~/.local/bin/juicefs`. Finally ensure everything is working by running `juicefs -V`, which should print the version of your executable.
+or alternatively you can copy the Hyak binary to your current directory with `mv /sw/juicefs/juicefs .` (which is the currently up to date v1.2.3). Then just copy the binary to a directory of your choice that's on your PATH (readable with `echo $PATH`) and is visible from both klone and compute nodes. I would recommend `/home/$USER/.local/bin` since it fulfills all of those by default. You may have to make one or both directories before moving the binary with `mv juicefs ~/.local/bin/juicefs`. Finally ensure everything is working by running `juicefs -V`, which should print the version of your executable.
 
 ## Usage
 

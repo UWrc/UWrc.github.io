@@ -18,7 +18,7 @@ Here we provide three solutions to connect VS Code to Hyak that will will help l
 
 VS Code’s high usage is due to it silently installing its built in features into the user's home directory `~/.vscode` on `klone` enabling intelligent autocomplete features. This is a well known issue, and there is a solution that involves disabling the `@builtin TypeScript` plugin from the VS Code on your local machine. [<ins>**Here is a link to a blog post about the issue and the super-easy solution.**</ins>](https://medium.com/good-robot/use-visual-studio-code-remote-ssh-sftp-without-crashing-your-server-a1dc2ef0936d) Disabling @builtin TypeScript will reduce your usage of the shared resources and avoid problems. Disabling @builtin TypeScript is also recommended for our solution to connect [<ins>**VS Code via ProxyJump**</ins>](tools/vsc-proxy-jump.md).
 
-Silent processes from VS Code will continue to run on `klone` even after you have logged off. Check which processes are running on the login node, especially if you have been receiving usage violations when you are not aware of jobs running. Look for `vscode-server` among the listed processes with the following command, replaceing `UWNetID` with **your UW Net ID**.
+Silent processes from VS Code will continue to run on `klone` even after you have logged off. Check which processes are running on the login node, especially if you have been receiving usage violations when you are not aware of jobs running. Look for `vscode-server` among the listed processes with the following command, replacing `UWNetID` with **your UW Net ID**.
 
 ```js
 ps aux | grep <UWNetID>

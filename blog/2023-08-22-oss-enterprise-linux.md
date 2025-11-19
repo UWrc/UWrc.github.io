@@ -22,9 +22,9 @@ Our team doesn't have any position on these changes, but we understand the impli
 
 You can read Rocky Linux's official response here: [<ins>**Rocky Linux Expresses Confidence Despite Red Hat's Announcement**</ins>](https://rockylinux.org/news/2023-06-22-press-release/).
 
-The Rocky Linux team's confidence belies the significance of Red Hat's change. Red Hat's blog post—a mere 318 words—sparked collosal action. Multiple corporations, including tech giants SUSE and Oracle, joined forces to establish a collaborative trade assocation: OpenELA, the Open Enterprise Linux Association.
+The Rocky Linux team's confidence belies the significance of Red Hat's change. Red Hat's blog post—a mere 318 words—sparked colossal action. Multiple corporations, including tech giants SUSE and Oracle, joined forces to establish a collaborative trade association: OpenELA, the Open Enterprise Linux Association.
 
-You can read the OpenELA annoucement here: [<ins>**CIQ, Oracle and SUSE Create Open Enterprise Linux Association for a Collaborative and Open Future**</ins>](https://openela.org/news/hello_world/).
+You can read the OpenELA announcement here: [<ins>**CIQ, Oracle and SUSE Create Open Enterprise Linux Association for a Collaborative and Open Future**</ins>](https://openela.org/news/hello_world/).
 
 ### What this means for Hyak
 

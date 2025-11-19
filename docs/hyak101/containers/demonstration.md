@@ -89,7 +89,7 @@ python_3.9.20-slim-bullseye.sif
 
 :::caution Disk Quota Exceeded
 
-When building a container, you may encournter the following error:
+When building a container, you may encounter the following error:
 
 ![Disk Quota Exceeded Error Message](/img/docs/disk-quota-exceeded.png)
 
@@ -97,7 +97,7 @@ If you run into a Disk Quota Exceeded error when building the container, it is l
 ```js
 du -h --max-depth 1
 ```
-If you find your storage exeeding the 10GB quota, you will need to eliminate storage. It can be helpful to clear the Apptainer cache with the following:
+If you find your storage exceeding the 10GB quota, you will need to eliminate storage. It can be helpful to clear the Apptainer cache with the following:
 ```js
 apptainer cache clean
 ```

@@ -84,7 +84,7 @@ Check if it transferred to `klone` by navigating to the directory it saved to:
 # output
 data.tar
 ```
-If it sucessfully transferred, unzip it using `tar` and the `-xvf` flag:
+If it successfully transferred, unzip it using `tar` and the `-xvf` flag:
 ``` bash
 tar -xvf data.tar
 ```

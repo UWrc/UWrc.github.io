@@ -78,7 +78,7 @@ we'll have to connect directly to the container. First, we need to add a couple 
 **The next steps are performed on your local computer.**
 :::
 
-We're going to modify our **local** SSH configurations again, starting with the main config at `~/.ssh/config`. Add the highlightes lines below to your `~/.ssh/config`:
+We're going to modify our **local** SSH configurations again, starting with the main config at `~/.ssh/config`. Add the highlighted lines below to your `~/.ssh/config`:
 
 ```js title="~/.ssh/config"
 Host klone-login

@@ -9,7 +9,7 @@ R is a popular statistical programming language for data science and analysis. T
 
 If you use a non-custom R container you'll likely run `install.packages()` at some point. Usually on a non-shared platform like your local setup (where you have full administrative privileges) R will install things into central paths. On Hyak, R package libraries are usually installed by default in the user's Home directory, which can be problematic due to the 10GB disk storage limit. If this default setting isn't changed, users can quickly run out of storage and inodes in their Home directory and need to re-configure their R environment. 
 
-Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you creaed under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [<ins>**Click here to review storage on Hyak.**</ins>](https://hyak.uw.edu/docs/storage/gscratch) 
+Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you created under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [<ins>**Click here to review storage on Hyak.**</ins>](https://hyak.uw.edu/docs/storage/gscratch) 
 
 :::important
 Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
@@ -52,7 +52,7 @@ The Rocker Project on Docker hub hosts many containers that were prepared by the
 
 Let's say we wanted to use the most up-to-date version of base R from the Rocker Project on Docker hub [<ins>**More information here.**</ins>](https://hub.docker.com/r/rocker/r-base). There are many other versions are R available on Docker hub, and we encourage you to explore them to find the version that fits the needs of your research project. [<ins>**Explore versions here**</ins>](https://hub.docker.com/r/rocker/r-base/tags). 
 
-First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` parition with 16GB of RAM for 2 hours. If your lab group owns Hyak resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
+First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` partition with 16GB of RAM for 2 hours. If your lab group owns Hyak resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
 
 ```js
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --time=2:00:00
@@ -271,12 +271,12 @@ export R_LIBS_USER=${RSTUDIO_CWD}/R
 
 #### Step 3: Start the Rstudio Server
 
-Next's we'll submit the job with `sbatch` which will launch the Rstudio container, and then we will use port forwading to interact with the RStudio interface on our web browser. 
+Next's we'll submit the job with `sbatch` which will launch the Rstudio container, and then we will use port forwarding to interact with the RStudio interface on our web browser. 
 
 ```js
 sbatch rstudio-server.job
 Submitted batch job 12345678
-# Slurm will assign a JobID when the job was submmitted
+# Slurm will assign a JobID when the job was submitted
 # it will likely be an 8-digit number, but not 12345678
 ```
 
@@ -356,7 +356,7 @@ scancel -f 12345678
 
 #### Regular use of this method
 
-Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method everytime you want to use Rstudio by starting at [<ins>**Step 3: Start the Rstudio Server above.**</ins>](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
+Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method every time you want to use Rstudio by starting at [<ins>**Step 3: Start the Rstudio Server above.**</ins>](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
 
 If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message.
 

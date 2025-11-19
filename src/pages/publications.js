@@ -11,7 +11,7 @@ export default function Publications() {
     <div class="row">        
       <h1>Publications</h1>
       <p>
-      Conference papers, peer-reviewed journal articles, and other scholarly works are the result of your hard work of which Hyak was one helping hand. Please consider citing or acknowleding Hyak in your final work and then let us know so it can be considered to appear in our select publication list.
+      Conference papers, peer-reviewed journal articles, and other scholarly works are the result of your hard work of which Hyak was one helping hand. Please consider citing or acknowlegding Hyak in your final work and then let us know so it can be considered to appear in our select publication list.
       </p>
 
       <pre>

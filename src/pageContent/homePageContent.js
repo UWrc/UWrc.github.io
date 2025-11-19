@@ -53,7 +53,7 @@ export const DocumentationCards = [
           },
           { image: '/img/icons/services.jpg',
             header: 'Research Computing Services', 
-            caption: 'Explore services to accelorate your research.',
+            caption: 'Explore services to accelerate your research.',
             link: 'https://it.uw.edu/research/',
           },
         ];

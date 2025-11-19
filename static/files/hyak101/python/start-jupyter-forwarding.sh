@@ -4,7 +4,7 @@ JUPYTER_INFO=$(ssh klone-node 'cat ~/.jupyter-port-and-token' 2>/dev/null)
 
 # If we didn't receive anything, print an error message and exit:
 if [[ -z $JUPYTER_INFO ]]; then
-    echo "Error: Couldn't retreive Jupyter server port/token"
+    echo "Error: Couldn't retrieve Jupyter server port/token"
     exit 1
 fi
 

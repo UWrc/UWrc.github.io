@@ -30,7 +30,7 @@ mkdir /gscratch/scrubbed/UWNetID
 
 ### Initial Set Up vs. Start Up Sequence
 
-This tutorial will walk through the steps to set up Jupyter Notebooks usage. However, after the initial set up, the start up sequence will be different (and more concise). For this reason, we have included a page that details the start up sequence for regular usage, and we encourage you to follow the entire set up to ensure proper set up andavoid errors.
+This tutorial will walk through the steps to set up Jupyter Notebooks usage. However, after the initial set up, the start up sequence will be different (and more concise). For this reason, we have included a page that details the start up sequence for regular usage, and we encourage you to follow the entire set up to ensure proper set up and avoid errors.
 
 :::warning HOT OFFER
 ### Using our pre-built container for this tutorial
