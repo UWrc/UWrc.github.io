@@ -208,7 +208,7 @@ Finally, saving our container:
 
 As is, the container is ~4GB and so, you will occupy ~4GB of storage in your working directory. This is why we have stressed several times to thoughtfully select your working directory for this tutorial. Review [<ins>**Getting Started.**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) for reasons why this is important. Regardless of where you put the final container image, make sure the destination exists & has sufficient space before you submit your job.
 
-:::tip pro tip: stroage monitoring
+:::tip pro tip: storage monitoring
 You can use the `hyakstorage` command to see your file & space quotas, in your home directory and the gscratch directories you can access.
 [<ins>**Here's our documentation for that command**</ins>](https://hyak.uw.edu/docs/storage/gscratch#checking-utilization-hyakstorage).
 :::
