@@ -3,7 +3,7 @@ id: squashfs
 title: Squash Fuse
 ---
 
-Due to the large number of small files contained in most datasets, it is recommended to pack them in a Squash filesystem. Similar to containers which packages and runs all applications needed in an isolated enviroment, SquashFS packages all files you wish to use and creates a read-only, compressed filesystem with them. Squash filesystems act as a single file, which allows the server mounting it to read the entirity of the filesystem's metadata at once as it is not able to change. This saves a considerable amount of in metadata calls allowing for a massive increase in performance with little-to-no downsides. This performance increase is also felt server-side, as fewer metadata calls means reduced load on the storage system as a whole and more open throughput for other storage calls to take place.
+Due to the large number of small files contained in most datasets, it is recommended to pack them in a Squash filesystem. Similar to containers which packages and runs all applications needed in an isolated environment, SquashFS packages all files you wish to use and creates a read-only, compressed filesystem with them. Squash filesystems act as a single file, which allows the server mounting it to read the entirety of the filesystem's metadata at once as it is not able to change. This saves a considerable amount of in metadata calls allowing for a massive increase in performance with little-to-no downsides. This performance increase is also felt server-side, as fewer metadata calls means reduced load on the storage system as a whole and more open throughput for other storage calls to take place.
 
 ## Creating a SquashFS dataset
 
@@ -20,7 +20,7 @@ Due to the large number of small files contained in most datasets, it is recomme
     ```bash
     rm -r path/to/files
     ```
-    Note that the `rm` command permanently deletes files and directories. Ensure that the directory is no longer needed and the squashfs file was sucessfully created before proceeding.
+    Note that the `rm` command permanently deletes files and directories. Ensure that the directory is no longer needed and the squashfs file was successfully created before proceeding.
 
 ## Mounting using SquashFuse
 :::note Slurm with Squash Fuse
@@ -43,7 +43,7 @@ It is useful to utilize job/array numbers and/or your user name to avoid the ris
     ```bash
     ls /tmp/${USER}/${SLURM_JOB_ID}/my_squash_mnt_1
     ```
-    If the mount was sucessful, the output will show all the squash filesystem contents. You are able to run any additional operations on the mounted filesystem now.
+    If the mount was successful, the output will show all the squash filesystem contents. You are able to run any additional operations on the mounted filesystem now.
 
 4. Unmount the fileset when done.
     ```bash

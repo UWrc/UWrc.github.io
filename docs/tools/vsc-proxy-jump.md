@@ -230,10 +230,10 @@ $ ssh klone-node
 [UWNetID@n3120 ~]$
 ```
 
-We will use this short cut (ProxyJump) with the `Remote-SSH` extension of VS Code to connect VS Code to the open comute node on `klone`. 
+We will use this short cut (ProxyJump) with the `Remote-SSH` extension of VS Code to connect VS Code to the open compute node on `klone`. 
 
 :::tip PRO TIP
-Manually editing `~/.ssh/klone-node-config` everytime you want to connect VS Code is tedious and prone to error. Use the following bash script **ON YOUR COMPUTER** to get the hostname of the compute node you wish to connect to with your ProxyJump. [<ins>**Download the script here**</ins>](https://hyak.uw.edu/files/set-hyak-node.sh).
+Manually editing `~/.ssh/klone-node-config` every time you want to connect VS Code is tedious and prone to error. Use the following bash script **ON YOUR COMPUTER** to get the hostname of the compute node you wish to connect to with your ProxyJump. [<ins>**Download the script here**</ins>](https://hyak.uw.edu/files/set-hyak-node.sh).
 
 **WARNING this script doesn'tusually work on Windows since bash and sed are not available. If might work if your re on Windows with WSL or Gitbash. MOREOVER, it might not work if you have a different version of sed**
 
@@ -290,7 +290,7 @@ After two-factor authentication and when any remaining remote extensions are ins
 
 ![Connected to klone-node](/img/docs/vscode/VSCode-Connected.png 'Connected to klone-node')
 
-Via this method, Windows users may have to provide two-factor authenication when changing directories. A better alternative for Windows users might be to connect [<ins>**VS Code via Code-server**</ins>](tools/vsc-code-server.md).
+Via this method, Windows users may have to provide two-factor authentication when changing directories. A better alternative for Windows users might be to connect [<ins>**VS Code via Code-server**</ins>](tools/vsc-code-server.md).
 
 ### End the Session
 

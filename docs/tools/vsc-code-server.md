@@ -39,7 +39,7 @@ This will link to code-server container version 4.89.0-39. There are other versi
 
 **This step only needs to be performed during initial set up.**
 
-Start an interactive job to pull the cointainer with the apptainer module. Here is an example command to start your interactive job (find out which accounts and partitions your can access with the `hyakalloc` command): 
+Start an interactive job to pull the container with the apptainer module. Here is an example command to start your interactive job (find out which accounts and partitions your can access with the `hyakalloc` command): 
 
 ```js
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=code-server --time=2:00:00

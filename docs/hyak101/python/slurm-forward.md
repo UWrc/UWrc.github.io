@@ -185,7 +185,7 @@ cat start-jupyter-forwarding.sh
 JUPYTER_INFO=$(ssh klone-node 'cat ~/.jupyter-port-and-token' 2>/dev/null)
 
 if [[ -z $JUPYTER_INFO ]]; then
-    echo "Error: Couldn't retreive Jupyter server port/token"
+    echo "Error: Couldn't retrieve Jupyter server port/token"
     exit 1
 fi
 ```
@@ -194,7 +194,7 @@ fi
 
 The first thing this script does is take a peak into klone with our `klone-node` ProxyJump short cut and attempts to find a file that is saved to our home directory `~/.jupyter-port-and-token` when Jupyter is running. This file containers the port and token information for your Jupyter session. It will use that information to set up our port forwarding. 
 
-`~/.jupyter-port-and-token`, will look something like this and be different everytime you use Jupyter this way, providing extra Cybersecurity:
+`~/.jupyter-port-and-token`, will look something like this and be different every time you use Jupyter this way, providing extra Cybersecurity:
 
 ```shell terminal=true
 cat ~/.jupyter-port-and-token

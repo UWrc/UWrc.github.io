@@ -48,7 +48,7 @@ export default function Pricing() {
             <p>
               <h4>Storage:</h4>
                 <ul>
-                  <li>All slices include 1 TB of storagespace and a 1 million file count limit of shared group storage (i.e., gscratch) accessible from every node. You may purchase supplemental storage at a monthly rate of $10.00 per TB per month (with a limit of 1 million inodes per TB). Supplemental storage subscripts are subject to indirect costs. Storage prices are subject to revision annually. To request supplemental storage, email <b>help@uw.edu</b> with "Hyak gscratch" in the subject line.</li>
+                  <li>All slices include 1 TB of storage space and a 1 million file count limit of shared group storage (i.e., gscratch) accessible from every node. You may purchase supplemental storage at a monthly rate of $10.00 per TB per month (with a limit of 1 million inodes per TB). Supplemental storage subscripts are subject to indirect costs. Storage prices are subject to revision annually. To request supplemental storage, email <b>help@uw.edu</b> with "Hyak gscratch" in the subject line.</li>
                   <li>Additional shared storage called <a href="https://hyak.uw.edu/docs/storage/gscratch#scrubbed"><ins><b>"scrubbed"</b></ins></a> is available for short-term use, but will be automatically deleted if not accessed for several weeks.</li>
                 </ul>
             </p>
@@ -58,14 +58,14 @@ export default function Pricing() {
               <ul>
                 <li>All hardware is procured at cost (market value with substantial university negotiated bulk discounts) and no sales tax or university overhead applied.</li>
                 <li>We reserve the 2nd Tuesday of every month for cluster maintenance.</li>
-                <li>Hyak slices are supported for a minimum guaranteed lifetime of 4 or 5 years depending on the slice type. Beyond 4 or 5 years all slices are continued to be made available subject to hardware viability and the sponsoring entity still having capacity. Self-sponsored slices have an on-going annual cost, this means slice life is reviewed on a yearly basis subject to the lab's willingness to continue, hardware viability, and overall cluster capacity (see below for more about <a href="#slice-cost-annual"><ins><b>Sponsored vs. Self-sposored slices</b></ins></a>). Historically, slice service life has been 6 years on average. However, past performance is not a <i>guarantee</i> of future experiences.</li>
+                <li>Hyak slices are supported for a minimum guaranteed lifetime of 4 or 5 years depending on the slice type. Beyond 4 or 5 years all slices are continued to be made available subject to hardware viability and the sponsoring entity still having capacity. Self-sponsored slices have an on-going annual cost, this means slice life is reviewed on a yearly basis subject to the lab's willingness to continue, hardware viability, and overall cluster capacity (see below for more about <a href="#slice-cost-annual"><ins><b>Sponsored vs. Self-sponsored slices</b></ins></a>). Historically, slice service life has been 6 years on average. However, past performance is not a <i>guarantee</i> of future experiences.</li>
                 <li><h5>HPC Slices:</h5></li>
                   <ul>
                     <li>All slices are standardized on AMD EPYC 9654 CPUs ("Genoa").</li>
                     <li>A physical server (or node) has 192-cores and &gt;1.5TB of memory packaged in a single box. This is in turn sub-divided into 6 equal "slices" that are resources of compute units that are sold to researchers.</li>
                     <li>Each node has 1.5TB or more of local NVME SSD disk storage. This is non-persistent storage and is cleared after a job ends. Data must be copied to and from local SSD before and after each job to utilize this.</li>
                     <li>Nodes are identically configured.</li>
-                    <li>Any jobs requiring multiple nodes should be prepared to be independent computations (i.e., "embarassingly parallel") or make use of message passing libraries (e.g., OpenMPI) to scale across multiple nodes simultaneously.</li>
+                    <li>Any jobs requiring multiple nodes should be prepared to be independent computations (i.e., "embarrassingly parallel") or make use of message passing libraries (e.g., OpenMPI) to scale across multiple nodes simultaneously.</li>
                   </ul>
                 <li><h5>GPU Slices:</h5></li>
                   <ul>

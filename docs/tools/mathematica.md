@@ -16,15 +16,15 @@ Next, use [<ins>**LMOD**</ins>](https://hyak.uw.edu/docs/tools/modules) to load 
 ```js
 module load mathematica
 ```
-Once it has loaded, you can start the Mathematica kernal:
+Once it has loaded, you can start the Mathematica kernel:
 ```
 math
 ```
 :::note 
-To start the kernal, the module must retrieve the license for Mathematica from the Physics Department. This can take anywhere from 30 seconds to 1 minute. For more information about the university's Mathematica license, click [<ins>**HERE**</ins>](https://phys.washington.edu/mathematica). 
+To start the kernel, the module must retrieve the license for Mathematica from the Physics Department. This can take anywhere from 30 seconds to 1 minute. For more information about the university's Mathematica license, click [<ins>**HERE**</ins>](https://phys.washington.edu/mathematica). 
 :::
 
-Once the kernal has started, the output should look something like this:
+Once the kernel has started, the output should look something like this:
 ```
 Wolfram 14.1.0 Kernel for Linux x86 (64-bit)
 Copyright 1988-2024 Wolfram Research, Inc.

@@ -28,7 +28,7 @@ The user documentation [<ins>**link**</ins>](/docs/) has been updated to reflect
 - `build` nodes no longer exist on klone as they did on mox. All instances have the potential to be interactive and all have internet routing by default (even non-interactive jobs).
 
 #### Storage
-- `gscratch` on klone is 1.4PB total capacity with a **new** 500TB NVMe flash tier. Data tiering happens automagically, if you use a file frequently it will be moved to the faster storage.
+- `gscratch` on klone is 1.4PB total capacity with a **new** 500TB NVMe flash tier. Data tiering happens automatically, if you use a file frequently it will be moved to the faster storage.
 - Storage quota is still charged back at the same rate ($10 / TB / month). Researchers receive 1TB per node purchased and contributed to klone.
 
 #### Data

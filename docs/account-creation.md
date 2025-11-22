@@ -41,4 +41,4 @@ Demonstration accounts are subject to the following restrictions:
 * You may submit as many jobs as you like, but the scheduler will only allow one to run at a time.
 * Your jobs are limited to 80 cores, 360 GB of memory, 2 GPUs, and a maximum of 2 discrete nodes.
 
-If you intend to purchase slices and are unable to test your workflows to your satisfaction, [<ins>**please click here to open a support ticket**</ins>](mailto:help@uw.edu?subject=hyaksupport) explaining the features you would like to test before purchasing slices, and we will find a way to accomedate you. 
+If you intend to purchase slices and are unable to test your workflows to your satisfaction, [<ins>**please click here to open a support ticket**</ins>](mailto:help@uw.edu?subject=hyaksupport) explaining the features you would like to test before purchasing slices, and we will find a way to accommodate you. 

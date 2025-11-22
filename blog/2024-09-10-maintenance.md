@@ -14,7 +14,7 @@ The next maintenance will be **Tuesday October 8, 2024**.
 
 ### AMD Math libraries
 
-In June we announced the addition of AMD Nodes and Slices to `klone` which make up our generation 2 or `g2` collection of resources. [<ins>**Click here to read more about the difference between our `g1` and `g2` resources.**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) During August, we installed a new AMD compiler suite, AOCC, along with specialized math libraries like AOCL, OpenBLAS, and ScaLAPACK as `modules` to make the most of this upgade. The new modules are useful on all partitions. The AOCC and AOCL modules are particularly relevant for partitions `cpu-g2`, `cpu-g2-mem2x`, and `ckpt-g2`. These tools are designed to optimize performance on AMD processors, speeding up complex mathematical computations. Whether you're working on simulations, data analysis, or any number-crunching tasks, these libraries may help ensure you get faster, more efficient results. If you're looking to boost your workflow, it's worth exploring how these libraries can benefit your projects. Here are the names of the new modules:
+In June we announced the addition of AMD Nodes and Slices to `klone` which make up our generation 2 or `g2` collection of resources. [<ins>**Click here to read more about the difference between our `g1` and `g2` resources.**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) During August, we installed a new AMD compiler suite, AOCC, along with specialized math libraries like AOCL, OpenBLAS, and ScaLAPACK as `modules` to make the most of this upgrade. The new modules are useful on all partitions. The AOCC and AOCL modules are particularly relevant for partitions `cpu-g2`, `cpu-g2-mem2x`, and `ckpt-g2`. These tools are designed to optimize performance on AMD processors, speeding up complex mathematical computations. Whether you're working on simulations, data analysis, or any number-crunching tasks, these libraries may help ensure you get faster, more efficient results. If you're looking to boost your workflow, it's worth exploring how these libraries can benefit your projects. Here are the names of the new modules:
 
 ```js
 aocc/4.2.0
@@ -54,4 +54,4 @@ In case you missed it, we recorded the August 2024 Wednesday training sessions a
   
 * [<ins>**Hyak Basics: Linux CLI workshop (August 7, 2024) recording**</ins>](https://youtu.be/WqGCJMQhiC0)
 
-Keep an eye on your indox for updates about our Fall training schedule; training sessions are currently TBA. Trainings will be announced via the Hyak mailing list, [<ins>**click here to join the mailing list.**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)
+Keep an eye on your inbox for updates about our Fall training schedule; training sessions are currently TBA. Trainings will be announced via the Hyak mailing list, [<ins>**click here to join the mailing list.**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)

@@ -19,7 +19,7 @@ While our storage systems have a track record of stability, it is important to n
 
 ## 3-2-1 Policy
 
-Your data is precious, in some cases completely irreplacable. The research computing team encourages the use of the widely accepted 3-2-1 backup strategy.
+Your data is precious, in some cases completely irreplaceable. The research computing team encourages the use of the widely accepted 3-2-1 backup strategy.
 
 :::tip
 3-2-1 is not a Hyak thing, it's a general IT best practice [<ins>**Backblaze**</ins>](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/) [<ins>**Acronis**</ins>](https://www.acronis.com/en-us/articles/backup-rule/) [<ins>**Networkworld**</ins>](https://www.networkworld.com/article/3527303/for-secure-data-backup-here-s-how-to-do-the-3-2-1-rule-right.html).

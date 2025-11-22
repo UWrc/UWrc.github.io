@@ -9,7 +9,7 @@ sidebar-label: Scheduling Jobs
 To keep the login node in stable working order and ensure fair usage of the login node as a community resource, Hyak has a job scheduling software that will give you access to other nodes (i.e., different computers that are part of the `klone` cluster). The job scheduler software is called Slurm, and regular users of Hyak need to learn how to use Slurm to effectively and efficiently make use of Hyak as a resource for research computing.
 
 :::tip Check out our tutorial Focused on Slurm
-If you are new to Hyak and using the job scheduler, Slurm, you may find our Slurm tutorial helpful to walk you thorugh basic and advanced usage. [<ins>**Click here to jump to the tutorial.**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
+If you are new to Hyak and using the job scheduler, Slurm, you may find our Slurm tutorial helpful to walk you through basic and advanced usage. [<ins>**Click here to jump to the tutorial.**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
 This tutorial can also be followed in video form [<ins>**HERE**</ins>](https://www.youtube.com/watch?v=iYM7xpRhp8I).
 :::
 

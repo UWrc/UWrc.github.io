@@ -19,7 +19,7 @@ export default function systems() {
   <br />
     <div class="row">
       <p>
-        Hyak is part of the University of Washington's cyberinfrastructure plan to support world-class research in every department. Hyak is an ecosystem of high-performance compute (HPC) clusters and supporting infrastructure (e.g., data management, computational training, scientific consulting). Acknowleding our Pacific Northwest heritage, Hyak means "fast" in Chinook jargon. Counting 1, 2, and 3 translates to "ikt", "mox", and "klone" in this local trading language. The numbers are cluster names corresponding to the generation of Hyak cluster deployed. We are currently on the 3rd generation cluster for Hyak. The University of Washington acknowledges the Coast Salish peoples of this land, the land which touches the shared waters of all tribes and bands within the Suquamish, Tulalip and Muckleshoot nations.
+        Hyak is part of the University of Washington's cyberinfrastructure plan to support world-class research in every department. Hyak is an ecosystem of high-performance compute (HPC) clusters and supporting infrastructure (e.g., data management, computational training, scientific consulting). Acknowlegding our Pacific Northwest heritage, Hyak means "fast" in Chinook jargon. Counting 1, 2, and 3 translates to "ikt", "mox", and "klone" in this local trading language. The numbers are cluster names corresponding to the generation of Hyak cluster deployed. We are currently on the 3rd generation cluster for Hyak. The University of Washington acknowledges the Coast Salish peoples of this land, the land which touches the shared waters of all tribes and bands within the Suquamish, Tulalip and Muckleshoot nations.
       </p>
     </div>
 

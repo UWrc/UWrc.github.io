@@ -13,7 +13,7 @@ If you are a **student** who is paying the student technology fee (STF), you are
 :::
 
 ### Partitions
-The account(s) you are a part of determine the priority access you have to certian partitions. 
+The account(s) you are a part of determine the priority access you have to certain partitions. 
 
 :::important 
 The table below outlines the types of compute resources available for each partition. This includes the number of slices, CPU cores, and memory per node. Use this table to determine the maximum single-node job size for each node type. For example, 40 CPUs and just under 192 GB of RAM (some RAM is dedicated to the node image) is the maximum job size for a job using a single compute node. Larger jobs submitted to the compute partition will be spread over multiple nodes. To ensure all 40 CPUs are requested from a single node, include the `sbatch` or `salloc` directive `--nodes=1`, otherwise Slurm will schedule your job on the first 40 CPUs available, which may be across one or more nodes. 

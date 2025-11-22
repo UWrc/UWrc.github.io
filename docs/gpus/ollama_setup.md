@@ -11,7 +11,7 @@ Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artif
 
 ## Installing Ollama as a Container
 
-You can install Ollama in a container definition file. This example will use the [<ins>**NVIDIA HPC SDK**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc) container. The NVIDIA HPC SDK container has Nvidia and Cuda dirvers. Create the definition file with `vim` or `nano`:
+You can install Ollama in a container definition file. This example will use the [<ins>**NVIDIA HPC SDK**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc) container. The NVIDIA HPC SDK container has Nvidia and Cuda drivers. Create the definition file with `vim` or `nano`:
 ```js
 nano ollama.def
 ```
@@ -53,7 +53,7 @@ To ensure the container was properly built, start an interactive shell session:
 ```js
 apptainer shell --nv --bind /gscratch/ ollama.sif
 ```
-The `--nv` flag enables GPU support by binding the necessary NVIDIA libraries from the host system. The `--bind /gscratch` flag allows containers to access files on the filesystem outside the container. The `Apptainer >` prompt should now appear on the command line, indicating that you have sucessfully enerted the container shell. Because you have binded the filesystem, you can change to the containers root directory to find where Ollama was installed with `cd /`. You should be able to see an Ollama directory under `/usr`. Note that the `/usr` directory will also contain files and directories from the host kernal. You can now run Ollama as a background job with the following commands:
+The `--nv` flag enables GPU support by binding the necessary NVIDIA libraries from the host system. The `--bind /gscratch` flag allows containers to access files on the filesystem outside the container. The `Apptainer >` prompt should now appear on the command line, indicating that you have successfully enerted the container shell. Because you have binded the filesystem, you can change to the containers root directory to find where Ollama was installed with `cd /`. You should be able to see an Ollama directory under `/usr`. Note that the `/usr` directory will also contain files and directories from the host kernel. You can now run Ollama as a background job with the following commands:
 ```js
 # start the ollama server in the background
 ollama serve &

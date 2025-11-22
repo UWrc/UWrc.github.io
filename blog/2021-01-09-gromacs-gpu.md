@@ -15,7 +15,7 @@ During the January 12, 2021 mox maintenance period long overdue package updates 
 The second most widely used GPU-enabled workflow on HYAK (besides machine learning) is molecular dynamics (MD) so we wanted to test one of the most popular MD codes, gromacs [<ins>**source**</ins>](http://www.gromacs.org/About_Gromacs), and ensure this driver upgrade wouldn't negatively impact our researchers. I couldn't find gromacs compiled with GPU support currently in our module collection so I used it as an opportunity to create one for you all, read on!
 
 :::warning
-This is an excercise to demonstrate the support for molecular dynamics on GPUs as a proof-of-concept. Scientific verification of the software compile options (e.g., single-precision) and its results is the responsibility of the researcher.
+This is an exercise to demonstrate the support for molecular dynamics on GPUs as a proof-of-concept. Scientific verification of the software compile options (e.g., single-precision) and its results is the responsibility of the researcher.
 :::
 
 ## Using gromacs
@@ -102,7 +102,7 @@ You can `ssh` into the node you're using in a separate window to have a parallel
 +-------------------------------------------------------------------+
 ```
 
-We can see a process occuping each GPU so it works! At least, gromacs uses GPUs...the GPUs themselves weren't stressed heavily and that requires the user to increase the number of rank processes and match that with available GPUs. You can do this by adding arguments to the `gmx mdrun` command but by default it did 2 ranks per GPU it detected, which is not a lot.
+We can see a process occupying each GPU so it works! At least, gromacs uses GPUs...the GPUs themselves weren't stressed heavily and that requires the user to increase the number of rank processes and match that with available GPUs. You can do this by adding arguments to the `gmx mdrun` command but by default it did 2 ranks per GPU it detected, which is not a lot.
 
 ## (Optional) Compile Notes
 

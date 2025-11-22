@@ -53,7 +53,7 @@ The `klone` filesystem has a coarse Quality-of-Service (QoS) tuning facility tha
 
 Utilizing metrics and old-fashioned sleuthing, we have been manually tracking down individual jobs that appear to be having a disproportionate and/or unnecessary impact on storage performance, and working with users to address the storage performance impact of these jobs.
 
-In the above figure we can see job IO follows a power law dynamic, a small handful of jobs are often responsible for the majority of load. In this case a single job on a single node is responsible. When users report storage "slowness" this disrepancy can be even more pronounced but we are able to quickly narrow down which specific nodes are responsible and address these corner cases.
+In the above figure we can see job IO follows a power law dynamic, a small handful of jobs are often responsible for the majority of load. In this case a single job on a single node is responsible. When users report storage "slowness" this discrepancy can be even more pronounced but we are able to quickly narrow down which specific nodes are responsible and address these corner cases.
 
 ### 5. Dynamically reducing the number of running checkpoint partition jobs.
 

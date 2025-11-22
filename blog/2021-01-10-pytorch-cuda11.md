@@ -14,7 +14,7 @@ tags: [ai, ml, machine learning, pytorch, gpu, cuda, cuda11]
 During the January 12, 2021 mox maintenance period long overdue package updates will be applied. The most user impactful upgrade is the GPU driver from to 418.40.04 to 460.27.04 that will allow for CUDA11 support (up from CUDA10).
 :::
 
-The single biggest research use for GPUs on Hyak is for machine learning and artificial intelligence and the community has been clammoring for CUDA11 support for some time. Unfortunately, it's not easy to separate the GPU driver from the node images so it had to wait until the next maintenance window and some testing for non-ML GPU workflows on Hyak like our [<ins>**gromacs**</ins>](2021-01-09-gromacs-gpu.md) users in the molecular dynamics community.
+The single biggest research use for GPUs on Hyak is for machine learning and artificial intelligence and the community has been clamoring for CUDA11 support for some time. Unfortunately, it's not easy to separate the GPU driver from the node images so it had to wait until the next maintenance window and some testing for non-ML GPU workflows on Hyak like our [<ins>**gromacs**</ins>](2021-01-09-gromacs-gpu.md) users in the molecular dynamics community.
 
 **tl;dr** your existing Pytorch codes should work but if you wanted to use the new features in Pytorch that required CUDA11 you can upgrade Pytorch and it will work.
 

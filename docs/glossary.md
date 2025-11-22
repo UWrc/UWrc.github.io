@@ -37,7 +37,7 @@ title: Glossary
 
 <a name="module" /> <br /><br /><br />
 
-[<ins>**Module**</ins>](#module): Pieces of code that can be loaded or unloaded into the kernel that extend its functinality. See [<ins>**Tools & Software > Modules**</ins>](https://hyak.uw.edu/docs/tools/modules).
+[<ins>**Module**</ins>](#module): Pieces of code that can be loaded or unloaded into the kernel that extend its functionality. See [<ins>**Tools & Software > Modules**</ins>](https://hyak.uw.edu/docs/tools/modules).
 
 <a name="node" /> <br /><br /><br />
 
@@ -47,7 +47,7 @@ title: Glossary
 
 <a name="Partition" /> <br /><br /><br />
 
-[<ins>**Partition**</ins>](#partition): A partition is a logical subdivision of the Hyak cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are `compute`, `cpu-g2`, `ckpt`, `ckpt-g2`, `ckpt-all`,`compute-bigmem`,`cpu-g2-mem2x`, and GPU nodes. `hyakalloc` will display paritions in addition to `ckpt` that you can submit jobs with (i.e., under the Slurm `sbatch` directive `--partition`).
+[<ins>**Partition**</ins>](#partition): A partition is a logical subdivision of the Hyak cluster resources. Specifically, each partition represents a class of node. For example, the partitions on the cluster are `compute`, `cpu-g2`, `ckpt`, `ckpt-g2`, `ckpt-all`,`compute-bigmem`,`cpu-g2-mem2x`, and GPU nodes. `hyakalloc` will display partitions in addition to `ckpt` that you can submit jobs with (i.e., under the Slurm `sbatch` directive `--partition`).
 
 <a name="Port_Forwarding" /> <br /><br /><br />
 

@@ -29,7 +29,7 @@ The following assumes you have already installed Miniconda in your home director
 ```js
 conda info
 ```
-The output shoudl look something like this if you have installed Miniconda3. 
+The output should look something like this if you have installed Miniconda3. 
 
 ```js
      active environment : None
