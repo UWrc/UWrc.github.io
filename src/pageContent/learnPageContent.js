@@ -187,7 +187,7 @@ export const LearnSpecialCards = [
           { image: '/img/learn/special/till_launch.jpg',
             header: 'Tillicum Cluster Launch Event', 
             caption: 'Event recap featuring NVIDIA and UW researchers',
-            link: 'https://www.youtube.com/watch?v=hzCeguKdXSo',
+            link: 'https://youtu.be/uUbPIznMgAE',
             isvideo: true,
           },
   
