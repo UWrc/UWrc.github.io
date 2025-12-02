@@ -32,7 +32,7 @@ If you are unsure if Lolo is right for you, use the [<ins>**Research Computing C
 
 - **Eligibility**: Lolo is available to UW faculty, staff, and affiliates with a valid UW NetID and appropriate worktags.
 - **Requesting Access**: Eligible users can request access through the [<ins>**Lolo Archive Intake Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
-- Lolo is **not HIPAA compliant**, it is "HIPAA aligned", which means that it offers the tools, such as unix file permissions, encryption tools like GPG, and SSH for secure transmission. It is the ***customer's sole responsibility*** to maintain their data in HIPAA compliance on Lolo no the responsibility of UWIT.
+- Lolo is **not HIPAA compliant**, it is "HIPAA aligned", which means that it offers the tools, such as unix file permissions, encryption tools like GPG, and SSH for secure transmission. It is the ***customer's sole responsibility*** to maintain their data in HIPAA compliance on Lolo, not the responsibility of UWIT.
 
 ### Storage Limits
 - Not optimized for small files. Use archival formats like .tar to bundle data before upload (e.g., combine multiple small files into `.tar` or `.zip` archives before upload to comply with inode quotas). 
