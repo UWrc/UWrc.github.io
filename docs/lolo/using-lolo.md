@@ -94,6 +94,19 @@ To view your current Lolo quota and usage, log in to Lolo and view the `usage_re
 cat /archive/group-name/usage_report.txt
 ```
 
+### Adding and Deleting User Access
+
+To add or delete users from your Lolo group, follow the following steps: 
+1. Proceed to the [<ins>**UW Groups Service**</ins>](https://groups.uw.edu).
+1. Click the "Find my groups" link in the "Find groups" section.
+1. In the search results section, there should be a link beginning with "u_uwlolo_" followed by the name of your group. The description of "Lolo Accounts - your group". Click the u_uwlolo_ link for your group.
+1. It will bring up a description of your group. Click the "Membership" tab link.
+1. Adding users: type the UW NetID(s) into the "Add members" text field and click the "Do it" button. Newly added user(s) should now appear in the "Membership" section. An error window will appear if the user(s) cannot be added.
+1. Deleting users: Type the UW NetID(s) into the "Remove members" text field and click the "Do it" button. Deleted user(s) should disappear from the "Membership" section.
+1. It can take up to an 30 minutes for changes to be reflected on the Lolo system.
+
+If you need help removing data from your Lolo archives that you do not own (i.e., it is owned by a previous group member), please contact us by sending an e-mail to [<ins>**help@uw.edu**</ins>](help@uw.edu) with 'Lolo' as the first word in the subject and a brief description of your issue.
+
 ### Problems and Solutions
 
 #### Permission Denied
