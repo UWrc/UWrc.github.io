@@ -33,7 +33,7 @@ chmod 600 ~/.ssh/authorized_keys
 ```
 
 :::caution 
-The next set of instructions differ for **Mac/Linux users** and **Windows esers**. 
+The next set of instructions differ for **Mac/Linux users** and **Windows users**. 
 
 [<ins>**Jump to Mac/Linux Instructions**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh#mac-linux-users-a-set-of-customized-local-configurations)
 
@@ -84,7 +84,7 @@ Here's a quick rundown of the options we're setting:
 - `ServerAliveCountMax 1200`: don't close the connection unless we've sent 1200 server-alive messages
 without a response from the login node.
 - `ControlMaster auto`: enable SSH multiplexing, i.e. connection sharing. This means once we've established the first connection,
-we won't have to reauthenticate for subsequent connections: the new connection will just use the already open socket. This feature is no supported for Windows Users.
+we won't have to re-authenticate for subsequent connections: the new connection will just use the already open socket. This feature is no supported for Windows Users.
 - `ControlPersist 3600`: this keeps the control socket open for an hour after the initial connection has been closed.
 - `ControlPath ~/.ssh/%r@klone-login:%p`: this is the path where the socket, appearing as a file, will actually be located. The `%r` is
 an abbreviation for the remote username, i.e. your UW Net ID, and `%p` is an abbreviation for the port (normally 22 for SSH).

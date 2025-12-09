@@ -22,7 +22,7 @@ S3 uses **buckets** as containers to store data, where each bucket can hold 100,
 
 #### Who should use KOPAH?
 
-KOPAH is a storage solution for anyone. Just like other storage options out there, you can upload, download, and view your storage bucket with specialized tools and share your data via the internet. For Hyak users, KOPAH provides another storage option for research computing. It is more affordable than /gscratch storage and can be used for active research computing with a few added steps for retreiving stored data prior to a job. 
+KOPAH is a storage solution for anyone. Just like other storage options out there, you can upload, download, and view your storage bucket with specialized tools and share your data via the internet. For Hyak users, KOPAH provides another storage option for research computing. It is more affordable than /gscratch storage and can be used for active research computing with a few added steps for retrieving stored data prior to a job. 
 
 #### Test Users Wanted
 

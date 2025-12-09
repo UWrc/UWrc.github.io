@@ -289,7 +289,7 @@ conda env remove --name myenv
 
 There are two ways to specify where your Conda environments and packages are stored.
 
-#### Option 1. Use `--prefex` for explicit paths
+#### Option 1. Use `--prefix` for explicit paths
 
 Manually set the path to your Conda environment by `--prefix` and always activate your Conda environment with full path.
 

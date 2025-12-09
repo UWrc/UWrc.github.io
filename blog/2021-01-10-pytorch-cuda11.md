@@ -36,7 +36,7 @@ Activate your new `pytorch-cuda10` environment:
 conda activate pytorch-cuda10
 ```
 
-The Pytorch website [<ins>**www**</ins>](https://pytorch.org/get-started/locally/) has a nice getting started matrix that generates the requisite install commands against CUDA10.
+[<ins>**The Pytorch website**</ins>](https://pytorch.org/get-started/locally/) has a nice getting started matrix that generates the requisite install commands against CUDA10.
 
 ![pytorch-cuda10]
 
@@ -46,7 +46,7 @@ The command shown above to copy-and-paste below:
 pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-Now we can load the Python interpreter and confirm Pytorch is installed and the CUDA10 compiled library recognizes this GPU with CUDA11 [<ins>**www**</ins>](https://pytorch.org/get-started/locally/#linux-verification)].
+Now we can load the Python interpreter and [<ins>**confirm Pytorch is installed**</ins>](https://pytorch.org/get-started/locally/#linux-verification) and the CUDA10 compiled library recognizes this GPU with CUDA11. 
 
 ```shell-session terminal=true
 (pytorch-cuda10) $ python3                                                                               Python 3.8.5 (default, Sep  4 2020, 07:30:14) 

@@ -25,7 +25,7 @@ What are the costs, trade offs, or downsides? You might imagine performance or t
 
 ## Apptainer (formerly Singularity)
 
-March 2022: 'Singularity' became a Linux Foundation supported project and was renamed [<ins>**Apptainer**</ins>](https://www.linuxfoundation.org/press-release/new-linux-foundation-project-accelerates-collaboration-on-container-systems-between-enterprise-and-high-performance-computing-environments/).
+March 2022: 'Singularity' became a Linux Foundation supported project and was renamed [<ins>**Apptainer**</ins>](https://apptainer.org/news/community-announcement-20211130/).
 
 The official [<ins>**Apptainer documentation**</ins>](https://apptainer.org/docs/user/main/) is the best source.
 

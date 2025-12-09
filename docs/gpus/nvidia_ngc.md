@@ -50,7 +50,7 @@ sinfo -p ckpt -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v 
 ```
 
 ### NVIDIA HPC SDK 
-The [<ins>**HPC SDK**</ins>](https://developer.nvidia.com/hpc-sdk) houses compilers, libraries, and software tools that are most commonly used when working on HPC applications. Below we will demostrate how to get started with this container. We will show how [<ins>**standard parallelization**</ins>](https://developer.nvidia.com/blog/accelerating-standard-c-with-gpus-using-stdpar/) is achieved with a mini app [<ins>**LULESH**</ins>](https://github.com/LLNL/LULESH) for hydrodynamics.
+The [<ins>**HPC SDK**</ins>](https://developer.nvidia.com/hpc-sdk) houses compilers, libraries, and software tools that are most commonly used when working on HPC applications. Below we will demonstrate how to get started with this container. We will show how [<ins>**standard parallelization**</ins>](https://developer.nvidia.com/blog/accelerating-standard-c-with-gpus-using-stdpar/) is achieved with a mini app [<ins>**LULESH**</ins>](https://github.com/LLNL/LULESH) for hydrodynamics.
 
 1. Get an interactive session on a GPU instance using some variant of the below command.
 

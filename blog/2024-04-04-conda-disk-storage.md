@@ -62,7 +62,7 @@ The output should look something like this if you have installed Miniconda3.
 
 ```
 **The paths shown above will show your username in place of `UWNetID`**.
-Notice the highlighted lines above showing the absolute path to your config file in your home directory (e.g., `/mmfs1/home/UWNetID/.condarc`), the directory designated for your package cache (e.g., `/mmfs1/home/UWNetID/conda_pkgs`), and the directory/ies designated for your environments (e.g., `/mmfs1/home/UWNetID/miniconda3/envs`). Conda designates directories for your package cache and your environments by default, but under Hyak, your home directory has a 10G storage limit, which can quickly be maxed out by package tarballs and their contents. We can change the location for your package cache and your environments to avoid this. 
+Notice the highlighted lines above showing the absolute path to your config file in your home directory (e.g., `/mmfs1/home/UWNetID/.condarc`), the directory designated for your package cache (e.g., `/mmfs1/home/UWNetID/conda_pkgs`), and the directory/directories designated for your environments (e.g., `/mmfs1/home/UWNetID/miniconda3/envs`). Conda designates directories for your package cache and your environments by default, but under Hyak, your home directory has a 10G storage limit, which can quickly be maxed out by package tarballs and their contents. We can change the location for your package cache and your environments to avoid this. 
 
 :::tip
 
@@ -126,7 +126,7 @@ Result
 ```
 
 :::warning
-If you don't have the directories you intend to use under your UWNetID in `/gscratch/scrubbed/`or whereever you intend to designate these directories **you will need to create them now for this to work.** Use the `mkdir` command, for example `mkdir /gscratch/scrubbed/UWNetID` and replace `UWNetID` with your username. Then create directories for your package cache and envs directory, for example, `mkdir /gscratch/scrubbed/UWNetID/conda_pkgs` and `mkdir /gscratch/scrubbed/UWNetID/envs`.
+If you don't have the directories you intend to use under your UWNetID in `/gscratch/scrubbed/`or wherever you intend to designate these directories **you will need to create them now for this to work.** Use the `mkdir` command, for example `mkdir /gscratch/scrubbed/UWNetID` and replace `UWNetID` with your username. Then create directories for your package cache and envs directory, for example, `mkdir /gscratch/scrubbed/UWNetID/conda_pkgs` and `mkdir /gscratch/scrubbed/UWNetID/envs`.
 :::
 
 ### Cleaning up disk storage

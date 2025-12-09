@@ -162,7 +162,7 @@ If Hostname is left blank (i.e., no placeholder) this will not work. Edit `~/.ss
 **These steps are to be performed on your local computer**
 :::
 
-I swear, this is the last one. [<ins>**You can download it to your local computer by clicking here**</ins>](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). Don't forget to make the script executabe after you download it. 
+I swear, this is the last one. [<ins>**You can download it to your local computer by clicking here**</ins>](https://hyak.uw.edu/files/hyak101/python/start-jupyter-forwarding.sh). Don't forget to make the script executable after you download it. 
 
 ```js
 chmod +x start-jupyter-forwarding.sh

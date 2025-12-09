@@ -12,7 +12,7 @@ tags: [gromacs, molecular dynamics, md, gpu, cuda, cuda11]
 During the January 12, 2021 mox maintenance period long overdue package updates will be applied. The most user impactful upgrade is the GPU driver from to 418.40.04 to 460.27.04 that will allow for CUDA 11 support (up from CUDA 10).
 :::
 
-The second most widely used GPU-enabled workflow on HYAK (besides machine learning) is molecular dynamics (MD) so we wanted to test one of the most popular MD codes, gromacs [<ins>**source**</ins>](http://www.gromacs.org/About_Gromacs), and ensure this driver upgrade wouldn't negatively impact our researchers. I couldn't find gromacs compiled with GPU support currently in our module collection so I used it as an opportunity to create one for you all, read on!
+The second most widely used GPU-enabled workflow on HYAK (besides machine learning) is molecular dynamics (MD) so we wanted to test one of the most popular MD codes, gromacs [<ins>**source**</ins>](https://www.gromacs.org/about.html), and ensure this driver upgrade wouldn't negatively impact our researchers. I couldn't find gromacs compiled with GPU support currently in our module collection so I used it as an opportunity to create one for you all, read on!
 
 :::warning
 This is an exercise to demonstrate the support for molecular dynamics on GPUs as a proof-of-concept. Scientific verification of the software compile options (e.g., single-precision) and its results is the responsibility of the researcher.
@@ -67,7 +67,7 @@ CUDA runtime:       11.10
 
 ### Test simulation of Lysozyme
 
-I used a tutorial from the gromacs website [<ins>**here**</ins>](http://www.gromacs.org/@api/deki/files/198/=gmx-tutorial.pdf) to show it runs processes on GPU(s). The tutorial runs an MD simulation on a lysozyme but that's the extent of my study there. The commands below are a summary of the tutorial with a note that the `genbox` subcommand is now replaced by `solvate`.
+I used a tutorial from the gromacs website [<ins>**here**</ins>](https://tutorials.gromacs.org) to show it runs processes on GPU(s). The tutorial runs an MD simulation on a lysozyme but that's the extent of my study there. The commands below are a summary of the tutorial with a note that the `genbox` subcommand is now replaced by `solvate`.
 
 ```js
 gmx pdb2gmx -f 1LYD.pdb -water tip3p

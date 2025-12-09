@@ -226,7 +226,7 @@ Use the `watch` command with the `squeue` command to monitor the job in real tim
 ```js
 watch -n30 squeue --user $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-          12345678      ckpt containe UWNetID  R      00:01      1 n3000
+          12345678      ckpt container UWNetID  R      00:01      1 n3000
 # use Ctrl + C to exit the watch command
 ```
 

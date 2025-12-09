@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/89407740?v=4
 tags: [maintenance, august, apptainer]
 ---
 
-August's scheduled maintenance is complete and the Hyak clusters have resumed normal operations: logins have been reenabled & jobs are already running.
+August's scheduled maintenance is complete and the Hyak clusters have resumed normal operations: logins have been re-enabled & jobs are already running.
 
 This month's maintenance actions were our standard fare: node image and firmware updates. We keep our maintenance all-clear emails as brief as possible, but here's the rundown:
 

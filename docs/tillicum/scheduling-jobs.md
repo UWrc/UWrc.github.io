@@ -108,13 +108,13 @@ python my_script.py
 
 ## Monitoring Jobs and Resource Availability
 
-Your best tool for monitoring the progress of your jobs is the `squeue` command which will show you all jobs runnning or requested on the cluster. A quick look at `squeue` output will allows you to estimate cluster traffic. `squeue` with the `-u` flag and your NetID will show you the jobs you have submitted. 
+Your best tool for monitoring the progress of your jobs is the `squeue` command which will show you all jobs running or requested on the cluster. A quick look at `squeue` output will allows you to estimate cluster traffic. `squeue` with the `-u` flag and your NetID will show you the jobs you have submitted. 
 
 ```js
 squeue -u $USER
 ```
 
-If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a mainteance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [<ins>**Guide to job reasons.**</ins>](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
+If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a maintenance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [<ins>**Guide to job reasons.**</ins>](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
 
 `sinfo` can also be helpful for determining how many nodes are available. The following command provides a useful summary.
 

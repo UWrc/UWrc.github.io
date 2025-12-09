@@ -7,7 +7,7 @@ title: DMTCP (Checkpointing)
 DMTCP is still being tested on Hyak. The module name may change after testing. Please report any issues to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject.
 :::
 
-[<ins>**DMTCP**</ins>](https://github.com/dmtcp/dmtcp) is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using checkpointing allows for shorter job times using requeing and better use of `ckpt` resources, allowing higher throughput for your jobs. More extensive documentation can be found [<ins>**here**</ins>](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or via relevant `man` pages.
+[<ins>**DMTCP**</ins>](https://github.com/dmtcp/dmtcp) is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using checkpointing allows for shorter job times using requeuing and better use of `ckpt` resources, allowing higher throughput for your jobs. More extensive documentation can be found [<ins>**here**</ins>](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or via relevant `man` pages.
 
 :::info
 DMTCP currently does not support the following:

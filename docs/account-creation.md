@@ -31,7 +31,7 @@ If you are a UW Student Technology Fee (STF) paying student, which includes almo
 
 ### I am an external collaborator or I have no UWNetID.
 
-Having aUW NetID is a pre-requisite for any type of Hyak account. If you are an external collaborator of a current Hyak user and need a UWNetID, you will need your UW collaborator sponsor you for a NetID. [<ins>**Click here to learn more about sponsored NetIDs**</ins>](https://itconnect.uw.edu/security/uw-netids/about-uw-netids/about-sponsored-uw-netids/). With your sponsored NetID, you can be added to a group or get a Demonstration account. 
+Having a UW NetID is a pre-requisite for any type of Hyak account. If you are an external collaborator of a current Hyak user and need a UWNetID, you will need your UW collaborator sponsor you for a NetID. [<ins>**Click here to learn more about sponsored NetIDs**</ins>](https://itconnect.uw.edu/security/uw-netids/about-uw-netids/about-sponsored-uw-netids/). With your sponsored NetID, you can be added to a group or get a Demonstration account. 
 
 ### Limitations of Demo Accounts
 

@@ -70,4 +70,4 @@ module.exports = {
 - `description`: The description of your document, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines. If this field is not present, it will default to the first line of the contents.
 - `image`: Cover or thumbnail image that will be used when displaying the link to your post.
 
-**More information about sidebars [<ins>**here**</ins>](https://v2.docusaurus.io/docs/docs).**
+**More information about sidebars [<ins>**here**</ins>](https://docusaurus.io/docs/sidebar).**
