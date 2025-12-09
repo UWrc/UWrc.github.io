@@ -51,7 +51,7 @@ ssh UWNetID@klone.hyak.uw.edu
 # output
 data.tar
 ```
-On `klone` under default user profile settings, `data.tar` should be color coded red, indiciating that is it an archive file. From here, you can unzip the tar file with the command:
+On `klone` under default user profile settings, `data.tar` should be color coded red, indicating that is it an archive file. From here, you can unzip the tar file with the command:
 ```js
 tar -xvf data.tar
 ```
@@ -74,7 +74,7 @@ tar cvf - data_directory/ | ssh UWNetID@hyak.klone.uw.edu "cat > /path/to/file/d
     Password:
     ...
 ```
-This will create an archive of `data_directory` and send it directly to `klone`. This directory will be saved under the name `data.tar` and will be located at the `/path/to/directory` that you specifiy where it can then be extracted and used. 
+This will create an archive of `data_directory` and send it directly to `klone`. This directory will be saved under the name `data.tar` and will be located at the `/path/to/directory` that you specify where it can then be extracted and used. 
 
 Check if it transferred to `klone` by navigating to the directory it saved to:
 ``` bash

@@ -164,7 +164,7 @@ As a reminder these packages are pulled from the internet so you will need a bui
 The above `pip install` commands are equally valid for any other Python libraries.
 :::
 
-Pytorch doesn't need a GPU to run although for most machine learning projects it's indispensible. If you have an interactive session with a GPU (run `nvidia-smi` to confirm) you can verify it's all working with the following test from [<ins>**Pytorch**</ins>](https://pytorch.org/get-started/locally/#linux-verification):
+Pytorch doesn't need a GPU to run although for most machine learning projects it's indispensable. If you have an interactive session with a GPU (run `nvidia-smi` to confirm) you can verify it's all working with the following test from [<ins>**Pytorch**</ins>](https://pytorch.org/get-started/locally/#linux-verification):
 
 ```shell-session terminal=true
 (pytorch-cuda11) $ python3                                                                               Python 3.8.5 (default, Sep  4 2020, 07:30:14)

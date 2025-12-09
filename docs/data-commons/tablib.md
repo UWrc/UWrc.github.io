@@ -43,7 +43,7 @@ The file path for TablLib dataset on `klone` is `/data/tablib`.
 
 The file path for TablLib dataset on `tillicum` is `/gpfs/datasets/tablib`.
 
-Users who access the data should also apply for public, open credentialized access to the dataset on Hugging Face Datasets [<ins>**here**</ins>](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
+Users who access the data should also apply for public, open credentialed access to the dataset on Hugging Face Datasets [<ins>**here**</ins>](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
 
 TabLib is a collection of publicly available data. As noted in the TabLib preprint, it is noteworthy to mention that under U.S. copyright law, facts and data are not subject to copyright protection (see [<ins>**Feist v. Rural Telephone**</ins>](https://www.law.cornell.edu/supremecourt/text/499/340)). 
 

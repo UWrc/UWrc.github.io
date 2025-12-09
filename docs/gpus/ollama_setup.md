@@ -7,7 +7,7 @@ Conventional LLM tools require root access for installation on Hyak. To maintain
 
 ## What Are Ollama LLMs?
 
-Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is reccommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with [<ins>**Apptainer**</ins>](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity) and [<ins>**requesting GPU jobs**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition). 
+Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is recommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with [<ins>**Apptainer**</ins>](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity) and [<ins>**requesting GPU jobs**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition). 
 
 ## Installing Ollama as a Container
 
@@ -53,7 +53,7 @@ To ensure the container was properly built, start an interactive shell session:
 ```js
 apptainer shell --nv --bind /gscratch/ ollama.sif
 ```
-The `--nv` flag enables GPU support by binding the necessary NVIDIA libraries from the host system. The `--bind /gscratch` flag allows containers to access files on the filesystem outside the container. The `Apptainer >` prompt should now appear on the command line, indicating that you have successfully enerted the container shell. Because you have binded the filesystem, you can change to the containers root directory to find where Ollama was installed with `cd /`. You should be able to see an Ollama directory under `/usr`. Note that the `/usr` directory will also contain files and directories from the host kernel. You can now run Ollama as a background job with the following commands:
+The `--nv` flag enables GPU support by binding the necessary NVIDIA libraries from the host system. The `--bind /gscratch` flag allows containers to access files on the filesystem outside the container. The `Apptainer >` prompt should now appear on the command line, indicating that you have successfully entered the container shell. Because you have bound the filesystem, you can change to the containers root directory to find where Ollama was installed with `cd /`. You should be able to see an Ollama directory under `/usr`. Note that the `/usr` directory will also contain files and directories from the host kernel. You can now run Ollama as a background job with the following commands:
 ```js
 # start the ollama server in the background
 ollama serve &

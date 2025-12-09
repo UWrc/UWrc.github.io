@@ -171,7 +171,7 @@ Next up, we'll create an environment and install Jupyter.
 To complete our containerized version of conda, we will demonstrate running services (like a Jupyter server) inside a container.
 
 :::tip Pro tip: customization opportunity
-If you are a conda user, but don't need this container for jupyter, at this point you could build a custom environment for any python protocol by adapting the following isntructions to install your required packages. 
+If you are a conda user, but don't need this container for jupyter, at this point you could build a custom environment for any python protocol by adapting the following instructions to install your required packages. 
 :::
 
 ### Installing the Jupyter software

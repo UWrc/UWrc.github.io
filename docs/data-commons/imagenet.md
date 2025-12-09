@@ -18,7 +18,7 @@ You can learn more at their website [<ins>**here**</ins>](https://www.image-net.
 The verbatim description from their website is as follows.
 
 :::info
-The validation and test data for this competition will consist of 150,000 photographs, collected from flickr and other search engines, hand labeled with the presence or absence of 1000 object categories. The 1000 object categories contain both internal nodes and leaf nodes of ImageNet, but do not overlap with each other. A random subset of 50,000 of the images with labels will be released as validation data included in the development kit along with a list of the 1000 categories. The remaining images will be used for evaluation and will be released without labels at test time.
+The validation and test data for this competition will consist of 150,000 photographs, collected from Flickr and other search engines, hand labeled with the presence or absence of 1000 object categories. The 1000 object categories contain both internal nodes and leaf nodes of ImageNet, but do not overlap with each other. A random subset of 50,000 of the images with labels will be released as validation data included in the development kit along with a list of the 1000 categories. The remaining images will be used for evaluation and will be released without labels at test time.
 
 The training data, the subset of ImageNet containing the 1000 categories and 1.2 million images, will be packaged for easy downloading. The validation and test data for this competition are not contained in the ImageNet training data (we will remove any duplicates). 
 :::
@@ -56,7 +56,7 @@ By accessing this data you agree to their terms of use provided on their website
 
 1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [<ins>**here**</ins>](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
 2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path on `klone` and `/gpfs/datasets/imagenet` on `tillicum`. You can mount this and use directly in your code. This is preferred due to the large number of small files.
-3. **Direct**: The file path on `klone` is `/data/imagenet` and on `tillicum` is `/gpfs/datasets/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanyig `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
+3. **Direct**: The file path on `klone` is `/data/imagenet` and on `tillicum` is `/gpfs/datasets/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanying `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
 
 ### Tillicum
 

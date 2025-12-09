@@ -9,7 +9,7 @@ Storage for your data works a little bit different on a supercomputer compared t
 
 Storage on every Hyak cluster is physically separate. It is best practice on every supercomputer that storage live as its own infrastructure to be high-performance and able to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., [<ins>**GPFS**</ins>](https://en.wikipedia.org/wiki/GPFS), [<ins>**Lustre**</ins>](https://en.wikipedia.org/wiki/Lustre_(file_system)), [<ins>**BeeGFS**</ins>](https://en.wikipedia.org/wiki/BeeGFS)).
 
-Storage systems are mounted (i.e., accessible) from every compute node of the cluster. Each Hyak cluster (e.g., `klone`) has its own separate parallel file system. The storage attached to each Hyak cluster has its own policies, hierachy, etc. Please refer to their respective pages for more information. 
+Storage systems are mounted (i.e., accessible) from every compute node of the cluster. Each Hyak cluster (e.g., `klone`) has its own separate parallel file system. The storage attached to each Hyak cluster has its own policies, hierarchy, etc. Please refer to their respective pages for more information. 
 
 :::warning
 Cluster storage is not backed up!

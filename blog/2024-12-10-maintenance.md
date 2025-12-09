@@ -80,7 +80,7 @@ Understand how a career in cyberinfrastructure could fit with your future plans!
 Whether you’re looking to get to grips with the basics or searching for new tools and techniques to apply, Hartree Training supports both self-directed online learning as well as face-to-face practical sessions with badge certification available for you to share your new skills with your network.
 Currently offering courses covering a range of advanced digital technologies including:
 * Data Science
-* Artificial Intelligence and Modelling
+* Artificial Intelligence and Modeling
 * High Performance and Exascale Computing
 * Software Engineering
 * Emerging Technologies

@@ -42,7 +42,7 @@ The table below outlines the types of compute resources available for each parti
 :::
 
 
-All users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` parititions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
+All users can use Hyak resources when they are idle by scheduling jobs on the `ckpt`, `ckpt-g2`, or `ckpt-all` partitions ([<ins>**Click here to learn about more about `ckpt` jobs.**</ins>](https://hyak.uw.edu/docs/compute/checkpoint#the-checkpoint-partition)). 
 
 ### What Resources Do You Have?
 

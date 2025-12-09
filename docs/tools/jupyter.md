@@ -192,7 +192,7 @@ The examples below use my `UWNetID` (finchkn) and a compute node that was availa
 
 :::important
 
-Before beginnning this exercise, **please select a random number between 4096 and 16384 for your Jupyter-Notebook server to start on.** It is important that this number is unique and does not conflict with either another user or an existing service on your machine. From this point out, we will use 9195 as an example.
+Before beginning this exercise, **please select a random number between 4096 and 16384 for your Jupyter-Notebook server to start on.** It is important that this number is unique and does not conflict with either another user or an existing service on your machine. From this point out, we will use 9195 as an example.
 
 :::
 Start an interactive job on a compute node with `salloc`. 

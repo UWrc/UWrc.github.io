@@ -2,7 +2,7 @@
 id: gpu_start
 title: Start Here
 ---
-GPUs offer significant performance enhancements for computationally intensive tasks. GPU cores are designed for parallel computating, making them a useful tool for training machine learning models, molecular dynamics simulations, and data mining. Unlike CPUs which excel at sequential tasks, GPUs can handle large numbers of simultaneous operations.
+GPUs offer significant performance enhancements for computationally intensive tasks. GPU cores are designed for parallel computing, making them a useful tool for training machine learning models, molecular dynamics simulations, and data mining. Unlike CPUs which excel at sequential tasks, GPUs can handle large numbers of simultaneous operations.
 
 ## GPU Jobs
 You can view the available GPUs on Hyak with the `sinfo -s` command. To view which GPUs are available on the `ckpt` partition, use:
@@ -10,7 +10,7 @@ You can view the available GPUs on Hyak with the `sinfo -s` command. To view whi
 sinfo -p ckpt-all -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v null
 ```
 ### GPU Jobs on Checkpoint
-A GPU job can be requested from `ckpt` by specifing the type and number of GPUs to allocate with the tag `--gpus-per-node`:
+A GPU job can be requested from `ckpt` by specifying the type and number of GPUs to allocate with the tag `--gpus-per-node`:
 ```
 salloc --partition=ckpt-all --gpus-per-node=2080ti:1 --mem=10G --time=2:00:00 
 ```

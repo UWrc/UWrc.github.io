@@ -172,7 +172,7 @@ The expected output is as follows:
 ```js
 2012-11-05,deer,5
 2012-11-05,rabbit,22
-2012-11-05,racoon,7
+2012-11-05,raccoon,7
 2012-11-06,rabbit,19
 2012-11-06,deer,2
 2012-11-06,fox,4
@@ -202,7 +202,7 @@ cat animals-subset.csv
 ```js
 2012-11-05,deer,5
 2012-11-05,rabbit,22
-2012-11-05,racoon,7
+2012-11-05,raccoon,7
 ```
 
 Because we do not want to override `animals-subset.csv` file contents, use `>>` to append rather than `>`:
@@ -217,7 +217,7 @@ Now, the subset reads as follows:
 ```js
 2012-11-05,deer,5
 2012-11-05,rabbit,22
-2012-11-05,racoon,7
+2012-11-05,raccoon,7
 2012-11-07,rabbit,16
 2012-11-07,bear,1
 ```

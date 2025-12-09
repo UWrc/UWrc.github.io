@@ -28,7 +28,7 @@ In the figure above we have visibility into if an abnormally high number of jobs
 
 ### 2. Created custom filesystem migration policies to optimize the use of the NVMe layer. 
 
-The bulk of the storage capacity on `klone` is stored on rotary hard disk drives totalling approximately 1.7 Petabytes (PB) of raw storage. In addition to the hard disk storage, there is a much smaller, extremely fast–and expensive–pool of NVMe "flash" storage that functions both as a write buffer for new files written to the filesystem, and also as a read-cache-like layer where files can be read without causing load on the rotary disks.
+The bulk of the storage capacity on `klone` is stored on rotary hard disk drives totaling approximately 1.7 Petabytes (PB) of raw storage. In addition to the hard disk storage, there is a much smaller, extremely fast–and expensive–pool of NVMe "flash" storage that functions both as a write buffer for new files written to the filesystem, and also as a read-cache-like layer where files can be read without causing load on the rotary disks.
 
 The Hyak team has also optimized the file placement policy: files most likely to generate heavy load reside in the limited space of the NVMe layer, ensuring that no storage load is generated on the hard disk layer when those files are repeatedly accessed.
 

@@ -28,7 +28,7 @@ In order request dataset addition to Data Commons, the following criteria must b
     - A link to the documentation PR.
     - The following people CC'd: the lab/group owners & all initial users. This will be *at least* 6 people.
 
-4. Every person included in the request (again, at least 6), must indivudally attest that the dataset has been vetted: that, to the best of their knowledge, the dataset contains no material where its download/storage/use violates any State or Federal law and/or the rules/policies of UW, including intellectual property laws.
+4. Every person included in the request (again, at least 6), must individually attest that the dataset has been vetted: that, to the best of their knowledge, the dataset contains no material where its download/storage/use violates any State or Federal law and/or the rules/policies of UW, including intellectual property laws.
 
 :::important Documentation Contributions
 The GitHub repository for this documentation site, with instructions for cloning & local development, is here: https://github.com/UWrc/UWrc.github.io.

@@ -93,7 +93,7 @@ ls -alh
 474M r-base_latest.sif
 ```
 
-You can run the R binary within the container like below. If you created the R library directory as described above (and, more generally, if you want to load or save files), don't forget to use the --bind command. You can bind anywhere deeper on the filepath than from where you need to load or save things, with `/gscratch` being a good option.
+You can run the R binary within the container like below. If you created the R library directory as described above (and, more generally, if you want to load or save files), don't forget to use the --bind command. You can bind anywhere deeper on the file path than from where you need to load or save things, with `/gscratch` being a good option.
 
 ```js
 apptainer run --bind /gscratch r-base_latest.sif R
@@ -117,7 +117,7 @@ Your options are to:
 1. run `install.packages("tidyverse")` in the R-base container (`r-base_latest.sif`; as shown above) or
 2. use the Rocker `tidyverse` container with it pre-installed.
  
-Option 1, while ok, uses a lot (and I mean a lot) of inodes as well as taking a long time to compile. It's much leaner on the cluster and faster to use a pre-built container if you know you'll use the Tidyverse.
+Option 1, while OK, uses a lot (and I mean a lot) of inodes as well as taking a long time to compile. It's much leaner on the cluster and faster to use a pre-built container if you know you'll use the Tidyverse.
 
 Prior instructions on R [<ins>**user environment above**</ins>](#user-environment) apply. This container will also use the directory you designative in your `~/.Renviron` config file. Once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
 
@@ -214,7 +214,7 @@ The following will prepare a `.sif` file called `rstudio_latest.sif`, but it mig
 
 #### Step 2: Prepare Slurm Job File
 
-We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler sftware called Slurm. Download our Slurm job file [<ins>**from this hyperlink**</ins>](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for `klone` from the tutorial by Rocker [<ins>**More information about the original tutorial can be found here.**</ins>](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
+We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler software called Slurm. Download our Slurm job file [<ins>**from this hyperlink**</ins>](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for `klone` from the tutorial by Rocker [<ins>**More information about the original tutorial can be found here.**</ins>](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
 
 ```js
 wget https://hyak.uw.edu/files/rstudio-server.job

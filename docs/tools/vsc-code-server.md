@@ -45,7 +45,7 @@ Start an interactive job to pull the container with the apptainer module. Here i
 salloc --partition=ckpt --cpus-per-task=1 --mem=16G --job-name=code-server --time=2:00:00
 ```
 
-Pull the container from DockerHub. This will take a few minutes to complete. When complete, you will have a container image called  `code-server_lastest.sif`. There are other versions of the container you might consider rather than the latest version: [<ins>**code-server tags**</ins>](https://hub.docker.com/r/codercom/code-server/tags).
+Pull the container from DockerHub. This will take a few minutes to complete. When complete, you will have a container image called  `code-server_latest.sif`. There are other versions of the container you might consider rather than the latest version: [<ins>**code-server tags**</ins>](https://hub.docker.com/r/codercom/code-server/tags).
 ```js
 apptainer pull docker://codercom/code-server
 ```

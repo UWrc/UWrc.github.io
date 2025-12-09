@@ -16,7 +16,7 @@ This is a collection of data used to train the OLMo-2-1124 language models. You 
 ## How to prepare for use?
 This serves as instructions for the research computing team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
-Download data from Hugging Face datasets repo [<ins>**allenai/olmo-mix-1124**</ins>](https://huggingface.co/datasets/allenai/olmo-mix-1124).
+Download data from Hugging Face datasets repo [<ins>**HERE**</ins>](https://huggingface.co/datasets/allenai/olmo-mix-1124).
 
 The format of the dataset is json files compressed using gzip.
 
