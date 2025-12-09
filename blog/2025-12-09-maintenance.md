@@ -14,7 +14,7 @@ During this month’s maintenance window, we conducted routine security updates 
 * **Node image updates** – Routine updates and security patches. 
 * We also installed new modules: 
     * gcc/15.2.0
-    * conda/Miniforge3-25.3.1-3 (read more below)
+    * conda/Miniforge3-25.9.1-0 (read more below)
 
 ### New Feature: Conda Module Now Available on Hyak Klone
 
