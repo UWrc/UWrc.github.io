@@ -44,22 +44,13 @@ export const LearnTutorialCards = [
             featuredSortIndex: 20,
           },
 
-          { image: '/img/learn/containers.jpg',
-            header: 'Tutorial: Containers', 
-            caption: 'Discover containers and containerization of software for usage on Hyak.',
-            link: '/docs/hyak101/containers/syllabus',
-            isfeatured: true,
-            featuredSortIndex: 30,
-          },
-          
-
           { image: '/img/learn/till_onboard.jpg',
             header: 'Tutorial: Tillicum Onboarding', 
             caption: 'Dive into the Tillicum GPU cluster with this guided introduction.',
             link: 'https://github.com/UWrc/tillicum-onboarding',
             isfeatured: true,
             isvideo : false,
-            featuredSortIndex: 40,
+            featuredSortIndex: 30,
           },
 
           { image: '/img/learn/till_slurm.jpg',
@@ -68,6 +59,14 @@ export const LearnTutorialCards = [
             link: 'https://github.com/UWrc/tillicum-slurm',
             isfeatured: true,
             isvideo : false,
+            featuredSortIndex: 40,
+          },
+
+          { image: '/img/learn/till_containers.jpg',
+            header: 'Tutorial: Tillicum Containers', 
+            caption: 'Learn how to run software on Tillicum using Apptainer containers.',
+            link: 'https://github.com/UWrc/tillicum-containers/',
+            isfeatured: true,
             featuredSortIndex: 50,
           },
 
@@ -82,6 +81,13 @@ export const LearnTutorialCards = [
             header: 'Tutorial: Advanced Slurm', 
             caption: 'Worked example demonstrating the use of scripting with Slurm job arrays.',
             link: '/docs/hyak101/basics/syllabus_advanced',
+            isfeatured: false,
+          },
+
+          { image: '/img/learn/containers.jpg',
+            header: 'Tutorial: Containers', 
+            caption: 'Discover containers and containerization of software for usage on Hyak.',
+            link: '/docs/hyak101/containers/syllabus',
             isfeatured: false,
           },
 
