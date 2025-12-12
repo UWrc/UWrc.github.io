@@ -99,7 +99,7 @@
         "rtmp",
         "rtsp",
         "runscript",
-        "rysnc",
+        "rsync",
         "salloc",
         "sandboxed",
         "Sandboxing",
