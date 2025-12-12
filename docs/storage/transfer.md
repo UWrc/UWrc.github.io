@@ -14,13 +14,13 @@ scp UWNetID@klone.hyak.uw.edu:/path/to/data_to_transfer .
 ```js
 scp data_to_transfer UWNetID@klone.hyak.uw.edu:/path/to/directory
 ```
-#### Similarly, data can be transferred using the `rysnc` command
+#### Similarly, data can be transferred using the `rsync` command
 
 ```js
 # From klone to your local computer
-rysnc UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
+rsync UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 # use -a to preserve original file permissions, timestamp, etc
-rysnc -a UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
+rsync -a UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 ```
 `rsync` and `scp` can be paired with other options such as `-v` (verbose) which provides a detailed output of the transfer process or `-z` ( `-c` for `scp` ) to compress data during transfers.
 
