@@ -13,7 +13,7 @@ Before beginning this work, you will need to know the node the web service is be
 Putty (Windows)
 ---------------
 
-After adding `klone.hyak.uw.edu` to the `Hostname` section on the Putty Connection page, navigate to Connection > SSH > Tunnels. Set source port to the port mentioned at job start (in my case, 9195) and the destination to the node and the port, separated by a colon (eg. z3003.hyak.local:9195). Leave the destination options for `Local` and `Auto` set.
+After adding `klone.hyak.uw.edu` to the `Hostname` section on the Putty Connection page, navigate to Connection > SSH > Tunnels. Set source port to the port mentioned at job start (in my case, 9195) and the destination to the node and the port, separated by a colon (e.g. z3003.hyak.local:9195). Leave the destination options for `Local` and `Auto` set.
 
 OpenSSH Client (Linux/Mac/ConEmu)
 ---------------------------------
