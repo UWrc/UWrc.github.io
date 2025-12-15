@@ -91,6 +91,13 @@ export const LearnTutorialCards = [
             isfeatured: false,
           },
 
+          { image: '/img/learn/docker_ws_icon.jpg',
+            header: 'Tutorial: Docker Containers', 
+            caption: 'Dive into containerization with Docker for research computing.',
+            link: 'https://github.com/UWrc/docker-tutorial',
+            isfeatured: false,
+          },
+
           { image: '/img/learn/ood.jpg',
             header: 'Tutorial: Open OnDemand', 
             caption: 'Use your favorite graphical software on our supercomputers.',
