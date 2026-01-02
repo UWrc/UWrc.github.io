@@ -6,14 +6,18 @@ import StatContainer from "./components/Stats/StatContainer";
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 export default function Systems() {
   // Redirects /storage page to the Knowledge Base article
-  window.location.href = '/docs/klone/architecture';
+  // window.location.href = '/docs/klone/architecture';
   return (
       <Layout title="Systems">
           <div class="container">
             Redirecting       
+            <BrowserOnly>
+                  {window.location.href = '/docs/klone/architecture'}
+            </BrowserOnly>
           </div>
       </Layout>
   );
