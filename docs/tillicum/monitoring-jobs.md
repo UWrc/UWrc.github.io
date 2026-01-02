@@ -27,10 +27,11 @@ hyakusage
 
 **Key features:**
 - Displays usage for all accounts you have access to.
-- Shows total GPU-hours and costs per account at the top of each account.
+- Shows total GPU-hours and costs per account for current billing cycle at the top of each account.
+- Shows active credits (e.g., remaining demo credits) with corresonding expiration dates.
 - Integrates user- and account-level budgets (if set) to show progress toward limits.
 
-**Example output from November 12, 2025:**
+**Example output from January 2, 2026:**
 
 ```js
   * Billing cycle starts on the 26th of each month.
@@ -41,15 +42,18 @@ hyakusage
 
 Usage Report for Account account1:
 Current Billing Cycle TOTAL Usage: 26.23 GPU hours, $23.61
+TOTAL Active Credits: $437.34
+  * $347.34 expiring on 2026-02-25
+  * $90.00 (no expiration)
 ╭───────────────────────────────────────────────────────╮
-│    Usage User Breakdown (2025-10-26 to 2025-11-12)    │
+│    Usage User Breakdown (2025-12-26 to 2026-01-02)    │
 ├────────────────────────┬─────────────────┬────────────┤
 │ USER                   │ GPU HOURS (HRS) │    JOBS    │
 ├────────────────────────┼─────────────────┼────────────┤
 │ user1                  │            3.69 │         16 │
 ╰────────────────────────┴─────────────────┴────────────╯
 ╭───────────────────────────────────────────────────────╮
-│     Usage QOS Breakdown (2025-10-26 to 2025-11-12)    │
+│     Usage QOS Breakdown (2025-12-26 to 2026-01-02)    │
 ├────────────────────────┬─────────────────┬────────────┤
 │ QOS       (MULTIPLIER) │ GPU HOURS (HRS) │ COST (USD) │
 ├────────────────────────┼─────────────────┼────────────┤
@@ -63,7 +67,7 @@ Current Billing Cycle TOTAL Usage: 26.23 GPU hours, $23.61
 ├──────────────┬─────────────────────┬────────┬─────────┬─────────┤
 │ USER         │  USED/BUDGET (USD)  │ USED % │   TYPE  │ ENFORCE │
 ├──────────────┼─────────────────────┼────────┼─────────┼─────────┤
-│ user1        │       5.92 / 500.00 │     1% │   total │    true │
+│ user1        │       3.69 / 500.00 │     1% │   total │    true │
 ├──────────────┼─────────────────────┼────────┼─────────┼─────────┤
 │ account1     │     23.61 / 1000.00 │     2% │ monthly │   false │
 ╰──────────────┴─────────────────────┴────────┴─────────┴─────────╯
