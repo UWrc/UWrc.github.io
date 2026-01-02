@@ -40,7 +40,7 @@ the simplest way, most of the time, is to use a container. Here, we're going to 
 
 As you go through the tutorial look for tips like this one. In these boxes, we will include bits of information you might be able to use to customize this tutorial when you feel comfortable. 
 
-On that note, your first PRO TIP: Untangling tech jargon is tough, and there's no shortage of essays explaining containers and "container-ization" ([<ins>**See Additional Resources**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#additional-resources)). We encourage you to educate yourself about containers and other relevant topics as additional learning to accompany this tutorial. 
+On that note, your first PRO TIP: Untangling tech jargon is tough, and there's no shortage of essays explaining containers and "containerization" ([<ins>**See Additional Resources**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#additional-resources)). We encourage you to educate yourself about containers and other relevant topics as additional learning to accompany this tutorial. 
 
 :::
 

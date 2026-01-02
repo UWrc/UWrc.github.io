@@ -20,7 +20,7 @@ Each node on the cluster has a local SSD drive with 350+ GB of space available f
 
 If input data, Apptainer (Singularity) images, or other files used by your job will fit, copying those files to the SSD (via `cp`, `rsync`, etc.) once at the beginning of your job and reading them from there during the remainder of the job run results in less load on the central storage, helps insulate your job from any instances of central storage slowness, and can often result in better overall job performance. 
 
-Slurm has a command called `sbcast` [<ins>**www**</ins>](https://slurm.schedmd.com/sbcast.html) that is useful for efficiently copying files to all nodes used in a multi-node job as part of an `sbatch` script.
+Slurm has a command called [<ins>**`sbcast`**</ins>](https://slurm.schedmd.com/sbcast.html) that is useful for efficiently copying files to all nodes used in a multi-node job as part of an `sbatch` script.
 
 For files being written that need to be kept after the job run, it is generally best to write these directly to the central storage. Because new files are written directly to the very fast NVMe layer, such writes are less likely to impact overall storage performance. That said, it is still beneficial to write intermediate job files to the local SSD whenever possible. 
 

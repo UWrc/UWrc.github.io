@@ -151,8 +151,7 @@ $ module spider cuda/13.0.0
       NVIDIA CUDA Toolkit for GPU-accelerated computing.
 
 
-    You will need to load all module(s) on any one of the lines below before the "cuda/13.0.0" modul
-e is available to load.
+    You will need to load all module(s) on any one of the lines below before the "cuda/13.0.0" module is available to load.
 
       gcc/13.4.0
  
