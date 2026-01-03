@@ -15,7 +15,7 @@ export default function Storage() {
           <div class="container">
             Redirecting
             <BrowserOnly>
-                  {window.location.href = 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580'}
+                  {() => window.location.href = 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580'}
             </BrowserOnly>       
           </div>
       </Layout>

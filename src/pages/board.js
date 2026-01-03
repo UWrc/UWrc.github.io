@@ -13,7 +13,7 @@ export default function Board() {
           <div class="container">
             Redirecting       
             <BrowserOnly>
-                  {window.location.href = 'https://it.uw.edu/governance/governance-groups/research-cyberinfrastructure-domain/'}
+                  {() => window.location.href = 'https://it.uw.edu/governance/governance-groups/research-cyberinfrastructure-domain/'}
             </BrowserOnly> 
           </div>
       </Layout>

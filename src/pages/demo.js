@@ -15,7 +15,7 @@ export default function Demo() {
           <div class="container">
             Redirecting       
             <BrowserOnly>
-                  {window.location.href = 'https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=f5caba8fdbe108101ba12968489619e0'}
+                  {() => window.location.href = 'https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=f5caba8fdbe108101ba12968489619e0'}
             </BrowserOnly> 
           </div>
       </Layout>
