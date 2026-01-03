@@ -15,7 +15,7 @@ export default function Pricing() {
   <div class="container">
       Redirecting       
     <BrowserOnly>
-        {window.location.href = 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560'}
+        {() => window.location.href = 'https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560'}
     </BrowserOnly>
   </div>
 </Layout>

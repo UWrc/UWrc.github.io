@@ -16,7 +16,7 @@ export default function Systems() {
           <div class="container">
             Redirecting       
             <BrowserOnly>
-                  {window.location.href = '/docs/klone/architecture'}
+                  {() => window.location.href = '/docs/klone/architecture'}
             </BrowserOnly>
           </div>
       </Layout>

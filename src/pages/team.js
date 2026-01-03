@@ -10,7 +10,7 @@ export default function Team() {
           <div class="container">
             Redirecting     
             <BrowserOnly>
-                  {window.location.href = 'https://it.uw.edu/uw-it/divisions/research-computing/'}
+                  {() => window.location.href = 'https://it.uw.edu/uw-it/divisions/research-computing/'}
             </BrowserOnly>   
           </div>
       </Layout>
