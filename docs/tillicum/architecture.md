@@ -4,7 +4,7 @@ sidebar_label: System Architecture
 title: Tillicum System Architecture
 ---
 
-**Tillicum** is the University of Washington’s next-generation AI-accelerated research computing platform, purpose-built for the most demanding scientific workflows in machine learning, data science, and simulation. Designed around cutting-edge NVIDIA H200 GPUs with ultra-fast NVLink 4.0 interconnect and a 400 Gbps InfiniBand network, Tillicum enables researchers to move beyond the limits of traditional HPC with transformative performance and efficiency. 
+**Tillicum** is the University of Washington’s next-generation, GPU-accelerated computing platform designed to support cutting-edge research, teaching, and learning in AI, machine learning, data science, and scientific simulation. Designed around cutting-edge NVIDIA H200 GPUs with ultra-fast NVLink 4.0 interconnect and a 400 Gbps InfiniBand network, Tillicum enables researchers to move beyond the limits of traditional HPC with transformative performance and efficiency. 
 
 ## Key Features
 
