@@ -18,7 +18,7 @@ In addition to routine image updates and security patches, we upgraded:
 * Duo 2FA on Klone (Tillicum already up to date). This change aligns with ongoing UW security upgrades.  
 
 :::caution Action Required
-All University of Washington technology users must update Duo Mobile to version 4.85.0 or later on all registered devices by February 2, 2026. Users who cannot update their devices must register [<ins>**a platform authenticator**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033886),  [<ins>**a new phone/tablet**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033872), or [<ins>**request a hardware token from UWIT**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033879). 
+All University of Washington technology users must update Duo Mobile to version 4.85.0 or later on all registered devices by February 2, 2026. Users who cannot update their devices must register [<ins>**a platform authenticator**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033886),  [<ins>**a new phone/tablet**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033872), or [<ins>**request a hardware token from UWIT**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033879). The Duo phone call authentication method is being phased out by the University and no longer available for logging into Klone or Tillicum. 
 
 [<ins>**Check your device’s Duo Mobile application version**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0033889). 
 :::
