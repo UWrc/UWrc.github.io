@@ -132,7 +132,7 @@ Column descriptions:
 - FREE_MEM: free memory on the node in MB
 - GRES_USED: GPUs currently allocated by Slurm
 - Example: gpu:h200:3(IDX:0-1,3)
-  - This node has NVIDIA H200 GPUs, and 3 GPUs with indices 0,1,3 are currently allocated.
+  - This node has 8 NVIDIA H200 GPUs, and 3 GPUs with indices 0,1,3 are currently allocated.
 
 ---
 
