@@ -116,12 +116,23 @@ squeue -u $USER
 
 If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a maintenance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [<ins>**Guide to job reasons.**</ins>](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
 
-`sinfo` can also be helpful for determining how many nodes are available. The following command provides a useful summary.
+`sinfo` can also be helpful for checking node availability and GPU usage across the cluster. The following command provides a useful summary of node state, CPU usage, memory, and GPUs currently allocated by Slurm:
 
 ```js
-sinfo -r
+$ sinfo -O nodehost,statecompact,cpusstate,freemem,gresused -S nodehost
+HOSTNAMES   STATE       CPUS(A/I/O/T)  FREE_MEM    GRES_USED           
+g001        mix         24/40/0/64     1943019     gpu:h200:3(IDX:0-1,3)  
+g002        idle        0/64/0/64      2005920     gpu:h200:0(IDX:N/A) 
+g003        alloc       64/0/0/64      1690496     gpu:h200:8(IDX:0-7) 
+...
 ```
-
+Column descriptions:
+- STATE: mix for partially allocated node
+- CPUS(A/I/O/T): Number of CPUs in the format Allocated / Idle / Other / Total
+- FREE_MEM: free memory on the node in MB
+- GRES_USED: GPUs currently allocated by Slurm
+- Example: gpu:h200:3(IDX:0-1,3)
+  - This node has 8 NVIDIA H200 GPUs, and 3 GPUs with indices 0,1,3 are currently allocated (i.e., in use).
 
 ---
 
