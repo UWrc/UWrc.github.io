@@ -275,7 +275,9 @@ conda env list
 To install additional packages in `myenv` environment, use `conda install`. Conda has several default channels that will be used first for package installation. If you want to use another channel beyond the defaults channel, you can, but we suggest that you select your channel carefully.
 
 :::warning
-By default, the system Conda stores environments in your home directory ($HOME/.conda/envs). We recommend installing Conda environments to your **project directory** under `/gpfs/<myproject>/<myfolder>` (see instructions below) due to the limited storage space (10 GB) in your home directory.
+By default, the system Conda stores environments in your home directory ($HOME/.conda/envs). We recommend installing Conda environments to your **project directory** under `/gpfs/<myproject>/<myfolder>` (see instructions below) due to the limited storage space (10 GB) in your home directory. 
+
+`scrubbed` is also **not recommended** for storing Conda environments. Many files inside a Conda environment retain the original access times from when they were added to the Conda package cache or source, not when you created or installed the environment. Therefore, these files may appear inactive and can be removed by the scrubbed storage erasure policies, leading to corrupted Conda environments.
 :::
 
 Remove an environment:
