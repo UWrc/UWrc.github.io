@@ -3,13 +3,13 @@ id: ollama_setup
 title: Using Ollama on Hyak
 ---
 
-Conventional LLM tools require root access for installation on Hyak. To maintain system security and stability, users do not have root or sudo access. Administrative privileges, including external program installations, are reserved for system administrators. To work around this, LLMs can be used via software [<ins>**containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container).
-
 ## What Are Ollama LLMs?
 
 Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is recommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with [<ins>**Apptainer**</ins>](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity) and [<ins>**requesting GPU jobs**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition). 
 
 ## Installing Ollama as a Container
+
+Conventional LLM tools require root access for installation on Hyak. To maintain system security and stability, users do not have root or sudo access. Administrative privileges, including external program installations, are reserved for system administrators. To work around this, LLMs can be used via software [<ins>**containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container).
 
 You can install Ollama in a container definition file. This example will use the [<ins>**NVIDIA HPC SDK**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc) container. The NVIDIA HPC SDK container has Nvidia and Cuda drivers. Create the definition file with `vim` or `nano`:
 ```js
@@ -41,7 +41,7 @@ apptainer build ollama.sif ollama.def
 ```
 This container may take some time to build. To save time, you can copy a prebuilt `ollama.sif` file in your current directory using the following command:
 ```js
-cp /mmfs1/sw/ollama/ollama.sif .
+cp /mmfs1/sw/containers/ollama/ollama.sif .
 ```
 
 :::note Requesting Resources for Larger LLMs
@@ -64,7 +64,29 @@ ollama run llama3.2
 
 ```
 
-:::tip Managing Your Ollama Storage
+## Installing Ollama with Miniforge3
+
+You can install Ollama and its Python client using the `conda/Miniforge3-25.9.1-0` module available on Hyak. This module provides a clean and isolated Conda base, ideal for building custom environments on Hyak.
+
+First, load the Conda module:
+```js
+module load conda
+```
+This makes the `conda` command available in your shell. If this is your first time using Conda module on Hyak, you'll need to set up custom environment and package locations to avoid writing to your home directory. See the setup instructions [<ins>**here**</ins>](https://hyak.uw.edu/blog/2025-december-maintenance#conda-environments).
+
+You can now create and manage your own environment for Ollama:
+```js
+conda create -n ollama python=3.12
+conda activate ollama
+```
+Next, install Ollama CLI and the Python library for Ollama:
+```js
+conda install -c conda-forge ollama ollama-python
+```
+Ollama and its Python client are now ready to use in your Conda environment.
+
+## Managing Your Ollama Storage
+
 By default, pulled Ollama models will save in your [<ins>**home directory**</ins>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) in a hidden file named `.ollama`. Because your home directory has a 10GB limit, you may get a disk quota error when pulling larger models. Use the following commands to check the storage in your home directory and to list all hidden files:
 ```js
 cd ~ # changing to your home directory
@@ -97,5 +119,4 @@ ln -s /gscratch/lab-name/my-directory/ollama/models models
 ls -s
 ```
 You should see `models` highlighted in light blue with an arrow pointing to the path to the new `models` directory you created. New ollama models will save here instead of `.ollama/models` so your home directory stays under the 10GB limit. 
-:::
 
