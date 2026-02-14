@@ -113,10 +113,6 @@ module.exports = {
       {
         'Linux Basics': [
           'hyak101/basics/syllabus',
-          'hyak101/basics/login',
-          'hyak101/basics/system',
-          'hyak101/basics/linux',
-          'hyak101/basics/linux-2',
         ]
       },
       {

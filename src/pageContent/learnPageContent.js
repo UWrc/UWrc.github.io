@@ -36,10 +36,10 @@ export const LearnHowToCards = [
         ];
 
 export const LearnTutorialCards = [
-          { image: '/img/learn/linux101.jpg',
-            header: 'Tutorial: Linux Basics', 
+          { image: '/img/learn/linux_fundamentals.jpg',
+            header: 'Tutorial: Linux Fundamentals', 
             caption: 'Become familiar with the Linux command-line interface and Hyak\'s file system.',
-            link: '/docs/hyak101/basics/syllabus',
+            link: 'https://github.com/UWrc/linux-fundamentals',
             isfeatured: true,
             featuredSortIndex: 20,
           },
@@ -84,6 +84,12 @@ export const LearnTutorialCards = [
             isfeatured: false,
           },
 
+          { image: '/img/learn/r_rstudio_ws.jpg',
+            header: 'Tutorial: R & Rstudio on Hyak Klone', 
+            caption: 'Studio via Open OnDemand and custom R containers.',
+            link: 'https://github.com/UWrc/r_rstudio_tutorial',
+          },
+          
           { image: '/img/learn/containers.jpg',
             header: 'Tutorial: Containers', 
             caption: 'Discover containers and containerization of software for usage on Hyak.',
@@ -146,12 +152,6 @@ export const LearnTutorialCards = [
             link: 'https://youtu.be/yBgZAU_qyRg',
             isvideo: true,
           },
-          { image: '/img/learn/r_rstudio.jpg',
-            header: 'Tutorial: R & Rstudio', 
-            caption: 'Custom R containers and SSH Port Forwarding to connect Rstudio.',
-            link: 'https://youtu.be/rcorOJV93tY',
-            isvideo: true,
-          },
         ];
         
 export const LearnServicesCards = [
@@ -170,6 +170,13 @@ export const LearnServicesCards = [
         ];
 
 export const LearnSpotlightCards = [
+          { image: '/img/learn/spotlights/icu.png',
+            header: 'UW Institute for Medical Data Science', 
+            caption: 'Using machine learning to optimize prediction of extubation failure and clinical action',
+            link: 'https://www.youtube.com/watch?v=AcHr_G0LiBg',
+            isvideo: true,
+          },
+
           { image: '/img/learn/spotlights/denolle.jpg',
             header: 'Denolle Quake Lab', 
             caption: 'A Global Database of Seismic Phases with Cloud Computing',
