@@ -7,6 +7,7 @@ import { mapImgItemsToHTMLImgs } from "utils"
 
 ContentCard.propTypes = {
   header: PropTypes.element.isRequired,
+  alt: PropTypes.element.isRequired,
   image: PropTypes.element.isRequired,
   caption: PropTypes.element.isRequired,
   link: PropTypes.element.isRequired,
@@ -19,7 +20,7 @@ export default function ContentCard(props) {
       <a href={props.link}>
       <div className={styles.imageContainer}>
         {props.isvideo ? <span className={styles.playButton}>▶</span> : []}
-        <img className={styles.contentCardImage} src={props.image} />
+        <img className={styles.contentCardImage} src={props.image} alt={props.alt}/>
       </div>
       <div className={styles.contentCardTextContainer}>
         <h3>{props.header}</h3>
