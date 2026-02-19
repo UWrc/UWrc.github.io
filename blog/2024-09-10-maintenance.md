@@ -40,7 +40,7 @@ In-person office hours will be held on Thursdays at 2pm at the eScience Institut
 
 [<ins>**Click here to visit the eScience Office Hours page to see additional eScience office hours including AI/ML, R, Earth Data, and Python**</ins>](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule) (not available to help with Homework).
  
-If you would like to request 1 on 1 help, please send a ticket to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting with Kristen.
+If you would like to request 1 on 1 help, please send a ticket to [<ins>**help@uw.edu**</ins>](help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting with Kristen.
 
 ### August 2024 Training Videos 
 

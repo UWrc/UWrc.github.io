@@ -48,4 +48,4 @@ We encourage applicants that:
 
 Our next scheduled maintenance will be **Tuesday July, 9, 2024**. 
 
-Questions? If you have any questions for us, please reach out to the team by emailing help@uw.edu with Hyak in the subject line. ***Student intern applications sent to help@uw.edu will not be considered. Email applications to finchkn at uw.edu***
+Questions? If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](help@uw.edu) with Hyak in the subject line. ***Student intern applications sent to [<ins>**help@uw.edu**</ins>](help@uw.edu) will not be considered. Email applications to finchkn at uw.edu***

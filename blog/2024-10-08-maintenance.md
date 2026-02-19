@@ -69,7 +69,7 @@ The Research Computing Club will be holding office hours fall term. **In-person 
 
 If you would like to request 1 on 1 help, please send a ticket to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting with Kristen.
 
-Please don't hesitate to reach out to the Hyak team with issues and feedback by opening a tickey by emailing **help@uw.edu** with "Hyak" in the subject. 
+Please don't hesitate to reach out to the Hyak team with issues and feedback by opening a tickey by emailing [<ins>**help@uw.edu**</ins>](help@uw.edu) with "Hyak" in the subject. 
 
 Have a great October! 
 

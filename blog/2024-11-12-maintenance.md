@@ -35,4 +35,4 @@ The Research Computing Club will be holding office hours fall term. **In-person 
 | Sam Shin      | 19 Nov | 2pm |
 | Teerth Mehta      | 3 Dec | 2pm |
 
-If you would like to request 1 on 1 help, please send a ticket to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send a ticket to [<ins>**help@uw.edu**</ins>](help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.

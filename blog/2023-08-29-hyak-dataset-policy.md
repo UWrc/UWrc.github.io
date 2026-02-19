@@ -32,4 +32,4 @@ In order for a dataset to be approved, the following criteria must be met:
 
 ### Questions?
 
-Hopefully this clears up our expectations going forward. If you have any questions for us, please reach out to the team by emailing <ins>**help@uw.edu**</ins> with Hyak somewhere in the subject or body. Thanks!
+Hopefully this clears up our expectations going forward. If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](help@uw.edu) with Hyak somewhere in the subject or body. Thanks!

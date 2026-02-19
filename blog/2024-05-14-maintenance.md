@@ -22,4 +22,4 @@ Thanks again for your patience with our monthly scheduled maintenance, there are
 
 Our next scheduled maintenance will be **Tuesday June, 11, 2024**. Stay informed by joining our mailing list. [<ins>**Sign up here.**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users)  
 
-**Questions?** If you have any questions for us, please reach out to the team by emailing **help@uw.edu** with Hyak in the subject line.
+**Questions?** If you have any questions for us, please reach out to the team by emailing [<ins>**help@uw.edu**</ins>](help@uw.edu) with Hyak in the subject line.

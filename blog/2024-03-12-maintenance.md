@@ -40,4 +40,4 @@ We wanted to make you aware of two training opportunities with the San Diego Sup
 
 ### Questions?
 
-If you have any questions for us, please reach out to the team by emailing `help@uw.edu` with Hyak in the subject line. 
+If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](help@uw.edu) with Hyak in the subject line. 

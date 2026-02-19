@@ -20,4 +20,4 @@ Our next scheduled maintenance will be Tuesday May 14, 2024.
 Follow NSF ACCESS Training and Events posting [<ins>**HERE**</ins>](https://support.access-ci.org/news/events-trainings) to find online webinars about containers, parallel computing, using GPUs, and more from HPC providers around the USA. 
 
 Questions?
-If you have any questions for us, please reach out to the team by emailing help@uw.edu with Hyak in the subject line. 
+If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](help@uw.edu) with Hyak in the subject line. 
