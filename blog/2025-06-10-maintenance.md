@@ -53,7 +53,7 @@ Whether you're just getting started or looking to expand your use of campus stor
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
 * See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
-If you would like to request 1 on 1 help, please send an email to <ins>**help@uw.edu**</ins> with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Opportunities
 
@@ -77,7 +77,7 @@ Learn methods for scraping and extracting text from web sources.
 * **OLCF Julia for Science**: June 19, 10 am – 1 pm PDT; also June 26, 10 am – 1 pm PDT - The Oak Ridge Leadership Computing Facility (OLCF), in conjunction with the Oak Ridge National Laboratory Computer Science and Mathematics Division (CSMD), will host Julia for Science, a 3-hour tutorial focused on introductory aspects of the Julia programming language, and ecosystem for computation and data analysis. This training provides a hands-on way to learn more about using Julia and parallel code in scientific computing. [<ins>**Register here**</ins>](https://www.nersc.gov/news-and-events/calendar-of-events/olcf-julia-for-science-2025).
 * **Crash Course in Supercomputing**: June 23, 9 am – 4 pm PDT - In this course, students will learn to write parallel programs that can be run on a supercomputer. We begin by discussing the concepts of parallelization before introducing MPI and OpenMP, the two leading parallel programming libraries. Finally, the students will put together all the concepts from the class by programming, compiling, and running a parallel code on one of the NERSC supercomputers. Training accounts will be provided for students who have not yet set up a NERSC account. This hybrid training, as part of the 2025 Berkeley Lab Computational Sciences Summer Student Program, is also open to NERSC, ALCF, LANL, OLCF, and TACC users. This training is geared towards novice parallel programmers. [<ins>**Register here**</ins>](https://www.nersc.gov/news-and-events/calendar-of-events/hpc-crash-course-jun2025).
 
-If you have any questions about using Hyak, please start a help request by emailing <ins>**help@uw.edu**</ins> with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
 
 Happy Computing, 
 

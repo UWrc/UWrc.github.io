@@ -38,7 +38,7 @@ Our February maintenance is complete, and Klone is back in operation. The next m
     * 3-Mar: 3:00 PM – 4:00 PM 
     * 14-Mar: 12:00 PM – 1:00 PM 
  
-If you would like to request 1 on 1 help, please send an email to [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Opportunities
 
@@ -56,7 +56,7 @@ If you would like to request 1 on 1 help, please send an email to [<ins>help@uw.
 
 * **Text Mining Student Assistant** - This student position, jointly supported by the Open Scholarship Commons and eScience, will provide technical expertise on text mining and natural language processing (NLP) to UW researchers at all levels. [<ins>**Apply NOW**</ins>](https://lib.uw.edu/about/employment/students/text-mining/)  
 
-If you have any questions about using Hyak, please start a help request by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
 
 Happy Computing, 
 

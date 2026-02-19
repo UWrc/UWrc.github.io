@@ -31,7 +31,7 @@ During May's maintenance, we've refreshed the operating system images for both l
     * [<ins>**26 May, 8-9am**</ins>](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182345182)
     * [<ins>**2 Jun, 8-9am**</ins>](https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Club-Office-Hour-In-person/E182345183)
 
-If you would like to request 1 on 1 help, please send an email to <ins>**help@uw.edu**</ins> with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Training Resources  
 
@@ -64,7 +64,7 @@ If you would like to request 1 on 1 help, please send an email to <ins>**help@uw
 * **COMPLECS: Code Migration** - Thursday, June 12, 2025 - 11:00 a.m. – 12:30 p.m. (Pacific Time) We will cover typical approaches to moving your computations to HPC resources: using applications/software packages already available on the system through Linux environment modules; compiling code from source with information on compilers, libraries, and optimization flags to use; setting up Python and R environments; using conda-based environments; managing workflows; and using containerized solutions via Singularity. [<ins>**Register here!**</ins>](https://na.eventscloud.com/ereg/newreg.php?eventid=834402&)
 * **Automating Research with Globus: The Modern Research IT Platform** - Aug. 18, 2025, 9 a.m. – 12 p.m. (Pacific Time) This workshop introduces Globus Flows and its role in automating research workflows. Participants will explore data portals, science gateways, and commons, enabling seamless data discovery and access. [<ins>**Enroll here**</ins>](https://internet2.edu/cloud/cloud-learning-and-skills-sessions/automating-research-with-globus-the-modern-research-it-platform/?utm_source=CLASS+Spring+2025+Training+Campaign+-+May+2025&utm_medium=email&utm_campaign=class).
 
-If you have any questions about using Hyak, please start a help request by emailing help@uw.edu with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
 
 Happy Computing, 
 

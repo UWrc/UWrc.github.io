@@ -80,7 +80,7 @@ Lolo performs best with large files. Storing large numbers of small files is ine
 **Large Files:**
 Though we encourage you to bundle data sets into large archives, very large (10TB+) file sizes may cause issues. If you have a very large data set, please split the archive into smaller files. 
 
-If a large number of small files are uploaded by mistake, or if you need help splitting large files, please contact help@uw.edu for assistance.
+If a large number of small files are uploaded by mistake, or if you need help splitting large files, please contact [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) for assistance.
 
 :::
 

@@ -90,7 +90,7 @@ If you would like to request 1 on 1 help, please send an email to [<ins>**help@u
 
 * Job opening for a High Performance Computing (HPC) **Research Computing Associate** at Colby College in Maine. [<ins>**Learn more**</ins>](https://colby.wd5.myworkdayjobs.com/en-US/ColbyCareers/job/High-Performance-Computing--HPC--Research-Computing-Associate_R0005361).
 
-If you have any questions about using Hyak, please start a help request by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
 
 Happy Computing, 
 

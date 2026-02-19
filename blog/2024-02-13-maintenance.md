@@ -26,4 +26,4 @@ Hello Hyak community! We have a few notable announcements regarding this monthâ€
 
 ### Questions?
 
-Hopefully you found these extra details informative. If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with Hyak somewhere in the subject or body. Thanks!
+Hopefully you found these extra details informative. If you have any questions for us, please reach out to the team by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak somewhere in the subject or body. Thanks!

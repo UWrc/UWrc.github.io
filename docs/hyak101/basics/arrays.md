@@ -94,4 +94,4 @@ Utilizing Slurm environment variables like `SLURM_ARRAY_TASK_ID` and Bash can he
 
 In the Advanced Slurm tutorial, we explore the usage of `SLURM_ARRAY_TASK_ID` to execute the same command on a file set, and we use Bash scripting to perform a parameter sweep.
 
-We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email **\<help@uw.edu\>** with "Hyak Slurm Tutorial" in the subject line, and let us know what you think. Thank you!
+We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Slurm Tutorial" in the subject line, and let us know what you think. Thank you!

@@ -12,7 +12,7 @@ This Tutorial has distinct instructions for Windows and Mac users. Please go dir
 :::note
 
 Parts of this guide will be challenging for novices. There is a small amount of Bash programming involved, and while most can be copy & pasted, you may run into difficulties
-when you need to make modifications. You got this, and we are here to **help@uw.edu**. 
+when you need to make modifications. You got this, and we are here to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu). 
 
 :::
 

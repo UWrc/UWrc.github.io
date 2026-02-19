@@ -26,7 +26,7 @@ KOPAH is a storage solution for anyone. Just like other storage options out ther
 
 #### Test Users Wanted
 
-Prior to September, we are inviting test users to try KOPAH and provide feedback about their experience. If you are interested in becoming a KOPAH test user, please email [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with Hyak or KOPAH in the subject line. 
+Prior to September, we are inviting test users to try KOPAH and provide feedback about their experience. If you are interested in becoming a KOPAH test user, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak or KOPAH in the subject line. 
 
 Requirements: 
 1. While we will not charge for the service until September 1, to sign up as a test user, we require a budget number and worktag. If the service doesn't work for you, you can cancel before September. 

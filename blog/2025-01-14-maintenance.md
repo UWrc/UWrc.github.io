@@ -42,7 +42,7 @@ April 2-3, 2025, for **AI Unlocked: Empowering Higher Education through Research
 
 [<ins>**Applications due January 24, 2025.**</ins>](https://www.uaf.edu/acep/education-workforce-development/summer-internship-program/internship-program.php)  
 
-If you have any questions about using Hyak, please start a help request by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
 
 Happy Computing, 
 

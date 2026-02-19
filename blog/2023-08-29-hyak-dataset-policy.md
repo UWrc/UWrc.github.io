@@ -24,7 +24,7 @@ In order for a dataset to be approved, the following criteria must be met:
 
 2. The requester must name a minimum of 3 separate groups/labs & 3 specific users who will be using the data.
 
-3. The requester emails [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with:
+3. The requester emails help@uw.edu with:
     - A link to the documentation PR.
     - The following people CC'd: the lab/group owners & all initial users. This will be *at least* 6 people.
 
@@ -32,4 +32,4 @@ In order for a dataset to be approved, the following criteria must be met:
 
 ### Questions?
 
-Hopefully this clears up our expectations going forward. If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with Hyak somewhere in the subject or body. Thanks!
+Hopefully this clears up our expectations going forward. If you have any questions for us, please reach out to the team by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak somewhere in the subject or body. Thanks!

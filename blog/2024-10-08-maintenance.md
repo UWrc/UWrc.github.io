@@ -28,7 +28,7 @@ DMTCP offers a solution for folks who would like to use Hyak's `ckpt` partitions
 
 [<ins>**Tools for Kopah Storage Users**</ins>](https://hyak.uw.edu/docs/storage/kopah) - We have installed [<ins>**Command Line Interface tools**</ins>](https://hyak.uw.edu/docs/storage/cli) like `s3cmd` and `s5cmd` on `klone` and provide instructions for using [<ins>**Python library `boto3` for Kopah interaction and retrieval**</ins>](https://hyak.uw.edu/docs/storage/boto3) to build Kopah S3 storage usage into your research computing applications on Hyak. 
 
-If you have any issue using these tools, please open a ticket by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. We appreciate any feedback about how to improve ease of use for tools presented in our documentation.
+If you have any issue using these tools, please open a ticket by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. We appreciate any feedback about how to improve ease of use for tools presented in our documentation.
 
 ### Upcoming Training
 

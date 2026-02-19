@@ -46,7 +46,7 @@ If you plan on using multiple R versions you will want to set `R_LIBS` appropria
 ## Containers from Rocker
 
 The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R and many include various package collections. [<ins>**The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R**</ins>](https://hub.docker.com/u/rocker)
-(<ins>https://hub.docker.com/u/rocker</ins>). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
+(<ins>**https://hub.docker.com/u/rocker**</ins>). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
 
 ### R-base Container
 

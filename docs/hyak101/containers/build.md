@@ -379,7 +379,7 @@ Finally, we prepared a script to demonstrate TensorFlow with this container. You
 apptainer exec --bind /gscratch/ tensorflow_py3.sif python tf_tutorial.py
 ```
 
-You have now built Apptainer containers in three different ways: interactively, from a definition file, and from a local image. We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email **help@uw.edu** with "Hyak Containers Tutorial" in the subject line, and let us know what you think. Thank you!
+You have now built Apptainer containers in three different ways: interactively, from a definition file, and from a local image. We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Containers Tutorial" in the subject line, and let us know what you think. Thank you!
 
 :::important Acknowledgements
 `tf_tutorial.py` is the "TensorFlow 2 quickstart for beginners" from https://www.tensorflow.org/tutorials/quickstart/beginner made into a script with minimal adaptions.
