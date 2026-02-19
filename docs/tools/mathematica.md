@@ -37,6 +37,6 @@ Mathematica is now available for interactive use.
 
 * For Mathematica usage support, use the Wolfram [<ins>**contact form**</ins>](https://www.wolfram.com/support/contact/?source=footer) or refer to the [<ins>**FAQ page**</ins>](https://support.wolfram.com/topic/mathematica).
 
-* If you are having trouble setting up Mathematica on Hyak, please contact [<ins>help@uw.edu</ins>](help@uw.edu) with "Hyak Mathematica" in the subject line.
+* If you are having trouble setting up Mathematica on Hyak, please contact help@uw.edu with "Hyak Mathematica" in the subject line.
 
 :::

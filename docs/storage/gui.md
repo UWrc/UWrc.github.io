@@ -14,7 +14,7 @@ Globus public sharing is available with [<ins>**Kopah S3 storage**</ins>](https:
 :::warning important: Globus Mapping Required
 To use Globus with Kopah S3 storage, ***at least one username must be mapped to the storage account***. This mapping connects your Globus identity to the storage system and must be set up by our staff. Contact us to get started—it's a quick, one-time step.
 
-**Request Globus mapping by emailing help@uw.edu with "Kopah + Globus" in the subject line.**
+**Request Globus mapping by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Kopah + Globus" in the subject line.**
 
 Kopah storage accounts can be requested using our [<ins>**Intake Form and Cost Calculator**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=cb93ee61973e92500a7637b6f053afe6). Kopah 1-month trial accounts are available - [<ins>**Try Kopah**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=38ce77fa875fd610e385333e3fbb358f).
 :::
