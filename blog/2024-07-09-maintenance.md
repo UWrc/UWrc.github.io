@@ -12,5 +12,5 @@ Thanks again for your patience with our monthly scheduled maintenance. During th
 
 The next maintenance will be **Tuesday August 13, 2024**. 
 
-Questions? If you have any questions for us, please reach out to the team by emailing [<ins>help@uw.edu</ins>](help@uw.edu) with Hyak in the subject line.
+Questions? If you have any questions for us, please reach out to the team by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the subject line.
 

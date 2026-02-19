@@ -212,7 +212,7 @@ The directory designated by `R_LIBS` will be where R installs your package libra
 
 ### I'm still stuck
 
-Please reach out to us by emailing [<ins>help@uw.edu</ins>](help@uw.edu) with "hyak" in the subject line to open a help ticket. 
+Please reach out to us by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) with "hyak" in the subject line to open a help ticket. 
 
 :::important Acknowledgements
 

@@ -18,4 +18,4 @@ We wanted to make you aware of two training opportunities with the San Diego Sup
 
 Keep an eye on our blog for more opportunities and Hyak updates. 
 
-If you have any questions, please reach out to the team by emailing [<ins>help@uw.edu</ins>](help@uw.edu) and we sure to mention Hyak in the subject line. Thanks!
+If you have any questions, please reach out to the team by emailing [<ins>help@uw.edu</ins>](mailto:help@uw.edu) and we sure to mention Hyak in the subject line. Thanks!
