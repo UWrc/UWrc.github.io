@@ -35,7 +35,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
 * See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
-If you would like to request 1 on 1 help, please send an email to <ins>**help@uw.edu**</ins> with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### UW Community Opportunities
 * The Data Science and AI Accelerator pairs eScience Institute data scientists with researchers from any field of study to work on focused, collaborative projects. Collaborations may center on analysis of an existing dataset to answer a specific research question, an implementation of software for processing or analyzing data, data visualization tools, or tools for data interpretation. Accelerator Projects may be submitted at any time. Projects for Fall 2025 must be received by **August 14th, 2025**. [<ins>**LEARN MORE HERE.**</ins>](https://escience.washington.edu/using-data-science/data-science-and-ai-accelerator/)

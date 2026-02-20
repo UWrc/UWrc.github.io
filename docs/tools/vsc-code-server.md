@@ -155,7 +155,7 @@ And end the batch job with `scancel` and the JobID on `klone` like the following
 scancel -f 12345678
 ```
 
-If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message. 
+If you have trouble with this method, please report errors in an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the message. 
 
 ### Background Reading
 

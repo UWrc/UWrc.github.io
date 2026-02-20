@@ -46,7 +46,7 @@ If you plan on using multiple R versions you will want to set `R_LIBS` appropria
 ## Containers from Rocker
 
 The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R and many include various package collections. [<ins>**The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R**</ins>](https://hub.docker.com/u/rocker)
-(<ins>https://hub.docker.com/u/rocker</ins>). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
+(<ins>**https://hub.docker.com/u/rocker**</ins>). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
 
 ### R-base Container
 
@@ -358,7 +358,7 @@ scancel -f 12345678
 
 Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method every time you want to use Rstudio by starting at [<ins>**Step 3: Start the Rstudio Server above.**</ins>](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
 
-If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message.
+If you have trouble with this method, please report errors in an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the message.
 
 ### R via Modules
 

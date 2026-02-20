@@ -26,7 +26,7 @@ KOPAH is a storage solution for anyone. Just like other storage options out ther
 
 #### Test Users Wanted
 
-Prior to September, we are inviting test users to try KOPAH and provide feedback about their experience. If you are interested in becoming a KOPAH test user, please each help@uw.edu with Hyak or KOPAH in the subject line. 
+Prior to September, we are inviting test users to try KOPAH and provide feedback about their experience. If you are interested in becoming a KOPAH test user, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak or KOPAH in the subject line. 
 
 Requirements: 
 1. While we will not charge for the service until September 1, to sign up as a test user, we require a budget number and worktag. If the service doesn't work for you, you can cancel before September. 
@@ -38,4 +38,4 @@ Requirements:
 PhD students should check out this opportunity for funding from NVIDIA: [<ins>**Graduate Research Fellowship Program**</ins>](https://research.nvidia.com/graduate-fellowships?ncid=em-anno-418307&mkt_tok=MTU2LU9GTi03NDIAAAGU66sxhZb7nVknt2ICFMyZpmhp3x-btkJltaLrwMw8SmjKcfYYXy3SoWfDaQgRnSLcpzCf-X_Enesg5ERgNElSwKPLtuRUx5Q-D236iO2nNV_hCkoNsLQ)
 
 
-Questions? If you have any questions for us, please reach out to the team by emailing help@uw.edu with Hyak in the subject line.
+Questions? If you have any questions for us, please reach out to the team by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the subject line.

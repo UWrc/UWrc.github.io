@@ -534,4 +534,4 @@ rsync -a UWNetID@klone.hyak.uw.edu:/gscratch/scrubbed/UWNetID/text.txt .
 
 ### Well done!
 
-You made it through the tutorial! If you have any questions about the content covered here or feedback to pass along about this tutorial, please open a ticket by emailing <ins>**help@uw.edu**</ins> with "Hyak" in the subject line.
+You made it through the tutorial! If you have any questions about the content covered here or feedback to pass along about this tutorial, please open a ticket by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line.

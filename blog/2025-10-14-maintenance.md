@@ -28,7 +28,7 @@ General availability for Tillicum GPU Cluster begins **tomorrow** October 15, 20
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
 * See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
-If you would like to request 1 on 1 help, please send an email to <ins>**help@uw.edu**</ins> with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Upcoming Events
 * Starting Oct 15 12:30-2pm - [<ins>**Pixel Proficiency: Deep Learning for Images**</ins>](https://www.eventbrite.com/e/pixel-proficiency-practical-deep-learning-for-images-tickets-1751247852469?aff=oddtdtcreator)

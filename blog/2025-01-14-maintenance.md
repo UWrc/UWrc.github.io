@@ -24,7 +24,7 @@ Our January maintenance is complete, and Klone is back in operation. The next ma
 * Wednesdays at 2pm on Zoom. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
 * Thursdays at 2pm in person in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). [<ins>**Click here to visit the eScience Office Hours page to see additional eScience office hours including AI/ML, R, Earth Data, and Python (not available to help with Homework)**</ins>](https://escience.washington.edu/using-data-science/office-hours#office-hour-schedule). 
  
-If you would like to request 1 on 1 help, please send an email to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Opportunities
 
@@ -42,7 +42,7 @@ April 2-3, 2025, for **AI Unlocked: Empowering Higher Education through Research
 
 [<ins>**Applications due January 24, 2025.**</ins>](https://www.uaf.edu/acep/education-workforce-development/summer-internship-program/internship-program.php)  
 
-If you have any questions about using Hyak, please start a help request by emailing help@uw.edu with "Hyak" in the subject line. 
+If you have any questions about using Hyak, please start a help request by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line. 
 
 Happy Computing, 
 

@@ -168,7 +168,7 @@ Once you are satisfied with the job settings and configuration of your Jupyter s
 This method provides automation of the setup process but does not offer additional stability or persistence compared to the manual setup described earlier. For the most reliable long-running sessions, consider using Open OnDemand.
 :::
 
-If you have trouble with this method, please report errors in an email to <ins>**help@uw.edu**</ins> with Hyak in the message.
+If you have trouble with this method, please report errors in an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the message.
 
 ## Manual Jupyter Setup with Miniconda
 

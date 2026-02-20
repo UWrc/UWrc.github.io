@@ -20,7 +20,7 @@ I will continue to hold **Zoom office hours** on Wednesdays at 2pm throughout De
 
 December 12 will be the last **in-person office hours** for Fall term to be held at 2pm at the eScience Institute (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195). In-person office hours will resume on Thursdays at 2pm starting January 9, 2025. 
  
-If you would like to request 1 on 1 help, please send an email to **help@uw.edu** with "Hyak Office Hour" in the subject line to coordinate a meeting.
+If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### Research Computing Club Officer Nominations
 The Research Computing Club (RCC) at UW is looking for nominations for Officer positions. The RCC provides essential computational resources to support students working on a wide range of research projects using high-performance computing through UW’s Hyak system and cloud platforms like AWS, Microsoft Azure, and Google Cloud. The RCC relies on student officers to continue providing these resources to the UW community and to organize community-driven events such as Hackathons and trainings.
