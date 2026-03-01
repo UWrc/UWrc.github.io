@@ -17,9 +17,9 @@ Kopah storage accounts can be requested using our [<ins>**Intake Form and Cost C
 ## Access
 You will need access key and secret key to access your Kopah account. When you open an account your keys are placed in your home directory on `klone` in a file called `kopah_groupname`, where the word "groupname" is associated Hyak group.
 
-S3 endpoint for Kopah is <ins>https://s3.kopah.uw.edu</ins>
+S3 endpoint for Kopah is <ins>**https://s3.kopah.uw.edu**</ins>
 
-Bucket endpoint format is <ins>https://s3.kopah.uw.edu/BUCKET</ins>
+Bucket endpoint format is <ins>**https://s3.kopah.uw.edu/BUCKET**</ins>
 
 Where the word "BUCKET" above is replaced with the name of your storage bucket.
 
