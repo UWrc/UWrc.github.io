@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,nvidia,hours,help,tools,training,events,videos,rcc,updates,opportunities,gpus]
 ---
 
-During May's maintenance, we've refreshed the operating system images for both login and compute nodes with the latest Linux security updates and patches, and enhanced the node image to include NVIDIA Fabric Manager and software upgrades for next-generation GPU switching fabrics. There’s still time to register for [<ins>**GPU in EDU on Thursday, May 15th, 10:00 a.m.–4:00 p.m.**</ins>](https://www.eventcreate.com/e/gpu-edu-uw), where we team up with NVIDIA and Cambridge Computer for a day of demos, teaching guidance, and research highlights. Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday June 10, 2025** (AKA the 2nd Tuesday of the month).
+During May's maintenance, we've refreshed the operating system images for both login and compute nodes with the latest Linux security updates and patches, and enhanced the node image to include NVIDIA Fabric Manager and software upgrades for next-generation GPU switching fabrics. There’s still time to register for [<ins>**GPU in EDU on Thursday, May 15th, 10:00 a.m.–4:00 p.m.**</ins>](https://www.eventcreate.com/e/gpu-edu-uw), where we team up with NVIDIA and Cambridge Computer for a day of demos, teaching guidance, and research highlights. Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday June 10, 2025** (AKA the 2nd Tuesday of the month).
 
 ### Notable Updates
 * **Operating system** - The images for both the login and compute nodes have been refreshed to incorporate the latest Linux OS security updates and system patches. 
@@ -16,7 +16,7 @@ During May's maintenance, we've refreshed the operating system images for both l
 
 ### Upcoming Events
 
-[<ins>**Subscribe to event updates and bookmark our UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+[<ins>**Subscribe to event updates and bookmark our UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 * **There's still time to sign up for [<ins>**GPU in EDU**</ins>](https://www.eventcreate.com/e/gpu-edu-uw)** Thursday May 15th 10:00 a.m. - 4:00 p.m. 
     * Join [<ins>**us**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035549) for a full day of learning about GPUs with experts from NVIDIA and Cambridge Computer. The event will feature recommendations for building GPU workflows, guidance for using GPUs for teaching, highlights of GPU-powered research at UW, and more. Don’t miss it — Lunch is provided! [<ins>**Registration is still open**</ins>](https://www.eventcreate.com/e/gpu-edu-uw)!  
@@ -38,7 +38,7 @@ If you would like to request 1 on 1 help, please send an email to [<ins>**help@u
 * New documentation added for launching [<ins>**Rstudio on Hyak with Open OnDemand**</ins>](https://hyak.uw.edu/docs/ood/rstudio) - No more port forwarding!  
 * If you are a new user, check out our [<ins>**Tutorials section**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus).  
 * [<ins>**New AWS AI training video**</ins>](https://youtu.be/8iT5ka_K4BA?si=gpLfb3SaNIr6hVZJ) uploaded this month. 
-* [<ins>**Check out our Research Computing Training Playlist on UW-IT's YouTube channel.**</ins>](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
+* [<ins>**Check out our Research Computing Training Playlist on UWIT's YouTube channel.**</ins>](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
 
 ### Opportunities
 

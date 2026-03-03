@@ -10,7 +10,7 @@ tags: [klone,hyak,hpc,supercomputer,hours,help]
 
 During September’s maintenance, we refreshed the operating system images for both login and compute nodes, upgraded our NVIDIA driver, and performed network configuration steps to support Tillicum GPU cluster. 
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, October 14, 2025** (the second Tuesday of the month).
+Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, October 14, 2025** (the second Tuesday of the month).
 
 ### Notable Updates
 * **Node image updates** – Routine updates and security patches. 
@@ -18,22 +18,22 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 * **Network configuration** changes to support [<ins>**Tillicum**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077). 
 
 ### A New Look!
-We continue to make updates to our documentation website to make sure you have access to everything you need from UW-IT Research Computing. Check out these pages and features and let us know what you think by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "hyak.uw.edu" in the subject line: 
+We continue to make updates to our documentation website to make sure you have access to everything you need from UWIT Research Computing. Check out these pages and features and let us know what you think by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "hyak.uw.edu" in the subject line: 
 * [<ins>**Home page content cards**</ins>](https://hyak.uw.edu/) - find content cards that serve as quick links to documentation, learning resources, and support. 
 * [<ins>**Learn page**</ins>](https://hyak.uw.edu/learn) - the new home for our training and video library either linking directly to videos or tutorial pages. 
 * **Pricing menu** - our pricing menu now leads to our knowledge base articles for each of our services. Learn more about your compute and storage options from these resources. 
-* [<ins>**UW-IT Research Computing Landing Page**</ins>](https://it.uw.edu/guides/research/) - this documentation website (hyak.uw.edu) is shifting to a focus on documentation alone, to learn more about our services, use the Pricing menu mentioned above or visit our Research Computing Landing Page on the UW-IT website. 
+* [<ins>**UWIT Research Computing Landing Page**</ins>](https://it.uw.edu/guides/research/) - this documentation website (hyak.uw.edu) is shifting to a focus on documentation alone, to learn more about our services, use the Pricing menu mentioned above or visit our Research Computing Landing Page on the UWIT website. 
 
 ### Office Hours 
 * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Wednesday Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
 * **Until September 24** - Thursdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Thursday Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/yOqurPVXTHmFbKWmCMaIJQ).
 * **After September 24** - Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
 ### AWS GameDay
-**Save the date!** [<ins>**Research Computing Club**</ins>](https://depts.washington.edu/uwrcc/) along with UW-IT Research Computing and eScience will be hosting a [<ins>**AWS GameDay**</ins>](https://aws.amazon.com/gameday/) on Thursday November 20, 2025. Registration link coming soon! 
+**Save the date!** [<ins>**Research Computing Club**</ins>](https://depts.washington.edu/uwrcc/) along with UWIT Research Computing and eScience will be hosting a [<ins>**AWS GameDay**</ins>](https://aws.amazon.com/gameday/) on Thursday November 20, 2025. Registration link coming soon! 
 
 **What is it?**
 An epic hands-on competition where you'll build and deploy real AI solutions using AWS's latest generative AI services. Work in teams to solve fun challenges and create magical applications!
@@ -68,7 +68,7 @@ An epic hands-on competition where you'll build and deploy real AI solutions usi
 * **COMPLECS: Batch Computing (Part III) High-Throughput and Many-Task Computing - Slurm Edition** 12/04/25 - 2:00 PM - 3:30 PM EST [<ins>**Learn more and register.**</ins>](https://na.eventscloud.com/ereg/newreg.php?eventid=840663&)
 * **R for HPC** 12/04/25 - 2:00 PM - 3:30 PM EST [<ins>**Learn more and register.**</ins>](https://na.eventscloud.com/r-hpc-12-09)
 
-Questions about Hyak Klone, Tillicum, or any other UW-IT Research Computing Service? [<ins>**Fill out our Research Computing Consulting intake form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b). We are here to help!
+Questions about Hyak Klone, Tillicum, or any other UWIT Research Computing Service? [<ins>**Fill out our Research Computing Consulting intake form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b). We are here to help!
 
 Happy Computing, 
 

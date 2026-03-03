@@ -10,7 +10,7 @@ tags: [klone,hyak,hpc,supercomputer,hours,help,tools,globus,storage,onedrive,kop
 
 During August’s maintenance, we refreshed the operating system images for both login and compute nodes, upgraded Slurm to version 25.5.2, and upgraded Klone's filesystem (GPFS) for increased stability. We also introduced a new Globus OneDrive connector, making it easier than ever to transfer files between OneDrive and Hyak Klone or Kopah Storage.
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, September 9, 2025** (the second Tuesday of the month).
+Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, September 9, 2025** (the second Tuesday of the month).
 
 ### Notable Updates
 * **Node image updates** – Routine updates plus installation of new Slurm utilities that we will test for job efficiency monitoring. 
@@ -18,7 +18,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 * **GPFS upgrade to 5.1.9.11** – Improves stability and includes several bug fixes. [<ins>**Read more about this version**</ins>](https://www.ibm.com/docs/en/storage-scale-bda?topic=summary-changes).
 
 ### New Features
-**Globus OneDrive Connector** – UW-IT Research Computing has added OneDrive as a connector to Globus, making transfers between OneDrive and Hyak Klone or OneDrive and Kopah Storage easier than ever before! 
+**Globus OneDrive Connector** – UWIT Research Computing has added OneDrive as a connector to Globus, making transfers between OneDrive and Hyak Klone or OneDrive and Kopah Storage easier than ever before! 
 
 <img src="/img/blog/onedrive_globus1.png" alt="Search Uw OneDrive to utilize the connector." width="1500"/>
 
@@ -33,7 +33,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 ### Office Hours 
 * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
@@ -62,7 +62,7 @@ If you would like to request 1 on 1 help, please send an email to [<ins>**help@u
 * **Two PhD positions in Artificial Intelligence** - in collaboration with German Aerospace Center and TU Dresden, Germany. Deadline to apply: 27 August 2025. [<ins>**Apply Now!**</ins>](https://www.verw.tu-dresden.de/StellAus/stelle.asp?id=12286&lang=de)
 
 
-Questions about Hyak Klone, Tillicum, or any other UW-IT Research Computing Service? [<ins>**Fill out our Research Computing Consulting intake form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b). We are here to help!
+Questions about Hyak Klone, Tillicum, or any other UWIT Research Computing Service? [<ins>**Fill out our Research Computing Consulting intake form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b). We are here to help!
 
 Happy Computing, 
 

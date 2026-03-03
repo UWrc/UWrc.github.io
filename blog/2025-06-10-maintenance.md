@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,storage,videos]
 ---
 
-During June's maintenance, we've refreshed the operating system images for both login and compute nodes, and we've responded to user feedback with a solution to make Cron jobs persistent. Good news: we are holding office hours all summer to support your research grind. Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday July 8, 2025** (AKA the 2nd Tuesday of the month).
+During June's maintenance, we've refreshed the operating system images for both login and compute nodes, and we've responded to user feedback with a solution to make Cron jobs persistent. Good news: we are holding office hours all summer to support your research grind. Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday July 8, 2025** (AKA the 2nd Tuesday of the month).
 
 ### Notable Updates
 * **Routine package updates** - images for both the login and compute nodes have been refreshed to incorporate the latest Linux OS security updates and system patches.  
@@ -51,7 +51,7 @@ Whether you're just getting started or looking to expand your use of campus stor
 ### Summer Office Hours 
 * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 

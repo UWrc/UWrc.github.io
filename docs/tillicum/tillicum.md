@@ -32,7 +32,7 @@ On Tillicum, computing units are "GPU Hours" and are applied to all jobs schedul
 :::important Tillicum Usage Rates
 ***GPU Hour*** = Elapsed Time x ***N*** GPUs
 
-**Usage Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UW-IT's ITBill system. 
+**Usage Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UWIT's ITBill system. 
 
 Every scheduled job on Tillicum is subject to a the usage rate and requires at least 1 GPU (141GB RAM). 
 * Jobs are bound by a **maximum of ~200GB system RAM and 8 CPUs**
@@ -53,7 +53,7 @@ Tillicum Processes ***not*** subject to charge:
 UW policy is that all services require 2 factor authentication (2FA) by default as a security posture. Please go to [<ins>**this 2FA page**</ins>](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
 
 :::important
-You need 2FA to log onto any UW-IT Research Computing cluster.
+You need 2FA to log onto any UWIT Research Computing cluster.
 :::
 
 ## Logging in with SSH

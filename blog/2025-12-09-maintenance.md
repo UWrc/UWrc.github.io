@@ -124,7 +124,7 @@ This fall, our training sessions focused primarily on [<ins>**Tillicum**</ins>](
 * [<ins>**Fine-tuning LLMs on Tillicum**</ins>](https://github.com/josecols/ft-llms-tillicum)
 * [<ins>**Docker Containers Workshop**</ins>](https://github.com/UWrc/docker-tutorial) 
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### Office Hours 
 * **No office hours: 12/24/2025, 12/25/2025, 12/31/2025, or 1/1/2026**
@@ -135,7 +135,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
     * [<ins>**Tuesday January 20, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249437)
     * [<ins>**Thursday February 12, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249438)
     * [<ins>**Thursday March 12, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249439)
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### External Training Opportunities
 
