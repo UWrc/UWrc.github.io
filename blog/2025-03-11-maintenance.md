@@ -22,13 +22,13 @@ March maintenance is complete, and Klone is back in operation. Notable updates f
 
 ### Upcoming Training and Events
 * The [<ins>**Research Computing Club**</ins>](https://depts.washington.edu/uwrcc/) (RCC) is hosting a **Hackathon on Saturday April 19 10am-5pm**. The RCC officers have prepared a set of modules for participants to work through together in small groups. Lunch will be provided. Registration is required. Additional details coming soon.  
-* **GPU Day Thursday May 15 SAVE THE DATE!** hosted by UW-IT Research Computing featuring hands-on demonstrations from **Cambridge Computer** and **NVIDIA**. Time and venue TBA. Stay tuned for more details and links to register. 
+* **GPU Day Thursday May 15 SAVE THE DATE!** hosted by UWIT Research Computing featuring hands-on demonstrations from **Cambridge Computer** and **NVIDIA**. Time and venue TBA. Stay tuned for more details and links to register. 
 
 ### New training videos uploaded 
 
 [<ins>**Hyak: Advanced Slurm recording from training on February 25**</ins>](https://www.youtube.com/watch?v=Mflpj3cTMu8). This tutorial demonstrates these benefits of Slurm and provide you with some template Slurm scripts that you can adapt for your purposes. [<ins>**Click here for walk through tutorial and training materials**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus_advanced). 
 
-[<ins>**Check out our Research Computing Training Playlist on UW-IT's YouTube channel.**</ins>](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
+[<ins>**Check out our Research Computing Training Playlist on UWIT's YouTube channel.**</ins>](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
 
 ### Winter 2025 Office Hours
 
@@ -44,7 +44,7 @@ If you would like to request 1 on 1 help, please send an email to [<ins>**help@u
 
 * We're Hiring! The Hyak team is hiring an **HPC Staff Scientist** to join our team. Use your experience to help Hyak users build capacity especially as we launch out new GPU system this fall. [<ins>**Job description HERE**</ins>](https://uwhires.admin.washington.edu/eng/candidates/default.cfm?szCategory=jobprofile&szOrderID=243918&szCandidateID=0&szSearchWords=&szReturnToSearch=1). 
 
-* [<ins>**Join the UW AI Community of Practice**</ins>](http://bit.ly/uwaicop) on MS Teams to get updates from UW-IT's AI team about events and join the discussion around AI in the news, society, and culture.  
+* [<ins>**Join the UW AI Community of Practice**</ins>](http://bit.ly/uwaicop) on MS Teams to get updates from UWIT's AI team about events and join the discussion around AI in the news, society, and culture.  
 
 * The [<ins>**Accelerated AI Algorithms for Data-Driven Discovery (A3D3) Institute**</ins>](http://a3d3.ai/) funded by the National Science Foundation (NSF), under the Harnessing the Data Revolution (HDR) program, is seeking postbaccalaureate research fellows to join our interdisciplinary teams of scientists and engineers to develop and deploy artificial intelligence to accelerate science discoveries in particle physics, astrophysics, biology, and neuroscience. [<ins>**APPLY!**</ins>](https://academicjobsonline.org/ajo/jobs/28839) 
 

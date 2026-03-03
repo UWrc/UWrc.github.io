@@ -149,7 +149,7 @@ module.exports = {
               href: 'https://it.uw.edu/research',
             },
             {
-              label: 'UW-IT Home',
+              label: 'UWIT Home',
               href: 'https://it.uw.edu',
             },
           ],

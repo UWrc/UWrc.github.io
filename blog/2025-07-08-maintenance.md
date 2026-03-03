@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,hours,help,tools,storage,videos]
 ---
 
-During June's maintenance, we've refreshed the operating system images for both login and compute nodes including the newest version of Slurm, and we have implemented some changes critical to provisioning our new GPU system, Tillicum (launching in Fall 2025). Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday August 12, 2025** (AKA the 2nd Tuesday of the month).
+During June's maintenance, we've refreshed the operating system images for both login and compute nodes including the newest version of Slurm, and we have implemented some changes critical to provisioning our new GPU system, Tillicum (launching in Fall 2025). Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday August 12, 2025** (AKA the 2nd Tuesday of the month).
 
 ### Notable Updates
 * **Routine package updates** – images for both the login and compute nodes have been refreshed to incorporate the latest Linux OS security updates and system patches.  
@@ -22,7 +22,7 @@ This month we uploaded several training videos to our [<ins>**YouTube Playlist**
     * [<ins>**Home directories**</ins>](https://youtu.be/h--muyCPFHs)
 * **GPU in EDU Series**
     * [<ins>**Userspace Package Management and Reproducible Software Pipelines**</ins>](https://youtu.be/ejas1s2rnKk) - Chris Simmons, Cambridge Computer
-    * [<ins>**Empowering Research with GPU Computing: Services & Support from UW-IT RC**</ins>](https://youtu.be/0C1-s1d_bq0) - Kristen Finch, UW-IT Research Computing
+    * [<ins>**Empowering Research with GPU Computing: Services & Support from UWIT RC**</ins>](https://youtu.be/0C1-s1d_bq0) - Kristen Finch, UWIT Research Computing
     * [<ins>**Open Source GPU Accelerated Data Science with NVIDIA RAPIDS**</ins>](https://youtu.be/ujImFQydq9U) - Melisa Alkan, NVIDIA
     * [<ins>**Computing in Curricula: Integrating High-Performance Acceleration into Ed**</ins>](https://youtu.be/86U7U-1YHt8) - Chris Simmons, Cambridge Computer
     * Please follow this link to download the PDF versions of the presentations and the datasets and Notebook presented by Melisa: [<ins>**Link to Materials**</ins>](https://drive.google.com/drive/folders/1fGzc3dde-Im_eT4H3H29BMlak_GIALw6?usp=sharing)
@@ -37,7 +37,7 @@ This month we uploaded several training videos to our [<ins>**YouTube Playlist**
 ### Summer Office Hours 
 * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
 * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 
@@ -55,7 +55,7 @@ If you would like to request 1 on 1 help, please send an email to [<ins>**help@u
 
 * **Automating Research with Globus: The Modern Research IT Platform** - Aug. 18, 2025, 9 a.m. – 12 p.m. (Pacific Time) This workshop introduces Globus Flows and its role in automating research workflows. Participants will explore data portals, science gateways, and commons, enabling seamless data discovery and access. [<ins>**Enroll here**</ins>](https://internet2.edu/cloud/cloud-learning-and-skills-sessions/automating-research-with-globus-the-modern-research-it-platform/?utm_source=CLASS+Spring+2025+Training+Campaign+-+May+2025&utm_medium=email&utm_campaign=class).
 
-Questions about Hyak Klone, Tillicum, or any other UW-IT Research Computing Service? [<ins>**Fill out our Research Computing Consulting intake form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b). We are here to help!
+Questions about Hyak Klone, Tillicum, or any other UWIT Research Computing Service? [<ins>**Fill out our Research Computing Consulting intake form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b). We are here to help!
 
 Happy Computing, 
 

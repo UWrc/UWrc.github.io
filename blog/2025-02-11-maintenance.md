@@ -25,7 +25,7 @@ Our February maintenance is complete, and Klone is back in operation. The next m
 
 [<ins>**Hyak: Open OnDemand recording from training on January 31**</ins>](https://youtu.be/U_LlktlDyI4). [<ins>**Open OnDemand (OOD)**</ins>](https://hyak.uw.edu/docs/ood/start) is an open-source web portal for HPC centers to provide users with an easy-to-use web interface to HPC clusters. For the last year, the Hyak team has been adding features to OOD. This workshop demonstrates OOD's main features such as exploring the filesystem, composing jobs, and launching interactive applications like Jupyter, Rstudio, MATLAB, and Virtual Desktop. Training presented by UW Research Computing Intern, Bhavik Soni. 
 
-[<ins>**Check out our Research Computing Training Playlist on UW-IT's YouTube channel.**</ins>](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
+[<ins>**Check out our Research Computing Training Playlist on UWIT's YouTube channel.**</ins>](https://youtube.com/playlist?list=PL-uLiqrTav1omqc7omKsLzRg2ng3nKCtj&si=ACwxjc0PV67AQfxm)
 
 ### Winter 2025 Office Hours
 

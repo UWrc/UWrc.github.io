@@ -44,7 +44,7 @@ If you would like to request 1 on 1 help, please send a ticket to [<ins>**help@u
 
 ### August 2024 Training Videos 
 
-In case you missed it, we recorded the August 2024 Wednesday training sessions and posted them on the UW-IT YouTube channel under the playlist, "Hyak Training." Here are the links: 
+In case you missed it, we recorded the August 2024 Wednesday training sessions and posted them on the UWIT YouTube channel under the playlist, "Hyak Training." Here are the links: 
 
 * [<ins>**Hyak: R and Rstudio (August 28, 2024) recording.**</ins>](https://youtu.be/rcorOJV93tY)
  
