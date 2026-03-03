@@ -53,7 +53,7 @@ Instead, ***follow our recommended best practices*** and set up your [<ins>**Pro
 * [<ins>**Managing Python Environments with Conda and Jupyter**</ins>](https://calendar.washington.edu/sea_uwit-rc/Managing-Python-Environments-with-Conda-and-Jupyter/E194893518) Thursday March 5 1-3pm
 * All workshop have an in person and remote attendance option. 
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### Office Hours 
 * **Hyak and Tillicum Office Hours:**
@@ -63,7 +63,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
     * [<ins>**Tuesday January 20, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249437)
     * [<ins>**Thursday February 12, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249438)
     * [<ins>**Thursday March 12, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249439)
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### Additional Training Opportunities
 

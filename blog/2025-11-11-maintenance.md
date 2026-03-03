@@ -10,7 +10,7 @@ tags: [klone,hyak,hpc,supercomputer,hours,help,events]
 
 This month’s maintenance window was used for internal testing and system improvement work. We also added Open OnDemand functionality that will enable new users to create and initialize their home directories from the web page. Lastly, we automated the Hyak Klone intracluster SSH key setup process, reducing the manual steps needed for workflows that move between nodes. 
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, December 9, 2025** (the second Tuesday of the month).
+Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). The next maintenance is scheduled for **Tuesday, December 9, 2025** (the second Tuesday of the month).
 
 ### Upcoming Events 
 * [<ins>**Tillicum Containers Workshop**</ins>](https://calendar.washington.edu/sea_uwit-rc/Containers-on-Tillicum-Workshop/E191143263) November 13 1-3pm – even if you aren’t a Tillicum user, we will review relevant commands and protocols for containers that can be applied to Hyak Klone.  
@@ -24,7 +24,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 * **Hyak and Tillicum Office Hours:**
     * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Wednesday Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
     * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 If you would like to request 1 on 1 help, please send an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Office Hour" in the subject line to coordinate a meeting.
 

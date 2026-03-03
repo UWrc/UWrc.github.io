@@ -26,7 +26,7 @@ Lolo is UW's dedicated archival storage service designed for research data that 
 - Exempt from [<ins>**F&A**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035504) costs
 - New allocations under 10TB are typically provisioned same-day
 
-If you are unsure if Lolo is right for you, use the [<ins>**Research Computing Consulting Intake Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b) to connect with the UW-IT Research Computing team for guidance on selecting the right computing service.
+If you are unsure if Lolo is right for you, use the [<ins>**Research Computing Consulting Intake Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b) to connect with the UWIT Research Computing team for guidance on selecting the right computing service.
 
 ### Eligibility, Access, and Restrictions
 

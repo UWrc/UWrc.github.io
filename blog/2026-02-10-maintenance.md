@@ -27,7 +27,7 @@ During this month’s scheduled maintenance window, we worked on a set of planne
 * [<ins>**Managing Python Environments with Conda and Jupyter**</ins>](https://calendar.washington.edu/sea_uwit-rc/Managing-Python-Environments-with-Conda-and-Jupyter/E194893518) Thursday March 5 1-3pm
 * All workshop have an in person and remote attendance option. 
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### Office Hours 
 * ***NEW* Cloud Computing Office Hours:**
@@ -39,7 +39,7 @@ Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailma
 * **Hyak and Tillicum Office Hours:**
     * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Wednesday Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
     * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UW-IT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### Additional Training Opportunities
 
