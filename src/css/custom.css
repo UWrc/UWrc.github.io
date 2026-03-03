@@ -58,6 +58,23 @@ ul.check li {
   margin: 0px 0px 0px 0px;
 }
 
+main a {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-lightest);
+  text-decoration: underline;
+}
+
+span.token.boolean {
+  color: #ffc700 !important;
+}
+
+span.token.number {
+  color: #aadb1e !important;
+}
+
 .footer {
   background-color: #32006E;
   font-family: EncodeSans !important;
