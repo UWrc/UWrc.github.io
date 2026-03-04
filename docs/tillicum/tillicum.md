@@ -7,7 +7,7 @@ title: Get Started
 
 ***New to Tillicum?*** We have prepared a guided introduction to the Tillicum GPU cluster at the University of Washington.
 
-Check it out here → [<ins>**Tillicum Onboarding Training**</ins>](https://github.com/UWrc/tillicum-onboarding)
+Check it out here → [**Tillicum Onboarding Training**](https://github.com/UWrc/tillicum-onboarding)
 
 ---
 
@@ -19,15 +19,15 @@ Check it out here → [<ins>**Tillicum Onboarding Training**</ins>](https://gith
 * A UW worktag is required to enroll in this service.
 
 **Eligible and ready to try it?**
-* Sign up for a project allocation to start using Tillicum → [<ins>**Tillicum Access Request Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581)
-* See if Tillicum is right for you with 100 GPU hours and 100GB of dedicated project storage → [<ins>**Tillicum Demo Account Request**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=b71cefcc97ef2a500a7637b6f053af15)
+* Sign up for a project allocation to start using Tillicum → [**Tillicum Access Request Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581)
+* See if Tillicum is right for you with 100 GPU hours and 100GB of dedicated project storage → [**Tillicum Demo Account Request**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=b71cefcc97ef2a500a7637b6f053af15)
 
 ---
 ## Pay-as-you-go by the GPU Hour
 
 ***Your first 100 GPU hours are free!***
 
-On Tillicum, computing units are "GPU Hours" and are applied to all jobs scheduled with [<ins>**Slurm**</ins>](/docs/tillicum/scheduling-jobs).
+On Tillicum, computing units are "GPU Hours" and are applied to all jobs scheduled with [**Slurm**](/docs/tillicum/scheduling-jobs).
 
 :::important Tillicum Usage Rates
 ***GPU Hour*** = Elapsed Time x ***N*** GPUs
@@ -40,8 +40,8 @@ Every scheduled job on Tillicum is subject to a the usage rate and requires at l
 :::
 
 Tillicum Processes ***not*** subject to charge: 
-* [<ins>**storage**</ins>](/docs/tillicum/storage.md)
-* data [<ins>**import, export**</ins>](/docs/storage/globus.md)
+* [**storage**](/docs/tillicum/storage.md)
+* data [**import, export**](/docs/storage/globus.md)
 * data parsing, manipulation
 * code development on the Login node (any code development via a Slurm Job in subject to charge)
 
@@ -50,7 +50,7 @@ Tillicum Processes ***not*** subject to charge:
 
 ## Two Factor Authentication
 
-UW policy is that all services require 2 factor authentication (2FA) by default as a security posture. Please go to [<ins>**this 2FA page**</ins>](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
+UW policy is that all services require 2 factor authentication (2FA) by default as a security posture. Please go to [**this 2FA page**](https://identity.uw.edu/2fa/) and ensure you have 2FA enabled and configured before proceeding with this tutorial.
 
 :::important
 You need 2FA to log onto any UWIT Research Computing cluster.
@@ -64,7 +64,7 @@ Once you have your account and 2FA set up, you can use `ssh` to log into `tillic
 If you're using any Linux or Linux-like system (e.g., MacOS, BSD) you probably already have a Terminal installed by default. Locate Terminal in your Applications directory on your Mac.
 
 **Windows:**
-Newer versions of Windows have a new Linux sub-system so there are native options to bring up a local terminal. Alternatively, you can login to `tillicum` using Command Prompt or Windows Powershell. Other options include [<ins>**PuTTY**</ins>](https://www.putty.org/) and [<ins>**Git Bash - use "The Bash Shell" with Git installed on Windows from this link for a video with install instructions.**</ins>](https://carpentries.github.io/workshop-template/install_instructions/#shell).
+Newer versions of Windows have a new Linux sub-system so there are native options to bring up a local terminal. Alternatively, you can login to `tillicum` using Command Prompt or Windows Powershell. Other options include [**PuTTY**](https://www.putty.org/) and [**Git Bash - use "The Bash Shell" with Git installed on Windows from this link for a video with install instructions.**](https://carpentries.github.io/workshop-template/install_instructions/#shell).
 
 Once you have a shell open in Terminal or any of the Windows options, you can login with the following command by replacing the word `UWNetID` with your UW Net ID. Then you will be prompted to enter your password for your UW Net ID. You'll know it worked when you see the "Tillicum AI" welcome message printed to your screen.
 

@@ -26,7 +26,7 @@ As shown above, the Tillicum filesystem is organized under the root directory `/
 
 * `home/` — individual user home directories for configuration and small files.
 * `software/` — centrally managed shared applications and tools.
-* `datasets/` — curated public or shared research datasets. We have a process by which groups can nominate datasets for storage under our [**<ins>Data Commons</ins>**](https://hyak.uw.edu/docs/data-commons/requirements).
+* `datasets/` — curated public or shared research datasets. We have a process by which groups can nominate datasets for storage under our [**Data Commons**](https://hyak.uw.edu/docs/data-commons/requirements).
 * `scrubbed/` — temporary scratch space for active work, periodically cleaned.
 * `projects/` — long-term storage for groups and project-specific data.
 
@@ -44,12 +44,12 @@ Here’s a quick overview of Tillicum storage policies:
 | Storage             | Size / Quota          | Backup          | Notes                                                                        |
 | ------------------- | --------------------- | --------------- | ---------------------------------------------------------------------------- |
 | Home Directory      | 10 GB per user        | Daily snapshots | Keep only configuration files here; use other spaces for data/code           |
-| Project/Lab Storage | 1 TB per project/lab  | Daily snapshots | Request allocation via [**<ins>Tillicum intake form</ins>**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077)                             |
+| Project/Lab Storage | 1 TB per project/lab  | Daily snapshots | Request allocation via [**Tillicum intake form**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077)                             |
 | Scrubbed Storage    | Up to 100 TB per user | None            | Scratch space, purged after 60 days of inactivity; not for long-term storage |
 
 ***Tillicum is a new service. We will constantly evaluate these storage policies based on user feedback.***
 
-Users are responsible for transferring results to external systems (e.g., [<ins>**Kopah S3**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [<ins>**Lolo Archive**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084))
+Users are responsible for transferring results to external systems (e.g., [**Kopah S3**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [**Lolo Archive**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084))
 
 :::tip pro tip: Storage monitoring
 To monitor and investigate storage usage, use the following command, which will show you how much storage is occupied by each subdirectory in the directory where the command is executed. If you are cleaning up storage, this command will show new storage counts as changes are made.

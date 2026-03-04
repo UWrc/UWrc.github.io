@@ -12,7 +12,7 @@ Tillicum provides a flexible software environment for research computing. Users 
   - First, load a compiler (e.g., GCC, CUDA).  
   - Then, only the modules built with that compiler become visible with `module avail`.  
   - This reduces incompatibilities and helps ensure a smoother user experience. 
-  - [<ins>**Read more about using modules below.**</ins>](#using-modules) 
+  - [**Read more about using modules below.**](#using-modules) 
 
 - **Conda**: Tillicum provides a **Conda module** that simplifies working with Python or other Conda-based environments.  
   - When loaded, the Conda module prints helpful instructions directly to your terminal.  
@@ -45,9 +45,9 @@ WARNING: Login nodes are CPU ONLY. Install pkgs with GPU support on compute node
 ```js
 apptainer shell --bind /gpfs container.sif
 ```
-We highly recommend using containers to build your software environment on Tillicum. In particular, [<ins>**NVIDIA NGC Catalog**</ins>](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has pre-built containers with CUDA and NVIDIA drivers configured, which work well with the Tillicum environment. 
+We highly recommend using containers to build your software environment on Tillicum. In particular, [**NVIDIA NGC Catalog**](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has pre-built containers with CUDA and NVIDIA drivers configured, which work well with the Tillicum environment. 
 
-If you are new to containers, we recommend our [<ins>**Containers Tutorial**</ins>](../hyak101/containers/syllabus.md).
+If you are new to containers, we recommend our [**Containers Tutorial**](../hyak101/containers/syllabus.md).
 
 --- 
 
@@ -70,7 +70,7 @@ The module command sets the appropriate environment variable independent of your
 | `module help [module]` | Show module-specific help message |
 | `module use [-a] [path]` | Prepend or append path to `MODULEPATH` |
 
-Lmod provides a convenient shortcut command [<ins>**`ml`**</ins>](https://lmod.readthedocs.io/en/latest/010_user.html#ml-a-convenient-tool) for the `module` command.
+Lmod provides a convenient shortcut command [**`ml`**](https://lmod.readthedocs.io/en/latest/010_user.html#ml-a-convenient-tool) for the `module` command.
 
 :::tip
 `ml` can be used instead of module, module load, or module list depending on the situation. This can be seen in the examples below.
@@ -236,7 +236,7 @@ Do not include `module load` commands in your startup files (e.g., $HOME/.bashrc
 
 ### User Collections
 
-You can save and restore commonly used modules using [<ins>**user collections**</ins>](https://lmod.readthedocs.io/en/latest/010_user.html#user-collections). Note that Lmod can load only one user collection at a time.
+You can save and restore commonly used modules using [**user collections**](https://lmod.readthedocs.io/en/latest/010_user.html#user-collections). Note that Lmod can load only one user collection at a time.
 
 ## Conda Environments
 
@@ -326,4 +326,4 @@ pip install seaborn
 
 This ensures that `pip` installs packages into the active Conda environment — **not globally** — making it easy to clean up completely when you are done.
 
-See the [<ins>**best practices**</ins>](https://www.anaconda.com/blog/using-pip-in-a-conda-environment) from Anaconda for using `pip` with Conda and [<ins>**pip documentation**</ins>](https://pip.pypa.io/en/stable/cli/pip_install/) for more information.
+See the [**best practices**](https://www.anaconda.com/blog/using-pip-in-a-conda-environment) from Anaconda for using `pip` with Conda and [**pip documentation**](https://pip.pypa.io/en/stable/cli/pip_install/) for more information.

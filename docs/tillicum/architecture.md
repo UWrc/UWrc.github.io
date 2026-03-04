@@ -10,7 +10,7 @@ title: Tillicum System Architecture
 *Data for image pulled on January 13, 2026.*
 
 ## Get Access
-To request current pricing, begin the purchase process, or request a demo account, please complete the [<ins>**Tillicum Project Access Request Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581).
+To request current pricing, begin the purchase process, or request a demo account, please complete the [**Tillicum Project Access Request Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581).
 
 ## Key Features
 

@@ -3,13 +3,13 @@ id: compilers
 title: Compilers
 ---
 
-The compilers are provided using environment modules, you can review modules [<ins>**here**</ins>](modules.md).
+The compilers are provided using environment modules, you can review modules [**here**](modules.md).
 
-A lot of software you may want to use and compile yourself could be written in C, C++, or Fortran. We support two compiler flavors for you to try: the [<ins>**GNU compiler**</ins>](#gnu-compiler) or the [<ins>**Intel compiler**</ins>](#intel-compiler). 
+A lot of software you may want to use and compile yourself could be written in C, C++, or Fortran. We support two compiler flavors for you to try: the [**GNU compiler**](#gnu-compiler) or the [**Intel compiler**](#intel-compiler). 
 
 ## GNU Compiler
 
-The latest [<ins>**GNU compiler**</ins>](https://gcc.gnu.org/gcc-10/) provided as a module is version 10.2. This was built with the `--enable-languages=c,c++,fortran` flag.
+The latest [**GNU compiler**](https://gcc.gnu.org/gcc-10/) provided as a module is version 10.2. This was built with the `--enable-languages=c,c++,fortran` flag.
 
 ```js
 module load gcc/10.2.0

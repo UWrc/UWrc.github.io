@@ -4,21 +4,21 @@ title: DMTCP (Checkpointing)
 ---
 
 :::caution
-DMTCP is still being tested on Hyak. The module name may change after testing. Please report any issues to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject.
+DMTCP is still being tested on Hyak. The module name may change after testing. Please report any issues to [**help@uw.edu**](mailto:help@uw.edu) with "Hyak" in the subject.
 :::
 
-[<ins>**DMTCP**</ins>](https://github.com/dmtcp/dmtcp) is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using checkpointing allows for shorter job times using requeuing and better use of `ckpt` resources, allowing higher throughput for your jobs. More extensive documentation can be found [<ins>**here**</ins>](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or via relevant `man` pages.
+[**DMTCP**](https://github.com/dmtcp/dmtcp) is a tool to transparently checkpoint and restart jobs, saving it to disk to be resumed at a later time. It requires no changes to application code, allowing easy use. Using checkpointing allows for shorter job times using requeuing and better use of `ckpt` resources, allowing higher throughput for your jobs. More extensive documentation can be found [**here**](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or via relevant `man` pages.
 
 :::info
 DMTCP currently does not support the following:
 - Jobs using GPUs
-- Jobs using Apptainer without [<ins>**built-in checkpointing**</ins>](https://apptainer.org/docs/user/1.2/checkpoint.html) enabled
-- Jobs using MPI. We hope to provide support through [<ins>**MANA**</ins>](https://github.com/mpickpt/mana) in the future.
+- Jobs using Apptainer without [**built-in checkpointing**](https://apptainer.org/docs/user/1.2/checkpoint.html) enabled
+- Jobs using MPI. We hope to provide support through [**MANA**](https://github.com/mpickpt/mana) in the future.
 :::
 
 ## DMTCP Usage
 
-We provide some opinionated examples of DMTCP usage on Hyak here, for more information see more general documentation [<ins>**here**</ins>](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or the `man` pages.
+We provide some opinionated examples of DMTCP usage on Hyak here, for more information see more general documentation [**here**](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/) or the `man` pages.
 
 To use DMTCP on Hyak, first load the module using `module load testing/dmtcp/3.0.0`.
 
@@ -77,5 +77,5 @@ This batch script runs the application `python3 do_research.py` and checkpoints 
 Jobs utilizing checkpointing can be requeued (either with the `--requeue` Slurm flag or `ckpt` partition automatically requeuing). This allows for better usage of the `ckpt` partition and shorter request times, both of which get your jobs done quicker!
 
 :::info Acknowledgements
-This documentation is inspired by [<ins>**Clemson's DMTCP documentation**</ins>](https://docs.rcd.clemson.edu/palmetto/software/checkpointing/dmtcp/) and [<ins>**NERSC's DMTCP documentation**</ins>](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/).
+This documentation is inspired by [**Clemson's DMTCP documentation**](https://docs.rcd.clemson.edu/palmetto/software/checkpointing/dmtcp/) and [**NERSC's DMTCP documentation**](https://docs.nersc.gov/development/checkpoint-restart/dmtcp/).
 :::

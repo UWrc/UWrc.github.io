@@ -7,11 +7,11 @@ Tillicum uses the **Slurm workload manager** for scheduling and running jobs. Wh
 
 ## Key Differences from Klone  
 
-- **Tillicum** uses a **usage-based model**. All users have the same priority, and access is controlled through [<ins>**QOS (Quality of Service)**</ins>](#tillicum-qos) rather than partitions.  
+- **Tillicum** uses a **usage-based model**. All users have the same priority, and access is controlled through [**QOS (Quality of Service)**](#tillicum-qos) rather than partitions.  
 - **No checkpoint partition** exists on Tillicum.  
-- **Simpler access** – you don’t need to determine partitions; just select the appropriate [<ins>**QOS**</ins>](#tillicum-qos).  
+- **Simpler access** – you don’t need to determine partitions; just select the appropriate [**QOS**](#tillicum-qos).  
 - **Klone** uses a **condo model**. Research groups have dedicated **accounts** and **partitions** tied to the resources they purchased. This makes partition choice complex, and we provide `hyakalloc` to help users determine access. Klone also provides the *checkpoint partitions* (i.e., `ckpt`, `ckpt-g2`, and `ckpt-all`) for accessing idle resources outside priority accounts.  
-    - On Tillicum, use `squeue` and `sinfo` to monitor your jobs and cluster traffic. [<ins>**Learn more below**</ins>](#monitoring-jobs-and-resource-availability).
+    - On Tillicum, use `squeue` and `sinfo` to monitor your jobs and cluster traffic. [**Learn more below**](#monitoring-jobs-and-resource-availability).
 
 :::important Tillicum Usage Rates
 ***GPU Hour*** = Elapsed Time x ***N*** GPUs
@@ -114,7 +114,7 @@ Your best tool for monitoring the progress of your jobs is the `squeue` command 
 squeue -u $USER
 ```
 
-If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a maintenance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [<ins>**Guide to job reasons.**</ins>](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
+If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a maintenance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [**Guide to job reasons.**](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
 
 `sinfo` can also be helpful for checking node availability and GPU usage across the cluster. The following command provides a useful summary of node state, CPU usage, memory, and GPUs currently allocated by Slurm:
 
