@@ -11,7 +11,7 @@ tags: [datasets, shared data, data commons]
 ### Some context on `/gscratch/data`
 The Klone Data Commons is our cluster-wide, shared dataset storage located at `/gscratch/data`.
 
-Historically, we've addressed requests to add datasets to the Commons on a case-by-case basis. We've seen a growing number of these types of requests over the past few weeks, so we thought we should make the guidelines clear. That's the purpose of this blog post today, as well as the new Data Commons documentation section [<ins>**here**</ins>](https://hyak.uw.edu/docs/data-commons/requirements).
+Historically, we've addressed requests to add datasets to the Commons on a case-by-case basis. We've seen a growing number of these types of requests over the past few weeks, so we thought we should make the guidelines clear. That's the purpose of this blog post today, as well as the new Data Commons documentation section [**here**](https://hyak.uw.edu/docs/data-commons/requirements).
 
 ### Requirements
 
@@ -32,4 +32,4 @@ In order for a dataset to be approved, the following criteria must be met:
 
 ### Questions?
 
-Hopefully this clears up our expectations going forward. If you have any questions for us, please reach out to the team by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak somewhere in the subject or body. Thanks!
+Hopefully this clears up our expectations going forward. If you have any questions for us, please reach out to the team by emailing [**help@uw.edu**](mailto:help@uw.edu) with Hyak somewhere in the subject or body. Thanks!

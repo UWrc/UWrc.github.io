@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/22206944?v=4
 tags: [klone,hyak,hpc,supercomputer,storage,conda,config,quota,python,environments]
 ---
 
-It has come to our attention that the default configuration of [<ins>**Miniconda**</ins>](https://hyak.uw.edu/docs/tools/python#miniconda3) and [<ins>**conda environments**</ins>](https://hyak.uw.edu/docs/tools/python#environments) in the user's home directory leads to hitting storage limitations and the dreaded error `Disk quota exceeded`. We thought we would take some time to guide users in configuring their conda environment directories and package caches to avoid this error and proceed with their research computing. 
+It has come to our attention that the default configuration of [**Miniconda**](https://hyak.uw.edu/docs/tools/python#miniconda3) and [**conda environments**](https://hyak.uw.edu/docs/tools/python#environments) in the user's home directory leads to hitting storage limitations and the dreaded error `Disk quota exceeded`. We thought we would take some time to guide users in configuring their conda environment directories and package caches to avoid this error and proceed with their research computing. 
 
 ![Error Message](/img/blog/disk-quota-exceeded.png)
 
@@ -22,7 +22,7 @@ First let's take a look at your conda settings. The `conda info` command provide
 
 :::note
 
-The following assumes you have already installed Miniconda in your home directory or elsewhere such that `conda` is in your `$PATH`. [<ins>**Install Miniconda instructions here.**</ins>](https://hyak.uw.edu/docs/tools/python#miniconda3)
+The following assumes you have already installed Miniconda in your home directory or elsewhere such that `conda` is in your `$PATH`. [**Install Miniconda instructions here.**](https://hyak.uw.edu/docs/tools/python#miniconda3)
 
 :::
 
@@ -84,7 +84,7 @@ If you don't have a `.condarc` in your home directory, you can create and edit i
 nano ~/.condarc
 ```
 
-Edit **OR ADD** the highlighted lines to your `.condarc` to designate directories with higher storage quotas for our `envs_dirs` and `pkgs_dirs`. In this exercise, we will assign our `envs_dirs` and `pkgs_dirs` directories to directories in `/gscratch/scrubbed/` where we have more storage, [<ins>**although remember scrubbed storage is temporary and files are deleted automatically after 21 days if the timestamps are not updated**</ins>](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). Alternatively, your lab/research group might have another directory in `/gscratch/` that can be used. 
+Edit **OR ADD** the highlighted lines to your `.condarc` to designate directories with higher storage quotas for our `envs_dirs` and `pkgs_dirs`. In this exercise, we will assign our `envs_dirs` and `pkgs_dirs` directories to directories in `/gscratch/scrubbed/` where we have more storage, [**although remember scrubbed storage is temporary and files are deleted automatically after 21 days if the timestamps are not updated**](https://hyak.uw.edu/docs/storage/gscratch#scrubbed). Alternatively, your lab/research group might have another directory in `/gscratch/` that can be used. 
 
 :::important
 
@@ -203,7 +203,7 @@ Check that your pip cache has been designated.
 
 #### Configuring R
 
-[<ins>**We previously covered this in our documentation.**</ins>](https://hyak.uw.edu/docs/tools/r#user-environment) Edit or create a config file called `.Renviron` in your home directory. Use `nano` or `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
+[**We previously covered this in our documentation.**](https://hyak.uw.edu/docs/tools/r#user-environment) Edit or create a config file called `.Renviron` in your home directory. Use `nano` or `vim` to designate the location of your R package libraries. The contents of the file should be something like the following example.
 
 ```js title="~/.Renviron" 
 R_LIBS="/gscratch/scrubbed/UWNetID/R/"
@@ -212,10 +212,10 @@ The directory designated by `R_LIBS` will be where R installs your package libra
 
 ### I'm still stuck
 
-Please reach out to us by emailing [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "hyak" in the subject line to open a help ticket. 
+Please reach out to us by emailing [**help@uw.edu**](mailto:help@uw.edu) with "hyak" in the subject line to open a help ticket. 
 
 :::important Acknowledgements
 
-Several users noticed some idiosyncrasies when configuring `conda` to better use storage on Hyak. In short, by default miniconda3 uses softlinks to help preserve storage, storing one copy of essential packages (e.g., encodings) and using softlinks to make the single copy available to all conda environments. On Hyak, which utilizes a mounted filesystem server, these softlinks were broken, leading to broken environments after their first usage. We appreciate the help of the Miniconda team who helped us find a solution. More details about this can be found by [<ins>**following this link to the closed issue on Github**</ins>](https://github.com/conda/conda/issues/13923). 
+Several users noticed some idiosyncrasies when configuring `conda` to better use storage on Hyak. In short, by default miniconda3 uses softlinks to help preserve storage, storing one copy of essential packages (e.g., encodings) and using softlinks to make the single copy available to all conda environments. On Hyak, which utilizes a mounted filesystem server, these softlinks were broken, leading to broken environments after their first usage. We appreciate the help of the Miniconda team who helped us find a solution. More details about this can be found by [**following this link to the closed issue on Github**](https://github.com/conda/conda/issues/13923). 
 
 :::

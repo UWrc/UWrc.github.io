@@ -14,7 +14,7 @@ The Hyak team has taken six concrete steps to stabilize and optimize storage on 
 
 While the storage on `klone` (i.e., `mmfs1` or `gscratch`) may appear to be a monolithic device, it is an extremely complex cluster in its own right. This storage cluster is mounted on every `klone` node: so despite appearing as "on the node", `gscratch` physically resides on specialized storage hardware separated from the compute resources of `klone`. The storage is accessed across a high-speed, ultra low-latency HDR Infiniband network, and is designed to be scalable independent of KLONE’s compute resources.
 
-As mentioned in an [<ins>**earlier blog post today**</ins>](TODO), our incoming hardware expansion will drastically increase the amount of demand the storage cluster can handle. In the meantime, the Hyak team has taken measures to help maintain a usable level of storage performance for users and jobs:
+As mentioned in an [**earlier blog post today**](TODO), our incoming hardware expansion will drastically increase the amount of demand the storage cluster can handle. In the meantime, the Hyak team has taken measures to help maintain a usable level of storage performance for users and jobs:
 
 ### 1. Improved internal storage metrics gathering and visibility.
 
@@ -76,5 +76,5 @@ So far, this appears to be very effective at moderating the overall storage load
 Acknowledging that the storage sub-system is a complicated machine in its own right, it needs much more care and attention and the current Hyak team is stretched incredibly thin as is. We have started the process of hiring a dedicated research data storage systems engineer to focus on optimizing storage going forward. 
 
 **See also:**
-* [<ins>**A summary of the state of the union on `klone` storage**</ins>](/blog/klone-storage-update).
-* [<ins>**Things you as a researcher using `klone` can do to optimize your storage use**</ins>](/blog/klone-users-storage-optimizations).
+* [**A summary of the state of the union on `klone` storage**](/blog/klone-storage-update).
+* [**Things you as a researcher using `klone` can do to optimize your storage use**](/blog/klone-users-storage-optimizations).

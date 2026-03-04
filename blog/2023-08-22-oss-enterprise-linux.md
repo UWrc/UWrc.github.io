@@ -10,21 +10,21 @@ tags: [linux, centos, rhel, rocky, suse, openela]
 
 ### Rocky Linux
 
-Hyak uses [<ins>**Rocky Linux**</ins>](https://rockylinux.org/) on our compute nodes, our login nodes, and our backend nodes. We switched from CentOS to Rocky in early 2022, after Red Hat permanently ended CentOS development, and we wrote a blog post about our transition [<ins>**here**</ins>](https://hyak.uw.edu/blog/rocky-linux).
+Hyak uses [**Rocky Linux**](https://rockylinux.org/) on our compute nodes, our login nodes, and our backend nodes. We switched from CentOS to Rocky in early 2022, after Red Hat permanently ended CentOS development, and we wrote a blog post about our transition [**here**](https://hyak.uw.edu/blog/rocky-linux).
 
 Operating system migrations are difficult, and we were hoping to use Rocky for as long as possible. Now—less than two years after our change—Red Hat has thrown another curveball at the open-source enterprise Linux community.
 
 ### The Latest from Red Hat
 
-You can read the update about Red Hat source code here: [<ins>**Furthering the evolution of CentOS Stream**</ins>](https://www.redhat.com/en/blog/furthering-evolution-centos-stream).
+You can read the update about Red Hat source code here: [**Furthering the evolution of CentOS Stream**](https://www.redhat.com/en/blog/furthering-evolution-centos-stream).
 
 Our team doesn't have any position on these changes, but we understand the implication: this may make downstream, bug-for-bug compatible Linuxes—like Rocky—more difficult to maintain.
 
-You can read Rocky Linux's official response here: [<ins>**Rocky Linux Expresses Confidence Despite Red Hat's Announcement**</ins>](https://rockylinux.org/news/2023-06-22-press-release/).
+You can read Rocky Linux's official response here: [**Rocky Linux Expresses Confidence Despite Red Hat's Announcement**](https://rockylinux.org/news/2023-06-22-press-release/).
 
 The Rocky Linux team's confidence belies the significance of Red Hat's change. Red Hat's blog post—a mere 318 words—sparked colossal action. Multiple corporations, including tech giants SUSE and Oracle, joined forces to establish a collaborative trade association: OpenELA, the Open Enterprise Linux Association.
 
-You can read the OpenELA announcement here: [<ins>**CIQ, Oracle and SUSE Create Open Enterprise Linux Association for a Collaborative and Open Future**</ins>](https://openela.org/news/hello_world/).
+You can read the OpenELA announcement here: [**CIQ, Oracle and SUSE Create Open Enterprise Linux Association for a Collaborative and Open Future**](https://openela.org/news/hello_world/).
 
 ### What this means for Hyak
 
