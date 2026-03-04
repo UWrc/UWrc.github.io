@@ -3,7 +3,7 @@ id: nvidia_ngc
 title: NVIDIA NGC Containers
 ---
 
-In the Containers section, you learned the multiple ways in which containers can be used. In this section we will cover [<ins>**NGC (NVIDIA GPU Cloud) containers**</ins>](https://catalog.ngc.nvidia.com/) that are performance-optimized, tested, and ready to deploy on GPU.
+In the Containers section, you learned the multiple ways in which containers can be used. In this section we will cover [**NGC (NVIDIA GPU Cloud) containers**](https://catalog.ngc.nvidia.com/) that are performance-optimized, tested, and ready to deploy on GPU.
 
 Researchers can leverage GPU acceleration to train large-scale language models, enabling more efficient processing of textual datasets and advancing tasks like text generation and sentiment analysis. GPUs play a pivotal role in accelerating training and inference tasks for deep learning models, from computer vision to speech recognition, empowering researchers to tackle complex problems with unprecedented speed and scalability. GPUs accelerate compute-intensive tasks like molecular dynamics simulations or climate modeling. GPU code acceleration offers unparalleled performance and scalability for researchers across disciplines.
 
@@ -14,35 +14,35 @@ We encourage you to check out what containers are available within NGC, as in th
 
 **Apptainer Definition File**: a recipe file for an Apptainer container which contains install instructions for software to be containerized. The file extension for an Apptainer definition file is .def.
 
-**NVIDIA GPU Cloud**: A container registry that specializes in common GPU accelerated applications or GPU software development tools provided by NVIDIA. The [<ins>**NVIDIA NGC catalog**</ins>](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has a wide variety of containers for machine learning and AI applications.
+**NVIDIA GPU Cloud**: A container registry that specializes in common GPU accelerated applications or GPU software development tools provided by NVIDIA. The [**NVIDIA NGC catalog**](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has a wide variety of containers for machine learning and AI applications.
 :::
 
 ### Example container workloads
 Below we will walk through examples of how to use two of the many containers available in NGC. We will cover using the HPC (Software Develpment Kit) SDK in a couple different forms. Other examples of containers you could explore on your own include:
 
 
-- [<ins>**NVIDIA RAPIDS**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/rapidsai/containers/rapidsai): [<ins>**RAPIDS**</ins>](https://rapids.ai/) is a platform for end-to-end data science and analytics pipelines entirely on GPUs. RAPIDS contains GPU accelerated versions of popular Python libraries like [<ins>**cuDF**</ins>](https://github.com/rapidsai/cudf) for Pandas and [<ins>**cuML**</ins>](https://github.com/rapidsai/cuml) for scikit-learn.
+- [**NVIDIA RAPIDS**](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/rapidsai/containers/rapidsai): [**RAPIDS**](https://rapids.ai/) is a platform for end-to-end data science and analytics pipelines entirely on GPUs. RAPIDS contains GPU accelerated versions of popular Python libraries like [**cuDF**](https://github.com/rapidsai/cudf) for Pandas and [**cuML**](https://github.com/rapidsai/cuml) for scikit-learn.
 
 
-- [<ins>**NVIDIA Holoscan**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara-holoscan/containers/holoscan): [<ins>**Holoscan**</ins>](https://github.com/nvidia-holoscan) is a platform for AI sensor processing focusing on low-latency sensor and network connectivity, optimized libraries for data processing and AI, and core microservices to run streaming, imaging, and other applications.
+- [**NVIDIA Holoscan**](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/clara-holoscan/containers/holoscan): [**Holoscan**](https://github.com/nvidia-holoscan) is a platform for AI sensor processing focusing on low-latency sensor and network connectivity, optimized libraries for data processing and AI, and core microservices to run streaming, imaging, and other applications.
 
-- [<ins>**Open Hackathons GPU Bootcamp**</ins>](https://github.com/openhackathons-org/):
-Another great place to get started with tools that are in the HPC SDK and in the broader GPU software stack is through the [<ins>**GPU Bootcamp**</ins>](https://github.com/openhackathons-org/gpubootcamp/tree/master/). This page details how to get started with Apptainer containers for HPC and AI. It has examples in Python, C++, using OpenACC directives, and also a miniprofiler. 
+- [**Open Hackathons GPU Bootcamp**](https://github.com/openhackathons-org/):
+Another great place to get started with tools that are in the HPC SDK and in the broader GPU software stack is through the [**GPU Bootcamp**](https://github.com/openhackathons-org/gpubootcamp/tree/master/). This page details how to get started with Apptainer containers for HPC and AI. It has examples in Python, C++, using OpenACC directives, and also a miniprofiler. 
 
 :::tip Getting Started with Containers
 If you are new to containers, it may be useful to refer to the following resources to help get you started:
 
-1. **[<ins>**What is a Container?**</ins>](https://hyak.uw.edu/docs/hyak101/containers/background/#what-is-a-container)**
+1. **[**What is a Container?**](https://hyak.uw.edu/docs/hyak101/containers/background/#what-is-a-container)**
 
-2. **[<ins>**Getting Started With Apptainer**</ins>](https://hyak.uw.edu/docs/tools/containers/#apptainer-formerly-singularity)**
+2. **[**Getting Started With Apptainer**](https://hyak.uw.edu/docs/tools/containers/#apptainer-formerly-singularity)**
 
-3. **[<ins>**Containers Tutorial**</ins>](https://youtu.be/zPsvUQV_GV0)**
+3. **[**Containers Tutorial**](https://youtu.be/zPsvUQV_GV0)**
 
 :::
 
 ### Pre-requisites
 
-Please refer to the **[<ins>**Apptainer and Docker**</ins>](/docs/tools/containers)** for information on getting started with Apptainer and getting access to NGC.
+Please refer to the **[**Apptainer and Docker**](/docs/tools/containers)** for information on getting started with Apptainer and getting access to NGC.
 
 Get a summary of all the GPUs on the cluster and their current state. This will be helpful when requesting an interactive session on a GPU for the exercises below. 
 ```js
@@ -50,7 +50,7 @@ sinfo -p ckpt -O nodehost,cpusstate,freemem,gres,gresused -S nodehost | grep -v 
 ```
 
 ### NVIDIA HPC SDK 
-The [<ins>**HPC SDK**</ins>](https://developer.nvidia.com/hpc-sdk) houses compilers, libraries, and software tools that are most commonly used when working on HPC applications. Below we will demonstrate how to get started with this container. We will show how [<ins>**standard parallelization**</ins>](https://developer.nvidia.com/blog/accelerating-standard-c-with-gpus-using-stdpar/) is achieved with a mini app [<ins>**LULESH**</ins>](https://github.com/LLNL/LULESH) for hydrodynamics.
+The [**HPC SDK**](https://developer.nvidia.com/hpc-sdk) houses compilers, libraries, and software tools that are most commonly used when working on HPC applications. Below we will demonstrate how to get started with this container. We will show how [**standard parallelization**](https://developer.nvidia.com/blog/accelerating-standard-c-with-gpus-using-stdpar/) is achieved with a mini app [**LULESH**](https://github.com/LLNL/LULESH) for hydrodynamics.
 
 1. Get an interactive session on a GPU instance using some variant of the below command.
 
@@ -69,7 +69,7 @@ cd stdpar/build
 make run
 ```
 
-You can try out the other features included in the HPC SDK. This includes our profiling tools like [<ins>**Nsight systems**</ins>](https://developer.nvidia.com/nsight-systems) and the [<ins>**NVCC**</ins>](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/) compiler for CUDA codes. The HPC SDK should be your one stop shop for getting started with GPU accelerating your workloads.
+You can try out the other features included in the HPC SDK. This includes our profiling tools like [**Nsight systems**](https://developer.nvidia.com/nsight-systems) and the [**NVCC**](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/) compiler for CUDA codes. The HPC SDK should be your one stop shop for getting started with GPU accelerating your workloads.
 
 ### Gromacs
 

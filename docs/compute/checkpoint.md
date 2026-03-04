@@ -3,7 +3,7 @@ id: checkpoint
 title: Using Idle Resources
 ---
 ### Hyak's Condo Model
-The Hyak clusters operate on a condo model, the details of which are here: [<ins>**Hyak Pricing**</ins>](https://hyak.uw.edu/pricing)
+The Hyak clusters operate on a condo model, the details of which are here: [**Hyak Pricing**](https://hyak.uw.edu/pricing)
 
 The **first** component of this model is on-demand access to the resources your group has contributed. When you request resources from a partition, for example, with:
 
@@ -28,7 +28,7 @@ salloc --partition ckpt
 When we say a resource is "currently idle," that only means no running jobs are using it at this moment. "Idle" does **not** imply that you are guaranteed to receive a resource if you request it! Our job scheduler, Slurm, may already have a plan for that resource (by the lab who contributed it, or even by another checkpoint user). In other words, "currently idle" doesn't mean "idle in 5 minutes from now".
 :::
 
-You can request resources from the entire cluster's idle resources (including GPUs, regardless of whether your lab has contributed any). You can view currently idle resources, both for your lab's partition and for the whole cluster, using our `hyakalloc` command ([<ins>**further documentation here**</ins>](https://hyak.uw.edu/docs/compute/resource-monitoring#hyakalloc)).
+You can request resources from the entire cluster's idle resources (including GPUs, regardless of whether your lab has contributed any). You can view currently idle resources, both for your lab's partition and for the whole cluster, using our `hyakalloc` command ([**further documentation here**](https://hyak.uw.edu/docs/compute/resource-monitoring#hyakalloc)).
 
 :::important Checkpoint Throttling
 When the filesystem is under heavy read/write load, we may throttle checkpoint (`ckpt`) jobs to increase storage performance and prioritize general cluster navigation and contributed resources. Priority queues are never throttled since our service level agreement is on-demand access of those queues for account members if there are resources available (i.e., not being used by users from the same account). While it may appear that the compute nodes are underutilized, the filesystem server is above 90% utilization at these moments and not idle. Our IOPS Saver protocol works to balance compute and storage demands, keeping Hyak stable and responsive under I/O heavy workloads. 
@@ -60,7 +60,7 @@ The new `g2` nodes will likely run faster than the previous generation of nodes.
 
 The new `g2` nodes have a different architecture, which might offer additional optimizations. However, this could lead to differences in compilation, and if uniformity is important to you, you should consider sticking with either `ckpt` or `ckpt-g2` rather than `ckpt-all`.
 
-Please see [<ins>**this blog post**</ins>](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
+Please see [**this blog post**](https://hyak.uw.edu/blog/g1-vs-g2) for additional discussion about `g1` and `g2` node specifications and usage considerations.
 :::
 
 
@@ -79,7 +79,7 @@ Jobs submitted to this partition should be designed to:
 2. Once resumed, start their work from the last saved "checkpoint."
 
 :::info
-[<ins>**DMTCP**</ins>](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on Hyak without modifying application code. See our [<ins>**documentation**</ins>](/docs/tools/dmtcp) for more information.
+[**DMTCP**](/docs/tools/dmtcp) is a recommended tool for checkpointing many types of jobs on Hyak without modifying application code. See our [**documentation**](/docs/tools/dmtcp) for more information.
 :::
 
 :::tip What about the `--time` directive?

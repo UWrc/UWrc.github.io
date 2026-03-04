@@ -5,7 +5,7 @@ title: Set Up
 
 ### Software and data for this tutorial
 
-This tutorial offers a worked example that utilizes a container, computes against publicly available data from a genetic study focused on black cottonwood or *Populus trichocarpa* [<ins>**[1]**</ins>](https://doi.org/10.1111/1755-0998.12056), and uses Slurm to submit interactive, single batch, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel). For this tutorial, we will be using a container made based on a Neural Network called Locator [<ins>**[2]**</ins>](https://elifesciences.org/articles/54507). Locator is a set of python tools [<ins>**[3]**</ins>](https://github.com/kr-colab/locator.git) that build a neural network with TensorFlow to predict the location of organisms based on their genotype (DNA; or genetic background). The Locator container was built using a python container (version 3.8-slim-buster) with Docker [<ins>**[4]**</ins>](https://github.com/finchnSNPs/Docker_kr-colab_locator) following the Locator installation instructions. The container is publicly available on Docker Hub [<ins>**[5]**</ins>](https://hub.docker.com/repository/docker/finchnsnps/locator/general) where it can be pulled to Hyak `klone` and used with Apptainer using the following command:
+This tutorial offers a worked example that utilizes a container, computes against publicly available data from a genetic study focused on black cottonwood or *Populus trichocarpa* [**[1]**](https://doi.org/10.1111/1755-0998.12056), and uses Slurm to submit interactive, single batch, and array jobs with Slurm (i.e., submitting multiple jobs to be performed in parallel). For this tutorial, we will be using a container made based on a Neural Network called Locator [**[2]**](https://elifesciences.org/articles/54507). Locator is a set of python tools [**[3]**](https://github.com/kr-colab/locator.git) that build a neural network with TensorFlow to predict the location of organisms based on their genotype (DNA; or genetic background). The Locator container was built using a python container (version 3.8-slim-buster) with Docker [**[4]**](https://github.com/finchnSNPs/Docker_kr-colab_locator) following the Locator installation instructions. The container is publicly available on Docker Hub [**[5]**](https://hub.docker.com/repository/docker/finchnsnps/locator/general) where it can be pulled to Hyak `klone` and used with Apptainer using the following command:
 
 ```js
 # OPTIONAL : Code for reference. No need to run this now. 
@@ -33,7 +33,7 @@ The neural network is trained on genotypes from a set of organisms with known lo
 To save a little time, we have stored the locator container (`locator.sif`) and all the materials for this tutorial under `/mmfs1/sw/hyak101/basics`, and you can make a copy all the materials to a working directory for this tutorial.
 
 :::warning Limited storage in your Home directory
-Remember there is a 10GB disk storage limit in your Home directory. For our tutorials, we always recommend setting up a working directory in a location on the file system where you have a higher storage limit. For example, `/gscratch/scrubbed/` and a directory under your UW NetID (e.g., `/gscratch/scrubbed/UWNetID`). If you need more guidance, please refer to the [<ins>**Set Up Instructions from the Slurm Tutorial**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#set-up) before you begin.
+Remember there is a 10GB disk storage limit in your Home directory. For our tutorials, we always recommend setting up a working directory in a location on the file system where you have a higher storage limit. For example, `/gscratch/scrubbed/` and a directory under your UW NetID (e.g., `/gscratch/scrubbed/UWNetID`). If you need more guidance, please refer to the [**Set Up Instructions from the Slurm Tutorial**](https://hyak.uw.edu/docs/hyak101/basics/jobs#set-up) before you begin.
 :::
 
 If you have set up your working directory, execute the following command from your working directory to make a copy of the tutorial materials.
@@ -64,8 +64,8 @@ data                   locator_NN_job.slurm       loop_job.slurm    tensorflow_n
 | --------- | :-----------: |
 | `locator.sif`|   Locator container image    |
 | `data/`|   Directory containing datafiles    |
-| `data/potr_genotypes1000.txt`|   1000 subsampled SNPs from the *Populus trichocarpa* genotype matrix [<ins>**[3]**</ins>](https://doi.org/10.1111/1755-0998.12056) converted to dosage allele format (0 - homozygous for the reference allele; 1 - heterozygous; 2 - homozygous for the alternate allele).    |
-| `data/potr_genotypes.txt` | The full *Populus trichocarpa* genotype matrix [<ins>**[3]**</ins>](https://doi.org/10.1111/1755-0998.12056). This dataset is here for you to use if you want to train the full model. Run times are longer. |
+| `data/potr_genotypes1000.txt`|   1000 subsampled SNPs from the *Populus trichocarpa* genotype matrix [**[3]**](https://doi.org/10.1111/1755-0998.12056) converted to dosage allele format (0 - homozygous for the reference allele; 1 - heterozygous; 2 - homozygous for the alternate allele).    |
+| `data/potr_genotypes.txt` | The full *Populus trichocarpa* genotype matrix [**[3]**](https://doi.org/10.1111/1755-0998.12056). This dataset is here for you to use if you want to train the full model. Run times are longer. |
 | `data/potr_m_pred0.txt` `data/potr_m_pred1.txt` `data/potr_m_pred2.txt` `data/potr_m_pred3.txt` `data/potr_m_pred4.txt`| Sample origins for *Populus trichocarpa* individuals (latitude and longitude in decimal degrees). In each file, 10% of sample origins were replaced with "NA" and used as the test set of origin prediction. |
 | `locator_NN_job.slurm`|   A Slurm batch script template for submitting single job to predict the origins of **1 subset** of *Populus trichocarpa* individuals. |
 | `locator_NN_array.slurm`|   A Slurm batch script template for submitting an array job to predict the origins of **5 subsets** of *Populus trichocarpa* individuals.    |
@@ -78,13 +78,13 @@ In this tutorial we use publicly available data and software.
 
 Locator Neural Network is a copyright 2019 of C. J. Battey and released under a Non-Profit Open Software License 3.0 (NPOSL-3.0).
 
-* [<ins>**Locator publication**</ins>](https://elifesciences.org/articles/54507) Battey et al. 2020.
-* [<ins>**Locator GitHub Repository**</ins>](https://github.com/kr-colab/locator.git) C. J. Battey and University of Oregon.
-* [<ins>**Repository for the Dockerfile for Locator NN**</ins>](https://github.com/finchnSNPs/Docker_kr-colab_locator) Kristen Finch (Hyak Staff Scientist).
-* [<ins>**DockerHub Repository for the Locator NN container**</ins>](https://hub.docker.com/repository/docker/finchnsnps/locator/general) Kristen Finch (Hyak Staff Scientist).
+* [**Locator publication**](https://elifesciences.org/articles/54507) Battey et al. 2020.
+* [**Locator GitHub Repository**](https://github.com/kr-colab/locator.git) C. J. Battey and University of Oregon.
+* [**Repository for the Dockerfile for Locator NN**](https://github.com/finchnSNPs/Docker_kr-colab_locator) Kristen Finch (Hyak Staff Scientist).
+* [**DockerHub Repository for the Locator NN container**](https://hub.docker.com/repository/docker/finchnsnps/locator/general) Kristen Finch (Hyak Staff Scientist).
 
 Our adaptation of *Populus trichocarpa* genotype data and locations are licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license.
 
-* [<ins>**Populus trichocarpa Paper**</ins>](https://doi.org/10.1111/1755-0998.12056) Geraldes et al. 2013.
-* [<ins>**Original genotyping results available on DRYAD**</ins>](https://doi.org/10.5061/dryad.1051d) Geraldes et al. 2013.
+* [**Populus trichocarpa Paper**](https://doi.org/10.1111/1755-0998.12056) Geraldes et al. 2013.
+* [**Original genotyping results available on DRYAD**](https://doi.org/10.5061/dryad.1051d) Geraldes et al. 2013.
 :::

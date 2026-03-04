@@ -3,7 +3,7 @@ id: juicefs
 title: Drop In Support
 ---
 
-While it is always better to write any new programs using Kopah with tools designed for it, like boto3, sometimes that just isn't feasible. If you need to make an existing script backwards compatible with Kopah storage, [<ins>**juicefs**</ins>](https://juicefs.com/docs/community/getting-started/standalone) is a possible option. While juicefs can be a helpful tool, there are also a lot of time that you **shouldn't** use it since it also has a lot of limitations. The primary limitation is the fact that Kopah uses juicefs in whats called Standalone mode, which makes it difficult to access the same data across multiple nodes. That means if you workload requires multiple nodes (not just multiple processes since those can be ran on the same node) then juicefs likely isn't the tool for you.
+While it is always better to write any new programs using Kopah with tools designed for it, like boto3, sometimes that just isn't feasible. If you need to make an existing script backwards compatible with Kopah storage, [**juicefs**](https://juicefs.com/docs/community/getting-started/standalone) is a possible option. While juicefs can be a helpful tool, there are also a lot of time that you **shouldn't** use it since it also has a lot of limitations. The primary limitation is the fact that Kopah uses juicefs in whats called Standalone mode, which makes it difficult to access the same data across multiple nodes. That means if you workload requires multiple nodes (not just multiple processes since those can be ran on the same node) then juicefs likely isn't the tool for you.
 
 ## Installation
 
@@ -17,7 +17,7 @@ or alternatively you can copy the Hyak binary to your current directory with `mv
 
 ## Usage
 
-It is strongly discouraged, and very inconvenient, to hard code your Kopah keys to any scripts or commands, so before continuing it is recommended to follow the [<ins>**s5cmd setup**</ins>](cli.md) instructions to create environment variables of your keys so that you can easily access them. Once you have your variables set up you can create a juicefs bucket with
+It is strongly discouraged, and very inconvenient, to hard code your Kopah keys to any scripts or commands, so before continuing it is recommended to follow the [**s5cmd setup**](cli.md) instructions to create environment variables of your keys so that you can easily access them. Once you have your variables set up you can create a juicefs bucket with
 
 ```bash
 juicefs format --storage s3 --bucket $S3_ENDPOINT_URL/<bucket_name> --access-key $AWS_ACCESS_KEY_ID --secret-key $AWS_SECRET_KEY_ID sqlite3://<db_name>.db <db_name>

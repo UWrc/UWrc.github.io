@@ -59,7 +59,7 @@ module.exports = {
 
 ---
 
-**Full description of possible headers (more info [<ins>**here**</ins>](https://v2.docusaurus.io/docs/markdown-features)):**
+**Full description of possible headers (more info [**here**](https://v2.docusaurus.io/docs/markdown-features)):**
 
 - `id`: A unique document id. If this field is not present, the document's `id` will default to its file name (without the extension). *(Please still explicitly include the `id` though! )*
 - `title`: The title of your document. If this field is not present, the document's `title` will default to its `id`. *(Also explicitly include the title too)*
@@ -70,4 +70,4 @@ module.exports = {
 - `description`: The description of your document, which will become the `<meta name="description" content="..."/>` and `<meta property="og:description" content="..."/>` in `<head>`, used by search engines. If this field is not present, it will default to the first line of the contents.
 - `image`: Cover or thumbnail image that will be used when displaying the link to your post.
 
-**More information about sidebars [<ins>**here**</ins>](https://docusaurus.io/docs/sidebar).**
+**More information about sidebars [**here**](https://docusaurus.io/docs/sidebar).**

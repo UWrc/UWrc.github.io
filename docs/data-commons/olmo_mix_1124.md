@@ -11,12 +11,12 @@ This dataset is only available on **Tillicum**.
 Sponsoring groups are Noah A. Smith, Luke Zettlemoyer, and Jeffrey Heer. Student users are Rahul Nadkarni, Luiza Pozzobon, and Emily Reif. Initial deployment of **Sep 2025**.
 
 ## What is this?
-This is a collection of data used to train the OLMo-2-1124 language models. You can find more information on the dataset at the [<ins>**Hugging Face datasets link**</ins>](https://huggingface.co/datasets/allenai/olmo-mix-1124) or in the [<ins>**OLMo 2 tech report**</ins>](https://arxiv.org/pdf/2501.00656). The original dataset was released on November 2024 under the Open Data Commons Attribution License (ODC-By) v1.0 [<ins>**license**</ins>](https://opendatacommons.org/licenses/by/1-0/), and its use is also subject to [<ins>**Common Crawl's Terms of Use**</ins>](https://commoncrawl.org/terms-of-use).
+This is a collection of data used to train the OLMo-2-1124 language models. You can find more information on the dataset at the [**Hugging Face datasets link**](https://huggingface.co/datasets/allenai/olmo-mix-1124) or in the [**OLMo 2 tech report**](https://arxiv.org/pdf/2501.00656). The original dataset was released on November 2024 under the Open Data Commons Attribution License (ODC-By) v1.0 [**license**](https://opendatacommons.org/licenses/by/1-0/), and its use is also subject to [**Common Crawl's Terms of Use**](https://commoncrawl.org/terms-of-use).
 
 ## How to prepare for use?
 This serves as instructions for the research computing team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
-Download data from Hugging Face datasets repo [<ins>**HERE**</ins>](https://huggingface.co/datasets/allenai/olmo-mix-1124).
+Download data from Hugging Face datasets repo [**HERE**](https://huggingface.co/datasets/allenai/olmo-mix-1124).
 
 The format of the dataset is json files compressed using gzip.
 

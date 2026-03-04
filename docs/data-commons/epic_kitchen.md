@@ -12,11 +12,11 @@ Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are
 
 ## What is this?
 Epic kitchens is a large-scale dataset in first-person (egocentric) vision; multi-faceted, audio-visual, non-scripted recordings in native environments - i.e. the wearers' homes, capturing all daily activities in the kitchen over multiple days. Annotations are collected using a 'Pause-and-Talk' narration interface.
-You can learn more at their website [<ins>**here**</ins>](https://epic-kitchens.github.io/2024) or from their paper [<ins>**here**</ins>](https://openaccess.thecvf.com/content_ECCV_2018/html/Dima_Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html).
+You can learn more at their website [**here**](https://epic-kitchens.github.io/2024) or from their paper [**here**](https://openaccess.thecvf.com/content_ECCV_2018/html/Dima_Damen_Scaling_Egocentric_Vision_ECCV_2018_paper.html).
 
 ## How to prepare for use?
 
-Install [<ins>**decord**</ins>](https://github.com/dmlc/decord) on your python environment to read the video files. You can also use other libraries to read video frames. Popular ones include [<ins>**OpenCV**</ins>](https://stackoverflow.com/questions/41441150/how-to-read-video-files-using-python-opencv), and [<ins>**skvideo**</ins>](https://www.scikit-video.org/stable/).
+Install [**decord**](https://github.com/dmlc/decord) on your python environment to read the video files. You can also use other libraries to read video frames. Popular ones include [**OpenCV**](https://stackoverflow.com/questions/41441150/how-to-read-video-files-using-python-opencv), and [**skvideo**](https://www.scikit-video.org/stable/).
 
 ```python
 from decord import VideoReader, cpu
@@ -29,7 +29,7 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 
 ## How to access?
 
-The epic kitchens dataset and benchmarks on this page are copyright by us and published under the [<ins>**Creative Commons Attribution-NonCommercial 4.0 International License**</ins>](https://creativecommons.org/licenses/by-nc/4.0/).
+The epic kitchens dataset and benchmarks on this page are copyright by us and published under the [**Creative Commons Attribution-NonCommercial 4.0 International License**](https://creativecommons.org/licenses/by-nc/4.0/).
 
 The file path for epic kitchens dataset on `klone` is `/data/epic_kitchens`.
 

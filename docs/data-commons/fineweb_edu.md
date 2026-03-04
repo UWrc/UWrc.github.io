@@ -13,7 +13,7 @@ Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Yulia Tsvetkov. Studen
 ## What is this?
 FineWeb-Edu is a textual dataset of 1.3T tokens from educational web pages filtered from FineWeb (a 15T token dataset derived from 96 CommonCrawl snapshots). 
 
-You can learn more from [<ins>**this introductory blog post**</ins>](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1).
+You can learn more from [**this introductory blog post**](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1).
 
 ## How to prepare for use?
 
@@ -99,7 +99,7 @@ print(f"Dataset saved to {save_dir}")
 
 ### Tillicum
 
-Download data from Hugging Face datasets repo [<ins>**HuggingFaceFW/fineweb-edu**</ins>](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu).
+Download data from Hugging Face datasets repo [**HuggingFaceFW/fineweb-edu**](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu).
 
 The format of the dataset is Parquet files.
 

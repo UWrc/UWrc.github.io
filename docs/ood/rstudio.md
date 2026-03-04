@@ -3,19 +3,19 @@ id: rstudio
 title: Rstudio
 ---
 
-R is a language used for statistical computing and data analysis. For ease of use, R can be used via Rstudio, an integrated development environment (IDE) that supports both R and Python languages. For more information, refer to the documentation pages for [<ins>**R**</ins>](https://www.r-project.org/about.html) and [<ins>**Rstudio**</ins>](https://docs.posit.co/ide/user/). The following section will provide a walkthrough for using R and Rstudio on Hyak via Open Ondemand (OOD).
+R is a language used for statistical computing and data analysis. For ease of use, R can be used via Rstudio, an integrated development environment (IDE) that supports both R and Python languages. For more information, refer to the documentation pages for [**R**](https://www.r-project.org/about.html) and [**Rstudio**](https://docs.posit.co/ide/user/). The following section will provide a walkthrough for using R and Rstudio on Hyak via Open Ondemand (OOD).
 
 ## Rstudio Interactive App
 
 :::warning
-To access OOD off campus, you must connect to a VPN. For more information on working remotely, click [<ins>**HERE**</ins>](https://it.uw.edu/guides/working-remotely/working-remotely/#connect). 
+To access OOD off campus, you must connect to a VPN. For more information on working remotely, click [**HERE**](https://it.uw.edu/guides/working-remotely/working-remotely/#connect). 
 :::
 
-To access the Rstudio interactive app, navigate to the OOD portal [<ins>**HERE**</ins>](https://ondemand.hyak.uw.edu/pun/sys/dashboard) and select Rstudio from the drop down menu of interactive apps from the dashboard at the top of the page. Similar to Hyak's job scheduler Slurm, this form allows you to select the account and partition for your job. To use community idle resources, select the `ckpt` partition. 
+To access the Rstudio interactive app, navigate to the OOD portal [**HERE**](https://ondemand.hyak.uw.edu/pun/sys/dashboard) and select Rstudio from the drop down menu of interactive apps from the dashboard at the top of the page. Similar to Hyak's job scheduler Slurm, this form allows you to select the account and partition for your job. To use community idle resources, select the `ckpt` partition. 
 
 You are also able to select a Rstudio server container that is provided from the rocker project. Alternatively, you may use a custom container by selecting "Custom" and specifying the absolute path to the container (e.g. `/mmfs1/sw/ondemand/containers/rstudio/sifs/tidyverse-27jan2025.sif`). Below we demonstrate how to build your own custom R container. 
 
-Once you specify the Rstudio server container, you have the option to change the User R Library Path (R_LIBS_USER). When you use the `install.packages()` command, the package library along with all of its dependencies will be installed in the directory specified with the User R Library path (R_LIBS_USER) field. This path defines the library location where R stores packages. By default, this is the path to your [<ins>**home directory**</ins>](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory) which has a 10G storage limit. If you plan on using `install.packages()`, it is recommended to change the User R Library Path to somewhere with a larger storage quota to install libraries. 
+Once you specify the Rstudio server container, you have the option to change the User R Library Path (R_LIBS_USER). When you use the `install.packages()` command, the package library along with all of its dependencies will be installed in the directory specified with the User R Library path (R_LIBS_USER) field. This path defines the library location where R stores packages. By default, this is the path to your [**home directory**](https://hyak.uw.edu/docs/storage/gscratch/#user-home-directory) which has a 10G storage limit. If you plan on using `install.packages()`, it is recommended to change the User R Library Path to somewhere with a larger storage quota to install libraries. 
 
 ![Sample Rstudio form on Hyak's OOD.](/img/docs/ood/rstudio-interactive-app.JPG 'Rstudio form.')
 Once you click Launch, you should see your job under the "My Interactive Sessions" tab. It may take some time for your job to move through the queue depending on the amount of resources requested. Once your job has the requested resources, you will be able to connect to the Rstudio server:
@@ -98,14 +98,14 @@ base container.
 
 Some prebuilt containers are tailored for specific types of workflows and can save time setting up complex environments:
 
-1. [<ins>**Rstudio server container**</ins>](https://hub.docker.com/r/tuftsttsrt/rserver) from Tufts University HPC.
-This container has various [<ins>**CRAN**</ins>](https://github.com/TuftsHPCbioinfo/rstudio_server/blob/main/cran_package_list.txt) and
- [<ins>**Bioconductor**</ins>](https://github.com/TuftsHPCbioinfo/rstudio_server/blob/main/bioc_package_list.txt) packages installed.
+1. [**Rstudio server container**](https://hub.docker.com/r/tuftsttsrt/rserver) from Tufts University HPC.
+This container has various [**CRAN**](https://github.com/TuftsHPCbioinfo/rstudio_server/blob/main/cran_package_list.txt) and
+ [**Bioconductor**](https://github.com/TuftsHPCbioinfo/rstudio_server/blob/main/bioc_package_list.txt) packages installed.
 
-2. [<ins>**Single Cell RNA-seq container**</ins>](https://hub.docker.com/r/yzhangtufts/r-scrnaseq) from Tufts University HPC.
-This container has a large range of **[<ins>**bioinformatics packages**</ins>](https://github.com/TuftsHPCbioinfo/r-scrnaseq/blob/main/Dockerfile)** that are
+2. [**Single Cell RNA-seq container**](https://hub.docker.com/r/yzhangtufts/r-scrnaseq) from Tufts University HPC.
+This container has a large range of **[**bioinformatics packages**](https://github.com/TuftsHPCbioinfo/r-scrnaseq/blob/main/Dockerfile)** that are
 useful for scRNseq analysis.
 
-3. [<ins>**Rocker project containers**</ins>](https://hub.docker.com/u/rocker). These containers are useful for running R and Rstudio Server environments with a variety of preinstalled packages. For more information regarding the specifications of each container, please refer to the [<ins>**Rocker Project website**</ins>](https://rocker-project.org/).
+3. [**Rocker project containers**](https://hub.docker.com/u/rocker). These containers are useful for running R and Rstudio Server environments with a variety of preinstalled packages. For more information regarding the specifications of each container, please refer to the [**Rocker Project website**](https://rocker-project.org/).
 
 :::

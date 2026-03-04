@@ -4,20 +4,20 @@ title: Scheduling Jobs
 sidebar-label: Scheduling Jobs
 ---
 
-`klone` uses the [<ins>**Slurm**</ins>](https://slurm.schedmd.com/overview.html) job scheduler. When you first ssh into `klone` you land on one of the two login nodes (e.g., `klone-login01`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should never use login nodes for heavy computing and automated mechanisms exist to monitor and enforce violations. The tool used to notify users of violations is "arbiter2" and you will receive an email for each offending process [<ins>**(Gardner, Migacz, and Haymore 2019)**</ins>](https://hyak.uw.edu/docs/compute/scheduling-jobs#ref_arbiter).
+`klone` uses the [**Slurm**](https://slurm.schedmd.com/overview.html) job scheduler. When you first ssh into `klone` you land on one of the two login nodes (e.g., `klone-login01`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should never use login nodes for heavy computing and automated mechanisms exist to monitor and enforce violations. The tool used to notify users of violations is "arbiter2" and you will receive an email for each offending process [**(Gardner, Migacz, and Haymore 2019)**](https://hyak.uw.edu/docs/compute/scheduling-jobs#ref_arbiter).
 
 To keep the login node in stable working order and ensure fair usage of the login node as a community resource, Hyak has a job scheduling software that will give you access to other nodes (i.e., different computers that are part of the `klone` cluster). The job scheduler software is called Slurm, and regular users of Hyak need to learn how to use Slurm to effectively and efficiently make use of Hyak as a resource for research computing.
 
 :::tip Check out our tutorial Focused on Slurm
-If you are new to Hyak and using the job scheduler, Slurm, you may find our Slurm tutorial helpful to walk you through basic and advanced usage. [<ins>**Click here to jump to the tutorial.**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
-This tutorial can also be followed in video form [<ins>**HERE**</ins>](https://www.youtube.com/watch?v=iYM7xpRhp8I).
+If you are new to Hyak and using the job scheduler, Slurm, you may find our Slurm tutorial helpful to walk you through basic and advanced usage. [**Click here to jump to the tutorial.**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
+This tutorial can also be followed in video form [**HERE**](https://www.youtube.com/watch?v=iYM7xpRhp8I).
 :::
 
 ## Compute Resources
 
-The Slurm scheduler has two high-level concepts you need to know, [<ins>**accounts**</ins>](https://hyak.uw.edu/docs/compute/start-here#accounts) and [<ins>**partitions**</ins>](https://hyak.uw.edu/docs/compute/start-here#partitions).
+The Slurm scheduler has two high-level concepts you need to know, [**accounts**](https://hyak.uw.edu/docs/compute/start-here#accounts) and [**partitions**](https://hyak.uw.edu/docs/compute/start-here#partitions).
 
-With the `hyakalloc` command [<ins>**source code here**</ins>](/docs/compute/resource-monitoring#hyakalloc) you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
+With the `hyakalloc` command [**source code here**](/docs/compute/resource-monitoring#hyakalloc) you can further see not only which accounts you are able to submit jobs to but also their current utilization. Resource limits are directly proportional to what was contributed by that group.
 
 While you won't necessarily have access to them, it might be useful for you to see a list of Hyak's partitions. The `sinfo` commands contains information about the servers or nodes that compose Hyak, and the `sinfo -s` commands give you a summary for this information including the partitions and the hostnames that fall into each partition. 
 
@@ -50,9 +50,9 @@ Each partition represents a class of node from the standard `compute` partition 
 ## Job Types
 
 There are a few popular types of jobs you could submit:
-* [<ins>**interactive**</ins>](#interactive-jobs) where you and test out your workflows live,
-* [<ins>**batch**</ins>](#batch-jobs) which are unattended (you get an email when completed), and
-* [<ins>**recurring**</ins>](#null) or "CRON-like" processes that happen on a regular basis.
+* [**interactive**](#interactive-jobs) where you and test out your workflows live,
+* [**batch**](#batch-jobs) which are unattended (you get an email when completed), and
+* [**recurring**](#null) or "CRON-like" processes that happen on a regular basis.
 
 ### Slurm Arguments
 
@@ -64,8 +64,8 @@ If you are using an interactive node to run a parallel application such as Pytho
 
 | Arguments | Command Flags | Notes |
 | - | - | - |
-| Account | `-A` or `--account` | What lab are you part of? If you run the `groups` command you can see what groups (usually labs) you're a member of, these are associated with resource limits on the cluster. See the [<ins>**accounts**</ins>](#accounts) section for additional information. |
-| Partition | `-p` or `--partition` | What resource partition are you interested in using? This could be anything you see when you run `sinfo -s` as each partition corresponds to a class of nodes (e.g., high memory, GPU). See the [<ins>**partitions**</ins>](#partitions) section for additional information. |
+| Account | `-A` or `--account` | What lab are you part of? If you run the `groups` command you can see what groups (usually labs) you're a member of, these are associated with resource limits on the cluster. See the [**accounts**](#accounts) section for additional information. |
+| Partition | `-p` or `--partition` | What resource partition are you interested in using? This could be anything you see when you run `sinfo -s` as each partition corresponds to a class of nodes (e.g., high memory, GPU). See the [**partitions**](#partitions) section for additional information. |
 | Nodes | `-N` or `--nodes` | How many nodes are these resources spread across? In the overwhelming number of cases this is 1 (for a single node) but more sophisticated multi-node jobs could be run if your code supports it. |
 | Cores | `-c` or `--cpus-per-task` | How many compute cores do you need? Not all codes can make use of multiple cores and if they do, the performance of the code is not always linear with the resources requested. If in doubt consider contacting the research computing team to assist in this optimization. |
 | Memory | `--mem` | How much memory do you need for this job? This is in the format `size[units]` were size is a number and units are either `M`, `G`, or `T` for megabyte, gigabyte, and terabyte respectively. Megabyte is the default unit if none is provided. |
@@ -115,12 +115,12 @@ salloc -p <partition_name>-int -A <group_name> --time=<time> --mem=<size>G
 - If you are not allocated a session with the specified `--mem` value, try smaller memory values
 :::
 
-For more details, read the [<ins>**`salloc` man page**</ins>](https://slurm.schedmd.com/salloc.html).
+For more details, read the [**`salloc` man page**](https://slurm.schedmd.com/salloc.html).
 
 ### Slurm Environment Variables
 
 When a job scheduled by Slurm begins, it needs to about how it was scheduled, what its working directory is, who submitted the job, the number of nodes and cores allocated to it, etc.  This information is passed to Slurm via environment variables.  Additionally, these environment variables are also used as default values by programs like `mpirun`.  To view a node's Slurm environment variables, use `export | grep SLURM`.
-A comprehensive list of the environment variables Slurm sets for each job can be found at the end of the [<ins>**`sbatch` man page**</ins>](https://slurm.schedmd.com/sbatch.html).
+A comprehensive list of the environment variables Slurm sets for each job can be found at the end of the [**`sbatch` man page**](https://slurm.schedmd.com/sbatch.html).
 
 ## Batch Jobs
 
@@ -176,28 +176,28 @@ SBATCH --ntasks-per-node=40
 ## Utility Commands 
 
 With `<net_id>` as your UW NetID and `<group_name>` as your Hyak group partition name, and `<job_id>` as an individual job ID:
-- [<ins>**`sinfo`**</ins>](https://slurm.schedmd.com/sinfo.html) is used to view information about `klone` nodes and partitions. Use `sinfo -p <group_name>` to view information about your group's partition or allocation. Use `sinfo -s` to see a list of all partitions.
-- [<ins>**`squeue`**</ins>](https://slurm.schedmd.com/squeue.html) is used to view information about jobs located in the scheduling queue.  Use `squeue -p <group_name>` to view information about your group's nodes.  Use `squeue -u <net_id>` to view your jobs.
-- [<ins>**`scancel`**</ins>](https://slurm.schedmd.com/scancel.html) is used to cancel jobs.  Use `scancel <job_id>` to cancel a job with the given job ID, or use `scancel -u <net_id>` to cancel all of your jobs.
-- [<ins>**`sstat`**</ins>](https://slurm.schedmd.com/sstat.html) displays status information of a running job pertaining to CPU, Task, Node, Resident Set Size (RSS), and Virtual Memory (VM) statistics.  Read the [<ins>**man page**</ins>](https://slurm.schedmd.com/sstat.html) for a comprehensive list of format options.  
-- [<ins>**`sacct`**</ins>](https://slurm.schedmd.com/sacct.html) displays information about completed jobs.  Read the [<ins>**man page**</ins>](https://slurm.schedmd.com/sacct.html) for a comprehensive list of format options.
-- [<ins>**`sreport`**</ins>](https://slurm.schedmd.com/sreport.html) generates reports about job usage and cluster utilization from Slurm accounting (`sacct`) data.  For example, to get historical usage the group `<group_name>` in March 2020, use `sreport cluster UserUtilizationByAccount Start=2020-03-01 End=2020-03-31 Accounts=<group_name>`.
+- [**`sinfo`**](https://slurm.schedmd.com/sinfo.html) is used to view information about `klone` nodes and partitions. Use `sinfo -p <group_name>` to view information about your group's partition or allocation. Use `sinfo -s` to see a list of all partitions.
+- [**`squeue`**](https://slurm.schedmd.com/squeue.html) is used to view information about jobs located in the scheduling queue.  Use `squeue -p <group_name>` to view information about your group's nodes.  Use `squeue -u <net_id>` to view your jobs.
+- [**`scancel`**](https://slurm.schedmd.com/scancel.html) is used to cancel jobs.  Use `scancel <job_id>` to cancel a job with the given job ID, or use `scancel -u <net_id>` to cancel all of your jobs.
+- [**`sstat`**](https://slurm.schedmd.com/sstat.html) displays status information of a running job pertaining to CPU, Task, Node, Resident Set Size (RSS), and Virtual Memory (VM) statistics.  Read the [**man page**](https://slurm.schedmd.com/sstat.html) for a comprehensive list of format options.  
+- [**`sacct`**](https://slurm.schedmd.com/sacct.html) displays information about completed jobs.  Read the [**man page**](https://slurm.schedmd.com/sacct.html) for a comprehensive list of format options.
+- [**`sreport`**](https://slurm.schedmd.com/sreport.html) generates reports about job usage and cluster utilization from Slurm accounting (`sacct`) data.  For example, to get historical usage the group `<group_name>` in March 2020, use `sreport cluster UserUtilizationByAccount Start=2020-03-01 End=2020-03-31 Accounts=<group_name>`.
 
 ## Man Pages
 
 All of these man pages can also be viewed on `klone` by running `man <command>`. Exit the `man` command with `q`.
 
-- [<ins>**`sacct`**</ins>](https://slurm.schedmd.com/sacct.html)
-- [<ins>**`salloc`**</ins>](https://slurm.schedmd.com/salloc.html)
-- [<ins>**`sbatch`**</ins>](https://slurm.schedmd.com/sbatch.html)
-- [<ins>**`scancel`**</ins>](https://slurm.schedmd.com/scancel.html)
-- [<ins>**`scontrol`**</ins>](https://slurm.schedmd.com/scontrol.html)
-- [<ins>**`sinfo`**</ins>](https://slurm.schedmd.com/sinfo.html)
-- [<ins>**`squeue`**</ins>](https://slurm.schedmd.com/squeue.html)
-- [<ins>**`sreport`**</ins>](https://slurm.schedmd.com/sreport.html)
-- [<ins>**`srun`**</ins>](https://slurm.schedmd.com/srun.html)
-- [<ins>**`sstat`**</ins>](https://slurm.schedmd.com/sstat.html)
+- [**`sacct`**](https://slurm.schedmd.com/sacct.html)
+- [**`salloc`**](https://slurm.schedmd.com/salloc.html)
+- [**`sbatch`**](https://slurm.schedmd.com/sbatch.html)
+- [**`scancel`**](https://slurm.schedmd.com/scancel.html)
+- [**`scontrol`**](https://slurm.schedmd.com/scontrol.html)
+- [**`sinfo`**](https://slurm.schedmd.com/sinfo.html)
+- [**`squeue`**](https://slurm.schedmd.com/squeue.html)
+- [**`sreport`**](https://slurm.schedmd.com/sreport.html)
+- [**`srun`**](https://slurm.schedmd.com/srun.html)
+- [**`sstat`**](https://slurm.schedmd.com/sstat.html)
 
 ## References
 
-Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [<ins>**DOI: 10.1145/3332186.3333043**</ins>](https://doi.org/10.1145/3332186.3333043) [<ins>**Code: Gitlab**</ins>](https://gitlab.chpc.utah.edu/arbiter2/arbiter2) <a name="ref_arbiter" />
+Gardner, Dylan, Robben Migacz, and Brian Haymore. "Arbiter: Dynamically Limiting Resource Consumption on Login Nodes." Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (learning). 2019. 1-7. [**DOI: 10.1145/3332186.3333043**](https://doi.org/10.1145/3332186.3333043) [**Code: Gitlab**](https://gitlab.chpc.utah.edu/arbiter2/arbiter2) <a name="ref_arbiter" />

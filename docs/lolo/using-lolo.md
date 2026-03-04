@@ -3,7 +3,7 @@ id: lolo-usage
 title: Lolo Usage
 ---
 
-This guide provides step-by-step instructions for accessing, uploading, and managing data on the Lolo archival storage service. Lolo is designed for long-term storage of large research datasets that are not frequently accessed. For more information regarding costs, eligibility, and support for Lolo, please see the [<ins>**Lolo Service Information**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084).
+This guide provides step-by-step instructions for accessing, uploading, and managing data on the Lolo archival storage service. Lolo is designed for long-term storage of large research datasets that are not frequently accessed. For more information regarding costs, eligibility, and support for Lolo, please see the [**Lolo Service Information**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084).
 
 ### Accessing Lolo
 You can connect to the Lolo Archive filesystem via SSH. This includes the `ssh`, `scp` and `sftp` or tools that use those protocols (including `rsync`, but please see the note below).
@@ -53,7 +53,7 @@ nano ~/.ssh/authorized_keys
 
 ### Uploading Data
 
-Lolo performs best with large files. To optimize performance and comply with [<ins>**inode quotas**</ins>](https://hyak.uw.edu/docs/lolo/#storage-limits), combine smaller files into `.tar` or `.zip` archives before uploading:
+Lolo performs best with large files. To optimize performance and comply with [**inode quotas**](https://hyak.uw.edu/docs/lolo/#storage-limits), combine smaller files into `.tar` or `.zip` archives before uploading:
 ```js
 tar cvf mydata.tar mydata/
 ```
@@ -62,7 +62,7 @@ To transfer the archive to Lolo, you can use `rsync -W` or `scp`:
 scp mydata.tar UWNetID@lolo.uw.edu:/archive/group-name/
 # Replace UWNetID above with your UW NetID
 ```
-Combine many small files into `.tar` or `.zip` archives to comply with [<ins>**inode quotas**</ins>](https://hyak.uw.edu/docs/lolo/#storage-limits) (1,000 files per TB) and avoid uploading single files larger than 10TB. Split files into smaller archives when necessary.
+Combine many small files into `.tar` or `.zip` archives to comply with [**inode quotas**](https://hyak.uw.edu/docs/lolo/#storage-limits) (1,000 files per TB) and avoid uploading single files larger than 10TB. Split files into smaller archives when necessary.
 
 It is possible to compress and transfer files to Lolo in one step: 
 ```js
@@ -97,7 +97,7 @@ cat /archive/group-name/usage_report.txt
 ### Adding and Deleting User Access
 
 To add or delete users from your Lolo group, follow the following steps: 
-1. Proceed to the [<ins>**UW Groups Service**</ins>](https://groups.uw.edu).
+1. Proceed to the [**UW Groups Service**](https://groups.uw.edu).
 1. Click the "Find my groups" link in the "Find groups" section.
 1. In the search results section, there should be a link beginning with "u_uwlolo_" followed by the name of your group. The description of "Lolo Accounts - your group". Click the u_uwlolo_ link for your group.
 1. It will bring up a description of your group. Click the "Membership" tab link.
@@ -105,12 +105,12 @@ To add or delete users from your Lolo group, follow the following steps:
 1. Deleting users: Type the UW NetID(s) into the "Remove members" text field and click the "Do it" button. Deleted user(s) should disappear from the "Membership" section.
 1. It can take up to an 30 minutes for changes to be reflected on the Lolo system.
 
-If you need help removing data from your Lolo archives that you do not own (i.e., it is owned by a previous group member), please contact us by sending an e-mail to [<ins>**help@uw.edu**</ins>](help@uw.edu) with 'Lolo' as the first word in the subject and a brief description of your issue.
+If you need help removing data from your Lolo archives that you do not own (i.e., it is owned by a previous group member), please contact us by sending an e-mail to [**help@uw.edu**](help@uw.edu) with 'Lolo' as the first word in the subject and a brief description of your issue.
 
 ### Problems and Solutions
 
 #### Permission Denied
-If you receive a Permission Denied error when reading a file to which you have permission, this means the HSM software is having trouble reading your file from the primary tape copy and your file has to be restored from the secondary tape copy. An administrator has to perform this procedure, please contact us by sending an e-mail to [<ins>**help@uw.edu**</ins>](help@uw.edu) with 'Lolo' as the first word in the subject and a brief description of your issue.
+If you receive a Permission Denied error when reading a file to which you have permission, this means the HSM software is having trouble reading your file from the primary tape copy and your file has to be restored from the secondary tape copy. An administrator has to perform this procedure, please contact us by sending an e-mail to [**help@uw.edu**](help@uw.edu) with 'Lolo' as the first word in the subject and a brief description of your issue.
 
 #### Home Directory Quota
 Your personal home directory on Lolo is meant to store ssh keys, login scripts, and other basic account files. It is a common error to accidentally copy data to your home directory instead of to your dedicated storage under /archive/group-name. To prevent system problems and outages due to this mistake we have implemented quotas on home directories. You cannot store more than 50MB of data in your home directory.

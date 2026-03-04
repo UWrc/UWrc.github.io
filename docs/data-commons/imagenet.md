@@ -13,7 +13,7 @@ Sponsoring groups are Erik Lundberg, Rob Fatland, and Xiaosong Li. Student users
 
 Colloquially known as "ImageNet", this is the **Large Scale Visual Recognition Challenge (ILSVRC)** subset of ImageNet from 2012, which is the most highly-used subset and includes "1000 object classes and contains 1,281,167 training images, 50,000 validation images and 100,000 test images". This is a popular machine learning benchmark dataset.
 
-You can learn more at their website [<ins>**here**</ins>](https://www.image-net.org/challenges/LSVRC/index.php) or from their paper [<ins>**here**</ins>](https://link.springer.com/article/10.1007/s11263-015-0816-y).
+You can learn more at their website [**here**](https://www.image-net.org/challenges/LSVRC/index.php) or from their paper [**here**](https://link.springer.com/article/10.1007/s11263-015-0816-y).
 
 The verbatim description from their website is as follows.
 
@@ -33,12 +33,12 @@ The first three images from the test set can be seen below.
 
 This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
 
-1. Register on the ImageNet website [<ins>**here**</ins>](https://www.image-net.org/challenges/LSVRC/2012/) to agree to terms of use and receive the download links.
-2. Alternative: Accept the rules on Kaggle [<ins>**here**</ins>](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/rules) and download the dataset [<ins>**here**</ins>](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data).
+1. Register on the ImageNet website [**here**](https://www.image-net.org/challenges/LSVRC/2012/) to agree to terms of use and receive the download links.
+2. Alternative: Accept the rules on Kaggle [**here**](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/rules) and download the dataset [**here**](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data).
 
 ## How to access?
 
-By accessing this data you agree to their terms of use provided on their website [<ins>**here**</ins>](https://www.image-net.org/download.php) and below in full. Data access is available in three formats: PyTorch, SquashFS, and Direct that follow the terms of use agreement.
+By accessing this data you agree to their terms of use provided on their website [**here**](https://www.image-net.org/download.php) and below in full. Data access is available in three formats: PyTorch, SquashFS, and Direct that follow the terms of use agreement.
 
 :::caution
 [RESEARCHER_FULLNAME] (the "Researcher") has requested permission to use the ImageNet database (the "Database") at Princeton University and Stanford University. In exchange for such permission, Researcher hereby agrees to the following terms and conditions:
@@ -54,17 +54,17 @@ By accessing this data you agree to their terms of use provided on their website
 
 ### Klone
 
-1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [<ins>**here**</ins>](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
+1. **PyTorch**: You can read instructions on the `ImageNet` function within PyTorch [**here**](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageNet.html). You can provide the cluster path to the function and it should present the data set for use within your Python code.
 2. **SquashFS**: The testing, training, and validation data are also provided as SquashFS objects in the base `/data/imagenet` path on `klone` and `/gpfs/datasets/imagenet` on `tillicum`. You can mount this and use directly in your code. This is preferred due to the large number of small files.
 3. **Direct**: The file path on `klone` is `/data/imagenet` and on `tillicum` is `/gpfs/datasets/imagenet`. It is not recommend to browse these folders directly that contain all the images due to the large number of files. This is why there are accompanying `*_files.txt` files for each folder that contain all the file names within their respective folders for easier processing.
 
 ### Tillicum
 
-Please see the instructions for the [<ins>**ImageNet Object Localization Challenge**</ins>](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/overview).
+Please see the instructions for the [**ImageNet Object Localization Challenge**](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/overview).
 
 ## How to cite?
 
-Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, Alexander C. Berg and Li Fei-Fei. [<ins>**ImageNet Large Scale Visual Recognition Challenge**</ins>](https://www.image-net.org/challenges/LSVRC/index.php). *IJCV, 2015*. [<ins>**PDF**</ins>](https://link.springer.com/article/10.1007/s11263-015-0816-y).
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma, Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein, Alexander C. Berg and Li Fei-Fei. [**ImageNet Large Scale Visual Recognition Challenge**](https://www.image-net.org/challenges/LSVRC/index.php). *IJCV, 2015*. [**PDF**](https://link.springer.com/article/10.1007/s11263-015-0816-y).
 
 ```
 @article{ILSVRC15,

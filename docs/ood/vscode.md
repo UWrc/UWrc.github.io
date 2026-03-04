@@ -2,7 +2,7 @@
 id: vscode
 title: VS Code
 ---
-Visual Studio Code (VS Code) is a popular open-source code editor that supports a range of languages and extensions. We offer VS Code through [<ins>**code-server**</ins>](https://github.com/coder/code-server) as a tool for developing code on Hyak. Our OnDemand application allows users to connect to allocated compute nodes without a complicated [<ins>**ProxyJump**</ins>](https://hyak.uw.edu/docs/tools/vsc-proxy-jump) setup.
+Visual Studio Code (VS Code) is a popular open-source code editor that supports a range of languages and extensions. We offer VS Code through [**code-server**](https://github.com/coder/code-server) as a tool for developing code on Hyak. Our OnDemand application allows users to connect to allocated compute nodes without a complicated [**ProxyJump**](https://hyak.uw.edu/docs/tools/vsc-proxy-jump) setup.
 
 ## Accessing VS Code
 1. Navigate to `Interactive Apps` and select VS Code.
@@ -21,13 +21,13 @@ When launching VS Code through Open OnDemand, you can specify both a _working_ a
 
 - **Data Directory:**  
   - This is where VS Code extensions and settings are stored. If you change this directory after installing extensions, you may need to reinstall or migrate them.
-  - Keeping this separate from your working directory helps preserve your [<ins>**home directory quota**</ins>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) since extensions and cache files can consume a lot of space.  
+  - Keeping this separate from your working directory helps preserve your [**home directory quota**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) since extensions and cache files can consume a lot of space.  
   - Choosing a location with ample storage (such as personal scratch/lab space) can help prevent running out of space in your home directory.  
 
 ## FAQ
 
 ### Why can't I find an extension?
-- VS Code-Server supports extensions from the [<ins>**Open-VSX extension gallery**</ins>](https://open-vsx.org). Because of this, you may not find all available extensions on Microsoft's marketplace.
+- VS Code-Server supports extensions from the [**Open-VSX extension gallery**](https://open-vsx.org). Because of this, you may not find all available extensions on Microsoft's marketplace.
 ### How can I install my own extensions?
 - You can install your own .VSIX extension files by uploading them and installing them manually with Right Click -> Install Extension VSIX.
 ### How can I reuse my VS Code configuration?
