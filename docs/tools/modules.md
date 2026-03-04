@@ -55,7 +55,7 @@ The `klone` cluster uses the more feature-rich LMOD implementation of modules. Y
 
 ### LMOD
 
-![<ins>**LMOD logo**</ins>](../../static/img/docs/tools-modules-lmod.png)
+![**LMOD logo**](../../static/img/docs/tools-modules-lmod.png)
 
 LMOD [**documentation**](https://lmod.readthedocs.io/en/latest/) [**project page**](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) is an upgraded implementation of environment modules created by the Texas Advanced Computing Center (TACC) at the University of Texas.
 
