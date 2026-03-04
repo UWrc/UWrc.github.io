@@ -283,7 +283,7 @@ There are other text editors you could choose from. `vim` is a popular choice. I
 
 Let's type a few lines of text.
 
-![<ins>****</ins>](/img/docs/hyak101/basics/draft_nano.png 'nano')
+![Nano](/img/docs/hyak101/basics/draft_nano.png 'nano')
 
 Once we’re happy with our text, we can press `Ctrl`+`O` (press the `Ctrl` or `Control` key and, while holding it down, press the `O` key) to write our data to disk. We will be asked to provide a name for the file that will contain our text. Press Return to accept the suggested default of `draft.txt`.
 
