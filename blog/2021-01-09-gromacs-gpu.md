@@ -12,7 +12,7 @@ tags: [gromacs, molecular dynamics, md, gpu, cuda, cuda11]
 During the January 12, 2021 mox maintenance period long overdue package updates will be applied. The most user impactful upgrade is the GPU driver from to 418.40.04 to 460.27.04 that will allow for CUDA 11 support (up from CUDA 10).
 :::
 
-The second most widely used GPU-enabled workflow on HYAK (besides machine learning) is molecular dynamics (MD) so we wanted to test one of the most popular MD codes, gromacs [<ins>**source**</ins>](https://www.gromacs.org/about.html), and ensure this driver upgrade wouldn't negatively impact our researchers. I couldn't find gromacs compiled with GPU support currently in our module collection so I used it as an opportunity to create one for you all, read on!
+The second most widely used GPU-enabled workflow on HYAK (besides machine learning) is molecular dynamics (MD) so we wanted to test one of the most popular MD codes, gromacs [**source**](https://www.gromacs.org/about.html), and ensure this driver upgrade wouldn't negatively impact our researchers. I couldn't find gromacs compiled with GPU support currently in our module collection so I used it as an opportunity to create one for you all, read on!
 
 :::warning
 This is an exercise to demonstrate the support for molecular dynamics on GPUs as a proof-of-concept. Scientific verification of the software compile options (e.g., single-precision) and its results is the responsibility of the researcher.
@@ -67,7 +67,7 @@ CUDA runtime:       11.10
 
 ### Test simulation of Lysozyme
 
-I used a tutorial from the gromacs website [<ins>**here**</ins>](https://tutorials.gromacs.org) to show it runs processes on GPU(s). The tutorial runs an MD simulation on a lysozyme but that's the extent of my study there. The commands below are a summary of the tutorial with a note that the `genbox` subcommand is now replaced by `solvate`.
+I used a tutorial from the gromacs website [**here**](https://tutorials.gromacs.org) to show it runs processes on GPU(s). The tutorial runs an MD simulation on a lysozyme but that's the extent of my study there. The commands below are a summary of the tutorial with a note that the `genbox` subcommand is now replaced by `solvate`.
 
 ```js
 gmx pdb2gmx -f 1LYD.pdb -water tip3p
@@ -112,11 +112,11 @@ You need CUDA11, GNU Compiler, and OpenBLAS library for the version I put togeth
 2. Try other math libraries (e.g., MKL) and see if it speeds things up.
 3. Add in MPI support if you want to use multiple GPUs across multiple nodes.
 4. Add in modules (e.g., PLUMED).
-5. Other stuff I can't think of with compile flags [<ins>**here**</ins>](https://manual.gromacs.org/documentation/2020/install-guide/index.html).
+5. Other stuff I can't think of with compile flags [**here**](https://manual.gromacs.org/documentation/2020/install-guide/index.html).
 
 ### Download Source
 
-From the login node I staged a folder in the [<ins>**modules**</ins>](/docs/tools/modules) directory.
+From the login node I staged a folder in the [**modules**](/docs/tools/modules) directory.
 
 ```js
 cd /sw/gromacs/2020.4-cuda11.1
@@ -128,7 +128,7 @@ Grab regression tests.
 wget http://gerrit.gromacs.org/download/regressiontests-2020.4.tar.gz
 ```
 
-Download gromacs-2020.4 [<ins>**source**</ins>](https://manual.gromacs.org/documentation/2020.4/download.html)].
+Download gromacs-2020.4 [**source**](https://manual.gromacs.org/documentation/2020.4/download.html)].
 
 ```js
 wget ftp://ftp.gromacs.org/pub/gromacs/gromacs-2020.4.tar.gz
@@ -157,7 +157,7 @@ cd gromacs-2020.4
 
 ### Pre-requisite Modules
 
-Modules loaded individually for readability but you could load all modules in one command. Get a refresher on modules [<ins>**here**</ins>](/docs/tools/modules).
+Modules loaded individually for readability but you could load all modules in one command. Get a refresher on modules [**here**](/docs/tools/modules).
 
 ```js
 module load cmake/3.11.2

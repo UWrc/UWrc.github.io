@@ -5,13 +5,13 @@ title: Using Ollama on Hyak
 
 ## What Are Ollama LLMs?
 
-Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is recommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with [<ins>**Apptainer**</ins>](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity) and [<ins>**requesting GPU jobs**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition). 
+Ollama LLMs are large language models (LLMs) developed by Ollama. LLMs are artificial intelligence systems that understand human language. Ollama LLMs can run locally on your device and do not require constant internet connection to cloud-based servers that other LLMs may require. Because they generally require root access for installation on Hyak, it is recommended that Ollama LLMs are used through NVIDIA containers. To get started with Ollama on Hyak, you will need to be accustomed with [**Apptainer**](https://hyak.uw.edu/docs/tools/containers#apptainer-formerly-singularity) and [**requesting GPU jobs**](https://hyak.uw.edu/docs/hyak101/basics/jobs#requesting-gpus-from-a-gpu-partition). 
 
 ## Installing Ollama as a Container
 
-Conventional LLM tools require root access for installation on Hyak. To maintain system security and stability, users do not have root or sudo access. Administrative privileges, including external program installations, are reserved for system administrators. To work around this, LLMs can be used via software [<ins>**containers**</ins>](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container).
+Conventional LLM tools require root access for installation on Hyak. To maintain system security and stability, users do not have root or sudo access. Administrative privileges, including external program installations, are reserved for system administrators. To work around this, LLMs can be used via software [**containers**](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container).
 
-You can install Ollama in a container definition file. This example will use the [<ins>**NVIDIA HPC SDK**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc) container. The NVIDIA HPC SDK container has Nvidia and Cuda drivers. Create the definition file with `vim` or `nano`:
+You can install Ollama in a container definition file. This example will use the [**NVIDIA HPC SDK**](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc) container. The NVIDIA HPC SDK container has Nvidia and Cuda drivers. Create the definition file with `vim` or `nano`:
 ```js
 nano ollama.def
 ```
@@ -27,7 +27,7 @@ From: nvcr.io/nvidia/nvhpc:24.9-devel-cuda_multi-rockylinux8
 ```
 :::note Customizing Your Container
 
-In this example, the v.24.9 with RockyLinux8 NVHPC container is used. You may use other versions of NVHPC containers by modifying the `From:` line in your definition file. To view other available versions of NVHPC containers, click [<ins>**HERE**</ins>](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc/tags).
+In this example, the v.24.9 with RockyLinux8 NVHPC container is used. You may use other versions of NVHPC containers by modifying the `From:` line in your definition file. To view other available versions of NVHPC containers, click [**HERE**](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nvhpc/tags).
 
 :::
 
@@ -47,7 +47,7 @@ cp /mmfs1/sw/containers/ollama/ollama.sif .
 :::note Requesting Resources for Larger LLMs
 Depending on the size of the model you wish to run, you may want to request more resources. You can request all available memory with `--mem=0`. When requesting multiple GPUs, LLMs may run into issues distributing their memory usage across the GPUs. If the model is configured properly, this should not be an issue. You can request up to 8 GPUs (an entire GPU server). Efficiency will drop when requesting more than 8 GPUs because the GPU cards will be located on different nodes.  
 
-Note that the more resources you request may increase the wait times to get your requested resources. It can be useful to convert the `salloc` flags above into `#SBATCH` directives in a executable bash ([<ins>**sbatch**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs#batch-jobs)) script along with the commands you want Ollama to execute when anticipated wait times are long. Additional information on requesting a GPU job can be found [<ins>**HERE**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-checkpoint). 
+Note that the more resources you request may increase the wait times to get your requested resources. It can be useful to convert the `salloc` flags above into `#SBATCH` directives in a executable bash ([**sbatch**](https://hyak.uw.edu/docs/hyak101/basics/jobs#batch-jobs)) script along with the commands you want Ollama to execute when anticipated wait times are long. Additional information on requesting a GPU job can be found [**HERE**](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-checkpoint). 
 :::
 To ensure the container was properly built, start an interactive shell session:
 ```js
@@ -72,7 +72,7 @@ First, load the Conda module:
 ```js
 module load conda
 ```
-This makes the `conda` command available in your shell. If this is your first time using Conda module on Hyak, you'll need to set up custom environment and package locations to avoid writing to your home directory. See the setup instructions [<ins>**here**</ins>](https://hyak.uw.edu/blog/2025-december-maintenance#conda-environments).
+This makes the `conda` command available in your shell. If this is your first time using Conda module on Hyak, you'll need to set up custom environment and package locations to avoid writing to your home directory. See the setup instructions [**here**](https://hyak.uw.edu/blog/2025-december-maintenance#conda-environments).
 
 You can now create and manage your own environment for Ollama:
 ```js
@@ -87,7 +87,7 @@ Ollama and its Python client are now ready to use in your Conda environment.
 
 ## Managing Your Ollama Storage
 
-By default, pulled Ollama models will save in your [<ins>**home directory**</ins>](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) in a hidden file named `.ollama`. Because your home directory has a 10GB limit, you may get a disk quota error when pulling larger models. Use the following commands to check the storage in your home directory and to list all hidden files:
+By default, pulled Ollama models will save in your [**home directory**](https://hyak.uw.edu/docs/storage/gscratch#user-home-directory) in a hidden file named `.ollama`. Because your home directory has a 10GB limit, you may get a disk quota error when pulling larger models. Use the following commands to check the storage in your home directory and to list all hidden files:
 ```js
 cd ~ # changing to your home directory
 ls -a # lists all hidden files

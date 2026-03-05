@@ -3,7 +3,7 @@ id: ood
 title: Open OnDemand
 ---
 
-[<ins>**Open OnDemand (OOD)**</ins>](https://tillicum-ood.hyak.uw.edu/) is a web-based portal that provides an integrated, single access point for remote HPC Cluster.
+[**Open OnDemand (OOD)**](https://tillicum-ood.hyak.uw.edu/) is a web-based portal that provides an integrated, single access point for remote HPC Cluster.
 
 It enables you to perform many common tasks without CLI, including:
 
@@ -13,7 +13,7 @@ It enables you to perform many common tasks without CLI, including:
 - Displaying remote desktop for software graphical interface (e.g., MATLAB, COMSOL)
 
 :::info
-UW VPN is required to access OOD if you are off-campus. You can find instructions on how to connect to the UW VPN [<ins>**here**</ins>](https://itconnect.uw.edu/tools-services-support/networks-connectivity/husky-onnet/installing-configuring-and-using-husky-onnet/).
+UW VPN is required to access OOD if you are off-campus. You can find instructions on how to connect to the UW VPN [**here**](https://itconnect.uw.edu/tools-services-support/networks-connectivity/husky-onnet/installing-configuring-and-using-husky-onnet/).
 :::
 
 ## JupyterLab and Jupyter Notebook
@@ -65,7 +65,7 @@ conda install ipykernel
 
 **Step 2: Register Your Environment as a Jupyter Kernel**
 
-Run `ipykernel install` in your activated environment to set up a Jupyter [<ins>**kernelspec**</ins>](https://jupyter-client.readthedocs.io/en/latest/kernels.html).
+Run `ipykernel install` in your activated environment to set up a Jupyter [**kernelspec**](https://jupyter-client.readthedocs.io/en/latest/kernels.html).
 
 ```js
 python -m ipykernel install --user --name myenv --display-name "Python (myenv)"

@@ -60,10 +60,10 @@ Below you will be prompted to do this, but we wanted to give you the tools to se
 #### A Keypair to navigate between nodes on `klone` with ssh.
 
 :::warning
-Here is where things get confusing because we will use the same protocol to also generate a second keypair  and the fie names below will be repeated. If you get confused, **please read the instructions again carefully**. If you are still stuck, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak" in the subject line to ask for assistance. 
+Here is where things get confusing because we will use the same protocol to also generate a second keypair  and the fie names below will be repeated. If you get confused, **please read the instructions again carefully**. If you are still stuck, please email [**help@uw.edu**](mailto:help@uw.edu) with "Hyak" in the subject line to ask for assistance. 
 :::
 
-Your next required keypair is called an [<ins>**Intracluster SSH Key, which we explained elsewhere in our docs**</ins>](https://hyak.uw.edu/docs/setup/intracluster-keys). This pair is for navigating between nodes on `klone` with ssh (Intracluster = Within `klone`, get it?). 
+Your next required keypair is called an [**Intracluster SSH Key, which we explained elsewhere in our docs**](https://hyak.uw.edu/docs/setup/intracluster-keys). This pair is for navigating between nodes on `klone` with ssh (Intracluster = Within `klone`, get it?). 
 
 **ON `klone`** execute the following command
 ```js
@@ -190,7 +190,7 @@ Or you can do the same by copying your local ssh key into `~/.ssh/authorized_key
 
 #### Windows Users
 
-If your private key permissions are too open, ssh won't let you connect to klone. To solve this, change the permissions on your private key file. [<ins>**Apply this solution.**</ins>](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+If your private key permissions are too open, ssh won't let you connect to klone. To solve this, change the permissions on your private key file. [**Apply this solution.**](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
 
 ### Testing your connection
 
@@ -233,7 +233,7 @@ $ ssh klone-node
 We will use this short cut (ProxyJump) with the `Remote-SSH` extension of VS Code to connect VS Code to the open compute node on `klone`. 
 
 :::tip PRO TIP
-Manually editing `~/.ssh/klone-node-config` every time you want to connect VS Code is tedious and prone to error. Use the following bash script **ON YOUR COMPUTER** to get the hostname of the compute node you wish to connect to with your ProxyJump. [<ins>**Download the script here**</ins>](https://hyak.uw.edu/files/set-hyak-node.sh).
+Manually editing `~/.ssh/klone-node-config` every time you want to connect VS Code is tedious and prone to error. Use the following bash script **ON YOUR COMPUTER** to get the hostname of the compute node you wish to connect to with your ProxyJump. [**Download the script here**](https://hyak.uw.edu/files/set-hyak-node.sh).
 
 **WARNING this script doesn'tusually work on Windows since bash and sed are not available. If might work if your re on Windows with WSL or Gitbash. MOREOVER, it might not work if you have a different version of sed**
 
@@ -290,7 +290,7 @@ After two-factor authentication and when any remaining remote extensions are ins
 
 ![Connected to klone-node](/img/docs/vscode/VSCode-Connected.png 'Connected to klone-node')
 
-Via this method, Windows users may have to provide two-factor authentication when changing directories. A better alternative for Windows users might be to connect [<ins>**VS Code via Code-server**</ins>](tools/vsc-code-server.md).
+Via this method, Windows users may have to provide two-factor authentication when changing directories. A better alternative for Windows users might be to connect [**VS Code via Code-server**](tools/vsc-code-server.md).
 
 ### End the Session
 
@@ -302,4 +302,4 @@ And end the job on the compute node with `scancel` on `klone` like the following
 scancel --name vsc-proxy-jump
 ```
 
-If you have trouble with this method, please report errors in an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the message.
+If you have trouble with this method, please report errors in an email to [**help@uw.edu**](mailto:help@uw.edu) with Hyak in the message.

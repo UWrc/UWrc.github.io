@@ -20,25 +20,25 @@ If you have a GPU partition, you can start an interactive session on a GPU node 
 salloc --account=account --partition=gpu-rtx6k --gpus=1 --mem=10G --time=2:00:00
 # Replace the account and partition flags to match your account and partitions.
 ```
-If you are unsure if your accounts have GPU partitions, use the `hyakalloc` command to see all of your available resources. A detailed walkthrough for requesting a GPU job can be found [<ins>**HERE**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-a-gpu-partition).
+If you are unsure if your accounts have GPU partitions, use the `hyakalloc` command to see all of your available resources. A detailed walkthrough for requesting a GPU job can be found [**HERE**](https://hyak.uw.edu/docs/hyak101/basics/jobs/#requesting-gpus-from-a-gpu-partition).
 
 
 :::note GPU Types on Hyak
 You now know how to view all GPUs supported on Hyak with the `sinfo -s` command. Additional information about each GPU is listed below:
 
-**<ins>L40 and L40s</ins>**: 48GB of GDDR6 memory per GPU card
+**L40 and L40s**: 48GB of GDDR6 memory per GPU card
 
-**<ins>A40</ins>**: 48GB of GDDR6 memory per GPU card
+**A40**: 48GB of GDDR6 memory per GPU card
 
-**<ins>2080 Ti</ins>**: 11GB of GDDR6 memory per GPU card
+**2080 Ti**: 11GB of GDDR6 memory per GPU card
 
-**<ins>Titan</ins>**: 24GB of GDDR6 memory per GPU card
+**Titan**: 24GB of GDDR6 memory per GPU card
 
-**<ins>RTX6k</ins>**: 48GB of GDDR6 memory per GPU card
+**RTX6k**: 48GB of GDDR6 memory per GPU card
 
-**<ins>A100</ins>**: 40GB of HBM2 memory per GPU card
+**A100**: 40GB of HBM2 memory per GPU card
 
-**<ins>P100</ins>**: 16GB of HBM2 memory per GPU card
+**P100**: 16GB of HBM2 memory per GPU card
 
 :::
 

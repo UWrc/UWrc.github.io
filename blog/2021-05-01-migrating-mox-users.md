@@ -8,7 +8,7 @@ author_image_url: https://avatars3.githubusercontent.com/u/1252858?s=400&v=4
 tags: [mox, klone, hyak, hpc, supercomputer, launch, features]
 ---
 
-If you were previously a proficient `mox` user and now find yourself on `klone`, what's new / different? This is a high-level summary, please consult the documentation [<ins>**link**</ins>](/docs) for more details.
+If you were previously a proficient `mox` user and now find yourself on `klone`, what's new / different? This is a high-level summary, please consult the documentation [**link**](/docs) for more details.
 
 :::note
 Updated **August 10, 2021** to include additional information specific for GPU users.
@@ -45,6 +45,6 @@ Updated **August 10, 2021** to include additional information specific for GPU u
 
 ### Software
 
-* Singularity containers work the same on both clusters, we encourage this when possible. Refer to our container documentation [<ins>**link**</ins>](/docs/tools/containers).
-* Modules is updated to the latest versions of the most core parts that the Hyak team maintains (e.g., gcc, Intel, Matlab). Refresh yourself about modules [<ins>**link**</ins>](/docs/tools/modules).
-* If neither Singularity nor existing modules works for you, you may have to re-compile your codes on `klone`. "contrib" modules works different now on `klone` vs `mox`, please check out the details [<ins>**link**</ins>](/docs/tools/modules#how-do-i-create-shared-lmod-modules-on-klone).
+* Singularity containers work the same on both clusters, we encourage this when possible. Refer to our container documentation [**link**](/docs/tools/containers).
+* Modules is updated to the latest versions of the most core parts that the Hyak team maintains (e.g., gcc, Intel, Matlab). Refresh yourself about modules [**link**](/docs/tools/modules).
+* If neither Singularity nor existing modules works for you, you may have to re-compile your codes on `klone`. "contrib" modules works different now on `klone` vs `mox`, please check out the details [**link**](/docs/tools/modules#how-do-i-create-shared-lmod-modules-on-klone).

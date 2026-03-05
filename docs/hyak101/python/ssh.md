@@ -14,7 +14,7 @@ Please note we will be doing some additional work on these files in the next sec
 
 ### Your configuration on the cluster
 There's really only one thing that needs to be set up on the cluster: your intracluster keys.
-Like many other parts of this guide, we [<ins>**already have instructions**</ins>](https://hyak.uw.edu/docs/setup/ssh#intracluster-ssh-keys) on this, but since we're keeping this guide self-contained, we'll go through it again here:
+Like many other parts of this guide, we [**already have instructions**](https://hyak.uw.edu/docs/setup/ssh#intracluster-ssh-keys) on this, but since we're keeping this guide self-contained, we'll go through it again here:
 
 If you haven't already done so, log in to the cluster & generate an intracluster SSH key:
 ```js
@@ -35,9 +35,9 @@ chmod 600 ~/.ssh/authorized_keys
 :::caution 
 The next set of instructions differ for **Mac/Linux users** and **Windows users**. 
 
-[<ins>**Jump to Mac/Linux Instructions**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh#mac-linux-users-a-set-of-customized-local-configurations)
+[**Jump to Mac/Linux Instructions**](https://hyak.uw.edu/docs/hyak101/python/ssh#mac-linux-users-a-set-of-customized-local-configurations)
 
-[<ins>**Jump to Windows Instructions**</ins>](https://hyak.uw.edu/docs/hyak101/python/ssh#windows-users-a-set-of-customized-local-configurations)
+[**Jump to Windows Instructions**](https://hyak.uw.edu/docs/hyak101/python/ssh#windows-users-a-set-of-customized-local-configurations)
 
 :::
 
@@ -213,7 +213,7 @@ ssh-copy-id klone-login
 
 **Windows may or may not require a permissions check.** 
 
-If your private key permissions are too open, ssh won't let you connect to klone. To solve this, change the permissions on your private key file. [<ins>**Apply this solution.**</ins>](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
+If your private key permissions are too open, ssh won't let you connect to klone. To solve this, change the permissions on your private key file. [**Apply this solution.**](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open)
 
 :::tip EXTRA CREDIT: Testing your Connection
 The following is ***optional***, but demonstrates what we have just set up by configuring `klone-login` and `klone-node`. You will test the connection in the next section of the Hyak 101 tutorial. If you wish to test your connection now, follow these steps. 

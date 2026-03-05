@@ -7,16 +7,16 @@ title: Python
 
 Python is a scripting and general purpose programming language with a rich ecosystem of computational libraries. On Hyak it's mostly associated with Pytorch, Tensorflow, and other machine learning libraries but there are wider uses. 
 
-Since Hyak is a shared platform and you do not have root or administrative access, you will need to control your environment and install packages in a deliberate way. We offer either virtual environments through [<ins>**miniconda3**</ins>](#miniconda3) or using [<ins>**containers**</ins>](#containers) (e.g., Apptainer, Docker).
+Since Hyak is a shared platform and you do not have root or administrative access, you will need to control your environment and install packages in a deliberate way. We offer either virtual environments through [**miniconda3**](#miniconda3) or using [**containers**](#containers) (e.g., Apptainer, Docker).
 
 ## Miniconda3
 
 Miniconda3 is a leaner deployment of Python3 versus the more widely known Anaconda3 variant. While both are functionally equivalent, we encourage Miniconda3 vs Anaconda3 due to the reduced number of inodes (i.e., files) it creates.
 
-We provide a summarized version below to get started but more elaborate instructions can be found directly from [<ins>**anaconda**</ins>](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
+We provide a summarized version below to get started but more elaborate instructions can be found directly from [**anaconda**](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
 
 :::warning
-Users ofter report issues with disk storage from using Miniconda3 under its default configuration. We recommend reviewing this blog post: [<ins>**Disk Storage Management with Conda**</ins>](https://hyak.uw.edu/blog/conda-disk-storage) after you have installed Miniconda3 to avoid exceeding disk storage in your home directory while using `conda`. 
+Users ofter report issues with disk storage from using Miniconda3 under its default configuration. We recommend reviewing this blog post: [**Disk Storage Management with Conda**](https://hyak.uw.edu/blog/conda-disk-storage) after you have installed Miniconda3 to avoid exceeding disk storage in your home directory while using `conda`. 
 :::
 
 ### Install
@@ -81,7 +81,7 @@ To load the environment at this point one would run:
 conda activate /gscratch/scrubbed/npho/pytorch-cuda11
 ```
 
-Note you have to provide the full path. If you use the `--name` or `-n` option instead of the `--prefix` or `-p` option then by default your environments will be in the same place as your miniconda3 installation, likely your home directory if you used our instructions in the [<ins>**previous section**</ins>](#install). If you run only 1 environment and use only a few packages this should be fine, otherwise you'll want to use the scrubbed or your lab directories.
+Note you have to provide the full path. If you use the `--name` or `-n` option instead of the `--prefix` or `-p` option then by default your environments will be in the same place as your miniconda3 installation, likely your home directory if you used our instructions in the [**previous section**](#install). If you run only 1 environment and use only a few packages this should be fine, otherwise you'll want to use the scrubbed or your lab directories.
 
 If you are going to use a non-miniconda3 path regularly then you may want to run a variant of the command below to indicate an additional path that conda should search for your environments.
 
@@ -115,7 +115,7 @@ However, while loading environments will be a shorter command, you will still se
 If you use the alternative method of making your environment references more concise below, then removing environments will be a 2 step process just as making each more concise will be a 2 step process.
 :::
 
-Instead of adding a path to the `envs_dirs` variable as demonstrated [<ins>**above**</ins>](#environments) you can create a symbolic link for each conda environment after you create it. Modify your link command below as appropriate.
+Instead of adding a path to the `envs_dirs` variable as demonstrated [**above**](#environments) you can create a symbolic link for each conda environment after you create it. Modify your link command below as appropriate.
 
 ```js
 ln -s /gscratch/scrubbed/npho/pytorch-cuda10 ~/miniconda3/envs/
@@ -146,7 +146,7 @@ If you've followed the full page up til this point you have a blank conda enviro
 conda activate pytorch-cuda11
 ```
 
-Pytorch has a great [<ins>**install guide**</ins>](https://pytorch.org/get-started/locally/) and you can see below it provides what the commands are for whichever platform you are using and which install method you prefer. We're going with `pip` as it's the most widely known and it demonstrates how easy it is to use in a conda environment.
+Pytorch has a great [**install guide**](https://pytorch.org/get-started/locally/) and you can see below it provides what the commands are for whichever platform you are using and which install method you prefer. We're going with `pip` as it's the most widely known and it demonstrates how easy it is to use in a conda environment.
 
 Hyak runs Linux and as of January 2021 CUDA11 is the version on all the GPUs.
 
@@ -164,7 +164,7 @@ As a reminder these packages are pulled from the internet so you will need a bui
 The above `pip install` commands are equally valid for any other Python libraries.
 :::
 
-Pytorch doesn't need a GPU to run although for most machine learning projects it's indispensable. If you have an interactive session with a GPU (run `nvidia-smi` to confirm) you can verify it's all working with the following test from [<ins>**Pytorch**</ins>](https://pytorch.org/get-started/locally/#linux-verification):
+Pytorch doesn't need a GPU to run although for most machine learning projects it's indispensable. If you have an interactive session with a GPU (run `nvidia-smi` to confirm) you can verify it's all working with the following test from [**Pytorch**](https://pytorch.org/get-started/locally/#linux-verification):
 
 ```shell-session terminal=true
 (pytorch-cuda11) $ python3                                                                               Python 3.8.5 (default, Sep  4 2020, 07:30:14)
@@ -184,19 +184,19 @@ Now you have a computationally reproducible environment using Pytorch for machin
 
 There are multiple places to search for Python libraries. Whatever libraries you install are specific to whatever conda environment is loaded at the time of install.
 
-1. [<ins>**Anaconda Cloud**</ins>](https://anaconda.org)
-2. [<ins>**Python Package Index (PyPI)**</ins>](https://pypi.org)
-3. [<ins>**Conda Forge**</ins>](https://conda-forge.org)
+1. [**Anaconda Cloud**](https://anaconda.org)
+2. [**Python Package Index (PyPI)**](https://pypi.org)
+3. [**Conda Forge**](https://conda-forge.org)
 
 ## Containers (miniconda3)
 
-This section expands upon a [<ins>**Stackexchange reply**</ins>](https://stackoverflow.com/questions/54678805/containerize-a-conda-environment-in-a-singularity-container) with a walk through specific for the `klone` cluster.
+This section expands upon a [**Stackexchange reply**](https://stackoverflow.com/questions/54678805/containerize-a-conda-environment-in-a-singularity-container) with a walk through specific for the `klone` cluster.
 
-While miniconda3 is an improvement over anaconda for lean deployment, a more advanced approach is to package your entire conda environment within a (Singularity) container. As with the beauty of containers, we can use a  [<ins>**miniconda3 container provided by continuum.io**</ins>](https://hub.docker.com/r/continuumio/miniconda3) to bootstrap our environment then feed it our `environment.yml` file that specifies which Python libraries and versions to install.
+While miniconda3 is an improvement over anaconda for lean deployment, a more advanced approach is to package your entire conda environment within a (Singularity) container. As with the beauty of containers, we can use a  [**miniconda3 container provided by continuum.io**](https://hub.docker.com/r/continuumio/miniconda3) to bootstrap our environment then feed it our `environment.yml` file that specifies which Python libraries and versions to install.
 
 ### Example
 
-First we'll need to have a Singularity definition file that defines how to build our container and a corresponding YAML file that describes our environment. There is a sample `compute.def` and `compute.yml` file at the following Github gist [<ins>**HERE**</ins>](https://gist.github.com/npho/6de7dbcb59dcee47036e510659733089). Note the definition file can be generalized for any `YAML` environment you have. The `compute.yml` environment is a proof-of-concept with random packages that you may or may not care for, you should customize this with libraries tailored to your needs. With these files staged in a folder, we'll do a walk through on how to build your container below.
+First we'll need to have a Singularity definition file that defines how to build our container and a corresponding YAML file that describes our environment. There is a sample `compute.def` and `compute.yml` file at the following Github gist [**HERE**](https://gist.github.com/npho/6de7dbcb59dcee47036e510659733089). Note the definition file can be generalized for any `YAML` environment you have. The `compute.yml` environment is a proof-of-concept with random packages that you may or may not care for, you should customize this with libraries tailored to your needs. With these files staged in a folder, we'll do a walk through on how to build your container below.
 
 Get an interactive session.
 
@@ -220,7 +220,7 @@ singularity build --fakeroot /tmp/compute.sif ./compute.def
 
 Please note in the `%files` section of the definition file I set `compute.yml environment.yml` which means on the cluster in the current directory we save our conda environment definition YAML file as `compute.yml` but Singularity will copy that into the container we're building and have future reference (internally) as `environment.yml`.
 
-Consider reviewing the [<ins>**Singularity definitions reference page**</ins>](https://sylabs.io/guides/latest/user-guide/definition_files.html) for additional options.
+Consider reviewing the [**Singularity definitions reference page**](https://sylabs.io/guides/latest/user-guide/definition_files.html) for additional options.
 
 :::caution
 The build may take a few minutes depending on how big your environment is. Don't forget to copy the container from `/tmp` to your location of choice on `/gscratch`. 
@@ -245,11 +245,11 @@ When running Singularity whether as `shell` or `exec` if you need access to your
 
 ## Containers (cuda-pytorch)
 
-This section builds upon the previous section with a walk through on building a container with a [<ins>**miniconda environment**</ins>](#containers-miniconda3). The major changes are using a CUDA base image from [<ins>**NVIDIA's ngc portal**</ins>](https://ngc.nvidia.com/catalog/containers/nvidia:cuda/tags) and specifying a PyTorch install.
+This section builds upon the previous section with a walk through on building a container with a [**miniconda environment**](#containers-miniconda3). The major changes are using a CUDA base image from [**NVIDIA's ngc portal**](https://ngc.nvidia.com/catalog/containers/nvidia:cuda/tags) and specifying a PyTorch install.
 
 ### Example
 
-For this walk through please refer to the accompanying [<ins>**Github gist**</ins>](https://gist.github.com/npho/57dda32c28f5e0ab6df4948188484c95). Same as before, the Singularity definition file describes how to build the container and the YAML file describes how to build a miniconda3 environment.
+For this walk through please refer to the accompanying [**Github gist**](https://gist.github.com/npho/57dda32c28f5e0ab6df4948188484c95). Same as before, the Singularity definition file describes how to build the container and the YAML file describes how to build a miniconda3 environment.
 
 By default we suggest you use `cuda:11.4.2-base-ubuntu20.04` since it's currently the latest CUDA toolkit version, uses the bare minimal image (i.e., `base`), and is build upon Ubuntu that is more common among desktop setups (and more likely to be familiar for researchers). When building your container there are more comprehensive (and larger) images (e.g., `cuda:11.4.2-devel-ubuntu20.04`) with additional developer packages built in.
 
@@ -275,7 +275,7 @@ singularity build --fakeroot /tmp/cuda-pytorch.sif ./cuda-pytorch.def
 
 ### Run
 
-Now you can run the container. Be sure to add the `--nv` flag to specify to Singularity to pass through GPUs, refer to the[<ins>**documentation**</ins>](https://sylabs.io/guides/latest/user-guide/gpu.html) for more information.
+Now you can run the container. Be sure to add the `--nv` flag to specify to Singularity to pass through GPUs, refer to the[**documentation**](https://sylabs.io/guides/latest/user-guide/gpu.html) for more information.
 
 ```shell-session terminal=true
 [0:26:08] npho@g3024:singularity $ singularity shell --nv --bind /gscratch cuda-pytorch.sif

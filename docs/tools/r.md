@@ -3,13 +3,13 @@ id: r
 title: R and Rstudio
 ---
 
-R is a popular statistical programming language for data science and analysis. To use R on Hyak, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [<ins>**containers**</ins>](containers.md) and [<ins>**modules**</ins>](modules.md) helpful before following these instructions.
+R is a popular statistical programming language for data science and analysis. To use R on Hyak, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [**containers**](containers.md) and [**modules**](modules.md) helpful before following these instructions.
 
 ## User Environment
 
 If you use a non-custom R container you'll likely run `install.packages()` at some point. Usually on a non-shared platform like your local setup (where you have full administrative privileges) R will install things into central paths. On Hyak, R package libraries are usually installed by default in the user's Home directory, which can be problematic due to the 10GB disk storage limit. If this default setting isn't changed, users can quickly run out of storage and inodes in their Home directory and need to re-configure their R environment. 
 
-Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you created under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [<ins>**Click here to review storage on Hyak.**</ins>](https://hyak.uw.edu/docs/storage/gscratch) 
+Instead of waiting for the inevitable, we will direct R to install package libraries in a directory we choose where storage isn't limited. This might be your lab groups directory under `/gscratch/` or a directory you created under you UW Net ID, like, `/gscratch/scrubbed/UWNetID`. [**Click here to review storage on Hyak.**](https://hyak.uw.edu/docs/storage/gscratch) 
 
 :::important
 Remember to replace the word `UWNetID` in the paths below with YOUR username/UWNetID. 
@@ -37,7 +37,7 @@ mkdir /gscratch/scrubbed/UWNetID/R
 ```
 :::
 
-Now R will install packages in your designated directory instead of your Home directory, and you will avoid disk storage management issues later on. Don't forget to bind your designated directory when you run R, which we cover below and you can learn more about [<ins>**in the container tutorial**</ins>](https://hyak.uw.edu/docs/hyak101/containers/syllabus).
+Now R will install packages in your designated directory instead of your Home directory, and you will avoid disk storage management issues later on. Don't forget to bind your designated directory when you run R, which we cover below and you can learn more about [**in the container tutorial**](https://hyak.uw.edu/docs/hyak101/containers/syllabus).
 
 :::caution
 If you plan on using multiple R versions you will want to set `R_LIBS` appropriately with each different container (i.e., R version) used so packages compiled against one version of R don't conflict with another. Using sub-folders with names matching that version of R is sufficient.
@@ -45,12 +45,11 @@ If you plan on using multiple R versions you will want to set `R_LIBS` appropria
 
 ## Containers from Rocker
 
-The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R and many include various package collections. [<ins>**The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R**</ins>](https://hub.docker.com/u/rocker)
-(<ins>**https://hub.docker.com/u/rocker**</ins>). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
+The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R and many include various package collections. [**The Rocker Project on Docker hub hosts many containers that were prepared by the developers of R**](https://hub.docker.com/u/rocker). In this part of the guide, we will walk you through a few of the options and show you how to set them up for your usage on `klone`.
 
 ### R-base Container
 
-Let's say we wanted to use the most up-to-date version of base R from the Rocker Project on Docker hub [<ins>**More information here.**</ins>](https://hub.docker.com/r/rocker/r-base). There are many other versions are R available on Docker hub, and we encourage you to explore them to find the version that fits the needs of your research project. [<ins>**Explore versions here**</ins>](https://hub.docker.com/r/rocker/r-base/tags). 
+Let's say we wanted to use the most up-to-date version of base R from the Rocker Project on Docker hub [**More information here.**](https://hub.docker.com/r/rocker/r-base). There are many other versions are R available on Docker hub, and we encourage you to explore them to find the version that fits the needs of your research project. [**Explore versions here**](https://hub.docker.com/r/rocker/r-base/tags). 
 
 First start an interactive job on a compute node. Building containers is not a login-node approved activity. The following command will request a single CPU on the `ckpt` partition with 16GB of RAM for 2 hours. If your lab group owns Hyak resources, you might be able to change `--partition=ckpt` to `--partition=compute` for priority access to a node. Find out which resources you can use with the `hyakalloc` command. 
 
@@ -107,11 +106,11 @@ Error in library(tidyverse) : there is no package called ‘tidyverse’
 > 
 ```
 
-Note this R-base container has no packages except the R base packages. You can run `install.packages()` as you normally would if you were working with R locally and it will install all the files to whatever path you set `R_LIBS` to in the [<ins>**user environment**</ins>](#user-environment) instructions.
+Note this R-base container has no packages except the R base packages. You can run `install.packages()` as you normally would if you were working with R locally and it will install all the files to whatever path you set `R_LIBS` to in the [**user environment**](#user-environment) instructions.
 
 ### Tidyverse Container
 
-The most popular library for R is Tidyverse [<ins>**(More information here)**</ins>](https://www.tidyverse.org), which includes packages like `ggplot2`, `dplyr`, and others. As you can see in the [<ins>**previous section**</ins>](#base-container), it doesn't exist if we use the `r-base` Rocker container.
+The most popular library for R is Tidyverse [**(More information here)**](https://www.tidyverse.org), which includes packages like `ggplot2`, `dplyr`, and others. As you can see in the [**previous section**](#base-container), it doesn't exist if we use the `r-base` Rocker container.
 
 Your options are to: 
 1. run `install.packages("tidyverse")` in the R-base container (`r-base_latest.sif`; as shown above) or
@@ -119,7 +118,7 @@ Your options are to:
  
 Option 1, while OK, uses a lot (and I mean a lot) of inodes as well as taking a long time to compile. It's much leaner on the cluster and faster to use a pre-built container if you know you'll use the Tidyverse.
 
-Prior instructions on R [<ins>**user environment above**</ins>](#user-environment) apply. This container will also use the directory you designative in your `~/.Renviron` config file. Once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
+Prior instructions on R [**user environment above**](#user-environment) apply. This container will also use the directory you designative in your `~/.Renviron` config file. Once downloaded (the Docker to Apptainer conversion will take a few minutes), it will create a separate SIF file as shown below.
 
 ```js
 # remember to do this on a compute node
@@ -214,7 +213,7 @@ The following will prepare a `.sif` file called `rstudio_latest.sif`, but it mig
 
 #### Step 2: Prepare Slurm Job File
 
-We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler software called Slurm. Download our Slurm job file [<ins>**from this hyperlink**</ins>](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for `klone` from the tutorial by Rocker [<ins>**More information about the original tutorial can be found here.**</ins>](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
+We will launch the container as a job with the command `sbatch`, which requests job from our job scheduler software called Slurm. Download our Slurm job file [**from this hyperlink**](https://hyak.uw.edu/files/rstudio-server.job) which was adopted for `klone` from the tutorial by Rocker [**More information about the original tutorial can be found here.**](https://www.rocker-project.org/use/singularity/). The command below will download the file to your current directory.
 
 ```js
 wget https://hyak.uw.edu/files/rstudio-server.job
@@ -227,7 +226,7 @@ Remember to replace the word `UWNetID` in the paths below with YOUR username/UWN
 You will need to modify a few environment variables in `rstudio-server.job` related to `R`. Use `nano` or `vim` to edit the contents of `rstudio-server.job`:
 1. The `RSTUDIO_CWD` path, is your working directory, as if you were using the function `setwd()` within `R`. `rstudio-server.job` shows this as `/gscratch/scrubbed/UWNetID` ***You must change this line for this to work.*** We recommend setting this to the directory where you are storing your data for your intended project. Additionally, it might simplify matters if this is the folder where the container is located and downloaded to using the `apptainer pull` command above.
 2. Set your `RSTUDIO_SIF` variable, this is name of the container file. In this case, `rstudio_latest.sif`.
-3. (Optional) Set your `R_LIBS_USER` path, which in `rstudio-server.job` is `R_LIBS_USER=${RSTUDIO_CWD}/R` or `/gscratch/scrubbed/UWNetID/R` because `RSTUDIO_CWD="/gscratch/scrubbed/UWNetID"`, remember? Change these variables to fit your needs. That means for this Rstudio session my package libraries (when I use `install.packages()`) will be stored in `/gscratch/scrubbed/UWNetID/R`. In this case, I am matching this Rstudio session to my preferences set above in the [<ins>**user environment section.**</ins>](#user-environment) For your session, you might decide to designate a different directory for your R package libraries. Rememeber directories don't exist until you make them. 
+3. (Optional) Set your `R_LIBS_USER` path, which in `rstudio-server.job` is `R_LIBS_USER=${RSTUDIO_CWD}/R` or `/gscratch/scrubbed/UWNetID/R` because `RSTUDIO_CWD="/gscratch/scrubbed/UWNetID"`, remember? Change these variables to fit your needs. That means for this Rstudio session my package libraries (when I use `install.packages()`) will be stored in `/gscratch/scrubbed/UWNetID/R`. In this case, I am matching this Rstudio session to my preferences set above in the [**user environment section.**](#user-environment) For your session, you might decide to designate a different directory for your R package libraries. Rememeber directories don't exist until you make them. 
 
 Additionally, you might decide to modify the `sbatch` directives to adjust the resources to request for your Slurm Rstudio job. For example, fill in your specific partition if applicable (check your options with `hyakalloc`). Also set your job run limits, cores (i.e., `ntasks`), memory, etc.
 
@@ -341,7 +340,7 @@ Next, open a new browser window to <ins>**http://localhost:8787**</ins> and prov
 
 Once you log in you should see an environment similar to the below. Both your Home directory and gscratch folders will be mounted.
 
-![<ins>**rstudio console and enviornment**</ins>](/img/docs/rstudio-singularity.png 'rstudio')
+![**rstudio console and enviornment**](/img/docs/rstudio-singularity.png 'rstudio')
 
 
 #### Step 5: End your Session
@@ -356,9 +355,9 @@ scancel -f 12345678
 
 #### Regular use of this method
 
-Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method every time you want to use Rstudio by starting at [<ins>**Step 3: Start the Rstudio Server above.**</ins>](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
+Once you are satisfied with the job settings and configuration of your Rstudio session, you can reuse this method every time you want to use Rstudio by starting at [**Step 3: Start the Rstudio Server above.**](https://hyak.uw.edu/docs/tools/r#step-3-start-the-rstudio-server)
 
-If you have trouble with this method, please report errors in an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the message.
+If you have trouble with this method, please report errors in an email to [**help@uw.edu**](mailto:help@uw.edu) with Hyak in the message.
 
 ### R via Modules
 

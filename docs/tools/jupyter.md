@@ -7,19 +7,19 @@ Jupyter Notebooks provide an interactive computing environment that combines cod
 
 ## Choosing Your Jupyter Setup Method
 
-### 1. [<ins>**Open OnDemand**</ins>](https://hyak.uw.edu/docs/ood/jupyter) (Easiest)
+### 1. [**Open OnDemand**](https://hyak.uw.edu/docs/ood/jupyter) (Easiest)
 This method provides the simplest way to run Jupyter on Hyak:
 - **No Configuration**: No need to set up SSH tunnels or manage job scripts
 - **Web Interface**: Access Jupyter directly through your browser
 - **User-Friendly**: Intuitive interface for managing sessions and resources
 
-### 2. [<ins>**Jupyter via Slurm Job**</ins>](#jupyter-via-slurm-job)
+### 2. [**Jupyter via Slurm Job**](#jupyter-via-slurm-job)
 This method uses containers to run Jupyter, providing several advantages:
 - **Isolation**: Each session runs in its own container, preventing conflicts between different projects
 - **Simplicity**: Prewritten script requires no manual setup
 - **Portability**: Easy to share and reproduce environments across different systems
 
-### 3. [<ins>**Manual Jupyter Setup with Miniconda**</ins>](#manual-jupyter-setup-with-miniconda)
+### 3. [**Manual Jupyter Setup with Miniconda**](#manual-jupyter-setup-with-miniconda)
 This traditional approach requires more manual setup but offers some benefits:
 - **Flexibility**: Can modify environments on-the-fly without rebuilding containers
 - **Familiarity**: Mirrors local workflows with conda or pip
@@ -34,11 +34,11 @@ For most users, we recommend using Open OnDemand as it provides the simplest and
 This section describes how to run Jupyter Lab/Notebook as a Slurm job, which provides an automated way to set up your Jupyter sessions. 
 
 ### Pre-requisites
-This method will require a container to get started, look for copies at `/sw/ondemand/containers/jupyter/sifs`, select a container from the `quay.io` registry, or build your own. For more information, read about [<ins>**containers on Hyak**</ins>](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container).
+This method will require a container to get started, look for copies at `/sw/ondemand/containers/jupyter/sifs`, select a container from the `quay.io` registry, or build your own. For more information, read about [**containers on Hyak**](https://hyak.uw.edu/docs/hyak101/containers/background#what-is-a-container).
 
 ### Step 1: Prepare Slurm Job File
 
-We will launch Jupyter as a job using `sbatch`. Download our Slurm job file [<ins>**from this hyperlink**</ins>](https://hyak.uw.edu/files/jupyter-server.job) which has been adapted for `klone`. The command below will download the file to your current directory.
+We will launch Jupyter as a job using `sbatch`. Download our Slurm job file [**from this hyperlink**](https://hyak.uw.edu/files/jupyter-server.job) which has been adapted for `klone`. The command below will download the file to your current directory.
 
 ```js
 wget https://hyak.uw.edu/files/jupyter-server.job
@@ -162,13 +162,13 @@ scancel -f 12345678
 
 ### Regular use of this method
 
-Once you are satisfied with the job settings and configuration of your Jupyter session, you can reuse this method every time you want to use Jupyter by starting at [<ins>**Step 2: Start the Jupyter Server**</ins>](#step-2-start-the-jupyter-server).
+Once you are satisfied with the job settings and configuration of your Jupyter session, you can reuse this method every time you want to use Jupyter by starting at [**Step 2: Start the Jupyter Server**](#step-2-start-the-jupyter-server).
 
 :::note
 This method provides automation of the setup process but does not offer additional stability or persistence compared to the manual setup described earlier. For the most reliable long-running sessions, consider using Open OnDemand.
 :::
 
-If you have trouble with this method, please report errors in an email to [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with Hyak in the message.
+If you have trouble with this method, please report errors in an email to [**help@uw.edu**](mailto:help@uw.edu) with Hyak in the message.
 
 ## Manual Jupyter Setup with Miniconda
 
@@ -180,7 +180,7 @@ These instructions cover jupyter-notebook 7.1.2, though should be easily adaptab
 
 ### Pre-requisites 
 
-This tutorial assumes you have already completed the [<ins>**set up of Miniconda covered here**</ins>](https://hyak.uw.edu/docs/tools/python#install). Throughout this exercise, it might be helpful to refer to those instructions if you get stuck. 
+This tutorial assumes you have already completed the [**set up of Miniconda covered here**](https://hyak.uw.edu/docs/tools/python#install). Throughout this exercise, it might be helpful to refer to those instructions if you get stuck. 
 
 :::note
 
@@ -269,13 +269,13 @@ kristenfinch@Kristens-MBP-3 ~ % ssh -L 9195:n3097:9195 finchkn@klone.hyak.uw.edu
                                      |___/
 ```
 
-Next direct your browser to [<ins>**http://localhost:9195**</ins>](http://localhost:9195). You will be prompted for the password you set with jupyter-notebook a few steps ago. 
+Next direct your browser to [**http://localhost:9195**](http://localhost:9195). You will be prompted for the password you set with jupyter-notebook a few steps ago. 
 
-![<ins>**Password input page on Jupyter**</ins>](/img/docs/jupyter-notebook/jupyter-notebook-password-prompt.png 'Provide Password')
+![**Password input page on Jupyter**](/img/docs/jupyter-notebook/jupyter-notebook-password-prompt.png 'Provide Password')
 
 The browser will open the Jupyter Notebook Session and you will see contents of the directory on klone. 
 
-![<ins>**Jupter notebook session page showing directory.**</ins>](/img/docs/jupyter-notebook/jupyter-notebook-files.png 'Files')
+![**Jupter notebook session page showing directory.**](/img/docs/jupyter-notebook/jupyter-notebook-files.png 'Files')
 
 Your token for this session will also appear in the terminal window connected to the compute node. 
 
@@ -283,13 +283,13 @@ Your token for this session will also appear in the terminal window connected to
 [I 2024-04-01 16:13:54.521 ServerApp] User 99999somee92ftoken1bfhere9999999 logged in.
 [I 2024-04-01 16:13:54.522 ServerApp] 302 POST /login?next=%2Ftree%3F (99999somee92ftoken1bfhere9999999) 462.64ms
 ```
-While the connection is open. Another option is to direct your browser to [<ins>**http://localhost:9195/?token=99999somee92ftoken1bfhere9999999**</ins>](http://localhost:9195/?token=99999somee92ftoken1bfhere9999999)
+While the connection is open. Another option is to direct your browser to [**http://localhost:9195/?token=99999somee92ftoken1bfhere9999999**](http://localhost:9195/?token=99999somee92ftoken1bfhere9999999)
 
 ### Step 4: End your session
 
 End your session from the browser with the File Menu and "Shut Down" or "Log Out." 
 
-![<ins>**Screenshot showing how to shut down session**</ins>](/img/docs/jupyter-notebook/jupyter-notebook-end.png 'End Session')
+![**Screenshot showing how to shut down session**](/img/docs/jupyter-notebook/jupyter-notebook-end.png 'End Session')
 
 Then go to your terminal window to the compute node and use Control + C to end the session there. 
 

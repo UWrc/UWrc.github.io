@@ -14,7 +14,7 @@ The Pile is a 825 GiB diverse, open source language modeling data set that consi
 
 A copy of The Pile with all copyrighted content removed is held on Tillicum.
 
-You can learn more at their website [<ins>**here**</ins>](https://pile.eleuther.ai/) or from their paper [<ins>**here**</ins>](https://arxiv.org/abs/2101.00027).
+You can learn more at their website [**here**](https://pile.eleuther.ai/) or from their paper [**here**](https://arxiv.org/abs/2101.00027).
 
 ## How to prepare for use?
 This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
@@ -23,7 +23,7 @@ The format of the Pile is jsonlines data compressed using zstandard.
 
 ## How to access?
 
-By accessing this data you agree to their terms of use provided on their website [<ins>**here**</ins>](https://pile.eleuther.ai/) and [<ins>**MIT License**</ins>](https://github.com/EleutherAI/the-pile/blob/master/LICENSE). 
+By accessing this data you agree to their terms of use provided on their website [**here**](https://pile.eleuther.ai/) and [**MIT License**](https://github.com/EleutherAI/the-pile/blob/master/LICENSE). 
 
 The file path on `klone` is `/data/pile`.
 

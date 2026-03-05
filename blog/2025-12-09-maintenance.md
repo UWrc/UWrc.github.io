@@ -114,36 +114,36 @@ pip install seaborn
 
 This ensures that `pip` installs packages into the active Conda environment — **not globally** — making it easy to clean up completely when you are done.
 
-See the [<ins>**best practices**</ins>](https://www.anaconda.com/blog/using-pip-in-a-conda-environment) from Anaconda for using `pip` with Conda and [<ins>**pip documentation**</ins>](https://pip.pypa.io/en/stable/cli/pip_install/) for more information.
+See the [**best practices**](https://www.anaconda.com/blog/using-pip-in-a-conda-environment) from Anaconda for using `pip` with Conda and [**pip documentation**](https://pip.pypa.io/en/stable/cli/pip_install/) for more information.
 
-### [<ins>**New Tutorials Now Available**</ins>](https://hyak.uw.edu/learn)
-This fall, our training sessions focused primarily on [<ins>**Tillicum**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077), our new GPU-accelerated service. However, the core skills and workflows we covered apply equally well to Hyak Klone. With only minor adjustments to file paths or partitions, Klone users can benefit directly from these materials because the overall computing environments are very similar and the tools (modules, Slurm, containers, Python workflows, data management) work the same across both systems. We will offer more Hyak Klone trainings in 2026. 
-* [<ins>**Tillicum Onboarding Tutorial**</ins>](https://github.com/UWrc/tillicum-onboarding)
-* [<ins>**Tillicum Slurm Tutorial**</ins>](https://github.com/UWrc/tillicum-slurm)
-* [<ins>**Tillicum Containers Tutorial**</ins>](https://github.com/UWrc/tillicum-containers) 
-* [<ins>**Fine-tuning LLMs on Tillicum**</ins>](https://github.com/josecols/ft-llms-tillicum)
-* [<ins>**Docker Containers Workshop**</ins>](https://github.com/UWrc/docker-tutorial) 
+### [**New Tutorials Now Available**](https://hyak.uw.edu/learn)
+This fall, our training sessions focused primarily on [**Tillicum**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077), our new GPU-accelerated service. However, the core skills and workflows we covered apply equally well to Hyak Klone. With only minor adjustments to file paths or partitions, Klone users can benefit directly from these materials because the overall computing environments are very similar and the tools (modules, Slurm, containers, Python workflows, data management) work the same across both systems. We will offer more Hyak Klone trainings in 2026. 
+* [**Tillicum Onboarding Tutorial**](https://github.com/UWrc/tillicum-onboarding)
+* [**Tillicum Slurm Tutorial**](https://github.com/UWrc/tillicum-slurm)
+* [**Tillicum Containers Tutorial**](https://github.com/UWrc/tillicum-containers) 
+* [**Fine-tuning LLMs on Tillicum**](https://github.com/josecols/ft-llms-tillicum)
+* [**Docker Containers Workshop**](https://github.com/UWrc/docker-tutorial) 
 
-Stay informed by subscribing to our [<ins>**mailing list**</ins>](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+Stay informed by subscribing to our [**mailing list**](https://mailman1.u.washington.edu/mailman/listinfo/hyak-users) and the [**UWIT Research Computing Events Calendar**](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### Office Hours 
 * **No office hours: 12/24/2025, 12/25/2025, 12/31/2025, or 1/1/2026**
 * **Hyak and Tillicum Office Hours:**
-    * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [<ins>**Click here to Register for Wednesday Zoom Office Hours**</ins>](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
+    * Wednesdays at 2pm on **Zoom**. Attendees need only register once and can attend any of the occurrences with the Zoom link that will arrive via email. [**Click here to Register for Wednesday Zoom Office Hours**](https://washington.zoom.us/meeting/register/tJMpce6vrz8sEtR5miKvhsQiXANt6lBORFTu).
     * Thursdays at 2pm **in person** in eScience. (address: WRF Data Science Studio, UW Physics/Astronomy Tower, 6th Floor, 3910 15th Ave NE, Seattle, WA 98195).
 * **Winter AWS Office hours** – AWS solutions architects will be on Zoom to answer your questions and help you troubleshoot. 
-    * [<ins>**Tuesday January 20, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249437)
-    * [<ins>**Thursday February 12, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249438)
-    * [<ins>**Thursday March 12, 2025**</ins>](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249439)
-* See our office hours schedule, subscribe to event updates, and bookmark our [<ins>**UWIT Research Computing Events Calendar**</ins>](https://calendar.washington.edu/sea_uwit-rc). 
+    * [**Tuesday January 20, 2025**](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249437)
+    * [**Thursday February 12, 2025**](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249438)
+    * [**Thursday March 12, 2025**](https://calendar.washington.edu/sea_uwit-rc/AWS-Office-Hours-Virtual/E194249439)
+* See our office hours schedule, subscribe to event updates, and bookmark our [**UWIT Research Computing Events Calendar**](https://calendar.washington.edu/sea_uwit-rc). 
 
 ### External Training Opportunities
 
-* The **NSF LEVEL UP AI** (Launching an Educational Vision to Expand Leadership, Understanding, and Progress in Artificial Intelligence) project brings together educators, researchers, and professionals across the computing community to build a shared vision for expanding capacity and access to AI education. 01/07/26 - 12:00 AM to 01/08/26 - 11:59 PM EST [<ins>**Learn more and register.**</ins>](https://cra.org/level-up-ai/)
-* [<ins>**2 Postdoc positions in AI with deadlines arriving soon**</ins>](https://cosmicai.org/jobs/cosmicai-postdoctoral-fellow).
-* The eScience Institute offers the annual Winter School to students and lecturers interested in developing basic skills and knowledge of the tools used in data science. Gaining literacy in topics such as Python, R, Jupyter, and reproducible environments can be beneficial beyond STEM, including areas like global or public health, public policy, social sciences, social work, international relations, and business management. There are no prerequisites to take this course and there is no credit offered. Only UW faculty, staff, students (undergraduates and graduates) from all three campuses are [<ins>**welcome to apply**</ins>](https://escience.washington.edu/data-science-learning/data-science-at-uw/winter-school/). Deadline to apply: February 4th, 2026.
+* The **NSF LEVEL UP AI** (Launching an Educational Vision to Expand Leadership, Understanding, and Progress in Artificial Intelligence) project brings together educators, researchers, and professionals across the computing community to build a shared vision for expanding capacity and access to AI education. 01/07/26 - 12:00 AM to 01/08/26 - 11:59 PM EST [**Learn more and register.**](https://cra.org/level-up-ai/)
+* [**2 Postdoc positions in AI with deadlines arriving soon**](https://cosmicai.org/jobs/cosmicai-postdoctoral-fellow).
+* The eScience Institute offers the annual Winter School to students and lecturers interested in developing basic skills and knowledge of the tools used in data science. Gaining literacy in topics such as Python, R, Jupyter, and reproducible environments can be beneficial beyond STEM, including areas like global or public health, public policy, social sciences, social work, international relations, and business management. There are no prerequisites to take this course and there is no credit offered. Only UW faculty, staff, students (undergraduates and graduates) from all three campuses are [**welcome to apply**](https://escience.washington.edu/data-science-learning/data-science-at-uw/winter-school/). Deadline to apply: February 4th, 2026.
 
-Having trouble? [<ins>**Get Research Computing support**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3).  
+Having trouble? [**Get Research Computing support**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3).  
 
 Happy Computing, 
 

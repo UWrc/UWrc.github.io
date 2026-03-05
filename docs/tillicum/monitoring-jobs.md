@@ -13,9 +13,9 @@ Users are responsible for monitoring their own usage.
 
 ### Budget Enforcement
 
-Tillicum supports budget settings at both the **account** and **user** levels. Once a budget is configured, **budget enforcement is enabled by default**. If you are a PI and prefer to monitor usage only without enforcing automatic job submission termination when a budget is exceeded, please contact us at [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) and include "Tillicum" in the subject line.
+Tillicum supports budget settings at both the **account** and **user** levels. Once a budget is configured, **budget enforcement is enabled by default**. If you are a PI and prefer to monitor usage only without enforcing automatic job submission termination when a budget is exceeded, please contact us at [**help@uw.edu**](mailto:help@uw.edu) and include "Tillicum" in the subject line.
 
-Budgets are managed by the Tillicum administrators. To **add, update, or remove** a budget, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Tillicum" in the subject line with the approval from your PI.
+Budgets are managed by the Tillicum administrators. To **add, update, or remove** a budget, please email [**help@uw.edu**](mailto:help@uw.edu) with "Tillicum" in the subject line with the approval from your PI.
 
 ### Default
 

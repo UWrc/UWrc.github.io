@@ -7,7 +7,7 @@ Modules are a method of modifying your environment that are unique to some softw
 
 ## Basics
 
-Please refer to the cluster specific sections on `klone` [<ins>**link**</ins>](#klone) below for more details on creating your own modules.
+Please refer to the cluster specific sections on `klone` [**link**](#klone) below for more details on creating your own modules.
 
 ### What software is available?
 
@@ -20,7 +20,7 @@ The Hyak team will maintain most of the core modules for building software, this
 There is a larger list of modules maintained by the broader Hyak community that appears when you run this command. **Community created or "contrib" modules are provided as is.** Community modules on `klone` are separated into a lower section and within the lower section each module is further prefixed by the respective group that created the module. Not all contributed modules are publicly available.
 
 :::tip
-The Hyak team encourages the use of Apptainer to better promote computational portability and reproducibility. You can read more about Apptainer [<ins>**link**</ins>](containers.md) after loading its module.
+The Hyak team encourages the use of Apptainer to better promote computational portability and reproducibility. You can read more about Apptainer [**link**](containers.md) after loading its module.
 :::
 
 ### What modules do I currently have loaded?
@@ -51,13 +51,13 @@ module purge
 
 ## `klone`
 
-The `klone` cluster uses the more feature-rich LMOD implementation of modules. You're welcome to [<ins>**email**</ins>](mailto:help@uw.edu?subject=klone-module-help) us if you have any questions about modulefile creation on `klone`.
+The `klone` cluster uses the more feature-rich LMOD implementation of modules. You're welcome to [**email**](mailto:help@uw.edu?subject=klone-module-help) us if you have any questions about modulefile creation on `klone`.
 
 ### LMOD
 
-![<ins>**LMOD logo**</ins>](../../static/img/docs/tools-modules-lmod.png)
+![**LMOD logo**](../../static/img/docs/tools-modules-lmod.png)
 
-LMOD [<ins>**documentation**</ins>](https://lmod.readthedocs.io/en/latest/) [<ins>**project page**</ins>](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) is an upgraded implementation of environment modules created by the Texas Advanced Computing Center (TACC) at the University of Texas.
+LMOD [**documentation**](https://lmod.readthedocs.io/en/latest/) [**project page**](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) is an upgraded implementation of environment modules created by the Texas Advanced Computing Center (TACC) at the University of Texas.
 
 ### Login vs Compute Node
 
@@ -78,13 +78,13 @@ fi
 
 ### How do I create personal LMOD modules on `klone`?
 
-This advanced user documentation page from the LMOD developers walks you through this [<ins>**link**</ins>](https://lmod.readthedocs.io/en/latest/020_advanced.html). You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
+This advanced user documentation page from the LMOD developers walks you through this [**link**](https://lmod.readthedocs.io/en/latest/020_advanced.html). You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
 
 ```js
 module use /path/to/personal/modulefiles
 ```
 
-In this case you'll likely use a sub-directory under your lab's `/gscratch` folder or your home directory and create individual folders with independent software packages. Once you have code compiled a modulefile needs to be created for each software package you installed, there are some examples from basic to advanced [<ins>**link**</ins>](https://lmod.readthedocs.io/en/latest/100_modulefile_examples.html). 
+In this case you'll likely use a sub-directory under your lab's `/gscratch` folder or your home directory and create individual folders with independent software packages. Once you have code compiled a modulefile needs to be created for each software package you installed, there are some examples from basic to advanced [**link**](https://lmod.readthedocs.io/en/latest/100_modulefile_examples.html). 
 
 ### How do I create shared LMOD modules on `klone`?
 
@@ -97,5 +97,5 @@ You place your modulefiles in `/sw/contrib/modulefiles/mylab` and when anyone ru
 
 ![Environment Modules Logo](../../static/img/docs/tools-modules-environment.png)
 
-Environment modules [<ins>**documentation**</ins>](https://modules.readthedocs.io/en/latest/) [<ins>**Wikipedia**</ins>](https://en.wikipedia.org/wiki/Environment_Modules_(software)) has a long development history going back to the 1990's. It's still in use today due to its simplicity and ease of deployment for cluster administrators and end users alike.
+Environment modules [**documentation**](https://modules.readthedocs.io/en/latest/) [**Wikipedia**](https://en.wikipedia.org/wiki/Environment_Modules_(software)) has a long development history going back to the 1990's. It's still in use today due to its simplicity and ease of deployment for cluster administrators and end users alike.
 

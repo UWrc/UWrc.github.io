@@ -7,7 +7,7 @@ title: Building a Container
 
 This section is going to describe how the main container we prepared for this tutorial was developed. We highly encourage you to read and understand the development of this container because it will help you adapt this tutorial to fit the needs of your research project. However, if you are interested in completing this tutorial to set up Jupyter Notebooks on Hyak, complete this following step, and skip to the section titled **Flexible Connections** for your OS. This saves you an hour (you're welcome).
 
-First navigate to your working directory, which you selected in the previous section titled, [<ins>**Getting Started.**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) and issue the following command: 
+First navigate to your working directory, which you selected in the previous section titled, [**Getting Started.**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) and issue the following command: 
 
 ```js
 ln --symbolic /mmfs1/sw/hyak101/python/hyak-container.sif hyak-container.sif
@@ -31,7 +31,7 @@ we're building a personal Linux machine.
 
 ### Go to working directory before building your container
 
-Start by navigating to the working directory you selected for this tutorial. For example, we selected a directory under `/gscratch/scrubbed` named with our UWNetID. NOTE: this following step will be different for every user. Please see the [<ins>**Getting Started.**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) Section for more information about how to set this up for you. Use something similar to the following command to navigate to your working directory: 
+Start by navigating to the working directory you selected for this tutorial. For example, we selected a directory under `/gscratch/scrubbed` named with our UWNetID. NOTE: this following step will be different for every user. Please see the [**Getting Started.**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) Section for more information about how to set this up for you. Use something similar to the following command to navigate to your working directory: 
 
 ```js
 cd /gscratch/scrubbed/UWNetID
@@ -62,7 +62,7 @@ From: nvcr.io/nvidia/cuda:11.8.0-devel-rockylinux8
 Apptainer containers, can be built from Docker containers, noted by `Bootstrap: docker`.
 Since we plan on using the node's hardware, we're going to try and keep our container OS as similar to our
 host OS as possible. We're using Rocky Linux 8 and our current CUDA version is 11.8, so this container from
-[<ins>**NVIDIA GPU Cloud**</ins>](https://catalog.ngc.nvidia.com/containers)  will line up neatly with our nodes.
+[**NVIDIA GPU Cloud**](https://catalog.ngc.nvidia.com/containers)  will line up neatly with our nodes.
 
 #### `%setup` and `%files` section
 
@@ -133,7 +133,7 @@ After we have these basic packages installed, we made a couple directories (with
     esac
 ```
 
-This is the last piece, and it involves just a touch of shell programming. We're using [<ins>**a case statement**</ins>](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html), and we're looking for patterns in the arguments given to the container. Thankfully, our "patterns" are very simplistic:
+This is the last piece, and it involves just a touch of shell programming. We're using [**a case statement**](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_03.html), and we're looking for patterns in the arguments given to the container. Thankfully, our "patterns" are very simplistic:
 1. `""`: a blank string, i.e. what happens if you simply do `apptainer run hyak-container.sif`. The default behavior we want is to launch an interactive shell.
 1. `*)`: everything else. Any input we receive, we will attempt to run as a command. We are emulating the behavior of `apptainer exec` here, since we're going to try and keep our interactions with `apptainer` as uniform as possible.
 
@@ -189,7 +189,7 @@ cp /tmp/$USER/hyak-container.sif .
 ```
 The `#SBATCH` lines tell Slurm what we want: a single CPU and 16GB of RAM, in the `ckpt` partition, with a time limit of 60 minutes.
 Using `sbatch` is the best way to submit non-interactive jobs on the cluster, and there are quite a few options.
-Check out [<ins>**the official Slurm documentation**</ins>](https://slurm.schedmd.com/sbatch.html) for more details.
+Check out [**the official Slurm documentation**](https://slurm.schedmd.com/sbatch.html) for more details.
 
 This job is only a few commands. First:
 
@@ -206,11 +206,11 @@ Finally, saving our container:
 
 - `cp /tmp/$USER/hyak-container.sif .`: Copy the container image we made in `/tmp` to our working directory (`.`; it is also an option to edit this to show the absolute path to your working directory).
 
-As is, the container is ~4GB and so, you will occupy ~4GB of storage in your working directory. This is why we have stressed several times to thoughtfully select your working directory for this tutorial. Review [<ins>**Getting Started.**</ins>](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) for reasons why this is important. Regardless of where you put the final container image, make sure the destination exists & has sufficient space before you submit your job.
+As is, the container is ~4GB and so, you will occupy ~4GB of storage in your working directory. This is why we have stressed several times to thoughtfully select your working directory for this tutorial. Review [**Getting Started.**](https://hyak.uw.edu/docs/hyak101/python/setup#selecting-your-working-directory) for reasons why this is important. Regardless of where you put the final container image, make sure the destination exists & has sufficient space before you submit your job.
 
 :::tip pro tip: storage monitoring
 You can use the `hyakstorage` command to see your file & space quotas, in your home directory and the gscratch directories you can access.
-[<ins>**Here's our documentation for that command**</ins>](https://hyak.uw.edu/docs/storage/gscratch#checking-utilization-hyakstorage).
+[**Here's our documentation for that command**](https://hyak.uw.edu/docs/storage/gscratch#checking-utilization-hyakstorage).
 :::
 
 ### Submitting the job
@@ -237,7 +237,7 @@ tail --follow --retry container-build_12345678.out
 # Use Ctrl + C to exit the tail command
 ```
 
-Remember that if for some reason this doesn't work, the container image has already been created and you can find it `/mmfs1/sw/hyak101/python/hyak-container.sif`, and use it with a symbolic link in your working directory (command show at the top of this section. [<ins>**Go back to the top**</ins>](https://hyak.uw.edu/docs/hyak101/python/container)). 
+Remember that if for some reason this doesn't work, the container image has already been created and you can find it `/mmfs1/sw/hyak101/python/hyak-container.sif`, and use it with a symbolic link in your working directory (command show at the top of this section. [**Go back to the top**](https://hyak.uw.edu/docs/hyak101/python/container)). 
 
 ### Customizing the `hyak-container.sif` for your research project
 

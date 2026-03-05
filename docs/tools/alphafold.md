@@ -6,13 +6,13 @@ title: AlphaFold2
 AlphaFold2 Application and Data Available on `klone`
 ----------------------------------------------------------
 
-AlphaFold2 is a deep learning system that predicts protein structure from sequence. It was developed by DeepMind and is described in this [<ins>**paper**</ins>](https://www.nature.com/articles/s41586-021-03819-2). The program is resource intensive and requires a large background dataset to function. These have been made available on `klone` and can be accessed by following the instructions below.
+AlphaFold2 is a deep learning system that predicts protein structure from sequence. It was developed by DeepMind and is described in this [**paper**](https://www.nature.com/articles/s41586-021-03819-2). The program is resource intensive and requires a large background dataset to function. These have been made available on `klone` and can be accessed by following the instructions below.
 
-__BEFORE BEGINNING__: You will need a `python` environment activated to use this tool. See [<ins>**here**</ins>](/docs/tools/python). Ensure that you have a [<ins>**compute node allocated**</ins>](/docs/hyak101/python/jobs) before using this tool. 
+__BEFORE BEGINNING__: You will need a `python` environment activated to use this tool. See [**here**](/docs/tools/python). Ensure that you have a [**compute node allocated**](/docs/hyak101/python/jobs) before using this tool. 
 
 ## Data
 
-AlphaFold needs to be pointed towards a directory containing the data it needs to run. It can run using two data presets: `full_dbs` and `reduced_dbs`. The `full_dbs` preset contains the full databases used in the AlphaFold2 paper. The `reduced_dbs` preset contains a reduced set of databases which results in a significant speedup in runtime at a loss of accuracy. See their [<ins>**github**</ins>](https://github.com/deepmind/alphafold) for benchmarking of runtime.
+AlphaFold needs to be pointed towards a directory containing the data it needs to run. It can run using two data presets: `full_dbs` and `reduced_dbs`. The `full_dbs` preset contains the full databases used in the AlphaFold2 paper. The `reduced_dbs` preset contains a reduced set of databases which results in a significant speedup in runtime at a loss of accuracy. See their [**github**](https://github.com/deepmind/alphafold) for benchmarking of runtime.
 
 The full databases are available at `/data/alphafold/full_dbs/` and the reduced databases are available at `/data/alphafold/reduced_dbs/`. To use one or the other, two parameters need to be passed to the program:
 
@@ -55,7 +55,7 @@ run_alphafold \
   --data_dir=/data/alphafold/reduced_dbs/ \
   --output_dir=/home/user/absolute_path_to_the_output_dir
 ```
-The path specified by `--output_dir` will contain the model outsputs. See DeepMind's [<ins>**documentation**</ins>](https://github.com/deepmind/alphafold) for more information on the output files.
+The path specified by `--output_dir` will contain the model outsputs. See DeepMind's [**documentation**](https://github.com/deepmind/alphafold) for more information on the output files.
 
 ### Parameters
 

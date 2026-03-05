@@ -203,4 +203,4 @@ Including `echo` commands in your scripts is a good method of confirming the cor
 
 The files in `out/` are the results from the analysis. The next step would be to combine the results, calculate the prediction error for each tree, and compare performance for each dropout rate. However, this is beyond the scope of this tutorial.
 
-We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with "Hyak Advanced Slurm Tutorial" in the subject line, and let us know what you think. Thank you!
+We hope you will be able to adapt these methods to fit your needs and the needs of your research project. If you have any questions or suggestions for how to improve this tutorial, please email [**help@uw.edu**](mailto:help@uw.edu) with "Hyak Advanced Slurm Tutorial" in the subject line, and let us know what you think. Thank you!

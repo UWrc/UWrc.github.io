@@ -12,11 +12,11 @@ Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are
 
 ## What is this?
 EGO4D is an egocentric (first person) video ML dataset and benchmark suite, with 3,600 hrs of densely narrated video and a wide range of annotations across five new benchmark tasks. It covers hundreds of scenarios (household, outdoor, workplace, leisure, etc.) of daily life activity captured in-the-wild by 926 camera wearers from 74 worldwide locations and 9 different countries.
-You can learn more at their website [<ins>**here**</ins>](https://ego4d-data.org/docs/) or from their paper [<ins>**here**</ins>](https://arxiv.org/abs/2110.07058).
+You can learn more at their website [**here**](https://ego4d-data.org/docs/) or from their paper [**here**](https://arxiv.org/abs/2110.07058).
 
 ## How to prepare for use?
 
-Install [<ins>**decord**</ins>](https://github.com/dmlc/decord) on your python environment to read the video files. You can also use other libraries to read video frames. Popular ones include [<ins>**OpenCV**</ins>](https://stackoverflow.com/questions/41441150/how-to-read-video-files-using-python-opencv), and [<ins>**skvideo**</ins>](https://www.scikit-video.org/stable/).
+Install [**decord**](https://github.com/dmlc/decord) on your python environment to read the video files. You can also use other libraries to read video frames. Popular ones include [**OpenCV**](https://stackoverflow.com/questions/41441150/how-to-read-video-files-using-python-opencv), and [**skvideo**](https://www.scikit-video.org/stable/).
 
 ```python
 from decord import VideoReader, cpu
@@ -29,7 +29,7 @@ vr = VideoReader(file_path, num_threads=-1, ctx=cpu(0))
 
 ## How to access?
 
-The license information for Ego4D can be found [<ins>**here**</ins>](https://ego4d-data.org/pdfs/Ego4D-Licenses-Draft.pdf) and Ego-Exo4D [<ins>**here**</ins>](https://ego4d-data.org/pdfs/Ego-Exo4D-Model-License.pdf)
+The license information for Ego4D can be found [**here**](https://ego4d-data.org/pdfs/Ego4D-Licenses-Draft.pdf) and Ego-Exo4D [**here**](https://ego4d-data.org/pdfs/Ego-Exo4D-Model-License.pdf)
 
 The file path for ego4d dataset on `klone` is `/data/ego4d` and for ego-exo4D.
 

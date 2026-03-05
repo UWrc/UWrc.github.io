@@ -17,7 +17,7 @@ s3cmd is available for uploading data to Kopah from your local computer and with
 
 ### Local s3cmd usage
 
-To get started with s3cmd, install the software on your local computer. [<ins>**Click here to Download s3cmd from the developer's website.**</ins>](https://s3tools.org/s3cmd)
+To get started with s3cmd, install the software on your local computer. [**Click here to Download s3cmd from the developer's website.**](https://s3tools.org/s3cmd)
 
 Create an s3cmd configuration file in your home directory. Call it `.s3cfg`. There are many ways to create this file.
 
@@ -81,11 +81,11 @@ Prepare your `.s3cfg` file as shown above.
 
 ## S5cmd
 
-[<ins>**s5cmd**</ins>](https://github.com/peak/s5cmd) is an open-source tool for transferring and managing data with S3-API compatible storage. It is less widely used than s3cmd, however data transfer is much quicker.
+[**s5cmd**](https://github.com/peak/s5cmd) is an open-source tool for transferring and managing data with S3-API compatible storage. It is less widely used than s3cmd, however data transfer is much quicker.
 
 ### Setup
 
-s5cmd is installed on `klone` login nodes by default. See the [<ins>**s5cmd GitHub**</ins>](https://github.com/peak/s5cmd) for local installation instructions.
+s5cmd is installed on `klone` login nodes by default. See the [**s5cmd GitHub**](https://github.com/peak/s5cmd) for local installation instructions.
 
 s3cmd must be configured to interact with Kopah. To do so, set the following environment variables in your shell.
 
@@ -105,4 +105,4 @@ To test the setup, run `s5cmd ls` to list your existing buckets. If that succeed
 
 ### Usage
 
-Run `s5cmd -h` for information on how to use s5cmd or see the [<ins>**developer examples**</ins>](https://github.com/peak/s5cmd).
+Run `s5cmd -h` for information on how to use s5cmd or see the [**developer examples**](https://github.com/peak/s5cmd).

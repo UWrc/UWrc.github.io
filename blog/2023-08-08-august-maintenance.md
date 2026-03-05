@@ -18,7 +18,7 @@ Our compute nodes are stateless: their operating system is loaded into memory ov
 
 Any software on the node image *beyond* system packages is managed separately, which brings me to the only major update this month:
 
-We upgraded Apptainer from 1.1.8 to 1.2.2. The update from 1.1 to 1.2 implements quite a few new features, modifications to default behavior, and other changes. You can read about them in the [<ins>**Apptainer 1.2.0 Patch Notes**</ins>](https://github.com/apptainer/apptainer/releases/tag/v1.2.0).
+We upgraded Apptainer from 1.1.8 to 1.2.2. The update from 1.1 to 1.2 implements quite a few new features, modifications to default behavior, and other changes. You can read about them in the [**Apptainer 1.2.0 Patch Notes**](https://github.com/apptainer/apptainer/releases/tag/v1.2.0).
 
 ### Node firmware updates
 

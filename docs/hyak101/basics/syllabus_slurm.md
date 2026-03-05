@@ -19,7 +19,7 @@ Much of the Hyak documentation is organized into bite sized instructional guides
 :::note Hyak's Job Scheduler - Slurm
 A **job scheduler** is a component or software system responsible for managing and optimizing the allocation of computing resources and tasks within a distributed computing environment. It orchestrates the execution of jobs, tasks, or processes across available resources such as CPUs, memory, and storage.
 
-**Slurm**: The job scheduler used on Hyak. Slurm stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See [<ins>**Slurm documentation**</ins>](https://slurm.schedmd.com/man_index.html) for detailed help using the job scheduler.
+**Slurm**: The job scheduler used on Hyak. Slurm stands for **S**imple **L**inux **U**tility (for) **R**esource **M**anagement. See [**Slurm documentation**](https://slurm.schedmd.com/man_index.html) for detailed help using the job scheduler.
 :::
 
 ### Learning Objectives
@@ -34,10 +34,10 @@ A **job scheduler** is a component or software system responsible for managing a
 
 #### Tutorial: Slurm
 
-* [<ins>**Syllabus**</ins>](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
-* [<ins>**Scheduling Jobs**</ins>](https://hyak.uw.edu/docs/hyak101/basics/jobs)
-* [<ins>**Job Arrays**</ins>](https://hyak.uw.edu/docs/hyak101/basics/arrays)
+* [**Syllabus**](https://hyak.uw.edu/docs/hyak101/basics/syllabus_slurm)
+* [**Scheduling Jobs**](https://hyak.uw.edu/docs/hyak101/basics/jobs)
+* [**Job Arrays**](https://hyak.uw.edu/docs/hyak101/basics/arrays)
 
 ### Extra Practice
 
-We have curated a list of [<ins>**Additional Resources**</ins>](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial.
+We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources) and you will find many are relevant for this tutorial.

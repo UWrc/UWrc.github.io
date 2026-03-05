@@ -18,5 +18,5 @@ You can also specify an exact gscratch directory with the group name (e.g. `hyak
 If you want more detailed metrics, you can use the flags `--show-user` or `--show-group` to break down the fileset totals by individual users or groups. Those detailed metrics can be sorted by space with `--by-disk` (the default) or by files with `--by-files`.
 
 **See also:**
-* [<ins>**gscratch documentation**</ins>](/docs/storage/gscratch) and
-* [<ins>**hyakstorage documentation**</ins>](/docs/storage/gscratch#checking-utilization-hyakstorage).
+* [**gscratch documentation**](/docs/storage/gscratch) and
+* [**hyakstorage documentation**](/docs/storage/gscratch#checking-utilization-hyakstorage).

@@ -17,9 +17,9 @@ Lolo is the UW's archive solution, it is an LTO-8 or "tape" based platform.
 
 ## How do I get Lolo capacity?
 
-[<ins>**Click here to be re-directed to the Lolo Storage Request Form**</ins>](https://uw.service-now.com/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
+[**Click here to be re-directed to the Lolo Storage Request Form**](https://uw.service-now.com/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
 
-[<ins>**Click here to access the Lolo service catalog**</ins>](https://uw.service-now.com/it?id=sc_entry&sys_id=77750042db1e73c037ae9ec6db961994&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2).
+[**Click here to access the Lolo service catalog**](https://uw.service-now.com/it?id=sc_entry&sys_id=77750042db1e73c037ae9ec6db961994&sysparm_category=d103f865dba2bf40d6a77a8eaf9619b2).
 
 :::note
 
@@ -80,7 +80,7 @@ Lolo performs best with large files. Storing large numbers of small files is ine
 **Large Files:**
 Though we encourage you to bundle data sets into large archives, very large (10TB+) file sizes may cause issues. If you have a very large data set, please split the archive into smaller files. 
 
-If a large number of small files are uploaded by mistake, or if you need help splitting large files, please contact [<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) for assistance.
+If a large number of small files are uploaded by mistake, or if you need help splitting large files, please contact [**help@uw.edu**](mailto:help@uw.edu) for assistance.
 
 :::
 

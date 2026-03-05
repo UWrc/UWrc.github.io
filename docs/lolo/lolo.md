@@ -23,15 +23,15 @@ Lolo is UW's dedicated archival storage service designed for research data that 
 
 - $3.45 per TB per month
 - Billed in 1TB increments
-- Exempt from [<ins>**F&A**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035504) costs
+- Exempt from [**F&A**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035504) costs
 - New allocations under 10TB are typically provisioned same-day
 
-If you are unsure if Lolo is right for you, use the [<ins>**Research Computing Consulting Intake Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b) to connect with the UWIT Research Computing team for guidance on selecting the right computing service.
+If you are unsure if Lolo is right for you, use the [**Research Computing Consulting Intake Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=47d23c5d87bd6a50e385333e3fbb356b) to connect with the UWIT Research Computing team for guidance on selecting the right computing service.
 
 ### Eligibility, Access, and Restrictions
 
 - **Eligibility**: Lolo is available to UW faculty, staff, and affiliates with a valid UW NetID and appropriate worktags.
-- **Requesting Access**: Eligible users can request access through the [<ins>**Lolo Archive Intake Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
+- **Requesting Access**: Eligible users can request access through the [**Lolo Archive Intake Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=d307c0cadb5e73c037ae9ec6db961963).
 - Lolo is **not HIPAA compliant**, it is "HIPAA aligned", which means that it offers the tools, such as unix file permissions, encryption tools like GPG, and SSH for secure transmission. It is the ***customer's sole responsibility*** to maintain their data in HIPAA compliance on Lolo, not the responsibility of UWIT.
 
 ### Storage Limits
@@ -39,6 +39,6 @@ If you are unsure if Lolo is right for you, use the [<ins>**Research Computing C
 - The inode quota is **1,000 files per 1 TB of storage purchased**
 
 ### Support
-- Subscribe to the [<ins>**Lolo-announce mailing list**</ins>](https://mailman21.u.washington.edu/mailman/listinfo/lolo-announce) for updates on outages and maintenance.
-- [<ins>**Request technical help with Lolo**</ins>]([https://mailman21.u.washington.edu/mailman/listinfo/lolo-announce](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3))
-- [<ins>**Lolo User Guide**</ins>](/docs/lolo/lolo-usage)
+- Subscribe to the [**Lolo-announce mailing list**](https://mailman21.u.washington.edu/mailman/listinfo/lolo-announce) for updates on outages and maintenance.
+- [**Request technical help with Lolo**]([https://mailman21.u.washington.edu/mailman/listinfo/lolo-announce](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3))
+- [**Lolo User Guide**](/docs/lolo/lolo-usage)

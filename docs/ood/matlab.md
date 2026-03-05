@@ -3,11 +3,11 @@ id: matlab
 title: MATLAB
 ---
 
-"MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages." [<ins>**Wikipedia**</ins>](https://en.wikipedia.org/wiki/MATLAB)
+"MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages." [**Wikipedia**](https://en.wikipedia.org/wiki/MATLAB)
 
-MATLAB is available as an interactive app on Hyak's OnDemand (OOD) portal at [<ins>**https://ondemand.hyak.uw.edu/**</ins>](https://ondemand.hyak.uw.edu/). It can also be launched manually on a compute node as outlined on the [<ins>**Tools & Software/MATLAB**</ins>](tools/matlab.md) page.
+MATLAB is available as an interactive app on Hyak's OnDemand (OOD) portal at [**https://ondemand.hyak.uw.edu/**](https://ondemand.hyak.uw.edu/). It can also be launched manually on a compute node as outlined on the [**Tools & Software/MATLAB**](tools/matlab.md) page.
 
-Launching a MATLAB session is the same as scheduling any other interactive session. General instructions are available at [<ins>**Open OnDemand/Scheduling Jobs**</ins>](https://hyak.uw.edu/docs/ood/schedule-job).
+Launching a MATLAB session is the same as scheduling any other interactive session. General instructions are available at [**Open OnDemand/Scheduling Jobs**](https://hyak.uw.edu/docs/ood/schedule-job).
 
 To launch a MATLAB session via Hyak's OOD, select MATLAB from the list of interactive apps. Then, select parameters for the session and select "Launch". 
 

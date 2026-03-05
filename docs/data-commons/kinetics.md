@@ -12,12 +12,12 @@ Sponsoring groups are Rajesh Rao, Abhishek Gupta, Ali Farhadi. Student users are
 
 ## What is this?
 Kinetics is a collection of large-scale, high-quality datasets of URL links of up to 650,000 video clips that cover 400/600/700 human action classes, depending on the dataset version. 
-You can learn more at their github [<ins>**here**</ins>](https://github.com/cvdfoundation/kinetics-dataset) or from their paper [<ins>**here**</ins>](https://arxiv.org/abs/1705.06950).
+You can learn more at their github [**here**](https://github.com/cvdfoundation/kinetics-dataset) or from their paper [**here**](https://arxiv.org/abs/1705.06950).
 
 ## How to prepare for use?
 
-Install [<ins>**decord**</ins>](https://github.com/dmlc/decord) on your python environment to read the video files. 
-You can also use other libraries to read video frames. Popular ones include [<ins>**OpenCV**</ins>](https://stackoverflow.com/questions/41441150/how-to-read-video-files-using-python-opencv), python bindings for [<ins>**ffmpeg**</ins>](https://github.com/kkroening/ffmpeg-python) and [<ins>**skvideo**</ins>](https://www.scikit-video.org/stable/).
+Install [**decord**](https://github.com/dmlc/decord) on your python environment to read the video files. 
+You can also use other libraries to read video frames. Popular ones include [**OpenCV**](https://stackoverflow.com/questions/41441150/how-to-read-video-files-using-python-opencv), python bindings for [**ffmpeg**](https://github.com/kkroening/ffmpeg-python) and [**skvideo**](https://www.scikit-video.org/stable/).
 
 ```python
 from decord import VideoReader, cpu

@@ -11,7 +11,7 @@ Sponsoring groups are Ludwig Schmidt, Tim Althoff, and Pang Wei Koh. Student use
 
 # What is this?
 
-TablLib ([<ins>**paper**</ins>](https://arxiv.org/abs/2310.07875), [<ins>**blog**</ins>](https://www.approximatelabs.com/blog/tablib)) is a dataset consisting of 627M tables and 867B tokens of context. The data is extracted from the Common Crawl and public repositories on GitHub, and is extracted from web pages, Excel spreadsheets, CSV files, SQLite databases, and more. Beyond solely including tables themselves, TabLib also includes context from the surrounding content related to a table, such as filenames, source URLs, and text surrounding the table. This makes TabLib one of the largest and most diverse tabular datasets ever publically released.
+TablLib ([**paper**](https://arxiv.org/abs/2310.07875), [**blog**](https://www.approximatelabs.com/blog/tablib)) is a dataset consisting of 627M tables and 867B tokens of context. The data is extracted from the Common Crawl and public repositories on GitHub, and is extracted from web pages, Excel spreadsheets, CSV files, SQLite databases, and more. Beyond solely including tables themselves, TabLib also includes context from the surrounding content related to a table, such as filenames, source URLs, and text surrounding the table. This makes TabLib one of the largest and most diverse tabular datasets ever publically released.
 
 Some more figures:
 
@@ -43,9 +43,9 @@ The file path for TablLib dataset on `klone` is `/data/tablib`.
 
 The file path for TablLib dataset on `tillicum` is `/gpfs/datasets/tablib`.
 
-Users who access the data should also apply for public, open credentialed access to the dataset on Hugging Face Datasets [<ins>**here**</ins>](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
+Users who access the data should also apply for public, open credentialed access to the dataset on Hugging Face Datasets [**here**](https://huggingface.co/datasets/approximatelabs/tablib-v1-full).
 
-TabLib is a collection of publicly available data. As noted in the TabLib preprint, it is noteworthy to mention that under U.S. copyright law, facts and data are not subject to copyright protection (see [<ins>**Feist v. Rural Telephone**</ins>](https://www.law.cornell.edu/supremecourt/text/499/340)). 
+TabLib is a collection of publicly available data. As noted in the TabLib preprint, it is noteworthy to mention that under U.S. copyright law, facts and data are not subject to copyright protection (see [**Feist v. Rural Telephone**](https://www.law.cornell.edu/supremecourt/text/499/340)). 
 
 # How to cite?
 

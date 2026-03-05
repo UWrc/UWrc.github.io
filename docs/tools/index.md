@@ -19,7 +19,7 @@ Hyak is a shared research environment designed to provide computational resource
 
 **Researcher Responsibility -** Because researchers are also responsible for ensuring that their research workflows, including the software they install, are reproducible, research computing Hyak users are thus responsible for installing, managing, and maintaining any software or tools necessary for their specific research projects that are not part of the baseline environment. 
 
-**Support and Documentation -** Assistance with software-related issues is available through the Hyak help desk and ticketing system (email [[<ins>**help@uw.edu**</ins>](mailto:help@uw.edu) with “Hyak” in the subject line). Documentation on using the system and supported software is provided to help researchers resolve common issues. 
+**Support and Documentation -** Assistance with software-related issues is available through the Hyak help desk and ticketing system (email [**help@uw.edu**](mailto:help@uw.edu) with “Hyak” in the subject line). Documentation on using the system and supported software is provided to help researchers resolve common issues. 
 
 By adhering to this policy, the Hyak team and its users help maintain a productive and efficient shared computing environment for everyone. 
 

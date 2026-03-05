@@ -6,16 +6,16 @@ title: Storage on Klone
 :::warning
 ## Important Storage Reminder for Hyak Klone
 
-***Hyak Klone does not provide backup, persistent storage, or archival storage. All data on Klone exists as a single copy*** and is therefore vulnerable to loss due to hardware failure, filesystem issues, facility damage, or natural disasters. Users are solely responsible for transferring important results to external systems (for example, [<ins>**Kopah S3**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [<ins>**Lolo Archive**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084)) during the course of their project if persistent or long-term storage is required. ***Retaining long-term or archival data on Klone is against administrative guidance.***
+***Hyak Klone does not provide backup, persistent storage, or archival storage. All data on Klone exists as a single copy*** and is therefore vulnerable to loss due to hardware failure, filesystem issues, facility damage, or natural disasters. Users are solely responsible for transferring important results to external systems (for example, [**Kopah S3**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [**Lolo Archive**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084)) during the course of their project if persistent or long-term storage is required. ***Retaining long-term or archival data on Klone is against administrative guidance.***
 ::: 
 
 Storage on Hyak Klone is physically separate from servers used for computation. It is best practice on every supercomputer that storage live on its own and is high-performance to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., GPFS, Lustre, BeeGFS).
 
-On Klone the storage system (i.e., Gscratch or `/mmfs1/gscratch/`) is then mounted and accessible from every compute node of the cluster. Klone storage is referred to as `/gscratch` due to that being the mount point on the cluster (i.e., `/mmfs1/gscratch/path/directory` or `/gscratch/path/directory`) and a reminder to our researchers that anything here is **"scratch"** or **NOT BACKED UP**. Refer to the [<ins>**storage introduction page**</ins>](./data.md) for details on how to manage your data life cycle and adhere to the [<ins>**3-2-1 backup policy**</ins>](./data.md#best-practices-3-2-1-policy). Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UWIT Research Computing offers [<ins>**additional storage solutions**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580) that may be use in combination with `/gscratch/` for longer term data storage. Namely: 
+On Klone the storage system (i.e., Gscratch or `/mmfs1/gscratch/`) is then mounted and accessible from every compute node of the cluster. Klone storage is referred to as `/gscratch` due to that being the mount point on the cluster (i.e., `/mmfs1/gscratch/path/directory` or `/gscratch/path/directory`) and a reminder to our researchers that anything here is **"scratch"** or **NOT BACKED UP**. Refer to the [**storage introduction page**](./data.md) for details on how to manage your data life cycle and adhere to the [**3-2-1 backup policy**](./data.md#best-practices-3-2-1-policy). Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UWIT Research Computing offers [**additional storage solutions**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580) that may be use in combination with `/gscratch/` for longer term data storage. Namely: 
 
-* [<ins>**Kopah S3 Object Storage**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083)
-* [<ins>**Lolo Data Archive**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084) for persistent, geographically redundant storage. 
-* Alternatively, UWIT can help you select from commercial storage options that include UW discounts. [<ins>**More information about Cloud Computing options**</ins>](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036116). 
+* [**Kopah S3 Object Storage**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083)
+* [**Lolo Data Archive**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084) for persistent, geographically redundant storage. 
+* Alternatively, UWIT can help you select from commercial storage options that include UW discounts. [**More information about Cloud Computing options**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036116). 
 
 ## Klone Storage Overview
 
@@ -23,7 +23,7 @@ On **Klone**, your primary storage locations live under `/mmfs1/`, which is a sh
 
 **Key locations you will encounter include:**
 
-* [<ins>**`/mmfs1/home/UWNetID/` — your Home directory**</ins>](#user-home-directory). 
+* [**`/mmfs1/home/UWNetID/` — your Home directory**](#user-home-directory). 
 :::warning
  Home directories on Klone and Tillicum have **limited quota** (10GB). Active research data, training datasets, and large outputs should be stored in project or scrubbed storage, not in $HOME.
 
@@ -32,8 +32,8 @@ Your **Home directory** is intended only for:
 - Small scripts
 - Lightweight code
 :::
-* [<ins>**`/mmfs1/gscratch/group-name/` — Shared Group and Project Storage**</ins>](#group-or-lab-directories). Variable total capacity based on hardware holdings.
-* [<ins>**`/mmfs1/gscratch/scrubbed/` - Scrubbed Storage**</ins>](#scrubbed-storage) or free community storage for temporary, high-capacity workloads. Data stored in scrubbed locations will be automatically removed after 21 days of inactivity, so it should only be used for intermediate or reproducible data. User limit of 10TB, but amount is not guarenteed and may not be available. 
+* [**`/mmfs1/gscratch/group-name/` — Shared Group and Project Storage**](#group-or-lab-directories). Variable total capacity based on hardware holdings.
+* [**`/mmfs1/gscratch/scrubbed/` - Scrubbed Storage**](#scrubbed-storage) or free community storage for temporary, high-capacity workloads. Data stored in scrubbed locations will be automatically removed after 21 days of inactivity, so it should only be used for intermediate or reproducible data. User limit of 10TB, but amount is not guarenteed and may not be available. 
 
 ![Diagrammatic representation of the Klone filesystem directory tree. The root directory appears at the top and contains several subdirectories. A truncated view highlights the mmfs1 directory and selected subdirectories within it, including home for user home directories, sw for shared software and scripts, and gscratch for project and lab group storage. Some directories are shown in blue to indicate they are also accessible via symbolic links from shorter top-level paths.](/img/docs/filesystem_klone.jpg 'Klone filesystem')
 
@@ -63,7 +63,7 @@ Each users' Home directory is located at the folder path `/mmfs1/home/UWnetID` o
 Your Home directory quota is 10 GB or ~250,000 inodes. If you exceed this limit, you will be prohibited from going much further with your computing until you clean up. 
 :::
 
-On Klone, monitor your Home directory with [<ins>**`hyakstorage`**</ins>](#checking-storage-utilization-with-hyakstorage) as shown below. 
+On Klone, monitor your Home directory with [**`hyakstorage`**](#checking-storage-utilization-with-hyakstorage) as shown below. 
 
 ```js
 hyakstorage --home
@@ -76,7 +76,7 @@ hyakstorage --home
 ╰──────────────────────┴────────────────────────────────┴────────────────────────────────╯
 ```
 
-Ideally you only keep essential configuration files here. This quota can not be changed, if you need more data one of the other storage spots like [<ins>**`/gscratch`**</ins>](#group-or-lab-directories) or [<ins>**`/gscratch/scrubbed`**</ins>](#scrubbed-storage)(i.e., lab folder, scrubbed).
+Ideally you only keep essential configuration files here. This quota can not be changed, if you need more data one of the other storage spots like [**`/gscratch`**](#group-or-lab-directories) or [**`/gscratch/scrubbed`**](#scrubbed-storage)(i.e., lab folder, scrubbed).
 
 :::tip PRO TRIP - FYI
 
@@ -108,7 +108,7 @@ For example, a member of the Research Computing Club would see `stf` and an acco
 Your lab gets 1 TB per slice that your group has contributed to Klone, which includes HPC (CPU-only) and GPU slices.
 
 :::tip
-Check group quotas and current use with the [<ins>**`hyakstorage`**</ins>](#checking-storage-utilization-with-hyakstorage) command.
+Check group quotas and current use with the [**`hyakstorage`**](#checking-storage-utilization-with-hyakstorage) command.
 :::
 
 ### Scrubbed Storage
@@ -190,11 +190,11 @@ mv old_name new_name
 
 **3. Data Transfer To External Devices**
 
-If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the [<ins>**data transfer**</ins>](./transfer.md) page for more information on transferring data between Hyak Klone and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
+If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the [**data transfer**](./transfer.md) page for more information on transferring data between Hyak Klone and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
 
 **4. Reclaiming Data From a User That Has Left UW**
 
-In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions by submitting the [<ins>**Research Computing Support Request Form**</ins>](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3).
+In the case that a lab member has left your group without transferring ownership of data, the principal investigator for the group or a designated member manager or group representative should contact the Hyak team to request an ownership change or a change of permissions by submitting the [**Research Computing Support Request Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3).
 
 **5. Removing Unused Data**
 
@@ -212,5 +212,5 @@ rm -r directory/
 
 Storage quotas consist of two parts: (1) block and (2) inode. Block quotas corresponds to what most folks traditionally think of when you hear about storage capacity (e.g., 10GB, 1TB). Inode quotas are a limit on the number of files you can have. On local computers the inode limits are high enough for a single user that it's not a concept you have to deal with until you start to use a cluster with larger workflows for the first time. 
 
-Learn more about inodes [<ins>**here**</ins>](https://www.admin-magazine.com/HPC/Articles/What-Is-an-Inode).
+Learn more about inodes [**here**](https://www.admin-magazine.com/HPC/Articles/What-Is-an-Inode).
 :::

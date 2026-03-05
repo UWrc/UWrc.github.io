@@ -14,13 +14,13 @@ tags: [klone, hyak, hpc, supercomputer, features, linux, centos, rocky]
 
 ### Background
 
-In late 2020, while building the current-generation cluster, `klone`, our previous-generation cluster, MOX, was running CentOS 7 – which was nearing end-of-life support. We used the transition to `klone` as an opportunity to deploy CentOS 8, the world’s most popular OS in academic research computing environments. Unfortunately, around the time we were wrapping up KLONE’s software stack, the CentOS project announced [<ins>**1**</ins>](https://blog.centos.org/2020/12/future-is-centos-stream/), [<ins>**2**</ins>](https://www.redhat.com/en/blog/centos-stream-building-innovative-future-enterprise-linux) a transition of their own: Red Hat unilaterally terminated the development of CentOS as an open-source version of Red Hat Enterprise Linux (RHEL). CentOS would become an upstream version of RHEL – in other words, more experimental and ultimately less stable. 
+In late 2020, while building the current-generation cluster, `klone`, our previous-generation cluster, MOX, was running CentOS 7 – which was nearing end-of-life support. We used the transition to `klone` as an opportunity to deploy CentOS 8, the world’s most popular OS in academic research computing environments. Unfortunately, around the time we were wrapping up KLONE’s software stack, the CentOS project announced [**1**](https://blog.centos.org/2020/12/future-is-centos-stream/), [**2**](https://www.redhat.com/en/blog/centos-stream-building-innovative-future-enterprise-linux) a transition of their own: Red Hat unilaterally terminated the development of CentOS as an open-source version of Red Hat Enterprise Linux (RHEL). CentOS would become an upstream version of RHEL – in other words, more experimental and ultimately less stable. 
 
 <center>
 	<img src="/img/blog/rocky-linux.png" alt="Rocky Linux" width="75%" />
 </center>
 
-As the dust from this announcement settled, a consensus emerged: [<ins>**Rocky Linux**</ins>](https://rockylinux.org), led by the initial founder of the CentOS project, Greg Kurtzer, would become the CentOS successor.
+As the dust from this announcement settled, a consensus emerged: [**Rocky Linux**](https://rockylinux.org), led by the initial founder of the CentOS project, Greg Kurtzer, would become the CentOS successor.
 
 ### The Transition
 
