@@ -12,7 +12,8 @@ Our March maintenance is complete, and Klone and Tillicum are back in operation.
 
 ### Notable Updates
 In addition to routine package and security updates, we completed the following user-relevant changes: 
-* **Open OnDemand upgraded to 4.1.4** - This update includes improvements for digital accessibility along with other upstream fixes and enhancements. 
+* **Open OnDemand upgraded to 4.1.4** - This update includes improvements for digital accessibility along with other upstream fixes and enhancements.
+   * Additionally, we have deprecated the Open OnDemand Job Composer feature in alignment with the Open OnDemand roadmap. 
 * **Tillicum PixStor/GPFS code patch** - A PixStor code patch was applied to support continued stability and reliability for the GPFS-backed storage environment. 
 
 :::warning
