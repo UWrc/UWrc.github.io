@@ -39,6 +39,10 @@ Setting up **Globus Connect Personal** on your local computer lets you create a 
 
 * [**Install Globus Connect Personal**](https://www.globus.org/globus-connect-personal) for your operating system. 
 
+:::important 
+HTTPS uploads and downloads are limited to 10 GB per file. Files under 10 GB can be transferred by dragging and dropping or by using the upload/download buttons in Globus. For larger uploads, use Globus Connect Personal.
+:::
+
 :::tip Video tutorial available
 [**Video guide**](https://www.youtube.com/watch?v=bpnVcAN99WY) from the Globus Team. 
 
