@@ -9,7 +9,7 @@ It enables you to perform many common tasks without CLI, including:
 
 - Managing files (upload, download, edit)
 - Monitoring running jobs and resource usage
-- Launching interactive jobs (e.g., Jupyter, RStudio, VS Code)
+- Launching interactive jobs (e.g., Jupyter, VS Code)
 - Displaying remote desktop for software graphical interface (e.g., MATLAB, COMSOL)
 
 :::info

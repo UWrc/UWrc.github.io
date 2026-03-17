@@ -51,8 +51,27 @@ Here’s a quick overview of Tillicum storage policies:
 
 Users are responsible for transferring results to external systems (e.g., [**Kopah S3**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083) or [**Lolo Archive**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084))
 
+:::warning Key considerations for Scrubbed
+* **AUTO-DELETE:** Files not accessed for 60 days in Scrubbed will automatically be deleted. 
+>Attempting to circumvent the auto-delete policy violates our usage policy and is against the spirit of Scrubbed as a community resource.
+* **100TB INDIVIDUAL LIMIT**: The 100TB per-user limit is not guaranteed. Scrubbed is a shared space with a large quota, and heavy use by a few users can affect accessibility for others. This is the main reason for the auto-delete policy.
+* **PRIVACY:** Writes to Scrubbed are public by default, it is the responsibility of the individual researcher to lock down anything they wish to use in Scrubbed.
+> Please note the Scrubbed permissions are ***completely open*** by default so use Linux group changes and modifications to restrict access as appropriate.
+:::
+
+### Storage Monitoring
+
+The user tool `hyakstorage` is available on Tillicum and provides users with an individual or group storage summary. On Tillicum `hyakstorage` reports are updated every hour. 
+
+```js
+hyakstorage
+
+#group summary
+hyakstorage -g
+```
+
 :::tip pro tip: Storage monitoring
-To monitor and investigate storage usage, use the following command, which will show you how much storage is occupied by each subdirectory in the directory where the command is executed. If you are cleaning up storage, this command will show new storage counts as changes are made.
+To monitor and investigate storage usage **in real time**, use the following command, which will show you how much storage is occupied by each subdirectory in the directory where the command is executed. If you are cleaning up storage, this command will show new storage counts as changes are made.
 ```js
 du -h -d 1
 ```
