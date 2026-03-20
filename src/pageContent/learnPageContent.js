@@ -181,7 +181,7 @@ export const LearnSpotlightCards = [
           { image: '/img/learn/spotlights/icu.png',
             header: 'UW Institute for Medical Data Science', 
             caption: 'Using machine learning to optimize prediction of extubation failure and clinical action',
-            link: 'https://www.youtube.com/watch?v=AcHr_G0LiBg',
+            link: 'https://www.youtube.com/watch?v=QnJBSsP9sh4',
             isvideo: true,
           },
 
