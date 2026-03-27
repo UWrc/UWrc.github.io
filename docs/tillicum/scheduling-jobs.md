@@ -47,6 +47,20 @@ Tillicum jobs are submitted under a "Quality-of-Service" or **QoS**, which defin
 
 Access to the Long and Wide QoS is not enabled by default. Users must request access and provide a justification for their workload by submitting the [**User Support Intake Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3) → Select **Tillicum**.
 
+To help us evaluate your request, please include the following information:
+
+**Long QoS (extended walltime)**
+* Workload description: application(s) used, job type (single job, array, workflow), typical GPU/node count, and expected walltime per job
+* Why extended runtime is required: e.g., model convergence, algorithmic constraints, I/O patterns, licensing limits, or external dependencies
+* Checkpointing feasibility: whether checkpointing, job chaining, or restarts were evaluated and why they are not viable or would impact correctness/performance
+* Scope and duration: how long you expect to need Long QoS access
+
+**Wide QoS (large-scale jobs)**
+* Workload description: application(s) used, job type (single job, array, workflow), typical and maximum GPU/node count
+* Scaling evidence: how the workload scales beyond 2 nodes (e.g., benchmarks, prior runs, or literature)
+* Parallelization method: e.g., MPI, distributed training, domain decomposition, workflow-level parallelism
+* Scope and duration: how long you expect to need Wide QoS access
+
 ---
 
 ## Understanding Job Types
