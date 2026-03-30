@@ -23,6 +23,14 @@ Check it out here → [**Tillicum Onboarding Training**](https://github.com/UWrc
 * See if Tillicum is right for you → Select the **Demo Account Option** → [**Tillicum Access Request Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=aabee72f87ae6210e385333e3fbb3581)
   * Demo accounts are limited to 100 GPU hours and 100GB of dedicated project storage.
 
+:::tip Tillicum GPU Credits for Students
+
+UW students can now apply for **$250 in Tillicum GPU computing credits** to support research projects, class work, and technical exploration that benefit from high-performance GPUs. Tillicum features NVIDIA H200 GPUs and is designed for workloads that can take advantage of large GPU memory or multi-GPU scaling. 
+
+These credits are provided by the [**Research Computing Club**](https://depts.washington.edu/uwrcc/), with funding from [**Student Technology Fees**](https://techfee.uw.edu/), to help expand student access to advanced research computing resources. 
+
+[**Learn more and apply**](https://depts.washington.edu/uwrcc/tillicum/).
+:::
 ---
 ## Pay-as-you-go by the GPU Hour
 
