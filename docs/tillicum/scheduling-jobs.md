@@ -35,7 +35,7 @@ Tillicum jobs are submitted under a "Quality-of-Service" or **QoS**, which defin
 
 | QoS             | Max Time   | Max GPUs per Job | Max Jobs Per User | Concurrent GPU Limit | Notes                           |
 | --------------- | ---------- | ---------------- | ----------------- | -------------------- | ------------------------------- |
-| **normal**      | 24 hours   | 16               | NA                | 96 GPUs              | Standard production work        |
+| **normal**      | 24 hours   | 16               | NA                | 64 GPUs              | Standard production work        |
 | **debug**       | 1 hour     | 1                | 1                 | 1 job                | Quick testing and setup      |
 | **interactive** | 8 hours    | 2                | 2                 | 2 jobs               | Real-time work or debugging |
 | **long**        | 7 days     | 16               | NA                |  QoS cannot exceed 96 GPUs*     | Long jobs           |
