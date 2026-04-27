@@ -110,3 +110,11 @@ prevent your jobs from running with the reason "ReqNodeNotAvail".
 :::warning
 Too many incorrect login attempts will result in a IP ban, which could last up to an hour.
 :::
+
+When you first ssh into `tillicum` you land on one of the two login nodes (e.g., `tillicum-login01`). Login nodes are shared amongst all users to **transfer data**, **navigate the file system**, and **request resource slices** to perform heavy duty computing.
+
+:::warning
+**For data transfers (e.g., backups or downloading datasets), please use the login nodes.** The total bandwidth on login nodes is significantly higher—**up to 40 times faster than on compute nodes**.
+
+We recommend using a `screen` or `tmux` session during data transfers to avoid interruptions caused by network disconnections.
+:::
