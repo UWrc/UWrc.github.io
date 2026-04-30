@@ -3,7 +3,7 @@ id: python
 title: Python
 ---
 
-Python is a scripting and general purpose programming language with a rich ecosystem of computational libraries. On Hyak it's widely used for machine learning (PyTorch, TensorFlow), data science, and general computing. We recommend using the **Conda module** (`module load conda`) as the primary way to manage Python environments on both Hyak Klone and Tillicum. The Conda module was previously available only on Tillicum and is now fully supported on Klone as well. Using the Conda module means no Miniconda installation is required, more efficient storage usage, and cleaner, isolated Python environments that are easier to debug, reproduce, and clean up. For users who need full reproducibility and portability, [**containers**](#containers) are an alternative approach.
+Python is a scripting and general purpose programming language with a rich ecosystem of computational libraries. On both Hyak Klone and Tillicum it's widely used for machine learning (PyTorch, TensorFlow), data science, and general computing. We recommend using the **Conda module** (`module load conda`) as the primary way to manage Python environments on both Hyak Klone and Tillicum. The Conda module was previously available only on Tillicum and is now fully supported on Klone as well. Using the Conda module means no Miniconda installation is required, more efficient storage usage, and cleaner, isolated Python environments that are easier to debug, reproduce, and clean up. For users who need full reproducibility and portability, [**containers**](#containers) are an alternative approach.
 
 ## Conda Module
 
@@ -67,7 +67,7 @@ Please follow the instructions below to customize your environment and package l
 :::
 
 :::caution Scrubbed Storage Not Recommended
-Do not store Conda environments in scrubbed storage. Many files inside a Conda environment retain the original access times from when they were added to the Conda package cache, not when you created or installed the environment. These files may appear inactive and can be removed by the scrubbed storage erasure policies, leading to corrupted Conda environments.
+We do not recommend storing Conda environments in scrubbed storage. Many files inside a Conda environment retain the original access times from when they were added to the Conda package cache, not when you created or installed the environment. These files may appear inactive and can be removed by the scrubbed storage erasure policies, leading to corrupted Conda environments.
 :::
 
 #### Customize Environment and Package Locations
@@ -136,9 +136,9 @@ See the [**best practices from Anaconda**](https://www.anaconda.com/blog/using-p
 
 ## Containers
 
-While we recommend the Conda module for most Python workflows, containers offer additional benefits for certain use cases: full reproducibility, portability across systems, and complete encapsulation of the entire software stack including system-level dependencies.
+While we recommend the Conda module for most Python workflows, containers offer additional benefits for certain use cases: full reproducibility, portability across systems, and complete encapsulation of the entire software stack including system-level dependencies. Containers are especially useful on Tillicum for GPU workflows with complex dependencies — the [**NVIDIA NGC Catalog**](https://catalog.ngc.nvidia.com/) has pre-built containers with CUDA and NVIDIA drivers configured that work well with the Hyak environment.
 
-For detailed instructions on using Apptainer containers on Hyak, see the [**Containers**](/docs/tools/containers) documentation. For a step-by-step tutorial on building a container-based Python environment with Conda and Jupyter, see the [**Hyak101 Python Tutorial**](/docs/hyak101/python/syllabus).
+For detailed instructions on using Apptainer containers on Hyak, see the [**Containers**](/docs/tools/containers) documentation. If you are new to containers, see the [**Containers Tutorial**](/docs/hyak101/containers/syllabus) to get started.
 
 :::tip Cluster-Specific Bind Paths
 When running Apptainer containers, remember to bind the correct storage filesystem for your cluster:
