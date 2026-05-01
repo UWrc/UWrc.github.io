@@ -122,7 +122,7 @@ This will place all of your environments and package caches in the specified dir
 
 ### Installing Packages with pip
 
-You can use `pip` inside a Conda environment to install Python packages. Our suggested use of pip is inside a conda environment. For example:
+You can use `pip` inside a Conda environment to install Python packages. Our suggested use of `pip` is inside a conda environment. For example:
 
 ```js
 module load conda
@@ -136,7 +136,12 @@ See the [**best practices from Anaconda**](https://www.anaconda.com/blog/using-p
 
 ## Containers
 
-While we recommend the Conda module for most Python workflows, containers offer additional benefits for certain use cases: full reproducibility, portability across systems, and complete encapsulation of the entire software stack including system-level dependencies. Containers are especially useful on Tillicum for GPU workflows with complex dependencies — the [**NVIDIA NGC Catalog**](https://catalog.ngc.nvidia.com/) has pre-built containers with CUDA and NVIDIA drivers configured that work well with the Hyak environment.
+While we recommend the Conda module for most Python workflows, containers offer additional benefits for certain use cases: 
+* Full reproducibility
+* Portability across systems
+* Complete encapsulation of the entire software stack including system-level dependencies 
+
+Containers are especially useful for GPU workflows with complex dependencies. The [**NVIDIA NGC Catalog**](https://catalog.ngc.nvidia.com/) has pre-built containers with CUDA and NVIDIA drivers configured that work well with the Hyak Klone and Tillicum computing environments.
 
 For detailed instructions on using Apptainer containers on Hyak, see the [**Containers**](/docs/tools/containers) documentation. If you are new to containers, see the [**Containers Tutorial**](/docs/hyak101/containers/syllabus) to get started.
 
