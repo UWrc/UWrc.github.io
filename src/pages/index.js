@@ -7,6 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import * as PageContent from "../pageContent/homePageContent";
 import * as LearnPageContent from "../pageContent/learnPageContent";
 import HomeSection from "./components/HomeSection/HomeSection";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
 import CarouselItem from "./components/Carousel/CarouselItem";
 import CarouselArrow from "./components/Carousel/CarouselArrow";
 import CarouselIndicator from "./components/Carousel/CarouselIndicator";
@@ -62,6 +63,8 @@ export default function Home() {
           return <CarouselItem key={i} {...carouselItem} />
         })}
       </Carousel>
+
+      <HeroBanner />
 
       <HomeSection
         header='Service Documentation'

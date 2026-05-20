@@ -17,6 +17,13 @@ module.exports = {
   ],
   onBrokenLinks: 'ignore',
   themeConfig: {
+    announcementBar: {
+      id: 'new_user_docs',
+      content: '👋 New to Hyak? <a href="/docs">Start here</a> to get your account set up and running.',
+      backgroundColor: '#4b2e83',
+      textColor: '#ffffff',
+      isCloseable: true,
+    },
     prism: {
       additionalLanguages: ['shell-session']
     },
