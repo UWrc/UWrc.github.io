@@ -39,20 +39,19 @@ Starting with OOD gives you a working environment right away. As you get comfort
 Working from the command line unlocks more streamlined processes and production workflows on the cluster. These tutorials introduce the Linux filesystem, walk you through essential commands, and give you hands-on practice to build confidence.
 
 - **[Linux Fundamentals Tutorial](https://github.com/UWrc/linux-fundamentals)** — Start here to learn essential command-line skills for Hyak
-- **[Basic Linux Commands](/docs/hyak101/basics/linux)** — Navigating the file system, understanding storage, and everyday commands
-- **[Basic Linux Commands II](/docs/hyak101/basics/linux-2)** — Viewing file contents, piping, and text manipulation
+- **[Basic Linux Commands](/docs/hyak101/basics/syllabus)** — Navigating the file system, understanding storage, and everyday commands
 
-## Quick Links
+## Helpful Pages
 
-- **[Open OnDemand](/docs/guides/ood/ood-start)** — Web-based graphical interface to Hyak Klone and Tillicum
-- **[SSH & Login](/docs/getting-started/ssh-login)** — Instructions for logging in to the clusters
-- **[Slurm on Klone](/docs/systems/klone/klone-scheduling-jobs)** — Scheduling jobs on Hyak Klone
-- **[Slurm on Tillicum](/docs/systems/tillicum/tillicum-scheduling-jobs)** — Scheduling jobs on Tillicum
-- **[Python on Hyak](/docs/guides/software/python)** — Setting up and running Python workflows on the cluster
-- **[Data Transfer](/docs/guides/data-transfer/data-transfer-scp-rsync)** — Move data to and from the clusters
-- **[Kopah S3 Storage](/docs/systems/kopah/kopah-storage)** — Object storage for research data
+- **[Open OnDemand](/docs/ood/start)** — Web-based graphical interface to Hyak Klone and Tillicum
+- **[SSH & Login](/docs/setup/ssh)** — Instructions for logging in to the clusters
+- **[Slurm on Klone](/docs/compute/scheduling-jobs)** — Scheduling jobs on Hyak Klone
+- **[Slurm on Tillicum](/docs/tillicum/scheduling-jobs)** — Scheduling jobs on Tillicum
+- **[Python on Hyak](/docs/tools/python)** — Setting up and running Python workflows on the cluster
+- **[Data Transfer](/docs/storage/transfer)** — Move data to and from the clusters
+- **[Kopah S3 Storage](/docs/storage/kopah)** — Object storage for research data
 - **[Data Commons](/docs/data-commons/requirements)** — Shared datasets available cluster-wide
-- **[Tools and Software](/docs/guides/software/guides-containers)** — Software available across computing systems
+- **[Tools and Software](/docs/tools/containers)** — Software available across computing systems
 - **[Tutorials and Training](/learn)** — Guided learning resources and workshops
 - **[Events](https://calendar.washington.edu/sea_uwit-rc)** — Upcoming workshops, office hours, and training sessions
 
