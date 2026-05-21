@@ -3,7 +3,11 @@ id: gui
 title: GUI Usage
 ---
 
-On this page we will provide options to interact with your data on Kopah via Graphical User Interfaces (GUIs).
+On this page we will provide options to interact with your data on Kopah via Graphical User Interfaces (GUIs). 
+
+:::tip New to Kopah?
+Watch our [**Getting Started with Kopah**](https://www.youtube.com/watch?v=xFONnv8TJ4s) video for a quick overview of the service before diving into GUI tools.
+:::
 
 ## Globus
 

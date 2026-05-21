@@ -33,6 +33,13 @@ export const LearnHowToCards = [
             isfeatured: true,
             featuredSortIndex: 15,
           },
+          { image: '/img/learn/kopah_short.jpg',
+            header: 'Kopah S3 Storage - Quick Start', 
+            caption: 'Getting started with Kopah S3 Storage.',
+            link: 'https://youtu.be/xFONnv8TJ4s',
+            isvideo: true,
+            isfeatured: false,
+          },
         ];
 
 export const LearnTutorialCards = [
