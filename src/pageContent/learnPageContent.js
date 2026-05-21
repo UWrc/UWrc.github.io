@@ -38,8 +38,7 @@ export const LearnHowToCards = [
             caption: 'Getting started with Kopah S3 Storage.',
             link: 'https://youtu.be/xFONnv8TJ4s',
             isvideo: true,
-            isfeatured: true,
-            featuredSortIndex: 20,
+            isfeatured: false,
           },
         ];
 
