@@ -5,6 +5,10 @@ title: CLI Usage
 
 On this page we detail two options data on Kopah via Command Line Interfaces (CLIs). s3cmd is a popular and widely used tool, while s5cmd is faster but less widely used.
 
+:::tip New to Kopah?
+Watch our [**Getting Started with Kopah**](https://www.youtube.com/watch?v=xFONnv8TJ4s) video for a quick overview of the service before diving into CLI tools.
+:::
+
 :::note
 These tools aren't the only ones compatible with Kopah, however you will need to set them up to work with Ceph, Kopah's underlying storage protocol.
 :::
