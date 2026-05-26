@@ -19,7 +19,7 @@ module.exports = {
   themeConfig: {
     announcementBar: {
       id: 'new_user_docs',
-      content: '👋 New to Hyak? <a href="/docs">Start here</a> to get your account set up and running.',
+      content: '👋 New to Hyak? <a href="/docs">Start here</a> to find helpful resources before you start computing.',
       backgroundColor: '#4b2e83',
       textColor: '#ffffff',
       isCloseable: true,

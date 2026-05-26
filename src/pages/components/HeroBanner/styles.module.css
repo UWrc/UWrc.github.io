@@ -1,7 +1,11 @@
 .heroBanner {
   width: 100%;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #4b2e83 0%, #32006E 100%);
-  padding: 3rem 1.5rem;
+  padding: 0 1.5rem;
   text-align: center;
 }
 
@@ -15,7 +19,7 @@
   font-family: 'EncodeSans';
   font-weight: 700;
   font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .heroBannerSubtitle {
