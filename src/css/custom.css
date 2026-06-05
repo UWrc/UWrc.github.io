@@ -17,6 +17,17 @@
   --ifm-code-font-size: 95%;
 }
 
+[data-theme='dark'] {
+  --ifm-color-primary: #c5b4e3;
+  --ifm-color-primary-dark: #b49dd9;
+  --ifm-color-primary-darker: #ab92d5;
+  --ifm-color-primary-darkest: #8b6bc5;
+  --ifm-color-primary-light: #d6cbed;
+  --ifm-color-primary-lighter: #dfd6f0;
+  --ifm-color-primary-lightest: #f0ecf7;
+  --ifm-link-color: #c5b4e3;
+}
+
 
 /* bootstrap override */
 .navbar__title {
@@ -46,7 +57,19 @@
 }
 
 code {
-  color: #39275B
+  color: #39275B;
+}
+
+html[data-theme='dark'] a {
+  color: #c5b4e3;
+}
+
+html[data-theme='dark'] a:hover {
+  color: #d9ccf0;
+}
+
+html[data-theme='dark'] :not(pre) > code {
+  color: #aadb1e;
 }
 
 ul.check li {
