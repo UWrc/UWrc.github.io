@@ -1,6 +1,6 @@
 ---
 id: scheduling-jobs
-title: Slurm
+title: Compute
 ---
 
 Tillicum uses the **Slurm workload manager** for scheduling and running jobs. While Slurm is also used on Klone, there are some important differences in how access and priorities work.  
@@ -35,11 +35,11 @@ Tillicum jobs are submitted under a "Quality-of-Service" or **QoS**, which defin
 
 | QoS             | Max Time   | Max GPUs per Job | Max Jobs Per User | Concurrent GPU Limit | Notes                           |
 | --------------- | ---------- | ---------------- | ----------------- | -------------------- | ------------------------------- |
-| **normal**      | 24 hours   | 16               | NA                | 64 GPUs              | Standard production work        |
-| **debug**       | 1 hour     | 1                | 1                 | 1 job                | Quick testing and setup      |
-| **interactive** | 8 hours    | 2                | 2                 | 2 jobs               | Real-time work or debugging |
-| **long**        | 7 days     | 16               | NA                |  QoS cannot exceed 96 GPUs*     | Long jobs           |
-| **wide**        | 24 hours   | NA               | NA                | QoS cannot exceed 96 GPUs*  | Distributed jobs            |
+| **normal**      | 24 hours   | 16               | NA                | 48 GPUs              | Standard production work        |
+| **debug**       | 1 hour     | 1                | 1                 | 1 job                | Quick testing and setup         |
+| **interactive** | 8 hours    | 2                | 2                 | 2 jobs               | Real-time work or debugging     |
+| **long**        | 7 days     | 16               | NA                | 48 GPUs, QoS cannot exceed 96 GPUs* | Long jobs        |
+| **wide**        | 24 hours   | NA               | NA                | QoS cannot exceed 96 GPUs* | Distributed jobs          |
 
 **These QoS levels use a shared GPU limit rather than per-user concurrent limits. Jobs running under Long and Wide collectively share a pool of GPUs, with a maximum of 96 GPUs in use at any time across all users.*
 
@@ -81,13 +81,13 @@ There are two main ways to run work on Tillicum:
 Run a single-GPU debug test job with the maximum allowable resources for the QoS for maximum time of 30 minutes:  
 
 ```js
-salloc --qos=debug --gpus=1 --cpus-per-task=8 --mem=200G --time=00:30:00
+salloc --qos=debug --gres=gpu:1 --cpus-per-task=8 --mem=200G --time=00:30:00
 ```
 
 Run a normal QoS job with 2 GPUs:
 
 ```js
-salloc --qos=normal --gpus=2 --cpus-per-task=16 --mem=400G --time=04:00:00
+salloc --qos=normal --gres=gpu:2 --cpus-per-task=16 --mem=400G --time=04:00:00
 ```
 *Note*: If you don’t specify `--qos`, the job will default to **`normal`**.
 
@@ -128,13 +128,49 @@ python my_script.py
 
 ## Monitoring Jobs and Resource Availability
 
-Your best tool for monitoring the progress of your jobs is the `squeue` command which will show you all jobs running or requested on the cluster. A quick look at `squeue` output will allows you to estimate cluster traffic. `squeue` with the `-u` flag and your NetID will show you the jobs you have submitted. 
+Your best tool for monitoring the progress of your jobs is the `squeue` command which will show you all jobs running or requested on the cluster. A quick look at `squeue` output will allows you to estimate cluster traffic. 
+
+```js
+$ squeue
+     JOBID      QOS ACCOUNT      NAME     USER ST       TIME  TIME_LEFT NODES   TRES_PER_NODE NODELIST(REASON)
+    141091   normal   acct1      job8    user1 PD       0:00    8:00:00     1             N/A (Priority)
+    140983   normal   acct2      job7    user1 PD       0:00 1-00:00:00     1             N/A (Dependency)
+    141071   normal   acct1      job6    user1 PD       0:00    4:00:00     1      gres/gpu:1 (Resources)
+    140491   normal   acct1      job5    user1 PD       0:00 1-00:00:00     1      gres/gpu:1 (Dependency)
+    140986   normal   acct3      job4    user4  R    3:01:40   20:58:20     2             N/A g[009-010]
+    140942 interact   acct3      job3    user3  R    3:54:47    4:05:13     1             N/A g004
+    141087   normal   acct1      job2    user2  R      15:30    3:44:30     1 gres/gpu:h200:1 g002
+  141070_6   normal   acct1      job1    user1  R    1:44:48      15:12     1      gres/gpu:1 g012
+```
+
+Column descriptions:
+- **JOBID:** A unique number assigned to your job. Use JobID to reference your job in other commands and include it when reaching out to help@uw.edu for assistance.
+- **QOS:** The resource pool or QoS (e.g., `normal`, `interactive`).
+- **ST:** Job status: `PD` (Pending), `R` (Running), `CG` (Completing), `CD` (Completed).
+- **TIME:** Runtime duration.
+- **TIME_LEFT:** Time left for the job to execute (=TimeLimit-TimeUsed).
+- **TRES_PER_NODE:** Trackable resources per node requested by the job.
+- **NODELIST(REASON):** Node(s) assigned to the job or reason for pending (e.g., "Resources" or "Priority")
+
+:::tip `TRES_PER_NODE` Output
+`TRES_PER_NODE` may display different values depending on the resource request option used:
+- `N/A`: requested with `-G` or `--gpus`
+- `gres/gpu:1`: requested with `--gres=gpu:1`
+- `gres/gpu:h200:1`: requested with `--gres=gpu:h200:1`
+:::
+
+`squeue` with the `-u` flag and your NetID will show you the jobs you have submitted. 
 
 ```js
 squeue -u $USER
 ```
 
-If your job are in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you jobs is being held. Common reasons include "ReqNodeNotAvail" meaning that your job overlaps with a maintenance reservation or "QOSResourceLimit" which indicates your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish). [**Guide to job reasons.**](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES)
+If your job is in State "PD" for pending under the "ST" column, you can look at the "REASON" column to determine why you job is being held. Common reasons include:
+
+- `ReqNodeNotAvail`: Your job overlaps with a maintenance reservation. Run `scontrol show res` to view any reservations in place.
+- `QOSResourceLimit`: Your job exceeds your individual resource limit but will run when additional resources are available (i.e., your other jobs finish).
+
+For more information, see Slurm's [**guide to job reasons.**](https://slurm.schedmd.com/squeue.html#SECTION_JOB-REASON-CODES).
 
 `sinfo` can also be helpful for checking node availability and GPU usage across the cluster. The following command provides a useful summary of node state, CPU usage, memory, and GPUs currently allocated by Slurm:
 
@@ -156,12 +192,12 @@ Column descriptions:
 
 ---
 
-## Budgeting and Tillicum Usage
+## Budgeting and Resource Utilization
 
 To help guide your work, our Slurm job submit script will show you an estimate of how much your job will cost when using Slurm to schedule a job. For example, 
 
 ```js
-salloc --qos=normal --gpus=1 --time=2:00:00
+salloc --qos=normal --gres=gpu:1 --time=2:00:00
 ```
 
 ```js
