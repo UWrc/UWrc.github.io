@@ -49,3 +49,11 @@
   color: #4b2e83;
   text-decoration: none;
 }
+
+[data-theme='dark'] .heroBannerButton {
+  color: #4b2e83;
+}
+
+[data-theme='dark'] .heroBannerButton:hover {
+  color: #4b2e83;
+}

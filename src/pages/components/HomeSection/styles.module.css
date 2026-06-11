@@ -41,6 +41,13 @@
   box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
   margin: 8px 32px;
   display:inline-block;
+  color: #1a1a1a;
+}
+
+[data-theme='dark'] .homeSection .seeMore {
+  background-color: #2a2a2d;
+  border-color: #444;
+  color: #f0f0f0;
 }
 
 .homeSection .seeMore:hover {

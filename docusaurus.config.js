@@ -41,6 +41,7 @@ module.exports = {
       logo: {
         alt: 'Hyak Logo',
         src: 'img/logos/W-Logo_Purple_RGB.png',
+        srcDark: 'img/logos/W-Logo_White_RGB.png',
       },
       items: [
         /*
