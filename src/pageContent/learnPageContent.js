@@ -41,6 +41,13 @@ export const LearnHowToCards = [
             isvideo: true,
             isfeatured: false,
           },
+          { image: '/img/learn/OOD_video.jpg',
+            header: 'Hyak Klone Open OnDemand', 
+            caption: 'A GUI with your favorite applications running on Klone.',
+            link: 'https://youtu.be/y6BzuqaxyWc',
+            isvideo: true,
+            isfeatured: false,
+          },
         ];
 
 export const LearnTutorialCards = [
@@ -187,6 +194,12 @@ export const LearnServicesCards = [
             header: 'Kopah Eligibility and Access', 
             caption: 'How to Get Started with UW\'s S3-API Compatible Storage Service.',
             link: 'https://youtu.be/E_IO7HTiOjg',
+            isvideo: true,
+          },
+          { image: '/img/learn/tillicum_service_vid.jpg',
+            header: 'Tillicum GPU Cluster', 
+            caption: 'UW\'s GPU Accelerated Research Computing Platform.',
+            link: 'https://youtu.be/AG90N99_4OI',
             isvideo: true,
           },
         ];
