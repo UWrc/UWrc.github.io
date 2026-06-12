@@ -196,6 +196,12 @@ export const LearnServicesCards = [
             link: 'https://youtu.be/E_IO7HTiOjg',
             isvideo: true,
           },
+          { image: '/img/learn/tillicum_service_vid.jpg',
+            header: 'Tillicum GPU Cluster', 
+            caption: 'UW\'s GPU Accelerated Research Computing Platform.',
+            link: 'https://youtu.be/AG90N99_4OI',
+            isvideo: true,
+          },
         ];
 
 export const LearnSpotlightCards = [
