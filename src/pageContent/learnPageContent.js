@@ -41,6 +41,13 @@ export const LearnHowToCards = [
             isvideo: true,
             isfeatured: false,
           },
+          { image: '/img/learn/OOD_video.jpg',
+            header: 'Hyak Klone Open OnDemand', 
+            caption: 'A GUI with your favorite applications running on Klone.',
+            link: 'https://youtu.be/y6BzuqaxyWc',
+            isvideo: true,
+            isfeatured: false,
+          },
         ];
 
 export const LearnTutorialCards = [
