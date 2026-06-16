@@ -1,139 +1,98 @@
 module.exports = {
-  someSidebar: [
+  docs: [
     'index',
     {
       type: 'category',
-      label: 'Hyak Klone',
+      label: 'Getting Started',
       items: [
-        'klone/architecture',
+        'getting-started/join-group',
+        'getting-started/account-creation',
+        'getting-started/account-activation',
+        'getting-started/ssh-login',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Systems',
+      items: [
         {
-          'Get Started': [
-            'join-group',
-            'account-creation',
-            'account-activation',
-          ]
+          type: 'category',
+          label: 'Klone (HPC)',
+          items: [
+            'systems/klone/get-started',
+            'systems/klone/storage',
+            'systems/klone/scheduling-jobs',
+            'systems/klone/gpus',
+          ],
         },
         {
-          'Setup': [
-            'setup/ssh',
-            'setup/intracluster-keys',
-            'setup/portforwarding',
-            'setup/x11',
-          ]
+          type: 'category',
+          label: 'Tillicum (GPU)',
+          items: [
+            'systems/tillicum/get-started',
+            'systems/tillicum/storage',
+            'systems/tillicum/scheduling-jobs',
+            'systems/tillicum/gpus',
+          ],
         },
         {
-          'Storage': [
-            'storage/data',
-            'storage/gscratch',
-          ]
+          type: 'category',
+          label: 'Kopah (S3 Storage)',
+          items: [
+            'systems/kopah/overview',
+            'systems/kopah/storage',
+          ],
         },
         {
-          'Compute': [
-            'compute/start-here',
-            'compute/scheduling-jobs',
-            'compute/checkpoint',
-            'compute/resource-monitoring',
-          ]
-        },
-        {
-          'GPUs': [
-            'gpus/gpu_start',
-            'gpus/nvidia_ngc',
-            'gpus/ollama_setup',
-          ]
+          type: 'category',
+          label: 'Lolo (Tape Archive)',
+          items: [
+            'systems/lolo/overview',
+            'systems/lolo/storage',
+          ],
         },
       ],
     },
     {
       type: 'category',
-      label: 'Tillicum',
+      label: 'Guides',
       items: [
-        'tillicum/architecture',
-        'tillicum/tillicum',
-        'tillicum/scheduling-jobs',
-        'tillicum/monitoring-jobs',
-        'tillicum/environment',
-        'tillicum/storage',
-        'tillicum/ood',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Kopah S3 Storage',
-      items: [
-        'storage/kopah',
-        'storage/gui',
-        'storage/cli',
-        'storage/boto3',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Lolo Tape Archive',
-      items: [
-        'lolo/lolo',
-        'lolo/lolo-usage',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Data Transfer',
-      items: [
-        'storage/transfer',
-        'storage/cyberduck',
-        'storage/globus',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Data Commons',
-      items: [
-        'data-commons/requirements',
-        'data-commons/ego4d',
-        'data-commons/kitchens',
-        'data-commons/fineweb_edu',
-        'data-commons/imagenet',
-        'data-commons/kinetics',
-        'data-commons/olmo-mix-1124',
-        'data-commons/tablib',
-        'data-commons/tcga',
-        'data-commons/the_pile',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Open OnDemand',
-      items: [
-        'ood/start',
-        'ood/schedule-job',
-        'ood/matlab',
-        'ood/jupyter',
-        'ood/vscode',
-        'ood/rstudio',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Tools & Software',
-      items: [
-        'tools/software',
-        'tools/modules',
-        'tools/compilers',
-        'tools/containers',
-        'tools/squashfs',
-        'tools/modules-containers',
-        'tools/dmtcp',
-        'tools/r',
-        'tools/python',
-        'tools/jupyter',
-        'tools/matlab',
-        'tools/matemathica',
         {
-          'Vs Code': [
-            'tools/vscode',
-            'tools/vsc-code-server',
-            'tools/vsc-proxy-jump',
-          ]
+          type: 'category',
+          label: 'Software Environments',
+          items: [
+            'guides/software/modules',
+            'guides/software/conda-python',
+            'guides/software/containers',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Open OnDemand',
+          items: [
+            'guides/ood/getting-started',
+            'guides/ood/interactive-apps',
+            'guides/ood/interactive-jobs',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Data Transfer',
+          items: [
+            'guides/data-transfer/globus',
+            'guides/data-transfer/cyberduck',
+            'guides/data-transfer/scp-rsync',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Applications',
+          items: [
+            'guides/applications/jupyter',
+            'guides/applications/vscode',
+            'guides/applications/r-rstudio',
+            'guides/applications/matlab',
+          ],
         },
       ],
     },
@@ -141,67 +100,75 @@ module.exports = {
       type: 'category',
       label: 'Tutorials',
       items: [
+        'tutorials/linux-basics',
         {
-          'Linux Basics': [
-            'hyak101/basics/syllabus',
-          ]
+          type: 'category',
+          label: 'Slurm',
+          items: [
+            'tutorials/slurm/syllabus',
+            'tutorials/slurm/jobs',
+            'tutorials/slurm/arrays',
+          ],
         },
         {
-          'Containers': [
-            'hyak101/containers/syllabus',
-            'hyak101/containers/background',
-            'hyak101/containers/demonstration',
-            'hyak101/containers/build',
-          ]
+          type: 'category',
+          label: 'Containers',
+          items: [
+            'tutorials/containers/syllabus',
+            'tutorials/containers/background',
+            'tutorials/containers/demonstration',
+            'tutorials/containers/build',
+          ],
         },
         {
-          'Slurm': [
-            'hyak101/basics/syllabus_slurm',
-            'hyak101/basics/jobs',
-            'hyak101/basics/arrays',
-          ]
-        },
-        {
-          'Advanced Slurm': [
-            'hyak101/basics/syllabus_advanced',
-            'hyak101/basics/advanced',
-            'hyak101/basics/nn_batch',
-            'hyak101/basics/nn_array',
-            'hyak101/basics/nn_sweep',
-          ]
-        },
-        {
-          'Jupyter Notebooks': [
-            'hyak101/python/syllabus',
-            'hyak101/python/setup',
-            'hyak101/python/container',
-            'hyak101/python/ssh',
-            'hyak101/python/overlay',
-            'hyak101/python/slurm-forward',
-            'hyak101/python/start-up-seq',
-            'hyak101/python/connect-vsc',
-            'hyak101/python/interactive',
-          ]
+          type: 'category',
+          label: 'Jupyter Notebooks',
+          items: [
+            'tutorials/jupyter-notebooks/syllabus',
+            'tutorials/jupyter-notebooks/setup',
+            'tutorials/jupyter-notebooks/container',
+            'tutorials/jupyter-notebooks/ssh',
+            'tutorials/jupyter-notebooks/overlay',
+            'tutorials/jupyter-notebooks/slurm-forward',
+            'tutorials/jupyter-notebooks/start-up-seq',
+            'tutorials/jupyter-notebooks/connect-vsc',
+            'tutorials/jupyter-notebooks/interactive',
+          ],
         },
       ],
     },
     {
       type: 'category',
-      label: 'Additional Resources',
+      label: 'Resources',
       items: [
-        'resources',
-        'faq',
-        'glossary',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Contribution Guides',
-      items: [
-        'contribute/pull-request',
-        'contribute/markdown-guide',
-        'contribute/link-markdown',
-        'contribute/mdx',
+        'resources/faq',
+        'resources/glossary',
+        {
+          type: 'category',
+          label: 'Contribution Guide',
+          items: [
+            'resources/contribution-guide/pull-request',
+            'resources/contribution-guide/markdown-guide',
+            'resources/contribution-guide/link-markdown',
+            'resources/contribution-guide/mdx',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Data Commons',
+          items: [
+            'resources/data-commons/requirements',
+            'resources/data-commons/ego4d',
+            'resources/data-commons/kitchens',
+            'resources/data-commons/fineweb_edu',
+            'resources/data-commons/imagenet',
+            'resources/data-commons/kinetics',
+            'resources/data-commons/olmo-mix-1124',
+            'resources/data-commons/tablib',
+            'resources/data-commons/tcga',
+            'resources/data-commons/the_pile',
+          ],
+        },
       ],
     },
   ],

@@ -1,0 +1,40 @@
+---
+title: Start Here
+---
+
+## UW Research Computing Data Commons
+
+Both Hyak Klone and Tillicum clusters have cluster-wide, shared dataset storage referred to as Data Commons. 
+
+On `klone` the path to Data Commons is `/data/`.
+
+On `tillicum` the path to Data Commons is `/gpfs/datasets/`.
+
+The purpose of the Data Commons is to provide a central location for datasets being used by multiple groups, to avoid hosting the same dataset multiple times in separate group directories.
+
+## Requirements
+
+In order request dataset addition to Data Commons, the following criteria must be met:
+
+1. The requester must create a new page of documentation (in this folder, `/docs/resources/data-commons`), and submit a pull request, describing the dataset:
+    - A full description of the dataset, publication date, licenses, etc.
+    - Instructions for using the dataset, i.e. any required modules, the structure of the data, etc.
+    - Contact information for dataset maintainers (typically, the group/user submitting the request) and the intended audience or discipline of the data.
+
+2. The requester must name a minimum of 3 separate groups/labs & 3 specific users who will be using the data.
+
+3. The requester emails help@uw.edu with:
+    - A link to the documentation PR.
+    - The following people CC'd: the lab/group owners & all initial users. This will be *at least* 6 people.
+
+4. Every person included in the request (again, at least 6), must individually attest that the dataset has been vetted: that, to the best of their knowledge, the dataset contains no material where its download/storage/use violates any State or Federal law and/or the rules/policies of UW, including intellectual property laws.
+
+:::important Documentation Contributions
+The GitHub repository for this documentation site, with instructions for cloning & local development, is here: https://github.com/UWrc/UWrc.github.io.
+
+We have a few additional resources on documentation formatting here: https://hyak.uw.edu/docs/resources/contribution-guide/markdown-guide
+:::
+
+## Additional considerations for datasets
+
+Datasets in the Data Commons don't contribute to purchased storage quotas, but they still need to be optimized for size & inode usage. This will be handled on a case-by-case basis, since dataset composition is so varied. For instance, if the submitted dataset is comprised of 200,000,000 small files, we will expect this to be combined somehow—i.e. with HDF5 or SquashFS—to keep inode usage down.

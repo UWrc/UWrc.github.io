@@ -1,0 +1,100 @@
+---
+title: Modules
+---
+
+Modules are a method of modifying your environment that are unique to some software you're trying to run. It allows you to quickly switch between different programs or different versions of the same program.
+
+## Basics
+
+Please refer to the cluster specific sections on `klone` [**link**](#klone) below for more details on creating your own modules.
+
+### What software is available?
+
+```js
+module avail
+```
+
+The Hyak team will maintain most of the core modules for building software, this includes GNU compilers (e.g., `gcc`, `g++`, `gfortran`) or their Intel compiler equivalents as well as select MPI libraries.
+
+There is a larger list of modules maintained by the broader Hyak community that appears when you run this command. **Community created or "contrib" modules are provided as is.** Community modules on `klone` are separated into a lower section and within the lower section each module is further prefixed by the respective group that created the module. Not all contributed modules are publicly available.
+
+:::tip
+The Hyak team encourages the use of Apptainer to better promote computational portability and reproducibility. You can read more about Apptainer [**link**](containers.md) after loading its module.
+:::
+
+### What modules do I currently have loaded?
+
+```js
+module list
+```
+
+### How to (un)load a software?
+
+Replace "software" below with a specific module you know exists or identified via `module avail` above.
+
+```js
+module load <software>
+```
+
+Conversely, you can unload a specific module.
+
+```js
+module unload <software>
+```
+
+You can unload every module you might have loaded.
+
+```js
+module purge
+```
+
+## `klone`
+
+The `klone` cluster uses the more feature-rich LMOD implementation of modules. You're welcome to [**email**](mailto:help@uw.edu?subject=klone-module-help) us if you have any questions about modulefile creation on `klone`.
+
+### LMOD
+
+![**LMOD logo**](/img/docs/tools-modules-lmod.png)
+
+LMOD [**documentation**](https://lmod.readthedocs.io/en/latest/) [**project page**](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) is an upgraded implementation of environment modules created by the Texas Advanced Computing Center (TACC) at the University of Texas.
+
+### Login vs Compute Node
+
+Modules are meant to be set up for programs used in intensive computing; they should only be loaded on compute nodes. To reinforce this point the `modules` command does not exist on the login nodes. If you try to run the `module` command you will receive a warning message. This warning is benign and you can even disable it if you have `modules` loading in your start up shell file (e.g., `.bashrc`, `.zshrc`).
+
+If you wanted to be more discerning, the logic is useful to include in your start up shell file for identifying if the host is a login node then running certain commands only if this is the case (or not).
+
+```
+export LOGIN_NODE=$(hostname | grep -q '^klone1' ; echo $?)
+
+if [[ $LOGIN_NODE ]]
+then
+	echo "This is a login node"
+else
+	echo "This is a compute node"
+fi
+```
+
+### How do I create personal LMOD modules on `klone`?
+
+This advanced user documentation page from the LMOD developers walks you through this [**link**](https://lmod.readthedocs.io/en/latest/020_advanced.html). You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
+
+```js
+module use /path/to/personal/modulefiles
+```
+
+In this case you'll likely use a sub-directory under your lab's `/gscratch` folder or your home directory and create individual folders with independent software packages. Once you have code compiled a modulefile needs to be created for each software package you installed, there are some examples from basic to advanced [**link**](https://lmod.readthedocs.io/en/latest/100_modulefile_examples.html). 
+
+### How do I create shared LMOD modules on `klone`?
+
+Each group has a special folder for installing codes that are intended to be shared for all `klone` users. Each folder here gets a 100GB block quota and 160,000 inode quota at `/sw/contrib/mylab-src` where "mylab" is your account affiliation. We can raise these limits if specific code compiles require, however, in our experience the default quotas are sufficient for all but the most rare cases.
+
+You place your modulefiles in `/sw/contrib/modulefiles/mylab` and when anyone runs `module avail` it will now appear in the "contrib" section in the lower half. Note the prefix is automatically tagged to your group name for you to more easily identify the ones you contributed (and likely will use most regularly).
+
+
+### Environment Modules
+
+![Environment Modules Logo](/img/docs/tools-modules-environment.png)
+
+Environment modules [**documentation**](https://modules.readthedocs.io/en/latest/) [**Wikipedia**](https://en.wikipedia.org/wiki/Environment_Modules_(software)) has a long development history going back to the 1990's. It's still in use today due to its simplicity and ease of deployment for cluster administrators and end users alike.
+

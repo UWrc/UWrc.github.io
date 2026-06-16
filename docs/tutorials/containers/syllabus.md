@@ -1,0 +1,43 @@
+---
+title: Syllabus
+---
+
+### Goals & Rationale
+
+#### The main objective of this tutorial is to demystify containers and containerization of software for usage on Hyak
+
+**Containers** are lightweight, isolated software environments that encapsulate an application, along with its dependencies and runtime settings. Containers are useful because they provide a consistent and reproducible way to package, distribute, and run software across different computing environments.
+
+**Most importantly, software containers allow Hyak researchers to install their software package and all its dependencies without root administrative privileges.** [**Click here to see the Hyak's Software Usage Policies for more information.**](https://hyak.uw.edu/docs/guides/software/modules#software-usage-policy-for-hyak-users)
+
+:::tip Video available
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zPsvUQV_GV0?si=jJiqmgJTVk23PLFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+:::
+
+Much of the Hyak documentation is organized into bite sized instructional guides for particular software tools or concepts, but these may be too advanced for users who are brand new to High Performance Computing (HPC) and haven't used containers before. Here we have prepared a walk-through tutorial to demonstrate fundamental commands to build and use software containers. In this tutorial, we will explain what containers are and how and why they should be used in the Hyak research computing environment. We will provide exercises to give you practice using containers and building custom containers for your research.
+
+#### Learning Objectives:
+
+* Become familiar with Hyak software policies.
+* Be able to define what a container is.
+* Become familiar with the benefits of containers for reproducible science.
+* Become proficient in container usage.
+* Practice building custom containers.
+* Send a command to a container via a Slurm batch script.
+
+### Tutorial Content
+
+Use the sidebar to navigate or click the links below to jump to different sections of the tutorial.
+
+#### Tutorial: Containers
+
+* [**This page - Syllabus**](https://hyak.uw.edu/docs/tutorials/containers/syllabus)
+* [**Introduction**](https://hyak.uw.edu/docs/tutorials/containers/background)
+* [**Pulling Containers**](https://hyak.uw.edu/docs/tutorials/containers/demonstration)
+* [**Building Containers**](https://hyak.uw.edu/docs/tutorials/containers/build)
+
+### Extra Practice
+
+We have curated a list of [**Additional Resources**](https://hyak.uw.edu/docs/resources/resources) and many are relevant for this tutorial.
