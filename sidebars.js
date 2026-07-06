@@ -73,6 +73,8 @@ module.exports = {
             'guides/software/modules',
             'guides/software/conda-python',
             'guides/software/containers',
+            'guides/software/nvidia-ngc',
+            'guides/software/ollama',
           ],
         },
         {
