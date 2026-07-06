@@ -19,6 +19,7 @@ module.exports = {
           type: 'category',
           label: 'Klone (HPC)',
           items: [
+            'systems/klone/architecture',
             'systems/klone/get-started',
             'systems/klone/storage',
             'systems/klone/scheduling-jobs',
@@ -29,6 +30,7 @@ module.exports = {
           type: 'category',
           label: 'Tillicum (GPU)',
           items: [
+            'systems/tillicum/architecture',
             'systems/tillicum/get-started',
             'systems/tillicum/storage',
             'systems/tillicum/scheduling-jobs',
@@ -40,7 +42,15 @@ module.exports = {
           label: 'Kopah (S3 Storage)',
           items: [
             'systems/kopah/overview',
-            'systems/kopah/storage',
+            {
+              type: 'category',
+              label: 'Storage',
+              items: [
+                'systems/kopah/tools/gui',
+                'systems/kopah/tools/cli',
+                'systems/kopah/tools/boto3',
+              ],
+            },
           ],
         },
         {
