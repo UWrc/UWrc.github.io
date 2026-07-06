@@ -1,5 +1,7 @@
 ---
 title: Introduction
+pagination_prev: tutorials/containers/syllabus
+pagination_next: tutorials/containers/demonstration
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: Syllabus
+pagination_next: tutorials/slurm/jobs
 ---
 
 ### Goals & Rationale

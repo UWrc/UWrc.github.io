@@ -1,5 +1,7 @@
 ---
 title: Set Up
+pagination_prev: tutorials/slurm-advanced/syllabus_advanced
+pagination_next: tutorials/slurm-advanced/nn_batch
 ---
 
 ### Software and data for this tutorial

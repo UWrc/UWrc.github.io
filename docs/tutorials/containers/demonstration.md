@@ -1,5 +1,7 @@
 ---
 title: Pulling Containers
+pagination_prev: tutorials/containers/background
+pagination_next: tutorials/containers/build
 ---
 
 Pulling pre-built container images is often the easiest and quickest way to run your desired software environment. In this tutorial, we will pull a container from [**Docker Hub**](https://hub.docker.com/). DockerHub is a cloud-based registry that provides access to a large repository of pre-built container images. Other container registries include [**NVIDIA NGC**](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=), [**Biocontainers**](https://biocontainers.pro/registry), [**Sylabs.io**](https://cloud.sylabs.io/library), and [**Quay.io**](https://quay.io/). For more information on accessible container registries, check out the containers documentation page [**HERE**](https://hyak.uw.edu/docs/guides/software/containers#container-repositories).

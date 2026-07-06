@@ -1,5 +1,7 @@
 ---
 title: Interactive and Batch Jobs
+pagination_prev: tutorials/slurm-advanced/advanced
+pagination_next: tutorials/slurm-advanced/nn_array
 ---
 
 ### Interactive Jobs

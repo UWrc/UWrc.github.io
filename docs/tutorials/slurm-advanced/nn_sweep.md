@@ -1,5 +1,6 @@
 ---
 title: Parameter Sweep
+pagination_prev: tutorials/slurm-advanced/nn_array
 ---
 
 

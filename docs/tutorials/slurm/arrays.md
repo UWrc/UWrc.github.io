@@ -1,5 +1,6 @@
 ---
 title: Job Arrays
+pagination_prev: tutorials/slurm/jobs
 ---
 
 In this section, we will present a worked example using Slurm job arrays. This example will display how Slurm can be used for parallel computing or executing multiple jobs in parallel. Harnessing the power of parallel computing can decrease your total time preparing and submitting jobs by allowing you to execute a set of jobs in parallel. The script presented can be used as a template and adapted for your purposes.

@@ -126,58 +126,6 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Tutorials',
-      items: [
-        'tutorials/linux-basics',
-        {
-          type: 'category',
-          label: 'Slurm',
-          items: [
-            'tutorials/slurm/syllabus',
-            'tutorials/slurm/jobs',
-            'tutorials/slurm/arrays',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Advanced Slurm',
-          items: [
-            'tutorials/slurm-advanced/syllabus_advanced',
-            'tutorials/slurm-advanced/advanced',
-            'tutorials/slurm-advanced/nn_batch',
-            'tutorials/slurm-advanced/nn_array',
-            'tutorials/slurm-advanced/nn_sweep',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Containers',
-          items: [
-            'tutorials/containers/syllabus',
-            'tutorials/containers/background',
-            'tutorials/containers/demonstration',
-            'tutorials/containers/build',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Jupyter Notebooks',
-          items: [
-            'tutorials/jupyter-notebooks/syllabus',
-            'tutorials/jupyter-notebooks/setup',
-            'tutorials/jupyter-notebooks/container',
-            'tutorials/jupyter-notebooks/ssh',
-            'tutorials/jupyter-notebooks/overlay',
-            'tutorials/jupyter-notebooks/slurm-forward',
-            'tutorials/jupyter-notebooks/start-up-seq',
-            'tutorials/jupyter-notebooks/connect-vsc',
-            'tutorials/jupyter-notebooks/interactive',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'Resources',
       items: [
         'resources/faq',

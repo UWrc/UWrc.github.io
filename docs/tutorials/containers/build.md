@@ -1,5 +1,6 @@
 ---
 title: Building Containers
+pagination_prev: tutorials/containers/demonstration
 ---
 
 By the end of this tutorial, you will be able to build containers in three different ways: interactively, from a definition file, and from a local image. In this section, we will learn how to:

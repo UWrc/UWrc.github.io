@@ -1,5 +1,7 @@
 ---
 title: Scheduling Jobs
+pagination_prev: tutorials/slurm/syllabus
+pagination_next: tutorials/slurm/arrays
 ---
 
 When you first ssh into `klone` you land on one of the two login nodes (e.g., `klone-login01`). Login nodes are shared amongst all users to transfer data, navigate the file system, and request resource slices to perform heavy duty computing. You should never use login nodes for heavy computing and automated mechanisms exist to monitor and enforce violations. The tool used to notify users of violations is "arbiter2" and you will receive an email for each offending process [**(Gardner, Migacz, and Haymore 2019)**](https://hyak.uw.edu/docs/systems/klone/scheduling-jobs#ref_arbiter).

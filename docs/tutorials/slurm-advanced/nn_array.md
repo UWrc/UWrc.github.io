@@ -1,5 +1,7 @@
 ---
 title: Parallel Computing
+pagination_prev: tutorials/slurm-advanced/nn_batch
+pagination_next: tutorials/slurm-advanced/nn_sweep
 ---
 
 :::note context
