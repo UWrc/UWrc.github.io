@@ -34,7 +34,6 @@ module.exports = {
             'systems/tillicum/get-started',
             'systems/tillicum/storage',
             'systems/tillicum/scheduling-jobs',
-            'systems/tillicum/gpus',
           ],
         },
         {
@@ -81,7 +80,16 @@ module.exports = {
           label: 'Open OnDemand',
           items: [
             'guides/ood/getting-started',
-            'guides/ood/interactive-apps',
+            {
+              type: 'category',
+              label: 'Interactive Apps',
+              items: [
+                'guides/ood/apps/jupyter',
+                'guides/ood/apps/vscode',
+                'guides/ood/apps/matlab',
+                'guides/ood/apps/rstudio',
+              ],
+            },
             'guides/ood/interactive-jobs',
           ],
         },
@@ -99,7 +107,15 @@ module.exports = {
           label: 'Applications',
           items: [
             'guides/applications/jupyter',
-            'guides/applications/vscode',
+            {
+              type: 'category',
+              label: 'VS Code',
+              items: [
+                'guides/applications/vscode/overview',
+                'guides/applications/vscode/code-server',
+                'guides/applications/vscode/proxy-jump',
+              ],
+            },
             'guides/applications/r-rstudio',
             'guides/applications/matlab',
           ],
