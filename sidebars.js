@@ -140,6 +140,17 @@ module.exports = {
         },
         {
           type: 'category',
+          label: 'Advanced Slurm',
+          items: [
+            'tutorials/slurm-advanced/syllabus_advanced',
+            'tutorials/slurm-advanced/advanced',
+            'tutorials/slurm-advanced/nn_batch',
+            'tutorials/slurm-advanced/nn_array',
+            'tutorials/slurm-advanced/nn_sweep',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Containers',
           items: [
             'tutorials/containers/syllabus',
