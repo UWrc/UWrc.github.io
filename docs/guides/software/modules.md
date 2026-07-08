@@ -77,7 +77,11 @@ The Hyak team encourages the use of Apptainer to better promote computational po
 
 ## Module Structure
 
-<Tabs>
+:::info Select your system
+Hyak Klone and Tillicum handle modules differently. Use the tabs below to view instructions for the system you're working on. Your selection applies to the entire page.
+:::
+
+<Tabs groupId="cluster">
 <TabItem value="klone" label="Klone" default>
 
 Klone uses a **flat module structure**. The Hyak team maintains most core modules for building software, including GNU compilers (e.g., `gcc`, `g++`, `gfortran`) or their Intel compiler equivalents as well as select MPI libraries.
@@ -207,7 +211,7 @@ You can save and restore commonly used modules using [**user collections**](http
 
 ## Creating Custom Modules
 
-<Tabs>
+<Tabs groupId="cluster">
 <TabItem value="klone" label="Klone" default>
 
 ### Personal LMOD Modules
