@@ -38,28 +38,46 @@ Tillicum jobs are submitted under a "Quality-of-Service" or **QoS**, which defin
 | **normal**      | 24 hours   | 16               | NA                | 48 GPUs              | Standard production work        |
 | **debug**       | 1 hour     | 1                | 1                 | 1 job                | Quick testing and setup         |
 | **interactive** | 8 hours    | 2                | 2                 | 2 jobs               | Real-time work or debugging     |
-| **long**        | 7 days     | 16               | NA                | 48 GPUs, QoS cannot exceed 96 GPUs* | Long jobs        |
+| **long**        | 7 days     | 16               | NA                | QoS cannot exceed 96 GPUs* | Long jobs        |
 | **wide**        | 24 hours   | NA               | NA                | QoS cannot exceed 96 GPUs* | Distributed jobs          |
+| **urgent**      | 3 days     | 64               | NA                | QoS cannot exceed 96 GPUs* | Working under a strict deadline  |
 
 **These QoS levels use a shared GPU limit rather than per-user concurrent limits. Jobs running under Long and Wide collectively share a pool of GPUs, with a maximum of 96 GPUs in use at any time across all users.*
 
-### Access to Long and Wide QoS
+:::caution Urgent QoS info & pricing
 
-Access to the Long and Wide QoS is not enabled by default. Users must request access and provide a justification for their workload by submitting the [**User Support Intake Form**](https://uwconnect.uw.edu/sp?id=sc_cat_item&sys_id=9e0fe8b58718fa906f1997dd3fbb35f3) → Select **Tillicum**.
+Urgent QoS is intended for time-sensitive research activities that require elevated scheduling
+priority to meet a specific deadline, such as:
+* Publication deadlines
+* Conference deadlines
+* Grant proposal deadlines
+* Other documented time-sensitive research needs
 
-To help us evaluate your request, please include the following information:
+Urgent QoS approvals are time-limited, with a maximum approval period of two weeks.
 
-**Long QoS (extended walltime)**
-* Workload description: application(s) used, job type (single job, array, workflow), typical GPU/node count, and expected walltime per job
-* Why extended runtime is required: e.g., model convergence, algorithmic constraints, I/O patterns, licensing limits, or external dependencies
-* Checkpointing feasibility: whether checkpointing, job chaining, or restarts were evaluated and why they are not viable or would impact correctness/performance
-* Scope and duration: how long you expect to need Long QoS access
+Urgent QoS is designed to **reduce queue wait times by increasing scheduling priority**. Jobs submitted through Urgent QoS will receive elevated priority relative to standard jobs but *will not cancel or preempt jobs that are already running*. As a result, some queue wait time may still occur, though it is expected to be substantially shorter than without the elevated priority.
 
-**Wide QoS (large-scale jobs)**
-* Workload description: application(s) used, job type (single job, array, workflow), typical and maximum GPU/node count
-* Scaling evidence: how the workload scales beyond 2 nodes (e.g., benchmarks, prior runs, or literature)
-* Parallelization method: e.g., MPI, distributed training, domain decomposition, workflow-level parallelism
-* Scope and duration: how long you expect to need Wide QoS access
+Urgent QoS requests will be evaluated individually based on demonstrated need, requested timeline, and fairness considerations. Access may be limited to ensure equitable access for the broader research community.
+
+****Urgent QoS is offered as a premium service tier.**** For jobs submitted to the Urgetn QoS:
+
+> ***Billable GPU Hours*** = **2**(*GPU Hour*) = Elapsed Time x *N* GPUs 
+
+:::
+
+
+### Access to Special QoS's (Long, Wide, and Urgent)
+
+Access to the Long, Wide, and Urgent QoS is not enabled by default. Users must request access and provide a justification for their workload by submitting the [**Tillicum Special QoS Access Request Form**](https://uwconnect.uw.edu/it?id=sc_cat_item&sys_id=94dd9f17976dc3100a7637b6f053af91).
+
+**General Access Policies:**
+* Access requests are evaluated on a case-by-case basis.
+* Access is granted to an individual user, not a Slurm account.
+* Long QoS and Wide QoS approvals are time-limited, with a maximum approval period of six months.
+* Urgent QoS approvals are time-limited, with a maximum approval period of two weeks.
+* Continued access may require reapplication and reevaluation.
+* Approval of a request does not guarantee immediate resource availability.
+
 
 ---
 
