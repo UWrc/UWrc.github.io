@@ -46,7 +46,7 @@ apptainer shell --bind /gpfs container.sif
 ```
 We highly recommend using containers to build your software environment on Tillicum. In particular, [**NVIDIA NGC Catalog**](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=&page=&pageSize=) has pre-built containers with CUDA and NVIDIA drivers configured, which work well with the Tillicum environment. 
 
-If you are new to containers, we recommend our [**Containers Tutorial**](../hyak101/containers/syllabus.md).
+If you are new to containers, we recommend our [**Containers Tutorial**](/docs/tutorials/containers/syllabus).
 
 --- 
 

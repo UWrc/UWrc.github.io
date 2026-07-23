@@ -94,7 +94,7 @@ When building a container, you may encounter the following error:
 
 ![Disk Quota Exceeded Error Message](/img/docs/disk-quota-exceeded.png)
 
-If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the storage limit in your [**home directory**](https://hyak.uw.edu/docs/systems/klone/storage/#user-home-directory)  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
+If you run into a Disk Quota Exceeded error when building the container, it is likely due to exceeding the storage limit in your [**home directory**](https://hyak.uw.edu/docs/systems/klone/storage#user-home-directory)  where the Apptainer cache is located by default. Because your home directory has a 10GB storage limit, the following commands may be useful to monitor your storage usage. To assess your storage in your home directory, use the following command:
 ```js
 du -h --max-depth 1
 ```

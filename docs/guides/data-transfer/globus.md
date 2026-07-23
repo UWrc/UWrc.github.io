@@ -7,7 +7,7 @@ As of Spring 2025, we're excited to announce that Globus has been added to Hyak 
 :::caution `klone` sharing not yet enabled
 This service is still new to our environment, and we're actively working to understand how Globus integrates with our current and future security posture. As a result, Globus public sharing is not yet enabled on `klone`, but we'll provide updates as we continue evaluating and expanding its capabilities.
 
-Globus public sharing is available with [**Kopah S3 storage**](https://hyak.uw.edu/docs/systems/kopah/storage#globus), which we recommend as a compliment for your research storage portfolio if you anticipate requiring regular sharing and collaboration. 
+Globus public sharing is available with [**Kopah S3 storage**](/docs/systems/kopah/tools/gui#globus), which we recommend as a compliment for your research storage portfolio if you anticipate requiring regular sharing and collaboration. 
 :::
 
 ### Getting Started with Globus

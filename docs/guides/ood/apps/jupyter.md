@@ -48,7 +48,7 @@ or
 
 ### Apptainer Image
 
-Under the `Jupyter Container` section of the form, you can enter the path of a custom Apptainer image you want to use. We offer a number of pre-built Apptainer images with popular libraries and tools. If you are unfamiliar with containers, you can learn more from [**our tutorial**](https://hyak.uw.edu/docs/tutorials/containers/syllabus/).
+Under the `Jupyter Container` section of the form, you can enter the path of a custom Apptainer image you want to use. We offer a number of pre-built Apptainer images with popular libraries and tools. If you are unfamiliar with containers, you can learn more from [**our tutorial**](https://hyak.uw.edu/docs/tutorials/containers/syllabus).
 
 1. Obtain the desired container from a container catalog. For example, we can use `nvcr.io/nvidia/pytorch:25.01-py3` from the [**NVIDIA catalog**](https://catalog.ngc.nvidia.com).
 2. Pull the container to Hyak:

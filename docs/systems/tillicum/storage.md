@@ -25,7 +25,7 @@ As shown above, the Tillicum filesystem is organized under the root directory `/
 
 * `home/` — individual user home directories for configuration and small files.
 * `software/` — centrally managed shared applications and tools.
-* `datasets/` — curated public or shared research datasets. We have a process by which groups can nominate datasets for storage under our [**Data Commons**](https://hyak.uw.edu/docs/resources/data-commons/requirements).
+* `datasets/` — curated public or shared research datasets. We have a process by which groups can nominate datasets for storage under our [**Data Commons**](/docs/resources/data-commons/requirements).
 * `scrubbed/` — temporary scratch space for active work, periodically cleaned.
 * `projects/` — long-term storage for groups and project-specific data.
 

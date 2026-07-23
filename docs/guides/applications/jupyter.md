@@ -6,7 +6,7 @@ Jupyter Notebooks provide an interactive computing environment that combines cod
 
 ## Choosing Your Jupyter Setup Method
 
-### 1. [**Open OnDemand**](https://hyak.uw.edu/docs/guides/ood/interactive-apps) (Easiest)
+### 1. [**Open OnDemand**](https://hyak.uw.edu/docs/guides/ood/apps/jupyter) (Easiest)
 This method provides the simplest way to run Jupyter on Hyak:
 - **No Configuration**: No need to set up SSH tunnels or manage job scripts
 - **Web Interface**: Access Jupyter directly through your browser

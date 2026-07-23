@@ -2,7 +2,7 @@
 title: "R & RStudio"
 ---
 
-R is a popular statistical programming language for data science and analysis. To use R on Hyak, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [**containers**](containers.md) and [**modules**](modules.md) helpful before following these instructions.
+R is a popular statistical programming language for data science and analysis. To use R on Hyak, we rely on Apptainer and Docker containers to deploy R. You might find a refresher on [**containers**](/docs/guides/software/containers) and [**modules**](/docs/guides/software/modules) helpful before following these instructions.
 
 ## User Environment
 

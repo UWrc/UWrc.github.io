@@ -14,7 +14,7 @@ To access the RStudio interactive app, navigate to the OOD portal [**here**](htt
 
 You are also able to select an RStudio server container that is provided from the rocker project. Alternatively, you may use a custom container by selecting "Custom" and specifying the absolute path to the container (e.g., `/mmfs1/sw/ondemand/containers/rstudio/sifs/tidyverse-27jan2025.sif`).
 
-Once you specify the RStudio server container, you have the option to change the User R Library Path (R_LIBS_USER). When you use the `install.packages()` command, the package library along with all of its dependencies will be installed in the directory specified with the User R Library Path field. By default, this is the path to your [**home directory**](https://hyak.uw.edu/docs/systems/klone/storage/#user-home-directory) which has a 10G storage limit. If you plan on using `install.packages()`, it is recommended to change the User R Library Path to somewhere with a larger storage quota.
+Once you specify the RStudio server container, you have the option to change the User R Library Path (R_LIBS_USER). When you use the `install.packages()` command, the package library along with all of its dependencies will be installed in the directory specified with the User R Library Path field. By default, this is the path to your [**home directory**](https://hyak.uw.edu/docs/systems/klone/storage#user-home-directory) which has a 10G storage limit. If you plan on using `install.packages()`, it is recommended to change the User R Library Path to somewhere with a larger storage quota.
 
 ![Sample RStudio form on Hyak's OOD.](/img/docs/ood/rstudio-interactive-app.JPG 'RStudio form.')
 

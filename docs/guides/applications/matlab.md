@@ -4,7 +4,7 @@ title: MATLAB
 
 "MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages." [**Wikipedia**](https://en.wikipedia.org/wiki/MATLAB)
 
-The latest Matlab version on `klone` is R2023b. You can use [**LMOD**](modules.md) to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
+The latest Matlab version on `klone` is R2023b. You can use [**LMOD**](/docs/guides/software/modules) to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
 
 
 ```shell-session terminal=true
@@ -21,4 +21,4 @@ For product information, visit www.mathworks.com.
  
 >> 
 ```
-MATLAB can also be launched via Hyak's OnDemand (OOD) portal. For more information, see [**Open OnDemand/MATLAB**](ood/matlab.md).
+MATLAB can also be launched via Hyak's OnDemand (OOD) portal. For more information, see [**Open OnDemand/MATLAB**](/docs/guides/ood/apps/matlab).

@@ -24,9 +24,9 @@ Where the word "BUCKET" above is replaced with the name of your storage bucket.
 
 Kopah is compatible with many S3-API client tools, which are numerous. Here we have included some examples of tools you might find useful for interacting with Kopah:
 
-* [**Graphical User Interface tools**](https://hyak.uw.edu/docs/systems/kopah/storage): solutions under this option include Graphical User Interfaces (GUIs) that offer convenient upload options like drag-and-drop from your local computer to Kopah. 
-    * **NEW** - [**Globus endpoint for Kopah S3**](https://hyak.uw.edu/docs/systems/kopah/storage#globus). Transfer large datasets reliably and securely between systems, whether across campus or around the world. With features like automated transfers, fault tolerance, and a simple web interface, it's a powerful tool for streamlining data movement in research workflows.
+* [**Graphical User Interface tools**](/docs/systems/kopah/tools/gui): solutions under this option include Graphical User Interfaces (GUIs) that offer convenient upload options like drag-and-drop from your local computer to Kopah. 
+    * **NEW** - [**Globus endpoint for Kopah S3**](/docs/systems/kopah/tools/gui#globus). Transfer large datasets reliably and securely between systems, whether across campus or around the world. With features like automated transfers, fault tolerance, and a simple web interface, it's a powerful tool for streamlining data movement in research workflows.
 
-* [**Command Line Interface tools**](https://hyak.uw.edu/docs/systems/kopah/storage): solutions under this option include Command Line Interfaces (CLIs) that can be used to upload files from your local computer to Kopah and can be used on Hyak's current generation cluster, `klone` to complete transfers prior to computing against the data.
+* [**Command Line Interface tools**](/docs/systems/kopah/tools/cli): solutions under this option include Command Line Interfaces (CLIs) that can be used to upload files from your local computer to Kopah and can be used on Hyak's current generation cluster, `klone` to complete transfers prior to computing against the data.
 
-* [**Programmatic Usage**](https://hyak.uw.edu/docs/systems/kopah/storage): solutions under this option include specialized Python libraries to build Kopah usage into your computing protocols.
+* [**Programmatic Usage**](/docs/systems/kopah/tools/boto3): solutions under this option include specialized Python libraries to build Kopah usage into your computing protocols.

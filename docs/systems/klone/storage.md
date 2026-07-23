@@ -10,7 +10,7 @@ title: Storage on Klone
 
 Storage on Hyak Klone is physically separate from servers used for computation. It is best practice on every supercomputer that storage live on its own and is high-performance to handle the bandwidth I/O and read/write operations required by so many compute nodes attached to it. These are typically parallel file systems (e.g., GPFS, Lustre, BeeGFS).
 
-On Klone the storage system (i.e., Gscratch or `/mmfs1/gscratch/`) is then mounted and accessible from every compute node of the cluster. Klone storage is referred to as `/gscratch` due to that being the mount point on the cluster (i.e., `/mmfs1/gscratch/path/directory` or `/gscratch/path/directory`) and a reminder to our researchers that anything here is **"scratch"** or **NOT BACKED UP**. Refer to the [**storage introduction page**](./data.md) for details on how to manage your data life cycle and adhere to the [**3-2-1 backup policy**](./data.md#best-practices-3-2-1-policy). Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UWIT Research Computing offers [**additional storage solutions**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580) that may be use in combination with `/gscratch/` for longer term data storage. Namely: 
+On Klone the storage system (i.e., Gscratch or `/mmfs1/gscratch/`) is then mounted and accessible from every compute node of the cluster. Klone storage is referred to as `/gscratch` due to that being the mount point on the cluster (i.e., `/mmfs1/gscratch/path/directory` or `/gscratch/path/directory`) and a reminder to our researchers that anything here is **"scratch"** or **NOT BACKED UP**. Refer to the [**storage introduction page**](/docs/systems/klone/data) for details on how to manage your data life cycle and adhere to the [**3-2-1 backup policy**](/docs/systems/klone/data#best-practices-3-2-1-policy). Since `/gscratch/` is not backed up, it is not a solution for longterm storage and should only be used for active computing projects. UWIT Research Computing offers [**additional storage solutions**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035580) that may be use in combination with `/gscratch/` for longer term data storage. Namely: 
 
 * [**Kopah S3 Object Storage**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036083)
 * [**Lolo Data Archive**](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036084) for persistent, geographically redundant storage. 
@@ -189,7 +189,7 @@ mv old_name new_name
 
 **3. Data Transfer To External Devices**
 
-If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the [**data transfer**](./transfer.md) page for more information on transferring data between Hyak Klone and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
+If you are leaving UW and are working independently, you should make plans to remove your data by transferring it to an external device. Please refer to the [**data transfer**](/docs/guides/data-transfer/scp-rsync) page for more information on transferring data between Hyak Klone and your local device. Once your data transfer has completed, delete the original files and directories from Hyak so that the storage can be reclaimed.  
 
 **4. Reclaiming Data From a User That Has Left UW**
 

@@ -5,11 +5,11 @@ title: Syllabus
 :::warning
 This is an advanced tutorial for setting up Jupyter Notebooks via VS Code using a container and a ProxyJump. The tutorial is a good demonstration of many Hyak fundamental skills, but there are other streamlined ways to use Jupyter and VS Code. Use the following links to navigate to those docs: 
 
-[**Jupyter via Open OnDemand**](https://hyak.uw.edu/docs/guides/ood/interactive-apps)
+[**Jupyter via Open OnDemand**](https://hyak.uw.edu/docs/guides/ood/apps/jupyter)
 
 [**Jupyter via SSH port forwarding**](https://hyak.uw.edu/docs/guides/applications/jupyter)
 
-[**Using VS Code on Hyak**](https://hyak.uw.edu/docs/guides/applications/vscode)
+[**Using VS Code on Hyak**](https://hyak.uw.edu/docs/guides/applications/vscode/overview)
 
 :::
 

@@ -31,9 +31,9 @@ Another great place to get started with tools that are in the HPC SDK and in the
 :::tip Getting Started with Containers
 If you are new to containers, it may be useful to refer to the following resources to help get you started:
 
-1. **[**What is a Container?**](https://hyak.uw.edu/docs/tutorials/containers/background/#what-is-a-container)**
+1. **[**What is a Container?**](https://hyak.uw.edu/docs/tutorials/containers/background#what-is-a-container)**
 
-2. **[**Getting Started With Apptainer**](https://hyak.uw.edu/docs/guides/software/containers/#apptainer-formerly-singularity)**
+2. **[**Getting Started With Apptainer**](https://hyak.uw.edu/docs/guides/software/containers#apptainer-formerly-singularity)**
 
 3. **[**Containers Tutorial**](https://youtu.be/zPsvUQV_GV0)**
 

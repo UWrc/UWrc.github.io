@@ -11,7 +11,7 @@ Let's start with the easy part.
 
 ### Using VS Code on a compute node
 
-This is very similar to [**our instructions for connecting to VS Code via a ProxyJump**](https://hyak.uw.edu/docs/guides/applications/vscode), but more complex. All we need to do here is add a single step to our interactive job setup.
+This is very similar to [**our instructions for connecting to VS Code via a ProxyJump**](https://hyak.uw.edu/docs/guides/applications/vscode/overview), but more complex. All we need to do here is add a single step to our interactive job setup.
 
 #### 1. Start an interactive job named called 'klone-container'
 

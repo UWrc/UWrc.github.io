@@ -209,7 +209,7 @@ As is, the container is ~4GB and so, you will occupy ~4GB of storage in your wor
 
 :::tip pro tip: storage monitoring
 You can use the `hyakstorage` command to see your file & space quotas, in your home directory and the gscratch directories you can access.
-[**Here's our documentation for that command**](https://hyak.uw.edu/docs/systems/klone/storage#checking-utilization-hyakstorage).
+[**Here's our documentation for that command**](https://hyak.uw.edu/docs/systems/klone/storage#checking-storage-utilization-with-hyakstorage).
 :::
 
 ### Submitting the job

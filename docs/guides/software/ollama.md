@@ -46,7 +46,7 @@ cp /mmfs1/sw/containers/ollama/ollama.sif .
 :::note Requesting Resources for Larger LLMs
 Depending on the size of the model you wish to run, you may want to request more resources. You can request all available memory with `--mem=0`. When requesting multiple GPUs, LLMs may run into issues distributing their memory usage across the GPUs. If the model is configured properly, this should not be an issue. You can request up to 8 GPUs (an entire GPU server). Efficiency will drop when requesting more than 8 GPUs because the GPU cards will be located on different nodes.  
 
-Note that the more resources you request may increase the wait times to get your requested resources. It can be useful to convert the `salloc` flags above into `#SBATCH` directives in a executable bash ([**sbatch**](https://hyak.uw.edu/docs/tutorials/slurm/jobs#batch-jobs)) script along with the commands you want Ollama to execute when anticipated wait times are long. Additional information on requesting a GPU job can be found [**HERE**](https://hyak.uw.edu/docs/tutorials/slurm/jobs/#requesting-gpus-from-checkpoint). 
+Note that the more resources you request may increase the wait times to get your requested resources. It can be useful to convert the `salloc` flags above into `#SBATCH` directives in a executable bash ([**sbatch**](https://hyak.uw.edu/docs/tutorials/slurm/jobs#batch-jobs)) script along with the commands you want Ollama to execute when anticipated wait times are long. Additional information on requesting a GPU job can be found [**HERE**](https://hyak.uw.edu/docs/tutorials/slurm/jobs#requesting-gpus-from-checkpoint). 
 :::
 To ensure the container was properly built, start an interactive shell session:
 ```js

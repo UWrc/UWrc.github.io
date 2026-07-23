@@ -12,7 +12,7 @@ title: Glossary
 
 <a name="checkpoint" /> <br /><br /><br />
 
-[**Checkpoint partitions**](#checkpoint): Abbreviated `ckpt`, `ckpt-g2`, and `ckpt-all`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [**Compute > Using Idle Resources**](https://hyak.uw.edu/docs/systems/klone/scheduling-jobs#the-checkpoint-partition)
+[**Checkpoint partitions**](#checkpoint): Abbreviated `ckpt`, `ckpt-g2`, and `ckpt-all`, represents idle resources across the cluster at any moment. All cluster users are eligible to submit jobs to this partition and they will run subject to availability. To provide some regular churn in pending checkpoint jobs, jobs running for >4 hours are re-queued (i.e., re-submitted to the checkpoint partition queue). The jobs will continue in this manner until the job exits or the requested runtime is fulfilled. For more information see [**Using Idle Resources (Checkpoint)**](https://hyak.uw.edu/docs/systems/klone/scheduling-jobs#using-idle-resources-checkpoint)
 
 <a name="Containers" /> <br /><br /><br />
 
@@ -28,7 +28,7 @@ title: Glossary
 
 <a name="idle" /> <br /><br /><br />
 
-[**Idle Resource**](#idle): A cluster resource is "idle" when it currently has no running jobs. Requested idle resources are not guaranteed. For more information see [**Compute > Using Idle Resources**](https://hyak.uw.edu/docs/systems/klone/scheduling-jobs).
+[**Idle Resource**](#idle): A cluster resource is "idle" when it currently has no running jobs. Requested idle resources are not guaranteed. For more information see [**Using Idle Resources (Checkpoint)**](https://hyak.uw.edu/docs/systems/klone/scheduling-jobs#using-idle-resources-checkpoint).
 
 <a name="interactive" /> <br /><br /><br />
 
@@ -36,7 +36,7 @@ title: Glossary
 
 <a name="module" /> <br /><br /><br />
 
-[**Module**](#module): Pieces of code that can be loaded or unloaded into the kernel that extend its functionality. See [**Tools & Software > Modules**](https://hyak.uw.edu/docs/guides/software/modules).
+[**Module**](#module): Pieces of code that can be loaded or unloaded into the kernel that extend its functionality. See [**Modules**](https://hyak.uw.edu/docs/guides/software/modules).
 
 <a name="node" /> <br /><br /><br />
 
@@ -50,7 +50,7 @@ title: Glossary
 
 <a name="Port_Forwarding" /> <br /><br /><br />
 
-[**Port Forwarding**](#port_forwarding): Port forwarding, also known as port mapping, is a networking technique that redirects network traffic from one port on a local machine to another port on a remote machine. It serves as a way to facilitate communication between devices across networks, enabling services hosted on specific ports to be accessed securely and efficiently. Instructions to set up Port Forwarding: [**Setup > SSH Port forwarding**](https://hyak.uw.edu/docs/getting-started/portforwarding).
+[**Port Forwarding**](#port_forwarding): Port forwarding, also known as port mapping, is a networking technique that redirects network traffic from one port on a local machine to another port on a remote machine. It serves as a way to facilitate communication between devices across networks, enabling services hosted on specific ports to be accessed securely and efficiently. Instructions to set up Port Forwarding: [**SSH Port Forwarding**](https://hyak.uw.edu/docs/getting-started/portforwarding).
 
 <a name="queue" /> <br /><br /><br />
 

@@ -128,18 +128,6 @@ module.exports = {
       type: 'category',
       label: 'Resources',
       items: [
-        'resources/faq',
-        'resources/glossary',
-        {
-          type: 'category',
-          label: 'Contribution Guide',
-          items: [
-            'resources/contribution-guide/pull-request',
-            'resources/contribution-guide/markdown-guide',
-            'resources/contribution-guide/link-markdown',
-            'resources/contribution-guide/mdx',
-          ],
-        },
         {
           type: 'category',
           label: 'Data Commons',
@@ -154,6 +142,18 @@ module.exports = {
             'resources/data-commons/tablib',
             'resources/data-commons/tcga',
             'resources/data-commons/the_pile',
+          ],
+        },
+        'resources/faq',
+        'resources/glossary',
+        {
+          type: 'category',
+          label: 'Contribution Guide',
+          items: [
+            'resources/contribution-guide/pull-request',
+            'resources/contribution-guide/markdown-guide',
+            'resources/contribution-guide/link-markdown',
+            'resources/contribution-guide/mdx',
           ],
         },
       ],

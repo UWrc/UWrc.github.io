@@ -54,10 +54,10 @@ Tools and software are the responsibility of each individual researcher; this is
 
 ### Course Content
 
-* [**Set Up**](https://hyak.uw.edu/docs/tutorials/slurm/advanced)
-* [**Interactive and Batch Jobs**](https://hyak.uw.edu/docs/tutorials/slurm/nn_batch)
-* [**Parallel Computing**](https://hyak.uw.edu/docs/tutorials/slurm/nn_array/)
-* [**Parameter Sweep**](https://hyak.uw.edu/docs/tutorials/slurm/nn_sweep)
+* [**Set Up**](https://hyak.uw.edu/docs/tutorials/slurm-advanced/advanced)
+* [**Interactive and Batch Jobs**](https://hyak.uw.edu/docs/tutorials/slurm-advanced/nn_batch)
+* [**Parallel Computing**](https://hyak.uw.edu/docs/tutorials/slurm-advanced/nn_array)
+* [**Parameter Sweep**](https://hyak.uw.edu/docs/tutorials/slurm-advanced/nn_sweep)
 
 ### Extra Practice
 
