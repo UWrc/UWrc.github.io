@@ -1,0 +1,79 @@
+---
+title: System Architecture
+---
+
+# Hyak System Architecture
+
+**Hyak** is part of the University of Washington's cyberinfrastructure plan to support world-class research in every department. 
+Hyak is an ecosystem of high-performance compute (HPC) clusters and supporting infrastructure (e.g., data management, computational training, scientific consulting). 
+Acknowledging our Pacific Northwest heritage, Hyak means "fast" in Chinook jargon. Counting 1, 2, and 3 translates to "ikt", "mox", and "klone" in this local trading language. 
+The numbers are cluster names corresponding to the generation of Hyak cluster deployed. We are currently on the 3rd generation cluster for Hyak.  
+
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  className="unique-tabs"
+  defaultValue="klone"
+  values={[
+    {label: '1. ikt', value: 'ikt'},
+    {label: '2. mox', value: 'mox'},
+    {label: '3. klone', value: 'klone'},
+]}>
+
+<TabItem value="ikt">
+<img style={{width: "300px", height: "200px"}} src="/img/systems/ikt.jpg" alt="Ikt cluster image"/>
+
+|   **Component** |                                         **Details**            |
+|----------------|-----------------------------------------------------------------|
+| **Cluster**    | `ikt`                                                           |
+| **Service**    | October 2010 — June 2020                                        |
+| **OS**         | CentOS 6                                                        |
+| **Compute**    | 8,008 CPU cores [Broadwell]                                     |
+| **Accelerators** | 47 GPU cards [Tesla M2075]                                    |
+| **Interconnect** | 10 Gbps [Myri-10G Myrinet]                                    |
+| **Topology**   | Non-blocking 1-layer fat tree                                   |
+| **Storage**    | 1.0 PB GPFS                                                     |
+| **Namesake**   | Ikt = 1 in Chinook jargon. 1st Hyak cluster (now retired).      |
+
+</TabItem>
+
+<TabItem value="mox">
+
+<img style={{width: "300px", height: "200px"}} src="/img/systems/mox.jpg" alt="Mox cluster image"/>
+
+|   **Component** |                                         **Details**            |
+|----------------|-----------------------------------------------------------------|
+| **Cluster**    | `mox`                                                           |
+| **Service**    | June 2018 — January 2025                                        |
+| **OS**         | CentOS 7                                                        |
+| **Compute**    | 18,376 CPU cores [Cascade Lake]                                 |
+| **Accelerators** | 112 GPU cards [Turing]<br/>20 Xeon PHI                        |
+| **Interconnect** | 100 Gbps [OPA100 Omnipath]                                    |
+| **Topology**   | Non-blocking 1-layer fat tree                                   |
+| **Storage**    | 1.0 PB GPFS                                                     |
+| **Namesake**   | Mox = 2 in Chinook jargon. 2nd Hyak cluster. Still active but frozen. |
+
+</TabItem>
+
+<TabItem value="klone">
+
+<img style={{width: "300px", height: "200px"}} src="/img/systems/klone.jpg" alt="Klone cluster image"/>
+
+|   **Component** |                                         **Details**            |
+|----------------|-----------------------------------------------------------------|
+| **Cluster**    | `klone`                                                         |
+| **Service**    | January 2021 — Present                                          |
+| **OS**         | Rocky 8                                                         |
+| **Compute**    | 44,184 CPU cores [AMD Genoa, Intel Cascade Lake, Intel Ice Lake]|
+| **Accelerators** | 954 GPU cards [Turing, Ampere, Hopper]                        |
+| **Interconnect** | 100 Gbps [HDR100 Infiniband]                                  |
+| **Topology**   | 3:1 blocking 2-layer fat tree                                   |
+| **Storage**    | 2.7 PB GPFS                                                     |
+| **Namesake**   | Klone = 3 in Chinook jargon. Current active Hyak cluster.       |
+
+</TabItem>
+
+</Tabs>

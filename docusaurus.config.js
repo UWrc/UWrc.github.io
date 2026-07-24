@@ -227,6 +227,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsible: true,
+          exclude: ['_old/**'],
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

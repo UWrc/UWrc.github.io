@@ -10,13 +10,13 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 
 export default function Systems() {
   // Redirects /storage page to the Knowledge Base article
-  // window.location.href = '/docs/klone/architecture';
+  // window.location.href = '/docs/systems/klone/architecture';
   return (
       <Layout title="Systems">
           <div class="container">
             Redirecting       
             <BrowserOnly>
-                  {() => window.location.href = '/docs/klone/architecture'}
+                  {() => window.location.href = '/docs/systems/klone/architecture'}
             </BrowserOnly>
           </div>
       </Layout>

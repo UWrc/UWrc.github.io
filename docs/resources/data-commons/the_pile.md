@@ -1,0 +1,41 @@
+---
+title: The Pile
+---
+
+:::tip 
+This dataset is available on **Hyak Klone and Tillicum**. 
+:::
+
+Sponsoring groups are Luke Zettlemoyer, Pang Wei Koh, and Hannaneh Hajishirzi. Student users are Rulin Shao, Sewon Min, and Jacqueline He. Initial deployment of **October 2023** on Klone. The Pile **uncopyrighted version** deployed in **Sep 2025** on Tillicum.
+
+## What is this?
+The Pile is a 825 GiB diverse, open source language modeling data set that consists of 22 smaller, high-quality datasets combined together. 
+
+A copy of The Pile with all copyrighted content removed is held on Tillicum.
+
+You can learn more at their website [**here**](https://pile.eleuther.ai/) or from their paper [**here**](https://arxiv.org/abs/2101.00027).
+
+## How to prepare for use?
+This serves as instructions for the research computing (i.e., Hyak) team to prepare this data for use on the cluster. It also serves a benefit for computational reproducibility later on.
+
+The format of the Pile is jsonlines data compressed using zstandard.
+
+## How to access?
+
+By accessing this data you agree to their terms of use provided on their website [**here**](https://pile.eleuther.ai/) and [**MIT License**](https://github.com/EleutherAI/the-pile/blob/master/LICENSE). 
+
+The file path on `klone` is `/data/pile`.
+
+The file path on `tillicum` is `/gpfs/datasets/pile-uncopyrighted`.
+
+## How to cite?
+If you use the Pile or any of the components, please cite:
+
+```
+@article{pile,
+  title={The {P}ile: An 800GB Dataset of Diverse Text for Language Modeling},
+  author={Gao, Leo and Biderman, Stella and Black, Sid and Golding, Laurence and Hoppe, Travis and Foster, Charles and Phang, Jason and He, Horace and Thite, Anish and Nabeshima, Noa and Presser, Shawn and Leahy, Connor},
+  journal={arXiv preprint arXiv:2101.00027},
+  year={2020}
+}
+```
