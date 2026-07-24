@@ -58,7 +58,7 @@ Below you will be prompted to do this, but we wanted to give you the tools to se
 ### A Keypair to navigate between nodes on `klone` with ssh.
 
 :::warning
-Here is where things get confusing because we will use the same protocol to also generate a second keypair  and the fie names below will be repeated. If you get confused, **please read the instructions again carefully**. If you are still stuck, please email [**help@uw.edu**](mailto:help@uw.edu) with "Hyak" in the subject line to ask for assistance. 
+Here is where things get confusing because we will use the same protocol to also generate a second keypair  and the file names below will be repeated. If you get confused, **please read the instructions again carefully**. If you are still stuck, please email [**help@uw.edu**](mailto:help@uw.edu) with "Hyak" in the subject line to ask for assistance. 
 :::
 
 Your next required keypair is called an [**Intracluster SSH Key, which we explained elsewhere in our docs**](https://hyak.uw.edu/docs/getting-started/intracluster-keys). This pair is for navigating between nodes on `klone` with ssh (Intracluster = Within `klone`, get it?). 
