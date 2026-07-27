@@ -9,7 +9,7 @@ title: MATLAB
 MATLAB can be launched on Hyak using either of these methods:
 
 - [**MATLAB via Command Line**](#matlab-via-command-line): load the MATLAB module on a compute node and run MATLAB from the terminal.
-- [**MATLAB via Open OnDemand**](/docs/guides/ood/apps/matlab): launch MATLAB through Hyak's Open OnDemand (OOD) web portal.
+- [**MATLAB via Open OnDemand**](/docs/guides/ood/apps/matlab): launch MATLAB through Hyak's Open OnDemand web portal.
 
 ## MATLAB License Authentication
 
@@ -21,13 +21,13 @@ UW's MATLAB license is transitioning from a concurrent license to a named-user l
   3. In a web browser, open the [**MathWorks one-time password page**](https://account.mathworks.com/security/generate/code) and sign in with UW SSO if prompted.
   4. Copy the one-time password from MathWorks into the MATLAB prompt.
   
-  MATLAB should not prompt you to sign in again until the license expires or your credentials are cleared.
+  MATLAB should not prompt you to sign in again until the license expires or the saved credentials are cleared.
 
-- For GUI MATLAB sessions, users will be prompted to connect with their UW NetID and complete authentication the first time they launch MATLAB. This authentication should persist until the license expires or the saved credentials are cleared.
+- For GUI MATLAB sessions, users will be prompted for SSO to connect with their UW MathWorks account and complete authentication the first time they launch MATLAB. This authentication should persist until the license expires or the saved credentials are cleared.
 
 ## MATLAB via Command Line
 
-The latest Matlab version on `klone` is R2023b. You can use [**LMOD**](/docs/guides/software/modules) to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
+The latest Matlab version on `klone` is R2026a. You can use [**LMOD**](/docs/guides/software/modules) to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
 
 
 ```shell-session terminal=true
@@ -44,7 +44,3 @@ For product information, visit www.mathworks.com.
  
 >> 
 ```
-
-## MATLAB via Open OnDemand
-
-MATLAB can also be launched via Hyak's Open OnDemand (OOD) portal. For more information, see [**Open OnDemand/MATLAB**](/docs/guides/ood/apps/matlab).
