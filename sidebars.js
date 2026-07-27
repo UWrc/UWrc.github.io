@@ -86,6 +86,7 @@ module.exports = {
               type: 'category',
               label: 'Interactive Apps',
               items: [
+                'guides/ood/apps/desktop',
                 'guides/ood/apps/jupyter',
                 'guides/ood/apps/vscode',
                 'guides/ood/apps/matlab',

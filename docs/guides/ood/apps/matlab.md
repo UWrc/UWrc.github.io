@@ -6,6 +6,12 @@ title: MATLAB
 
 MATLAB is available as an interactive app on Hyak's OnDemand (OOD) portal at [**https://ondemand.hyak.uw.edu/**](https://ondemand.hyak.uw.edu/). It can also be launched manually on a compute node as outlined on the [**Tools & Software/MATLAB**](https://hyak.uw.edu/docs/guides/applications/matlab) page.
 
+## MATLAB License Authentication
+
+UW's MATLAB license is transitioning from a concurrent license to a named-user license per the request from MathWorks MATLAB. Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak due to this license change.
+
+For MATLAB sessions launched through OOD, users will be prompted to connect with their UW NetID and complete authentication the first time they launch MATLAB. This authentication should persist until the license expires or the saved credentials are cleared.
+
 ## Launching MATLAB
 
 Launching a MATLAB session is the same as scheduling any other interactive session. To launch a MATLAB session via Hyak's OOD, select MATLAB from the list of interactive apps. Then, select parameters for the session and select "Launch".

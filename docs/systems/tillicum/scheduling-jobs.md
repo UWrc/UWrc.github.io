@@ -61,7 +61,7 @@ Urgent QoS requests will be evaluated individually based on demonstrated need, r
 
 ****Urgent QoS is offered as a premium service tier.**** For jobs submitted to the Urgetn QoS:
 
-> ***Billable GPU Hours*** = **2**(*GPU Hour*) = Elapsed Time x *N* GPUs 
+> ***Billable GPU Hours*** = **2** x (*GPU Hour* = Elapsed Time x *N* GPUs)
 
 :::
 
