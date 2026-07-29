@@ -10,6 +10,8 @@ MATLAB is available as an interactive app on Hyak's OnDemand (OOD) portal at [**
 
 UW's MATLAB license is transitioning from a concurrent license to a named-user license per the request from MathWorks MATLAB. Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak due to this license change.
 
+Firstly, [make sure you have access to MathWorks account through your UW email](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html).
+
 For MATLAB sessions launched through OOD, users will be prompted for SSO to connect with their UW MathWorks account and complete authentication the first time they launch MATLAB. This authentication should persist until the license expires or the saved credentials are cleared.
 
 ## Launching MATLAB

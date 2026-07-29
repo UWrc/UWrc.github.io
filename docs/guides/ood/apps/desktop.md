@@ -34,6 +34,8 @@ module load matlab
 matlab
 ```
 
+If prompted for matlab license, please find instructions [here](/docs/guides/applications/matlab).
+
 ## Session Tips
 
 - Closing the browser tab does not stop the desktop session. Return to `My Interactive Sessions` to reconnect.
