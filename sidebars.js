@@ -93,7 +93,7 @@ module.exports = {
                 'guides/ood/apps/rstudio',
               ],
             },
-            'guides/ood/interactive-jobs',
+
           ],
         },
         {
