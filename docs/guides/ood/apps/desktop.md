@@ -5,7 +5,7 @@ title: Desktop
 [desktop-form]: /img/docs/ood/desktop-form.jpg 'Example Klone Desktop form submission'
 [desktop-running]: /img/docs/ood/desktop-running.jpg 'Example Klone Desktop running'
 
-Desktop on Hyak's Open OnDemand (OOD) provides a virtual Linux desktop in your web browser. The desktop runs on an allocated compute node and is displayed through VNC, making it useful for graphical user interface (GUI) applications that need Hyak compute resources.
+Desktop on Open OnDemand (OOD) provides a virtual Linux desktop in your web browser. The desktop runs on an allocated compute node and is displayed through VNC, making it useful for graphical user interface (GUI) applications that need compute resources.
 
 Use a desktop session when you need to run GUI software that is not available as a dedicated OOD app, or when you want a more general interactive desktop environment for launching graphical tools.
 
@@ -36,7 +36,10 @@ matlab
 
 If prompted for matlab license, please find instructions [here](/docs/guides/applications/matlab).
 
-## Session Tips
+:::info
+Closing the browser window does not terminate interactive sessions. Make sure to end your session by clicking `Delete` on the `My Interactive Sessions` tab after saving your work.
+:::
 
-- Closing the browser tab does not stop the desktop session. Return to `My Interactive Sessions` to reconnect.
-- When finished, click `Delete` on the `My Interactive Sessions` page to stop the job and release the allocated resources.
+## Logs and Troubleshooting
+
+Once a job is queued, it is assigned a Session ID. You can monitor job output by clicking on the hyperlinked ID (e.g., 6adb157f-9d7e-4a60-b536-32e1e7ff101d), which navigates to the output directory. You can find generated files, logs, and information about the job here.

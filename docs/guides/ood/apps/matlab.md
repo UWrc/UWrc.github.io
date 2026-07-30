@@ -2,15 +2,16 @@
 title: MATLAB
 ---
 
-"MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages." [**Wikipedia**](https://en.wikipedia.org/wiki/MATLAB)
+## Session Options
 
-MATLAB is available as an interactive app on Hyak's OnDemand (OOD) portal at [**https://ondemand.hyak.uw.edu/**](https://ondemand.hyak.uw.edu/). It can also be launched manually on a compute node as outlined on the [**Tools & Software/MATLAB**](https://hyak.uw.edu/docs/guides/applications/matlab) page.
+- **MATLAB via Open OnDemand**: described below. Launch MATLAB through Hyak's Open OnDemand web portal at [**https://ondemand.hyak.uw.edu/**](https://ondemand.hyak.uw.edu/).
+- [**MATLAB via Command Line**](/docs/guides/applications/matlab.md): load the MATLAB module on a compute node and run MATLAB from the terminal.
 
 ## MATLAB License Authentication
 
 UW's MATLAB license is transitioning from a concurrent license to a named-user license per the request from MathWorks MATLAB. Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak due to this license change.
 
-Firstly, [make sure you have access to MathWorks account through your UW email](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html).
+Firstly, [**make sure you have access to MathWorks account through your UW email**](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html).
 
 For MATLAB sessions launched through OOD, users will be prompted for SSO to connect with their UW MathWorks account and complete authentication the first time they launch MATLAB. This authentication should persist until the license expires or the saved credentials are cleared.
 

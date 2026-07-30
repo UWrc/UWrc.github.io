@@ -2,7 +2,7 @@
 title: MATLAB
 ---
 
-"MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages." [**Wikipedia**](https://en.wikipedia.org/wiki/MATLAB)
+MATLAB is a proprietary multi-paradigm programming language and numeric computing environment developed by MathWorks. MATLAB allows matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces, and interfacing with programs written in other languages.
 
 ## MATLAB Session Options
 
@@ -15,7 +15,7 @@ MATLAB can be launched on Hyak using either of these methods:
 
 UW's MATLAB license is transitioning from a concurrent license to a named-user license per the request from MathWorks MATLAB. Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak due to this license change.
 
-Firstly, [make sure you have access to MathWorks account through your UW email](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html).
+Firstly, [**make sure you have access to MathWorks account through your UW email**](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html).
 
 - For command-line MATLAB sessions, users need to authenticate their named-user license with SSO using a one-time password:
   1. Launch MATLAB from the command line.
