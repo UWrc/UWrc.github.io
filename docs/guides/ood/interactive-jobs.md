@@ -29,7 +29,7 @@ While some may offer additional configuration, all forms allow you to specify th
 Allocating more resources, especially GPUs, can lead to longer wait times. Use `hyakalloc` to identify free resources before submitting a job.
 :::
 
-A form submission for the Remote Desktop may look like this:
+A form submission for the [**Remote Desktop**](/docs/guides/ood/apps/desktop) may look like this:
 
 ![Desktop form][desktop-form]
 
