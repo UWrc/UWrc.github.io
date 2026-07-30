@@ -46,10 +46,16 @@ For product information, visit www.mathworks.com.
  
 >> 
 ```
-  
-  MATLAB should not prompt you to sign in again until the license expires or the saved credentials are cleared.
 
-- For GUI MATLAB sessions, users will be prompted for SSO to connect with their UW MathWorks account and complete authentication the first time they launch MATLAB. This authentication should persist until the license expires or the saved credentials are cleared.
+- For GUI MATLAB sessions, users will be prompted for signing in to their MathWorks account using UW email address the first time they launch MATLAB.
+
+![Screenshot of MathWorks MATLAB account signing in with GUI.](/img/docs/ood/MATLAB_account.png 'MathWorks MATLAB account signing in on Tillicum OOD.')
+
+Then you need to complete the authentication with UW NetID SSO.
+
+![Screenshot of MATLAB account authentication using UW NetID with GUI.](/img/docs/ood/MATLAB_SSO.png 'MathWorks MATLAB account authentication on Tillicum OOD.')
+
+Once you've authenticated, MATLAB should not prompt you to sign in again until the license expires or the saved credentials are cleared.
 
 ## MATLAB via Command Line
 
