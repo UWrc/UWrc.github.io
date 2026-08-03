@@ -15,7 +15,14 @@ MATLAB can be launched on Hyak using either of these methods:
 
 UW's MATLAB license is transitioning from a concurrent license to a named-user license per the request from MathWorks MATLAB. Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak due to this license change.
 
-Firstly, [**make sure you have access to MathWorks account through your UW email**](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html).
+Firstly, [**make sure you have access to MathWorks account through your UW email**](https://it.uw.edu/uware/matlab/).
+
+:::note
+
+- Students may obtain a free MATLAB license by visiting the [UW portal at Mathworks](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html) to register your UW student Mathworks account.
+- Faculty and staff may purchase MATLAB through UWare, which includes all toolboxes. Instructions and more details are available [here](https://it.uw.edu/uware/matlab/).
+
+:::
 
 - For command-line MATLAB sessions, users need to authenticate their named-user license with SSO using a one-time password:
   1. Launch MATLAB from the command line.
