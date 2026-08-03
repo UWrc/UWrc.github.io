@@ -17,7 +17,7 @@ UW's MATLAB license is transitioning from a concurrent license to a named-user l
 
 Firstly, [**make sure you have access to MathWorks account through your UW email**](https://it.uw.edu/uware/matlab/).
 
-:::note
+:::info
 
 - Students may obtain a free MATLAB license by visiting the [UW portal at Mathworks](https://www.mathworks.com/academia/tah-portal/university-of-washington-31094417.html) to register your UW student Mathworks account.
 - Faculty and staff may purchase MATLAB through UWare, which includes all toolboxes. Instructions and more details are available [here](https://it.uw.edu/uware/matlab/).
