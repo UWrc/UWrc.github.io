@@ -71,6 +71,7 @@ module.exports = {
           label: 'Software Environments',
           items: [
             'guides/software/modules',
+            'guides/software/compilers',
             'guides/software/conda-python',
             'guides/software/containers',
             'guides/software/nvidia-ngc',
@@ -121,6 +122,9 @@ module.exports = {
             },
             'guides/applications/r-rstudio',
             'guides/applications/matlab',
+            'guides/applications/mathematica',
+            'guides/software/dmtcp',
+            'guides/software/squashfs',
           ],
         },
       ],

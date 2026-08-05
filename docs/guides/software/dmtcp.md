@@ -1,5 +1,5 @@
 ---
-title: DMTCP (Checkpointing)
+title: Checkpointing
 ---
 
 :::caution
