@@ -6,25 +6,37 @@ slug: /
 sidebar_position: 0
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Welcome
 
 UW Research Computing operates two primary computing systems: **Hyak Klone**, a traditional shared HPC cluster, and **Tillicum**, a pay-as-you-go GPU cluster, as well as research storage systems Kopah S3 Storage and Lolo Data Archive. Each has unique characteristics, access models, and dedicated documentation sections. Topics that apply across systems - such as data transfer, tools, and storage - are broken out into their own sections rather than duplicated under each cluster.
 
 ## Computing Systems
 
-### Hyak Klone
+:::info Select your system
+Klone and Tillicum are separate systems with different access models and hardware. Use the tabs below to view details for the system you're interested in. Your selection will apply across the entire documentation site.
+:::
+
+<Tabs groupId="cluster">
+<TabItem value="klone" label="Hyak Klone" default>
 
 Hyak Klone is UW's traditional shared HPC cluster, operating on a condo model where research groups contribute resources to a shared pool. It supports a wide range of workloads including CPU-intensive computation, moderate GPU work, and large-scale parallel jobs.
 
 - **[Hyak Klone architecture](/docs/systems/klone/architecture)**
 - **[Hyak Klone details and pricing](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0035560)**
 
-### Tillicum
+</TabItem>
+<TabItem value="tillicum" label="Tillicum">
 
 Tillicum is a pay-as-you-go GPU cluster featuring NVIDIA H200 GPUs, designed for AI and GPU-intensive research workloads. Unlike Klone's condo model, Tillicum uses a usage-based billing approach with no upfront resource contribution required.
 
 - **[Tillicum architecture](/docs/systems/tillicum/architecture)**
 - **[Tillicum details and pricing](https://uwconnect.uw.edu/it?id=kb_article_view&sysparm_article=KB0036077)**
+
+</TabItem>
+</Tabs>
 
 ## New to HPC? Start Here
 
