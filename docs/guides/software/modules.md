@@ -5,7 +5,7 @@ title: Modules
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Modules are a method of modifying your environment that are unique to some software you're trying to run. It allows you to quickly switch between different programs or different versions of the same program. Both Klone and Tillicum use LMOD for module management, but with some differences in how modules are organized.
+Modules are a method of modifying your environment that are unique to some software you're trying to run. It allows you to quickly switch between different programs or different versions of the same program. Both Klone and Tillicum use Lmod for module management, but with some differences in how modules are organized.
 
 ## Basics
 
@@ -214,9 +214,9 @@ You can save and restore commonly used modules using [**user collections**](http
 <Tabs groupId="cluster">
 <TabItem value="klone" label="Klone" default>
 
-### Personal LMOD Modules
+### Personal Lmod Modules
 
-This [**advanced user documentation**](https://lmod.readthedocs.io/en/latest/020_advanced.html) from the LMOD developers walks you through creating personal modules. You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
+This [**advanced user documentation**](https://lmod.readthedocs.io/en/latest/020_advanced.html) from the Lmod developers walks you through creating personal modules. You need to compile your code separately first. In short, you provide a command directing it to the folder with your collection of module files:
 
 ```js
 module use /path/to/personal/modulefiles
@@ -224,7 +224,7 @@ module use /path/to/personal/modulefiles
 
 In this case you'll likely use a sub-directory under your lab's `/gscratch` folder or your home directory and create individual folders with independent software packages. Once you have code compiled, a modulefile needs to be created for each software package you installed. There are some examples from basic to advanced [**here**](https://lmod.readthedocs.io/en/latest/100_modulefile_examples.html).
 
-### Shared LMOD Modules
+### Shared Lmod Modules
 
 Each group has a special folder for installing codes that are intended to be shared for all Klone users. Each folder gets a 100GB block quota and 160,000 inode quota at `/sw/contrib/mylab-src` where "mylab" is your account affiliation. We can raise these limits if specific code compiles require, however, in our experience the default quotas are sufficient for all but the most rare cases.
 
@@ -233,15 +233,15 @@ You place your modulefiles in `/sw/contrib/modulefiles/mylab` and when anyone ru
 </TabItem>
 <TabItem value="tillicum" label="Tillicum">
 
-### Personal LMOD Modules
+### Personal Lmod Modules
 
-You can create personal modules on Tillicum following the same approach as Klone. Point LMOD to your custom modulefile directory:
+You can create personal modules on Tillicum following the same approach as Klone. Point Lmod to your custom modulefile directory:
 
 ```js
 module use /path/to/personal/modulefiles
 ```
 
-Place your modulefiles in a directory under your project space on `/gpfs`. See the LMOD [**advanced user documentation**](https://lmod.readthedocs.io/en/latest/020_advanced.html) for details on writing modulefiles.
+Place your modulefiles in a directory under your project space on `/gpfs`. See the Lmod [**advanced user documentation**](https://lmod.readthedocs.io/en/latest/020_advanced.html) for details on writing modulefiles.
 
 :::note
 Because Tillicum uses a hierarchical module structure, your custom modules should be organized to match the hierarchy if they depend on specific compilers or CUDA versions.
@@ -254,6 +254,6 @@ Because Tillicum uses a hierarchical module structure, your custom modules shoul
 
 ## Additional Resources
 
-- LMOD [**documentation**](https://lmod.readthedocs.io/en/latest/)
-- LMOD [**project page**](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) (Texas Advanced Computing Center)
+- Lmod [**documentation**](https://lmod.readthedocs.io/en/latest/)
+- Lmod [**project page**](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) (Texas Advanced Computing Center)
 - Environment Modules [**documentation**](https://modules.readthedocs.io/en/latest/)
