@@ -72,6 +72,7 @@ module.exports = {
           items: [
             'guides/software/modules',
             'guides/software/compilers',
+            'guides/software/mpi',
             'guides/software/conda-python',
             'guides/software/containers',
             'guides/software/nvidia-ngc',

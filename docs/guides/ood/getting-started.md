@@ -1,5 +1,5 @@
 ---
-title: Getting Started with Open OnDemand
+title: Getting Started
 ---
 
 import Tabs from '@theme/Tabs';
