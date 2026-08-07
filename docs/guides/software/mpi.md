@@ -67,11 +67,12 @@ For Intel oneAPI MPI workflows on Klone, use `intel/oneAPI/2026.0.0`. Older oneA
 </TabItem>
 <TabItem value="tillicum" label="Tillicum">
 
-Tillicum uses a [**hierarchical module structure**](./modules#module-structure). Load the compiler first, then load the MPI module that appears in that compiler hierarchy.
+Tillicum uses a [**hierarchical module structure**](./modules#module-structure). Load the compiler and cuda modules first, then load the CUDA-aware MPI module that appears in that compiler hierarchy.
 
 ```js
 module load gcc/13.4.0
-module load openmpi/5.0.8
+module load cuda/12.9.1
+module load openmpi/5.0.8-ucx
 ```
 
 If you change compiler modules, Lmod may unload or reload dependent MPI modules. Run `module list` before building or running to confirm the active compiler and MPI stack.
