@@ -100,7 +100,7 @@ The following base compiler families are supported on Tillicum:
 
 ## GNU Compiler Collection (GCC)
 
-The latest [**GNU Compiler Collection (GCC)**](https://gcc.gnu.org/) module on Tillicum is version 13.4.0. It was built with the `--enable-languages=c,c++,fortran` flag.
+The latest [**GNU Compiler Collection (GCC)**](https://gcc.gnu.org/) module on Tillicum is version 13.4.0.
 
 ```bash
 module load gcc/13.4.0
