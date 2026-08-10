@@ -148,6 +148,7 @@ module.exports = {
             'resources/data-commons/tablib',
             'resources/data-commons/tcga',
             'resources/data-commons/the_pile',
+            'resources/data-commons/ooi_rsn_das24
           ],
         },
         'resources/faq',
