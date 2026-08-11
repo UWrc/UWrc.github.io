@@ -44,7 +44,16 @@ client = Client(n_workers=4, threads_per_worker=1, memory_limit="auto")
 
 ### Deep Coadd Images
 
-The deep coadd images are accessed using the Rubin [**Butler**](https://pipelines.lsst.io/) data management software. Butler is part of the LSST Science Pipelines, which must be installed before you can work with this data.
+The deep coadd images are accessed using the Rubin [**Butler**](https://pipelines.lsst.io/) data management software. Butler is part of the LSST Science Pipelines, which must be installed before you can work with this data. There are two ways to set up LSST pipelines
+
+#### 1) Use lsst-distrib conda package.
+
+This dataset ships with a conda channel containing a single megapackage of all the lsst pipelines software. Once you create a python 3.13 environment, you can install the megapackage with the following command run inside your conda environment.
+```bash
+conda install -c file:///gpfs/datasets/rubin_edp2/conda_channel lsst-distrib
+```
+
+#### 2) Use Eups to install lsst software
 
 To install the LSST Science Pipelines, download the `lsstinstall` script and follow the [**LSST Pipelines installation guide**](https://pipelines.lsst.io/install/index.html):
 
