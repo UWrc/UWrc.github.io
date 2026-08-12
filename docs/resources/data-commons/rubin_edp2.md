@@ -50,7 +50,7 @@ The deep coadd images are accessed using the Rubin [**Butler**](https://pipeline
 
 This dataset ships with a conda channel containing a single megapackage of all the lsst pipelines software. Once you create a python 3.13 environment, you can install the megapackage with the following command run inside your conda environment.
 ```bash
-conda install -c file:///gpfs/datasets/rubin_edp2/conda_channel lsst-distrib
+conda install -c file:///gpfs/datasets/rubin_edp2/conda_channel -c conda-forge lsst-distrib
 ```
 
 #### 2) Use Eups to install lsst software
