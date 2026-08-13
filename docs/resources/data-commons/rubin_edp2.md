@@ -3,11 +3,11 @@ sidebar_label: Rubin EDP2
 title: Rubin Observatory EDP2 Dataset
 ---
 
-:::tip
-This dataset is available on **Hyak Tillicum**.
+:::warning
+This dataset is only available on **Tillicum**.
 :::
 
-Sponsoring groups are Željko Ivezić, James Davenport, Nora Shipp, and Mario Jurić. Users are Audrey Budlong, Anastasios Tzanidakis, Peter Ferguson, Ian Chow, Jake Kurlander, and Ryder Strauss. Initial deployment of **TBD_DATE**.
+Sponsoring groups are Željko Ivezić, James Davenport, Nora Shipp, and Mario Jurić. Users are Audrey Budlong, Anastasios Tzanidakis, Peter Ferguson, Ian Chow, Jake Kurlander, and Ryder Strauss. Initial deployment of **Aug 2026**.
 
 ## What is this?
 
@@ -86,9 +86,9 @@ import lsdb
 from upath import UPath
 
 # On klone:
-base_path = UPath("/data/rubin_edp2/hats")
+# base_path = UPath("/data/rubin_edp2/hats")
 # On tillicum:
-# base_path = UPath("/gpfs/datasets/rubin_edp2/hats")
+base_path = UPath("/gpfs/datasets/rubin_edp2/hats")
 
 object_cat = lsdb.open_catalog(base_path / "object_collection")
 dia_cat = lsdb.open_catalog(base_path / "dia_object_collection")
@@ -109,9 +109,9 @@ The images are organized by the LSST sky map: tracts (~1.66 square degrees) subd
 from lsst.daf.butler import Butler
 
 # On klone:
-butler = Butler("/data/rubin_edp2/deep_coadd")
+# butler = Butler("/data/rubin_edp2/deep_coadd")
 # On tillicum:
-# butler = Butler("/gpfs/datasets/rubin_edp2/deep_coadd")
+butler = Butler("/gpfs/datasets/rubin_edp2/deep_coadd")
 
 # Retrieve a specific deep coadd
 coadd = butler.get("deep_coadd", band="i", skymap="lsst_cells_v1", tract=4226, patch=56)
