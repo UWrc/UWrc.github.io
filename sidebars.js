@@ -145,6 +145,7 @@ module.exports = {
             'resources/data-commons/imagenet',
             'resources/data-commons/kinetics',
             'resources/data-commons/olmo-mix-1124',
+            'resources/data-commons/rubin_edp2',
             'resources/data-commons/tablib',
             'resources/data-commons/tcga',
             'resources/data-commons/the_pile',
