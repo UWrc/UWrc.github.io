@@ -64,6 +64,37 @@ Then you need to complete the authentication with UW NetID SSO.
 
 Once you've authenticated, MATLAB should not prompt you to sign in again until the license expires or the saved credentials are cleared.
 
+## Managing `.MathWorks` Storage
+
+With the current MATLAB named-user license, running multiple MATLAB jobs can consume significant space in your home directory. If your home directory is near or over its quota, MATLAB may fail with an error like:
+
+```text
+Unable to communicate with required MathWorks services.
+```
+
+By default, each time you launch MATLAB on a compute node, MATLAB creates a host-specific directory under `~/.MathWorks/ServiceHost/<hostname>` to store runtime data. Over time, these directories can accumulate and cause `~/.MathWorks` to grow significantly.
+
+We recommend moving the entire `~/.MathWorks` directory to dedicated storage outside your home directory, such as your lab's directory or another storage location you have access to, then creating a symbolic link from your home directory:
+
+```bash
+mv ~/.MathWorks /path/to/custom/location/.MathWorks
+ln -s /path/to/custom/location/.MathWorks ~/.MathWorks
+```
+
+Replace `/path/to/custom/location` with the storage location you want to use.
+
+You may also want to clean up the corresponding `ServiceHost/<hostname>` directory after jobs finish, or periodically remove stale `ServiceHost/<hostname>` directories to reduce storage usage. Before removing files, list the matching directories to confirm they are the ones you intend to delete:
+
+```bash
+ls ~/.MathWorks/ServiceHost/
+```
+
+Then remove stale node-specific runtime directories as needed. For example,
+
+```bash
+rm -r ~/.MathWorks/ServiceHost/n*
+```
+
 ## MATLAB via Command Line
 
 The latest Matlab version on `klone` is R2026a. You can use [**LMOD**](/docs/guides/software/modules) to load the module then run the binary, be sure to use the `-nodisplay` flag unless you enabled X11 forwarding to get the GUI.
