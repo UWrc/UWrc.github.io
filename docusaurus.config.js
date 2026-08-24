@@ -229,6 +229,9 @@ module.exports = {
           sidebarCollapsible: true,
           exclude: ['_old/**'],
         },
+        sitemap: {
+          ignorePatterns: ['/docs/_old/**'],
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
