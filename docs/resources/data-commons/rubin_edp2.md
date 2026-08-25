@@ -109,12 +109,12 @@ The images are organized by the LSST sky map: tracts (~1.66 square degrees) subd
 from lsst.daf.butler import Butler
 
 # On klone:
-# butler = Butler("/data/rubin_edp2/deep_coadd")
+# butler = Butler("/data/rubin_edp2/deep_coadd", collections="LSSTCam/runs/DRP/DP2")
 # On tillicum:
-butler = Butler("/gpfs/datasets/rubin_edp2/deep_coadd")
+butler = Butler("/gpfs/datasets/rubin_edp2/deep_coadd", collections="LSSTCam/runs/DRP/DP2")
 
 # Retrieve a specific deep coadd
-coadd = butler.get("deep_coadd", band="i", skymap="lsst_cells_v1", tract=4226, patch=56)
+coadd = butler.get("deep_coadd", band="i", skymap="lsst_cells_v2", tract=12351, patch=0)
 ```
 
 See the [**deep coadd documentation**](https://dp2.lsst.io/products/images/deep_coadd.html) for details on the image planes, metadata, and additional access methods.
