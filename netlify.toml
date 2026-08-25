@@ -3,7 +3,8 @@
   publish = "build"
   environment = { NODE_VERSION = "20.12.1" }
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200 
+# No SPA catch-all. Docusaurus pre-renders a real index.html for every valid
+# route, which Netlify serves as a static file. Unknown paths (e.g. retired
+# pages that used to exist) fall through to Netlify's default 404 handling,
+# which serves build/404.html with a genuine HTTP 404 status. This lets
+# search engines deindex removed pages instead of treating them as soft 404s.
