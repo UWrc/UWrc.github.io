@@ -85,9 +85,6 @@ Three catalog collections are available:
 import lsdb
 from upath import UPath
 
-# On klone:
-# base_path = UPath("/data/rubin_edp2/hats")
-# On tillicum:
 base_path = UPath("/gpfs/datasets/rubin_edp2/hats")
 
 object_cat = lsdb.open_catalog(base_path / "object_collection")
@@ -99,8 +96,6 @@ See the [**LSDB DP2 tutorial**](https://docs.lsdb.io/en/latest/tutorials/pre_exe
 
 ### Deep Coadd Images
 
-The file path on `klone` is `/data/rubin_edp2/deep_coadd/`.
-
 The file path on `tillicum` is `/gpfs/datasets/rubin_edp2/deep_coadd/`.
 
 The images are organized by the LSST sky map: tracts (~1.66 square degrees) subdivided into 100 overlapping patches, with one deep coadd per patch per filter. With your LSST Science Pipelines environment active (see "How to prepare for use?" above), access them via the Butler:
@@ -108,9 +103,6 @@ The images are organized by the LSST sky map: tracts (~1.66 square degrees) subd
 ```python
 from lsst.daf.butler import Butler
 
-# On klone:
-# butler = Butler("/data/rubin_edp2/deep_coadd", collections="LSSTCam/runs/DRP/DP2")
-# On tillicum:
 butler = Butler("/gpfs/datasets/rubin_edp2/deep_coadd", collections="LSSTCam/runs/DRP/DP2")
 
 # Retrieve a specific deep coadd
