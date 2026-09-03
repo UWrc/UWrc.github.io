@@ -1,0 +1,256 @@
+/* Banner */
+.banner {
+  width: 100%;
+  background: linear-gradient(135deg, #4b2e83 0%, #32006e 100%);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+
+.bannerContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bannerTitle {
+  color: #ffffff;
+  font-family: "EncodeSans";
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.bannerTagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "EncodeSans";
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.bannerDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.75rem;
+  color: #ffffff;
+  font-family: "EncodeSans";
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.bannerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Action buttons */
+.actionButton {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-family: "EncodeSans";
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.7rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.actionButton:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.actionButtonPrimary {
+  background-color: #ffffff;
+  color: #4b2e83;
+}
+
+.actionButtonPrimary:hover {
+  color: #4b2e83;
+}
+
+.actionButtonDisabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.comingSoon {
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* Page content */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+}
+
+.section {
+  margin-bottom: 2.75rem;
+}
+
+.sectionTitle {
+  font-family: "EncodeSans";
+  font-weight: 700;
+  color: #4b2e83;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0dcec;
+  padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .sectionTitle {
+  color: #b7a9d9;
+  border-bottom-color: #3a3a3a;
+}
+
+.goalsList {
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.goalsList li {
+  margin-bottom: 0.5rem;
+}
+
+/* Agenda */
+.agendaNote {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1.25rem;
+}
+
+[data-theme="dark"] .agendaNote {
+  color: #aaa;
+}
+
+.agendaTableWrapper {
+  overflow-x: auto;
+}
+
+.agendaTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "EncodeSans";
+  font-size: 0.98rem;
+}
+
+.agendaTable th,
+.agendaTable td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0dcec;
+  vertical-align: top;
+}
+
+.agendaTable th {
+  background-color: #4b2e83;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.agendaTable tbody tr:nth-child(even) {
+  background-color: #f5f3fa;
+}
+
+.agendaTime {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #4b2e83;
+}
+
+.agendaSession {
+  font-weight: 700;
+}
+
+[data-theme="dark"] .agendaTable th,
+[data-theme="dark"] .agendaTime {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .agendaTime {
+  color: #b7a9d9;
+}
+
+[data-theme="dark"] .agendaTable th,
+[data-theme="dark"] .agendaTable td {
+  border-bottom-color: #3a3a3a;
+}
+
+[data-theme="dark"] .agendaTable tbody tr:nth-child(even) {
+  background-color: #26232e;
+}
+
+/* Partners & sponsors */
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.logoGroup {
+  flex: 1 1 300px;
+}
+
+.logoGroupTitle {
+  font-family: "EncodeSans";
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.logoPlaceholder {
+  color: #777;
+  font-style: italic;
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.logoCard {
+  background-color: #ffffff;
+  border: 1px solid #e0dcec;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  max-height: 70px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .bannerTitle {
+    font-size: 2rem;
+  }
+
+  .bannerButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
