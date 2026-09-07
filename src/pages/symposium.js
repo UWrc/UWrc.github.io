@@ -12,15 +12,6 @@ const EVENT = {
   location: "HUB 250 and HUB 238/307, University of Washington",
 };
 
-const GOALS = [
-  "Showcase UW research enabled by UWIT computing services.",
-  "Increase awareness of research computing services and how researchers can access them.",
-  "Share the roadmap for future research computing capabilities and infrastructure.",
-  "Build community among researchers, UWIT, campus partners, and industry.",
-  "Create opportunities for deeper engagement through small-group discussions and researcher/vendor conversations.",
-  "Strengthen partnerships with technology providers and campus research organizations.",
-];
-
 // Draft agenda — subject to change. Main program is in HUB 250.
 const AGENDA = [
   ["9:00–9:30", "Check-in & Coffee", "Registration, coffee, informal networking"],
@@ -123,7 +114,7 @@ export default function Symposium() {
             <ActionButton href={REGISTRATION_URL} primary>
               Register
             </ActionButton>
-            <ActionButton href={PRESENTATION_URL}>
+            <ActionButton href={PRESENTATION_URL} primary>
               Apply to Present
             </ActionButton>
           </div>
@@ -152,16 +143,6 @@ export default function Symposium() {
           </p>
         </section>
 
-        {/* Goals */}
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Goals</h2>
-          <ul className={styles.goalsList}>
-            {GOALS.map((goal) => (
-              <li key={goal}>{goal}</li>
-            ))}
-          </ul>
-        </section>
-
         {/* Agenda */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Agenda</h2>
@@ -176,15 +157,13 @@ export default function Symposium() {
                 <tr>
                   <th>Time</th>
                   <th>Session</th>
-                  <th>Purpose</th>
                 </tr>
               </thead>
               <tbody>
-                {AGENDA.map(([time, session, purpose]) => (
+                {AGENDA.map(([time, session]) => (
                   <tr key={time}>
                     <td className={styles.agendaTime}>{time}</td>
                     <td className={styles.agendaSession}>{session}</td>
-                    <td>{purpose}</td>
                   </tr>
                 ))}
               </tbody>

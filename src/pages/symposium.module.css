@@ -120,15 +120,6 @@
   border-bottom-color: #3a3a3a;
 }
 
-.goalsList {
-  padding-left: 1.25rem;
-  line-height: 1.7;
-}
-
-.goalsList li {
-  margin-bottom: 0.5rem;
-}
-
 /* Agenda */
 .agendaNote {
   font-style: italic;
