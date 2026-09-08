@@ -16,7 +16,7 @@ Tillicum uses the **Slurm workload manager** for scheduling and running jobs. Wh
 
 **Usage Rate: $0.90/GPU Hour** - Billing is monthly and handled as a subscription in UWIT's ITBill system.
 
-Every scheduled job on Tillicum is subject to the usage rate and requires at least 1 GPU unit. For jobs on the `gpu-h200` partition, 1 GPU unit is 1 full H200 GPU with 141 GB GPU memory.
+Every scheduled job on Tillicum is subject to the usage rate. For jobs on the `gpu-h200` partition, 1 GPU unit is 1 full H200 GPU with 141 GB GPU memory.
 
 For full-GPU H200 jobs:
 * Jobs are bound by a **maximum of ~200 GB system RAM and 8 CPUs per GPU**
@@ -51,24 +51,23 @@ Workloads that depend on high-performance GPU peer-to-peer communication, such a
 
 ### Tillicum QoS
 
-Tillicum jobs are submitted under a "Quality-of-Service" or **QoS**, which defines limits like wall time, GPU count, and concurrent jobs.
+Tillicum jobs are submitted under a "Quality-of-Service" or **QoS**, which defines limits like wall time, GPU/CPU count, and concurrent jobs.
 * All Tillicum gpu-h200 compute nodes have **8 GPUs (141 GB each)** and these are provisioned with 200 GB system RAM per GPU and 8 CPUs per GPU. gpu-h200-mig compute nodes have 56 MIG instances and these are provisioned with 30 GB system RAM and 1 CPU per GPU unit.
-* You must request at least 1 GPU unit. *CPU-only jobs are not allowed.*
 * QoS walltime limits apply to both `gpu-h200` and `gpu-h200-mig`.
 * GPU count and concurrent GPU limits are currently defined for full-GPU jobs on `gpu-h200`.
 
 ***We will constantly evaluate QoS limits based on user feedback.***
 
-| QoS             | Max Time   | Max GPUs per Job | Max Jobs Per User | Concurrent GPU Limit | Notes                           |
-| --------------- | ---------- | ---------------- | ----------------- | -------------------- | ------------------------------- |
-| **normal**      | 24 hours   | 16               | NA                | 48 GPUs              | Standard production work        |
-| **debug**       | 1 hour     | 1                | 1                 | 1 job                | Quick testing and setup         |
-| **interactive** | 8 hours    | 2                | 2                 | 2 jobs               | Real-time work or debugging     |
-| **long**        | 7 days     | 16               | NA                | QoS cannot exceed 96 GPUs* | Long jobs        |
-| **wide**        | 24 hours   | NA               | NA                | QoS cannot exceed 96 GPUs* | Distributed jobs          |
-| **urgent**      | 3 days     | 64               | NA                | QoS cannot exceed 96 GPUs* | Working under a strict deadline  |
+| QoS             | Max Time   | Max TRES per Job  | Max Jobs Per User | Concurrent GPU Limit | Notes                           |
+| --------------- | ---------- | ----------------- | ----------------- | -------------------- | ------------------------------- |
+| **normal**      | 24 hours   | 16 GPUs, 128 CPUs | NA                | 48 GPUs, 384 CPUs    | Standard production work        |
+| **debug**       | 1 hour     | 1 GPU, 8 CPUs     | 1                 | 1 job                | Quick testing and setup         |
+| **interactive** | 8 hours    | 2 GPUs, 16 CPUs   | 2                 | 2 jobs               | Real-time work or debugging     |
+| **long**        | 7 days     | 16 GPUs, 128 CPUs | NA                | QoS cannot exceed 96 GPUs* | Long jobs                 |
+| **wide**        | 24 hours   | NA                | NA                | QoS cannot exceed 96 GPUs* | Distributed jobs          |
+| **urgent**      | 3 days     | 64 GPUs, 512 CPUs | NA                | QoS cannot exceed 96 GPUs* | Working under a strict deadline  |
 
-*These QoS levels use a shared GPU limit rather than per-user concurrent limits. Jobs running under these QoS levels collectively share a pool of GPUs, with a maximum of 96 GPUs in use at any time across all users.*
+*These QoS levels use a shared GPU limit rather than per-user concurrent limits. Jobs running under these QoS levels collectively share a pool of GPUs, with a maximum of 96 GPUs and 768 CPUs in use at any time across all users.*
 
 :::caution Urgent QoS info & pricing
 
@@ -137,16 +136,10 @@ salloc --partition=gpu-h200-mig --qos=debug --gres=gpu:1 --time=00:30:00
 *Note*: If you don't specify `--partition` and `--qos`, the job will default to **`gpu-h200`** and **`normal`**.
 
 :::warning
-It is required to specify the number of GPUs you are requesting. Jobs without GPUs are not permitted on Tillicum. Commands to request jobs that do not specify the GPUs will result in the following error:
+For GPU jobs, it is required to specify the number of GPUs you are requesting. A standard `salloc`/`sbatch` request without additional additional resource options will provide 1 CPU and no GPU:
 
 ```bash
 salloc --cpus-per-task=1 --mem=4G --time=01:00:00
-```
-
-```text
-salloc: error: Req GPUs: 0
-salloc: error: ERROR: Jobs must request at least 1 GPU, use -G <num> or --gpus <num> or --gres=gpu:<num>.
-salloc: error: Job submit/allocate failed: Unspecified error
 ```
 :::
 
