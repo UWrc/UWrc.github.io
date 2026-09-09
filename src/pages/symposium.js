@@ -5,7 +5,7 @@ import styles from "./symposium.module.css";
 
 // Event details — update these as plans are finalized.
 const EVENT = {
-  title: "UW Research Computing Symposium",
+  title: "UWIT Research Computing Symposium",
   tagline: "Showcasing research enabled by UWIT research computing services",
   date: "Friday, November 13, 2026",
   time: "All Day (9:00 AM – 5:15 PM)",
@@ -98,7 +98,7 @@ export default function Symposium() {
   return (
     <Layout
       title="Symposium"
-      description="UW Research Computing Symposium — showcasing research enabled by UWIT research computing services."
+      description="UWIT Research Computing Symposium — showcasing research enabled by UWIT research computing services."
     >
       {/* Banner */}
       <header className={styles.banner}>
@@ -126,7 +126,7 @@ export default function Symposium() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>About the Symposium</h2>
           <p>
-            The inaugural UW Research Computing Symposium will bring together UW
+            The inaugural UWIT Research Computing Symposium will bring together UW
             researchers, campus partners, research computing staff, and technology
             providers to showcase research enabled by UWIT research computing
             services, including on-premises HPC/GPU resources and cloud computing.
