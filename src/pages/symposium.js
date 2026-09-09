@@ -143,6 +143,30 @@ export default function Symposium() {
           </p>
         </section>
 
+        {/* Location */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Location</h2>
+          <p>
+            {EVENT.location}.{" "}
+            <a
+              href="https://www.google.com/maps/place/Husky+Union+Building"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Google Maps →
+            </a>
+          </p>
+          <div className={styles.mapWrapper}>
+            <iframe
+              title="Husky Union Building map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.4944963773387!2d-122.30508449999999!3d47.65538929999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148d64534c71%3A0xc91793fd02335246!2sHusky%20Union%20Building!5e0!3m2!1sen!2sus!4v1788912813488!5m2!1sen!2sus"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </section>
+
         {/* Agenda */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Agenda</h2>
