@@ -94,6 +94,11 @@ module.exports = {
           position: 'right',
         },
         {
+          to: '/docs/ood',
+          label: 'OnDemand',
+          position: 'right',
+        },
+        {
           to: 'https://calendar.washington.edu/sea_uwit-rc',
           label: 'Events',
           position: 'right',

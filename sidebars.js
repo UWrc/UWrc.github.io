@@ -1,4 +1,19 @@
 module.exports = {
+  ood: [
+    'ood/home',
+    'ood/getting-started',
+    {
+      type: 'category',
+      label: 'Interactive Apps',
+      items: [
+        'ood/apps/desktop',
+        'ood/apps/jupyter',
+        'ood/apps/vscode',
+        'ood/apps/matlab',
+        'ood/apps/rstudio',
+      ],
+    },
+  ],
   docs: [
     'index',
     {
@@ -77,25 +92,6 @@ module.exports = {
             'guides/software/containers',
             'guides/software/nvidia-ngc',
             'guides/software/ollama',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Open OnDemand',
-          items: [
-            'guides/ood/getting-started',
-            {
-              type: 'category',
-              label: 'Interactive Apps',
-              items: [
-                'guides/ood/apps/desktop',
-                'guides/ood/apps/jupyter',
-                'guides/ood/apps/vscode',
-                'guides/ood/apps/matlab',
-                'guides/ood/apps/rstudio',
-              ],
-            },
-
           ],
         },
         {
