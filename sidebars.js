@@ -2,17 +2,11 @@ module.exports = {
   ood: [
     'ood/home',
     'ood/getting-started',
-    {
-      type: 'category',
-      label: 'Interactive Apps',
-      items: [
-        'ood/apps/desktop',
-        'ood/apps/jupyter',
-        'ood/apps/vscode',
-        'ood/apps/matlab',
-        'ood/apps/rstudio',
-      ],
-    },
+    'ood/apps/desktop',
+    'ood/apps/jupyter',
+    'ood/apps/vscode',
+    'ood/apps/matlab',
+    'ood/apps/rstudio',
   ],
   docs: [
     'index',

@@ -8,7 +8,7 @@ slug: /ood
 
 [**Open OnDemand**](https://openondemand.org/) (OOD) is a web-based portal that provides an integrated, single access point to our HPC clusters. It offers a graphical user interface (GUI) as an alternative to the command line for submitting jobs, managing files, launching applications, and monitoring job status.
 
-Choose your system below to launch its OnDemand portal. New to OOD? Start with the [**Getting Started**](getting-started) guide.
+Choose your system below to launch its OnDemand portal. New to OOD? Start with the [**Getting Started**](/docs/ood/getting-started) guide.
 
 <div className="oodLaunchButtons">
   <a className="oodLaunchButton" href="https://ondemand.hyak.uw.edu/pun/sys/dashboard/" target="_blank" rel="noopener noreferrer">
