@@ -11,11 +11,11 @@ slug: /ood
 Choose your system below to launch its OnDemand portal. New to OOD? Start with the [**Getting Started**](/docs/ood/getting-started) guide.
 
 <div className="oodLaunchButtons">
-  <a className="oodLaunchButton" href="https://ondemand.hyak.uw.edu/pun/sys/dashboard/" target="_blank" rel="noopener noreferrer">
+  <a className="oodLaunchButton" href="https://ondemand.hyak.uw.edu/" target="_blank" rel="noopener noreferrer">
     <span className="oodLaunchButtonLabel">Hyak Klone OnDemand</span>
     <span className="oodLaunchButtonCaption">Launch the web portal for the Hyak Klone HPC cluster.</span>
   </a>
-  <a className="oodLaunchButton" href="https://tillicum-ood.hyak.uw.edu/pun/sys/dashboard/" target="_blank" rel="noopener noreferrer">
+  <a className="oodLaunchButton" href="https://tillicum-ood.hyak.uw.edu/" target="_blank" rel="noopener noreferrer">
     <span className="oodLaunchButtonLabel">Tillicum OnDemand</span>
     <span className="oodLaunchButtonCaption">Launch the web portal for the Tillicum GPU cluster.</span>
   </a>
