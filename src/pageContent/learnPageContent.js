@@ -130,7 +130,7 @@ export const LearnTutorialCards = [
           { image: '/img/learn/ood.jpg',
             header: 'Tutorial: Open OnDemand', 
             caption: 'Use your favorite graphical software on our supercomputers.',
-            link: '/docs/guides/ood/getting-started',
+            link: '/ood/getting-started',
             isfeatured: false,
           },
           { image: '/img/learn/ood_jup.jpg',

@@ -9,7 +9,7 @@ MATLAB is a proprietary multi-paradigm programming language and numeric computin
 MATLAB can be launched on Hyak using either of these methods:
 
 - [**MATLAB via Command Line**](#matlab-via-command-line): load the MATLAB module on a compute node and run MATLAB from the terminal.
-- [**MATLAB via Open OnDemand**](/docs/guides/ood/apps/matlab): launch MATLAB through Hyak's Open OnDemand web portal.
+- [**MATLAB via Open OnDemand**](/ood/apps/matlab): launch MATLAB through Hyak's Open OnDemand web portal.
 
 ## MATLAB License Authentication
 
