@@ -1,13 +1,4 @@
 module.exports = {
-  ood: [
-    'ood/home',
-    'ood/getting-started',
-    'ood/apps/desktop',
-    'ood/apps/jupyter',
-    'ood/apps/vscode',
-    'ood/apps/matlab',
-    'ood/apps/rstudio',
-  ],
   docs: [
     'index',
     {

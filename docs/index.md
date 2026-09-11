@@ -44,7 +44,7 @@ If you have never used Hyak Klone, Tillicum, or any HPC system before, we recomm
 
 Starting with OOD gives you a working environment right away. As you get comfortable, you can develop command-line skills at your own pace.
 
-**[Get started with Open OnDemand](/docs/ood/getting-started)**
+**[Get started with Open OnDemand](/ood/getting-started)**
 
 ## Ready to Learn the Command Line?
 
@@ -55,7 +55,7 @@ Working from the command line unlocks more streamlined processes and production 
 
 ## Helpful Pages
 
-- **[Open OnDemand](/docs/ood/getting-started)** — Web-based graphical interface to Hyak Klone and Tillicum
+- **[Open OnDemand](/ood/getting-started)** — Web-based graphical interface to Hyak Klone and Tillicum
 - **[SSH & Login](/docs/getting-started/ssh-login)** — Instructions for logging in to the clusters
 - **[Slurm on Klone](/docs/systems/klone/scheduling-jobs)** — Scheduling jobs on Hyak Klone
 - **[Slurm on Tillicum](/docs/systems/tillicum/scheduling-jobs)** — Scheduling jobs on Tillicum
