@@ -94,9 +94,18 @@ module.exports = {
           position: 'right',
         },
         {
-          to: 'https://calendar.washington.edu/sea_uwit-rc',
           label: 'Events',
           position: 'right',
+          items: [
+            {
+              label: 'Symposium',
+              to: '/symposium',
+            },
+            {
+              label: 'Events Calendar',
+              to: 'https://calendar.washington.edu/sea_uwit-rc',
+            },
+          ],
         },
         {
           to: 'blog',
