@@ -30,7 +30,7 @@ const AGENDA = [
 ];
 
 // When available, set these URLs to enable the action buttons.
-const REGISTRATION_URL = ""; // e.g. "https://..."
+const REGISTRATION_URL = "https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Symposium/E208855324"; // e.g. "https://..."
 
 // Add partner/sponsor logos here as they are confirmed.
 // Example: { name: "eScience Institute", image: "/img/partners/escience.png", link: "https://escience.washington.edu" }
