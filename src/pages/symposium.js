@@ -5,8 +5,8 @@ import styles from "./symposium.module.css";
 
 // Event details — update these as plans are finalized.
 const EVENT = {
-  title: "UWIT Research Computing Symposium",
-  tagline: "Showcasing research enabled by UWIT research computing services",
+  title: "Research Computing Symposium",
+  tagline: "Supporting Research, Strengthening Partnerships, and Connecting People",
   date: "Friday, November 13, 2026",
   time: "All Day (9:00 AM – 5:15 PM)",
   location: "HUB 250 and HUB 238/307, University of Washington",
@@ -18,19 +18,19 @@ const AGENDA = [
   ["9:30–9:40", "Welcome & Opening Remarks", "Welcome and introduction to the symposium"],
   ["9:40–10:25", "Keynote", "Featured speaker on research, computing, AI, or research infrastructure"],
   ["10:25–10:40", "Morning Break", "Refreshments, networking, partner engagement"],
-  ["10:40–12:00", "UW Research Showcase", "~5–6 researcher presentations, 10–12 minutes each"],
+  ["10:40–12:00", "UW Research Showcase I", "~5–6 researcher presentations, 10–12 minutes each"],
   ["12:00–1:00", "Lunch & Networking", "Lunch and informal networking"],
-  ["1:00–1:45", "Industry & Technology Partner Panel", "Perspectives on HPC, AI, GPUs, cloud, and emerging technologies"],
-  ["1:45–2:45", "UW Research Computing: Services, Roadmap & Town Hall", "Current services, what's coming, priorities, and moderated discussion/Q&A"],
+  ["1:00–1:45", "Industry parallel session", "Perspectives on HPC, AI, GPUs, cloud, and emerging technologies"],
+  ["1:45–2:15", "Partner parallel sessions", "Sessions led by UW research Computing Partners"],
+  ["2:15–2:45", "UW Research Computing parallel sessions", "Current services, what's coming, priorities, and moderated discussion/Q&A"],
   ["2:45–3:00", "Afternoon Break", "Refreshments and networking"],
-  ["3:00–4:00", "Research Showcase II", "~4–5 additional researcher presentations"],
+  ["3:00–4:00", "UW Research Showcase II", "~4–5 additional researcher presentations"],
   ["4:00–4:15", "Closing Remarks", "Key takeaways, acknowledgements, and future engagement"],
   ["4:15–5:15", "Networking Reception", "Networking, partner engagement, and social activities"],
 ];
 
 // When available, set these URLs to enable the action buttons.
 const REGISTRATION_URL = ""; // e.g. "https://..."
-const PRESENTATION_URL = ""; // e.g. "https://..."
 
 // Add partner/sponsor logos here as they are confirmed.
 // Example: { name: "eScience Institute", image: "/img/partners/escience.png", link: "https://escience.washington.edu" }
@@ -98,7 +98,7 @@ export default function Symposium() {
   return (
     <Layout
       title="Symposium"
-      description="UWIT Research Computing Symposium — showcasing research enabled by UWIT research computing services."
+      description="Research Computing Symposium"
     >
       {/* Banner */}
       <header className={styles.banner}>
@@ -114,9 +114,6 @@ export default function Symposium() {
             <ActionButton href={REGISTRATION_URL} primary>
               Register
             </ActionButton>
-            <ActionButton href={PRESENTATION_URL} primary>
-              Apply to Present
-            </ActionButton>
           </div>
         </div>
       </header>
@@ -124,47 +121,10 @@ export default function Symposium() {
       <main className={styles.container}>
         {/* About / Event concept */}
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>About the Symposium</h2>
+          <h2 className={styles.sectionTitle}>You're Invited</h2>
           <p>
-            The inaugural UWIT Research Computing Symposium will bring together UW
-            researchers, campus partners, research computing staff, and technology
-            providers to showcase research enabled by UWIT research computing
-            services, including on-premises HPC/GPU resources and cloud computing.
+            We invite you to join us for our first ever Research Computing Symposium, a full-day event showcasing research enabled by advanced computing at the University of Washington. Connect with and hear from researchers, campus and industry partners, and UWIT Research Computing experts through lightning talks, discussions, and networking sessions. The symposium will highlight current work, emerging capabilities, and the future of research computing across on-premises, cloud, and other research infrastructure. 
           </p>
-          <p>
-            The event combines a research showcase, a research computing town hall,
-            and a community networking event. Researchers share their work and its
-            impact, while UWIT provides an overview of current services and the
-            roadmap for future capabilities. The symposium also creates
-            opportunities for researchers to connect with UWIT staff, campus
-            research organizations, and industry partners, while fostering
-            collaborations on future research projects and team-based grant
-            opportunities.
-          </p>
-        </section>
-
-        {/* Location */}
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Location</h2>
-          <p>
-            {EVENT.location}.{" "}
-            <a
-              href="https://www.google.com/maps/place/Husky+Union+Building"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open in Google Maps →
-            </a>
-          </p>
-          <div className={styles.mapWrapper}>
-            <iframe
-              title="Husky Union Building map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.4944963773387!2d-122.30508449999999!3d47.65538929999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148d64534c71%3A0xc91793fd02335246!2sHusky%20Union%20Building!5e0!3m2!1sen!2sus!4v1788912813488!5m2!1sen!2sus"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </section>
 
         {/* Agenda */}
@@ -193,6 +153,40 @@ export default function Symposium() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* Location */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Location</h2>
+          <p>
+            {EVENT.location}.{" "}
+            <a
+              href="https://www.google.com/maps/place/Husky+Union+Building"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in Google Maps →
+            </a>
+          <div className={styles.mapWrapper}>
+            <iframe
+              title="Husky Union Building map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.4944963773387!2d-122.30508449999999!3d47.65538929999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490148d64534c71%3A0xc91793fd02335246!2sHusky%20Union%20Building!5e0!3m2!1sen!2sus!4v1788912813488!5m2!1sen!2sus"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+                    </p>
+                    Plant Your Visit: 
+                    <p>
+            <a
+              href="https://hub.washington.edu/about/plan-your-visit/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HUB directions, parking guidance, floor plans, and FAQs.
+            </a>
+          </p>
         </section>
 
         {/* Partners & Sponsors */}
