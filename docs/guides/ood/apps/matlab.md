@@ -9,11 +9,9 @@ title: MATLAB
 
 ## MATLAB License Authentication
 
-UW's MATLAB license is transitioning from a concurrent license to a named-user license per the request from MathWorks MATLAB. Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak due to this license change.
+Beginning August 1, 2026, only MATLAB R2023b and newer versions will be valid on Hyak.
 
-Firstly, [**make sure you have access to MathWorks account through your UW email**](https://it.uw.edu/uware/matlab/).
-
-For MATLAB sessions launched through OOD, [users will be prompted for SSO to connect with their UW MathWorks account and complete authentication the first time they launch MATLAB](/docs/guides/applications/matlab#matlab-license-authentication). This authentication should persist until the license expires or the saved credentials are cleared.
+See [**MATLAB License Authentication**](/docs/guides/applications/matlab#matlab-license-authentication) for license authentication instructions.
 
 :::tip Managing `.MathWorks` Storage
 If MATLAB reports `Unable to communicate with required MathWorks services`, your home directory may be near or over its quota due to accumulated MATLAB runtime data saved in `~/.MathWorks`. See [**Managing `.MathWorks` Storage**](/docs/guides/applications/matlab#managing-mathworks-storage) for cleanup instructions.
