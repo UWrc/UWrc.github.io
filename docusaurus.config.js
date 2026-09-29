@@ -14,6 +14,16 @@ module.exports = {
         maxSearchResults: 10,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ood',
+        path: 'ood',
+        routeBasePath: 'ood',
+        sidebarPath: require.resolve('./sidebarsOod.js'),
+        sidebarCollapsible: true,
+      },
+    ],
   ],
   onBrokenLinks: 'ignore',
   themeConfig: {
@@ -91,6 +101,11 @@ module.exports = {
         {
           to: '/learn',
           label: 'Learn',
+          position: 'right',
+        },
+        {
+          to: '/ood',
+          label: 'OnDemand',
           position: 'right',
         },
         {

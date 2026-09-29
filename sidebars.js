@@ -81,25 +81,6 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'Open OnDemand',
-          items: [
-            'guides/ood/getting-started',
-            {
-              type: 'category',
-              label: 'Interactive Apps',
-              items: [
-                'guides/ood/apps/desktop',
-                'guides/ood/apps/jupyter',
-                'guides/ood/apps/vscode',
-                'guides/ood/apps/matlab',
-                'guides/ood/apps/rstudio',
-              ],
-            },
-
-          ],
-        },
-        {
-          type: 'category',
           label: 'Data Transfer',
           items: [
             'guides/data-transfer/globus',

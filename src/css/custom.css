@@ -130,3 +130,54 @@ span.token.number {
   font-style: normal;
 }
 
+
+/* Open OnDemand launch buttons (docs/ood/getting-started) */
+.oodLaunchButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.oodLaunchButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 280px;
+  min-height: 120px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 2px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-primary);
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.oodLaunchButton:hover {
+  text-decoration: none;
+  color: var(--ifm-color-primary);
+  background-color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.oodLaunchButtonLabel {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.oodLaunchButtonCaption {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: 0.95;
+}
+
+[data-theme='dark'] .oodLaunchButton {
+  color: #18191a;
+}
+
+[data-theme='dark'] .oodLaunchButton:hover {
+  color: var(--ifm-color-primary);
+  background-color: #242526;
+}
