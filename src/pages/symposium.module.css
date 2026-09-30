@@ -1,12 +1,16 @@
 /* Banner */
 .banner {
+  position: relative;
   width: 100%;
-  background: linear-gradient(135deg, #4b2e83 0%, #32006e 100%);
+  background-image: url("/img/events/SymposiumBanner.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 3.5rem 1.5rem;
   text-align: center;
 }
 
 .bannerContent {
+  position: relative;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -76,7 +80,17 @@
 }
 
 .actionButtonPrimary:hover {
+  background-color: #4b2e83;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+[data-theme="dark"] .actionButtonPrimary {
   color: #4b2e83;
+}
+
+[data-theme="dark"] .actionButtonPrimary:hover {
+  color: #ffffff;
 }
 
 .actionButtonDisabled {

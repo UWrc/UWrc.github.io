@@ -34,7 +34,23 @@ const REGISTRATION_URL = "https://calendar.washington.edu/sea_uwit-rc/Research-C
 
 // Add partner/sponsor logos here as they are confirmed.
 // Example: { name: "eScience Institute", image: "/img/partners/escience.png", link: "https://escience.washington.edu" }
-const PARTNERS = [];
+const PARTNERS = [
+  {
+    name: "UW Office of Research",
+    image: "/img/logos/Office_of_Research.png",
+    link: "https://www.washington.edu/research/",
+  },
+  {
+    name: "eScience Institute",
+    image: "/img/logos/escience-logo-768x193.png",
+    link: "https://escience.washington.edu",
+  },
+  {
+    name: "UW Libraries",
+    image: "/img/logos/UW_Libraries.png",
+    link: "https://www.lib.washington.edu",
+  },
+];
 const SPONSORS = [];
 
 function ActionButton({ href, children, primary }) {
