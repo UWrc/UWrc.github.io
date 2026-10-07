@@ -34,7 +34,7 @@ const ROOMS = {
 const AGENDA = [
   { start: 540, end: 560, time: "9:00 – 9:20 AM", title: "Check-in", type: "General", room: ROOMS.lobby },
   { start: 560, end: 570, time: "9:20 – 9:30 AM", title: "Opening Remarks", type: "General", room: ROOMS.main },
-  { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Research Highlight 1 — Natasha Jacques", type: "Highlight", room: ROOMS.main },
+  { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Research Highlight 1 — TBA", type: "Highlight", room: ROOMS.main },
   { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Research Highlight 2 — Paul Atkins", type: "Highlight", room: ROOMS.main },
   { start: 630, end: 640, time: "10:30 – 10:40 AM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
@@ -74,14 +74,9 @@ const AGENDA = [
     start: 810,
     end: 840,
     time: "1:30 – 2:00 PM",
-    title: "Research Computing + eScience + RCC",
+    title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
     type: "Partners",
     room: ROOMS.main,
-    sessions: [
-      { start: 810, end: 820, label: "Research Computing" },
-      { start: 820, end: 830, label: "eScience" },
-      { start: 830, end: 840, label: "RCC" },
-    ],
   },
   { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main },
   { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break", room: ROOMS.lobby },
