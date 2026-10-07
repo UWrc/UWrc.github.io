@@ -8,26 +8,128 @@ const EVENT = {
   title: "Research Computing Symposium",
   tagline: "Supporting Research, Strengthening Partnerships, and Connecting People",
   date: "Friday, November 13, 2026",
-  time: "All Day (9:00 AM – 5:15 PM)",
-  location: "HUB 250 and HUB 238/307, University of Washington",
+  time: "All Day (9:00 AM – 5:00 PM)",
+  location: "HUB 332, 334, 238 & 307, University of Washington",
 };
 
-// Draft agenda — subject to change. Main program is in HUB 250.
+// Room legend.
+//   lobby   — hospitality (check-in, breaks, lunch, reception)
+//   main    — main session speakers / showcase main track
+//   r238/307 — side sessions during the parallel showcase blocks
+const ROOMS = {
+  lobby: "HUB 332",
+  main: "HUB 334",
+  r238: "HUB 238",
+  r307: "HUB 307",
+};
+
+// Draft agenda — source of truth is the symposium schedule CSV.
+// Single-track items run in HUB 250. The two Research Showcase blocks run as
+// three parallel tracks across HUB 250, HUB 238, and HUB 307.
+//
+// `start`/`end` are minutes since midnight (24h) and drive the timeline layout.
+// Each entry is one of:
+//   { start, end, time, title, type }                   -> single-track (HUB 250)
+//   { start, end, time, title, type, parallel: [ ... ] } -> parallel block
 const AGENDA = [
-  ["9:00–9:30", "Check-in & Coffee", "Registration, coffee, informal networking"],
-  ["9:30–9:40", "Welcome & Opening Remarks", "Welcome and introduction to the symposium"],
-  ["9:40–10:25", "Keynote", "Featured speaker on research, computing, AI, or research infrastructure"],
-  ["10:25–10:40", "Morning Break", "Refreshments, networking, partner engagement"],
-  ["10:40–12:00", "UW Research Showcase I", "~5–6 researcher presentations, 10–12 minutes each"],
-  ["12:00–1:00", "Lunch & Networking", "Lunch and informal networking"],
-  ["1:00–1:45", "Industry parallel session", "Perspectives on HPC, AI, GPUs, cloud, and emerging technologies"],
-  ["1:45–2:15", "Partner parallel sessions", "Sessions led by UW research Computing Partners"],
-  ["2:15–2:45", "UW Research Computing parallel sessions", "Current services, what's coming, priorities, and moderated discussion/Q&A"],
-  ["2:45–3:00", "Afternoon Break", "Refreshments and networking"],
-  ["3:00–4:00", "UW Research Showcase II", "~4–5 additional researcher presentations"],
-  ["4:00–4:15", "Closing Remarks", "Key takeaways, acknowledgements, and future engagement"],
-  ["4:15–5:15", "Networking Reception", "Networking, partner engagement, and social activities"],
+  { start: 540, end: 560, time: "9:00 – 9:20 AM", title: "Check-in", type: "General", room: ROOMS.lobby },
+  { start: 560, end: 570, time: "9:20 – 9:30 AM", title: "Opening Remarks", type: "General", room: ROOMS.main },
+  { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Research Highlight 1 — TBA", type: "Highlight", room: ROOMS.main },
+  { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Research Highlight 2 — Paul Atkins", type: "Highlight", room: ROOMS.main },
+  { start: 630, end: 640, time: "10:30 – 10:40 AM", title: "Break", type: "Break", room: ROOMS.lobby },
+  {
+    start: 640,
+    end: 720,
+    time: "10:40 AM – 12:00 PM",
+    title: "Research Showcase A",
+    type: "Showcase",
+    parallel: [
+      {
+        room: ROOMS.main,
+        track: "Research Showcase A",
+        sessions: [
+          { start: 640, end: 652, label: "Presentation 1" },
+          { start: 652, end: 664, label: "Presentation 2" },
+          { start: 664, end: 676, label: "Presentation 3" },
+          { start: 676, end: 688, label: "Presentation 4" },
+          { start: 688, end: 700, label: "Presentation 5" },
+          { start: 700, end: 712, label: "Presentation 6" },
+        ],
+      },
+      {
+        room: ROOMS.r238,
+        track: "GCP",
+        detail: "Partner track — Google Cloud",
+      },
+      {
+        room: ROOMS.r307,
+        track: "Libraries",
+        detail: "Partner track — UW Libraries",
+      },
+    ],
+  },
+  { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General", room: ROOMS.lobby },
+  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners", room: ROOMS.main },
+  {
+    start: 810,
+    end: 840,
+    time: "1:30 – 2:00 PM",
+    title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
+    type: "Partners",
+    room: ROOMS.main,
+  },
+  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main },
+  { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break", room: ROOMS.lobby },
+  {
+    start: 880,
+    end: 960,
+    time: "2:40 – 4:00 PM",
+    title: "Research Showcase B",
+    type: "Showcase",
+    parallel: [
+      {
+        room: ROOMS.main,
+        track: "Research Showcase B",
+        sessions: [
+          { start: 880, end: 892, label: "Presentation 1" },
+          { start: 892, end: 904, label: "Presentation 2" },
+          { start: 904, end: 916, label: "Presentation 3" },
+          { start: 916, end: 928, label: "Presentation 4" },
+          { start: 928, end: 940, label: "Presentation 5" },
+          { start: 940, end: 952, label: "Presentation 6" },
+        ],
+      },
+      {
+        room: ROOMS.r238,
+        track: "Azure",
+        detail: "Partner track — Microsoft Azure",
+      },
+      {
+        room: ROOMS.r307,
+        track: "AWS",
+        detail: "Partner track — Amazon Web Services",
+      },
+    ],
+  },
+  { start: 960, end: 970, time: "4:00 – 4:10 PM", title: "Closing Remarks", type: "General", room: ROOMS.main },
+  { start: 970, end: 1020, time: "4:10 – 5:00 PM", title: "Networking Reception", type: "Reception", room: ROOMS.lobby },
 ];
+
+// Timeline layout constants.
+const DAY_START = 540; // 9:00 AM
+const DAY_END = 1020; // 5:00 PM
+const PX_PER_MIN = 4.8; // vertical scale of the timeline (true-to-scale)
+const AXIS_STEP = 30; // left-axis tick interval, in minutes
+
+function minutesToLabel(mins) {
+  const h24 = Math.floor(mins / 60);
+  const m = mins % 60;
+  const period = h24 >= 12 ? "PM" : "AM";
+  const h12 = ((h24 + 11) % 12) + 1;
+  return `${h12}${m ? ":" + String(m).padStart(2, "0") : ""} ${period}`;
+}
+
+
 
 // When available, set these URLs to enable the action buttons.
 const REGISTRATION_URL = "https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Symposium/E208855324"; // e.g. "https://..."
@@ -110,6 +212,190 @@ function LogoGrid({ title, items }) {
   );
 }
 
+// Maps a session type to its color-coding CSS class.
+const TYPE_CLASS = {
+  General: styles.typeGeneral,
+  Highlight: styles.typeHighlight,
+  Break: styles.typeBreak,
+  Partners: styles.typePartners,
+  Showcase: styles.typeShowcase,
+  Reception: styles.typeReception,
+};
+
+const TYPE_LEGEND = [
+  { type: "General", label: "General / Program" },
+  { type: "Highlight", label: "Research Highlight" },
+  { type: "Partners", label: "Partner & Industry" },
+  { type: "Showcase", label: "Research Showcase" },
+  { type: "Break", label: "Break" },
+  { type: "Reception", label: "Reception" },
+];
+
+// True-to-scale position/size for a block, by actual clock time.
+function rowBox(start, end) {
+  return {
+    top: `${(start - DAY_START) * PX_PER_MIN}px`,
+    height: `${(end - start) * PX_PER_MIN}px`,
+  };
+}
+
+// Position/size for a sub-block relative to its parent window's start.
+function subBox(offsetStart, offsetEnd) {
+  return {
+    top: `${offsetStart * PX_PER_MIN}px`,
+    height: `${(offsetEnd - offsetStart) * PX_PER_MIN}px`,
+  };
+}
+
+function SessionBlock({ type, title, startLabel, endLabel, children }) {
+  return (
+    <div className={`${styles.block} ${TYPE_CLASS[type] || ""}`}>
+      <span className={styles.blockTitle}>{title}</span>
+      <span className={styles.blockTime}>
+        {startLabel} – {endLabel}
+      </span>
+      {children}
+    </div>
+  );
+}
+
+// Half-hour axis ticks across the day.
+const AXIS_MARKS = [];
+for (let m = DAY_START; m <= DAY_END; m += AXIS_STEP) {
+  AXIS_MARKS.push(m);
+}
+
+function Timeline() {
+  const totalHeight = (DAY_END - DAY_START) * PX_PER_MIN;
+
+  return (
+    <div className={styles.timelineScroll}>
+      <div className={styles.timeline} style={{ height: `${totalHeight}px` }}>
+        {/* Time axis — half-hour increments */}
+        <div className={styles.axis}>
+          {AXIS_MARKS.map((m) => (
+            <div
+              key={`axis-${m}`}
+              className={styles.axisMark}
+              style={{ top: `${(m - DAY_START) * PX_PER_MIN}px` }}
+            >
+              <span className={styles.axisLabel}>{minutesToLabel(m)}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Gridlines at each half-hour */}
+        <div className={styles.gridlines}>
+          {AXIS_MARKS.map((m) => (
+            <div
+              key={`grid-${m}`}
+              className={styles.gridline}
+              style={{ top: `${(m - DAY_START) * PX_PER_MIN}px` }}
+            />
+          ))}
+        </div>
+
+        {/* Session blocks — positioned true-to-scale by clock time */}
+        <div className={styles.tracks}>
+          {AGENDA.map((item) => (
+            <div
+              className={styles.row}
+              style={rowBox(item.start, item.end)}
+              key={item.start}
+            >
+              {item.parallel ? (
+                <div className={styles.rowGrid}>
+                  {item.parallel.map((p) => (
+                    <div className={styles.trackCol} key={`${item.start}-${p.room}`}>
+                      {/* Per-track room header, above the track's blocks */}
+                      <div className={styles.trackRoom}>{p.room}</div>
+                      <div className={styles.trackBody}>
+                        {p.sessions ? (
+                          // Each presentation is its own to-scale block,
+                          // positioned relative to this parallel window's start.
+                          p.sessions.map((s) => (
+                            <div
+                              className={styles.subRow}
+                              style={subBox(s.start - item.start, s.end - item.start)}
+                              key={s.start}
+                            >
+                              <SessionBlock
+                                type={item.type}
+                                title={s.label}
+                                startLabel={minutesToLabel(s.start)}
+                                endLabel={minutesToLabel(s.end)}
+                              />
+                            </div>
+                          ))
+                        ) : (
+                          <SessionBlock
+                            type={item.type}
+                            title={p.track}
+                            startLabel={minutesToLabel(item.start)}
+                            endLabel={minutesToLabel(item.end)}
+                          >
+                            {p.detail && (
+                              <span className={styles.blockDetail}>{p.detail}</span>
+                            )}
+                          </SessionBlock>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className={styles.trackCol}>
+                  <div className={styles.trackRoom}>{item.room}</div>
+                  <div className={styles.trackBody}>
+                    {item.sessions ? (
+                      // A single-track block subdivided into back-to-back
+                      // sub-sessions, each its own to-scale block.
+                      item.sessions.map((s) => (
+                        <div
+                          className={styles.subRow}
+                          style={subBox(s.start - item.start, s.end - item.start)}
+                          key={s.start}
+                        >
+                          <SessionBlock
+                            type={item.type}
+                            title={s.label}
+                            startLabel={minutesToLabel(s.start)}
+                            endLabel={minutesToLabel(s.end)}
+                          />
+                        </div>
+                      ))
+                    ) : (
+                      <SessionBlock
+                        type={item.type}
+                        title={item.title}
+                        startLabel={minutesToLabel(item.start)}
+                        endLabel={minutesToLabel(item.end)}
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TimelineLegend() {
+  return (
+    <div className={styles.legend}>
+      {TYPE_LEGEND.map((item) => (
+        <span className={styles.legendItem} key={item.type}>
+          <span className={`${styles.legendSwatch} ${TYPE_CLASS[item.type]}`} />
+          {item.label}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function Symposium() {
   return (
     <Layout
@@ -147,28 +433,14 @@ export default function Symposium() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Agenda</h2>
           <p className={styles.agendaNote}>
-            Draft schedule — subject to change. The main program takes place in
-            HUB 250, with smaller rooms (HUB 238 &amp; 307) used for targeted
-            conversations and sessions.
+            Draft schedule, subject to change. Main sessions are in {ROOMS.main};
+            check-in, breaks, lunch, and the reception are in {ROOMS.lobby}.
+            During the two Research Showcase blocks, three sessions run at the
+            same time: the main track in {ROOMS.main} and side sessions in{" "}
+            {ROOMS.r238} and {ROOMS.r307}.
           </p>
-          <div className={styles.agendaTableWrapper}>
-            <table className={styles.agendaTable}>
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Session</th>
-                </tr>
-              </thead>
-              <tbody>
-                {AGENDA.map(([time, session]) => (
-                  <tr key={time}>
-                    <td className={styles.agendaTime}>{time}</td>
-                    <td className={styles.agendaSession}>{session}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <Timeline />
+          <TimelineLegend />
         </section>
 
         {/* Location */}
