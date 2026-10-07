@@ -465,7 +465,7 @@ export default function Symposium() {
             />
           </div>
                     </p>
-                    Plant Your Visit: 
+                    Plan Your Visit: 
                     <p>
             <a
               href="https://hub.washington.edu/about/plan-your-visit/"
