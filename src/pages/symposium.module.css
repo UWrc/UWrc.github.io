@@ -173,7 +173,11 @@
   overflow: auto;
   border: 1px solid #e0dcec;
   border-radius: 8px;
-  padding-bottom: 0.5rem;
+  /* Top/bottom padding so the first (9 AM) and last (5 PM) axis labels, which
+     are vertically centered on their gridlines, aren't clipped by the scroll
+     viewport edges. */
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 [data-theme="dark"] .timelineScroll {
@@ -216,39 +220,6 @@
 
 [data-theme="dark"] .axisLabel {
   color: #b7a9d9;
-}
-
-/* Room column headers — sticky bar pinned to the top of the scroll viewport */
-.roomHeaders {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  display: flex;
-  min-width: 640px;
-  height: 2.25rem;
-  background-color: var(--ifm-background-color);
-}
-
-.roomHeaderSpacer {
-  flex: 0 0 72px;
-}
-
-.roomHeaderGrid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-}
-
-.roomHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #4b2e83;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  border-radius: 6px 6px 0 0;
 }
 
 /* Hour gridlines */
@@ -301,6 +272,29 @@
   height: 100%;
 }
 
+/* Per-track room label — a small tab pinned to the top-right of the column,
+   floating over the first block so the blocks stay aligned to the time axis. */
+.trackRoom {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background-color: #4b2e83;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0 4px 0 4px;
+  pointer-events: none;
+}
+
+.trackBody {
+  position: absolute;
+  inset: 0;
+}
+
 /* Session blocks fill their row/column edge-to-edge. */
 .block {
   position: absolute;
@@ -350,7 +344,7 @@
   border-left-color: #6b7280;
   background-color: #f3f4f6;
 }
-.typeKeynote {
+.typeHighlight {
   border-left-color: #4b2e83;
   background-color: #ede8f6;
 }
@@ -378,7 +372,7 @@
 [data-theme="dark"] .typeGeneral {
   background-color: #2a2d31;
 }
-[data-theme="dark"] .typeKeynote {
+[data-theme="dark"] .typeHighlight {
   background-color: #2f2940;
 }
 [data-theme="dark"] .typePartners {

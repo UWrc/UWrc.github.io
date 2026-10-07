@@ -9,12 +9,16 @@ const EVENT = {
   tagline: "Supporting Research, Strengthening Partnerships, and Connecting People",
   date: "Friday, November 13, 2026",
   time: "All Day (9:00 AM – 5:00 PM)",
-  location: "HUB 250, 238 & 307, University of Washington",
+  location: "HUB 332, 334, 238 & 307, University of Washington",
 };
 
-// Room legend — rooms used for the parallel Research Showcase blocks.
+// Room legend.
+//   lobby   — hospitality (check-in, breaks, lunch, reception)
+//   main    — main session speakers / showcase main track
+//   r238/307 — side sessions during the parallel showcase blocks
 const ROOMS = {
-  main: "HUB 250",
+  lobby: "HUB 332",
+  main: "HUB 334",
   r238: "HUB 238",
   r307: "HUB 307",
 };
@@ -28,11 +32,11 @@ const ROOMS = {
 //   { start, end, time, title, type }                   -> single-track (HUB 250)
 //   { start, end, time, title, type, parallel: [ ... ] } -> parallel block
 const AGENDA = [
-  { start: 540, end: 560, time: "9:00 – 9:20 AM", title: "Check-in", type: "General" },
-  { start: 560, end: 570, time: "9:20 – 9:30 AM", title: "Opening Remarks", type: "General" },
-  { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Keynote 1 — Natasha Jacques", type: "Keynote" },
-  { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Keynote 2 — Paul Atkins", type: "Keynote" },
-  { start: 630, end: 640, time: "10:30 – 10:40 AM", title: "Break", type: "Break" },
+  { start: 540, end: 560, time: "9:00 – 9:20 AM", title: "Check-in", type: "General", room: ROOMS.lobby },
+  { start: 560, end: 570, time: "9:20 – 9:30 AM", title: "Opening Remarks", type: "General", room: ROOMS.main },
+  { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Research Highlight 1 — Natasha Jacques", type: "Highlight", room: ROOMS.main },
+  { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Research Highlight 2 — Paul Atkins", type: "Highlight", room: ROOMS.main },
+  { start: 630, end: 640, time: "10:30 – 10:40 AM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
     start: 640,
     end: 720,
@@ -64,11 +68,11 @@ const AGENDA = [
       },
     ],
   },
-  { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General" },
-  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners" },
-  { start: 810, end: 840, time: "1:30 – 2:00 PM", title: "Research Computing + eScience + RCC", type: "Partners" },
-  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Keynote 3 — Patrick Boyle", type: "Keynote" },
-  { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break" },
+  { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General", room: ROOMS.lobby },
+  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners", room: ROOMS.main },
+  { start: 810, end: 840, time: "1:30 – 2:00 PM", title: "Research Computing + eScience + RCC", type: "Partners", room: ROOMS.main },
+  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main },
+  { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
     start: 880,
     end: 960,
@@ -100,8 +104,8 @@ const AGENDA = [
       },
     ],
   },
-  { start: 960, end: 970, time: "4:00 – 4:10 PM", title: "Closing Remarks", type: "General" },
-  { start: 970, end: 1020, time: "4:10 – 5:00 PM", title: "Networking Reception", type: "Reception" },
+  { start: 960, end: 970, time: "4:00 – 4:10 PM", title: "Closing Remarks", type: "General", room: ROOMS.main },
+  { start: 970, end: 1020, time: "4:10 – 5:00 PM", title: "Networking Reception", type: "Reception", room: ROOMS.lobby },
 ];
 
 // Timeline layout constants.
@@ -204,7 +208,7 @@ function LogoGrid({ title, items }) {
 // Maps a session type to its color-coding CSS class.
 const TYPE_CLASS = {
   General: styles.typeGeneral,
-  Keynote: styles.typeKeynote,
+  Highlight: styles.typeHighlight,
   Break: styles.typeBreak,
   Partners: styles.typePartners,
   Showcase: styles.typeShowcase,
@@ -213,7 +217,7 @@ const TYPE_CLASS = {
 
 const TYPE_LEGEND = [
   { type: "General", label: "General / Program" },
-  { type: "Keynote", label: "Keynote" },
+  { type: "Highlight", label: "Research Highlight" },
   { type: "Partners", label: "Partner & Industry" },
   { type: "Showcase", label: "Research Showcase" },
   { type: "Break", label: "Break" },
@@ -259,16 +263,6 @@ function Timeline() {
 
   return (
     <div className={styles.timelineScroll}>
-      {/* Sticky room column headers — stay pinned while the body scrolls */}
-      <div className={styles.roomHeaders}>
-        <div className={styles.roomHeaderSpacer} />
-        <div className={styles.roomHeaderGrid}>
-          <div className={styles.roomHeader}>{ROOMS.main}</div>
-          <div className={styles.roomHeader}>{ROOMS.r238}</div>
-          <div className={styles.roomHeader}>{ROOMS.r307}</div>
-        </div>
-      </div>
-
       <div className={styles.timeline} style={{ height: `${totalHeight}px` }}>
         {/* Time axis — half-hour increments */}
         <div className={styles.axis}>
@@ -306,41 +300,46 @@ function Timeline() {
                 <div className={styles.rowGrid}>
                   {item.parallel.map((p) => (
                     <div className={styles.trackCol} key={`${item.start}-${p.room}`}>
-                      {p.sessions ? (
-                        // Each presentation is its own to-scale block, positioned
-                        // relative to the start of this parallel window.
-                        p.sessions.map((s) => (
-                          <div
-                            className={styles.subRow}
-                            style={subBox(s.start - item.start, s.end - item.start)}
-                            key={s.start}
+                      {/* Per-track room header, above the track's blocks */}
+                      <div className={styles.trackRoom}>{p.room}</div>
+                      <div className={styles.trackBody}>
+                        {p.sessions ? (
+                          // Each presentation is its own to-scale block,
+                          // positioned relative to this parallel window's start.
+                          p.sessions.map((s) => (
+                            <div
+                              className={styles.subRow}
+                              style={subBox(s.start - item.start, s.end - item.start)}
+                              key={s.start}
+                            >
+                              <SessionBlock
+                                type={item.type}
+                                title={s.label}
+                                startLabel={minutesToLabel(s.start)}
+                                endLabel={minutesToLabel(s.end)}
+                              />
+                            </div>
+                          ))
+                        ) : (
+                          <SessionBlock
+                            type={item.type}
+                            title={p.track}
+                            startLabel={minutesToLabel(item.start)}
+                            endLabel={minutesToLabel(item.end)}
                           >
-                            <SessionBlock
-                              type={item.type}
-                              title={s.label}
-                              startLabel={minutesToLabel(s.start)}
-                              endLabel={minutesToLabel(s.end)}
-                            />
-                          </div>
-                        ))
-                      ) : (
-                        <SessionBlock
-                          type={item.type}
-                          title={p.track}
-                          startLabel={minutesToLabel(item.start)}
-                          endLabel={minutesToLabel(item.end)}
-                        >
-                          {p.detail && (
-                            <span className={styles.blockDetail}>{p.detail}</span>
-                          )}
-                        </SessionBlock>
-                      )}
+                            {p.detail && (
+                              <span className={styles.blockDetail}>{p.detail}</span>
+                            )}
+                          </SessionBlock>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
               ) : (
-                <div className={styles.rowGrid}>
-                  <div className={styles.trackCol}>
+                <div className={styles.trackCol}>
+                  <div className={styles.trackRoom}>{item.room}</div>
+                  <div className={styles.trackBody}>
                     <SessionBlock
                       type={item.type}
                       title={item.title}
@@ -408,9 +407,11 @@ export default function Symposium() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Agenda</h2>
           <p className={styles.agendaNote}>
-            Draft schedule — subject to change. Most of the day runs as a single
-            program in {ROOMS.main}. During the two Research Showcase blocks,
-            three sessions run at the same time — one in each room.
+            Draft schedule — subject to change. Main sessions are in {ROOMS.main};
+            check-in, breaks, lunch, and the reception are in {ROOMS.lobby}.
+            During the two Research Showcase blocks, three sessions run at the
+            same time — the main track in {ROOMS.main} and side sessions in{" "}
+            {ROOMS.r238} and {ROOMS.r307}.
           </p>
           <Timeline />
           <TimelineLegend />
