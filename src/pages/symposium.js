@@ -58,19 +58,31 @@ const AGENDA = [
       },
       {
         room: ROOMS.r238,
-        track: "Libraries",
-        detail: "Partner track — UW Libraries",
+        track: "GCP",
+        detail: "Partner track — Google Cloud",
       },
       {
         room: ROOMS.r307,
-        track: "GCP",
-        detail: "Partner track — Google Cloud",
+        track: "Libraries",
+        detail: "Partner track — UW Libraries",
       },
     ],
   },
   { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General", room: ROOMS.lobby },
   { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners", room: ROOMS.main },
-  { start: 810, end: 840, time: "1:30 – 2:00 PM", title: "Research Computing + eScience + RCC", type: "Partners", room: ROOMS.main },
+  {
+    start: 810,
+    end: 840,
+    time: "1:30 – 2:00 PM",
+    title: "Research Computing + eScience + RCC",
+    type: "Partners",
+    room: ROOMS.main,
+    sessions: [
+      { start: 810, end: 820, label: "Research Computing" },
+      { start: 820, end: 830, label: "eScience" },
+      { start: 830, end: 840, label: "RCC" },
+    ],
+  },
   { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main },
   { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
@@ -94,13 +106,13 @@ const AGENDA = [
       },
       {
         room: ROOMS.r238,
-        track: "AWS",
-        detail: "Partner track — Amazon Web Services",
+        track: "Azure",
+        detail: "Partner track — Microsoft Azure",
       },
       {
         room: ROOMS.r307,
-        track: "Azure",
-        detail: "Partner track — Microsoft Azure",
+        track: "AWS",
+        detail: "Partner track — Amazon Web Services",
       },
     ],
   },
@@ -340,12 +352,31 @@ function Timeline() {
                 <div className={styles.trackCol}>
                   <div className={styles.trackRoom}>{item.room}</div>
                   <div className={styles.trackBody}>
-                    <SessionBlock
-                      type={item.type}
-                      title={item.title}
-                      startLabel={minutesToLabel(item.start)}
-                      endLabel={minutesToLabel(item.end)}
-                    />
+                    {item.sessions ? (
+                      // A single-track block subdivided into back-to-back
+                      // sub-sessions, each its own to-scale block.
+                      item.sessions.map((s) => (
+                        <div
+                          className={styles.subRow}
+                          style={subBox(s.start - item.start, s.end - item.start)}
+                          key={s.start}
+                        >
+                          <SessionBlock
+                            type={item.type}
+                            title={s.label}
+                            startLabel={minutesToLabel(s.start)}
+                            endLabel={minutesToLabel(s.end)}
+                          />
+                        </div>
+                      ))
+                    ) : (
+                      <SessionBlock
+                        type={item.type}
+                        title={item.title}
+                        startLabel={minutesToLabel(item.start)}
+                        endLabel={minutesToLabel(item.end)}
+                      />
+                    )}
                   </div>
                 </div>
               )}
@@ -407,10 +438,10 @@ export default function Symposium() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Agenda</h2>
           <p className={styles.agendaNote}>
-            Draft schedule — subject to change. Main sessions are in {ROOMS.main};
+            Draft schedule, subject to change. Main sessions are in {ROOMS.main};
             check-in, breaks, lunch, and the reception are in {ROOMS.lobby}.
             During the two Research Showcase blocks, three sessions run at the
-            same time — the main track in {ROOMS.main} and side sessions in{" "}
+            same time: the main track in {ROOMS.main} and side sessions in{" "}
             {ROOMS.r238} and {ROOMS.r307}.
           </p>
           <Timeline />
