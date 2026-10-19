@@ -13,7 +13,7 @@ export const STAT_ITEMS = {
 }
 
 export const DocumentationCards = [
-          { image: '/img/icons/hyak.jpg',
+          { image: '/img/logos/hyak.jpg',
             header: 'Klone', 
             caption: 'Hyak Klone user guides',
             link: '/docs',
