@@ -117,6 +117,10 @@ module.exports = {
               to: '/symposium',
             },
             {
+              label: 'Accelerating Research Day',
+              to: '/accelerating-research-day',
+            },
+            {
               label: 'Events Calendar',
               to: 'https://calendar.washington.edu/sea_uwit-rc',
             },
