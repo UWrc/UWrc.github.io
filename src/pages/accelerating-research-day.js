@@ -6,7 +6,7 @@ import styles from "./symposium.module.css";
 // Event details.
 const EVENT = {
   title: "Accelerating Research Day",
-  tagline: "Your Way to AI",
+  tagline: "From Strategy to Practice",
   date: "Thursday, Nov 12, 2026",
   time: "12 – 4 p.m.",
   location: "Student Union Building (HUB), Room 214, University of Washington",
@@ -14,6 +14,9 @@ const EVENT = {
 
 const REGISTRATION_URL =
   "https://events.dell.com/event/04ddc80c-c06c-4a40-a419-47f6ef31bd62/regProcessStep1:d3587934-f7bc-4ca4-b172-704eb74c89ff";
+
+const MORE_INFO_URL =
+  "https://events.dell.com/event/04ddc80c-c06c-4a40-a419-47f6ef31bd62/summary";
 
 // Sessions grouped by track.
 const TRACKS = [
@@ -89,6 +92,7 @@ export default function AcceleratingResearchDay() {
             <ActionButton href={REGISTRATION_URL} primary>
               Register
             </ActionButton>
+            <ActionButton href={MORE_INFO_URL}>More Information</ActionButton>
           </div>
         </div>
       </header>
@@ -103,7 +107,22 @@ export default function AcceleratingResearchDay() {
             deploy a strategy that drives tangible value, fast?
           </p>
           <p>
-            Dell Technologies and NVIDIA invite you to join us for Accelerating
+            <a
+              href="https://www.dell.com/en-us"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dell Technologies
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.nvidia.com/en-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NVIDIA
+            </a>{" "}
+            invite you to join us for Accelerating
             Research Day, an exclusive half-day engagement designed specifically
             for visionary leaders like yourself. Together, we'll explore the
             transformative power of AI and the impact it can have on your
@@ -131,36 +150,6 @@ export default function AcceleratingResearchDay() {
               ))}
             </div>
           ))}
-        </section>
-
-        {/* Event details */}
-        <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Event Details</h2>
-          <ul>
-            <li>
-              <strong>When:</strong> {EVENT.date}, {EVENT.time} (single day
-              event)
-            </li>
-            <li>
-              <strong>Where:</strong> {EVENT.location}
-            </li>
-            <li>
-              <strong>Event types:</strong> Information Sessions,
-              Lectures/Seminars, Special Events, Workshops
-            </li>
-            <li>
-              <strong>Target audience:</strong> faculty, staff, students,
-              postdocs, researchers
-            </li>
-            <li>
-              <strong>Event sponsors:</strong> Dell Technologies, NVIDIA, UWIT
-              Research Computing
-            </li>
-            <li>
-              <strong>Accessibility contact:</strong>{" "}
-              <a href="mailto:finchkn@uw.edu">finchkn@uw.edu</a>
-            </li>
-          </ul>
         </section>
 
         {/* Location */}
