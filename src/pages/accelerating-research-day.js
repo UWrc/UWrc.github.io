@@ -133,6 +133,13 @@ export default function AcceleratingResearchDay() {
             valued peers, and dive deep into the technology that is reshaping how
             we live and work. Lunch will be provided!
           </p>
+          <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+            <img
+              src="/img/events/Social Media Post DTD.jpg"
+              alt="Accelerating Research Day flyer"
+              style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
+            />
+          </div>
         </section>
 
         {/* Sessions */}
