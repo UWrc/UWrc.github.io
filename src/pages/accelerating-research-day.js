@@ -122,7 +122,9 @@ export default function AcceleratingResearchDay() {
             <ActionButton href={REGISTRATION_URL} primary>
               Register
             </ActionButton>
-            <ActionButton href={MORE_INFO_URL}>More Information</ActionButton>
+            <ActionButton href={MORE_INFO_URL} primary>
+              More Information
+            </ActionButton>
           </div>
         </div>
       </header>
