@@ -489,6 +489,23 @@ export default function Symposium() {
             <LogoGrid title="Sponsors" items={SPONSORS} />
           </div>
         </section>
+
+        {/* Related event */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Related Event</h2>
+          <h3>Accelerating Research Day</h3>
+          <p>
+            A half-day engagement on Thursday, November 12, 2026 hosted by Dell
+            Technologies and NVIDIA. Explore the transformative power of AI
+            through strategy sessions and hands-on labs, learn from experts, and
+            network with peers. Lunch will be provided.
+          </p>
+          <p>
+            <a href="/accelerating-research-day">
+              Learn more about Accelerating Research Day →
+            </a>
+          </p>
+        </section>
       </main>
     </Layout>
   );
