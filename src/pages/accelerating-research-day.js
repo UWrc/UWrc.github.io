@@ -202,6 +202,22 @@ export default function AcceleratingResearchDay() {
             ))}
           </ul>
         </section>
+
+        {/* Related event */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Related Event</h2>
+          <h3>Research Computing Symposium</h3>
+          <p>
+            A full-day event on Friday, November 13, 2026 showcasing research
+            enabled by advanced computing at the University of Washington.
+            Connect with researchers, campus and industry partners, and UWIT
+            Research Computing experts through lightning talks, discussions, and
+            networking sessions.
+          </p>
+          <p>
+            <a href="/symposium">Learn more about the Symposium →</a>
+          </p>
+        </section>
       </main>
     </Layout>
   );
