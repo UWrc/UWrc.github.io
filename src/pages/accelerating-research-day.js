@@ -58,9 +58,16 @@ const TRACKS = [
 ];
 
 const SPONSORS = [
-  { name: "Dell Technologies" },
-  { name: "NVIDIA" },
-  { name: "UWIT Research Computing" },
+  {
+    name: "Dell Technologies",
+    image: "/img/logos/dell_technologies.png",
+    link: "https://www.dell.com/en-us",
+  },
+  {
+    name: "NVIDIA",
+    image: "/img/logos/nvidia_logo.webp",
+    link: "https://www.nvidia.com/en-us/",
+  },
 ];
 
 function ActionButton({ href, children, primary }) {
@@ -69,6 +76,29 @@ function ActionButton({ href, children, primary }) {
     <a className={className} href={href} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
+  );
+}
+
+function LogoGrid({ items }) {
+  return (
+    <div className={styles.logoGrid}>
+      {items.map((item) => {
+        const logo = (
+          <img className={styles.logo} src={item.image} alt={item.name} />
+        );
+        return (
+          <div className={styles.logoCard} key={item.name}>
+            {item.link ? (
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {logo}
+              </a>
+            ) : (
+              logo
+            )}
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
@@ -196,11 +226,7 @@ export default function AcceleratingResearchDay() {
         {/* Sponsors */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Event Sponsors</h2>
-          <ul>
-            {SPONSORS.map((sponsor) => (
-              <li key={sponsor.name}>{sponsor.name}</li>
-            ))}
-          </ul>
+          <LogoGrid items={SPONSORS} />
         </section>
 
         {/* Related event */}
