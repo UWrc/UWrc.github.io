@@ -414,14 +414,16 @@
 
 /* Partners & sponsors */
 .logos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 1.5rem;
+  align-items: start;
 }
 
 .logoGroup {
-  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .logoGroupTitle {
@@ -438,9 +440,8 @@
 
 .logoGrid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1.25rem;
-  align-items: center;
 }
 
 .logoCard {
@@ -457,6 +458,12 @@
   max-height: 70px;
   max-width: 180px;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logos {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {

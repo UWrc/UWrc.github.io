@@ -153,7 +153,36 @@ const PARTNERS = [
     link: "https://www.lib.washington.edu",
   },
 ];
-const SPONSORS = [];
+const SPONSORS = [
+  {
+    name: "Dell Technologies",
+    image: "/img/logos/dell_technologies.png",
+    link: "https://www.dell.com",
+  },
+  {
+    name: "Redesign",
+    image: "/img/logos/redesign_logo.webp",
+    link: "https://www.redesign-group.com/",
+  },
+];
+
+const INDUSTRY_PARTICIPANTS = [
+  {
+    name: "Amazon Web Services",
+    image: "/img/logos/aws_logo.webp",
+    link: "https://aws.amazon.com",
+  },
+  {
+    name: "Google Cloud",
+    image: "/img/logos/google_cloud_logo.png",
+    link: "https://cloud.google.com",
+  },
+  {
+    name: "Microsoft Azure",
+    image: "/img/logos/azure_logo.png",
+    link: "https://azure.microsoft.com",
+  },
+];
 
 function ActionButton({ href, children, primary }) {
   const disabled = !href;
@@ -485,8 +514,9 @@ export default function Symposium() {
             possible.
           </p>
           <div className={styles.logos}>
+            <LogoGrid title="Event Sponsors" items={SPONSORS} />
+            <LogoGrid title="Industry Participants" items={INDUSTRY_PARTICIPANTS} />
             <LogoGrid title="Campus Partners" items={PARTNERS} />
-            <LogoGrid title="Sponsors" items={SPONSORS} />
           </div>
         </section>
 
