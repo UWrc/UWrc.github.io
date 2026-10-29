@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "@theme/Layout";
 
 import styles from "./symposium.module.css";
@@ -35,7 +35,7 @@ const AGENDA = [
   { start: 540, end: 560, time: "9:00 – 9:20 AM", title: "Check-in", type: "General", room: ROOMS.lobby },
   { start: 560, end: 570, time: "9:20 – 9:30 AM", title: "Opening Remarks", type: "General", room: ROOMS.main },
   { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Research Highlight 1 — TBA", type: "Highlight", room: ROOMS.main },
-  { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Research Highlight 2 — Paul Atkins", type: "Highlight", room: ROOMS.main },
+  { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Research Highlight 2 — Paul Atkins", type: "Highlight", room: ROOMS.main, talkId: "atkins" },
   { start: 630, end: 640, time: "10:30 – 10:40 AM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
     start: 640,
@@ -48,12 +48,12 @@ const AGENDA = [
         room: ROOMS.main,
         track: "Research Showcase A",
         sessions: [
-          { start: 640, end: 652, label: "Presentation 1" },
-          { start: 652, end: 664, label: "Presentation 2" },
-          { start: 664, end: 676, label: "Presentation 3" },
-          { start: 676, end: 688, label: "Presentation 4" },
-          { start: 688, end: 700, label: "Presentation 5" },
-          { start: 700, end: 712, label: "Presentation 6" },
+          { start: 640, end: 652, label: "Xu Lu", talkId: "lu" },
+          { start: 652, end: 664, label: "William Noble", talkId: "noble" },
+          { start: 664, end: 676, label: "Lakshitha Premathilake", talkId: "premathilake" },
+          { start: 676, end: 688, label: "Emerson Turner", talkId: "turner" },
+          { start: 688, end: 700, label: "Aodong Liu", talkId: "liu" },
+          { start: 700, end: 712, label: "Yueyao Fan & Thomas Huang", talkId: "fan" },
         ],
       },
       {
@@ -78,7 +78,7 @@ const AGENDA = [
     type: "Partners",
     room: ROOMS.main,
   },
-  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main },
+  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main, talkId: "boyle" },
   { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
     start: 880,
@@ -91,12 +91,12 @@ const AGENDA = [
         room: ROOMS.main,
         track: "Research Showcase B",
         sessions: [
-          { start: 880, end: 892, label: "Presentation 1" },
-          { start: 892, end: 904, label: "Presentation 2" },
-          { start: 904, end: 916, label: "Presentation 3" },
-          { start: 916, end: 928, label: "Presentation 4" },
-          { start: 928, end: 940, label: "Presentation 5" },
-          { start: 940, end: 952, label: "Presentation 6" },
+          { start: 880, end: 892, label: "James Dylan Weissenkampe", talkId: "weissenkampe" },
+          { start: 892, end: 904, label: "Ben Williams", talkId: "williams" },
+          { start: 904, end: 916, label: "Bojun Chen", talkId: "chen" },
+          { start: 916, end: 928, label: "Kate Hewett", talkId: "hewett" },
+          { start: 928, end: 940, label: "Joseph Lee", talkId: "lee" },
+          { start: 940, end: 952, label: "TBA", talkId: null },
         ],
       },
       {
@@ -133,6 +133,127 @@ function minutesToLabel(mins) {
 
 // When available, set these URLs to enable the action buttons.
 const REGISTRATION_URL = "https://calendar.washington.edu/sea_uwit-rc/Research-Computing-Symposium/E208855324"; // e.g. "https://..."
+
+// Speaker talk data. `id` is used as the anchor for in-page linking.
+const TALKS = [
+  {
+    id: "atkins",
+    speaker: "Paul S. Atkins",
+    affiliation: "Asian Languages and Literature",
+    title: "Training a Deep-Learning Model to Decipher Classical Japanese Calligraphy",
+    abstract: "Premodern Japanese manuscripts were written in a cursive hand called kuzushiji, literally \"collapsed characters,\" which few readers today can decipher. The phonetic symbols of these manuscripts, called hentaigana, are allographic, meaning that a single sound could be written with any of several forms, each a cursive version of a Chinese character known as its jibo. Many of the texts have been transcribed and printed, but those editions normally render each hentaigana as a modern kana and so discard the jibo. A scribe's choice among jibo is a feature of orthography that differs from scribe to scribe, so statistical analysis of jibo data can help answer who inscribed a manuscript, a question that has traditionally required extensive manual work. Our project applies computational paleography to this problem, training a deep-learning model to read the handwriting down to the jibo so that the analysis can be carried out at scale. The model was first trained in 2025 on a single GPU on Amazon Web Services (AWS), with cloud credits from AWS and the UW eScience Institute. The next phase is a collaboration with Tohoku University to develop a new model for retraining on H200 GPUs on Tillicum.",
+    resources: ["Tillicum", "Cloud Computing - AWS"],
+    session: "highlight",
+  },
+  {
+    id: "boyle",
+    speaker: "Patrick Boyle",
+    affiliation: "Bioengineering; Institute for Stem Cell and Regenerative Medicine; Center for Cardiovascular Biology; eScience Institute",
+    title: "Virtual Hearts and AI for Better Cardiovascular Care",
+    abstract: "In the Cardiac Systems Simulation Lab, we use computational physiology and machine learning to understand cardiovascular disease and develop more personalized approaches to care. Our work centers on virtual hearts — computer models built from medical images that simulate how electrical signals travel through healthy and diseased tissue. These models help us investigate why abnormal heart rhythms arise, explore connections between changes in heart structure and stroke risk, and evaluate potential treatments. We also use simulations to study emerging therapies, including why heart tissue grown from stem cells can cause rhythm disturbances. Research computing supports this work by enabling detailed, three-dimensional simulations across many patients, physiological conditions, and treatment scenarios. Alongside these simulations, we use machine learning and AI to find patterns in clinical data, including electrocardiograms and cardiac imaging, with an emphasis on interpretable methods that support earlier identification of cardiovascular risk.",
+    resources: ["Hyak Klone"],
+    session: "highlight",
+  },
+  {
+    id: "lu",
+    speaker: "Xu Lu",
+    affiliation: "Foster School of Business",
+    title: "Banking on Inattention",
+    abstract: "Banking on Inattention studies how depositor inattention shapes bank deposit pricing and monetary policy transmission. Using transaction-level data from millions of U.S. depositors, we measure inattention from how long unscheduled cash inflows remain in low-interest accounts and show that banks with more inattentive depositors pay lower rates and experience more stable funding. Research computing was essential for processing billions of account-level observations, reconstructing household cash flows, and running the analysis at scale. In the lightning talk, I will highlight how large-scale research computing makes it possible to measure a traditionally difficult-to-observe economic friction — attention — and connect it to bank behavior and monetary policy.",
+    resources: ["Cloud Computing - AWS"],
+    session: "showcase-a",
+  },
+  {
+    id: "noble",
+    speaker: "William Noble",
+    affiliation: "Department of Genome Sciences",
+    title: "A generalizable Hi-C foundation model for chromatin architecture, single-cell and multiomics analysis across species",
+    abstract: "Nuclear DNA is organized into a three-dimensional structure that impacts critical cellular processes. We have developed HiCFoundation, a foundation model trained on massive Hi-C data for integrative analysis linking chromatin structure to downstream regulatory function. The model achieves state-of-the-art performance and generalizability across species on various 3D genome analysis tasks, including reproducibility analysis, resolution enhancement, and loop detection. Additionally, HiCFoundation can predict various epigenomic activities from Hi-C to reveal how 3D structure links to regulatory function, and can adapt to single-cell Hi-C data.",
+    resources: ["Cloud Computing - AWS", "Cloud Computing - Azure"],
+    session: "showcase-a",
+  },
+  {
+    id: "premathilake",
+    speaker: "Lakshitha (Laki) Premathilake",
+    affiliation: "Salish Sea Modeling Center — UW / Pacific Northwest National Laboratory",
+    title: "Oceanographic Modeling Research at the Salish Sea Modeling Center",
+    abstract: "The Salish Sea Modeling Center (SSMC), operating under the Center for Urban Waters at UW Tacoma, is a coastal modeling research laboratory dedicated to advancing scientific understanding of Puget Sound and the Salish Sea through hydrodynamics, biogeochemistry, and ecosystem modeling. SSMC leverages UW's Hyak supercomputing system for high-resolution model simulations and data dissemination. The real-world impact of this work spans environmental management, navigation, maritime activities, and regional stewardship — from ecosystem restoration to water quality management, marine life health, and the Salish Sea Columbia River Operational Forecast System (SSCOFS), which delivers real-time and predictive data for safe navigation and search-and-rescue operations.",
+    resources: ["Hyak Klone"],
+    session: "showcase-a",
+  },
+  {
+    id: "turner",
+    speaker: "Emerson Turner",
+    affiliation: "Materials Science and Engineering",
+    title: "Full-Chip Electromagnetic Simulation for Quantum Device Design",
+    abstract: "Resonators and qubits are fundamental components of superconducting quantum computers, each requiring extensive fabrication and characterization at millikelvin temperatures. Small design changes have significant impacts: a single micrometer can shift a qubit's frequency by several megahertz. Our research group added Palace (PArallel LArge-scale Computational Electromagnetics), developed by Amazon Web Services, to Hyak for large-scale simulations essential to designing quantum computing hardware. Utilizing full-wave 3D electromagnetic modeling and finite-element analysis enabled accurate extraction of eigenmodes, field distributions, and quality factors from entire multicomponent chips. A workflow that previously took many hours to days now takes minutes to a few hours, with simulation results consistent with measurements of fabricated devices.",
+    resources: ["Hyak Klone"],
+    session: "showcase-a",
+  },
+  {
+    id: "liu",
+    speaker: "Aodong Liu",
+    affiliation: "Chemistry",
+    title: "Simulating Nuclear Quantum Effects at Scale with High-Performance Computing",
+    abstract: "Nuclear quantum effects such as zero-point motion and proton delocalization play a central role in hydrogen-bonded networks and proton-transfer chemistry, yet most molecular simulations treat atomic nuclei as classical point charges. The nuclear–electronic orbital (NEO) framework provides a first-principles approach for capturing these effects. Using Hyak's Klone cluster, we developed a distributed-memory Cholesky decomposition algorithm that enabled a NEO calculation on a water cluster with 500 quantum protons — the largest NEO calculation reported to date. We have also developed GPU-accelerated NEO methods on Tillicum to further accelerate the most computationally demanding steps, enabling simulations of coupled electron–nuclear dynamics in real time.",
+    resources: ["Hyak Klone", "Tillicum"],
+    session: "showcase-a",
+  },
+  {
+    id: "fan",
+    speaker: "Yueyao Fan & Thomas Huang",
+    affiliation: "Materials Science and Engineering",
+    title: "Machine Learning-Accelerated Atomistic Simulations of Moiré Quantum Materials at Scale",
+    abstract: "Moiré quantum materials exhibit exotic electronic phenomena highly sensitive to atomic structure. We present machine learning-accelerated approaches that bridge first-principles accuracy and large-scale atomistic simulations, enabling the exploration of structure-property relationships in twisted transition metal dichalcogenide (TMD) systems. We introduce a physics-informed training-data generation strategy to develop a bespoke machine-learning interatomic potential transferable across layer numbers, stacking configurations, and twist angles. Applied to twisted multilayer MoTe₂, the model reveals layerwise structural and electronic stratification, giving rise to tunable topological states and nonlinear polarization. We further develop MoiréMLIP, a generalizable framework enabling simulations of up to one million atoms on a single GPU, revealing emergent polarization networks spanning tens of nanometers in complex moiré-of-moiré structures.",
+    resources: ["Hyak Klone", "Tillicum"],
+    session: "showcase-a",
+  },
+  {
+    id: "weissenkampe",
+    speaker: "James Dylan Weissenkampe",
+    affiliation: "Diabetes Institute",
+    title: "Making a Small Study Count: Computational Robustness for Multi-Omic Human Kidney Biopsies",
+    abstract: "When a study has only a dozen participants, the hardest question is whether to believe the results. We profiled kidney biopsies from 11 people with type 2 diabetes measuring ~7,800 proteins and ~18,000 phosphorylation sites in each. Research computing let us test which signals were real: we re-ran the entire pipeline across 30 independent random seeds, built permutation-based null models over a network of ~7,800 proteins, and checked findings against matched single-cell RNA-seq data and public kidney atlases of hundreds of thousands of cells. Kopah, UW-IT's S3-compatible research storage, held the large single-cell objects and analysis outputs. Two lessons emerged: repeating an analysis many times separated robust signals from fragile ones, and a network-propagation filter only became a calibrated test after adding a permutation null.",
+    resources: ["Hyak Klone"],
+    session: "showcase-b",
+  },
+  {
+    id: "williams",
+    speaker: "Ben Williams",
+    affiliation: "Astronomy",
+    title: "Resolving Nearby Galaxies into Individual Stars",
+    abstract: "We have built automated pipelines to measure photometry for individual stars from high-resolution space-based imaging of nearby galaxies using both the Hubble Space Telescope and the James Webb Space Telescope. Using UW-IT and other cloud-based resources, we have cataloged hundreds of millions of stars across many galaxies in the nearby universe. The large imaging datasets and the number of stars involved require a large amount of parallel computing. I will discuss some of the computing challenges, as well as how these stars can be treated as a type of fossil record that encodes the formation and evolution of galaxies.",
+    resources: ["Hyak Klone", "Cloud Computing - AWS"],
+    session: "showcase-b",
+  },
+  {
+    id: "chen",
+    speaker: "Bojun Chen",
+    affiliation: "Biostatistics",
+    title: "CARDIAC-FM: A multimodal foundation model integrating electrocardiography and cardiac MRI for cardiovascular risk prediction",
+    abstract: "Atrial fibrillation and heart failure impose substantial health burdens worldwide, yet accurate and generalizable risk prediction remains challenging. We developed CARDIAC-FM, a multimodal foundation model that integrates 12-lead ECG and cardiac MRI through self-supervised representation learning and cross-modal contrastive alignment. Developed on 57,609 paired ECG–cardiac MRI samples from UK Biobank, CARDIAC-FM improved prediction of incident atrial fibrillation and heart failure over contemporary ECG AI models and generalized zero-shot to two external cohorts. The learned representation transferred to continuous cardiac MRI phenotype prediction, time-to-event modeling, and additional cardiovascular outcomes with limited fine-tuning, including myocardial infarction, ischemic stroke, cardiovascular death, and all-cause mortality.",
+    resources: ["Tillicum"],
+    session: "showcase-b",
+  },
+  {
+    id: "hewett",
+    speaker: "Kate Hewett",
+    affiliation: "UW Applied Physics Laboratory",
+    title: "LiveOcean: 3-Day Coastal Ocean Forecasting in the Pacific Northwest",
+    abstract: "LiveOcean is a computer modeling system developed by the UW Coastal Modeling Group that makes 3-day forecasts of water properties in the Salish Sea and coastal waters of the Pacific Northwest. Leveraging UW Hyak Klone, LiveOcean delivers complex forecasts of currents, temperature, salinity, oxygen levels, carbon chemistry, and harmful algal blooms. Beyond forecasting, LiveOcean is run over an extended historical period (2013–present) to produce long hindcast data, allowing scientists to reconstruct past events, validate model accuracy, and explore data-driven solutions to ecological challenges. Model output is made publicly available to facilitate communication between resource users, managers, and scientists.",
+    resources: ["Hyak Klone", "Kopah"],
+    session: "showcase-b",
+  },
+  {
+    id: "lee",
+    speaker: "Joseph Lee",
+    affiliation: "Computer Science and Engineering",
+    title: "Designing Protein Structures from Natural Language",
+    abstract: "A central challenge in de novo protein design is generating proteins with desired structural and functional properties. We develop Prompteina, the first all-atom structure generation model that supports design objectives specified in natural language, analogous to text-to-image generation. We construct Prompteina-Data, a paired text–protein structure dataset of 1.8M structures and 50M+ captions describing structural and functional properties. Prompteina outperforms baselines on 15 of 18 structural properties and improves interface confidence by 14% over the strongest baseline in binder design. We experimentally validated designs against GM2A, a target with no reported de novo binders, identifying nine binders with the strongest at an apparent affinity of 107 nM. UW research computing resources including Hyak and Tillicum were essential in dataset generation and in training and evaluating our models.",
+    resources: ["Hyak Klone", "Tillicum"],
+    session: "showcase-b",
+  },
+];
 
 // Add partner/sponsor logos here as they are confirmed.
 // Example: { name: "eScience Institute", image: "/img/partners/escience.png", link: "https://escience.washington.edu" }
@@ -241,6 +362,54 @@ function LogoGrid({ title, items }) {
   );
 }
 
+function TalkCard({ talk }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  // When the page loads (or hash changes), open and scroll to this card if it matches.
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === `#${talk.id}`) {
+        setOpen(true);
+        // Wait a tick so the element is visible before scrolling.
+        setTimeout(() => {
+          ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50);
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, [talk.id]);
+
+  return (
+    <details
+      id={talk.id}
+      ref={ref}
+      className={styles.talkCard}
+      open={open}
+      onToggle={(e) => setOpen(e.target.open)}
+    >
+      <summary className={styles.talkSummary}>
+        <span className={styles.talkTitle}>{talk.title}</span>
+        <span className={styles.talkSpeaker}>
+          {talk.speaker}
+          {talk.affiliation && <span className={styles.talkAffiliation}> — {talk.affiliation}</span>}
+        </span>
+      </summary>
+      <div className={styles.talkBody}>
+        <p className={styles.talkAbstract}>{talk.abstract}</p>
+        {talk.resources && talk.resources.length > 0 && (
+          <p className={styles.talkResources}>
+            <strong>Computing resources: </strong>
+            {talk.resources.join(", ")}
+          </p>
+        )}
+      </div>
+    </details>
+  );
+}
+
 // Maps a session type to its color-coding CSS class.
 const TYPE_CLASS = {
   General: styles.typeGeneral,
@@ -276,10 +445,15 @@ function subBox(offsetStart, offsetEnd) {
   };
 }
 
-function SessionBlock({ type, title, startLabel, endLabel, children }) {
+function SessionBlock({ type, title, startLabel, endLabel, talkId, children }) {
+  const titleEl = talkId ? (
+    <a className={styles.blockTitleLink} href={`#${talkId}`}>{title}</a>
+  ) : (
+    <span className={styles.blockTitle}>{title}</span>
+  );
   return (
     <div className={`${styles.block} ${TYPE_CLASS[type] || ""}`}>
-      <span className={styles.blockTitle}>{title}</span>
+      {titleEl}
       <span className={styles.blockTime}>
         {startLabel} – {endLabel}
       </span>
@@ -351,6 +525,7 @@ function Timeline() {
                               <SessionBlock
                                 type={item.type}
                                 title={s.label}
+                                talkId={s.talkId}
                                 startLabel={minutesToLabel(s.start)}
                                 endLabel={minutesToLabel(s.end)}
                               />
@@ -397,6 +572,7 @@ function Timeline() {
                       <SessionBlock
                         type={item.type}
                         title={item.title}
+                        talkId={item.talkId}
                         startLabel={minutesToLabel(item.start)}
                         endLabel={minutesToLabel(item.end)}
                       />
@@ -504,6 +680,23 @@ export default function Symposium() {
               HUB directions, parking guidance, floor plans, and FAQs.
             </a>
           </p>
+        </section>
+
+        {/* Talks */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Talks</h2>
+          <h3 className={styles.talksSubheading}>Research Highlights</h3>
+          {TALKS.filter((t) => t.session === "highlight").map((talk) => (
+            <TalkCard key={talk.id} talk={talk} />
+          ))}
+          <h3 className={styles.talksSubheading}>Research Showcase A</h3>
+          {TALKS.filter((t) => t.session === "showcase-a").map((talk) => (
+            <TalkCard key={talk.id} talk={talk} />
+          ))}
+          <h3 className={styles.talksSubheading}>Research Showcase B</h3>
+          {TALKS.filter((t) => t.session === "showcase-b").map((talk) => (
+            <TalkCard key={talk.id} talk={talk} />
+          ))}
         </section>
 
         {/* Partners & Sponsors */}
