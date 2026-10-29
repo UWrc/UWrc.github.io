@@ -313,9 +313,19 @@ Users are responsible for monitoring their own usage.
 
 ### Budget Enforcement
 
-Tillicum supports budget settings at both the **account** and **user** levels. Once a budget is configured, **budget enforcement is enabled by default**. If you are a PI and prefer to monitor usage only without enforcing automatic job submission termination when a budget is exceeded, please contact us at [**help@uw.edu**](mailto:help@uw.edu) and include "Tillicum" in the subject line.
+Tillicum supports usage budget enforcement through **`hyakbudget`**, an administrative tool that allows the Tillicum support team to help groups manage their computing usage. Budgets can be set at both the **account** and **user** levels, and can be configured as either a **monthly limit** or a **total project budget**.
 
-Budgets are managed by the Tillicum administrators. To **add, update, or remove** a budget, please email [**help@uw.edu**](mailto:help@uw.edu) with "Tillicum" in the subject line with the approval from your PI.
+Each group can choose one of three enforcement options:
+
+| Option | Description |
+| ------ | ----------- |
+| **No Budget Defined** | No limits or notifications are applied. Users will still see an estimated cost for their job (based on total requested time) upon submission. |
+| **Budget Defined – Warn Only** | Jobs that would exceed the budget are still allowed to run, but a warning is shown at submission time if the job would push usage over the limit. This maintains full continuity of work while increasing spending awareness. |
+| **Budget Defined – Enforced** | Jobs that would exceed the defined limit are blocked from running. This ensures your group stays within its established budget. |
+
+:::note
+Budget settings and enforcement options can only be modified by the Tillicum support team. To add, update, or remove a budget or change your enforcement type, email [**help@uw.edu**](mailto:help@uw.edu) with "Tillicum" in the subject line. PI approval is required.
+:::
 
 ### Default
 
