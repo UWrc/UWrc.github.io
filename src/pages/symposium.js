@@ -643,7 +643,7 @@ export default function Symposium() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Agenda</h2>
           <p className={styles.agendaNote}>
-            Draft schedule, subject to change. Main sessions are in {ROOMS.main};
+            Main sessions are in {ROOMS.main};
             check-in, breaks, lunch, and the reception are in {ROOMS.lobby}.
             During the two Research Showcase blocks, three sessions run at the
             same time: the main track in {ROOMS.main} and partner tracks in{" "}
