@@ -303,7 +303,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-left: 4px solid #4b2e83;
   background-color: #f5f3fa;
@@ -313,15 +313,16 @@
 
 /* Time range stacked underneath the title. */
 .blockTime {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   opacity: 0.75;
   white-space: nowrap;
+  margin-top: auto;
 }
 
 .blockTitle {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -414,14 +415,16 @@
 
 /* Partners & sponsors */
 .logos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 1.5rem;
+  align-items: start;
 }
 
 .logoGroup {
-  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .logoGroupTitle {
@@ -438,9 +441,8 @@
 
 .logoGrid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1.25rem;
-  align-items: center;
 }
 
 .logoCard {
@@ -459,6 +461,12 @@
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  .logos {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 600px) {
   .bannerTitle {
     font-size: 2rem;
@@ -468,4 +476,125 @@
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+/* Block title link (in timeline) */
+.blockTitleLink {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blockTitleLink:hover {
+  text-decoration-color: currentColor;
+}
+
+.blockSubtitle {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.8;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Talks section */
+.talksSubheading {
+  font-family: "EncodeSans";
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.talkCard {
+  border: 1px solid #e0dcec;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  scroll-margin-top: 80px;
+  overflow: hidden;
+}
+
+.talkSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+/* Remove default marker across browsers */
+.talkSummary::-webkit-details-marker { display: none; }
+.talkSummary::marker { display: none; }
+
+.talkSummary::after {
+  content: "›";
+  position: absolute;
+  right: 1.25rem;
+  font-size: 1.25rem;
+  color: #888;
+  transition: transform 0.2s ease;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.talkCard {
+  position: relative;
+}
+
+.talkCard[open] > .talkSummary::after {
+  transform: translateY(-50%) rotate(270deg);
+}
+
+.talkSummary:hover {
+  background-color: #f7f5fc;
+}
+
+.talkTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ifm-color-content);
+  padding-right: 2rem;
+}
+
+.talkSpeaker {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.talkAffiliation {
+  color: #777;
+  font-weight: 400;
+}
+
+.talkBody {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid #e0dcec;
+}
+
+.talkAbstract {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.talkResources {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0;
 }
