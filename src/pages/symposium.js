@@ -32,38 +32,37 @@ const ROOMS = {
 //   { start, end, time, title, type }                   -> single-track (HUB 250)
 //   { start, end, time, title, type, parallel: [ ... ] } -> parallel block
 const AGENDA = [
-  { start: 540, end: 560, time: "9:00 – 9:20 AM", title: "Check-in", type: "General", room: ROOMS.lobby },
-  { start: 560, end: 570, time: "9:20 – 9:30 AM", title: "Opening Remarks", type: "General", room: ROOMS.main },
-  { start: 570, end: 600, time: "9:30 – 10:00 AM", title: "Research Highlight 1 — TBA", type: "Highlight", room: ROOMS.main },
-  { start: 600, end: 630, time: "10:00 – 10:30 AM", title: "Research Highlight 2 — Paul Atkins", type: "Highlight", room: ROOMS.main, talkId: "atkins" },
-  { start: 630, end: 640, time: "10:30 – 10:40 AM", title: "Break", type: "Break", room: ROOMS.lobby },
+  { start: 540, end: 570, time: "9:00 – 9:30 AM", title: "Check-in", type: "General", room: ROOMS.lobby },
+  { start: 570, end: 585, time: "9:30 – 9:45 AM", title: "Opening Remarks", type: "General", room: ROOMS.main },
+  { start: 585, end: 615, time: "9:45 – 10:15 AM", title: "Research Highlight — Paul Atkins", type: "Highlight", room: ROOMS.main, talkId: "atkins" },
+  { start: 615, end: 630, time: "10:15 – 10:30 AM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
-    start: 640,
+    start: 630,
     end: 720,
-    time: "10:40 AM – 12:00 PM",
-    title: "Research Showcase A",
+    time: "10:30 AM – 12:00 PM",
+    title: "Research Showcase — Morning",
     type: "Showcase",
     parallel: [
       {
         room: ROOMS.main,
-        track: "Research Showcase A",
+        track: "Research Showcase — Morning",
         sessions: [
-          { start: 640, end: 652, label: "Xu Lu", talkId: "lu" },
-          { start: 652, end: 664, label: "William Noble", talkId: "noble" },
-          { start: 664, end: 676, label: "Lakshitha Premathilake", talkId: "premathilake" },
-          { start: 676, end: 688, label: "Emerson Turner", talkId: "turner" },
-          { start: 688, end: 700, label: "Aodong Liu", talkId: "liu" },
-          { start: 700, end: 712, label: "Yueyao Fan & Thomas Huang", talkId: "fan" },
+          { start: 630, end: 645, label: "Xu Lu", talkId: "lu" },
+          { start: 645, end: 660, label: "James Dylan Weissenkampe", talkId: "weissenkampe" },
+          { start: 660, end: 675, label: "Aodong Liu", talkId: "liu" },
+          { start: 675, end: 690, label: "Lakshitha Premathilake", talkId: "premathilake" },
+          { start: 690, end: 705, label: "Bojun Chen", talkId: "chen" },
+          { start: 705, end: 720, label: "William Noble", talkId: "noble" },
         ],
       },
       {
         room: ROOMS.r238,
-        track: "GCP",
+        track: "Google Cloud Track",
         detail: "Partner track — Google Cloud",
       },
       {
         room: ROOMS.r307,
-        track: "Libraries",
+        track: "UW Libraries Track",
         detail: "Partner track — UW Libraries",
       },
     ],
@@ -78,35 +77,34 @@ const AGENDA = [
     type: "Partners",
     room: ROOMS.main,
   },
-  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight 3 — Patrick Boyle", type: "Highlight", room: ROOMS.main, talkId: "boyle" },
-  { start: 870, end: 880, time: "2:30 – 2:40 PM", title: "Break", type: "Break", room: ROOMS.lobby },
+  { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight — Patrick Boyle", type: "Highlight", room: ROOMS.main, talkId: "boyle" },
+  { start: 870, end: 885, time: "2:30 – 2:45 PM", title: "Break", type: "Break", room: ROOMS.lobby },
   {
-    start: 880,
+    start: 885,
     end: 960,
-    time: "2:40 – 4:00 PM",
-    title: "Research Showcase B",
+    time: "2:45 – 4:00 PM",
+    title: "Research Showcase — Afternoon",
     type: "Showcase",
     parallel: [
       {
         room: ROOMS.main,
-        track: "Research Showcase B",
+        track: "Research Showcase — Afternoon",
         sessions: [
-          { start: 880, end: 892, label: "James Dylan Weissenkampe", talkId: "weissenkampe" },
-          { start: 892, end: 904, label: "Ben Williams", talkId: "williams" },
-          { start: 904, end: 916, label: "Bojun Chen", talkId: "chen" },
-          { start: 916, end: 928, label: "Kate Hewett", talkId: "hewett" },
-          { start: 928, end: 940, label: "Joseph Lee", talkId: "lee" },
-          { start: 940, end: 952, label: "TBA", talkId: null },
+          { start: 885, end: 900, label: "Ben Williams", talkId: "williams" },
+          { start: 900, end: 915, label: "Kate Hewett", talkId: "hewett" },
+          { start: 915, end: 930, label: "Yueyao Fan & Thomas Huang", talkId: "fan" },
+          { start: 930, end: 945, label: "Emerson Turner", talkId: "turner" },
+          { start: 945, end: 960, label: "Joseph Lee", talkId: "lee" },
         ],
       },
       {
         room: ROOMS.r238,
-        track: "Azure",
+        track: "Microsoft Azure Track",
         detail: "Partner track — Microsoft Azure",
       },
       {
         room: ROOMS.r307,
-        track: "AWS",
+        track: "AWS Track",
         detail: "Partner track — Amazon Web Services",
       },
     ],
@@ -170,7 +168,7 @@ const TALKS = [
     title: "A generalizable Hi-C foundation model for chromatin architecture, single-cell and multiomics analysis across species",
     abstract: "Nuclear DNA is organized into a three-dimensional structure that impacts critical cellular processes. We have developed HiCFoundation, a foundation model trained on massive Hi-C data for integrative analysis linking chromatin structure to downstream regulatory function. The model achieves state-of-the-art performance and generalizability across species on various 3D genome analysis tasks, including reproducibility analysis, resolution enhancement, and loop detection. Additionally, HiCFoundation can predict various epigenomic activities from Hi-C to reveal how 3D structure links to regulatory function, and can adapt to single-cell Hi-C data.",
     resources: ["Cloud Computing - AWS", "Cloud Computing - Azure"],
-    session: "showcase-a",
+    session: "showcase-b",
   },
   {
     id: "premathilake",
@@ -188,7 +186,7 @@ const TALKS = [
     title: "Full-Chip Electromagnetic Simulation for Quantum Device Design",
     abstract: "Resonators and qubits are fundamental components of superconducting quantum computers, each requiring extensive fabrication and characterization at millikelvin temperatures. Small design changes have significant impacts: a single micrometer can shift a qubit's frequency by several megahertz. Our research group added Palace (PArallel LArge-scale Computational Electromagnetics), developed by Amazon Web Services, to Hyak for large-scale simulations essential to designing quantum computing hardware. Utilizing full-wave 3D electromagnetic modeling and finite-element analysis enabled accurate extraction of eigenmodes, field distributions, and quality factors from entire multicomponent chips. A workflow that previously took many hours to days now takes minutes to a few hours, with simulation results consistent with measurements of fabricated devices.",
     resources: ["Hyak Klone"],
-    session: "showcase-a",
+    session: "showcase-b",
   },
   {
     id: "liu",
@@ -206,7 +204,7 @@ const TALKS = [
     title: "Machine Learning-Accelerated Atomistic Simulations of Moiré Quantum Materials at Scale",
     abstract: "Moiré quantum materials exhibit exotic electronic phenomena highly sensitive to atomic structure. We present machine learning-accelerated approaches that bridge first-principles accuracy and large-scale atomistic simulations, enabling the exploration of structure-property relationships in twisted transition metal dichalcogenide (TMD) systems. We introduce a physics-informed training-data generation strategy to develop a bespoke machine-learning interatomic potential transferable across layer numbers, stacking configurations, and twist angles. Applied to twisted multilayer MoTe₂, the model reveals layerwise structural and electronic stratification, giving rise to tunable topological states and nonlinear polarization. We further develop MoiréMLIP, a generalizable framework enabling simulations of up to one million atoms on a single GPU, revealing emergent polarization networks spanning tens of nanometers in complex moiré-of-moiré structures.",
     resources: ["Hyak Klone", "Tillicum"],
-    session: "showcase-a",
+    session: "showcase-b",
   },
   {
     id: "weissenkampe",
@@ -215,7 +213,7 @@ const TALKS = [
     title: "Making a Small Study Count: Computational Robustness for Multi-Omic Human Kidney Biopsies",
     abstract: "When a study has only a dozen participants, the hardest question is whether to believe the results. We profiled kidney biopsies from 11 people with type 2 diabetes measuring ~7,800 proteins and ~18,000 phosphorylation sites in each. Research computing let us test which signals were real: we re-ran the entire pipeline across 30 independent random seeds, built permutation-based null models over a network of ~7,800 proteins, and checked findings against matched single-cell RNA-seq data and public kidney atlases of hundreds of thousands of cells. Kopah, UW-IT's S3-compatible research storage, held the large single-cell objects and analysis outputs. Two lessons emerged: repeating an analysis many times separated robust signals from fragile ones, and a network-propagation filter only became a calibrated test after adding a permutation null.",
     resources: ["Hyak Klone"],
-    session: "showcase-b",
+    session: "showcase-a",
   },
   {
     id: "williams",
@@ -233,7 +231,7 @@ const TALKS = [
     title: "CARDIAC-FM: A multimodal foundation model integrating electrocardiography and cardiac MRI for cardiovascular risk prediction",
     abstract: "Atrial fibrillation and heart failure impose substantial health burdens worldwide, yet accurate and generalizable risk prediction remains challenging. We developed CARDIAC-FM, a multimodal foundation model that integrates 12-lead ECG and cardiac MRI through self-supervised representation learning and cross-modal contrastive alignment. Developed on 57,609 paired ECG–cardiac MRI samples from UK Biobank, CARDIAC-FM improved prediction of incident atrial fibrillation and heart failure over contemporary ECG AI models and generalized zero-shot to two external cohorts. The learned representation transferred to continuous cardiac MRI phenotype prediction, time-to-event modeling, and additional cardiovascular outcomes with limited fine-tuning, including myocardial infarction, ischemic stroke, cardiovascular death, and all-cause mortality.",
     resources: ["Tillicum"],
-    session: "showcase-b",
+    session: "showcase-a",
   },
   {
     id: "hewett",
@@ -391,11 +389,11 @@ function TalkCard({ talk }) {
       onToggle={(e) => setOpen(e.target.open)}
     >
       <summary className={styles.talkSummary}>
-        <span className={styles.talkTitle}>{talk.title}</span>
         <span className={styles.talkSpeaker}>
           {talk.speaker}
           {talk.affiliation && <span className={styles.talkAffiliation}> — {talk.affiliation}</span>}
         </span>
+        <span className={styles.talkTitle}>{talk.title}</span>
       </summary>
       <div className={styles.talkBody}>
         <p className={styles.talkAbstract}>{talk.abstract}</p>
@@ -445,15 +443,22 @@ function subBox(offsetStart, offsetEnd) {
   };
 }
 
+// Lookup map for quick access to talk data by id.
+const TALK_BY_ID = Object.fromEntries(TALKS.map((t) => [t.id, t]));
+
 function SessionBlock({ type, title, startLabel, endLabel, talkId, children }) {
-  const titleEl = talkId ? (
+  const talk = talkId ? TALK_BY_ID[talkId] : null;
+  const nameEl = talkId ? (
     <a className={styles.blockTitleLink} href={`#${talkId}`}>{title}</a>
   ) : (
     <span className={styles.blockTitle}>{title}</span>
   );
   return (
     <div className={`${styles.block} ${TYPE_CLASS[type] || ""}`}>
-      {titleEl}
+      {nameEl}
+      {talk && (
+        <span className={styles.blockSubtitle}>{talk.title}</span>
+      )}
       <span className={styles.blockTime}>
         {startLabel} – {endLabel}
       </span>
@@ -641,7 +646,7 @@ export default function Symposium() {
             Draft schedule, subject to change. Main sessions are in {ROOMS.main};
             check-in, breaks, lunch, and the reception are in {ROOMS.lobby}.
             During the two Research Showcase blocks, three sessions run at the
-            same time: the main track in {ROOMS.main} and side sessions in{" "}
+            same time: the main track in {ROOMS.main} and partner tracks in{" "}
             {ROOMS.r238} and {ROOMS.r307}.
           </p>
           <Timeline />
@@ -689,11 +694,11 @@ export default function Symposium() {
           {TALKS.filter((t) => t.session === "highlight").map((talk) => (
             <TalkCard key={talk.id} talk={talk} />
           ))}
-          <h3 className={styles.talksSubheading}>Research Showcase A</h3>
+          <h3 className={styles.talksSubheading}>Research Showcase — Morning</h3>
           {TALKS.filter((t) => t.session === "showcase-a").map((talk) => (
             <TalkCard key={talk.id} talk={talk} />
           ))}
-          <h3 className={styles.talksSubheading}>Research Showcase B</h3>
+          <h3 className={styles.talksSubheading}>Research Showcase — Afternoon</h3>
           {TALKS.filter((t) => t.session === "showcase-b").map((talk) => (
             <TalkCard key={talk.id} talk={talk} />
           ))}

@@ -303,7 +303,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-left: 4px solid #4b2e83;
   background-color: #f5f3fa;
@@ -313,15 +313,16 @@
 
 /* Time range stacked underneath the title. */
 .blockTime {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   opacity: 0.75;
   white-space: nowrap;
+  margin-top: auto;
 }
 
 .blockTitle {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -479,16 +480,30 @@
 
 /* Block title link (in timeline) */
 .blockTitleLink {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.85rem;
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.5);
   text-underline-offset: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .blockTitleLink:hover {
   text-decoration-color: currentColor;
+}
+
+.blockSubtitle {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.8;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Talks section */
