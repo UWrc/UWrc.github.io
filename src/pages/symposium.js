@@ -64,11 +64,12 @@ const AGENDA = [
         room: ROOMS.r307,
         track: "UW Libraries Track",
         detail: "Partner track — UW Libraries",
+        trackId: "uw-libraries-track",
       },
     ],
   },
   { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General", room: ROOMS.lobby },
-  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners", room: ROOMS.main },
+  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners", room: ROOMS.main, trackId: "dell-track" },
   {
     start: 810,
     end: 840,
@@ -76,6 +77,7 @@ const AGENDA = [
     title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
     type: "Partners",
     room: ROOMS.main,
+    trackId: "uw-panel-track",
   },
   { start: 840, end: 870, time: "2:00 – 2:30 PM", title: "Research Highlight — Patrick Boyle", type: "Highlight", room: ROOMS.main, talkId: "boyle" },
   { start: 870, end: 885, time: "2:30 – 2:45 PM", title: "Break", type: "Break", room: ROOMS.lobby },
@@ -101,11 +103,13 @@ const AGENDA = [
         room: ROOMS.r238,
         track: "Microsoft Azure Track",
         detail: "Partner track — Microsoft Azure",
+        trackId: "azure-track",
       },
       {
         room: ROOMS.r307,
         track: "AWS Track",
         detail: "Partner track — Amazon Web Services",
+        trackId: "aws-track",
       },
     ],
   },
@@ -250,6 +254,72 @@ const TALKS = [
     abstract: "A central challenge in de novo protein design is generating proteins with desired structural and functional properties. We develop Prompteina, the first all-atom structure generation model that supports design objectives specified in natural language, analogous to text-to-image generation. We construct Prompteina-Data, a paired text–protein structure dataset of 1.8M structures and 50M+ captions describing structural and functional properties. Prompteina outperforms baselines on 15 of 18 structural properties and improves interface confidence by 14% over the strongest baseline in binder design. We experimentally validated designs against GM2A, a target with no reported de novo binders, identifying nine binders with the strongest at an apparent affinity of 107 nM. UW research computing resources including Hyak and Tillicum were essential in dataset generation and in training and evaluating our models.",
     resources: ["Hyak Klone", "Tillicum"],
     session: "showcase-b",
+  },
+];
+
+// Vendor and partner track descriptions.
+const VENDOR_TRACKS = [
+  {
+    id: "uw-libraries-track",
+    name: "UW Libraries",
+    title: "Your Job Ran, You Got Your Results. Now What?",
+    description:
+      "If you want your research to have an impact, it's not enough to do good work; you've got to share it. But you've got terabytes of output, a journal asking for your data and code, a funder with its own rules, and no money for publishing. UW librarians are here to help you understand the research communications landscape and think through your options. Bring your thorniest publishing and data sharing questions, and together we'll work through what you can share, what you should share, where it might go, and who owns what.",
+    agenda: [],
+  },
+  {
+    id: "azure-track",
+    name: "Microsoft Azure",
+    title: "The Next Era of Scientific Discovery",
+    description: "How cloud, HPC, and AI are changing what's possible in research, and what that means for your institution.",
+    agenda: [
+      {
+        label: "Welcome & Framing",
+        detail: "The Next Era of Scientific Discovery. How cloud, HPC, and AI are changing what's possible in research, and what that means for your institution.",
+      },
+      {
+        label: "Researcher Spotlight: Lessons from the Field",
+        detail: "Researchers talk candidly about what worked, what didn't, and the results they measured.",
+      },
+      {
+        label: "Introducing Microsoft Discovery",
+        detail: "A first look at Microsoft's agentic AI platform. It speeds up the full research lifecycle, from hypothesis to insight, and includes built-in data collaboration.",
+      },
+      {
+        label: "Live Demo: Azure HPC + Azure AI Foundry in Action",
+        detail: "A hands-on walkthrough of how researchers can scale simulations, build AI models, and get to discovery faster.",
+      },
+      {
+        label: "Open Q&A & Next Steps",
+        detail: "Bring your questions. We'll also cover how to get started, including pilots, credits, MACC agreement, and technical support.",
+      },
+    ],
+  },
+  {
+    id: "aws-track",
+    name: "Amazon Web Services",
+    title: "Rapidly turn ideas into working solutions with Kiro — free for UW students!",
+    description:
+      "Meet Kiro, an agentic, spec-driven IDE that helps you quickly set up research projects, pipelines, and tools, even if you aren't a coder. Simply describe what you need in plain language. Kiro turns that into requirements and a design plan, then writes, tests, and documents the code with you. In this session we'll give a quick overview of Kiro, walk through some demonstrations, and then show you how UW students can get it for free. Drop in and learn how you can get to research outcomes faster.",
+    agenda: [],
+  },
+  {
+    id: "uw-panel-track",
+    name: "Research Computing at UW",
+    title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
+    description:
+      "Discover how UW supports research through computing resources, training, and student programs. Representatives from UWIT Research Computing, the eScience Institute, and the Research Computing Club (RCC) will share an overview of their services, training opportunities, and student support programs. The session will also introduce two new research computing services coming in 2027. Join us to learn about the resources available to support your research and ask questions during a dedicated Q&A.",
+    agenda: [],
+  },
+  {
+    id: "dell-track",
+    name: "Dell Technologies",
+    title: "Dell Technologies' Vision for Academic Research",
+    speaker: "Varun Chhabra",
+    speakerTitle: "SVP Product Marketing at Dell Technologies (AI, Storage, Compute, Networking, Cyber Resilience)",
+    description:
+      "How can research computing infrastructure evolve to meet the demands of tomorrow's scientific discoveries? In this talk, Varun Chhabra, Senior Vice President of Product Marketing at Dell Technologies, will share Dell's vision and roadmap for supporting academic research in an era of rapidly advancing AI and high-performance computing. Drawing on Dell's work across AI, storage, compute, networking, and cyber resilience, Varun will explore how emerging technologies and integrated infrastructure can help universities address growing computational demands, manage increasingly complex research data, and accelerate scientific discovery. He will also discuss how Dell's evolving technology roadmap and partnerships with research institutions can help shape the future of research computing.",
+    agenda: [],
   },
 ];
 
@@ -408,6 +478,71 @@ function TalkCard({ talk }) {
   );
 }
 
+function VendorTrackCard({ track }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === `#${track.id}`) {
+        setOpen(true);
+        setTimeout(() => {
+          ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 50);
+      }
+    };
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, [track.id]);
+
+  return (
+    <details
+      id={track.id}
+      ref={ref}
+      className={styles.talkCard}
+      open={open}
+      onToggle={(e) => setOpen(e.target.open)}
+    >
+      <summary className={styles.talkSummary}>
+        <span className={styles.talkSpeaker}>
+          {track.name}
+          {track.speaker && (
+            <span className={styles.talkAffiliation}> — {track.speaker}{track.speakerTitle ? `, ${track.speakerTitle}` : ""}</span>
+          )}
+        </span>
+        <a
+          className={styles.talkTitle}
+          href={`#${track.id}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            // Copy the link to clipboard as a convenience, then navigate.
+            history.pushState(null, "", `#${track.id}`);
+            setOpen(true);
+            setTimeout(() => {
+              ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 50);
+          }}
+        >
+          {track.title}
+        </a>
+      </summary>
+      <div className={styles.talkBody}>
+        <p className={styles.talkAbstract}>{track.description}</p>
+        {track.agenda && track.agenda.length > 0 && (
+          <ul className={styles.vendorAgenda}>
+            {track.agenda.map((item, i) => (
+              <li key={i}>
+                <strong>{item.label}:</strong> {item.detail}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </details>
+  );
+}
+
 // Maps a session type to its color-coding CSS class.
 const TYPE_CLASS = {
   General: styles.typeGeneral,
@@ -446,10 +581,15 @@ function subBox(offsetStart, offsetEnd) {
 // Lookup map for quick access to talk data by id.
 const TALK_BY_ID = Object.fromEntries(TALKS.map((t) => [t.id, t]));
 
-function SessionBlock({ type, title, startLabel, endLabel, talkId, children }) {
+// Lookup map for vendor track data by id.
+const VENDOR_TRACK_BY_ID = Object.fromEntries(VENDOR_TRACKS.map((t) => [t.id, t]));
+
+function SessionBlock({ type, title, startLabel, endLabel, talkId, trackId, children }) {
   const talk = talkId ? TALK_BY_ID[talkId] : null;
-  const nameEl = talkId ? (
-    <a className={styles.blockTitleLink} href={`#${talkId}`}>{title}</a>
+  const vendorTrack = trackId ? VENDOR_TRACK_BY_ID[trackId] : null;
+  const linkId = talkId || trackId;
+  const nameEl = linkId ? (
+    <a className={styles.blockTitleLink} href={`#${linkId}`}>{title}</a>
   ) : (
     <span className={styles.blockTitle}>{title}</span>
   );
@@ -458,6 +598,9 @@ function SessionBlock({ type, title, startLabel, endLabel, talkId, children }) {
       {nameEl}
       {talk && (
         <span className={styles.blockSubtitle}>{talk.title}</span>
+      )}
+      {vendorTrack && (
+        <span className={styles.blockSubtitle}>{vendorTrack.title}</span>
       )}
       <span className={styles.blockTime}>
         {startLabel} – {endLabel}
@@ -540,6 +683,7 @@ function Timeline() {
                           <SessionBlock
                             type={item.type}
                             title={p.track}
+                            trackId={p.trackId}
                             startLabel={minutesToLabel(item.start)}
                             endLabel={minutesToLabel(item.end)}
                           >
@@ -578,6 +722,7 @@ function Timeline() {
                         type={item.type}
                         title={item.title}
                         talkId={item.talkId}
+                        trackId={item.trackId}
                         startLabel={minutesToLabel(item.start)}
                         endLabel={minutesToLabel(item.end)}
                       />
@@ -701,6 +846,13 @@ export default function Symposium() {
           <h3 className={styles.talksSubheading}>Research Showcase — Afternoon</h3>
           {TALKS.filter((t) => t.session === "showcase-b").map((talk) => (
             <TalkCard key={talk.id} talk={talk} />
+          ))}
+          <h3 className={styles.talksSubheading}>Vendor and Partner Tracks</h3>
+          <p>
+            During the two Research Showcase blocks, partner sessions run in parallel in HUB 238 and HUB 307. These sessions are led by industry partners and campus organizations.
+          </p>
+          {VENDOR_TRACKS.map((track) => (
+            <VendorTrackCard key={track.id} track={track} />
           ))}
         </section>
 
