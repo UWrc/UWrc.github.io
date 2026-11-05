@@ -584,7 +584,7 @@ const TALK_BY_ID = Object.fromEntries(TALKS.map((t) => [t.id, t]));
 // Lookup map for vendor track data by id.
 const VENDOR_TRACK_BY_ID = Object.fromEntries(VENDOR_TRACKS.map((t) => [t.id, t]));
 
-function SessionBlock({ type, title, startLabel, endLabel, talkId, trackId, children }) {
+function SessionBlock({ type, title, startLabel, endLabel, talkId, trackId, hasBadge, children }) {
   const talk = talkId ? TALK_BY_ID[talkId] : null;
   const vendorTrack = trackId ? VENDOR_TRACK_BY_ID[trackId] : null;
   const linkId = talkId || trackId;
@@ -594,7 +594,7 @@ function SessionBlock({ type, title, startLabel, endLabel, talkId, trackId, chil
     <span className={styles.blockTitle}>{title}</span>
   );
   return (
-    <div className={`${styles.block} ${TYPE_CLASS[type] || ""}`}>
+    <div className={`${styles.block} ${TYPE_CLASS[type] || ""} ${hasBadge ? styles.blockWithBadge : ""}`}>
       {nameEl}
       {talk && (
         <span className={styles.blockSubtitle}>{talk.title}</span>
@@ -684,6 +684,7 @@ function Timeline() {
                             type={item.type}
                             title={p.track}
                             trackId={p.trackId}
+                            hasBadge
                             startLabel={minutesToLabel(item.start)}
                             endLabel={minutesToLabel(item.end)}
                           >

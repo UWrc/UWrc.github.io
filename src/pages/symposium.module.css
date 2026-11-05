@@ -303,12 +303,18 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding: 1.6rem 0.5rem 0.2rem;
+  padding: 0.2rem 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-left: 4px solid #4b2e83;
   background-color: #f5f3fa;
   font-size: 0.82rem;
   line-height: 1.15;
+}
+
+/* Partner/vendor track blocks have a room badge floating in the top-right,
+   so push the content down to clear it. */
+.blockWithBadge {
+  padding-top: 1.6rem;
 }
 
 /* Time range stacked underneath the title. */
