@@ -48,7 +48,7 @@ const AGENDA = [
         track: "Research Showcase — Morning",
         sessions: [
           { start: 630, end: 645, label: "Xu Lu", talkId: "lu" },
-          { start: 645, end: 660, label: "James Dylan Weissenkampe", talkId: "weissenkampe" },
+          { start: 645, end: 660, label: "Dylan Weissenkampe", talkId: "weissenkampe" },
           { start: 660, end: 675, label: "Aodong Liu", talkId: "liu" },
           { start: 675, end: 690, label: "Lakshitha Premathilake", talkId: "premathilake" },
           { start: 690, end: 705, label: "Bojun Chen", talkId: "chen" },
@@ -167,7 +167,7 @@ const TALKS = [
   },
     {
     id: "weissenkampe",
-    speaker: "James Dylan Weissenkampe",
+    speaker: "Dylan Weissenkampe",
     affiliation: "Diabetes Institute",
     title: "Making a Small Study Count: Computational Robustness for Multi-Omic Human Kidney Biopsies",
     abstract: "When a study has only a dozen participants, the hardest question is whether to believe the results. We profiled kidney biopsies from 11 people with type 2 diabetes measuring ~7,800 proteins and ~18,000 phosphorylation sites in each. Research computing let us test which signals were real: we re-ran the entire pipeline across 30 independent random seeds, built permutation-based null models over a network of ~7,800 proteins, and checked findings against matched single-cell RNA-seq data and public kidney atlases of hundreds of thousands of cells. Kopah, UW-IT's S3-compatible research storage, held the large single-cell objects and analysis outputs. Two lessons emerged: repeating an analysis many times separated robust signals from fragile ones, and a network-propagation filter only became a calibrated test after adding a permutation null.",
