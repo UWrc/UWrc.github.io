@@ -59,6 +59,7 @@ const AGENDA = [
         room: ROOMS.r238,
         track: "Google Cloud Track",
         detail: "Partner track — Google Cloud",
+        trackId: "google-track",
       },
       {
         room: ROOMS.r307,
@@ -69,7 +70,7 @@ const AGENDA = [
     ],
   },
   { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General", room: ROOMS.lobby },
-  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — Dell", type: "Partners", room: ROOMS.main, trackId: "dell-track" },
+  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — TBD", type: "Partners", room: ROOMS.main },
   {
     start: 810,
     end: 840,
@@ -260,6 +261,14 @@ const TALKS = [
 // Vendor and partner track descriptions.
 const VENDOR_TRACKS = [
   {
+    id: "google-track",
+    name: "Google Cloud",
+    title: "From Earth Observation to AI Agents: Exploring Google's AI and Data Tools",
+    description:
+      "The Google track opens with a 30-minute overview of AlphaEvolve, Google's evolutionary coding agent, highlighting how AI can accelerate scientific discovery and solve complex computational challenges. The session continues with a hands-on lab exploring AlphaEarth Foundations, BigQuery ML, and Antigravity. Participants will work with satellite embeddings in BigQuery Studio, explore spatial data using Conversational Analytics, and train an unsupervised K-Means model using BigQuery ML — all without labeled data. They will then use Antigravity and the Agent Development Kit (ADK) to build custom tools using natural language and launch a live web-based chat agent that interacts with their dataset. Together, these sessions showcase how Google's AI and data technologies can help researchers move from large-scale scientific datasets to machine learning insights and interactive AI-powered applications.",
+    agenda: [],
+  },
+  {
     id: "uw-libraries-track",
     name: "UW Libraries",
     title: "Your Job Ran, You Got Your Results. Now What?",
@@ -309,16 +318,6 @@ const VENDOR_TRACKS = [
     title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
     description:
       "Discover how UW supports research through computing resources, training, and student programs. Representatives from UWIT Research Computing, the eScience Institute, and the Research Computing Club (RCC) will share an overview of their services, training opportunities, and student support programs. The session will also introduce two new research computing services coming in 2027. Join us to learn about the resources available to support your research and ask questions during a dedicated Q&A.",
-    agenda: [],
-  },
-  {
-    id: "dell-track",
-    name: "Dell Technologies",
-    title: "Dell Technologies' Vision for Academic Research",
-    speaker: "Varun Chhabra",
-    speakerTitle: "SVP Product Marketing at Dell Technologies (AI, Storage, Compute, Networking, Cyber Resilience)",
-    description:
-      "How can research computing infrastructure evolve to meet the demands of tomorrow's scientific discoveries? In this talk, Varun Chhabra, Senior Vice President of Product Marketing at Dell Technologies, will share Dell's vision and roadmap for supporting academic research in an era of rapidly advancing AI and high-performance computing. Drawing on Dell's work across AI, storage, compute, networking, and cyber resilience, Varun will explore how emerging technologies and integrated infrastructure can help universities address growing computational demands, manage increasingly complex research data, and accelerate scientific discovery. He will also discuss how Dell's evolving technology roadmap and partnerships with research institutions can help shape the future of research computing.",
     agenda: [],
   },
 ];
