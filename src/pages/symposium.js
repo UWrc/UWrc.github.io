@@ -277,6 +277,14 @@ const VENDOR_TRACKS = [
     agenda: [],
   },
   {
+    id: "uw-panel-track",
+    name: "Research Computing at UW",
+    title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
+    description:
+      "Discover how UW supports research through computing resources, training, and student programs. Representatives from UWIT Research Computing, the eScience Institute, and the Research Computing Club (RCC) will share an overview of their services, training opportunities, and student support programs. The session will also introduce two new research computing services coming in 2027. Join us to learn about the resources available to support your research and ask questions during a dedicated Q&A.",
+    agenda: [],
+  },
+  {
     id: "azure-track",
     name: "Microsoft Azure",
     title: "The Next Era of Scientific Discovery",
@@ -310,14 +318,6 @@ const VENDOR_TRACKS = [
     title: "Rapidly turn ideas into working solutions with Kiro — free for UW students!",
     description:
       "Meet Kiro, an agentic, spec-driven IDE that helps you quickly set up research projects, pipelines, and tools, even if you aren't a coder. Simply describe what you need in plain language. Kiro turns that into requirements and a design plan, then writes, tests, and documents the code with you. In this session we'll give a quick overview of Kiro, walk through some demonstrations, and then show you how UW students can get it for free. Drop in and learn how you can get to research outcomes faster.",
-    agenda: [],
-  },
-  {
-    id: "uw-panel-track",
-    name: "Research Computing at UW",
-    title: "Research Computing at UW Panel with UWIT, eScience, and RCC",
-    description:
-      "Discover how UW supports research through computing resources, training, and student programs. Representatives from UWIT Research Computing, the eScience Institute, and the Research Computing Club (RCC) will share an overview of their services, training opportunities, and student support programs. The session will also introduce two new research computing services coming in 2027. Join us to learn about the resources available to support your research and ask questions during a dedicated Q&A.",
     agenda: [],
   },
 ];
@@ -462,7 +462,21 @@ function TalkCard({ talk }) {
           {talk.speaker}
           {talk.affiliation && <span className={styles.talkAffiliation}> — {talk.affiliation}</span>}
         </span>
-        <span className={styles.talkTitle}>{talk.title}</span>
+        <a
+          className={styles.talkTitle}
+          href={`#${talk.id}`}
+          onClick={(e) => {
+            e.stopPropagation();
+            // Copy the link to clipboard as a convenience, then navigate.
+            history.pushState(null, "", `#${talk.id}`);
+            setOpen(true);
+            setTimeout(() => {
+              ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 50);
+          }}
+        >
+          {talk.title}
+        </a>
       </summary>
       <div className={styles.talkBody}>
         <p className={styles.talkAbstract}>{talk.abstract}</p>
