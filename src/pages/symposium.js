@@ -70,7 +70,7 @@ const AGENDA = [
     ],
   },
   { start: 720, end: 780, time: "12:00 – 1:00 PM", title: "Lunch", type: "General", room: ROOMS.lobby },
-  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Industry Session — TBD", type: "Partners", room: ROOMS.main },
+  { start: 780, end: 810, time: "1:00 – 1:30 PM", title: "Research Highlight — Abhishek Gupta", type: "Highlight", room: ROOMS.main, talkId: "gupta"  },
   {
     start: 810,
     end: 840,
@@ -146,6 +146,15 @@ const TALKS = [
     title: "Training a Deep-Learning Model to Decipher Classical Japanese Calligraphy",
     abstract: "Premodern Japanese manuscripts were written in a cursive hand called kuzushiji, literally \"collapsed characters,\" which few readers today can decipher. The phonetic symbols of these manuscripts, called hentaigana, are allographic, meaning that a single sound could be written with any of several forms, each a cursive version of a Chinese character known as its jibo. Many of the texts have been transcribed and printed, but those editions normally render each hentaigana as a modern kana and so discard the jibo. A scribe's choice among jibo is a feature of orthography that differs from scribe to scribe, so statistical analysis of jibo data can help answer who inscribed a manuscript, a question that has traditionally required extensive manual work. Our project applies computational paleography to this problem, training a deep-learning model to read the handwriting down to the jibo so that the analysis can be carried out at scale. The model was first trained in 2025 on a single GPU on Amazon Web Services (AWS), with cloud credits from AWS and the UW eScience Institute. The next phase is a collaboration with Tohoku University to develop a new model for retraining on H200 GPUs on Tillicum.",
     resources: ["Tillicum", "Cloud Computing - AWS"],
+    session: "highlight",
+  },
+    {
+    id: "gupta",
+    speaker: "Abhishek Gupta",
+    affiliation: "Computer Science & Engineering",
+    title: "TBA",
+    abstract: "TBA",
+    resources: ["Hyak Klone","Tillicum"],
     session: "highlight",
   },
   {
