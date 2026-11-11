@@ -326,7 +326,7 @@ const VENDOR_TRACKS = [
     name: "Amazon Web Services",
     title: "Rapidly turn ideas into working solutions with Kiro — free for UW students!",
     description:
-      "Meet Kiro, an agentic, spec-driven IDE that helps you quickly set up research projects, pipelines, and tools, even if you aren't a coder. Simply describe what you need in plain language. Kiro turns that into requirements and a design plan, then writes, tests, and documents the code with you. In this session we'll give a quick overview of Kiro, walk through some demonstrations, and then show you how UW students can get it for free. Drop in and learn how you can get to research outcomes faster.",
+      "AWS has made available free access for UW students to Kiro, an agentic, spec-driven IDE that helps you quickly set up research projects, pipelines, and tools, even if you aren’t a coder. Simply describe what you need in plain language. Kiro turns that into requirements and a design plan, then writes, tests, and documents the code with you. In this session we'll give a quick overview of Kiro, walk through some demonstrations, and then show you how UW students can get it for free. Drop in and learn how you can get to research outcomes faster. More information at https://kiro.dev/students where students can sign up free with their @uw.edu email address - no credit card needed.",
     agenda: [],
   },
 ];
