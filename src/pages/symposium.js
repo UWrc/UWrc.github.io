@@ -57,8 +57,8 @@ const AGENDA = [
       },
       {
         room: ROOMS.r238,
-        track: "Google Cloud Track",
-        detail: "Partner track — Google Cloud",
+        track: "GCP and Ai2 Track",
+        detail: "Partner track — GCP and Ai2",
         trackId: "google-track",
       },
       {
@@ -271,11 +271,24 @@ const TALKS = [
 const VENDOR_TRACKS = [
   {
     id: "google-track",
-    name: "Google Cloud",
+    name: "GCP and Ai2",
     title: "From Earth Observation to AI Agents: Exploring Google's AI and Data Tools",
     description:
-      "The Google track opens with a 30-minute overview of AlphaEvolve, Google's evolutionary coding agent, highlighting how AI can accelerate scientific discovery and solve complex computational challenges. The session continues with a hands-on lab exploring AlphaEarth Foundations, BigQuery ML, and Antigravity. Participants will work with satellite embeddings in BigQuery Studio, explore spatial data using Conversational Analytics, and train an unsupervised K-Means model using BigQuery ML — all without labeled data. They will then use Antigravity and the Agent Development Kit (ADK) to build custom tools using natural language and launch a live web-based chat agent that interacts with their dataset. Together, these sessions showcase how Google's AI and data technologies can help researchers move from large-scale scientific datasets to machine learning insights and interactive AI-powered applications.",
-    agenda: [],
+      "This track brings together Google Cloud and the Allen Institute for AI (Ai2) for three back-to-back sessions on how modern AI tools are reshaping research workflows. The session opens with an exploration of cutting-edge AI for scientific discovery, continues with a practical look at Google's data and AI infrastructure, and closes with Ai2's perspective on open, accessible AI for the research community.",
+    agenda: [
+      {
+        label: "AlphaEvolve (30 min) — Skander Hannachi, Google",
+        detail: "An overview of AlphaEvolve, Google's evolutionary coding agent, and how AI-driven code generation can accelerate scientific discovery and tackle complex computational challenges.",
+      },
+      {
+        label: "Antigravity & BigQuery (30 min) — Nick Nelson, Google",
+        detail: "A look at how researchers can use Antigravity and BigQuery to build AI-powered tools and work with large datasets — from spatial data exploration to conversational analytics and custom agent development using the Agent Development Kit (ADK).",
+      },
+      {
+        label: "Ai2 Session (30 min) — Allen Institute for AI",
+        detail: "Ai2 shares their work on open AI research and how their tools and models support the broader scientific community.",
+      },
+    ],
   },
   {
     id: "uw-libraries-track",
