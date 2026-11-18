@@ -23,7 +23,7 @@ export const DocumentationCards = [
             caption: 'Tillicum user guides',
             link: '/docs/systems/tillicum/get-started',
           },
-          { image: '/img/icons/kopah.jpg',
+          { image: '/img/icons/kopah_gold.jpg',
             header: 'Kopah S3 Storage', 
             caption: 'Kopah user guides',
             link: '/docs/systems/kopah/overview',
